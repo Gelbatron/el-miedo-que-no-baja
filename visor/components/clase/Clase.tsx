@@ -1,6 +1,7 @@
 "use client";
 import { D, R, fmt, signo } from "@/lib/datos";
 import { C } from "@/lib/clase";
+import { PANDEMIA } from "@/lib/historia";
 import { Motor, type Diapo } from "./Motor";
 import { BOGOTA, CifraOculta, Datos, Indice, Paradoja, Portada, Prueba, Termometros } from "./diapos-a";
 import { Cierre, Genero, Prediccion, Propuesta, Repeticiones, SimuladorClase, Vecinos } from "./diapos-b";
@@ -34,7 +35,15 @@ export const DIAPOS: Diapo[] = [
   {
     id: "paradoja", corto: "En el papel mejora", acto: 0, ante: "El problema · 1", titulo: "En el papel, Bogotá mejora. La gente no lo siente.", pasos: 3,
     quien: "Brandow", tiempo: "0:10-0:45",
-    nota: `Resulta que estuvimos revisando los datos de la Secretaría de Seguridad y el hurto viene bajando muchísimo: ${signo(R.hurto_personas.cambio_pct, 0)} % desde 2019. (→) Pero hay hechos violentos que van al revés: la violencia intrafamiliar y los delitos sexuales subieron cerca de 45 %. (→) Y cuando lo cruzamos con las encuestas, 3 de cada 4 personas dicen que Bogotá es insegura. O sea: en el papel la ciudad mejora, pero la gente no lo siente.`,
+    nota: `Resulta que estuvimos revisando los datos de la Secretaría de Seguridad y el hurto viene bajando muchísimo: ${signo(R.hurto_personas.cambio_pct, 0)} % desde 2019. Ojo, ahí está la pandemia (la franja gris): en 2020 cayó por el encierro, pero en 2022 volvió casi a lo de antes y desde entonces bajó ${fmt(-PANDEMIA.hurto2022a2026, 0)} %. No es solo la pandemia. (→) Pero hay hechos violentos que van al revés: la violencia intrafamiliar y los delitos sexuales subieron cerca de 45 %. (→) Y cuando lo cruzamos con las encuestas, 3 de cada 4 personas dicen que Bogotá es insegura. O sea: en el papel la ciudad mejora, pero la gente no lo siente.`,
+    profundizar: (
+      <>
+        <h3>El efecto pandemia</h3>
+        <p>En 2020 el hurto a personas registrado cayó {fmt(-PANDEMIA.hurto2020, 0)} % por el encierro. En 2022 volvió al {fmt(PANDEMIA.hurto2022sobre2019, 0)} % de su nivel de 2019, y desde ahí bajó {fmt(-PANDEMIA.hurto2022a2026, 0)} % hasta 2026: la caída no es solo pandemia.</p>
+        <p>Una señal para revisar: entre 2022 y 2023 todos los tipos de hurto (personas, celulares, motos, residencias y automotores) cayeron a la vez, entre {fmt(PANDEMIA.caida2023min, 0)} % y {fmt(PANDEMIA.caida2023max, 0)} % en un solo año. Una caída tan pareja puede ser menos delito o menos denuncia; el registro solo no lo distingue. Por eso medimos también con encuestas.</p>
+        <p>La violencia intrafamiliar casi no se movió con la pandemia ({signo(PANDEMIA.vif2020, 0)} % en 2020) y desde 2022 subió {fmt(PANDEMIA.vif2022a2026, 0)} %.</p>
+      </>
+    ),
     render: (p) => <Paradoja paso={p} />,
   },
   {

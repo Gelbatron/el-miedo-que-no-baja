@@ -1,3 +1,4 @@
+import { EnSimple } from "@/components/EnSimple";
 import { D, R, fmt } from "@/lib/datos";
 
 export const metadata = { title: "Indicador · El miedo que no baja" };
@@ -10,6 +11,7 @@ export default function Indicador() {
       <header className="cabecera-pagina">
         <p className="antetitulo">Regla 10.II · indicador medible, comparable y consistente</p>
         <h1 style={{ fontSize: "clamp(2rem,4vw,3rem)" }}>Índice de Brecha de Seguridad</h1>
+        <EnSimple>La propuesta para saber si las políticas funcionan: medir que la gente se sienta más segura, no solo que bajen las denuncias. Es un número por localidad (y por UPL), cada semestre, con encuestas y registros que el Distrito ya tiene.</EnSimple>
         <p className="bajada">Un indicador que el Distrito puede calcular cada semestre con fuentes que ya produce, para saber dónde la gente se siente más insegura de lo que el registro oficial explica.</p>
       </header>
 

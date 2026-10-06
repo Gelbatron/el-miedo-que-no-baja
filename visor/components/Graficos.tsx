@@ -63,8 +63,9 @@ export function Barras({ filas, ancho = 760, unidad = "", dec = 1, maximo, color
 }
 
 /* ---------- líneas (series en el tiempo) ---------- */
-export function Lineas({ series, ancho = 760, alto = 320, ymin = 0, ymax, unidad = "", base }: {
+export function Lineas({ series, ancho = 760, alto = 320, ymin = 0, ymax, unidad = "", base, bandas }: {
   series: { nombre: string; color: string; puntos: { x: number; y: number; tip?: string }[] }[]; ancho?: number; alto?: number; ymin?: number; ymax?: number; unidad?: string; base?: number;
+  bandas?: { desde: number; hasta: number; etiqueta: string }[];
 }) {
   const ml = 46, mr = 190, mt = 14, mb = 30;
   const xs = series.flatMap((s) => s.puntos.map((p) => p.x));
@@ -84,6 +85,15 @@ export function Lineas({ series, ancho = 760, alto = 320, ymin = 0, ymax, unidad
           <text x={ml - 8} y={Y(t) + 4} className="tick" textAnchor="end">{fmt(t, 0)}</text>
         </g>
       ))}
+      {bandas?.map((b) => {
+        const a = X(Math.max(b.desde, x0)), z = X(Math.min(b.hasta, x1));
+        return (
+          <g key={b.etiqueta}>
+            <rect x={a} y={mt} width={z - a} height={alto - mt - mb} fill="var(--tinta)" opacity={0.06} />
+            <text x={(a + z) / 2} y={mt + 13} className="tick" textAnchor="middle" style={{ fontWeight: 600 }}>{b.etiqueta}</text>
+          </g>
+        );
+      })}
       {base !== undefined && !ticks.includes(base) && <line x1={ml} x2={ancho - mr} y1={Y(base)} y2={Y(base)} className="base" />}
       {Array.from({ length: x1 - x0 + 1 }, (_, i) => x0 + i).map((a) => (
         <text key={a} x={X(a)} y={alto - 10} className="tick" textAnchor="middle">{a}</text>

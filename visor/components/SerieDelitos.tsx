@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { D, fmt } from "@/lib/datos";
 import { Lineas } from "./Graficos";
+import { BANDA_PANDEMIA } from "@/lib/historia";
 
 const TIPOS = Array.from(new Set(D.serie_delitos.map((f) => `${f.codigo}|${f.tipo}`))).map((s) => s.split("|") as [string, string]);
 const COLORES = ["var(--registro)", "var(--percepcion)", "var(--mujeres)", "var(--hombres)"];
@@ -36,7 +37,7 @@ export function SerieDelitos() {
           </button>
         ))}
       </div>
-      {series.length > 0 && <Lineas series={series} base={modo === "indice" ? 100 : undefined} ymax={modo === "indice" ? 200 : undefined} unidad={modo === "indice" ? "" : "casos"} />}
+      {series.length > 0 && <Lineas series={series} bandas={[BANDA_PANDEMIA]} base={modo === "indice" ? 100 : undefined} ymax={modo === "indice" ? 200 : undefined} unidad={modo === "indice" ? "" : "casos"} />}
       <p className="nota">Lesiones personales no tiene dato de 2026 en la fuente.</p>
     </section>
   );

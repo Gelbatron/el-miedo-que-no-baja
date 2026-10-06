@@ -1,3 +1,5 @@
+import { EnSimple } from "@/components/EnSimple";
+import { BANDA_PANDEMIA } from "@/lib/historia";
 import { D, R, fmt, signo } from "@/lib/datos";
 import { Forest, LeyendaSexo, Lineas, Mancuerna } from "@/components/Graficos";
 
@@ -24,6 +26,7 @@ export default function Genero() {
       <header className="cabecera-pagina">
         <p className="antetitulo">Enfoque de género · EMV 2024 y Bienal 2025</p>
         <h1 style={{ fontSize: "clamp(2rem,4vw,3rem)" }}>Las mujeres reportan menos delitos y recortan más su vida</h1>
+        <EnSimple>{`Las mujeres dicen haber sido víctimas menos que los hombres (${fmt(R.emv_por_sexo.victima.mujeres)} % frente a ${fmt(R.emv_por_sexo.victima.hombres)} %), pero tienen mucho más miedo al acoso y evitan más salir de noche. Comparando iguales, ser mujer suma ${fmt(R.emv_mujer_ame.teme_acoso_sexual.ame_pp, 0)} puntos de temor al acoso sexual. El miedo les cuesta libertad.`}</EnSimple>
         <p className="bajada">
           El {fmt(s.victima.mujeres)} % de las mujeres y el {fmt(s.victima.hombres)} % de los hombres dicen haber sido víctimas de un delito en el último año.
           Aun así, ellas evitan más salir de noche y temen más el acoso sexual. El costo de la inseguridad no se mide solo en delitos: se mide en autonomía.
@@ -57,7 +60,7 @@ export default function Genero() {
           <span><i style={{ background: "var(--mujeres)" }} />Violencia intrafamiliar</span>
           <span><i style={{ background: "var(--percepcion)" }} />Delitos sexuales</span>
         </div>
-        <Lineas base={100} ymax={200} series={[indice("HP", "Hurto a personas", "var(--registro)"), indice("VI", "Violencia intrafamiliar", "var(--mujeres)"), indice("DS", "Delitos sexuales", "var(--percepcion)")]} />
+        <Lineas base={100} ymax={200} bandas={[BANDA_PANDEMIA]} series={[indice("HP", "Hurto a personas", "var(--registro)"), indice("VI", "Violencia intrafamiliar", "var(--mujeres)"), indice("DS", "Delitos sexuales", "var(--vino)")]} />
         <p style={{ color: "var(--tinta-2)" }}>
           Violencia intrafamiliar {signo(R.vif_cambio_pct_2018_2026)} % y delitos sexuales {signo(R.delitos_sexuales_cambio_pct_2018_2026)} % entre 2018 y 2026.
           Ocurren sobre todo en la casa y en el entorno cercano, donde el alumbrado y los parques no llegan: por eso la recomendación de género va más allá del espacio público.

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, Kanit, Montserrat, Work_Sans } from "next/font/google";
 import { Navegacion } from "@/components/Navegacion";
+import { SigueLaHistoria } from "@/components/SigueLaHistoria";
 import { Tooltip } from "@/components/Tooltip";
 import "./globals.css";
 
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Navegacion />
         <main>{children}</main>
+        <SigueLaHistoria />
         <footer className="pie">
           <div className="contenedor">
             <span>

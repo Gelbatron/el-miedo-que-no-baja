@@ -1,3 +1,4 @@
+import { EnSimple } from "@/components/EnSimple";
 import { D, fmt, pval } from "@/lib/datos";
 
 export const metadata = { title: "Método · El miedo que no baja" };
@@ -18,6 +19,7 @@ export default function Metodologia() {
       <header className="cabecera-pagina">
         <p className="antetitulo">Trazabilidad: problema → datos → método → resultados → recomendaciones</p>
         <h1 style={{ fontSize: "clamp(2rem,4vw,3rem)" }}>Cómo se hizo</h1>
+        <EnSimple>Cómo lo hicimos, paso a paso: qué fuentes usamos, cómo las limpiamos y unimos, qué modelos corrimos y qué pruebas hicimos para no engañarnos.</EnSimple>
         <p className="bajada">Siete fuentes públicas integradas por el código oficial de localidad, con la población de la SDP como denominador. Todo el proceso está en el notebook del repositorio y se puede repetir desde cero.</p>
       </header>
 

@@ -1,3 +1,4 @@
+import { EnSimple } from "@/components/EnSimple";
 import { D } from "@/lib/datos";
 
 export const metadata = { title: "Datos · El miedo que no baja" };
@@ -19,6 +20,7 @@ export default function Datos() {
       <header className="cabecera-pagina">
         <p className="antetitulo">Exportable e interoperable</p>
         <h1 style={{ fontSize: "clamp(2rem,4vw,3rem)" }}>Datos y entregables</h1>
+        <EnSimple>Todo lo que usamos y producimos, listo para descargar y revisar: tablas, mapas, el notebook y el tablero de Power BI.</EnSimple>
         <p className="bajada">Todo lo que muestra el visor se puede descargar en formatos abiertos para integrarlo en visores institucionales (Mapas Bogotá, IDECA, Power BI).</p>
       </header>
       <section className="tarjeta">

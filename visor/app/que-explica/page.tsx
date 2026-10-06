@@ -1,3 +1,4 @@
+import { EnSimple } from "@/components/EnSimple";
 import { D, R, fmt, pval, signo } from "@/lib/datos";
 import { Barras, Forest } from "@/components/Graficos";
 
@@ -17,6 +18,7 @@ export default function QueExplica() {
       <header className="cabecera-pagina">
         <p className="antetitulo">Diagnóstico · logit ponderado sobre {fmt(D.n.m_hechos, 0)} adultos de la Bienal 2025</p>
         <h1 style={{ fontSize: "clamp(2rem,4vw,3rem)" }}>El entorno explica la percepción; el hurto registrado, no</h1>
+        <EnSimple>{`Lo que le da miedo a la gente no son las estadísticas de su localidad: es lo que ve en su barrio. Ver atracos en el parque suma ${fmt(R.ame_hechos.parque_atracos.ame_pp, 0)} puntos a la probabilidad de sentir insegura la zona; el hurto registrado de la localidad, prácticamente nada.`}</EnSimple>
         <p className="bajada">
           Resultado: califica mala o muy mala la seguridad de su zona ({fmt(D.medias.m_hechos * 100)} % de los adultos). Se controla sexo, edad, estrato y
           tenencia de la vivienda, y se añade el delito registrado de su localidad (SCJ). Los efectos son marginales promedio en puntos porcentuales,

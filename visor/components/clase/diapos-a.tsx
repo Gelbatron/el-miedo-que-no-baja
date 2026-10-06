@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { D, R, fmt, signo } from "@/lib/datos";
 import { C } from "@/lib/clase";
+import { BANDA_PANDEMIA, PANDEMIA } from "@/lib/historia";
 import { Ap, Cifra, lin, useListo } from "./piezas";
 
 type Panel = { localidad: number; nombre: string; poblacion: number; zona_insegura: number; delitos_alto_impacto_100k: number; ibs: number };
@@ -60,6 +61,8 @@ export function Paradoja({ paso }: { paso: number }) {
           </g>
         ))}
         {[2018, 2020, 2022, 2024, 2026].map((a) => <text key={a} x={X(a)} y={H - 12} className="tick" textAnchor="middle">{a}</text>)}
+        <rect x={X(BANDA_PANDEMIA.desde)} y={Y(200)} width={X(BANDA_PANDEMIA.hasta) - X(BANDA_PANDEMIA.desde)} height={Y(0) - Y(200)} fill="var(--tinta)" opacity={0.06} />
+        <text x={(X(BANDA_PANDEMIA.desde) + X(BANDA_PANDEMIA.hasta)) / 2} y={Y(200) + 18} textAnchor="middle" style={{ fontSize: 14, fontWeight: 700, fill: "var(--tinta-2)" }}>Pandemia</text>
         {series.map((s) => (
           <g key={s.cod}>
             <path pathLength={1} className={`cl-trazo${vis(s) ? " si" : ""}`} fill="none" stroke={s.color} strokeWidth={4.5} strokeLinejoin="round" strokeLinecap="round"
@@ -80,7 +83,7 @@ export function Paradoja({ paso }: { paso: number }) {
       <div style={{ display: "grid", gap: 12 }}>
         <Ap si={paso >= 0}>
           <Cifra ante="El hurto baja muchísimo · SCJ" valor={`${signo(R.hurto_personas.cambio_pct, 0)} %`} color="var(--registro-texto)" tam={46}
-            texto={<>hurto a personas: {fmt(R.hurto_personas["2019"], 0)} casos en 2019, {fmt(R.hurto_personas["2026"], 0)} en 2026.</>} />
+            texto={<>hurto a personas desde 2019. No es solo la pandemia: desde 2022 cayó {fmt(-PANDEMIA.hurto2022a2026, 0)} %.</>} />
         </Ap>
         <Ap si={paso >= 1}>
           <div className="cl-tarjeta" style={{ borderTop: "6px solid var(--mujeres)", gap: 2 }}>
