@@ -287,34 +287,32 @@ export function SimuladorClase() {
 export function Propuesta({ paso }: { paso: number }) {
   const valores = Object.fromEntries(C.indice.map((f) => [String(f.localidad), f.ibs]));
   const top5 = R.ibs_top5 as string[];
-  const recs: [string, string][] = [
-    ["Medir con victimización en toda la ciudad", "Encuesta Distrital de Percepción por UPL junto al registro de la SCJ."],
-    ["Priorizar con la regla del índice", `Parques sin atracos, mediación vecinal y alumbrado. Hoy encabezan ${top5.slice(0, 4).join(", ")} y ${top5[4]}.`],
-    ["La autonomía de las mujeres como resultado", "«% que evita salir de noche, por sexo» como indicador de seguimiento."],
-    ["Abrir los datos para evaluar", "Alumbrado georreferenciado (el publicado es de 2019) y delitos por UPZ."],
+  const bloques: [string, string, string][] = [
+    ["Dónde actuar primero", `${top5.slice(0, 4).join(", ")} y ${top5[4]}: donde hay más miedo del que muestran las cifras. La misma regla sirve para las 33 UPL.`, "var(--rojo)"],
+    ["Qué arreglar", "Lo que la gente ve en su barrio: parques sin atracos, convivencia entre vecinos y alumbrado. Con las mujeres en el centro: acoso y moverse de noche.", "var(--percepcion)"],
+    ["Cómo saber si funciona", "Que la gente se sienta más segura, no solo que bajen las denuncias: el Índice de Brecha cada semestre, encuestas de victimización y el % de mujeres que evita salir de noche.", "var(--registro)"],
   ];
   return (
     <div style={{ display: "grid", gridTemplateColumns: "430px 1fr", gap: 40, height: "100%" }}>
       <div>
-        <Mapa valores={valores} tipo="div" unidad="" dec={2} alto={440} />
-        <p className="cl-txt" style={{ fontSize: 14 }}>Índice de Brecha 2025. Oro: más miedo que registro.</p>
+        <Mapa valores={valores} tipo="div" unidad="" dec={2} alto={430} />
+        <p className="cl-txt" style={{ fontSize: 14 }}>Índice de Brecha 2025. Oro: más miedo del que muestran las cifras.</p>
       </div>
-      <div style={{ display: "grid", gap: 14, alignContent: "start" }}>
-        <Ap si={paso >= 0}>
-          <div className="cl-tarjeta" style={{ borderLeft: "6px solid var(--rojo)" }}>
-            <span className="cl-ante">Indicador para toda la ciudad</span>
-            <span className="cl-clave" style={{ fontSize: 22 }}>Índice de Brecha = z(% que siente insegura su zona) − z(ln delitos por 100.000)</span>
-            <span className="cl-txt" style={{ fontSize: 16 }}>Semestral, por UPL, con fuentes que ya existen (EDP, SCJ, SDP). Línea base 2025: {fmt(R.zona_insegura_pct)} % siente insegura su zona.</span>
-          </div>
-        </Ap>
-        {recs.map(([t, d], k) => (
-          <Ap key={t} si={paso >= 1} retraso={k * 180}>
-            <div style={{ display: "grid", gridTemplateColumns: "44px 1fr", gap: 12, alignItems: "start" }}>
-              <span style={{ width: 40, height: 40, borderRadius: 999, background: "var(--oro)", display: "grid", placeItems: "center", fontFamily: "var(--f-display)", fontWeight: 800, fontSize: 19, color: "#1e1e1e" }}>{k + 1}</span>
-              <div><b style={{ color: "var(--rojo)", fontSize: 18 }}>{t}</b><p className="cl-txt" style={{ fontSize: 16 }}>{d}</p></div>
+      <div style={{ display: "grid", gap: 16, alignContent: "start" }}>
+        {bloques.map(([t, d, c], k) => (
+          <Ap key={t} si={paso >= k}>
+            <div style={{ display: "grid", gridTemplateColumns: "48px 1fr", gap: 14, alignItems: "start" }}>
+              <span style={{ width: 44, height: 44, borderRadius: 999, background: c, display: "grid", placeItems: "center", fontFamily: "var(--f-display)", fontWeight: 800, fontSize: 20, color: "#fff" }}>{k + 1}</span>
+              <div><b style={{ fontFamily: "var(--f-display)", fontSize: 22, color: "var(--tinta)" }}>{t}</b><p className="cl-txt" style={{ fontSize: 17 }}>{d}</p></div>
             </div>
           </Ap>
         ))}
+        <Ap si={paso >= 2} retraso={350}>
+          <div className="cl-tarjeta" style={{ borderLeft: "6px solid var(--rojo)" }}>
+            <b style={{ fontSize: 20 }}>Todo con datos que el Distrito ya tiene.</b>
+            <span className="cl-txt" style={{ fontSize: 15 }}>Y dos que faltan por publicar: alumbrado georreferenciado (el del portal es de 2019) y delitos por UPZ.</span>
+          </div>
+        </Ap>
       </div>
     </div>
   );

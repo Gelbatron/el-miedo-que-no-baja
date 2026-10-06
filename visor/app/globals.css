@@ -281,3 +281,4 @@ body:has(.modo-presentacion) .pie, body:has(.modo-presentacion) .barra { display
 .cl-notas { position: absolute; left: 0; right: 0; bottom: 0; z-index: 6; font-size: 1rem; }
 .cl-modo button { padding: 5px 11px; font-size: .78rem; }
 @media (prefers-reduced-motion: reduce) { .cl-ap, .cl-sap, .cl-trazo, .cl-prof, .cl-cuerpo { transition: none !important; animation: none !important; } }
+[data-captura] .cl-ap, [data-captura] .cl-sap, [data-captura] .cl-trazo, [data-captura] .cl-cuerpo { transition: none !important; animation: none !important; }

@@ -25,7 +25,7 @@ export function useConteo(activo: boolean, total: number, ms = 2600) {
   const [n, setN] = useState(0);
   useEffect(() => {
     if (!activo) { setN(0); return; }
-    if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) { setN(total); return; }
+    if (document.documentElement.dataset.captura || window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) { setN(total); return; }
     const t0 = performance.now();
     const reloj = setInterval(() => {
       const f = Math.min(1, (performance.now() - t0) / ms);
@@ -40,11 +40,11 @@ export function useConteo(activo: boolean, total: number, ms = 2600) {
 export const lin = (d0: number, d1: number, r0: number, r1: number) => (v: number) => r0 + ((v - d0) / (d1 - d0)) * (r1 - r0);
 
 /** Cifra grande con su lectura. */
-export function Cifra({ ante, valor, color, texto, style }: { ante?: string; valor: string; color: string; texto: ReactNode; style?: CSSProperties }) {
+export function Cifra({ ante, valor, color, texto, style, tam = 56 }: { ante?: string; valor: string; color: string; texto: ReactNode; style?: CSSProperties; tam?: number }) {
   return (
     <div className="cl-tarjeta" style={{ borderTop: `6px solid ${color}`, gap: 4, ...style }}>
       {ante && <span className="cl-ante" style={{ color }}>{ante}</span>}
-      <span className="cl-num" style={{ color, fontSize: 56 }}>{valor}</span>
+      <span className="cl-num" style={{ color, fontSize: tam }}>{valor}</span>
       <span className="cl-txt" style={{ fontSize: 17 }}>{texto}</span>
     </div>
   );

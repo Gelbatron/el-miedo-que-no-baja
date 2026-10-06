@@ -44,7 +44,7 @@ export function Paradoja({ paso }: { paso: number }) {
   const series = [
     { cod: "HP", nombre: "Hurto a personas", color: "var(--registro)", desde: 0 },
     { cod: "VI", nombre: "Violencia intrafamiliar", color: "var(--mujeres)", desde: 1 },
-    { cod: "DS", nombre: "Delitos sexuales", color: "var(--percepcion)", desde: 1 },
+    { cod: "DS", nombre: "Delitos sexuales", color: "var(--vino)", desde: 1 },
   ].map((s) => ({ ...s, puntos: indice(s.cod) }));
   const finales = series.map((s) => ({ s, y: Y(s.puntos[s.puntos.length - 1].y) })).sort((a, b) => a.y - b.y);
   for (let k = 1; k < finales.length; k++) if (finales[k].y - finales[k - 1].y < 22) finales[k].y = finales[k - 1].y + 22;
@@ -79,18 +79,24 @@ export function Paradoja({ paso }: { paso: number }) {
       </svg>
       <div style={{ display: "grid", gap: 12 }}>
         <Ap si={paso >= 0}>
-          <Cifra ante="Lo que se cuenta · SCJ" valor={`${signo(R.hurto_personas.cambio_pct, 0)} %`} color="var(--registro-texto)"
-            texto={<>hurto a personas registrado (ene-ago): {fmt(R.hurto_personas["2019"], 0)} casos en 2019, {fmt(R.hurto_personas["2026"], 0)} en 2026.</>} />
+          <Cifra ante="El hurto baja muchísimo · SCJ" valor={`${signo(R.hurto_personas.cambio_pct, 0)} %`} color="var(--registro-texto)" tam={46}
+            texto={<>hurto a personas: {fmt(R.hurto_personas["2019"], 0)} casos en 2019, {fmt(R.hurto_personas["2026"], 0)} en 2026.</>} />
         </Ap>
         <Ap si={paso >= 1}>
-          <p className="cl-txt" style={{ fontSize: 18 }}>Pero no todo baja: <b style={{ color: "var(--mujeres)" }}>violencia intrafamiliar {signo(R.vif_cambio_pct_2018_2026, 0)} %</b> y{" "}
-            <b style={{ color: "var(--percepcion-texto)" }}>delitos sexuales {signo(R.delitos_sexuales_cambio_pct_2018_2026, 0)} %</b> desde 2018.</p>
+          <div className="cl-tarjeta" style={{ borderTop: "6px solid var(--mujeres)", gap: 2 }}>
+            <span className="cl-ante" style={{ color: "var(--mujeres)" }}>Pero los hechos violentos van al revés</span>
+            <div style={{ display: "flex", gap: 22, alignItems: "baseline" }}>
+              <span><span className="cl-num" style={{ fontSize: 36, color: "var(--mujeres)" }}>{signo(R.vif_cambio_pct_2018_2026, 0)} %</span><br /><span style={{ fontSize: 15 }}>violencia intrafamiliar</span></span>
+              <span><span className="cl-num" style={{ fontSize: 36, color: "var(--vino)" }}>{signo(R.delitos_sexuales_cambio_pct_2018_2026, 0)} %</span><br /><span style={{ fontSize: 15 }}>delitos sexuales</span></span>
+              <span style={{ fontSize: 13, color: "var(--tinta-3)", alignSelf: "end" }}>2018-2026</span>
+            </div>
+          </div>
         </Ap>
         <Ap si={paso >= 2}>
-          <Cifra ante="Lo que se siente · Bienal 2025" valor={`${fmt(R.ciudad_insegura_pct, 0)} %`} color="var(--percepcion-texto)"
-            texto={<>de los adultos siente insegura a Bogotá; el {fmt(R.zona_insegura_pct, 0)} %, su propia zona.</>} />
+          <Cifra ante="Y la gente no lo siente · Bienal 2025" valor={`${fmt(R.ciudad_insegura_pct, 0)} %`} color="var(--percepcion-texto)" tam={46}
+            texto={<>dice que Bogotá es insegura: 3 de cada 4.</>} />
         </Ap>
-        <Ap si={paso >= 2} retraso={350}><p className="cl-clave">Lo que se cuenta baja. Lo que se siente, no.</p></Ap>
+        <Ap si={paso >= 2} retraso={350}><p className="cl-clave" style={{ fontSize: 22 }}>En el papel la ciudad mejora, pero la gente no lo siente.</p></Ap>
       </div>
     </div>
   );
@@ -148,7 +154,7 @@ export function Termometros({ paso }: { paso: number }) {
           <div className="cl-tarjeta" style={{ borderLeft: "6px solid var(--rojo)" }}>
             <span className="cl-num" style={{ fontSize: 42, color: "var(--rojo)" }}>ρ = {fmt(v.rho, 2)}</span>
             <span className="cl-txt" style={{ fontSize: 16 }}>Correlación entre los dos rankings; no se distingue de cero (IC 95 %: {fmt(v.ic_inf, 2)} a {fmt(v.ic_sup, 2)}).</span>
-            <b style={{ fontSize: 18 }}>El registro no dice dónde está el miedo.</b>
+            <b style={{ fontSize: 18 }}>El Distrito está decidiendo con un mapa incompleto.</b>
           </div>
         </Ap>
       </div>
@@ -434,14 +440,12 @@ function PasoCuenta({ n, titulo, fuente, children, color }: { n: number; titulo:
   );
 }
 
-export function CifraOculta({ paso }: { paso: number }) {
+export function CifraOculta() {
   const [sel, setSel] = useState(0);
   const f = OCULTA.find((c) => c.localidad === sel) ?? BOGOTA;
   const adultos = f.victimas_estimadas / (f.emv_victima / 100);
   const porCien = 100 / f.razon, k = Math.min(100, Math.round(porCien));
-  const v = D.validaciones.find((x) => x.prueba.startsWith("Índice de Brecha"))!;
   const orden = [...OCULTA].sort((a, b) => b.razon - a.razon);
-  const paso1 = paso >= 1, paso2 = paso >= 2;
   return (
     <div style={{ display: "grid", gridTemplateColumns: "520px 1fr", gap: 44, height: "100%" }}>
       <div style={{ display: "grid", gap: 16, alignContent: "start" }}>
@@ -467,27 +471,52 @@ export function CifraOculta({ paso }: { paso: number }) {
           )}
         </PasoCuenta>
       </div>
+      <div style={{ display: "grid", gap: 10, alignContent: "start", justifyItems: "start" }}>
+        <p className="cl-clave">Por cada <span style={{ color: "var(--percepcion-texto)" }}>100 víctimas</span>, el registro oficial tiene <span style={{ color: "var(--registro-texto)" }}>{fmt(porCien, 0)} delitos</span>.</p>
+        <CienVictimas registrados={k} />
+        <div style={{ display: "flex", gap: 20, fontSize: 16, color: "var(--tinta-2)" }}>
+          <span><b style={{ color: "var(--registro)" }}>●</b> {k} quedan en el registro</span>
+          <span><b style={{ color: "var(--percepcion)" }}>●</b> {100 - k} no llegan a las cifras</span>
+        </div>
+        {f.razon < 1.05 && <p className="cl-txt" style={{ fontSize: 15 }}>En {f.nombre} se registran tantos delitos como víctimas residentes, o más: allí llega gente de toda la ciudad.</p>}
+      </div>
+    </div>
+  );
+}
+
+/* ---------- La prueba: el índice y el delito escondido van juntos ---------- */
+export function Prueba({ paso }: { paso: number }) {
+  const v = D.validaciones.find((x) => x.prueba.startsWith("Índice de Brecha"))!;
+  const p0 = paso === 0;
+  return (
+    <div style={{ display: "grid", gridTemplateColumns: "420px 1fr", gap: 44, height: "100%" }}>
       <div style={{ position: "relative" }}>
-        <div className="cl-capa" style={{ display: "grid", gap: 10, alignContent: "start", justifyItems: "start", opacity: paso1 ? 0 : 1, transition: "opacity .4s", pointerEvents: paso1 ? "none" : "auto" }}>
-          <p className="cl-clave">Por cada <span style={{ color: "var(--percepcion-texto)" }}>100 víctimas</span>, el registro oficial tiene <span style={{ color: "var(--registro-texto)" }}>{fmt(porCien, 0)} delitos</span>.</p>
-          <CienVictimas registrados={k} />
-          <div style={{ display: "flex", gap: 20, fontSize: 16, color: "var(--tinta-2)" }}>
-            <span><b style={{ color: "var(--registro)" }}>●</b> {k} quedan en el registro</span>
-            <span><b style={{ color: "var(--percepcion)" }}>●</b> {100 - k} no llegan a las cifras</span>
+        <div className="cl-capa" style={{ display: "grid", gap: 16, alignContent: "start", opacity: p0 ? 1 : 0, transition: "opacity .4s" }}>
+          <p className="cl-txt" style={{ fontSize: 18 }}>Cada punto es una localidad.</p>
+          <p className="cl-txt" style={{ fontSize: 18 }}><b>Hacia arriba:</b> más miedo del que muestran sus cifras (el índice).</p>
+          <p className="cl-txt" style={{ fontSize: 18 }}><b>Hacia la derecha:</b> más delito que no llega al registro.</p>
+          <div className="cl-tarjeta" style={{ borderLeft: "6px solid var(--rojo)" }}>
+            <span className="cl-num" style={{ fontSize: 44, color: "var(--rojo)" }}>ρ = {fmt(v.rho, 2)}</span>
+            <span className="cl-txt" style={{ fontSize: 16 }}>Suben juntas (IC 95 % de {fmt(v.ic_inf, 2)} a {fmt(v.ic_sup, 2)}).</span>
+            <b style={{ fontSize: 18 }}>Donde la gente tiene más miedo, más delito se queda escondido.</b>
           </div>
-          {f.razon < 1.05 && <p className="cl-txt" style={{ fontSize: 15 }}>En {f.nombre} se registran tantos delitos como víctimas residentes, o más: allí llega gente de toda la ciudad.</p>}
         </div>
-        <div className="cl-capa" style={{ display: "grid", gap: 6, alignContent: "start", opacity: paso1 && !paso2 ? 1 : 0, transition: "opacity .5s", pointerEvents: paso1 && !paso2 ? "auto" : "none" }}>
-          <p className="cl-clave" style={{ fontSize: 22 }}>Donde hay más miedo que registro, más delito se queda sin registrar</p>
-          <p className="cl-txt" style={{ fontSize: 15 }}>Cada punto es una localidad. <b>Hacia arriba</b>: más miedo del que su registro explica (Índice de Brecha). <b>Hacia la derecha</b>: más víctimas por cada delito registrado.</p>
+        <div className="cl-capa" style={{ display: "grid", gap: 16, alignContent: "start", opacity: p0 ? 0 : 1, transition: "opacity .4s" }}>
+          <p className="cl-txt" style={{ fontSize: 18 }}>¿Y si es casualidad? Probamos <b>siete relaciones</b> entre localidades.</p>
+          <p className="cl-txt" style={{ fontSize: 18 }}>Con tantas pruebas, alguna sale «significativa» por azar. Corregimos por eso (Benjamini-Hochberg).</p>
+          <div className="cl-tarjeta" style={{ borderLeft: "6px solid var(--rojo)" }}>
+            <b style={{ fontSize: 20 }}>Solo esta sobrevive.</b>
+            <span className="cl-txt" style={{ fontSize: 17 }}>El miedo de la periferia no es exagerado: es delito que no llega a las cifras.</span>
+          </div>
+        </div>
+      </div>
+      <div style={{ position: "relative" }}>
+        <div className="cl-capa" style={{ opacity: p0 ? 1 : 0, transition: "opacity .5s", pointerEvents: p0 ? "auto" : "none" }}>
           <DispersionOculta />
-          <p className="cl-txt" style={{ fontSize: 16 }}>Suben juntas: <b style={{ color: "var(--rojo)" }}>ρ = {fmt(v.rho, 2)}</b> (IC 95 % de {fmt(v.ic_inf, 2)} a {fmt(v.ic_sup, 2)}).</p>
         </div>
-        <div className="cl-capa" style={{ display: "grid", gap: 4, alignContent: "start", opacity: paso2 ? 1 : 0, transition: "opacity .5s", pointerEvents: paso2 ? "auto" : "none" }}>
-          <p className="cl-clave" style={{ fontSize: 22 }}>¿Casualidad? Probamos siete relaciones</p>
-          <p className="cl-txt" style={{ fontSize: 15 }}>Con muchas pruebas, alguna sale «significativa» por azar; el ajuste de Benjamini-Hochberg lo corrige. <b>A la izquierda de la línea roja, la relación no es azar.</b></p>
+        <div className="cl-capa" style={{ opacity: p0 ? 0 : 1, transition: "opacity .5s", pointerEvents: p0 ? "none" : "auto" }}>
+          <p className="cl-txt" style={{ fontSize: 15, marginBottom: 6 }}>Valor p ajustado: a la izquierda de la línea roja, la relación no es azar.</p>
           <Pruebas />
-          <p className="cl-txt" style={{ fontSize: 16 }}><b>Solo una sobrevive.</b> El miedo de la periferia no es exagerado: es delito que no llega a las cifras.</p>
         </div>
       </div>
     </div>

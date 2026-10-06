@@ -2,7 +2,7 @@
 import { D, R, fmt, signo } from "@/lib/datos";
 import { C } from "@/lib/clase";
 import { Motor, type Diapo } from "./Motor";
-import { BOGOTA, CifraOculta, Datos, Indice, Paradoja, Portada, Termometros } from "./diapos-a";
+import { BOGOTA, CifraOculta, Datos, Indice, Paradoja, Portada, Prueba, Termometros } from "./diapos-a";
 import { Cierre, Genero, Prediccion, Propuesta, Repeticiones, SimuladorClase, Vecinos } from "./diapos-b";
 
 const AME = Object.fromEntries(D.ame.m_hechos.map((f) => [f.variable, f]));
@@ -18,23 +18,43 @@ const vecina = (() => {
   const p0 = pr(r);
   return { p0, atracos: pr({ ...r, parque_atracos: 1 }) - p0, conflictos: pr({ ...r, conflictos_vecinos: 1 }) - p0 };
 })();
+const g = D.emv_genero.teme_acoso_sexual.find((f) => f.variable === "mujer")!;
+const cada100 = (r: number) => fmt(100 / r, 0);
 
+// Cuatro actos, la historia que cuenta el equipo:
+// 0 el problema · 1 lo que hicimos · 2 lo que encontramos · 3 por qué importa
 export const DIAPOS: Diapo[] = [
   {
-    id: "inicio", corto: "Portada", pasos: 1, roja: true, quien: "Brandow", tiempo: "0:00-0:15",
-    nota: "Somos The data squad. Venimos a explicar una paradoja de Bogotá: el delito registrado baja, pero el miedo no. ¿Por qué pasa, y dónde debe actuar primero el Distrito?",
+    id: "inicio", corto: "Portada", pasos: 1, roja: true, quien: "Brandow", tiempo: "0:00-0:10",
+    nota: "Somos The data squad. Les vamos a contar algo que encontramos en los datos de Bogotá y que no cuadra.",
     render: () => <Portada />,
   },
+
+  /* ---------- Acto 1 · El problema ---------- */
   {
-    id: "paradoja", corto: "La paradoja", ante: "1 · La paradoja", titulo: "Bogotá registra menos delitos, pero no se siente más segura", pasos: 3,
-    quien: "Brandow", tiempo: "0:15-0:45",
-    nota: "(Aparece la línea azul) El hurto a personas registrado cayó 65 % entre 2019 y 2026. (→) Pero no todo baja: la violencia intrafamiliar y los delitos sexuales suben, y pasan sobre todo en la casa. (→) Y el 74 % de los adultos siente insegura la ciudad. Lo que se cuenta baja; lo que se siente, no.",
+    id: "paradoja", corto: "En el papel mejora", acto: 0, ante: "El problema · 1", titulo: "En el papel, Bogotá mejora. La gente no lo siente.", pasos: 3,
+    quien: "Brandow", tiempo: "0:10-0:45",
+    nota: `Resulta que estuvimos revisando los datos de la Secretaría de Seguridad y el hurto viene bajando muchísimo: ${signo(R.hurto_personas.cambio_pct, 0)} % desde 2019. (→) Pero hay hechos violentos que van al revés: la violencia intrafamiliar y los delitos sexuales subieron cerca de 45 %. (→) Y cuando lo cruzamos con las encuestas, 3 de cada 4 personas dicen que Bogotá es insegura. O sea: en el papel la ciudad mejora, pero la gente no lo siente.`,
     render: (p) => <Paradoja paso={p} />,
   },
   {
-    id: "termometros", corto: "Si el miedo siguiera al delito", ante: "2 · La primera pista", titulo: "Si el miedo siguiera al delito, veríamos una diagonal", pasos: 3,
+    id: "cifra-oculta", corto: "Mucho delito no se denuncia", acto: 0, ante: "El problema · 2", titulo: "Y mucho delito ni siquiera se denuncia", pasos: 1,
     quien: "Brandow", tiempo: "0:45-1:15",
-    nota: "Pregúntenle al público antes de mostrar: si el miedo siguiera al delito, ¿dónde esperarían más miedo? (→) Donde más se registra: esta diagonal. (→) Pero no: Usme y Ciudad Bolívar registran poco y tienen el miedo más alto; Teusaquillo y Los Mártires registran mucho y tienen menos. La correlación es −0,25: ninguna. El registro no dice dónde está el miedo.",
+    nota: `Y nos dimos cuenta de que mucho delito ni siquiera llega a las cifras. Hagan la cuenta con nosotros (señalen los tres pasos): el ${fmt(BOGOTA.emv_victima)} % de los adultos dice haber sido víctima en el último año, unos ${fmt(Math.round(BOGOTA.victimas_estimadas / 1e5) / 10, 1)} millones de personas; la Secretaría registró unos ${fmt(Math.round(BOGOTA.delitos_registrados / 1e3), 0)} mil delitos. Por cada 100 víctimas, solo ${cada100(BOGOTA.razon)} quedan en el registro. (Cambien el selector a Bosa: ${cada100(bosa.razon)}.)`,
+    profundizar: (
+      <>
+        <h3>Cómo se calcula la cifra oculta</h3>
+        <p><b>Víctimas:</b> % de adultos que dicen haber sido víctimas en el último año (Encuesta Mundial de Valores 2024) × adultos de la localidad (SDP). <b>Delitos:</b> registro de la Secretaría de Seguridad en 2024, enero a agosto llevado a 12 meses.</p>
+        <p>Compara personas con hechos, así que se lee como orden de magnitud. Con 96 encuestas por localidad, cada razón lleva su intervalo: Bosa {fmt(bosa.razon)} víctimas por delito (IC 95 % de {fmt(bosa.razon_inf)} a {fmt(bosa.razon_sup)}).</p>
+        <p>En el centro (Los Mártires, La Candelaria) se registran tantos delitos como víctimas residentes o más: allí llega gente de toda la ciudad.</p>
+      </>
+    ),
+    render: () => <CifraOculta />,
+  },
+  {
+    id: "termometros", corto: "Un mapa incompleto", acto: 0, ante: "El problema · 3", titulo: "El mapa de las denuncias no es el mapa del miedo", pasos: 3,
+    quien: "Brandow", tiempo: "1:15-1:40",
+    nota: "Pregúntenle al público: si el miedo siguiera al delito registrado, ¿dónde esperarían más miedo? (→) Donde más se registra: esta diagonal. (→) Pero no: Usme y Ciudad Bolívar registran poco y tienen el miedo más alto. El Distrito está tomando decisiones con un mapa al que le falta más de la mitad.",
     profundizar: (
       <>
         <h3>Correlación de rangos (Spearman)</h3>
@@ -45,10 +65,12 @@ export const DIAPOS: Diapo[] = [
     ),
     render: (p) => <Termometros paso={p} />,
   },
+
+  /* ---------- Acto 2 · Lo que hicimos ---------- */
   {
-    id: "datos", corto: "Cómo llegamos", ante: "3 · Cómo llegamos al análisis", titulo: "Siete fuentes públicas unidas por una sola llave", pasos: 3,
-    quien: "Rafael", tiempo: "1:15-1:40",
-    nota: "¿Cómo lo sabemos? Unimos siete fuentes públicas: dos encuestas para lo que se siente, la Secretaría de Seguridad para lo que se registra y cuatro de contexto. (→) Cada fuente escribe la localidad distinto: todo se lleva al código oficial. (→) Y siempre comparamos por habitante: en casos gana Suba porque es enorme; por habitante, el centro.",
+    id: "datos", corto: "Juntamos todo", acto: 1, ante: "Lo que hicimos · 1", titulo: "Juntamos lo que la gente siente con lo que el Estado registra", pasos: 3,
+    quien: "Rafael", tiempo: "1:40-2:00",
+    nota: "¿Qué hicimos? Juntamos todo: lo que la gente siente, de dos encuestas; lo que el Estado registra, de la Secretaría de Seguridad; y población, parques y alumbrado. (→) Cada fuente escribe la localidad distinto, así que todo lo llevamos al mismo código. (→) Y comparamos por habitante, para que Suba no gane solo por ser grande.",
     profundizar: (
       <>
         <h3>Bitácora de limpieza</h3>
@@ -65,38 +87,39 @@ export const DIAPOS: Diapo[] = [
     render: (p) => <Datos paso={p} />,
   },
   {
-    id: "indice", corto: "Índice de Brecha", ante: "4 · Una sola cifra para la brecha", titulo: "Índice de Brecha: cuánto miedo sobra frente al registro", pasos: 4,
-    quien: "Rafael", tiempo: "1:40-2:25",
-    nota: `Para medir la brecha con una sola cifra construimos el Índice de Brecha. Primero el miedo en una regla común: desviaciones frente al promedio de la ciudad. (→) Luego el registro en la misma regla. (→) Y restamos: Usme tiene ${signo(usme.z_percepcion, 2)} de miedo y ${signo(usme.z_registro, 2)} de registro, brecha de ${signo(usme.ibs, 2)}. (→) Como toda estimación tiene margen de error, la repetimos 1.000 veces: Usme y Ciudad Bolívar quedan en el top 5 en todas, Bosa en el 99,5 %.`,
+    id: "indice", corto: "El índice", acto: 1, ante: "Lo que hicimos · 2", titulo: "Un índice: dónde hay más miedo del que muestran las cifras", pasos: 4,
+    quien: "Rafael", tiempo: "2:00-2:40",
+    nota: `Con eso armamos un índice que dice en qué localidades hay más miedo del que muestran las cifras. Pasamos el miedo y el delito a la misma regla, cuánto se alejan del promedio de la ciudad, (→ →) y los restamos: Usme tiene ${signo(usme.z_percepcion, 2)} de miedo y ${signo(usme.z_registro, 2)} de registro, brecha de ${signo(usme.ibs, 2)}. (→) Las que más brecha tienen: Usme, Ciudad Bolívar, Bosa, Kennedy y San Cristóbal. Lo repetimos 1.000 veces y casi siempre son las mismas.`,
     profundizar: (
       <>
         <h3>Cómo se calcula y qué tan estable es</h3>
         <p><b>Fórmula:</b> z(% que califica mala la seguridad de su zona) − z(logaritmo de los delitos de alto impacto por 100.000). z = (valor − promedio) / desviación estándar entre las 19 localidades.</p>
         <p><b>Por qué logaritmo:</b> el centro recibe población flotante; sin él, dos localidades definirían toda la escala.</p>
-        <p><b>Incertidumbre:</b> remuestreamos 1.000 veces a los encuestados de la Bienal dentro de cada localidad. Probabilidad de estar en el top 5: {top5.map((f) => `${f.nombre} ${fmt(f.prob_top5 * 100, 0)} %`).join(", ")}.</p>
+        <p><b>Incertidumbre:</b> remuestreamos 1.000 veces a los encuestados de la Bienal dentro de cada localidad. Probabilidad de estar en el top 5: {top5.map((f) => `${f.nombre} ${fmt(f.prob_top5 * 100, f.prob_top5 > 0.99 && f.prob_top5 < 1 ? 1 : 0)} %`).join(", ")}.</p>
         <p><b>Escala:</b> con la Encuesta Distrital de Percepción se calcula igual para las 33 UPL, cada semestre.</p>
       </>
     ),
     render: (p) => <Indice paso={p} />,
   },
   {
-    id: "cifra-oculta", corto: "Hallazgo 1 · cifra oculta", ante: "5 · Hallazgo 1", titulo: "Donde sobra miedo, el delito no se está registrando", pasos: 3,
-    quien: "Rafael", tiempo: "2:25-3:05",
-    nota: `Primer hallazgo. Hagamos la cuenta en tres pasos (señálenlos): el ${fmt(BOGOTA.emv_victima)} % de los adultos dice haber sido víctima de un delito en el último año, unos ${fmt(Math.round(BOGOTA.victimas_estimadas / 1e5) / 10, 1)} millones de personas; la Secretaría registró unos ${fmt(Math.round(BOGOTA.delitos_registrados / 1e3), 0)} mil delitos. Por cada 100 víctimas, el registro tiene ${fmt(100 / BOGOTA.razon, 0)} delitos. (Cambien el selector a Bosa: ${fmt(100 / bosa.razon, 0)} de cada 100.) (→) Y donde hay más miedo que registro, más delito se queda sin registrar: correlación de 0,72. (→) ¿Casualidad? Probamos siete relaciones y solo esta sobrevive a la corrección por pruebas múltiples. El miedo de la periferia no es exagerado: es delito que no llega a las cifras.`,
+    id: "prueba", corto: "No es casualidad", acto: 1, ante: "Lo que hicimos · 3", titulo: "No es casualidad: donde sobra miedo, falta denuncia", pasos: 2,
+    quien: "Rafael", tiempo: "2:40-3:05",
+    nota: "¿Y eso es real? Donde el índice marca más miedo, más delito se queda sin denunciar: correlación de 0,72. (→) Probamos siete relaciones distintas y esta es la única que pasa la corrección por azar. O sea: el miedo de la periferia no es exagerado, es delito que no llega a las cifras.",
     profundizar: (
       <>
-        <h3>Cifra oculta y pruebas múltiples</h3>
-        <p><b>Víctimas:</b> % de adultos que dicen haber sido víctimas en el último año (EMV 2024) × adultos de la localidad (SDP). <b>Delitos:</b> registro de la SCJ en 2024, enero-agosto llevado a 12 meses.</p>
-        <p>Compara personas con hechos, así que se lee como orden de magnitud. Con 96 encuestas por localidad, cada razón lleva su intervalo: Bosa {fmt(bosa.razon)} (IC 95 % de {fmt(bosa.razon_inf)} a {fmt(bosa.razon_sup)}).</p>
-        <p><b>Benjamini-Hochberg:</b> al probar siete relaciones, alguna saldría «significativa» por azar. La corrección ajusta los valores p por el número de pruebas; solo el Índice de Brecha frente a la cifra oculta queda bajo 0,05 (p ajustado 0,004).</p>
+        <h3>Pruebas múltiples</h3>
+        <p>Cruzamos siete pares de indicadores entre localidades (miedo y delito, víctimas y delito, alumbrado y luminarias, entre otros). Con siete pruebas, alguna saldría «significativa» por puro azar.</p>
+        <p>La corrección de Benjamini-Hochberg ajusta los valores p por el número de pruebas. Solo el Índice de Brecha frente a la cifra oculta queda bajo 0,05 (p ajustado 0,004).</p>
       </>
     ),
-    render: (p) => <CifraOculta paso={p} />,
+    render: (p) => <Prueba paso={p} />,
   },
+
+  /* ---------- Acto 3 · Lo que encontramos ---------- */
   {
-    id: "vecinos", corto: "Hallazgo 2 · entorno", ante: "6 · Hallazgo 2", titulo: "Dos vecinos iguales: qué cambia el miedo y qué no", pasos: 3,
+    id: "vecinos", corto: "Lo que da miedo", acto: 2, ante: "Lo que encontramos · 1", titulo: "El miedo sale del barrio, no de las estadísticas", pasos: 3,
     quien: "Samuel", tiempo: "3:05-3:45",
-    nota: `¿Qué hace que alguien sienta insegura su zona? Comparemos personas iguales en todo menos en una cosa. Esta vecina parte de ${fmt(vecina.p0, 0)} %. (→ muevan el deslizador de hurtos de punta a punta) Del menor al mayor hurto registrado: casi nada. Los homicidios sí pesan algo. (→ activen «atracos en el parque» y suban los conflictos) Ver atracos en el parque: ${signo(vecina.atracos, 0)} puntos. Conflictos con vecinos: hasta ${signo(vecina.conflictos, 0)}. El barrio se siente por lo que pasa en él.`,
+    nota: `¿Qué es lo que de verdad le da miedo a la gente? Comparamos personas iguales en todo menos en una cosa. Esta vecina parte de ${fmt(vecina.p0, 0)} %. (→ muevan el hurto de punta a punta) Las estadísticas de hurto de su localidad: casi nada. (→ activen atracos y suban los conflictos) Ver atracos en el parque: ${signo(vecina.atracos, 0)} puntos. Peleas entre vecinos: hasta ${signo(vecina.conflictos, 0)}. Lo que da miedo es lo que se ve en el barrio.`,
     profundizar: (
       <>
         <h3>El modelo y su robustez</h3>
@@ -109,9 +132,9 @@ export const DIAPOS: Diapo[] = [
     render: (p) => <Vecinos paso={p} />,
   },
   {
-    id: "repeticiones", corto: "¿Y si fue suerte?", ante: "7 · ¿Y si fue suerte?", titulo: "Repetimos el análisis 300 veces, sorteando las localidades", pasos: 2,
-    quien: "Samuel", tiempo: "3:45-4:05",
-    nota: "¿Y si fue suerte? Repetimos el análisis 300 veces sorteando localidades. (Los puntos caen) Los atracos en el parque nunca tocan el cero. (→) El hurto registrado cae a los dos lados del cero: no se distingue de nada.",
+    id: "repeticiones", corto: "No fue suerte", acto: 2, ante: "Lo que encontramos · 2", titulo: "Y no fue suerte: repetimos el análisis 300 veces", pasos: 2,
+    quien: "Samuel", tiempo: "3:45-4:00",
+    nota: "Y no fue suerte: repetimos el análisis 300 veces sorteando las localidades. (Los puntos caen) Los atracos nunca bajan de cero. (→) El hurto registrado cae a los dos lados: no explica nada.",
     profundizar: (
       <>
         <h3>Bootstrap por conglomerados</h3>
@@ -122,9 +145,9 @@ export const DIAPOS: Diapo[] = [
     render: (p) => <Repeticiones paso={p} />,
   },
   {
-    id: "prediccion", corto: "¿El modelo adivina?", ante: "8 · ¿Qué predice mejor el miedo?", titulo: "El entorno predice el miedo; el delito registrado, casi nada", pasos: 4, soloClase: true,
+    id: "prediccion", corto: "¿Qué predice el miedo?", acto: 2, ante: "Lo que encontramos · extra", titulo: "El entorno predice el miedo; el delito registrado, casi nada", pasos: 4, soloClase: true,
     quien: "Samuel", tiempo: "clase",
-    nota: "Le damos al modelo dos personas al azar, una que siente insegura su zona y otra que no. Una moneda acierta 50 de cada 100. Con el perfil, 61. (→) Sumar el delito registrado: 61,1. Nada. (→) Sumar los hechos del entorno: 65,5. (→) Todo junto: 78.",
+    nota: "Le damos al modelo dos personas al azar, una que siente insegura su zona y otra que no. Una moneda acierta 50 de cada 100. Con el perfil, 61. (→) Sumar el delito registrado: 61,1. Nada. (→) Sumar lo que pasa en el barrio: 65,5. (→) Todo junto: 78.",
     profundizar: (
       <>
         <h3>Área bajo la curva (AUC)</h3>
@@ -136,9 +159,9 @@ export const DIAPOS: Diapo[] = [
     render: (p) => <Prediccion paso={p} />,
   },
   {
-    id: "genero", corto: "Hallazgo 3 · género", ante: "9 · Hallazgo 3", titulo: "Las mujeres reportan menos delitos y recortan más su vida", pasos: 3,
-    quien: "Samuel", tiempo: "4:05-4:40",
-    nota: "Tercer hallazgo. Las mujeres dicen haber sido víctimas menos que los hombres. (→) Pero temen más el acoso y evitan más salir de noche. (→) Comparando iguales, con la misma edad, estrato y victimización, ser mujer suma 18 puntos de temor al acoso sexual. El costo del miedo se paga en autonomía.",
+    id: "genero", corto: "Las mujeres", acto: 2, ante: "Lo que encontramos · 3", titulo: "Ellas denuncian menos, pero temen más y salen menos de noche", pasos: 3,
+    quien: "Samuel", tiempo: "4:00-4:35",
+    nota: `Con las mujeres es más fuerte. Denuncian menos que los hombres. (→) Pero tienen mucho más miedo al acoso y dejan de salir de noche. (→) Comparando mujeres y hombres de igual edad, estrato y victimización: ${signo(g.ame_pp, 0)} puntos de temor al acoso. El miedo les cuesta libertad.`,
     profundizar: (
       <>
         <h3>Encuesta Mundial de Valores 2024</h3>
@@ -148,10 +171,12 @@ export const DIAPOS: Diapo[] = [
     ),
     render: (p) => <Genero paso={p} />,
   },
+
+  /* ---------- Acto 4 · Por qué importa ---------- */
   {
-    id: "simulador", corto: "¿Cuánto cambiaría?", ante: "10 · ¿Cuánto cambiaría?", titulo: "Si mejoramos alumbrado y parques, ¿cuánto baja el miedo?", pasos: 1, soloClase: true,
+    id: "simulador", corto: "¿Cuánto cambiaría?", acto: 3, ante: "Por qué importa · extra", titulo: "Si mejoramos alumbrado y parques, ¿cuánto baja el miedo?", pasos: 1, soloClase: true,
     quien: "Brandow", tiempo: "clase",
-    nota: "Muevan los deslizadores. Con la mitad de las zonas con buen alumbrado y la mitad de los parques sin atracos, la inseguridad percibida baja 7,4 puntos en Bogotá: unos 467 mil adultos. Es una sensibilidad del modelo, no una promesa causal.",
+    nota: "Muevan los deslizadores. Con la mitad de las zonas con buen alumbrado y la mitad de los parques sin atracos, la inseguridad percibida baja 7,4 puntos en Bogotá: unos 467 mil adultos. Es una estimación del modelo, no una promesa.",
     profundizar: (
       <>
         <h3>Cómo calcula el simulador</h3>
@@ -162,14 +187,14 @@ export const DIAPOS: Diapo[] = [
     render: () => <SimuladorClase />,
   },
   {
-    id: "propuesta", corto: "Qué proponemos", ante: "11 · Qué proponemos", titulo: "Un indicador para toda la ciudad y cuatro decisiones", pasos: 2,
-    quien: "Brandow", tiempo: "4:40-5:15",
-    nota: "Proponemos un indicador para toda la ciudad: el Índice de Brecha, con fuentes que ya existen, cada semestre y por UPL. (→) Y cuatro decisiones: medir con victimización; priorizar entornos con la regla del índice, que hoy señala a Usme, Ciudad Bolívar, Bosa, Kennedy y San Cristóbal; medir la autonomía de las mujeres; y abrir los datos para evaluar.",
+    id: "propuesta", corto: "Por qué importa", acto: 3, ante: "Por qué importa", titulo: "Dónde actuar, qué arreglar y cómo saber si funciona", pasos: 3,
+    quien: "Brandow", tiempo: "4:35-5:15",
+    nota: "¿Por qué importa? Porque le decimos al Distrito dónde actuar primero: estas cinco localidades. (→) Qué arreglar: lo que la gente ve en su barrio, parques, convivencia y alumbrado, pensando en las mujeres. (→) Y cómo saber si de verdad la gente se siente más segura, no solo si bajan las denuncias: este índice cada semestre. Todo con datos que el Distrito ya tiene.",
     render: (p) => <Propuesta paso={p} />,
   },
   {
     id: "cierre", corto: "Cierre", pasos: 1, roja: true, quien: "Brandow", tiempo: "5:15-5:25",
-    nota: "Bogotá ya produce los datos para cerrar esta brecha. Hay que leerlos juntos. Gracias.",
+    nota: "Bogotá ya tiene los datos para cerrar esta brecha. Solo hay que leerlos juntos. Gracias.",
     render: () => <Cierre />,
   },
 ];

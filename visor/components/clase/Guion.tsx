@@ -6,6 +6,7 @@ import { DIAPOS } from "./Clase";
 export function Guion() {
   const datos = DIAPOS.map(({ id, corto, titulo, pasos, quien, tiempo, nota, soloClase }) => ({ id, corto, titulo: titulo ?? corto, pasos, quien, tiempo, nota, soloClase: !!soloClase }));
   let n = 0;
+  const nPitch = datos.filter((d) => !d.soloClase).length;
   return (
     <div className="contenedor pagina" style={{ maxWidth: 900 }}>
       <script type="application/json" id="guion-datos" dangerouslySetInnerHTML={{ __html: JSON.stringify(datos) }} />
@@ -13,7 +14,7 @@ export function Guion() {
         <p className="antetitulo">Guion de la presentación · pitch de 6 minutos</p>
         <h1 style={{ fontSize: "clamp(2rem,4vw,3rem)" }}>Quién dice qué, y cuándo</h1>
         <p className="bajada">
-          Once láminas en modo pitch (unos 5:25) y dos más en la clase completa. → avanza un paso; N muestra estas notas en pantalla; D abre «¿Cómo lo sabemos?» para las preguntas del jurado.
+          {nPitch} láminas en modo pitch (unos 5:25) y {datos.length - nPitch} más en la clase completa. Cuatro actos: el problema, lo que hicimos, lo que encontramos y por qué importa. → avanza un paso; N muestra estas notas en pantalla; D abre «¿Cómo lo sabemos?» para las preguntas del jurado.
         </p>
         <p><Link className="boton" href="/presentar">▶ Abrir la presentación</Link></p>
       </header>

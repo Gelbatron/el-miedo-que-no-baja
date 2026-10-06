@@ -9,6 +9,7 @@ export type Diapo = {
   ante?: string;
   titulo?: string;
   pasos: number;
+  acto?: number;
   quien: string;
   tiempo: string;
   nota: string;
@@ -20,6 +21,7 @@ export type Diapo = {
 
 type Modo = "pitch" | "clase";
 const ANCHO = 1280, ALTO = 720, DURACION = 6 * 60;
+const ACTOS = ["El problema", "Lo que hicimos", "Lo que encontramos", "Por qué importa"];
 
 export function Motor({ diapos }: { diapos: Diapo[] }) {
   const [modo, setModo] = useState<Modo>("pitch");
@@ -42,7 +44,11 @@ export function Motor({ diapos }: { diapos: Diapo[] }) {
     // #indice abre esa lámina; #indice~2, en su tercer paso; #indice~0~d, con «¿Cómo lo sabemos?» abierto
     const [id, pasoTxt, extra] = window.location.hash.slice(1).split("~");
     if (extra === "d") abrirAlCargar.current = true;
-    if (extra === "c") setCaptura(true); // sin controles ni márgenes: para el respaldo en PDF
+    if (extra === "c") {
+      // sin controles, márgenes ni animaciones: para el respaldo en PDF
+      document.documentElement.dataset.captura = "1";
+      setCaptura(true);
+    }
     const pedida = diapos.find((x) => x.id === id);
     if (pedida?.soloClase) m = "clase";
     setModo(m);
@@ -141,7 +147,13 @@ export function Motor({ diapos }: { diapos: Diapo[] }) {
             <div key={d.id} className={`cl-cuerpo${d.titulo ? "" : " pleno"}`}>{d.render(pos.paso)}</div>
             {!d.roja && (
               <footer className="cl-pie">
-                <span>El miedo que no baja · The data squad · Bogotá DataJam 5</span>
+                {d.acto === undefined ? <span>El miedo que no baja · The data squad · Bogotá DataJam 5</span> : (
+                  <span style={{ display: "flex", gap: 8 }}>
+                    {ACTOS.map((a, k) => (
+                      <span key={a} style={{ color: k === d.acto ? "var(--rojo)" : undefined, fontWeight: k === d.acto ? 700 : 400 }}>{k > 0 ? "→ " : ""}{a}</span>
+                    ))}
+                  </span>
+                )}
                 <span>{d.profundizar ? "Tecla D: ¿cómo lo sabemos?" : ""}</span>
               </footer>
             )}
