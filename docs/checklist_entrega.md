@@ -15,6 +15,8 @@ Cada requisito de los términos de referencia (TdR) y de la ficha metodológica,
 | Visualización que muestre la brecha, con lectura territorial, exportable | visor web desplegado + `powerbi/` + CSV/GeoJSON en `visor/public/descargas/` y `outputs/geo/` | ✔ |
 | Formulario de caracterización oficial diligenciado | `docs/Formulario_caracterizacion_The_data_squad.docx` (y PDF) | ✔ (confirmar roles y correo) |
 | Nota técnica de 1 página | `docs/Nota_tecnica_integracion_datos_The_data_squad.pdf` | ✔ |
+| (Adicional) Libro de datos en Excel | `docs/Libro_de_datos_El_miedo_que_no_baja.xlsx` | ✔ |
+| (Adicional) Presentación del pitch | `docs/pitch/` (PPTX con notas y PDF) y `/presentar` en el visor | ✔ |
 
 ## Lineamientos (TdR, numeral 10)
 
@@ -32,7 +34,7 @@ Cada requisito de los términos de referencia (TdR) y de la ficha metodológica,
 | Rigor e integración (20) | Auditoría ideal frente a disponible; llave territorial; tasas con población SDP; bitácora; validación del cruce de la EMV |
 | Calidad técnica (20) | Logit ponderado con efectos marginales e IC por bootstrap; efectos fijos; wild cluster bootstrap; AUC fuera de muestra; corrección Benjamini-Hochberg; IBS con incertidumbre |
 | Solidez (20) | Resultados nulos reportados; limitaciones explícitas; respuestas preparadas (`docs/pitch/guion_pitch.md`) |
-| Visualización (10) | Visor con mapas, simulador y descargas; Power BI; pitch |
+| Visualización (10) | Visor con mapas, simulador, modo presentación y descargas; Power BI; libro de Excel; pitch |
 | Uso estratégico de datos (10) | Dos de las tres encuestas que la SDP llamó fundamentales, con factor de expansión; auditoría del portal completo en la nota técnica |
 
 ## Antes de enviar (15 de octubre)

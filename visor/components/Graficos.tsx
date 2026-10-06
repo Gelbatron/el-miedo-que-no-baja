@@ -11,7 +11,7 @@ export function Forest({ filas, ancho = 760, min, max, unidad = "pp", dec = 1, p
   const ticks: number[] = [];
   for (let t = Math.ceil(lo / paso) * paso; t <= hi; t += paso) ticks.push(t);
   return (
-    <svg className="g" viewBox={`0 0 ${ancho} ${alto}`} role="img" aria-label="Efectos marginales promedio con intervalo de 95 %">
+    <div className="g-scroll"><svg className="g" viewBox={`0 0 ${ancho} ${alto}`} role="img" aria-label="Efectos marginales promedio con intervalo de 95 %">
       {ticks.map((t) => (
         <g key={t}>
           <line x1={X(t)} x2={X(t)} y1={0} y2={alto - 26} className={t === 0 ? "base" : "grid"} />
@@ -33,7 +33,7 @@ export function Forest({ filas, ancho = 760, min, max, unidad = "pp", dec = 1, p
           </g>
         );
       })}
-    </svg>
+    </svg></div>
   );
 }
 
@@ -45,7 +45,7 @@ export function Barras({ filas, ancho = 760, unidad = "", dec = 1, maximo, color
   const mx = maximo ?? Math.max(...filas.map((f) => f.valor));
   const X = (v: number) => ml + (v / mx) * (ancho - ml - mr);
   return (
-    <svg className="g" viewBox={`0 0 ${ancho} ${alto}`} role="img" aria-label="Barras">
+    <div className="g-scroll"><svg className="g" viewBox={`0 0 ${ancho} ${alto}`} role="img" aria-label="Barras">
       {filas.map((f, i) => {
         const y = 4 + i * fila;
         const col = f.color ?? (resaltar ? (resaltar(i) ? color : "var(--neutro)") : color);
@@ -58,7 +58,7 @@ export function Barras({ filas, ancho = 760, unidad = "", dec = 1, maximo, color
           </g>
         );
       })}
-    </svg>
+    </svg></div>
   );
 }
 
@@ -77,7 +77,7 @@ export function Lineas({ series, ancho = 760, alto = 320, ymin = 0, ymax, unidad
   const finales = series.map((s) => ({ s, y: Y(s.puntos[s.puntos.length - 1].y) })).sort((a, b) => a.y - b.y);
   for (let i = 1; i < finales.length; i++) if (finales[i].y - finales[i - 1].y < 16) finales[i].y = finales[i - 1].y + 16;
   return (
-    <svg className="g" viewBox={`0 0 ${ancho} ${alto}`} role="img" aria-label="Serie de tiempo">
+    <div className="g-scroll"><svg className="g" viewBox={`0 0 ${ancho} ${alto}`} role="img" aria-label="Serie de tiempo">
       {ticks.map((t) => (
         <g key={t}>
           <line x1={ml} x2={ancho - mr} y1={Y(t)} y2={Y(t)} className={base !== undefined && Math.abs(t - base) < 1e-9 ? "base" : "grid"} />
@@ -99,8 +99,17 @@ export function Lineas({ series, ancho = 760, alto = 320, ymin = 0, ymax, unidad
       {finales.map(({ s, y }) => (
         <text key={s.nombre} x={X(x1) + 12} y={y + 4} className="etq" style={{ fontWeight: 600 }}>{s.nombre} {fmt(s.puntos[s.puntos.length - 1].y, 0)}</text>
       ))}
-    </svg>
+    </svg></div>
   );
+}
+
+/** Marcas en valores redondos (1, 2, 2,5 o 5 por potencia de 10) dentro de [a, b] */
+function redondos(a: number, b: number, objetivo = 5) {
+  const crudo = (b - a) / objetivo, pot = 10 ** Math.floor(Math.log10(crudo));
+  const paso = [1, 2, 2.5, 5, 10].map((m) => m * pot).find((p) => p >= crudo) ?? 10 * pot;
+  const valores: number[] = [];
+  for (let t = Math.ceil(a / paso) * paso; t <= b + 1e-9; t += paso) valores.push(Math.abs(t) < 1e-9 ? 0 : t);
+  return { valores, dec: Math.max(0, -Math.floor(Math.log10(paso) + 1e-9) + (paso / pot === 2.5 ? 1 : 0)) };
 }
 
 /* ---------- dispersión con etiquetas ---------- */
@@ -121,15 +130,15 @@ export function Dispersion({ puntos, ancho = 760, alto = 420, ejeX, ejeY, logX =
   const a = my - b * mx;
   const ticksX = logX
     ? [100, 300, 1000, 3000, 10000, 30000].filter((t) => Math.log10(t) >= x0 && Math.log10(t) <= x1)
-    : [0, 0.25, 0.5, 0.75, 1].map((f) => x0 + f * (x1 - x0));
-  const ticksY = [0, 0.25, 0.5, 0.75, 1].map((f) => y0 + f * (y1 - y0));
+    : redondos(x0, x1).valores;
+  const ry = redondos(y0, y1), ticksY = ry.valores, rx = redondos(x0, x1);
   return (
-    <svg className="g" viewBox={`0 0 ${ancho} ${alto}`} role="img" aria-label={`${ejeY} frente a ${ejeX}`}>
+    <div className="g-scroll"><svg className="g" viewBox={`0 0 ${ancho} ${alto}`} role="img" aria-label={`${ejeY} frente a ${ejeX}`}>
       {ticksY.map((t) => (
-        <g key={t}><line x1={ml} x2={ancho - mr} y1={Y(t)} y2={Y(t)} className="grid" /><text x={ml - 8} y={Y(t) + 4} className="tick" textAnchor="end">{fmt(t, 1)}</text></g>
+        <g key={t}><line x1={ml} x2={ancho - mr} y1={Y(t)} y2={Y(t)} className="grid" /><text x={ml - 8} y={Y(t) + 4} className="tick" textAnchor="end">{fmt(t, ry.dec)}</text></g>
       ))}
       {ticksX.map((t) => (
-        <text key={t} x={X(logX ? t : t)} y={alto - mb + 18} className="tick" textAnchor="middle">{fmt(t, logX ? 0 : 1)}</text>
+        <text key={t} x={X(logX ? t : t)} y={alto - mb + 18} className="tick" textAnchor="middle">{fmt(t, logX ? 0 : rx.dec)}</text>
       ))}
       <text x={(ml + ancho - mr) / 2} y={alto - 6} className="etq2" textAnchor="middle">{ejeX}</text>
       <text x={14} y={(mt + alto - mb) / 2} className="etq2" textAnchor="middle" transform={`rotate(-90 14 ${(mt + alto - mb) / 2})`}>{ejeY}</text>
@@ -142,7 +151,7 @@ export function Dispersion({ puntos, ancho = 760, alto = 420, ejeX, ejeY, logX =
           <text x={lx} y={ly} className="etq2" style={{ fontSize: 11.5 }} textAnchor={anc}>{p.nombre}</text>
         </g>
       ))}
-    </svg>
+    </svg></div>
   );
 }
 
@@ -151,7 +160,7 @@ export function Mancuerna({ filas, ancho = 760 }: { filas: { etiqueta: string; m
   const fila = 44, ml = Math.min(330, ancho * 0.44), mr = 40, alto = filas.length * fila + 34;
   const X = (v: number) => ml + (v / 100) * (ancho - ml - mr);
   return (
-    <svg className="g" viewBox={`0 0 ${ancho} ${alto}`} role="img" aria-label="Mujeres frente a hombres">
+    <div className="g-scroll"><svg className="g" viewBox={`0 0 ${ancho} ${alto}`} role="img" aria-label="Mujeres frente a hombres">
       {[0, 25, 50, 75, 100].map((t) => (
         <g key={t}><line x1={X(t)} x2={X(t)} y1={0} y2={alto - 26} className="grid" /><text x={X(t)} y={alto - 8} className="tick" textAnchor="middle">{t} %</text></g>
       ))}
@@ -169,7 +178,7 @@ export function Mancuerna({ filas, ancho = 760 }: { filas: { etiqueta: string; m
           </g>
         );
       })}
-    </svg>
+    </svg></div>
   );
 }
 

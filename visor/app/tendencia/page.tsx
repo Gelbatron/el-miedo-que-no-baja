@@ -7,7 +7,7 @@ export default function Tendencia() {
   const ult = (cod: string, a: number) => D.serie_delitos.find((f) => f.codigo === cod && f.anio === a)?.casos ?? 0;
   const cambio = (cod: string) => ((ult(cod, 2025) / ult(cod, 2024)) - 1) * 100;
   return (
-    <div className="pagina">
+    <div className="contenedor pagina">
       <header className="cabecera-pagina">
         <p className="antetitulo">Registro oficial 2018-2026 · Secretaría de Seguridad</p>
         <h1 style={{ fontSize: "clamp(2rem,4vw,3rem)" }}>Los delitos contra el patrimonio bajan; el miedo no lo registra</h1>

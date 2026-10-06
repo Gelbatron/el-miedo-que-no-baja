@@ -8,8 +8,10 @@ Bogotá DataJam Edición 5 (2026) · Equipo #16 **The data squad**: Rafael Estiv
 | Notebook reproducible | [`notebooks/el_miedo_que_no_baja.ipynb`](notebooks/el_miedo_que_no_baja.ipynb) (ejecutado, con salidas) |
 | Visor interpretativo (web) | https://el-miedo-que-no-baja.vercel.app (clave en el correo de entrega) · código en [`visor/`](visor/) |
 | Tablero Power BI | [`powerbi/`](powerbi/) |
+| Libro de datos en Excel | [`docs/Libro_de_datos_El_miedo_que_no_baja.xlsx`](docs/) (tablas, fórmulas vivas y simulador) |
 | Formulario de caracterización | [`docs/Formulario_caracterizacion_The_data_squad.docx`](docs/) |
 | Nota técnica (1 página) | [`docs/Nota_tecnica_integracion_datos_The_data_squad.pdf`](docs/) |
+| Presentación del pitch | [`docs/pitch/`](docs/pitch/) (PPTX con notas del orador y PDF) y modo **Presentar** en el visor |
 | Datos exportables (CSV, GeoJSON) | [`visor/public/descargas/`](visor/public/descargas/) y [`outputs/`](outputs/) |
 
 ![Delitos registrados frente a percepción](outputs/figuras/fig1_serie_delitos.png)
@@ -128,7 +130,8 @@ outputs/
   resultados.json  cifras que citan el visor, el formulario y el pitch
 visor/             visor web Next.js (desplegado en Vercel)
 powerbi/           proyecto de Power BI y tablas que consume
-docs/              formulario, nota técnica, ficha del indicador y material del pitch
+docs/              formulario, nota técnica, libro de Excel, ficha del indicador y material del pitch
+assets/fuentes/    Montserrat y Work Sans (licencia OFL) para que las figuras se vean igual en cualquier equipo
 auditoria_portal/  scripts de auditoría del catálogo completo del portal (cifras de la nota técnica)
 ```
 

@@ -30,7 +30,7 @@ export function Mapa({ valores, tipo, unidad, titulo, nivel = "localidad", selec
   return (
     <figure style={{ margin: 0, display: "grid", gap: 10 }}>
       {titulo && <figcaption style={{ fontWeight: 650 }}>{titulo}</figcaption>}
-      <svg className="g" viewBox={`-4 -4 ${ancho + 8} ${h + 8}`} style={{ maxHeight: alto, margin: "0 auto" }} role="img" aria-label={titulo}>
+      <svg className="g mapa" viewBox={`-4 -4 ${ancho + 8} ${h + 8}`} style={{ maxHeight: alto, margin: "0 auto" }} role="img" aria-label={titulo}>
         {formas.map((f) => {
           const v = valores[String(f.id)];
           const ok = v !== null && v !== undefined && Number.isFinite(v);

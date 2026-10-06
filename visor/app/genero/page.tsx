@@ -20,7 +20,7 @@ export default function Genero() {
     return { nombre, color, puntos: f.map((p) => ({ x: p.anio, y: (p.casos / base) * 100, tip: `<b>${nombre}</b> · ${p.anio}<br>${fmt(p.casos, 0)} casos (ene-ago)` })) };
   };
   return (
-    <div className="pagina">
+    <div className="contenedor pagina">
       <header className="cabecera-pagina">
         <p className="antetitulo">Enfoque de género · EMV 2024 y Bienal 2025</p>
         <h1 style={{ fontSize: "clamp(2rem,4vw,3rem)" }}>Las mujeres reportan menos delitos y recortan más su vida</h1>

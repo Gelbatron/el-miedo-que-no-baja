@@ -21,7 +21,7 @@ export default function Brecha() {
     tip: `<b>${f.nombre}</b><br>Índice de Brecha: ${fmt(Number(f.ibs), 2)}<br>Víctimas por delito registrado: ${fmt(Number(co[f.localidad].razon))}`,
   }));
   return (
-    <div className="pagina">
+    <div className="contenedor pagina">
       <header className="cabecera-pagina">
         <p className="antetitulo">Índice de Brecha de Seguridad · cifra oculta</p>
         <h1 style={{ fontSize: "clamp(2rem,4vw,3rem)" }}>Donde hay más miedo que delito, el delito no se está registrando</h1>
@@ -40,7 +40,7 @@ export default function Brecha() {
         <div className="tarjeta">
           <h3>Mapa del índice</h3>
           <MapaIndice />
-          <p className="nota">Ámbar: más miedo que delito registrado. Azul: más delito registrado que miedo. En el centro (La Candelaria, Los Mártires, Santa Fe) la tasa por residente se infla con la población flotante.</p>
+          <p className="nota">Oro: más miedo que delito registrado. Azul: más delito registrado que miedo. En el centro (La Candelaria, Los Mártires, Santa Fe) la tasa por residente se infla con la población flotante.</p>
         </div>
       </section>
 

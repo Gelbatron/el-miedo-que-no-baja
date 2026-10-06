@@ -17,7 +17,7 @@ Tablero del proyecto **«El miedo que no baja»** (Bogotá DataJam 5, equipo The
 | `datos/` | CSV de entrada (UTF-8, punto decimal). |
 | `tema_el_miedo_que_no_baja.json` | Tema de colores y tipografía. Ya está aplicado; esta copia sirve para usarlo en otro informe (Ver > Temas > Buscar temas). |
 | `captura_powerbi.png` | Captura de Power BI Desktop con el informe cargado. |
-| `_build/` | Scripts que generan `datos/dim_bogota.csv` y el proyecto PBIP desde cero. |
+| `_build/` | Scripts que generan `datos/dim_bogota.csv` y el proyecto PBIP desde cero. `ElMiedoQueNoBaja_respaldo.pbix` es el `.pbix` con la paleta anterior. |
 
 ## Páginas del informe
 
@@ -26,7 +26,24 @@ Tablero del proyecto **«El miedo que no baja»** (Bogotá DataJam 5, equipo The
 3. **Qué la explica.** Efectos marginales (puntos porcentuales) del modelo «Hechos del entorno», con su tabla de intervalos de confianza, y AUC fuera de muestra por bloque de variables.
 4. **Género.** Indicadores de la EMV 2024 para mujeres y hombres, el efecto de ser mujer a igual edad, estrato y victimización, y la tabla por localidad de «califica insegura su zona» por sexo.
 
-Colores: ámbar `#D98A0B` = percepción, azul `#2F63D6` = registro oficial, violeta `#8E44C8` = mujeres, verde `#2A9D4B` = hombres, gris `#B9C0CD` = no significativo. Fondo blanco, texto `#0F1729`, Segoe UI. Números con formato colombiano (coma decimal, punto de miles).
+## Colores
+
+Paleta del Distrito de Bogotá, validada para daltonismo. Tipografía Segoe UI. Números con formato colombiano (coma decimal, punto de miles).
+
+| Uso | Color |
+|---|---|
+| Percepción (barras, líneas, puntos) | oro `#D99A16` |
+| Percepción en cifras y texto sobre blanco | `#8A5A00` |
+| Registro oficial (barras, líneas, puntos) | azul institucional `#3366CC` |
+| Registro oficial en cifras y texto | `#1F4A9E` |
+| Mujeres / hombres | violeta `#8E44C8` / verde `#2A9D4B` |
+| No significativo | gris `#B9B9B9` |
+| Títulos de página y etiquetas de sección | rojo Bogotá `#BF0A00` |
+| Encabezados de tabla | vino `#AB0F24` con texto blanco |
+| Texto principal / secundario | `#1E1E1E` / `#4B4B4B` |
+| Fondo de página / borde de tarjetas | blanco / `#E3E3E3` |
+
+Los colores que dependen del dato se aplican en el informe: Índice de Brecha y efectos marginales con reglas de formato condicional sobre las mismas medidas numéricas (Índice de Brecha, IC 95 % inferior y superior, efecto), y AUC con un color fijo por bloque que `generar_pbip.py` calcula con la misma lógica. Las medidas «Color Índice de Brecha», «Color efecto marginal» y «Color AUC» siguen en el modelo con los hex de la primera paleta, pero ningún visual las usa: cambiarlas habría alterado el modelo del `.pbix`.
 
 ## Cómo abrirlo
 
@@ -88,3 +105,4 @@ python powerbi/_build/generar_pbip.py     # .pbip + SemanticModel (TMDL) + Repor
 - Los 37 JSON del informe se validaron contra los esquemas PBIR que trae Power BI Desktop 2.158 (report 3.3.0, page 2.1.0, visualContainer 2.13.0): 0 errores.
 - El `.pbip` y el `.pbix` se abrieron en Power BI Desktop 2.158.1177 sin errores de esquema. Por TOM/ADOMD contra el Analysis Services local: las 6 tablas de datos con sus filas (19, 98, 26, 6, 4 y 17), sin columnas en blanco, y las 59 medidas evaluadas sin error, también por localidad, año, variable del modelo, bloque e indicador de género.
 - Se revisaron las cuatro páginas con capturas de la ventana de Desktop.
+- Cambio a la paleta del Distrito (octubre de 2026): solo se tocó el informe. El `DataModel` del `.pbix` es idéntico byte a byte al anterior (SHA-256 `4a517c59…8a24af`), los JSON del informe dentro del `.pbix` son los mismos del PBIP y pasan los esquemas de Desktop 2.158; las reglas de color se validaron además contra la definición de expresiones de `semanticQuery`. El `.pbix` se abrió en Desktop y se revisaron las cuatro páginas.

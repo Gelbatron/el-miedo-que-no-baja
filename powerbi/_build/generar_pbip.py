@@ -27,10 +27,17 @@ SM = PB / f"{NOMBRE}.SemanticModel"
 RP = PB / f"{NOMBRE}.Report"
 RUTA_DATOS = str(DATOS) + "\\"
 
-# Identidad visual (la misma del visor y de las figuras del notebook)
-AMBAR, AZUL, VIOLETA, VERDE, GRIS = "#D98A0B", "#2F63D6", "#8E44C8", "#2A9D4B", "#B9C0CD"
-TINTA, TINTA2, LINEA, BLANCO, FONDO = "#0F1729", "#475069", "#E3E7EE", "#FFFFFF", "#F4F6F9"
+# Identidad visual: paleta del Distrito de Bogotá (validada para daltonismo)
+ORO, AZUL, VIOLETA, VERDE, GRIS = "#D99A16", "#3366CC", "#8E44C8", "#2A9D4B", "#B9B9B9"  # percepción, registro, mujeres, hombres, no significativo
+ORO_TEXTO, AZUL_TEXTO = "#8A5A00", "#1F4A9E"  # cifras y texto en oro o azul sobre blanco (contraste suficiente)
+ROJO, VINO = "#BF0A00", "#AB0F24"  # acento de marca: títulos de página y etiquetas de sección; encabezados de tabla
+TINTA, TINTA2, LINEA, GRILLA = "#1E1E1E", "#4B4B4B", "#E3E3E3", "#EEEEEE"
+BLANCO, FONDO, FILA_ALTERNA = "#FFFFFF", "#F5F5F5", "#FAFAFA"
 FUENTE, FUENTE_FUERTE = "Segoe UI", "Segoe UI Semibold"
+
+# Las medidas «Color ...» del modelo conservan los hex de la primera paleta: cambiarlas altera el DataModel
+# del .pbix. El informe ya no las usa; colorea con reglas propias (REGLA_IBS, REGLA_EFECTO, colores_auc).
+MODELO_AMBAR, MODELO_AZUL, MODELO_GRIS = "#D98A0B", "#2F63D6", "#B9C0CD"
 
 SCHEMA = "https://developer.microsoft.com/json-schemas/fabric/"
 V_REPORT, V_PAGE, V_VISUAL = "3.3.0", "2.1.0", "2.13.0"
@@ -206,7 +213,7 @@ MEDIDAS = [
     ("3. Localidad", "Réplicas en el top 5, top 5",
      "VAR p = [Puesto en el Índice de Brecha]\nRETURN\n    IF(NOT ISBLANK(p) && p <= 5, [Réplicas en el top 5])", "0 %", None),
     ("3. Localidad", "Color Índice de Brecha",
-     f'VAR v = [Índice de Brecha]\nRETURN\n    IF(ISBLANK(v), BLANK(), IF(v > 0, "{AMBAR}", "{AZUL}"))', None,
+     f'VAR v = [Índice de Brecha]\nRETURN\n    IF(ISBLANK(v), BLANK(), IF(v > 0, "{MODELO_AMBAR}", "{MODELO_AZUL}"))', None,
      "Ámbar: más miedo que delito registrado; azul: al revés."),
     ("3. Localidad", "Zona insegura, promedio simple de localidades", "DIVIDE(AVERAGE(Localidades[zona_insegura]), 100)", PCT,
      "Promedio simple de las localidades en contexto. NO es el dato de Bogotá (ese está en Zona insegura, Bogotá)."),
@@ -229,15 +236,15 @@ MEDIDAS = [
      "VAR i = " + EF1.format("SUM('Efectos marginales'[ic_inf])") +
      "\nVAR s = " + EF1.format("SUM('Efectos marginales'[ic_sup])") +
      "\nVAR a = [Efecto marginal (pp)]" +
-     f'\nRETURN\n    IF(ISBLANK(a), BLANK(), IF(i > 0 || s < 0, IF(a > 0, "{AMBAR}", "{AZUL}"), "{GRIS}"))', None,
+     f'\nRETURN\n    IF(ISBLANK(a), BLANK(), IF(i > 0 || s < 0, IF(a > 0, "{MODELO_AMBAR}", "{MODELO_AZUL}"), "{MODELO_GRIS}"))', None,
      "Ámbar: sube la inseguridad percibida; azul: la baja; gris: no significativo."),
     ("4. Modelo", "AUC (validación cruzada)", "IF(COUNTROWS('AUC por bloque') = 1, SUM('AUC por bloque'[auc]))", "0.000",
      "Área bajo la curva ROC fuera de muestra. 0,5 = azar; 1 = predicción perfecta."),
     ("4. Modelo", "AUC, desviación estándar", "IF(COUNTROWS('AUC por bloque') = 1, SUM('AUC por bloque'[auc_sd]))", "0.000", None),
     ("4. Modelo", "Color AUC",
      "VAR b = SELECTEDVALUE('AUC por bloque'[bloque])\nRETURN\n    SWITCH(\n        TRUE(),\n        ISBLANK(b), BLANK(),\n"
-     f'        CONTAINSSTRING(b, "hechos") || CONTAINSSTRING(b, "calificación") || b = "Todo", "{AMBAR}",\n'
-     f'        CONTAINSSTRING(b, "delito"), "{AZUL}",\n        "{GRIS}"\n    )', None,
+     f'        CONTAINSSTRING(b, "hechos") || CONTAINSSTRING(b, "calificación") || b = "Todo", "{MODELO_AMBAR}",\n'
+     f'        CONTAINSSTRING(b, "delito"), "{MODELO_AZUL}",\n        "{MODELO_GRIS}"\n    )', None,
      "Ámbar: bloques con variables del entorno; azul: con delito registrado; gris: solo perfil."),
     # 5. Género -------------------------------------------------------------
     ("5. Género", "Mujeres (%)", "IF(COUNTROWS('Género') = 1, DIVIDE(SUM('Género'[mujeres]), 100))", PCT, "EMV 2024, Bogotá, ponderado."),
@@ -387,9 +394,51 @@ def COL(tabla, nombre):
     return {"Column": {"Expression": {"SourceRef": {"Entity": tabla}}, "Property": nombre}}
 
 
-def CM(medida):
-    """Color tomado de una medida (formato condicional por valor de campo)."""
-    return {"solid": {"color": {"expr": MED(medida)}}}
+MAYOR, MAYOR_IGUAL, MENOR, MENOR_IGUAL = 1, 2, 3, 4  # QueryComparisonKind
+
+
+def CMP(medida, tipo, valor):
+    """Condición «[medida] <tipo> valor» para una regla de color."""
+    return {"Comparison": {"ComparisonKind": tipo, "Left": MED(medida), "Right": L(valor)["expr"]}}
+
+
+def Y(a, b):
+    return {"And": {"Left": a, "Right": b}}
+
+
+def regla(casos):
+    """Formato condicional por reglas: el primer caso que se cumple da el color (lo evalúa el informe, no el modelo).
+    Solo comparaciones y Y de dos comparaciones, la forma que escribe Desktop: un «O» no se evalúa."""
+    return {"solid": {"color": {"expr": {"Conditional": {"Cases": [
+        {"Condition": cond, "Value": L(color)["expr"]} for cond, color in casos]}}}}}
+
+
+# Oro: más miedo que delito registrado; azul: al revés (misma regla que la medida «Color Índice de Brecha»).
+REGLA_IBS = regla([(CMP("Índice de Brecha", MAYOR, 0), ORO), (CMP("Índice de Brecha", MENOR_IGUAL, 0), AZUL)])
+# Misma regla que «Color efecto marginal»: si el IC 95 % no incluye el cero, oro cuando el efecto sube y azul cuando
+# baja; si lo incluye, gris. «IC no incluye el cero» = IC inferior > 0 o IC superior < 0, desplegado en casos.
+_EF, _INF, _SUP = "Efecto marginal (pp)", "IC 95 % inferior (pp)", "IC 95 % superior (pp)"
+REGLA_EFECTO = regla([
+    (Y(CMP(_INF, MAYOR, 0), CMP(_EF, MAYOR, 0)), ORO),
+    (Y(CMP(_SUP, MENOR, 0), CMP(_EF, MAYOR, 0)), ORO),
+    (Y(CMP(_INF, MAYOR, 0), CMP(_EF, MENOR_IGUAL, 0)), AZUL),
+    (Y(CMP(_SUP, MENOR, 0), CMP(_EF, MENOR_IGUAL, 0)), AZUL),
+    (Y(CMP(_INF, MENOR_IGUAL, 0), CMP(_SUP, MAYOR_IGUAL, 0)), GRIS),
+])
+
+
+def color_bloque(bloque: str) -> str:
+    """Misma lógica que la medida «Color AUC» (CONTAINSSTRING no distingue mayúsculas)."""
+    b = bloque.lower()
+    if "hechos" in b or "calificación" in b or bloque == "Todo":
+        return ORO
+    return AZUL if "delito" in b else GRIS
+
+
+def colores_auc():
+    """Un color fijo por bloque del modelo: oro con variables del entorno, azul con delito registrado, gris solo perfil."""
+    df = pd.read_csv(DATOS / "fact_auc_bloques.csv", encoding="utf-8-sig")
+    return [(b, color_bloque(b)) for b in df["bloque"]]
 
 
 def qref(campo):
@@ -464,23 +513,29 @@ def v_card(medida, titulo, color, subtitulo=None, subtitulo_medida=None, tam=24)
     }
 
 
-EJE_VAL = props(fontSize=L(9), labelColor=C(TINTA2), showAxisTitle=L(False), gridlineShow=L(True), gridlineColor=C("#EEF1F5"))
+EJE_VAL = props(fontSize=L(9), labelColor=C(TINTA2), showAxisTitle=L(False), gridlineShow=L(True), gridlineColor=C(GRILLA))
 ETIQUETAS = props(show=L(True), color=C(TINTA), fontSize=L(9))
 
 
-def v_barras(categoria, valores, titulo, subtitulo=None, color_medida=None, colores_serie=None, orden=None,
-             tooltips=(), eje_valor=None, leyenda=False, subtitulo_medida=None, margen=25):
+def v_barras(categoria, valores, titulo, subtitulo=None, color_regla=None, colores_serie=None, colores_categoria=None,
+             orden=None, tooltips=(), eje_valor=None, leyenda=False, subtitulo_medida=None, margen=25):
     qs = {"Category": {"projections": [P(*categoria)]}, "Y": {"projections": [P(*v) for v in valores]}}
     if tooltips:
         qs["Tooltips"] = {"projections": [P(*t) for t in tooltips]}
     eje_cat = props(fontSize=L(9), labelColor=C(TINTA2), showAxisTitle=L(False), maxMarginFactor=L(margen))
     objetos = {"categoryAxis": eje_cat, "valueAxis": eje_valor or EJE_VAL, "labels": ETIQUETAS,
                "legend": props(show=L(leyenda), position=L("Top"), fontSize=L(9))}
-    if color_medida:
-        objetos["dataPoint"] = props(selector=TODAS, fill=CM(color_medida))
+    if color_regla:
+        objetos["dataPoint"] = props(selector=TODAS, fill=color_regla)
     if colores_serie:
         objetos["dataPoint"] = [{"properties": {"fill": C(col)}, "selector": {"metadata": qref(campo)}}
                                 for campo, col in colores_serie]
+    if colores_categoria:  # un color fijo por valor de la categoría
+        objetos["dataPoint"] = [
+            {"properties": {"fill": C(col)},
+             "selector": {"data": [{"scopeId": {"Comparison": {
+                 "ComparisonKind": 0, "Left": categoria[0], "Right": L(valor)["expr"]}}}]}}
+            for valor, col in colores_categoria]
     v = {"visualType": "clusteredBarChart", "query": {"queryState": qs}, "objects": objetos,
          "visualContainerObjects": contenedor(titulo, subtitulo, subtitulo_medida), "drillFilterOtherVisuals": True}
     if orden:
@@ -498,7 +553,7 @@ def v_linea(eje, series, titulo, subtitulo=None):
         "objects": {
             "categoryAxis": props(axisType=L("Categorical"), fontSize=L(9), labelColor=C(TINTA2), showAxisTitle=L(False)),
             "valueAxis": props(fontSize=L(9), labelColor=C(TINTA2), showAxisTitle=L(False), start=L(0),
-                               gridlineShow=L(True), gridlineColor=C("#EEF1F5")),
+                               gridlineShow=L(True), gridlineColor=C(GRILLA)),
             "legend": props(show=L(True), position=L("Top"), fontSize=L(10)),
             "lineStyles": props(strokeWidth=L(3), showMarker=L(True), markerSize=L(5)),
             "labels": props(show=L(False)),
@@ -509,7 +564,7 @@ def v_linea(eje, series, titulo, subtitulo=None):
     }
 
 
-def v_dispersion(detalle, x, y, titulo, subtitulo, color_medida):
+def v_dispersion(detalle, x, y, titulo, subtitulo, color_regla):
     return {
         "visualType": "scatterChart",
         "query": {"queryState": {
@@ -520,12 +575,12 @@ def v_dispersion(detalle, x, y, titulo, subtitulo, color_medida):
         "objects": {
             "categoryAxis": props(logAxisScale=L(True), start=L(900), end=L(14000), fontSize=L(9), labelColor=C(TINTA2), showAxisTitle=L(True),
                                   titleText=L(x[1] or x[0]["Measure"]["Property"]), titleFontSize=L(9),
-                                  gridlineShow=L(True), gridlineColor=C("#EEF1F5")),
+                                  gridlineShow=L(True), gridlineColor=C(GRILLA)),
             "valueAxis": props(fontSize=L(9), labelColor=C(TINTA2), showAxisTitle=L(True),
                                titleText=L(y[1] or y[0]["Measure"]["Property"]), titleFontSize=L(9),
-                               gridlineShow=L(True), gridlineColor=C("#EEF1F5")),
+                               gridlineShow=L(True), gridlineColor=C(GRILLA)),
             "categoryLabels": props(show=L(True), color=C(TINTA2), fontSize=L(8)),
-            "dataPoint": props(selector=TODAS, fill=CM(color_medida)),
+            "dataPoint": props(selector=TODAS, fill=color_regla),
             "bubbles": props(bubbleSize=L(6)),
             "legend": props(show=L(False)),
         },
@@ -537,11 +592,11 @@ def v_dispersion(detalle, x, y, titulo, subtitulo, color_medida):
 def v_tabla(columnas, titulo, subtitulo=None, orden=None, colores=(), anchos=()):
     objetos = {
         "total": props(totals=L(False)),
-        "columnHeaders": props(fontSize=L(9), fontColor=C(TINTA2), backColor=C("#F6F7FA"), wordWrap=L(True),
+        "columnHeaders": props(fontSize=L(9), fontColor=C(BLANCO), backColor=C(VINO), wordWrap=L(True),
                                fontFamily=L(FUENTE_FUERTE)),
         "values": props(fontSize=L(10), fontColorPrimary=C(TINTA), fontColorSecondary=C(TINTA),
-                        backColorPrimary=C(BLANCO), backColorSecondary=C("#FAFBFC"), fontFamily=L(FUENTE)),
-        "grid": props(gridHorizontal=L(True), gridHorizontalColor=C("#EEF1F5"), gridVertical=L(False),
+                        backColorPrimary=C(BLANCO), backColorSecondary=C(FILA_ALTERNA), fontFamily=L(FUENTE)),
+        "grid": props(gridHorizontal=L(True), gridHorizontalColor=C(GRILLA), gridVertical=L(False),
                       rowPadding=L(5), outlineColor=C(LINEA)),
     }
     if colores:
@@ -576,7 +631,7 @@ def filtro_en(nombre, tabla, columna, valores):
 
 def encabezado(pagina, titulo, subtitulo, alto_titulo=44, tam=18):
     return [
-        (f"{pagina}-titulo", 24, 14, 1232, alto_titulo, v_textbox([(titulo, tam, True, TINTA)])),
+        (f"{pagina}-titulo", 24, 14, 1232, alto_titulo, v_textbox([(titulo, tam, True, ROJO)])),
         (f"{pagina}-sub", 24, 14 + alto_titulo, 1232, 30, v_textbox([(subtitulo, 10, False, TINTA2)])),
     ]
 
@@ -597,12 +652,12 @@ def paginas():
         "El miedo que no baja · Bogotá DataJam 5 · The data squad. Fuentes: SCJ (delitos de alto impacto, enero-agosto 2018-2026), "
         "Encuesta Bienal de Cultura Ciudadana 2025 y Encuesta Mundial de Valores 2024.",
         alto_titulo=64, tam=17)
-    tarjetas = [
-        ("Variación hurto a personas 2019-2026", "Hurto a personas 2019 → 2026", AZUL, None, "Texto hurto a personas"),
-        ("Ciudad insegura, Bogotá", "Califica la ciudad insegura", AMBAR, None, "Texto encuestas Bienal"),
-        ("Zona insegura, Bogotá", "Califica insegura su zona", AMBAR, None, "Texto encuestas Bienal"),
+    tarjetas = [  # cifras en texto: variantes oscuras de oro y azul
+        ("Variación hurto a personas 2019-2026", "Hurto a personas 2019 → 2026", AZUL_TEXTO, None, "Texto hurto a personas"),
+        ("Ciudad insegura, Bogotá", "Califica la ciudad insegura", ORO_TEXTO, None, "Texto encuestas Bienal"),
+        ("Zona insegura, Bogotá", "Califica insegura su zona", ORO_TEXTO, None, "Texto encuestas Bienal"),
         ("Víctimas por delito registrado, Bogotá", "Víctimas por delito registrado", TINTA, "EMV 2024 frente a SCJ 2024", None),
-        ("Localidades con IBS > 1", "Localidades con brecha > 1", AMBAR, "Índice de Brecha de Seguridad > 1", None),
+        ("Localidades con IBS > 1", "Localidades con brecha > 1", ORO_TEXTO, "Índice de Brecha de Seguridad > 1", None),
     ]
     ancho = (1232 - 4 * 16) / 5
     for i, (m, t, col, sub, subm) in enumerate(tarjetas):
@@ -611,7 +666,7 @@ def paginas():
         (COL("Delitos", "anio"), "Año"),
         [(MED("Índice hurto a personas"), "Hurto a personas", AZUL),
          (MED("Índice violencia intrafamiliar"), "Violencia intrafamiliar", VIOLETA),
-         (MED("Índice delitos sexuales"), "Delitos sexuales", AMBAR)],
+         (MED("Índice delitos sexuales"), "Delitos sexuales", ORO)],
         "Delitos registrados en Bogotá, enero-agosto (índice 2018 = 100)",
         "Fuente: SCJ, delitos de alto impacto por localidad. El hurto cae; la violencia contra las mujeres sube.")))
     vis.append(("resumen-top5", 840, 256, 416, 268, v_tabla(
@@ -624,7 +679,7 @@ def paginas():
         "Variación violencia intrafamiliar 2018-2026", "Violencia intrafamiliar, 2018 → 2026", VIOLETA,
         subtitulo_medida="Texto violencia intrafamiliar", tam=22)))
     vis.append(("resumen-ds", 1056, 540, 200, 156, v_card(
-        "Variación delitos sexuales 2018-2026", "Delitos sexuales, 2018 → 2026", AMBAR,
+        "Variación delitos sexuales 2018-2026", "Delitos sexuales, 2018 → 2026", ORO_TEXTO,
         subtitulo_medida="Texto delitos sexuales", tam=22)))
     pags.append(("Resumen", vis))
 
@@ -633,10 +688,10 @@ def paginas():
         "brecha",
         "La brecha: dónde hay más miedo del que explica el delito registrado",
         "Índice de Brecha de Seguridad (IBS) = z(% que califica insegura su zona) − z(log de delitos de alto impacto por 100 mil). "
-        "Ámbar: más miedo que delito registrado; azul: al revés.")
+        "Oro: más miedo que delito registrado; azul: al revés.")
     vis.append(("brecha-barras", 24, 100, 500, 596, v_barras(
         NOMBRE_LOC, [IBS], "Índice de Brecha por localidad, 2025", "Ordenado de mayor a menor (z)",
-        color_medida="Color Índice de Brecha", orden=ordenar(MED("Índice de Brecha")),
+        color_regla=REGLA_IBS, orden=ordenar(MED("Índice de Brecha")),
         tooltips=[(MED("Índice de Brecha, P5"), None), (MED("Índice de Brecha, P95"), None),
                   (MED("Puesto en el Índice de Brecha"), None), (MED("Réplicas en el top 5"), None)])))
     vis.append(("brecha-dispersion", 540, 100, 716, 300, v_dispersion(
@@ -645,7 +700,7 @@ def paginas():
         (MED("Zona insegura (%)"), "Califica insegura su zona"),
         "Miedo en la zona frente a delito registrado",
         "Cada punto es una localidad. El centro registra mucho delito (población flotante) y siente menos miedo.",
-        "Color Índice de Brecha")))
+        REGLA_IBS)))
     vis.append(("brecha-tabla", 540, 416, 716, 280, v_tabla(
         [NOMBRE_LOC, (MED("Índice de Brecha"), "Índice de Brecha"),
          (MED("Víctimas por delito registrado"), "Víctimas por delito registrado"),
@@ -665,8 +720,8 @@ def paginas():
     vis.append(("explica-ame", 24, 100, 760, 372, v_barras(
         (COL("Efectos marginales", "etiqueta"), "Variable"), [(MED("Efecto marginal (pp)"), None)],
         "Efectos marginales, modelo «Hechos del entorno»",
-        "Ámbar: sube la probabilidad de sentir insegura la zona; azul: la baja",
-        color_medida="Color efecto marginal", orden=ordenar(MED("Efecto marginal (pp)")), margen=45,
+        "Oro: sube la probabilidad de sentir insegura la zona; azul: la baja",
+        color_regla=REGLA_EFECTO, orden=ordenar(MED("Efecto marginal (pp)")), margen=45,
         tooltips=[(MED("IC 95 % inferior (pp)"), None), (MED("IC 95 % superior (pp)"), None), (MED("p-valor"), None)]),
         f_hechos("filtroModeloHechosBarras")))
     vis.append(("explica-ic", 24, 488, 760, 208, v_tabla(
@@ -680,15 +735,15 @@ def paginas():
     vis.append(("explica-auc", 800, 100, 456, 420, v_barras(
         (COL("AUC por bloque", "bloque"), "Bloque de variables"), [(MED("AUC (validación cruzada)"), "AUC")],
         "Capacidad predictiva fuera de muestra (AUC)", subtitulo_medida="Texto AUC",
-        color_medida="Color AUC", orden=ordenar(COL("AUC por bloque", "bloque"), "Ascending"), margen=50,
+        colores_categoria=colores_auc(), orden=ordenar(COL("AUC por bloque", "bloque"), "Ascending"), margen=50,
         tooltips=[(MED("AUC, desviación estándar"), None)],
         eje_valor=props(fontSize=L(9), labelColor=C(TINTA2), showAxisTitle=L(False), start=L(0.5), end=L(0.85),
-                        gridlineShow=L(True), gridlineColor=C("#EEF1F5")))))
+                        gridlineShow=L(True), gridlineColor=C(GRILLA)))))
     vis.append(("explica-nota", 800, 536, 456, 160, v_textbox([
-        ("Cómo leerlo", 11, True, TINTA),
+        ("Cómo leerlo", 11, True, ROJO),
         ("Sumar el delito registrado de la localidad al perfil de la persona casi no mejora la predicción. "
          "Sumar lo que pasa en su entorno inmediato (atracos en el parque, conflictos vecinales, alumbrado) sí.", 10, False, TINTA2),
-        ("Ámbar: bloques con variables del entorno · Azul: con delito registrado · Gris: solo perfil.", 9, False, TINTA2),
+        ("Oro: bloques con variables del entorno · Azul: con delito registrado · Gris: solo perfil.", 9, False, TINTA2),
     ])))
     pags.append(("Qué la explica", vis))
 
@@ -704,9 +759,9 @@ def paginas():
         colores_serie=[(MED("Mujeres (%)"), VIOLETA), (MED("Hombres (%)"), VERDE)],
         orden=ordenar(COL("Género", "etiqueta"), "Ascending"), leyenda=True, margen=40,
         eje_valor=props(fontSize=L(9), labelColor=C(TINTA2), showAxisTitle=L(False), start=L(0), end=L(1),
-                        gridlineShow=L(True), gridlineColor=C("#EEF1F5")))))
+                        gridlineShow=L(True), gridlineColor=C(GRILLA)))))
     vis.append(("genero-nota", 24, 484, 640, 28, v_textbox([
-        ("Efecto de ser mujer a igual edad, estrato y victimización (puntos porcentuales, EMV 2024)", 10, True, TINTA)])))
+        ("Efecto de ser mujer a igual edad, estrato y victimización (puntos porcentuales, EMV 2024)", 10, True, ROJO)])))
     ancho = (640 - 2 * 16) / 3
     for i, (m, t, subm) in enumerate([
         ("Ser mujer: temor al acoso sexual (pp)", "Temor al acoso sexual", "Texto IC mujer acoso"),
@@ -726,14 +781,16 @@ def paginas():
 
 
 def tema():
+    encabezado_tabla = [{"backColor": {"solid": {"color": VINO}}, "fontColor": {"solid": {"color": BLANCO}},
+                         "fontFamily": FUENTE_FUERTE}]
     return {
         "name": "El miedo que no baja",
-        "dataColors": [AMBAR, AZUL, VIOLETA, VERDE, GRIS, TINTA, "#A5650A", "#1D43A0", "#6B2F9C", "#1E7A39", TINTA2],
+        "dataColors": [ORO, AZUL, VIOLETA, VERDE, GRIS, TINTA, ORO_TEXTO, AZUL_TEXTO, "#6B2F9C", "#1E7A39", TINTA2],
         "foreground": TINTA, "foregroundNeutralSecondary": TINTA2, "foregroundNeutralTertiary": GRIS,
         "background": BLANCO, "backgroundLight": FONDO, "backgroundNeutral": LINEA,
-        "tableAccent": AZUL, "good": VERDE, "neutral": GRIS, "bad": AMBAR,
-        "maximum": AMBAR, "center": "#F8D48F", "minimum": "#FDF0D5", "null": GRIS,
-        "hyperlink": AZUL, "visitedHyperlink": AZUL,
+        "tableAccent": VINO, "good": AZUL, "neutral": GRIS, "bad": ORO,
+        "maximum": ORO, "center": "#ECCC8A", "minimum": "#F9F0DC", "null": GRIS,
+        "hyperlink": AZUL_TEXTO, "visitedHyperlink": AZUL_TEXTO,
         "textClasses": {
             "callout": {"fontSize": 26, "fontFace": FUENTE_FUERTE, "color": TINTA},
             "title": {"fontSize": 12, "fontFace": FUENTE_FUERTE, "color": TINTA},
@@ -752,6 +809,8 @@ def tema():
             }},
             "textbox": {"*": {"background": [{"show": False}], "border": [{"show": False}],
                               "padding": [{"top": 0, "bottom": 0, "left": 0, "right": 0}]}},
+            "tableEx": {"*": {"columnHeaders": encabezado_tabla}},
+            "pivotTable": {"*": {"columnHeaders": encabezado_tabla}},
             "page": {"*": {
                 "background": [{"color": {"solid": {"color": BLANCO}}, "transparency": 0}],
                 "outspace": [{"color": {"solid": {"color": FONDO}}, "transparency": 0}],

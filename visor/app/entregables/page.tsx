@@ -26,6 +26,12 @@ const ITEMS: Item[] = [
     requisito: "TdR 11.3",
   },
   {
+    titulo: "Libro de datos en Excel",
+    detalle: "Todas las cifras del proyecto en un libro con tablas nombradas, fórmulas vivas y fuentes por hoja: series, panel por localidad, modelos, índice con incertidumbre, cifra oculta, género, un simulador que recalcula en Excel y el diccionario de variables.",
+    descargar: [{ href: "/entregables/Libro_de_datos_El_miedo_que_no_baja.xlsx", formato: "Excel (.xlsx)" }],
+    requisito: "Anexo de datos",
+  },
+  {
     titulo: "Formulario de caracterización y formulación del problema",
     detalle: "Formulario oficial del DataJam diligenciado sobre el archivo original, con capturas de la herramienta.",
     ver: "/entregables/Formulario_caracterizacion_The_data_squad.pdf",
@@ -40,9 +46,9 @@ const ITEMS: Item[] = [
   },
   {
     titulo: "Presentación para la sustentación",
-    detalle: "Ocho láminas para el pitch de 6 minutos: problema, datos y método, tres hallazgos, recomendaciones e indicador.",
-    ver: "/entregables/Pitch_El_miedo_que_no_baja_The_data_squad.pdf",
-    descargar: [{ href: "/entregables/Pitch_El_miedo_que_no_baja_The_data_squad.pptx", formato: "PowerPoint (.pptx)" }],
+    detalle: "Ocho láminas para el pitch de 6 minutos: problema, datos y método, tres hallazgos, recomendaciones e indicador. También en modo presentación dentro del visor, con gráficas en vivo, cronómetro y notas del orador.",
+    ver: "/presentar",
+    descargar: [{ href: "/entregables/Pitch_El_miedo_que_no_baja_The_data_squad.pdf", formato: "PDF" }, { href: "/entregables/Pitch_El_miedo_que_no_baja_The_data_squad.pptx", formato: "PowerPoint (.pptx)" }],
     requisito: "Jornada final",
   },
   {
@@ -55,7 +61,7 @@ const ITEMS: Item[] = [
 
 export default function Entregables() {
   return (
-    <div className="pagina">
+    <div className="contenedor pagina">
       <header className="cabecera-pagina">
         <p className="antetitulo">Bogotá DataJam Edición 5 · Equipo #16 The data squad</p>
         <h1 style={{ fontSize: "clamp(2rem,4vw,3rem)" }}>Entregables</h1>
@@ -70,7 +76,7 @@ export default function Entregables() {
             <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 4 }}>
               {it.ver && (
                 <a className="boton" href={it.ver} target={it.ver.startsWith("/") && !it.ver.includes(".") ? undefined : "_blank"} rel="noreferrer">
-                  {it.ver.startsWith("http") ? "Abrir" : it.ver.includes(".") ? "Ver" : "Ir"}
+                  {it.ver === "/presentar" ? "▶ Presentar" : it.ver.startsWith("http") ? "Abrir" : it.ver.includes(".") ? "Ver" : "Ir"}
                 </a>
               )}
               {it.descargar?.map((d) => (

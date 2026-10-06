@@ -6,7 +6,7 @@ export default function Indicador() {
   const ibs = D.ibs as Record<string, number & string>[];
   const panel = Object.fromEntries((D.panel as Record<string, number & string>[]).map((p) => [p.localidad, p]));
   return (
-    <div className="pagina">
+    <div className="contenedor pagina">
       <header className="cabecera-pagina">
         <p className="antetitulo">Regla 10.II · indicador medible, comparable y consistente</p>
         <h1 style={{ fontSize: "clamp(2rem,4vw,3rem)" }}>Índice de Brecha de Seguridad</h1>

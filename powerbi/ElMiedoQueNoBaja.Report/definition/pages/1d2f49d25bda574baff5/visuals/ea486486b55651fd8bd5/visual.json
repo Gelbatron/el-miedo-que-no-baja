@@ -155,7 +155,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#475069'"
+                      "Value": "'#FFFFFF'"
                     }
                   }
                 }
@@ -166,7 +166,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#F6F7FA'"
+                      "Value": "'#AB0F24'"
                     }
                   }
                 }
@@ -204,7 +204,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#0F1729'"
+                      "Value": "'#1E1E1E'"
                     }
                   }
                 }
@@ -215,7 +215,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#0F1729'"
+                      "Value": "'#1E1E1E'"
                     }
                   }
                 }
@@ -237,7 +237,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FAFBFC'"
+                      "Value": "'#FAFAFA'"
                     }
                   }
                 }
@@ -268,7 +268,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#EEF1F5'"
+                      "Value": "'#EEEEEE'"
                     }
                   }
                 }
@@ -293,7 +293,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E3E7EE'"
+                      "Value": "'#E3E3E3'"
                     }
                   }
                 }

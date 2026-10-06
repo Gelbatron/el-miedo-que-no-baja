@@ -10,3 +10,6 @@ visor/next-env.d.ts
 visor/*.tsbuildinfo
 powerbi/**/.pbi/cache.abf
 powerbi/**/.pbi/localSettings.json
+
+# respaldo local del tablero antes del cambio de colores
+powerbi/_build/*_respaldo.pbix

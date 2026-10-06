@@ -8,6 +8,7 @@
 - `Formulario_caracterizacion_The_data_squad.docx` (formulario oficial diligenciado)
 - `Nota_tecnica_integracion_datos_The_data_squad.pdf` (1 página)
 - Archivo de Power BI (`ElMiedoQueNoBaja.pbix`, o la carpeta `powerbi/` comprimida si se entrega el proyecto PBIP)
+- `Libro_de_datos_El_miedo_que_no_baja.xlsx` (todas las cifras con fórmulas y simulador)
 
 ---
 
@@ -24,12 +25,13 @@ Enviamos la entrega final del equipo **The data squad** (#16) para el Bogotá Da
 
 **Enlaces:**
 - **Repositorio:** https://github.com/rlondono1620-max/el-miedo-que-no-baja. Contiene el notebook reproducible, los scripts, los datos, el README con las instrucciones de ejecución y despliegue, el tablero de Power BI y la documentación.
-- **Visor desplegado:** https://el-miedo-que-no-baja.vercel.app (clave de acceso: **[CLAVE]**).
+- **Visor desplegado:** https://el-miedo-que-no-baja.vercel.app (clave de acceso: **[CLAVE]**). Incluye la página Entregables, con todos los documentos, y el modo Presentar que usaremos en la sustentación.
 
 **Adjuntos de este correo:**
 - formulario de caracterización diligenciado;
 - nota técnica sobre integración de datos (PDF);
-- archivo del tablero de Power BI.
+- archivo del tablero de Power BI;
+- libro de datos en Excel con las cifras del proyecto.
 
 Quedamos atentos a cualquier inquietud.
 

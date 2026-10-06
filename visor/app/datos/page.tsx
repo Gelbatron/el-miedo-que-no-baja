@@ -15,7 +15,7 @@ const DESCARGAS = [
 
 export default function Datos() {
   return (
-    <div className="pagina">
+    <div className="contenedor pagina">
       <header className="cabecera-pagina">
         <p className="antetitulo">Exportable e interoperable</p>
         <h1 style={{ fontSize: "clamp(2rem,4vw,3rem)" }}>Datos y entregables</h1>
@@ -35,6 +35,7 @@ export default function Datos() {
           <h3>Entregables del DataJam</h3>
           <ul style={{ margin: 0, paddingLeft: "1.2em", display: "grid", gap: 8, color: "var(--tinta-2)" }}>
             <li>Notebook, repositorio, formulario, nota técnica, presentación y ficha del indicador: <a href="/entregables">página Entregables</a>.</li>
+            <li>Libro de Excel con todas las cifras, fórmulas vivas y simulador: <a href="/entregables/Libro_de_datos_El_miedo_que_no_baja.xlsx" download>Libro_de_datos_El_miedo_que_no_baja.xlsx</a>.</li>
             <li>Tablero de Power BI: <a href="/entregables/ElMiedoQueNoBaja.pbix" download>ElMiedoQueNoBaja.pbix</a> (también como proyecto PBIP en la carpeta <span className="mono">powerbi/</span> del repositorio).</li>
           </ul>
         </div>

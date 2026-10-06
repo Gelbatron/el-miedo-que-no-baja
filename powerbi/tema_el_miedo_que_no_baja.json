@@ -1,54 +1,54 @@
 {
   "name": "El miedo que no baja",
   "dataColors": [
-    "#D98A0B",
-    "#2F63D6",
+    "#D99A16",
+    "#3366CC",
     "#8E44C8",
     "#2A9D4B",
-    "#B9C0CD",
-    "#0F1729",
-    "#A5650A",
-    "#1D43A0",
+    "#B9B9B9",
+    "#1E1E1E",
+    "#8A5A00",
+    "#1F4A9E",
     "#6B2F9C",
     "#1E7A39",
-    "#475069"
+    "#4B4B4B"
   ],
-  "foreground": "#0F1729",
-  "foregroundNeutralSecondary": "#475069",
-  "foregroundNeutralTertiary": "#B9C0CD",
+  "foreground": "#1E1E1E",
+  "foregroundNeutralSecondary": "#4B4B4B",
+  "foregroundNeutralTertiary": "#B9B9B9",
   "background": "#FFFFFF",
-  "backgroundLight": "#F4F6F9",
-  "backgroundNeutral": "#E3E7EE",
-  "tableAccent": "#2F63D6",
-  "good": "#2A9D4B",
-  "neutral": "#B9C0CD",
-  "bad": "#D98A0B",
-  "maximum": "#D98A0B",
-  "center": "#F8D48F",
-  "minimum": "#FDF0D5",
-  "null": "#B9C0CD",
-  "hyperlink": "#2F63D6",
-  "visitedHyperlink": "#2F63D6",
+  "backgroundLight": "#F5F5F5",
+  "backgroundNeutral": "#E3E3E3",
+  "tableAccent": "#AB0F24",
+  "good": "#3366CC",
+  "neutral": "#B9B9B9",
+  "bad": "#D99A16",
+  "maximum": "#D99A16",
+  "center": "#ECCC8A",
+  "minimum": "#F9F0DC",
+  "null": "#B9B9B9",
+  "hyperlink": "#1F4A9E",
+  "visitedHyperlink": "#1F4A9E",
   "textClasses": {
     "callout": {
       "fontSize": 26,
       "fontFace": "Segoe UI Semibold",
-      "color": "#0F1729"
+      "color": "#1E1E1E"
     },
     "title": {
       "fontSize": 12,
       "fontFace": "Segoe UI Semibold",
-      "color": "#0F1729"
+      "color": "#1E1E1E"
     },
     "header": {
       "fontSize": 12,
       "fontFace": "Segoe UI Semibold",
-      "color": "#0F1729"
+      "color": "#1E1E1E"
     },
     "label": {
       "fontSize": 10,
       "fontFace": "Segoe UI",
-      "color": "#475069"
+      "color": "#4B4B4B"
     }
   },
   "visualStyles": {
@@ -61,7 +61,7 @@
             "fontSize": 12,
             "fontColor": {
               "solid": {
-                "color": "#0F1729"
+                "color": "#1E1E1E"
               }
             },
             "titleWrap": true
@@ -73,7 +73,7 @@
             "fontSize": 9,
             "fontColor": {
               "solid": {
-                "color": "#475069"
+                "color": "#4B4B4B"
               }
             }
           }
@@ -94,7 +94,7 @@
             "show": true,
             "color": {
               "solid": {
-                "color": "#E3E7EE"
+                "color": "#E3E3E3"
               }
             },
             "radius": 8
@@ -137,6 +137,44 @@
         ]
       }
     },
+    "tableEx": {
+      "*": {
+        "columnHeaders": [
+          {
+            "backColor": {
+              "solid": {
+                "color": "#AB0F24"
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "fontFamily": "Segoe UI Semibold"
+          }
+        ]
+      }
+    },
+    "pivotTable": {
+      "*": {
+        "columnHeaders": [
+          {
+            "backColor": {
+              "solid": {
+                "color": "#AB0F24"
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "fontFamily": "Segoe UI Semibold"
+          }
+        ]
+      }
+    },
     "page": {
       "*": {
         "background": [
@@ -153,7 +191,7 @@
           {
             "color": {
               "solid": {
-                "color": "#F4F6F9"
+                "color": "#F5F5F5"
               }
             },
             "transparency": 0

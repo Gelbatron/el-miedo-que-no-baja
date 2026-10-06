@@ -14,7 +14,7 @@ const AUDITORIA = [
 
 export default function Metodologia() {
   return (
-    <div className="pagina">
+    <div className="contenedor pagina">
       <header className="cabecera-pagina">
         <p className="antetitulo">Trazabilidad: problema → datos → método → resultados → recomendaciones</p>
         <h1 style={{ fontSize: "clamp(2rem,4vw,3rem)" }}>Cómo se hizo</h1>

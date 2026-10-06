@@ -3,35 +3,39 @@
 <head>
 <meta charset="utf-8">
 <title>Nota técnica de integración de datos · The data squad</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap">
 <style>
   @page { size: A4; margin: 13mm 14mm 12mm; }
   * { box-sizing: border-box; }
-  body { font-family: "Segoe UI", "Hanken Grotesk", Arial, sans-serif; font-size: 8.55pt; line-height: 1.36; color: #0f1729; margin: 0; }
-  header { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid #0f1729; padding-bottom: 5px; margin-bottom: 7px; }
-  h1 { font-size: 14.5pt; margin: 0; letter-spacing: -.01em; }
-  .meta { font-size: 7.6pt; color: #475069; text-align: right; }
-  h2 { font-size: 9.2pt; margin: 7px 0 3px; color: #1f4aa8; text-transform: uppercase; letter-spacing: .04em; }
+  body { font-family: "Segoe UI", "Hanken Grotesk", Arial, sans-serif; font-size: 8.55pt; line-height: 1.36; color: #1e1e1e; margin: 0; }
+  .franja { height: 5px; background: linear-gradient(90deg, #bf0a00 0 72%, #e9a924 72% 100%); margin-bottom: 8px; }
+  header { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 1.5px solid #bf0a00; padding-bottom: 5px; margin-bottom: 7px; }
+  h1 { font-family: Montserrat, "Segoe UI", Arial, sans-serif; font-weight: 800; font-size: 12.6pt; margin: 0; letter-spacing: -.015em; color: #bf0a00; white-space: nowrap; }
+  .meta { font-size: 7.6pt; color: #4b4b4b; text-align: right; flex: none; }
+  h2 { font-family: Montserrat, "Segoe UI", Arial, sans-serif; font-weight: 700; font-size: 8.6pt; margin: 7px 0 3px; color: #bf0a00; text-transform: uppercase; letter-spacing: .05em; }
   p { margin: 0 0 4px; }
   ul { margin: 0 0 4px; padding-left: 13px; }
   li { margin-bottom: 2px; }
   .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
   .cifras { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin: 4px 0 6px; }
-  .cifra { border: 1px solid #dce1ea; border-radius: 5px; padding: 5px 6px; }
-  .cifra b { display: block; font-size: 13pt; letter-spacing: -.02em; color: #1f4aa8; }
-  .cifra.p b { color: #8a5300; }
-  .cifra span { font-size: 7.2pt; color: #475069; }
+  .cifra { background: #f4f4f4; border-top: 3px solid #3366cc; border-radius: 4px; padding: 4px 6px 5px; }
+  .cifra b { display: block; font-family: Montserrat, "Segoe UI", Arial, sans-serif; font-weight: 800; font-size: 12.5pt; letter-spacing: -.02em; color: #1f4a9e; }
+  .cifra.p { border-top-color: #d99a16; }
+  .cifra.p b { color: #8a5a00; }
+  .cifra span { font-size: 7.2pt; color: #4b4b4b; }
   table { border-collapse: collapse; width: 100%; font-size: 7.7pt; margin: 2px 0 4px; }
-  th, td { border-bottom: 1px solid #e3e7ee; padding: 2.5px 4px; text-align: left; vertical-align: top; }
-  th { background: #eef1f6; font-weight: 600; }
-  .pie { margin-top: 6px; font-size: 7.2pt; color: #6b748b; border-top: 1px solid #dce1ea; padding-top: 4px; }
-  b.k { color: #0f1729; }
+  th, td { border-bottom: 1px solid #e6e6e6; padding: 2.5px 4px; text-align: left; vertical-align: top; }
+  th { background: #ab0f24; color: #fff; font-weight: 600; }
+  .pie { margin-top: 6px; font-size: 7.2pt; color: #767676; border-top: 1px solid #dcdcdc; padding-top: 4px; }
+  b.k { color: #1e1e1e; }
 </style>
 </head>
 <body>
+<div class="franja"></div>
 <header>
   <div>
     <h1>Nota técnica sobre integración de datos públicos</h1>
-    <div style="font-size:9pt;color:#475069">«El miedo que no baja»: inseguridad percibida y delito registrado en Bogotá</div>
+    <div style="font-size:9pt;color:#4b4b4b">«El miedo que no baja»: inseguridad percibida y delito registrado en Bogotá</div>
   </div>
   <div class="meta">Bogotá DataJam Edición 5 · Equipo #16 The data squad<br>Rafael Londoño · Brandow León · Samuel Riveros · octubre 2026</div>
 </header>

@@ -1,6 +1,6 @@
 """
 Figuras estáticas (PNG, 200 dpi) para el notebook, el README, la nota técnica y el pitch.
-Misma identidad del visor: ámbar = lo que se siente, azul = lo que se registra.
+Misma identidad del visor: oro = lo que se siente, azul = lo que se registra.
 """
 from pathlib import Path
 
@@ -10,21 +10,42 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 import numpy as np  # noqa: E402
 import pandas as pd  # noqa: E402
+from matplotlib import font_manager  # noqa: E402
 from matplotlib.colors import ListedColormap  # noqa: E402
 
 from territorio import LOCALIDADES  # noqa: E402
 
 FIG = Path(__file__).resolve().parents[1] / "outputs" / "figuras"
-PERC, REG, MUJ, HOM, NEUTRO, TINTA, TINTA2, LINEA = "#d98a0b", "#2f63d6", "#8e44c8", "#2a9d4b", "#b9c0cd", "#0f1729", "#475069", "#dce1ea"
-RAMPA_P = ListedColormap(["#fdf0d5", "#f8d48f", "#efb14a", "#d98a0b", "#a5650a"])
-RAMPA_R = ListedColormap(["#dbe6fb", "#a9c2f3", "#6f97e8", "#2f63d6", "#1d43a0"])
+# Paleta del visor: oro = lo que se siente, azul = lo que se registra, rojo para títulos
+PERC, REG, MUJ, HOM, NEUTRO, TINTA, TINTA2, LINEA = "#d99a16", "#3366cc", "#8e44c8", "#2a9d4b", "#b9b9b9", "#1e1e1e", "#4b4b4b", "#dcdcdc"
+ROJO = "#bf0a00"
+RAMPA_P = ListedColormap(["#fff5db", "#fadd95", "#f0bf4f", "#d99a16", "#9c6a08"])
+RAMPA_R = ListedColormap(["#dde7f8", "#a9c1ee", "#6d95e0", "#3366cc", "#1f3f8a"])
+
+# Tipografías del visor (OFL, incluidas en assets/fuentes); si faltan, se usa la fuente por defecto
+FUENTES = Path(__file__).resolve().parents[1] / "assets" / "fuentes"
+_f = {n: FUENTES / f"{n}.ttf" for n in ("Montserrat-ExtraBold", "WorkSans-Regular", "WorkSans-SemiBold")}
+if all(r.exists() for r in _f.values()):
+    font_manager.fontManager.addfont(str(_f["WorkSans-Regular"]))
+    CUERPO = "Work Sans"
+    TITULO = font_manager.FontProperties(fname=str(_f["Montserrat-ExtraBold"]))
+    NEGRITA = font_manager.FontProperties(fname=str(_f["WorkSans-SemiBold"]))
+else:
+    CUERPO, TITULO, NEGRITA = "DejaVu Sans", font_manager.FontProperties(weight="bold"), font_manager.FontProperties(weight="bold")
 
 plt.rcParams.update({
-    "font.family": "DejaVu Sans", "font.size": 10, "axes.edgecolor": LINEA, "axes.labelcolor": TINTA2,
+    "font.family": CUERPO, "font.size": 10, "axes.edgecolor": LINEA, "axes.labelcolor": TINTA2,
     "xtick.color": TINTA2, "ytick.color": TINTA2, "axes.spines.top": False, "axes.spines.right": False,
-    "axes.grid": True, "grid.color": "#e9edf3", "grid.linewidth": .8, "axes.titleweight": "bold", "axes.titlesize": 12,
+    "axes.grid": True, "grid.color": "#ececec", "grid.linewidth": .8, "axes.titlesize": 12,
     "axes.titlelocation": "left", "figure.dpi": 110, "savefig.dpi": 200, "savefig.bbox": "tight",
 })
+
+
+def _titulo(ax, texto, fontsize=12.5, **kw):
+    """Título en Montserrat rojo, como los encabezados del visor."""
+    tp = TITULO.copy()
+    tp.set_size(fontsize)
+    return ax.set_title(texto, fontproperties=tp, color=ROJO, pad=12, **kw)
 
 
 def _guardar(fig, nombre):
@@ -47,11 +68,13 @@ def serie(delitos: pd.DataFrame):
     for i in range(1, len(finales)):
         finales[i][0] = max(finales[i][0], finales[i - 1][0] + 9)
     for yy, xx, txt in finales:
-        ax.annotate(txt, (xx, yy), xytext=(8, 0), textcoords="offset points", va="center", color=TINTA, fontsize=9, fontweight="bold")
+        ax.annotate(txt, (xx, yy), xytext=(8, 0), textcoords="offset points", va="center", color=TINTA, fontsize=9, fontproperties=NEGRITA)
     ax.axhline(100, color=TINTA2, lw=1)
-    ax.set_xlim(2017.7, 2028.2)
+    ax.set_xlim(2017.7, 2028.2)  # aire a la derecha para las etiquetas finales
+    ax.set_xticks(range(2018, 2027, 2))
+    ax.spines["bottom"].set_bounds(2018, 2026)
     ax.set_ylim(0, 200)
-    ax.set_title("Delitos registrados en Bogotá, enero-agosto (índice 2018 = 100)")
+    _titulo(ax, "Delitos registrados en Bogotá, enero-agosto (índice 2018 = 100)")
     ax.text(0, -0.16, "Fuente: SCJ, Delitos de alto impacto por localidad.", transform=ax.transAxes, fontsize=8, color=TINTA2)
     return _guardar(fig, "fig1_serie_delitos")
 
@@ -64,12 +87,12 @@ def mapas(geo, panel: pd.DataFrame):
         g["q"] = pd.qcut(g[col], 5, labels=False)
         g.plot(column="q", cmap=cmap, ax=ax, edgecolor="white", linewidth=.6)
         ax.set_axis_off()
-        ax.set_title(titulo, fontsize=10.5)
+        _titulo(ax, titulo, fontsize=10.5)
         cortes = np.quantile(g[col], [0, .2, .4, .6, .8, 1])
         for i in range(5):
-            ax.add_patch(plt.Rectangle((0.02, 0.02 + i * 0.045), 0.05, 0.035, transform=ax.transAxes, color=cmap(i)))
-            ax.text(0.09, 0.035 + i * 0.045, f"{cortes[i]:,.0f}–{cortes[i + 1]:,.0f}".replace(",", "."), transform=ax.transAxes, fontsize=7.5, va="center")
-    fig.suptitle("Percepción y registro no dibujan el mismo mapa", x=0.02, ha="left", fontweight="bold")
+            ax.add_patch(plt.Rectangle((0.70, 0.02 + i * 0.045), 0.05, 0.035, transform=ax.transAxes, color=cmap(i)))
+            ax.text(0.77, 0.035 + i * 0.045, f"{cortes[i]:,.0f}–{cortes[i + 1]:,.0f}".replace(",", "."), transform=ax.transAxes, fontsize=7.5, va="center")
+    fig.suptitle("Percepción y registro no dibujan el mismo mapa", x=0.02, y=1.03, ha="left", fontproperties=TITULO.copy(), color=ROJO, fontsize=14)
     return _guardar(fig, "fig2_mapas_percepcion_registro")
 
 
@@ -88,7 +111,7 @@ def efectos(ame: pd.DataFrame, etiquetas: dict, nombre="fig3_efectos_marginales"
     ax.axvline(0, color=TINTA2, lw=1)
     ax.set_yticks(range(len(d)), d["etiqueta"])
     ax.set_xlabel("Efecto marginal promedio (puntos porcentuales) e IC 95 %")
-    ax.set_title(titulo or "Qué explica sentir insegura la zona (logit ponderado, Bienal 2025)")
+    _titulo(ax, titulo or "Qué explica sentir insegura la zona (logit ponderado, Bienal 2025)")
     ax.grid(axis="y", visible=False)
     return _guardar(fig, nombre)
 
@@ -101,9 +124,34 @@ def auc(tabla: pd.DataFrame):
     for i, v in enumerate(d["auc"]):
         ax.text(v + .004, i, f"{v:.3f}".replace(".", ","), va="center", fontsize=9)
     ax.set_xlim(0.5, 0.85)
-    ax.set_title("Capacidad predictiva fuera de muestra (AUC, validación cruzada)")
+    _titulo(ax, "Capacidad predictiva fuera de muestra (AUC, validación cruzada)")
     ax.grid(axis="y", visible=False)
     return _guardar(fig, "fig4_auc_bloques")
+
+
+def _etiquetar(ax, xs, ys, nombres, fontsize=7.5):
+    """Etiquetas de puntos sin choques: prueba posiciones alrededor del punto y toma la primera libre."""
+    fig = ax.figure
+    fig.canvas.draw()
+    rend = fig.canvas.get_renderer()
+    puntos = [ax.transData.transform((x, y)) for x, y in zip(xs, ys)]
+    ocupado = [((px - 5, py - 5), (px + 5, py + 5)) for px, py in puntos]
+    opciones = [((5, 4), "left", "bottom"), ((5, -4), "left", "top"), ((-5, 4), "right", "bottom"), ((-5, -4), "right", "top"),
+                ((0, 8), "center", "bottom"), ((0, -8), "center", "top"), ((8, 14), "left", "bottom"), ((8, -14), "left", "top")]
+    caja_ax = ax.get_window_extent(rend)
+    for (x, y), nombre in sorted(zip(zip(xs, ys), nombres), key=lambda t: -t[0][1]):
+        for desp, ha, va in opciones:
+            t = ax.annotate(nombre, (x, y), xytext=desp, textcoords="offset points", fontsize=fontsize, color=TINTA, ha=ha, va=va)
+            b = t.get_window_extent(rend).expanded(1.04, 1.1)
+            dentro = caja_ax.x0 <= b.x0 and b.x1 <= caja_ax.x1 and caja_ax.y0 <= b.y0 and b.y1 <= caja_ax.y1
+            libre = all(b.x1 < a[0] or b.x0 > c[0] or b.y1 < a[1] or b.y0 > c[1] for a, c in ocupado)
+            if dentro and libre:
+                break
+            t.remove()
+        else:
+            t = ax.annotate(nombre, (x, y), xytext=(5, 4), textcoords="offset points", fontsize=fontsize, color=TINTA)
+            b = t.get_window_extent(rend)
+        ocupado.append(((b.x0, b.y0), (b.x1, b.y1)))
 
 
 def brecha_cifra(ibs: pd.DataFrame, co: pd.DataFrame, rho: float):
@@ -113,12 +161,11 @@ def brecha_cifra(ibs: pd.DataFrame, co: pd.DataFrame, rho: float):
     b, a = np.polyfit(m["razon"], m["ibs"], 1)
     xs = np.linspace(m["razon"].min(), m["razon"].max(), 10)
     ax.plot(xs, a + b * xs, ls="--", color=TINTA2, lw=1)
-    for r in m.itertuples():
-        ax.annotate(LOCALIDADES[int(r.localidad)], (r.razon, r.ibs), xytext=(5, 4), textcoords="offset points", fontsize=7.5, color=TINTA)
+    _etiquetar(ax, m["razon"], m["ibs"], [LOCALIDADES[int(c)] for c in m["localidad"]])
     ax.axhline(0, color=TINTA2, lw=.8)
     ax.set_xlabel("Víctimas estimadas por cada delito registrado (EMV 2024 / SCJ 2024)")
     ax.set_ylabel("Índice de Brecha de Seguridad (z)")
-    ax.set_title(f"Donde hay más miedo que delito, más delito queda sin registrar (ρ = {rho:.2f})".replace(".", ","))
+    _titulo(ax, f"Donde hay más miedo que delito, más delito queda sin registrar (Spearman {rho:.2f})".replace(".", ","))
     return _guardar(fig, "fig5_brecha_vs_cifra_oculta")
 
 
@@ -138,7 +185,7 @@ def genero(por_sexo: dict):
     ax.set_xlabel("% de adultos en Bogotá (EMV 2024, ponderado)")
     ax.legend(handles=[plt.Line2D([], [], marker="s", ls="", color=MUJ, label="Mujeres"),
                        plt.Line2D([], [], marker="o", ls="", color=HOM, label="Hombres")], loc="lower right", frameon=False)
-    ax.set_title("Las mujeres reportan menos delitos y recortan más su vida")
+    _titulo(ax, "Mujeres frente a hombres en Bogotá (% de adultos, EMV 2024)")
     ax.grid(axis="y", visible=False)
     return _guardar(fig, "fig6_genero")
 
@@ -153,6 +200,6 @@ def ranking_ibs(ibs: pd.DataFrame):
     ax.axvline(0, color=TINTA2, lw=1)
     ax.set_yticks(range(len(d)), [LOCALIDADES[int(l)] for l in d["localidad"]])
     ax.set_xlabel("Índice de Brecha de Seguridad (z) e intervalo del 90 %")
-    ax.set_title("Índice de Brecha de Seguridad por localidad, 2025")
+    _titulo(ax, "Índice de Brecha de Seguridad por localidad, 2025")
     ax.grid(axis="y", visible=False)
     return _guardar(fig, "fig7_indice_brecha")

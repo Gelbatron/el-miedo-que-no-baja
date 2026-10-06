@@ -111,7 +111,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#475069'"
+                      "Value": "'#4B4B4B'"
                     }
                   }
                 }
@@ -150,7 +150,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#EEF1F5'"
+                      "Value": "'#EEEEEE'"
                     }
                   }
                 }
@@ -174,7 +174,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#475069'"
+                      "Value": "'#4B4B4B'"
                     }
                   }
                 }
@@ -213,7 +213,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#EEF1F5'"
+                      "Value": "'#EEEEEE'"
                     }
                   }
                 }
@@ -237,7 +237,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#475069'"
+                      "Value": "'#4B4B4B'"
                     }
                   }
                 }
@@ -260,13 +260,63 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
+                    "Conditional": {
+                      "Cases": [
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 1,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Medidas"
+                                    }
+                                  },
+                                  "Property": "Índice de Brecha"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "0D"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#D99A16'"
+                            }
+                          }
+                        },
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 4,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Medidas"
+                                    }
+                                  },
+                                  "Property": "Índice de Brecha"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "0D"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#3366CC'"
+                            }
+                          }
                         }
-                      },
-                      "Property": "Color Índice de Brecha"
+                      ]
                     }
                   }
                 }

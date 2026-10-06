@@ -19,11 +19,11 @@
               {
                 "textRuns": [
                   {
-                    "value": "Índice de Brecha de Seguridad (IBS) = z(% que califica insegura su zona) − z(log de delitos de alto impacto por 100 mil). Ámbar: más miedo que delito registrado; azul: al revés.",
+                    "value": "Índice de Brecha de Seguridad (IBS) = z(% que califica insegura su zona) − z(log de delitos de alto impacto por 100 mil). Oro: más miedo que delito registrado; azul: al revés.",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "10pt",
-                      "color": "#475069"
+                      "color": "#4B4B4B"
                     }
                   }
                 ]

@@ -13,7 +13,7 @@ export default function QueExplica() {
   const principal = Object.fromEntries(D.ame.m_hechos.map((f) => [f.variable, f]));
   const robust = ["parque_atracos", "conflictos_vecinos", "hurtos_100k_miles", "homicidios_100k", "narcoticos_100k_cientos"];
   return (
-    <div className="pagina">
+    <div className="contenedor pagina">
       <header className="cabecera-pagina">
         <p className="antetitulo">Diagnóstico · logit ponderado sobre {fmt(D.n.m_hechos, 0)} adultos de la Bienal 2025</p>
         <h1 style={{ fontSize: "clamp(2rem,4vw,3rem)" }}>El entorno explica la percepción; el hurto registrado, no</h1>
@@ -26,7 +26,7 @@ export default function QueExplica() {
 
       <section className="tarjeta">
         <h2>Modelo principal: hechos del entorno</h2>
-        <p className="nota">Solo variables de hechos (sí/no) que vienen de preguntas distintas a la de seguridad, para evitar que el mismo juicio contamine ambos lados. Ámbar: aumenta la inseguridad; azul: la reduce; gris: no significativo.</p>
+        <p className="nota">Solo variables de hechos (sí/no) que vienen de preguntas distintas a la de seguridad, para evitar que el mismo juicio contamine ambos lados. Oro: aumenta la inseguridad; azul: la reduce; gris: no significativo.</p>
         <Forest filas={ord(D.ame.m_hechos)} />
       </section>
 

@@ -23,7 +23,7 @@
                     "textStyle": {
                       "fontFamily": "Segoe UI Semibold",
                       "fontSize": "11pt",
-                      "color": "#0F1729",
+                      "color": "#BF0A00",
                       "fontWeight": "bold"
                     }
                   }
@@ -36,7 +36,7 @@
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "10pt",
-                      "color": "#475069"
+                      "color": "#4B4B4B"
                     }
                   }
                 ]
@@ -44,11 +44,11 @@
               {
                 "textRuns": [
                   {
-                    "value": "Ámbar: bloques con variables del entorno · Azul: con delito registrado · Gris: solo perfil.",
+                    "value": "Oro: bloques con variables del entorno · Azul: con delito registrado · Gris: solo perfil.",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "9pt",
-                      "color": "#475069"
+                      "color": "#4B4B4B"
                     }
                   }
                 ]

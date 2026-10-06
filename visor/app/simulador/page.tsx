@@ -4,7 +4,7 @@ export const metadata = { title: "Simulador · El miedo que no baja" };
 
 export default function PaginaSimulador() {
   return (
-    <div className="pagina">
+    <div className="contenedor pagina">
       <header className="cabecera-pagina">
         <p className="antetitulo">Prescriptivo · escenarios del modelo</p>
         <h1 style={{ fontSize: "clamp(2rem,4vw,3rem)" }}>¿Cuánto bajaría el miedo si arreglamos el entorno?</h1>
