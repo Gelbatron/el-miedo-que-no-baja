@@ -1,0 +1,181 @@
+{
+ "hurto_personas": {
+  "2019": 210160,
+  "2026": 73563,
+  "cambio_pct": -65.0
+ },
+ "hurto_motos_cambio_pct": -78.8,
+ "vif_cambio_pct_2018_2026": 46.1,
+ "delitos_sexuales_cambio_pct_2018_2026": 45.4,
+ "ciudad_insegura_pct": 74.0,
+ "zona_insegura_pct": 48.4,
+ "ciudad_peor_que_antes_pct": 36.2,
+ "miedo_espacio_publico_pct": 10.8,
+ "n_bienal": 5538,
+ "n_emv_bogota": 1824,
+ "adultos_urbanos_bienal": 6308418,
+ "ame_hechos": {
+  "mujer": {
+   "ame_pp": -1.07,
+   "ic_inf": -4.64,
+   "ic_sup": 3.35,
+   "p": 0.61
+  },
+  "edad": {
+   "ame_pp": 0.03,
+   "ic_inf": -0.16,
+   "ic_sup": 0.18,
+   "p": 0.8
+  },
+  "estrato": {
+   "ame_pp": -8.17,
+   "ic_inf": -10.49,
+   "ic_sup": -3.41,
+   "p": 0.0
+  },
+  "arrienda": {
+   "ame_pp": 1.75,
+   "ic_inf": -3.1,
+   "ic_sup": 7.02,
+   "p": 0.54
+  },
+  "hurtos_100k_miles": {
+   "ame_pp": -0.1,
+   "ic_inf": -5.61,
+   "ic_sup": 1.74,
+   "p": 0.93
+  },
+  "homicidios_100k": {
+   "ame_pp": 0.47,
+   "ic_inf": 0.02,
+   "ic_sup": 1.31,
+   "p": 0.01
+  },
+  "narcoticos_100k_cientos": {
+   "ame_pp": -0.35,
+   "ic_inf": -1.96,
+   "ic_sup": 2.03,
+   "p": 0.55
+  },
+  "parque_atracos": {
+   "ame_pp": 13.29,
+   "ic_inf": 6.22,
+   "ic_sup": 17.5,
+   "p": 0.0
+  },
+  "parque_spa": {
+   "ame_pp": -2.87,
+   "ic_inf": -7.4,
+   "ic_sup": 3.97,
+   "p": 0.25
+  },
+  "sin_parque": {
+   "ame_pp": -6.88,
+   "ic_inf": -12.73,
+   "ic_sup": -2.64,
+   "p": 0.01
+  },
+  "presencio_acoso": {
+   "ame_pp": 2.71,
+   "ic_inf": -2.13,
+   "ic_sup": 9.22,
+   "p": 0.37
+  },
+  "conflictos_vecinos": {
+   "ame_pp": 14.69,
+   "ic_inf": 3.86,
+   "ic_sup": 23.79,
+   "p": 0.01
+  }
+ },
+ "ame_calificaciones": {
+  "alumbrado_malo": {
+   "ame_pp": 15.71,
+   "ic_inf": 9.81,
+   "ic_sup": 20.05,
+   "p": 0.0
+  },
+  "ventas_informales_malo": {
+   "ame_pp": 34.96,
+   "ic_inf": 30.38,
+   "ic_sup": 39.93,
+   "p": 0.0
+  }
+ },
+ "auc": {
+  "Perfil (sexo, edad, estrato, tenencia)": 0.609,
+  "Perfil + delito registrado": 0.611,
+  "Perfil + hechos del entorno": 0.655,
+  "Perfil + hechos + delito": 0.656,
+  "Perfil + calificación del entorno": 0.755,
+  "Todo": 0.782
+ },
+ "emv_mujer_ame": {
+  "no_sale_noche": {
+   "ame_pp": 6.47,
+   "ic_inf": 0.96,
+   "ic_sup": 11.5,
+   "p": 0.02
+  },
+  "teme_acoso_sexual": {
+   "ame_pp": 18.02,
+   "ic_inf": 12.88,
+   "ic_sup": 23.43,
+   "p": 0.0
+  },
+  "barrio_inseguro": {
+   "ame_pp": 9.28,
+   "ic_inf": 5.05,
+   "ic_sup": 13.89,
+   "p": 0.0
+  }
+ },
+ "emv_victima_ame_barrio": {
+  "ame_pp": 19.5,
+  "ic_inf": 12.82,
+  "ic_sup": 24.97,
+  "p": 0.0
+ },
+ "emv_por_sexo": {
+  "victima": {
+   "mujeres": 20.6,
+   "hombres": 28.4
+  },
+  "no_sale_noche": {
+   "mujeres": 63.5,
+   "hombres": 57.2
+  },
+  "teme_acoso_sexual": {
+   "mujeres": 71.9,
+   "hombres": 53.9
+  },
+  "barrio_inseguro": {
+   "mujeres": 59.2,
+   "hombres": 51.8
+  }
+ },
+ "cifra_oculta_bogota": 5.6,
+ "cifra_oculta_max": [
+  "Bosa",
+  10.6
+ ],
+ "cifra_oculta_min": [
+  "Los Mártires",
+  0.7
+ ],
+ "ibs_vs_cifra_oculta": {
+  "rho": 0.716,
+  "p": 0.001,
+  "ic_inf": 0.412,
+  "ic_sup": 0.876,
+  "p_bh": 0.004
+ },
+ "ibs_top5": [
+  "Usme",
+  "Ciudad Bolívar",
+  "Bosa",
+  "Kennedy",
+  "San Cristóbal"
+ ],
+ "poblacion_2025": 7937898
+}

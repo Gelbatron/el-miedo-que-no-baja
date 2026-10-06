@@ -1,0 +1,1961 @@
+localidad,anio,codigo,tipo,casos,corte
+9,2018,H,Homicidios,7.0,ene-ago
+20,2018,H,Homicidios,0.0,ene-ago
+18,2018,H,Homicidios,45.0,ene-ago
+17,2018,H,Homicidios,3.0,ene-ago
+13,2018,H,Homicidios,3.0,ene-ago
+16,2018,H,Homicidios,17.0,ene-ago
+14,2018,H,Homicidios,42.0,ene-ago
+1,2018,H,Homicidios,22.0,ene-ago
+2,2018,H,Homicidios,7.0,ene-ago
+4,2018,H,Homicidios,31.0,ene-ago
+5,2018,H,Homicidios,54.0,ene-ago
+19,2018,H,Homicidios,151.0,ene-ago
+7,2018,H,Homicidios,64.0,ene-ago
+8,2018,H,Homicidios,102.0,ene-ago
+10,2018,H,Homicidios,26.0,ene-ago
+11,2018,H,Homicidios,60.0,ene-ago
+6,2018,H,Homicidios,16.0,ene-ago
+3,2018,H,Homicidios,16.0,ene-ago
+15,2018,H,Homicidios,11.0,ene-ago
+12,2018,H,Homicidios,7.0,ene-ago
+9,2019,H,Homicidios,14.0,ene-ago
+20,2019,H,Homicidios,0.0,ene-ago
+18,2019,H,Homicidios,39.0,ene-ago
+17,2019,H,Homicidios,1.0,ene-ago
+13,2019,H,Homicidios,3.0,ene-ago
+16,2019,H,Homicidios,22.0,ene-ago
+14,2019,H,Homicidios,43.0,ene-ago
+1,2019,H,Homicidios,18.0,ene-ago
+2,2019,H,Homicidios,10.0,ene-ago
+4,2019,H,Homicidios,25.0,ene-ago
+5,2019,H,Homicidios,58.0,ene-ago
+19,2019,H,Homicidios,121.0,ene-ago
+7,2019,H,Homicidios,64.0,ene-ago
+8,2019,H,Homicidios,83.0,ene-ago
+10,2019,H,Homicidios,39.0,ene-ago
+11,2019,H,Homicidios,53.0,ene-ago
+6,2019,H,Homicidios,33.0,ene-ago
+3,2019,H,Homicidios,22.0,ene-ago
+15,2019,H,Homicidios,6.0,ene-ago
+12,2019,H,Homicidios,2.0,ene-ago
+9,2020,H,Homicidios,12.0,ene-ago
+20,2020,H,Homicidios,1.0,ene-ago
+18,2020,H,Homicidios,65.0,ene-ago
+17,2020,H,Homicidios,2.0,ene-ago
+13,2020,H,Homicidios,4.0,ene-ago
+16,2020,H,Homicidios,35.0,ene-ago
+14,2020,H,Homicidios,34.0,ene-ago
+1,2020,H,Homicidios,32.0,ene-ago
+2,2020,H,Homicidios,4.0,ene-ago
+4,2020,H,Homicidios,39.0,ene-ago
+5,2020,H,Homicidios,42.0,ene-ago
+19,2020,H,Homicidios,133.0,ene-ago
+7,2020,H,Homicidios,51.0,ene-ago
+8,2020,H,Homicidios,81.0,ene-ago
+10,2020,H,Homicidios,29.0,ene-ago
+11,2020,H,Homicidios,43.0,ene-ago
+6,2020,H,Homicidios,12.0,ene-ago
+3,2020,H,Homicidios,21.0,ene-ago
+15,2020,H,Homicidios,8.0,ene-ago
+12,2020,H,Homicidios,6.0,ene-ago
+9,2021,H,Homicidios,20.0,ene-ago
+20,2021,H,Homicidios,2.0,ene-ago
+18,2021,H,Homicidios,62.0,ene-ago
+17,2021,H,Homicidios,6.0,ene-ago
+13,2021,H,Homicidios,9.0,ene-ago
+16,2021,H,Homicidios,15.0,ene-ago
+14,2021,H,Homicidios,48.0,ene-ago
+1,2021,H,Homicidios,28.0,ene-ago
+2,2021,H,Homicidios,6.0,ene-ago
+4,2021,H,Homicidios,45.0,ene-ago
+5,2021,H,Homicidios,48.0,ene-ago
+19,2021,H,Homicidios,133.0,ene-ago
+7,2021,H,Homicidios,82.0,ene-ago
+8,2021,H,Homicidios,124.0,ene-ago
+10,2021,H,Homicidios,30.0,ene-ago
+11,2021,H,Homicidios,37.0,ene-ago
+6,2021,H,Homicidios,19.0,ene-ago
+3,2021,H,Homicidios,33.0,ene-ago
+15,2021,H,Homicidios,8.0,ene-ago
+12,2021,H,Homicidios,8.0,ene-ago
+9,2022,H,Homicidios,15.0,ene-ago
+20,2022,H,Homicidios,1.0,ene-ago
+18,2022,H,Homicidios,53.0,ene-ago
+17,2022,H,Homicidios,2.0,ene-ago
+13,2022,H,Homicidios,12.0,ene-ago
+16,2022,H,Homicidios,13.0,ene-ago
+14,2022,H,Homicidios,35.0,ene-ago
+1,2022,H,Homicidios,21.0,ene-ago
+2,2022,H,Homicidios,10.0,ene-ago
+4,2022,H,Homicidios,30.0,ene-ago
+5,2022,H,Homicidios,45.0,ene-ago
+19,2022,H,Homicidios,128.0,ene-ago
+7,2022,H,Homicidios,60.0,ene-ago
+8,2022,H,Homicidios,84.0,ene-ago
+10,2022,H,Homicidios,30.0,ene-ago
+11,2022,H,Homicidios,47.0,ene-ago
+6,2022,H,Homicidios,15.0,ene-ago
+3,2022,H,Homicidios,38.0,ene-ago
+15,2022,H,Homicidios,12.0,ene-ago
+12,2022,H,Homicidios,7.0,ene-ago
+9,2023,H,Homicidios,21.0,ene-ago
+20,2023,H,Homicidios,3.0,ene-ago
+18,2023,H,Homicidios,55.0,ene-ago
+17,2023,H,Homicidios,3.0,ene-ago
+13,2023,H,Homicidios,10.0,ene-ago
+16,2023,H,Homicidios,8.0,ene-ago
+14,2023,H,Homicidios,33.0,ene-ago
+1,2023,H,Homicidios,19.0,ene-ago
+2,2023,H,Homicidios,10.0,ene-ago
+4,2023,H,Homicidios,37.0,ene-ago
+5,2023,H,Homicidios,40.0,ene-ago
+19,2023,H,Homicidios,127.0,ene-ago
+7,2023,H,Homicidios,73.0,ene-ago
+8,2023,H,Homicidios,107.0,ene-ago
+10,2023,H,Homicidios,41.0,ene-ago
+11,2023,H,Homicidios,50.0,ene-ago
+6,2023,H,Homicidios,14.0,ene-ago
+3,2023,H,Homicidios,35.0,ene-ago
+15,2023,H,Homicidios,10.0,ene-ago
+12,2023,H,Homicidios,16.0,ene-ago
+9,2024,H,Homicidios,27.0,ene-ago
+20,2024,H,Homicidios,1.0,ene-ago
+18,2024,H,Homicidios,32.0,ene-ago
+17,2024,H,Homicidios,3.0,ene-ago
+13,2024,H,Homicidios,5.0,ene-ago
+16,2024,H,Homicidios,17.0,ene-ago
+14,2024,H,Homicidios,25.0,ene-ago
+1,2024,H,Homicidios,26.0,ene-ago
+2,2024,H,Homicidios,13.0,ene-ago
+4,2024,H,Homicidios,33.0,ene-ago
+5,2024,H,Homicidios,60.0,ene-ago
+19,2024,H,Homicidios,133.0,ene-ago
+7,2024,H,Homicidios,76.0,ene-ago
+8,2024,H,Homicidios,117.0,ene-ago
+10,2024,H,Homicidios,38.0,ene-ago
+11,2024,H,Homicidios,45.0,ene-ago
+6,2024,H,Homicidios,18.0,ene-ago
+3,2024,H,Homicidios,55.0,ene-ago
+15,2024,H,Homicidios,6.0,ene-ago
+12,2024,H,Homicidios,17.0,ene-ago
+9,2025,H,Homicidios,28.0,ene-ago
+20,2025,H,Homicidios,0.0,ene-ago
+18,2025,H,Homicidios,52.0,ene-ago
+17,2025,H,Homicidios,1.0,ene-ago
+13,2025,H,Homicidios,7.0,ene-ago
+16,2025,H,Homicidios,23.0,ene-ago
+14,2025,H,Homicidios,29.0,ene-ago
+1,2025,H,Homicidios,35.0,ene-ago
+2,2025,H,Homicidios,11.0,ene-ago
+4,2025,H,Homicidios,58.0,ene-ago
+5,2025,H,Homicidios,49.0,ene-ago
+19,2025,H,Homicidios,169.0,ene-ago
+7,2025,H,Homicidios,57.0,ene-ago
+8,2025,H,Homicidios,108.0,ene-ago
+10,2025,H,Homicidios,31.0,ene-ago
+11,2025,H,Homicidios,58.0,ene-ago
+6,2025,H,Homicidios,15.0,ene-ago
+3,2025,H,Homicidios,47.0,ene-ago
+15,2025,H,Homicidios,7.0,ene-ago
+12,2025,H,Homicidios,14.0,ene-ago
+9,2026,H,Homicidios,20.0,ene-ago
+20,2026,H,Homicidios,0.0,ene-ago
+18,2026,H,Homicidios,58.0,ene-ago
+17,2026,H,Homicidios,3.0,ene-ago
+13,2026,H,Homicidios,4.0,ene-ago
+16,2026,H,Homicidios,21.0,ene-ago
+14,2026,H,Homicidios,32.0,ene-ago
+1,2026,H,Homicidios,34.0,ene-ago
+2,2026,H,Homicidios,6.0,ene-ago
+4,2026,H,Homicidios,45.0,ene-ago
+5,2026,H,Homicidios,50.0,ene-ago
+19,2026,H,Homicidios,126.0,ene-ago
+7,2026,H,Homicidios,61.0,ene-ago
+8,2026,H,Homicidios,105.0,ene-ago
+10,2026,H,Homicidios,42.0,ene-ago
+11,2026,H,Homicidios,48.0,ene-ago
+6,2026,H,Homicidios,15.0,ene-ago
+3,2026,H,Homicidios,50.0,ene-ago
+15,2026,H,Homicidios,9.0,ene-ago
+12,2026,H,Homicidios,11.0,ene-ago
+9,2018,LP,Lesiones personales,749.0,ene-ago
+20,2018,LP,Lesiones personales,16.0,ene-ago
+18,2018,LP,Lesiones personales,1075.0,ene-ago
+17,2018,LP,Lesiones personales,154.0,ene-ago
+13,2018,LP,Lesiones personales,593.0,ene-ago
+16,2018,LP,Lesiones personales,914.0,ene-ago
+14,2018,LP,Lesiones personales,751.0,ene-ago
+1,2018,LP,Lesiones personales,890.0,ene-ago
+2,2018,LP,Lesiones personales,590.0,ene-ago
+4,2018,LP,Lesiones personales,1192.0,ene-ago
+5,2018,LP,Lesiones personales,1083.0,ene-ago
+19,2018,LP,Lesiones personales,1536.0,ene-ago
+7,2018,LP,Lesiones personales,1533.0,ene-ago
+8,2018,LP,Lesiones personales,2367.0,ene-ago
+10,2018,LP,Lesiones personales,1570.0,ene-ago
+11,2018,LP,Lesiones personales,1793.0,ene-ago
+6,2018,LP,Lesiones personales,583.0,ene-ago
+3,2018,LP,Lesiones personales,872.0,ene-ago
+15,2018,LP,Lesiones personales,372.0,ene-ago
+12,2018,LP,Lesiones personales,534.0,ene-ago
+9,2019,LP,Lesiones personales,588.0,ene-ago
+20,2019,LP,Lesiones personales,0.0,ene-ago
+18,2019,LP,Lesiones personales,1035.0,ene-ago
+17,2019,LP,Lesiones personales,188.0,ene-ago
+13,2019,LP,Lesiones personales,306.0,ene-ago
+16,2019,LP,Lesiones personales,667.0,ene-ago
+14,2019,LP,Lesiones personales,397.0,ene-ago
+1,2019,LP,Lesiones personales,636.0,ene-ago
+2,2019,LP,Lesiones personales,416.0,ene-ago
+4,2019,LP,Lesiones personales,1017.0,ene-ago
+5,2019,LP,Lesiones personales,1041.0,ene-ago
+19,2019,LP,Lesiones personales,1626.0,ene-ago
+7,2019,LP,Lesiones personales,1445.0,ene-ago
+8,2019,LP,Lesiones personales,2220.0,ene-ago
+10,2019,LP,Lesiones personales,1097.0,ene-ago
+11,2019,LP,Lesiones personales,1230.0,ene-ago
+6,2019,LP,Lesiones personales,642.0,ene-ago
+3,2019,LP,Lesiones personales,584.0,ene-ago
+15,2019,LP,Lesiones personales,297.0,ene-ago
+12,2019,LP,Lesiones personales,398.0,ene-ago
+9,2020,LP,Lesiones personales,323.0,ene-ago
+20,2020,LP,Lesiones personales,4.0,ene-ago
+18,2020,LP,Lesiones personales,691.0,ene-ago
+17,2020,LP,Lesiones personales,124.0,ene-ago
+13,2020,LP,Lesiones personales,154.0,ene-ago
+16,2020,LP,Lesiones personales,404.0,ene-ago
+14,2020,LP,Lesiones personales,331.0,ene-ago
+1,2020,LP,Lesiones personales,417.0,ene-ago
+2,2020,LP,Lesiones personales,253.0,ene-ago
+4,2020,LP,Lesiones personales,665.0,ene-ago
+5,2020,LP,Lesiones personales,701.0,ene-ago
+19,2020,LP,Lesiones personales,1016.0,ene-ago
+7,2020,LP,Lesiones personales,869.0,ene-ago
+8,2020,LP,Lesiones personales,1200.0,ene-ago
+10,2020,LP,Lesiones personales,712.0,ene-ago
+11,2020,LP,Lesiones personales,985.0,ene-ago
+6,2020,LP,Lesiones personales,331.0,ene-ago
+3,2020,LP,Lesiones personales,392.0,ene-ago
+15,2020,LP,Lesiones personales,149.0,ene-ago
+12,2020,LP,Lesiones personales,277.0,ene-ago
+9,2021,LP,Lesiones personales,566.0,ene-ago
+20,2021,LP,Lesiones personales,1.0,ene-ago
+18,2021,LP,Lesiones personales,840.0,ene-ago
+17,2021,LP,Lesiones personales,224.0,ene-ago
+13,2021,LP,Lesiones personales,318.0,ene-ago
+16,2021,LP,Lesiones personales,563.0,ene-ago
+14,2021,LP,Lesiones personales,452.0,ene-ago
+1,2021,LP,Lesiones personales,677.0,ene-ago
+2,2021,LP,Lesiones personales,335.0,ene-ago
+4,2021,LP,Lesiones personales,907.0,ene-ago
+5,2021,LP,Lesiones personales,955.0,ene-ago
+19,2021,LP,Lesiones personales,1392.0,ene-ago
+7,2021,LP,Lesiones personales,1477.0,ene-ago
+8,2021,LP,Lesiones personales,2010.0,ene-ago
+10,2021,LP,Lesiones personales,1153.0,ene-ago
+11,2021,LP,Lesiones personales,1374.0,ene-ago
+6,2021,LP,Lesiones personales,397.0,ene-ago
+3,2021,LP,Lesiones personales,506.0,ene-ago
+15,2021,LP,Lesiones personales,290.0,ene-ago
+12,2021,LP,Lesiones personales,374.0,ene-ago
+9,2022,LP,Lesiones personales,621.0,ene-ago
+20,2022,LP,Lesiones personales,0.0,ene-ago
+18,2022,LP,Lesiones personales,708.0,ene-ago
+17,2022,LP,Lesiones personales,135.0,ene-ago
+13,2022,LP,Lesiones personales,294.0,ene-ago
+16,2022,LP,Lesiones personales,657.0,ene-ago
+14,2022,LP,Lesiones personales,582.0,ene-ago
+1,2022,LP,Lesiones personales,566.0,ene-ago
+2,2022,LP,Lesiones personales,431.0,ene-ago
+4,2022,LP,Lesiones personales,768.0,ene-ago
+5,2022,LP,Lesiones personales,781.0,ene-ago
+19,2022,LP,Lesiones personales,1254.0,ene-ago
+7,2022,LP,Lesiones personales,1158.0,ene-ago
+8,2022,LP,Lesiones personales,1752.0,ene-ago
+10,2022,LP,Lesiones personales,1157.0,ene-ago
+11,2022,LP,Lesiones personales,1423.0,ene-ago
+6,2022,LP,Lesiones personales,333.0,ene-ago
+3,2022,LP,Lesiones personales,558.0,ene-ago
+15,2022,LP,Lesiones personales,250.0,ene-ago
+12,2022,LP,Lesiones personales,427.0,ene-ago
+9,2023,LP,Lesiones personales,477.0,ene-ago
+20,2023,LP,Lesiones personales,0.0,ene-ago
+18,2023,LP,Lesiones personales,703.0,ene-ago
+17,2023,LP,Lesiones personales,125.0,ene-ago
+13,2023,LP,Lesiones personales,255.0,ene-ago
+16,2023,LP,Lesiones personales,576.0,ene-ago
+14,2023,LP,Lesiones personales,569.0,ene-ago
+1,2023,LP,Lesiones personales,510.0,ene-ago
+2,2023,LP,Lesiones personales,327.0,ene-ago
+4,2023,LP,Lesiones personales,717.0,ene-ago
+5,2023,LP,Lesiones personales,628.0,ene-ago
+19,2023,LP,Lesiones personales,1349.0,ene-ago
+7,2023,LP,Lesiones personales,1039.0,ene-ago
+8,2023,LP,Lesiones personales,1423.0,ene-ago
+10,2023,LP,Lesiones personales,1014.0,ene-ago
+11,2023,LP,Lesiones personales,1311.0,ene-ago
+6,2023,LP,Lesiones personales,308.0,ene-ago
+3,2023,LP,Lesiones personales,524.0,ene-ago
+15,2023,LP,Lesiones personales,187.0,ene-ago
+12,2023,LP,Lesiones personales,396.0,ene-ago
+9,2024,LP,Lesiones personales,370.0,ene-ago
+20,2024,LP,Lesiones personales,0.0,ene-ago
+18,2024,LP,Lesiones personales,698.0,ene-ago
+17,2024,LP,Lesiones personales,122.0,ene-ago
+13,2024,LP,Lesiones personales,329.0,ene-ago
+16,2024,LP,Lesiones personales,474.0,ene-ago
+14,2024,LP,Lesiones personales,802.0,ene-ago
+1,2024,LP,Lesiones personales,508.0,ene-ago
+2,2024,LP,Lesiones personales,376.0,ene-ago
+4,2024,LP,Lesiones personales,660.0,ene-ago
+5,2024,LP,Lesiones personales,635.0,ene-ago
+19,2024,LP,Lesiones personales,1533.0,ene-ago
+7,2024,LP,Lesiones personales,865.0,ene-ago
+8,2024,LP,Lesiones personales,1636.0,ene-ago
+10,2024,LP,Lesiones personales,804.0,ene-ago
+11,2024,LP,Lesiones personales,1024.0,ene-ago
+6,2024,LP,Lesiones personales,358.0,ene-ago
+3,2024,LP,Lesiones personales,398.0,ene-ago
+15,2024,LP,Lesiones personales,230.0,ene-ago
+12,2024,LP,Lesiones personales,318.0,ene-ago
+9,2025,LP,Lesiones personales,377.0,ene-ago
+20,2025,LP,Lesiones personales,0.0,ene-ago
+18,2025,LP,Lesiones personales,652.0,ene-ago
+17,2025,LP,Lesiones personales,135.0,ene-ago
+13,2025,LP,Lesiones personales,375.0,ene-ago
+16,2025,LP,Lesiones personales,639.0,ene-ago
+14,2025,LP,Lesiones personales,424.0,ene-ago
+1,2025,LP,Lesiones personales,613.0,ene-ago
+2,2025,LP,Lesiones personales,360.0,ene-ago
+4,2025,LP,Lesiones personales,808.0,ene-ago
+5,2025,LP,Lesiones personales,711.0,ene-ago
+19,2025,LP,Lesiones personales,1307.0,ene-ago
+7,2025,LP,Lesiones personales,975.0,ene-ago
+8,2025,LP,Lesiones personales,1418.0,ene-ago
+10,2025,LP,Lesiones personales,1011.0,ene-ago
+11,2025,LP,Lesiones personales,1259.0,ene-ago
+6,2025,LP,Lesiones personales,346.0,ene-ago
+3,2025,LP,Lesiones personales,489.0,ene-ago
+15,2025,LP,Lesiones personales,192.0,ene-ago
+12,2025,LP,Lesiones personales,340.0,ene-ago
+9,2018,HP,Hurto a personas,10132.0,ene-ago
+20,2018,HP,Hurto a personas,0.0,ene-ago
+18,2018,HP,Hurto a personas,5234.0,ene-ago
+17,2018,HP,Hurto a personas,2546.0,ene-ago
+13,2018,HP,Hurto a personas,11281.0,ene-ago
+16,2018,HP,Hurto a personas,7249.0,ene-ago
+14,2018,HP,Hurto a personas,6461.0,ene-ago
+1,2018,HP,Hurto a personas,15918.0,ene-ago
+2,2018,HP,Hurto a personas,16655.0,ene-ago
+4,2018,HP,Hurto a personas,3674.0,ene-ago
+5,2018,HP,Hurto a personas,2925.0,ene-ago
+19,2018,HP,Hurto a personas,5145.0,ene-ago
+7,2018,HP,Hurto a personas,6519.0,ene-ago
+8,2018,HP,Hurto a personas,17496.0,ene-ago
+10,2018,HP,Hurto a personas,15941.0,ene-ago
+11,2018,HP,Hurto a personas,18205.0,ene-ago
+6,2018,HP,Hurto a personas,3491.0,ene-ago
+3,2018,HP,Hurto a personas,11340.0,ene-ago
+15,2018,HP,Hurto a personas,2791.0,ene-ago
+12,2018,HP,Hurto a personas,7216.0,ene-ago
+9,2019,HP,Hurto a personas,13253.0,ene-ago
+20,2019,HP,Hurto a personas,0.0,ene-ago
+18,2019,HP,Hurto a personas,6564.0,ene-ago
+17,2019,HP,Hurto a personas,2664.0,ene-ago
+13,2019,HP,Hurto a personas,13448.0,ene-ago
+16,2019,HP,Hurto a personas,9269.0,ene-ago
+14,2019,HP,Hurto a personas,8552.0,ene-ago
+1,2019,HP,Hurto a personas,18754.0,ene-ago
+2,2019,HP,Hurto a personas,23165.0,ene-ago
+4,2019,HP,Hurto a personas,4643.0,ene-ago
+5,2019,HP,Hurto a personas,3543.0,ene-ago
+19,2019,HP,Hurto a personas,6415.0,ene-ago
+7,2019,HP,Hurto a personas,8338.0,ene-ago
+8,2019,HP,Hurto a personas,21585.0,ene-ago
+10,2019,HP,Hurto a personas,19279.0,ene-ago
+11,2019,HP,Hurto a personas,21232.0,ene-ago
+6,2019,HP,Hurto a personas,4138.0,ene-ago
+3,2019,HP,Hurto a personas,12510.0,ene-ago
+15,2019,HP,Hurto a personas,3867.0,ene-ago
+12,2019,HP,Hurto a personas,8941.0,ene-ago
+9,2020,HP,Hurto a personas,8007.0,ene-ago
+20,2020,HP,Hurto a personas,0.0,ene-ago
+18,2020,HP,Hurto a personas,4494.0,ene-ago
+17,2020,HP,Hurto a personas,1213.0,ene-ago
+13,2020,HP,Hurto a personas,6246.0,ene-ago
+16,2020,HP,Hurto a personas,6562.0,ene-ago
+14,2020,HP,Hurto a personas,4916.0,ene-ago
+1,2020,HP,Hurto a personas,10198.0,ene-ago
+2,2020,HP,Hurto a personas,8997.0,ene-ago
+4,2020,HP,Hurto a personas,4031.0,ene-ago
+5,2020,HP,Hurto a personas,2938.0,ene-ago
+19,2020,HP,Hurto a personas,5432.0,ene-ago
+7,2020,HP,Hurto a personas,6470.0,ene-ago
+8,2020,HP,Hurto a personas,14158.0,ene-ago
+10,2020,HP,Hurto a personas,14103.0,ene-ago
+11,2020,HP,Hurto a personas,13799.0,ene-ago
+6,2020,HP,Hurto a personas,2987.0,ene-ago
+3,2020,HP,Hurto a personas,5984.0,ene-ago
+15,2020,HP,Hurto a personas,2615.0,ene-ago
+12,2020,HP,Hurto a personas,5105.0,ene-ago
+9,2021,HP,Hurto a personas,9924.0,ene-ago
+20,2021,HP,Hurto a personas,0.0,ene-ago
+18,2021,HP,Hurto a personas,5896.0,ene-ago
+17,2021,HP,Hurto a personas,1375.0,ene-ago
+13,2021,HP,Hurto a personas,7472.0,ene-ago
+16,2021,HP,Hurto a personas,7938.0,ene-ago
+14,2021,HP,Hurto a personas,5907.0,ene-ago
+1,2021,HP,Hurto a personas,11714.0,ene-ago
+2,2021,HP,Hurto a personas,11963.0,ene-ago
+4,2021,HP,Hurto a personas,5117.0,ene-ago
+5,2021,HP,Hurto a personas,3499.0,ene-ago
+19,2021,HP,Hurto a personas,7682.0,ene-ago
+7,2021,HP,Hurto a personas,9158.0,ene-ago
+8,2021,HP,Hurto a personas,17731.0,ene-ago
+10,2021,HP,Hurto a personas,17371.0,ene-ago
+11,2021,HP,Hurto a personas,16003.0,ene-ago
+6,2021,HP,Hurto a personas,3623.0,ene-ago
+3,2021,HP,Hurto a personas,6945.0,ene-ago
+15,2021,HP,Hurto a personas,3659.0,ene-ago
+12,2021,HP,Hurto a personas,6168.0,ene-ago
+9,2022,HP,Hurto a personas,11988.0,ene-ago
+20,2022,HP,Hurto a personas,0.0,ene-ago
+18,2022,HP,Hurto a personas,5843.0,ene-ago
+17,2022,HP,Hurto a personas,1638.0,ene-ago
+13,2022,HP,Hurto a personas,10146.0,ene-ago
+16,2022,HP,Hurto a personas,8821.0,ene-ago
+14,2022,HP,Hurto a personas,6897.0,ene-ago
+1,2022,HP,Hurto a personas,11984.0,ene-ago
+2,2022,HP,Hurto a personas,16312.0,ene-ago
+4,2022,HP,Hurto a personas,4716.0,ene-ago
+5,2022,HP,Hurto a personas,3595.0,ene-ago
+19,2022,HP,Hurto a personas,7206.0,ene-ago
+7,2022,HP,Hurto a personas,8754.0,ene-ago
+8,2022,HP,Hurto a personas,18603.0,ene-ago
+10,2022,HP,Hurto a personas,18322.0,ene-ago
+11,2022,HP,Hurto a personas,18985.0,ene-ago
+6,2022,HP,Hurto a personas,3606.0,ene-ago
+3,2022,HP,Hurto a personas,10107.0,ene-ago
+15,2022,HP,Hurto a personas,3760.0,ene-ago
+12,2022,HP,Hurto a personas,7249.0,ene-ago
+9,2023,HP,Hurto a personas,5916.0,ene-ago
+20,2023,HP,Hurto a personas,0.0,ene-ago
+18,2023,HP,Hurto a personas,3863.0,ene-ago
+17,2023,HP,Hurto a personas,746.0,ene-ago
+13,2023,HP,Hurto a personas,7393.0,ene-ago
+16,2023,HP,Hurto a personas,4873.0,ene-ago
+14,2023,HP,Hurto a personas,4445.0,ene-ago
+1,2023,HP,Hurto a personas,5763.0,ene-ago
+2,2023,HP,Hurto a personas,10232.0,ene-ago
+4,2023,HP,Hurto a personas,2740.0,ene-ago
+5,2023,HP,Hurto a personas,2187.0,ene-ago
+19,2023,HP,Hurto a personas,4810.0,ene-ago
+7,2023,HP,Hurto a personas,4955.0,ene-ago
+8,2023,HP,Hurto a personas,11639.0,ene-ago
+10,2023,HP,Hurto a personas,10722.0,ene-ago
+11,2023,HP,Hurto a personas,12120.0,ene-ago
+6,2023,HP,Hurto a personas,1675.0,ene-ago
+3,2023,HP,Hurto a personas,5609.0,ene-ago
+15,2023,HP,Hurto a personas,2251.0,ene-ago
+12,2023,HP,Hurto a personas,4797.0,ene-ago
+9,2024,HP,Hurto a personas,5399.0,ene-ago
+20,2024,HP,Hurto a personas,0.0,ene-ago
+18,2024,HP,Hurto a personas,2249.0,ene-ago
+17,2024,HP,Hurto a personas,981.0,ene-ago
+13,2024,HP,Hurto a personas,4857.0,ene-ago
+16,2024,HP,Hurto a personas,3559.0,ene-ago
+14,2024,HP,Hurto a personas,9487.0,ene-ago
+1,2024,HP,Hurto a personas,5508.0,ene-ago
+2,2024,HP,Hurto a personas,7443.0,ene-ago
+4,2024,HP,Hurto a personas,2125.0,ene-ago
+5,2024,HP,Hurto a personas,1567.0,ene-ago
+19,2024,HP,Hurto a personas,3246.0,ene-ago
+7,2024,HP,Hurto a personas,3458.0,ene-ago
+8,2024,HP,Hurto a personas,7872.0,ene-ago
+10,2024,HP,Hurto a personas,8033.0,ene-ago
+11,2024,HP,Hurto a personas,8592.0,ene-ago
+6,2024,HP,Hurto a personas,1516.0,ene-ago
+3,2024,HP,Hurto a personas,4984.0,ene-ago
+15,2024,HP,Hurto a personas,1530.0,ene-ago
+12,2024,HP,Hurto a personas,3518.0,ene-ago
+9,2025,HP,Hurto a personas,5400.0,ene-ago
+20,2025,HP,Hurto a personas,0.0,ene-ago
+18,2025,HP,Hurto a personas,2786.0,ene-ago
+17,2025,HP,Hurto a personas,1129.0,ene-ago
+13,2025,HP,Hurto a personas,6035.0,ene-ago
+16,2025,HP,Hurto a personas,4979.0,ene-ago
+14,2025,HP,Hurto a personas,3804.0,ene-ago
+1,2025,HP,Hurto a personas,5549.0,ene-ago
+2,2025,HP,Hurto a personas,6360.0,ene-ago
+4,2025,HP,Hurto a personas,2255.0,ene-ago
+5,2025,HP,Hurto a personas,1826.0,ene-ago
+19,2025,HP,Hurto a personas,3633.0,ene-ago
+7,2025,HP,Hurto a personas,3845.0,ene-ago
+8,2025,HP,Hurto a personas,7853.0,ene-ago
+10,2025,HP,Hurto a personas,8476.0,ene-ago
+11,2025,HP,Hurto a personas,9041.0,ene-ago
+6,2025,HP,Hurto a personas,1870.0,ene-ago
+3,2025,HP,Hurto a personas,4502.0,ene-ago
+15,2025,HP,Hurto a personas,1577.0,ene-ago
+12,2025,HP,Hurto a personas,3305.0,ene-ago
+9,2026,HP,Hurto a personas,4661.0,ene-ago
+20,2026,HP,Hurto a personas,0.0,ene-ago
+18,2026,HP,Hurto a personas,2274.0,ene-ago
+17,2026,HP,Hurto a personas,996.0,ene-ago
+13,2026,HP,Hurto a personas,5282.0,ene-ago
+16,2026,HP,Hurto a personas,4090.0,ene-ago
+14,2026,HP,Hurto a personas,3098.0,ene-ago
+1,2026,HP,Hurto a personas,5127.0,ene-ago
+2,2026,HP,Hurto a personas,5924.0,ene-ago
+4,2026,HP,Hurto a personas,2104.0,ene-ago
+5,2026,HP,Hurto a personas,1431.0,ene-ago
+19,2026,HP,Hurto a personas,2716.0,ene-ago
+7,2026,HP,Hurto a personas,4048.0,ene-ago
+8,2026,HP,Hurto a personas,6666.0,ene-ago
+10,2026,HP,Hurto a personas,7224.0,ene-ago
+11,2026,HP,Hurto a personas,7536.0,ene-ago
+6,2026,HP,Hurto a personas,1444.0,ene-ago
+3,2026,HP,Hurto a personas,4474.0,ene-ago
+15,2026,HP,Hurto a personas,1430.0,ene-ago
+12,2026,HP,Hurto a personas,3038.0,ene-ago
+9,2018,HR,Hurto a residencias,864.0,ene-ago
+20,2018,HR,Hurto a residencias,0.0,ene-ago
+18,2018,HR,Hurto a residencias,936.0,ene-ago
+17,2018,HR,Hurto a residencias,83.0,ene-ago
+13,2018,HR,Hurto a residencias,783.0,ene-ago
+16,2018,HR,Hurto a residencias,869.0,ene-ago
+14,2018,HR,Hurto a residencias,306.0,ene-ago
+1,2018,HR,Hurto a residencias,1705.0,ene-ago
+2,2018,HR,Hurto a residencias,815.0,ene-ago
+4,2018,HR,Hurto a residencias,726.0,ene-ago
+5,2018,HR,Hurto a residencias,765.0,ene-ago
+19,2018,HR,Hurto a residencias,1063.0,ene-ago
+7,2018,HR,Hurto a residencias,1416.0,ene-ago
+8,2018,HR,Hurto a residencias,2362.0,ene-ago
+10,2018,HR,Hurto a residencias,2453.0,ene-ago
+11,2018,HR,Hurto a residencias,2726.0,ene-ago
+6,2018,HR,Hurto a residencias,401.0,ene-ago
+3,2018,HR,Hurto a residencias,322.0,ene-ago
+15,2018,HR,Hurto a residencias,271.0,ene-ago
+12,2018,HR,Hurto a residencias,620.0,ene-ago
+9,2019,HR,Hurto a residencias,871.0,ene-ago
+20,2019,HR,Hurto a residencias,0.0,ene-ago
+18,2019,HR,Hurto a residencias,730.0,ene-ago
+17,2019,HR,Hurto a residencias,61.0,ene-ago
+13,2019,HR,Hurto a residencias,950.0,ene-ago
+16,2019,HR,Hurto a residencias,689.0,ene-ago
+14,2019,HR,Hurto a residencias,301.0,ene-ago
+1,2019,HR,Hurto a residencias,1454.0,ene-ago
+2,2019,HR,Hurto a residencias,775.0,ene-ago
+4,2019,HR,Hurto a residencias,688.0,ene-ago
+5,2019,HR,Hurto a residencias,821.0,ene-ago
+19,2019,HR,Hurto a residencias,1036.0,ene-ago
+7,2019,HR,Hurto a residencias,1513.0,ene-ago
+8,2019,HR,Hurto a residencias,2234.0,ene-ago
+10,2019,HR,Hurto a residencias,2527.0,ene-ago
+11,2019,HR,Hurto a residencias,2510.0,ene-ago
+6,2019,HR,Hurto a residencias,307.0,ene-ago
+3,2019,HR,Hurto a residencias,266.0,ene-ago
+15,2019,HR,Hurto a residencias,277.0,ene-ago
+12,2019,HR,Hurto a residencias,614.0,ene-ago
+9,2020,HR,Hurto a residencias,793.0,ene-ago
+20,2020,HR,Hurto a residencias,0.0,ene-ago
+18,2020,HR,Hurto a residencias,634.0,ene-ago
+17,2020,HR,Hurto a residencias,63.0,ene-ago
+13,2020,HR,Hurto a residencias,694.0,ene-ago
+16,2020,HR,Hurto a residencias,921.0,ene-ago
+14,2020,HR,Hurto a residencias,335.0,ene-ago
+1,2020,HR,Hurto a residencias,1369.0,ene-ago
+2,2020,HR,Hurto a residencias,786.0,ene-ago
+4,2020,HR,Hurto a residencias,560.0,ene-ago
+5,2020,HR,Hurto a residencias,597.0,ene-ago
+19,2020,HR,Hurto a residencias,798.0,ene-ago
+7,2020,HR,Hurto a residencias,1130.0,ene-ago
+8,2020,HR,Hurto a residencias,1912.0,ene-ago
+10,2020,HR,Hurto a residencias,1736.0,ene-ago
+11,2020,HR,Hurto a residencias,2187.0,ene-ago
+6,2020,HR,Hurto a residencias,325.0,ene-ago
+3,2020,HR,Hurto a residencias,229.0,ene-ago
+15,2020,HR,Hurto a residencias,287.0,ene-ago
+12,2020,HR,Hurto a residencias,548.0,ene-ago
+9,2021,HR,Hurto a residencias,665.0,ene-ago
+20,2021,HR,Hurto a residencias,0.0,ene-ago
+18,2021,HR,Hurto a residencias,607.0,ene-ago
+17,2021,HR,Hurto a residencias,58.0,ene-ago
+13,2021,HR,Hurto a residencias,666.0,ene-ago
+16,2021,HR,Hurto a residencias,752.0,ene-ago
+14,2021,HR,Hurto a residencias,312.0,ene-ago
+1,2021,HR,Hurto a residencias,1360.0,ene-ago
+2,2021,HR,Hurto a residencias,687.0,ene-ago
+4,2021,HR,Hurto a residencias,520.0,ene-ago
+5,2021,HR,Hurto a residencias,492.0,ene-ago
+19,2021,HR,Hurto a residencias,761.0,ene-ago
+7,2021,HR,Hurto a residencias,993.0,ene-ago
+8,2021,HR,Hurto a residencias,1952.0,ene-ago
+10,2021,HR,Hurto a residencias,1764.0,ene-ago
+11,2021,HR,Hurto a residencias,2273.0,ene-ago
+6,2021,HR,Hurto a residencias,298.0,ene-ago
+3,2021,HR,Hurto a residencias,206.0,ene-ago
+15,2021,HR,Hurto a residencias,277.0,ene-ago
+12,2021,HR,Hurto a residencias,478.0,ene-ago
+9,2022,HR,Hurto a residencias,507.0,ene-ago
+20,2022,HR,Hurto a residencias,0.0,ene-ago
+18,2022,HR,Hurto a residencias,397.0,ene-ago
+17,2022,HR,Hurto a residencias,38.0,ene-ago
+13,2022,HR,Hurto a residencias,536.0,ene-ago
+16,2022,HR,Hurto a residencias,403.0,ene-ago
+14,2022,HR,Hurto a residencias,218.0,ene-ago
+1,2022,HR,Hurto a residencias,949.0,ene-ago
+2,2022,HR,Hurto a residencias,433.0,ene-ago
+4,2022,HR,Hurto a residencias,368.0,ene-ago
+5,2022,HR,Hurto a residencias,381.0,ene-ago
+19,2022,HR,Hurto a residencias,584.0,ene-ago
+7,2022,HR,Hurto a residencias,581.0,ene-ago
+8,2022,HR,Hurto a residencias,1175.0,ene-ago
+10,2022,HR,Hurto a residencias,1096.0,ene-ago
+11,2022,HR,Hurto a residencias,1411.0,ene-ago
+6,2022,HR,Hurto a residencias,148.0,ene-ago
+3,2022,HR,Hurto a residencias,163.0,ene-ago
+15,2022,HR,Hurto a residencias,139.0,ene-ago
+12,2022,HR,Hurto a residencias,339.0,ene-ago
+9,2023,HR,Hurto a residencias,244.0,ene-ago
+20,2023,HR,Hurto a residencias,0.0,ene-ago
+18,2023,HR,Hurto a residencias,266.0,ene-ago
+17,2023,HR,Hurto a residencias,22.0,ene-ago
+13,2023,HR,Hurto a residencias,317.0,ene-ago
+16,2023,HR,Hurto a residencias,217.0,ene-ago
+14,2023,HR,Hurto a residencias,121.0,ene-ago
+1,2023,HR,Hurto a residencias,431.0,ene-ago
+2,2023,HR,Hurto a residencias,231.0,ene-ago
+4,2023,HR,Hurto a residencias,236.0,ene-ago
+5,2023,HR,Hurto a residencias,242.0,ene-ago
+19,2023,HR,Hurto a residencias,295.0,ene-ago
+7,2023,HR,Hurto a residencias,234.0,ene-ago
+8,2023,HR,Hurto a residencias,630.0,ene-ago
+10,2023,HR,Hurto a residencias,917.0,ene-ago
+11,2023,HR,Hurto a residencias,708.0,ene-ago
+6,2023,HR,Hurto a residencias,65.0,ene-ago
+3,2023,HR,Hurto a residencias,111.0,ene-ago
+15,2023,HR,Hurto a residencias,83.0,ene-ago
+12,2023,HR,Hurto a residencias,148.0,ene-ago
+9,2024,HR,Hurto a residencias,227.0,ene-ago
+20,2024,HR,Hurto a residencias,0.0,ene-ago
+18,2024,HR,Hurto a residencias,186.0,ene-ago
+17,2024,HR,Hurto a residencias,26.0,ene-ago
+13,2024,HR,Hurto a residencias,215.0,ene-ago
+16,2024,HR,Hurto a residencias,174.0,ene-ago
+14,2024,HR,Hurto a residencias,137.0,ene-ago
+1,2024,HR,Hurto a residencias,410.0,ene-ago
+2,2024,HR,Hurto a residencias,190.0,ene-ago
+4,2024,HR,Hurto a residencias,154.0,ene-ago
+5,2024,HR,Hurto a residencias,169.0,ene-ago
+19,2024,HR,Hurto a residencias,249.0,ene-ago
+7,2024,HR,Hurto a residencias,227.0,ene-ago
+8,2024,HR,Hurto a residencias,446.0,ene-ago
+10,2024,HR,Hurto a residencias,462.0,ene-ago
+11,2024,HR,Hurto a residencias,550.0,ene-ago
+6,2024,HR,Hurto a residencias,68.0,ene-ago
+3,2024,HR,Hurto a residencias,85.0,ene-ago
+15,2024,HR,Hurto a residencias,49.0,ene-ago
+12,2024,HR,Hurto a residencias,147.0,ene-ago
+9,2025,HR,Hurto a residencias,223.0,ene-ago
+20,2025,HR,Hurto a residencias,0.0,ene-ago
+18,2025,HR,Hurto a residencias,154.0,ene-ago
+17,2025,HR,Hurto a residencias,20.0,ene-ago
+13,2025,HR,Hurto a residencias,219.0,ene-ago
+16,2025,HR,Hurto a residencias,208.0,ene-ago
+14,2025,HR,Hurto a residencias,85.0,ene-ago
+1,2025,HR,Hurto a residencias,370.0,ene-ago
+2,2025,HR,Hurto a residencias,224.0,ene-ago
+4,2025,HR,Hurto a residencias,151.0,ene-ago
+5,2025,HR,Hurto a residencias,106.0,ene-ago
+19,2025,HR,Hurto a residencias,212.0,ene-ago
+7,2025,HR,Hurto a residencias,190.0,ene-ago
+8,2025,HR,Hurto a residencias,368.0,ene-ago
+10,2025,HR,Hurto a residencias,502.0,ene-ago
+11,2025,HR,Hurto a residencias,572.0,ene-ago
+6,2025,HR,Hurto a residencias,84.0,ene-ago
+3,2025,HR,Hurto a residencias,103.0,ene-ago
+15,2025,HR,Hurto a residencias,63.0,ene-ago
+12,2025,HR,Hurto a residencias,160.0,ene-ago
+9,2026,HR,Hurto a residencias,187.0,ene-ago
+20,2026,HR,Hurto a residencias,0.0,ene-ago
+18,2026,HR,Hurto a residencias,155.0,ene-ago
+17,2026,HR,Hurto a residencias,26.0,ene-ago
+13,2026,HR,Hurto a residencias,193.0,ene-ago
+16,2026,HR,Hurto a residencias,177.0,ene-ago
+14,2026,HR,Hurto a residencias,80.0,ene-ago
+1,2026,HR,Hurto a residencias,382.0,ene-ago
+2,2026,HR,Hurto a residencias,260.0,ene-ago
+4,2026,HR,Hurto a residencias,182.0,ene-ago
+5,2026,HR,Hurto a residencias,131.0,ene-ago
+19,2026,HR,Hurto a residencias,208.0,ene-ago
+7,2026,HR,Hurto a residencias,237.0,ene-ago
+8,2026,HR,Hurto a residencias,469.0,ene-ago
+10,2026,HR,Hurto a residencias,507.0,ene-ago
+11,2026,HR,Hurto a residencias,653.0,ene-ago
+6,2026,HR,Hurto a residencias,74.0,ene-ago
+3,2026,HR,Hurto a residencias,147.0,ene-ago
+15,2026,HR,Hurto a residencias,55.0,ene-ago
+12,2026,HR,Hurto a residencias,166.0,ene-ago
+9,2018,HA,Hurto de automotores,198.0,ene-ago
+20,2018,HA,Hurto de automotores,0.0,ene-ago
+18,2018,HA,Hurto de automotores,232.0,ene-ago
+17,2018,HA,Hurto de automotores,10.0,ene-ago
+13,2018,HA,Hurto de automotores,130.0,ene-ago
+16,2018,HA,Hurto de automotores,496.0,ene-ago
+14,2018,HA,Hurto de automotores,118.0,ene-ago
+1,2018,HA,Hurto de automotores,218.0,ene-ago
+2,2018,HA,Hurto de automotores,70.0,ene-ago
+4,2018,HA,Hurto de automotores,178.0,ene-ago
+5,2018,HA,Hurto de automotores,94.0,ene-ago
+19,2018,HA,Hurto de automotores,268.0,ene-ago
+7,2018,HA,Hurto de automotores,242.0,ene-ago
+8,2018,HA,Hurto de automotores,1056.0,ene-ago
+10,2018,HA,Hurto de automotores,604.0,ene-ago
+11,2018,HA,Hurto de automotores,418.0,ene-ago
+6,2018,HA,Hurto de automotores,148.0,ene-ago
+3,2018,HA,Hurto de automotores,54.0,ene-ago
+15,2018,HA,Hurto de automotores,156.0,ene-ago
+12,2018,HA,Hurto de automotores,136.0,ene-ago
+9,2019,HA,Hurto de automotores,188.0,ene-ago
+20,2019,HA,Hurto de automotores,0.0,ene-ago
+18,2019,HA,Hurto de automotores,248.0,ene-ago
+17,2019,HA,Hurto de automotores,44.0,ene-ago
+13,2019,HA,Hurto de automotores,136.0,ene-ago
+16,2019,HA,Hurto de automotores,494.0,ene-ago
+14,2019,HA,Hurto de automotores,126.0,ene-ago
+1,2019,HA,Hurto de automotores,128.0,ene-ago
+2,2019,HA,Hurto de automotores,56.0,ene-ago
+4,2019,HA,Hurto de automotores,182.0,ene-ago
+5,2019,HA,Hurto de automotores,146.0,ene-ago
+19,2019,HA,Hurto de automotores,220.0,ene-ago
+7,2019,HA,Hurto de automotores,252.0,ene-ago
+8,2019,HA,Hurto de automotores,1076.0,ene-ago
+10,2019,HA,Hurto de automotores,674.0,ene-ago
+11,2019,HA,Hurto de automotores,460.0,ene-ago
+6,2019,HA,Hurto de automotores,94.0,ene-ago
+3,2019,HA,Hurto de automotores,42.0,ene-ago
+15,2019,HA,Hurto de automotores,156.0,ene-ago
+12,2019,HA,Hurto de automotores,154.0,ene-ago
+9,2020,HA,Hurto de automotores,178.0,ene-ago
+20,2020,HA,Hurto de automotores,0.0,ene-ago
+18,2020,HA,Hurto de automotores,230.0,ene-ago
+17,2020,HA,Hurto de automotores,24.0,ene-ago
+13,2020,HA,Hurto de automotores,70.0,ene-ago
+16,2020,HA,Hurto de automotores,372.0,ene-ago
+14,2020,HA,Hurto de automotores,96.0,ene-ago
+1,2020,HA,Hurto de automotores,128.0,ene-ago
+2,2020,HA,Hurto de automotores,62.0,ene-ago
+4,2020,HA,Hurto de automotores,164.0,ene-ago
+5,2020,HA,Hurto de automotores,96.0,ene-ago
+19,2020,HA,Hurto de automotores,284.0,ene-ago
+7,2020,HA,Hurto de automotores,284.0,ene-ago
+8,2020,HA,Hurto de automotores,816.0,ene-ago
+10,2020,HA,Hurto de automotores,466.0,ene-ago
+11,2020,HA,Hurto de automotores,382.0,ene-ago
+6,2020,HA,Hurto de automotores,96.0,ene-ago
+3,2020,HA,Hurto de automotores,46.0,ene-ago
+15,2020,HA,Hurto de automotores,142.0,ene-ago
+12,2020,HA,Hurto de automotores,118.0,ene-ago
+9,2021,HA,Hurto de automotores,192.0,ene-ago
+20,2021,HA,Hurto de automotores,0.0,ene-ago
+18,2021,HA,Hurto de automotores,200.0,ene-ago
+17,2021,HA,Hurto de automotores,16.0,ene-ago
+13,2021,HA,Hurto de automotores,106.0,ene-ago
+16,2021,HA,Hurto de automotores,378.0,ene-ago
+14,2021,HA,Hurto de automotores,120.0,ene-ago
+1,2021,HA,Hurto de automotores,156.0,ene-ago
+2,2021,HA,Hurto de automotores,56.0,ene-ago
+4,2021,HA,Hurto de automotores,154.0,ene-ago
+5,2021,HA,Hurto de automotores,108.0,ene-ago
+19,2021,HA,Hurto de automotores,334.0,ene-ago
+7,2021,HA,Hurto de automotores,316.0,ene-ago
+8,2021,HA,Hurto de automotores,1070.0,ene-ago
+10,2021,HA,Hurto de automotores,694.0,ene-ago
+11,2021,HA,Hurto de automotores,392.0,ene-ago
+6,2021,HA,Hurto de automotores,74.0,ene-ago
+3,2021,HA,Hurto de automotores,36.0,ene-ago
+15,2021,HA,Hurto de automotores,152.0,ene-ago
+12,2021,HA,Hurto de automotores,128.0,ene-ago
+9,2022,HA,Hurto de automotores,203.0,ene-ago
+20,2022,HA,Hurto de automotores,0.0,ene-ago
+18,2022,HA,Hurto de automotores,210.0,ene-ago
+17,2022,HA,Hurto de automotores,23.0,ene-ago
+13,2022,HA,Hurto de automotores,87.0,ene-ago
+16,2022,HA,Hurto de automotores,417.0,ene-ago
+14,2022,HA,Hurto de automotores,95.0,ene-ago
+1,2022,HA,Hurto de automotores,169.0,ene-ago
+2,2022,HA,Hurto de automotores,70.0,ene-ago
+4,2022,HA,Hurto de automotores,136.0,ene-ago
+5,2022,HA,Hurto de automotores,129.0,ene-ago
+19,2022,HA,Hurto de automotores,377.0,ene-ago
+7,2022,HA,Hurto de automotores,327.0,ene-ago
+8,2022,HA,Hurto de automotores,1060.0,ene-ago
+10,2022,HA,Hurto de automotores,601.0,ene-ago
+11,2022,HA,Hurto de automotores,402.0,ene-ago
+6,2022,HA,Hurto de automotores,104.0,ene-ago
+3,2022,HA,Hurto de automotores,41.0,ene-ago
+15,2022,HA,Hurto de automotores,115.0,ene-ago
+12,2022,HA,Hurto de automotores,109.0,ene-ago
+9,2023,HA,Hurto de automotores,95.0,ene-ago
+20,2023,HA,Hurto de automotores,0.0,ene-ago
+18,2023,HA,Hurto de automotores,205.0,ene-ago
+17,2023,HA,Hurto de automotores,5.0,ene-ago
+13,2023,HA,Hurto de automotores,114.0,ene-ago
+16,2023,HA,Hurto de automotores,220.0,ene-ago
+14,2023,HA,Hurto de automotores,40.0,ene-ago
+1,2023,HA,Hurto de automotores,64.0,ene-ago
+2,2023,HA,Hurto de automotores,30.0,ene-ago
+4,2023,HA,Hurto de automotores,107.0,ene-ago
+5,2023,HA,Hurto de automotores,100.0,ene-ago
+19,2023,HA,Hurto de automotores,252.0,ene-ago
+7,2023,HA,Hurto de automotores,152.0,ene-ago
+8,2023,HA,Hurto de automotores,640.0,ene-ago
+10,2023,HA,Hurto de automotores,318.0,ene-ago
+11,2023,HA,Hurto de automotores,245.0,ene-ago
+6,2023,HA,Hurto de automotores,42.0,ene-ago
+3,2023,HA,Hurto de automotores,24.0,ene-ago
+15,2023,HA,Hurto de automotores,89.0,ene-ago
+12,2023,HA,Hurto de automotores,58.0,ene-ago
+9,2024,HA,Hurto de automotores,79.0,ene-ago
+20,2024,HA,Hurto de automotores,0.0,ene-ago
+18,2024,HA,Hurto de automotores,188.0,ene-ago
+17,2024,HA,Hurto de automotores,13.0,ene-ago
+13,2024,HA,Hurto de automotores,101.0,ene-ago
+16,2024,HA,Hurto de automotores,256.0,ene-ago
+14,2024,HA,Hurto de automotores,100.0,ene-ago
+1,2024,HA,Hurto de automotores,90.0,ene-ago
+2,2024,HA,Hurto de automotores,44.0,ene-ago
+4,2024,HA,Hurto de automotores,93.0,ene-ago
+5,2024,HA,Hurto de automotores,106.0,ene-ago
+19,2024,HA,Hurto de automotores,267.0,ene-ago
+7,2024,HA,Hurto de automotores,141.0,ene-ago
+8,2024,HA,Hurto de automotores,737.0,ene-ago
+10,2024,HA,Hurto de automotores,282.0,ene-ago
+11,2024,HA,Hurto de automotores,169.0,ene-ago
+6,2024,HA,Hurto de automotores,61.0,ene-ago
+3,2024,HA,Hurto de automotores,36.0,ene-ago
+15,2024,HA,Hurto de automotores,88.0,ene-ago
+12,2024,HA,Hurto de automotores,94.0,ene-ago
+9,2025,HA,Hurto de automotores,81.0,ene-ago
+20,2025,HA,Hurto de automotores,0.0,ene-ago
+18,2025,HA,Hurto de automotores,124.0,ene-ago
+17,2025,HA,Hurto de automotores,5.0,ene-ago
+13,2025,HA,Hurto de automotores,75.0,ene-ago
+16,2025,HA,Hurto de automotores,253.0,ene-ago
+14,2025,HA,Hurto de automotores,48.0,ene-ago
+1,2025,HA,Hurto de automotores,43.0,ene-ago
+2,2025,HA,Hurto de automotores,30.0,ene-ago
+4,2025,HA,Hurto de automotores,112.0,ene-ago
+5,2025,HA,Hurto de automotores,78.0,ene-ago
+19,2025,HA,Hurto de automotores,153.0,ene-ago
+7,2025,HA,Hurto de automotores,120.0,ene-ago
+8,2025,HA,Hurto de automotores,433.0,ene-ago
+10,2025,HA,Hurto de automotores,245.0,ene-ago
+11,2025,HA,Hurto de automotores,151.0,ene-ago
+6,2025,HA,Hurto de automotores,72.0,ene-ago
+3,2025,HA,Hurto de automotores,33.0,ene-ago
+15,2025,HA,Hurto de automotores,49.0,ene-ago
+12,2025,HA,Hurto de automotores,71.0,ene-ago
+9,2026,HA,Hurto de automotores,99.0,ene-ago
+20,2026,HA,Hurto de automotores,0.0,ene-ago
+18,2026,HA,Hurto de automotores,106.0,ene-ago
+17,2026,HA,Hurto de automotores,3.0,ene-ago
+13,2026,HA,Hurto de automotores,81.0,ene-ago
+16,2026,HA,Hurto de automotores,152.0,ene-ago
+14,2026,HA,Hurto de automotores,59.0,ene-ago
+1,2026,HA,Hurto de automotores,71.0,ene-ago
+2,2026,HA,Hurto de automotores,37.0,ene-ago
+4,2026,HA,Hurto de automotores,89.0,ene-ago
+5,2026,HA,Hurto de automotores,59.0,ene-ago
+19,2026,HA,Hurto de automotores,153.0,ene-ago
+7,2026,HA,Hurto de automotores,135.0,ene-ago
+8,2026,HA,Hurto de automotores,352.0,ene-ago
+10,2026,HA,Hurto de automotores,231.0,ene-ago
+11,2026,HA,Hurto de automotores,174.0,ene-ago
+6,2026,HA,Hurto de automotores,70.0,ene-ago
+3,2026,HA,Hurto de automotores,27.0,ene-ago
+15,2026,HA,Hurto de automotores,49.0,ene-ago
+12,2026,HA,Hurto de automotores,82.0,ene-ago
+9,2018,HB,Hurto de bicicletas,301.0,ene-ago
+20,2018,HB,Hurto de bicicletas,0.0,ene-ago
+18,2018,HB,Hurto de bicicletas,112.0,ene-ago
+17,2018,HB,Hurto de bicicletas,11.0,ene-ago
+13,2018,HB,Hurto de bicicletas,351.0,ene-ago
+16,2018,HB,Hurto de bicicletas,229.0,ene-ago
+14,2018,HB,Hurto de bicicletas,131.0,ene-ago
+1,2018,HB,Hurto de bicicletas,557.0,ene-ago
+2,2018,HB,Hurto de bicicletas,358.0,ene-ago
+4,2018,HB,Hurto de bicicletas,41.0,ene-ago
+5,2018,HB,Hurto de bicicletas,22.0,ene-ago
+19,2018,HB,Hurto de bicicletas,113.0,ene-ago
+7,2018,HB,Hurto de bicicletas,277.0,ene-ago
+8,2018,HB,Hurto de bicicletas,655.0,ene-ago
+10,2018,HB,Hurto de bicicletas,753.0,ene-ago
+11,2018,HB,Hurto de bicicletas,840.0,ene-ago
+6,2018,HB,Hurto de bicicletas,94.0,ene-ago
+3,2018,HB,Hurto de bicicletas,146.0,ene-ago
+15,2018,HB,Hurto de bicicletas,78.0,ene-ago
+12,2018,HB,Hurto de bicicletas,280.0,ene-ago
+9,2019,HB,Hurto de bicicletas,433.0,ene-ago
+20,2019,HB,Hurto de bicicletas,0.0,ene-ago
+18,2019,HB,Hurto de bicicletas,93.0,ene-ago
+17,2019,HB,Hurto de bicicletas,25.0,ene-ago
+13,2019,HB,Hurto de bicicletas,333.0,ene-ago
+16,2019,HB,Hurto de bicicletas,165.0,ene-ago
+14,2019,HB,Hurto de bicicletas,110.0,ene-ago
+1,2019,HB,Hurto de bicicletas,415.0,ene-ago
+2,2019,HB,Hurto de bicicletas,299.0,ene-ago
+4,2019,HB,Hurto de bicicletas,38.0,ene-ago
+5,2019,HB,Hurto de bicicletas,22.0,ene-ago
+19,2019,HB,Hurto de bicicletas,119.0,ene-ago
+7,2019,HB,Hurto de bicicletas,403.0,ene-ago
+8,2019,HB,Hurto de bicicletas,752.0,ene-ago
+10,2019,HB,Hurto de bicicletas,820.0,ene-ago
+11,2019,HB,Hurto de bicicletas,692.0,ene-ago
+6,2019,HB,Hurto de bicicletas,93.0,ene-ago
+3,2019,HB,Hurto de bicicletas,108.0,ene-ago
+15,2019,HB,Hurto de bicicletas,55.0,ene-ago
+12,2019,HB,Hurto de bicicletas,251.0,ene-ago
+9,2020,HB,Hurto de bicicletas,476.0,ene-ago
+20,2020,HB,Hurto de bicicletas,0.0,ene-ago
+18,2020,HB,Hurto de bicicletas,181.0,ene-ago
+17,2020,HB,Hurto de bicicletas,31.0,ene-ago
+13,2020,HB,Hurto de bicicletas,301.0,ene-ago
+16,2020,HB,Hurto de bicicletas,325.0,ene-ago
+14,2020,HB,Hurto de bicicletas,150.0,ene-ago
+1,2020,HB,Hurto de bicicletas,474.0,ene-ago
+2,2020,HB,Hurto de bicicletas,263.0,ene-ago
+4,2020,HB,Hurto de bicicletas,90.0,ene-ago
+5,2020,HB,Hurto de bicicletas,60.0,ene-ago
+19,2020,HB,Hurto de bicicletas,217.0,ene-ago
+7,2020,HB,Hurto de bicicletas,655.0,ene-ago
+8,2020,HB,Hurto de bicicletas,1188.0,ene-ago
+10,2020,HB,Hurto de bicicletas,1063.0,ene-ago
+11,2020,HB,Hurto de bicicletas,984.0,ene-ago
+6,2020,HB,Hurto de bicicletas,164.0,ene-ago
+3,2020,HB,Hurto de bicicletas,123.0,ene-ago
+15,2020,HB,Hurto de bicicletas,134.0,ene-ago
+12,2020,HB,Hurto de bicicletas,269.0,ene-ago
+9,2021,HB,Hurto de bicicletas,448.0,ene-ago
+20,2021,HB,Hurto de bicicletas,0.0,ene-ago
+18,2021,HB,Hurto de bicicletas,148.0,ene-ago
+17,2021,HB,Hurto de bicicletas,27.0,ene-ago
+13,2021,HB,Hurto de bicicletas,339.0,ene-ago
+16,2021,HB,Hurto de bicicletas,294.0,ene-ago
+14,2021,HB,Hurto de bicicletas,202.0,ene-ago
+1,2021,HB,Hurto de bicicletas,378.0,ene-ago
+2,2021,HB,Hurto de bicicletas,202.0,ene-ago
+4,2021,HB,Hurto de bicicletas,137.0,ene-ago
+5,2021,HB,Hurto de bicicletas,60.0,ene-ago
+19,2021,HB,Hurto de bicicletas,219.0,ene-ago
+7,2021,HB,Hurto de bicicletas,679.0,ene-ago
+8,2021,HB,Hurto de bicicletas,1024.0,ene-ago
+10,2021,HB,Hurto de bicicletas,987.0,ene-ago
+11,2021,HB,Hurto de bicicletas,841.0,ene-ago
+6,2021,HB,Hurto de bicicletas,165.0,ene-ago
+3,2021,HB,Hurto de bicicletas,201.0,ene-ago
+15,2021,HB,Hurto de bicicletas,101.0,ene-ago
+12,2021,HB,Hurto de bicicletas,286.0,ene-ago
+9,2022,HB,Hurto de bicicletas,517.0,ene-ago
+20,2022,HB,Hurto de bicicletas,0.0,ene-ago
+18,2022,HB,Hurto de bicicletas,136.0,ene-ago
+17,2022,HB,Hurto de bicicletas,8.0,ene-ago
+13,2022,HB,Hurto de bicicletas,216.0,ene-ago
+16,2022,HB,Hurto de bicicletas,238.0,ene-ago
+14,2022,HB,Hurto de bicicletas,132.0,ene-ago
+1,2022,HB,Hurto de bicicletas,331.0,ene-ago
+2,2022,HB,Hurto de bicicletas,210.0,ene-ago
+4,2022,HB,Hurto de bicicletas,98.0,ene-ago
+5,2022,HB,Hurto de bicicletas,40.0,ene-ago
+19,2022,HB,Hurto de bicicletas,148.0,ene-ago
+7,2022,HB,Hurto de bicicletas,432.0,ene-ago
+8,2022,HB,Hurto de bicicletas,886.0,ene-ago
+10,2022,HB,Hurto de bicicletas,807.0,ene-ago
+11,2022,HB,Hurto de bicicletas,829.0,ene-ago
+6,2022,HB,Hurto de bicicletas,103.0,ene-ago
+3,2022,HB,Hurto de bicicletas,134.0,ene-ago
+15,2022,HB,Hurto de bicicletas,101.0,ene-ago
+12,2022,HB,Hurto de bicicletas,194.0,ene-ago
+9,2023,HB,Hurto de bicicletas,400.0,ene-ago
+20,2023,HB,Hurto de bicicletas,0.0,ene-ago
+18,2023,HB,Hurto de bicicletas,110.0,ene-ago
+17,2023,HB,Hurto de bicicletas,8.0,ene-ago
+13,2023,HB,Hurto de bicicletas,304.0,ene-ago
+16,2023,HB,Hurto de bicicletas,206.0,ene-ago
+14,2023,HB,Hurto de bicicletas,105.0,ene-ago
+1,2023,HB,Hurto de bicicletas,237.0,ene-ago
+2,2023,HB,Hurto de bicicletas,166.0,ene-ago
+4,2023,HB,Hurto de bicicletas,91.0,ene-ago
+5,2023,HB,Hurto de bicicletas,33.0,ene-ago
+19,2023,HB,Hurto de bicicletas,205.0,ene-ago
+7,2023,HB,Hurto de bicicletas,382.0,ene-ago
+8,2023,HB,Hurto de bicicletas,956.0,ene-ago
+10,2023,HB,Hurto de bicicletas,901.0,ene-ago
+11,2023,HB,Hurto de bicicletas,781.0,ene-ago
+6,2023,HB,Hurto de bicicletas,90.0,ene-ago
+3,2023,HB,Hurto de bicicletas,121.0,ene-ago
+15,2023,HB,Hurto de bicicletas,70.0,ene-ago
+12,2023,HB,Hurto de bicicletas,262.0,ene-ago
+9,2024,HB,Hurto de bicicletas,421.0,ene-ago
+20,2024,HB,Hurto de bicicletas,0.0,ene-ago
+18,2024,HB,Hurto de bicicletas,88.0,ene-ago
+17,2024,HB,Hurto de bicicletas,19.0,ene-ago
+13,2024,HB,Hurto de bicicletas,231.0,ene-ago
+16,2024,HB,Hurto de bicicletas,173.0,ene-ago
+14,2024,HB,Hurto de bicicletas,351.0,ene-ago
+1,2024,HB,Hurto de bicicletas,350.0,ene-ago
+2,2024,HB,Hurto de bicicletas,171.0,ene-ago
+4,2024,HB,Hurto de bicicletas,72.0,ene-ago
+5,2024,HB,Hurto de bicicletas,30.0,ene-ago
+19,2024,HB,Hurto de bicicletas,148.0,ene-ago
+7,2024,HB,Hurto de bicicletas,345.0,ene-ago
+8,2024,HB,Hurto de bicicletas,764.0,ene-ago
+10,2024,HB,Hurto de bicicletas,786.0,ene-ago
+11,2024,HB,Hurto de bicicletas,780.0,ene-ago
+6,2024,HB,Hurto de bicicletas,82.0,ene-ago
+3,2024,HB,Hurto de bicicletas,91.0,ene-ago
+15,2024,HB,Hurto de bicicletas,63.0,ene-ago
+12,2024,HB,Hurto de bicicletas,228.0,ene-ago
+9,2025,HB,Hurto de bicicletas,373.0,ene-ago
+20,2025,HB,Hurto de bicicletas,0.0,ene-ago
+18,2025,HB,Hurto de bicicletas,90.0,ene-ago
+17,2025,HB,Hurto de bicicletas,24.0,ene-ago
+13,2025,HB,Hurto de bicicletas,232.0,ene-ago
+16,2025,HB,Hurto de bicicletas,223.0,ene-ago
+14,2025,HB,Hurto de bicicletas,138.0,ene-ago
+1,2025,HB,Hurto de bicicletas,269.0,ene-ago
+2,2025,HB,Hurto de bicicletas,182.0,ene-ago
+4,2025,HB,Hurto de bicicletas,62.0,ene-ago
+5,2025,HB,Hurto de bicicletas,47.0,ene-ago
+19,2025,HB,Hurto de bicicletas,101.0,ene-ago
+7,2025,HB,Hurto de bicicletas,374.0,ene-ago
+8,2025,HB,Hurto de bicicletas,605.0,ene-ago
+10,2025,HB,Hurto de bicicletas,714.0,ene-ago
+11,2025,HB,Hurto de bicicletas,748.0,ene-ago
+6,2025,HB,Hurto de bicicletas,104.0,ene-ago
+3,2025,HB,Hurto de bicicletas,128.0,ene-ago
+15,2025,HB,Hurto de bicicletas,56.0,ene-ago
+12,2025,HB,Hurto de bicicletas,191.0,ene-ago
+9,2026,HB,Hurto de bicicletas,511.0,ene-ago
+20,2026,HB,Hurto de bicicletas,0.0,ene-ago
+18,2026,HB,Hurto de bicicletas,104.0,ene-ago
+17,2026,HB,Hurto de bicicletas,41.0,ene-ago
+13,2026,HB,Hurto de bicicletas,233.0,ene-ago
+16,2026,HB,Hurto de bicicletas,248.0,ene-ago
+14,2026,HB,Hurto de bicicletas,112.0,ene-ago
+1,2026,HB,Hurto de bicicletas,267.0,ene-ago
+2,2026,HB,Hurto de bicicletas,215.0,ene-ago
+4,2026,HB,Hurto de bicicletas,100.0,ene-ago
+5,2026,HB,Hurto de bicicletas,37.0,ene-ago
+19,2026,HB,Hurto de bicicletas,100.0,ene-ago
+7,2026,HB,Hurto de bicicletas,510.0,ene-ago
+8,2026,HB,Hurto de bicicletas,621.0,ene-ago
+10,2026,HB,Hurto de bicicletas,721.0,ene-ago
+11,2026,HB,Hurto de bicicletas,776.0,ene-ago
+6,2026,HB,Hurto de bicicletas,108.0,ene-ago
+3,2026,HB,Hurto de bicicletas,171.0,ene-ago
+15,2026,HB,Hurto de bicicletas,84.0,ene-ago
+12,2026,HB,Hurto de bicicletas,174.0,ene-ago
+9,2018,HC,Hurto a comercio,2422.0,ene-ago
+20,2018,HC,Hurto a comercio,0.0,ene-ago
+18,2018,HC,Hurto a comercio,1378.0,ene-ago
+17,2018,HC,Hurto a comercio,615.0,ene-ago
+13,2018,HC,Hurto a comercio,2835.0,ene-ago
+16,2018,HC,Hurto a comercio,1900.0,ene-ago
+14,2018,HC,Hurto a comercio,1715.0,ene-ago
+1,2018,HC,Hurto a comercio,3784.0,ene-ago
+2,2018,HC,Hurto a comercio,5418.0,ene-ago
+4,2018,HC,Hurto a comercio,1062.0,ene-ago
+5,2018,HC,Hurto a comercio,780.0,ene-ago
+19,2018,HC,Hurto a comercio,1455.0,ene-ago
+7,2018,HC,Hurto a comercio,1836.0,ene-ago
+8,2018,HC,Hurto a comercio,4757.0,ene-ago
+10,2018,HC,Hurto a comercio,3938.0,ene-ago
+11,2018,HC,Hurto a comercio,4497.0,ene-ago
+6,2018,HC,Hurto a comercio,928.0,ene-ago
+3,2018,HC,Hurto a comercio,3092.0,ene-ago
+15,2018,HC,Hurto a comercio,772.0,ene-ago
+12,2018,HC,Hurto a comercio,1895.0,ene-ago
+9,2019,HC,Hurto a comercio,2472.0,ene-ago
+20,2019,HC,Hurto a comercio,0.0,ene-ago
+18,2019,HC,Hurto a comercio,1275.0,ene-ago
+17,2019,HC,Hurto a comercio,418.0,ene-ago
+13,2019,HC,Hurto a comercio,2603.0,ene-ago
+16,2019,HC,Hurto a comercio,1678.0,ene-ago
+14,2019,HC,Hurto a comercio,1722.0,ene-ago
+1,2019,HC,Hurto a comercio,2998.0,ene-ago
+2,2019,HC,Hurto a comercio,4188.0,ene-ago
+4,2019,HC,Hurto a comercio,999.0,ene-ago
+5,2019,HC,Hurto a comercio,729.0,ene-ago
+19,2019,HC,Hurto a comercio,1372.0,ene-ago
+7,2019,HC,Hurto a comercio,1735.0,ene-ago
+8,2019,HC,Hurto a comercio,4216.0,ene-ago
+10,2019,HC,Hurto a comercio,3601.0,ene-ago
+11,2019,HC,Hurto a comercio,3908.0,ene-ago
+6,2019,HC,Hurto a comercio,831.0,ene-ago
+3,2019,HC,Hurto a comercio,2536.0,ene-ago
+15,2019,HC,Hurto a comercio,807.0,ene-ago
+12,2019,HC,Hurto a comercio,1691.0,ene-ago
+9,2020,HC,Hurto a comercio,1864.0,ene-ago
+20,2020,HC,Hurto a comercio,0.0,ene-ago
+18,2020,HC,Hurto a comercio,1174.0,ene-ago
+17,2020,HC,Hurto a comercio,285.0,ene-ago
+13,2020,HC,Hurto a comercio,1438.0,ene-ago
+16,2020,HC,Hurto a comercio,1580.0,ene-ago
+14,2020,HC,Hurto a comercio,1199.0,ene-ago
+1,2020,HC,Hurto a comercio,2304.0,ene-ago
+2,2020,HC,Hurto a comercio,2154.0,ene-ago
+4,2020,HC,Hurto a comercio,1064.0,ene-ago
+5,2020,HC,Hurto a comercio,779.0,ene-ago
+19,2020,HC,Hurto a comercio,1391.0,ene-ago
+7,2020,HC,Hurto a comercio,1426.0,ene-ago
+8,2020,HC,Hurto a comercio,3110.0,ene-ago
+10,2020,HC,Hurto a comercio,3138.0,ene-ago
+11,2020,HC,Hurto a comercio,3260.0,ene-ago
+6,2020,HC,Hurto a comercio,741.0,ene-ago
+3,2020,HC,Hurto a comercio,1481.0,ene-ago
+15,2020,HC,Hurto a comercio,671.0,ene-ago
+12,2020,HC,Hurto a comercio,1283.0,ene-ago
+9,2021,HC,Hurto a comercio,2247.0,ene-ago
+20,2021,HC,Hurto a comercio,0.0,ene-ago
+18,2021,HC,Hurto a comercio,1466.0,ene-ago
+17,2021,HC,Hurto a comercio,301.0,ene-ago
+13,2021,HC,Hurto a comercio,1592.0,ene-ago
+16,2021,HC,Hurto a comercio,1803.0,ene-ago
+14,2021,HC,Hurto a comercio,1355.0,ene-ago
+1,2021,HC,Hurto a comercio,2519.0,ene-ago
+2,2021,HC,Hurto a comercio,2875.0,ene-ago
+4,2021,HC,Hurto a comercio,1202.0,ene-ago
+5,2021,HC,Hurto a comercio,897.0,ene-ago
+19,2021,HC,Hurto a comercio,1987.0,ene-ago
+7,2021,HC,Hurto a comercio,2081.0,ene-ago
+8,2021,HC,Hurto a comercio,4000.0,ene-ago
+10,2021,HC,Hurto a comercio,3856.0,ene-ago
+11,2021,HC,Hurto a comercio,3736.0,ene-ago
+6,2021,HC,Hurto a comercio,834.0,ene-ago
+3,2021,HC,Hurto a comercio,1606.0,ene-ago
+15,2021,HC,Hurto a comercio,942.0,ene-ago
+12,2021,HC,Hurto a comercio,1322.0,ene-ago
+9,2022,HC,Hurto a comercio,2486.0,ene-ago
+20,2022,HC,Hurto a comercio,0.0,ene-ago
+18,2022,HC,Hurto a comercio,1281.0,ene-ago
+17,2022,HC,Hurto a comercio,332.0,ene-ago
+13,2022,HC,Hurto a comercio,2317.0,ene-ago
+16,2022,HC,Hurto a comercio,1909.0,ene-ago
+14,2022,HC,Hurto a comercio,1584.0,ene-ago
+1,2022,HC,Hurto a comercio,2329.0,ene-ago
+2,2022,HC,Hurto a comercio,3726.0,ene-ago
+4,2022,HC,Hurto a comercio,1028.0,ene-ago
+5,2022,HC,Hurto a comercio,762.0,ene-ago
+19,2022,HC,Hurto a comercio,1615.0,ene-ago
+7,2022,HC,Hurto a comercio,1788.0,ene-ago
+8,2022,HC,Hurto a comercio,3872.0,ene-ago
+10,2022,HC,Hurto a comercio,3794.0,ene-ago
+11,2022,HC,Hurto a comercio,3943.0,ene-ago
+6,2022,HC,Hurto a comercio,746.0,ene-ago
+3,2022,HC,Hurto a comercio,2311.0,ene-ago
+15,2022,HC,Hurto a comercio,800.0,ene-ago
+12,2022,HC,Hurto a comercio,1419.0,ene-ago
+9,2023,HC,Hurto a comercio,2086.0,ene-ago
+20,2023,HC,Hurto a comercio,0.0,ene-ago
+18,2023,HC,Hurto a comercio,1265.0,ene-ago
+17,2023,HC,Hurto a comercio,231.0,ene-ago
+13,2023,HC,Hurto a comercio,2743.0,ene-ago
+16,2023,HC,Hurto a comercio,1621.0,ene-ago
+14,2023,HC,Hurto a comercio,1508.0,ene-ago
+1,2023,HC,Hurto a comercio,1836.0,ene-ago
+2,2023,HC,Hurto a comercio,3951.0,ene-ago
+4,2023,HC,Hurto a comercio,931.0,ene-ago
+5,2023,HC,Hurto a comercio,707.0,ene-ago
+19,2023,HC,Hurto a comercio,1529.0,ene-ago
+7,2023,HC,Hurto a comercio,1675.0,ene-ago
+8,2023,HC,Hurto a comercio,3892.0,ene-ago
+10,2023,HC,Hurto a comercio,3776.0,ene-ago
+11,2023,HC,Hurto a comercio,4318.0,ene-ago
+6,2023,HC,Hurto a comercio,514.0,ene-ago
+3,2023,HC,Hurto a comercio,2007.0,ene-ago
+15,2023,HC,Hurto a comercio,809.0,ene-ago
+12,2023,HC,Hurto a comercio,1533.0,ene-ago
+9,2024,HC,Hurto a comercio,1731.0,ene-ago
+20,2024,HC,Hurto a comercio,0.0,ene-ago
+18,2024,HC,Hurto a comercio,779.0,ene-ago
+17,2024,HC,Hurto a comercio,337.0,ene-ago
+13,2024,HC,Hurto a comercio,1834.0,ene-ago
+16,2024,HC,Hurto a comercio,1112.0,ene-ago
+14,2024,HC,Hurto a comercio,1852.0,ene-ago
+1,2024,HC,Hurto a comercio,1850.0,ene-ago
+2,2024,HC,Hurto a comercio,2483.0,ene-ago
+4,2024,HC,Hurto a comercio,744.0,ene-ago
+5,2024,HC,Hurto a comercio,504.0,ene-ago
+19,2024,HC,Hurto a comercio,1036.0,ene-ago
+7,2024,HC,Hurto a comercio,1081.0,ene-ago
+8,2024,HC,Hurto a comercio,2423.0,ene-ago
+10,2024,HC,Hurto a comercio,2581.0,ene-ago
+11,2024,HC,Hurto a comercio,2804.0,ene-ago
+6,2024,HC,Hurto a comercio,519.0,ene-ago
+3,2024,HC,Hurto a comercio,1681.0,ene-ago
+15,2024,HC,Hurto a comercio,536.0,ene-ago
+12,2024,HC,Hurto a comercio,1233.0,ene-ago
+9,2025,HC,Hurto a comercio,1326.0,ene-ago
+20,2025,HC,Hurto a comercio,0.0,ene-ago
+18,2025,HC,Hurto a comercio,682.0,ene-ago
+17,2025,HC,Hurto a comercio,387.0,ene-ago
+13,2025,HC,Hurto a comercio,1800.0,ene-ago
+16,2025,HC,Hurto a comercio,1257.0,ene-ago
+14,2025,HC,Hurto a comercio,987.0,ene-ago
+1,2025,HC,Hurto a comercio,1789.0,ene-ago
+2,2025,HC,Hurto a comercio,2291.0,ene-ago
+4,2025,HC,Hurto a comercio,662.0,ene-ago
+5,2025,HC,Hurto a comercio,447.0,ene-ago
+19,2025,HC,Hurto a comercio,811.0,ene-ago
+7,2025,HC,Hurto a comercio,944.0,ene-ago
+8,2025,HC,Hurto a comercio,1699.0,ene-ago
+10,2025,HC,Hurto a comercio,2145.0,ene-ago
+11,2025,HC,Hurto a comercio,2556.0,ene-ago
+6,2025,HC,Hurto a comercio,496.0,ene-ago
+3,2025,HC,Hurto a comercio,1244.0,ene-ago
+15,2025,HC,Hurto a comercio,477.0,ene-ago
+12,2025,HC,Hurto a comercio,1027.0,ene-ago
+9,2026,HC,Hurto a comercio,1407.0,ene-ago
+20,2026,HC,Hurto a comercio,0.0,ene-ago
+18,2026,HC,Hurto a comercio,666.0,ene-ago
+17,2026,HC,Hurto a comercio,417.0,ene-ago
+13,2026,HC,Hurto a comercio,1961.0,ene-ago
+16,2026,HC,Hurto a comercio,1211.0,ene-ago
+14,2026,HC,Hurto a comercio,1071.0,ene-ago
+1,2026,HC,Hurto a comercio,2000.0,ene-ago
+2,2026,HC,Hurto a comercio,2551.0,ene-ago
+4,2026,HC,Hurto a comercio,729.0,ene-ago
+5,2026,HC,Hurto a comercio,436.0,ene-ago
+19,2026,HC,Hurto a comercio,779.0,ene-ago
+7,2026,HC,Hurto a comercio,1189.0,ene-ago
+8,2026,HC,Hurto a comercio,1862.0,ene-ago
+10,2026,HC,Hurto a comercio,2166.0,ene-ago
+11,2026,HC,Hurto a comercio,2514.0,ene-ago
+6,2026,HC,Hurto a comercio,453.0,ene-ago
+3,2026,HC,Hurto a comercio,1395.0,ene-ago
+15,2026,HC,Hurto a comercio,499.0,ene-ago
+12,2026,HC,Hurto a comercio,1068.0,ene-ago
+9,2018,HCE,Hurto de celulares,258.0,ene-ago
+20,2018,HCE,Hurto de celulares,0.0,ene-ago
+18,2018,HCE,Hurto de celulares,306.0,ene-ago
+17,2018,HCE,Hurto de celulares,8.0,ene-ago
+13,2018,HCE,Hurto de celulares,60.0,ene-ago
+16,2018,HCE,Hurto de celulares,242.0,ene-ago
+14,2018,HCE,Hurto de celulares,100.0,ene-ago
+1,2018,HCE,Hurto de celulares,102.0,ene-ago
+2,2018,HCE,Hurto de celulares,42.0,ene-ago
+4,2018,HCE,Hurto de celulares,280.0,ene-ago
+5,2018,HCE,Hurto de celulares,266.0,ene-ago
+19,2018,HCE,Hurto de celulares,646.0,ene-ago
+7,2018,HCE,Hurto de celulares,712.0,ene-ago
+8,2018,HCE,Hurto de celulares,1094.0,ene-ago
+10,2018,HCE,Hurto de celulares,576.0,ene-ago
+11,2018,HCE,Hurto de celulares,424.0,ene-ago
+6,2018,HCE,Hurto de celulares,170.0,ene-ago
+3,2018,HCE,Hurto de celulares,74.0,ene-ago
+15,2018,HCE,Hurto de celulares,70.0,ene-ago
+12,2018,HCE,Hurto de celulares,84.0,ene-ago
+9,2019,HCE,Hurto de celulares,180.0,ene-ago
+20,2019,HCE,Hurto de celulares,2.0,ene-ago
+18,2019,HCE,Hurto de celulares,368.0,ene-ago
+17,2019,HCE,Hurto de celulares,4.0,ene-ago
+13,2019,HCE,Hurto de celulares,66.0,ene-ago
+16,2019,HCE,Hurto de celulares,286.0,ene-ago
+14,2019,HCE,Hurto de celulares,94.0,ene-ago
+1,2019,HCE,Hurto de celulares,138.0,ene-ago
+2,2019,HCE,Hurto de celulares,48.0,ene-ago
+4,2019,HCE,Hurto de celulares,288.0,ene-ago
+5,2019,HCE,Hurto de celulares,204.0,ene-ago
+19,2019,HCE,Hurto de celulares,490.0,ene-ago
+7,2019,HCE,Hurto de celulares,646.0,ene-ago
+8,2019,HCE,Hurto de celulares,1116.0,ene-ago
+10,2019,HCE,Hurto de celulares,590.0,ene-ago
+11,2019,HCE,Hurto de celulares,514.0,ene-ago
+6,2019,HCE,Hurto de celulares,104.0,ene-ago
+3,2019,HCE,Hurto de celulares,38.0,ene-ago
+15,2019,HCE,Hurto de celulares,120.0,ene-ago
+12,2019,HCE,Hurto de celulares,100.0,ene-ago
+9,2020,HCE,Hurto de celulares,184.0,ene-ago
+20,2020,HCE,Hurto de celulares,0.0,ene-ago
+18,2020,HCE,Hurto de celulares,190.0,ene-ago
+17,2020,HCE,Hurto de celulares,16.0,ene-ago
+13,2020,HCE,Hurto de celulares,40.0,ene-ago
+16,2020,HCE,Hurto de celulares,160.0,ene-ago
+14,2020,HCE,Hurto de celulares,86.0,ene-ago
+1,2020,HCE,Hurto de celulares,164.0,ene-ago
+2,2020,HCE,Hurto de celulares,32.0,ene-ago
+4,2020,HCE,Hurto de celulares,272.0,ene-ago
+5,2020,HCE,Hurto de celulares,174.0,ene-ago
+19,2020,HCE,Hurto de celulares,452.0,ene-ago
+7,2020,HCE,Hurto de celulares,550.0,ene-ago
+8,2020,HCE,Hurto de celulares,760.0,ene-ago
+10,2020,HCE,Hurto de celulares,400.0,ene-ago
+11,2020,HCE,Hurto de celulares,464.0,ene-ago
+6,2020,HCE,Hurto de celulares,128.0,ene-ago
+3,2020,HCE,Hurto de celulares,30.0,ene-ago
+15,2020,HCE,Hurto de celulares,108.0,ene-ago
+12,2020,HCE,Hurto de celulares,80.0,ene-ago
+9,2021,HCE,Hurto de celulares,180.0,ene-ago
+20,2021,HCE,Hurto de celulares,0.0,ene-ago
+18,2021,HCE,Hurto de celulares,456.0,ene-ago
+17,2021,HCE,Hurto de celulares,12.0,ene-ago
+13,2021,HCE,Hurto de celulares,72.0,ene-ago
+16,2021,HCE,Hurto de celulares,340.0,ene-ago
+14,2021,HCE,Hurto de celulares,144.0,ene-ago
+1,2021,HCE,Hurto de celulares,174.0,ene-ago
+2,2021,HCE,Hurto de celulares,56.0,ene-ago
+4,2021,HCE,Hurto de celulares,322.0,ene-ago
+5,2021,HCE,Hurto de celulares,264.0,ene-ago
+19,2021,HCE,Hurto de celulares,820.0,ene-ago
+7,2021,HCE,Hurto de celulares,762.0,ene-ago
+8,2021,HCE,Hurto de celulares,1104.0,ene-ago
+10,2021,HCE,Hurto de celulares,696.0,ene-ago
+11,2021,HCE,Hurto de celulares,626.0,ene-ago
+6,2021,HCE,Hurto de celulares,160.0,ene-ago
+3,2021,HCE,Hurto de celulares,78.0,ene-ago
+15,2021,HCE,Hurto de celulares,122.0,ene-ago
+12,2021,HCE,Hurto de celulares,128.0,ene-ago
+9,2022,HCE,Hurto de celulares,212.0,ene-ago
+20,2022,HCE,Hurto de celulares,0.0,ene-ago
+18,2022,HCE,Hurto de celulares,374.0,ene-ago
+17,2022,HCE,Hurto de celulares,12.0,ene-ago
+13,2022,HCE,Hurto de celulares,91.0,ene-ago
+16,2022,HCE,Hurto de celulares,365.0,ene-ago
+14,2022,HCE,Hurto de celulares,196.0,ene-ago
+1,2022,HCE,Hurto de celulares,96.0,ene-ago
+2,2022,HCE,Hurto de celulares,83.0,ene-ago
+4,2022,HCE,Hurto de celulares,337.0,ene-ago
+5,2022,HCE,Hurto de celulares,262.0,ene-ago
+19,2022,HCE,Hurto de celulares,847.0,ene-ago
+7,2022,HCE,Hurto de celulares,640.0,ene-ago
+8,2022,HCE,Hurto de celulares,1314.0,ene-ago
+10,2022,HCE,Hurto de celulares,691.0,ene-ago
+11,2022,HCE,Hurto de celulares,589.0,ene-ago
+6,2022,HCE,Hurto de celulares,121.0,ene-ago
+3,2022,HCE,Hurto de celulares,69.0,ene-ago
+15,2022,HCE,Hurto de celulares,134.0,ene-ago
+12,2022,HCE,Hurto de celulares,122.0,ene-ago
+9,2023,HCE,Hurto de celulares,124.0,ene-ago
+20,2023,HCE,Hurto de celulares,0.0,ene-ago
+18,2023,HCE,Hurto de celulares,218.0,ene-ago
+17,2023,HCE,Hurto de celulares,7.0,ene-ago
+13,2023,HCE,Hurto de celulares,76.0,ene-ago
+16,2023,HCE,Hurto de celulares,167.0,ene-ago
+14,2023,HCE,Hurto de celulares,103.0,ene-ago
+1,2023,HCE,Hurto de celulares,55.0,ene-ago
+2,2023,HCE,Hurto de celulares,56.0,ene-ago
+4,2023,HCE,Hurto de celulares,219.0,ene-ago
+5,2023,HCE,Hurto de celulares,167.0,ene-ago
+19,2023,HCE,Hurto de celulares,526.0,ene-ago
+7,2023,HCE,Hurto de celulares,283.0,ene-ago
+8,2023,HCE,Hurto de celulares,708.0,ene-ago
+10,2023,HCE,Hurto de celulares,439.0,ene-ago
+11,2023,HCE,Hurto de celulares,330.0,ene-ago
+6,2023,HCE,Hurto de celulares,63.0,ene-ago
+3,2023,HCE,Hurto de celulares,44.0,ene-ago
+15,2023,HCE,Hurto de celulares,54.0,ene-ago
+12,2023,HCE,Hurto de celulares,69.0,ene-ago
+9,2024,HCE,Hurto de celulares,100.0,ene-ago
+20,2024,HCE,Hurto de celulares,0.0,ene-ago
+18,2024,HCE,Hurto de celulares,234.0,ene-ago
+17,2024,HCE,Hurto de celulares,6.0,ene-ago
+13,2024,HCE,Hurto de celulares,100.0,ene-ago
+16,2024,HCE,Hurto de celulares,187.0,ene-ago
+14,2024,HCE,Hurto de celulares,128.0,ene-ago
+1,2024,HCE,Hurto de celulares,93.0,ene-ago
+2,2024,HCE,Hurto de celulares,46.0,ene-ago
+4,2024,HCE,Hurto de celulares,183.0,ene-ago
+5,2024,HCE,Hurto de celulares,147.0,ene-ago
+19,2024,HCE,Hurto de celulares,493.0,ene-ago
+7,2024,HCE,Hurto de celulares,342.0,ene-ago
+8,2024,HCE,Hurto de celulares,766.0,ene-ago
+10,2024,HCE,Hurto de celulares,422.0,ene-ago
+11,2024,HCE,Hurto de celulares,341.0,ene-ago
+6,2024,HCE,Hurto de celulares,62.0,ene-ago
+3,2024,HCE,Hurto de celulares,43.0,ene-ago
+15,2024,HCE,Hurto de celulares,111.0,ene-ago
+12,2024,HCE,Hurto de celulares,91.0,ene-ago
+9,2025,HCE,Hurto de celulares,52.0,ene-ago
+20,2025,HCE,Hurto de celulares,0.0,ene-ago
+18,2025,HCE,Hurto de celulares,176.0,ene-ago
+17,2025,HCE,Hurto de celulares,10.0,ene-ago
+13,2025,HCE,Hurto de celulares,75.0,ene-ago
+16,2025,HCE,Hurto de celulares,142.0,ene-ago
+14,2025,HCE,Hurto de celulares,78.0,ene-ago
+1,2025,HCE,Hurto de celulares,75.0,ene-ago
+2,2025,HCE,Hurto de celulares,40.0,ene-ago
+4,2025,HCE,Hurto de celulares,129.0,ene-ago
+5,2025,HCE,Hurto de celulares,148.0,ene-ago
+19,2025,HCE,Hurto de celulares,357.0,ene-ago
+7,2025,HCE,Hurto de celulares,332.0,ene-ago
+8,2025,HCE,Hurto de celulares,555.0,ene-ago
+10,2025,HCE,Hurto de celulares,353.0,ene-ago
+11,2025,HCE,Hurto de celulares,224.0,ene-ago
+6,2025,HCE,Hurto de celulares,63.0,ene-ago
+3,2025,HCE,Hurto de celulares,73.0,ene-ago
+15,2025,HCE,Hurto de celulares,82.0,ene-ago
+12,2025,HCE,Hurto de celulares,96.0,ene-ago
+9,2026,HCE,Hurto de celulares,179.0,ene-ago
+20,2026,HCE,Hurto de celulares,0.0,ene-ago
+18,2026,HCE,Hurto de celulares,230.0,ene-ago
+17,2026,HCE,Hurto de celulares,10.0,ene-ago
+13,2026,HCE,Hurto de celulares,61.0,ene-ago
+16,2026,HCE,Hurto de celulares,152.0,ene-ago
+14,2026,HCE,Hurto de celulares,80.0,ene-ago
+1,2026,HCE,Hurto de celulares,102.0,ene-ago
+2,2026,HCE,Hurto de celulares,69.0,ene-ago
+4,2026,HCE,Hurto de celulares,163.0,ene-ago
+5,2026,HCE,Hurto de celulares,137.0,ene-ago
+19,2026,HCE,Hurto de celulares,245.0,ene-ago
+7,2026,HCE,Hurto de celulares,272.0,ene-ago
+8,2026,HCE,Hurto de celulares,475.0,ene-ago
+10,2026,HCE,Hurto de celulares,249.0,ene-ago
+11,2026,HCE,Hurto de celulares,203.0,ene-ago
+6,2026,HCE,Hurto de celulares,62.0,ene-ago
+3,2026,HCE,Hurto de celulares,81.0,ene-ago
+15,2026,HCE,Hurto de celulares,69.0,ene-ago
+12,2026,HCE,Hurto de celulares,84.0,ene-ago
+9,2018,HM,Hurto de motocicletas,1930.0,ene-ago
+20,2018,HM,Hurto de motocicletas,0.0,ene-ago
+18,2018,HM,Hurto de motocicletas,737.0,ene-ago
+17,2018,HM,Hurto de motocicletas,231.0,ene-ago
+13,2018,HM,Hurto de motocicletas,1761.0,ene-ago
+16,2018,HM,Hurto de motocicletas,1890.0,ene-ago
+14,2018,HM,Hurto de motocicletas,1068.0,ene-ago
+1,2018,HM,Hurto de motocicletas,1909.0,ene-ago
+2,2018,HM,Hurto de motocicletas,2368.0,ene-ago
+4,2018,HM,Hurto de motocicletas,641.0,ene-ago
+5,2018,HM,Hurto de motocicletas,602.0,ene-ago
+19,2018,HM,Hurto de motocicletas,758.0,ene-ago
+7,2018,HM,Hurto de motocicletas,1110.0,ene-ago
+8,2018,HM,Hurto de motocicletas,3007.0,ene-ago
+10,2018,HM,Hurto de motocicletas,2846.0,ene-ago
+11,2018,HM,Hurto de motocicletas,2827.0,ene-ago
+6,2018,HM,Hurto de motocicletas,530.0,ene-ago
+3,2018,HM,Hurto de motocicletas,1397.0,ene-ago
+15,2018,HM,Hurto de motocicletas,928.0,ene-ago
+12,2018,HM,Hurto de motocicletas,1094.0,ene-ago
+9,2019,HM,Hurto de motocicletas,1787.0,ene-ago
+20,2019,HM,Hurto de motocicletas,0.0,ene-ago
+18,2019,HM,Hurto de motocicletas,716.0,ene-ago
+17,2019,HM,Hurto de motocicletas,396.0,ene-ago
+13,2019,HM,Hurto de motocicletas,1429.0,ene-ago
+16,2019,HM,Hurto de motocicletas,1834.0,ene-ago
+14,2019,HM,Hurto de motocicletas,884.0,ene-ago
+1,2019,HM,Hurto de motocicletas,2194.0,ene-ago
+2,2019,HM,Hurto de motocicletas,2809.0,ene-ago
+4,2019,HM,Hurto de motocicletas,876.0,ene-ago
+5,2019,HM,Hurto de motocicletas,752.0,ene-ago
+19,2019,HM,Hurto de motocicletas,777.0,ene-ago
+7,2019,HM,Hurto de motocicletas,937.0,ene-ago
+8,2019,HM,Hurto de motocicletas,2559.0,ene-ago
+10,2019,HM,Hurto de motocicletas,2689.0,ene-ago
+11,2019,HM,Hurto de motocicletas,2868.0,ene-ago
+6,2019,HM,Hurto de motocicletas,497.0,ene-ago
+3,2019,HM,Hurto de motocicletas,1187.0,ene-ago
+15,2019,HM,Hurto de motocicletas,966.0,ene-ago
+12,2019,HM,Hurto de motocicletas,1190.0,ene-ago
+9,2020,HM,Hurto de motocicletas,1201.0,ene-ago
+20,2020,HM,Hurto de motocicletas,2.0,ene-ago
+18,2020,HM,Hurto de motocicletas,558.0,ene-ago
+17,2020,HM,Hurto de motocicletas,212.0,ene-ago
+13,2020,HM,Hurto de motocicletas,931.0,ene-ago
+16,2020,HM,Hurto de motocicletas,924.0,ene-ago
+14,2020,HM,Hurto de motocicletas,602.0,ene-ago
+1,2020,HM,Hurto de motocicletas,1651.0,ene-ago
+2,2020,HM,Hurto de motocicletas,1613.0,ene-ago
+4,2020,HM,Hurto de motocicletas,654.0,ene-ago
+5,2020,HM,Hurto de motocicletas,471.0,ene-ago
+19,2020,HM,Hurto de motocicletas,533.0,ene-ago
+7,2020,HM,Hurto de motocicletas,597.0,ene-ago
+8,2020,HM,Hurto de motocicletas,1570.0,ene-ago
+10,2020,HM,Hurto de motocicletas,1874.0,ene-ago
+11,2020,HM,Hurto de motocicletas,2053.0,ene-ago
+6,2020,HM,Hurto de motocicletas,445.0,ene-ago
+3,2020,HM,Hurto de motocicletas,658.0,ene-ago
+15,2020,HM,Hurto de motocicletas,569.0,ene-ago
+12,2020,HM,Hurto de motocicletas,894.0,ene-ago
+9,2021,HM,Hurto de motocicletas,1072.0,ene-ago
+20,2021,HM,Hurto de motocicletas,0.0,ene-ago
+18,2021,HM,Hurto de motocicletas,784.0,ene-ago
+17,2021,HM,Hurto de motocicletas,230.0,ene-ago
+13,2021,HM,Hurto de motocicletas,824.0,ene-ago
+16,2021,HM,Hurto de motocicletas,1087.0,ene-ago
+14,2021,HM,Hurto de motocicletas,709.0,ene-ago
+1,2021,HM,Hurto de motocicletas,1409.0,ene-ago
+2,2021,HM,Hurto de motocicletas,1267.0,ene-ago
+4,2021,HM,Hurto de motocicletas,451.0,ene-ago
+5,2021,HM,Hurto de motocicletas,413.0,ene-ago
+19,2021,HM,Hurto de motocicletas,705.0,ene-ago
+7,2021,HM,Hurto de motocicletas,738.0,ene-ago
+8,2021,HM,Hurto de motocicletas,1767.0,ene-ago
+10,2021,HM,Hurto de motocicletas,1451.0,ene-ago
+11,2021,HM,Hurto de motocicletas,1738.0,ene-ago
+6,2021,HM,Hurto de motocicletas,314.0,ene-ago
+3,2021,HM,Hurto de motocicletas,830.0,ene-ago
+15,2021,HM,Hurto de motocicletas,672.0,ene-ago
+12,2021,HM,Hurto de motocicletas,876.0,ene-ago
+9,2022,HM,Hurto de motocicletas,1334.0,ene-ago
+20,2022,HM,Hurto de motocicletas,1.0,ene-ago
+18,2022,HM,Hurto de motocicletas,416.0,ene-ago
+17,2022,HM,Hurto de motocicletas,238.0,ene-ago
+13,2022,HM,Hurto de motocicletas,865.0,ene-ago
+16,2022,HM,Hurto de motocicletas,1011.0,ene-ago
+14,2022,HM,Hurto de motocicletas,743.0,ene-ago
+1,2022,HM,Hurto de motocicletas,1327.0,ene-ago
+2,2022,HM,Hurto de motocicletas,1147.0,ene-ago
+4,2022,HM,Hurto de motocicletas,437.0,ene-ago
+5,2022,HM,Hurto de motocicletas,297.0,ene-ago
+19,2022,HM,Hurto de motocicletas,548.0,ene-ago
+7,2022,HM,Hurto de motocicletas,605.0,ene-ago
+8,2022,HM,Hurto de motocicletas,1251.0,ene-ago
+10,2022,HM,Hurto de motocicletas,1432.0,ene-ago
+11,2022,HM,Hurto de motocicletas,1583.0,ene-ago
+6,2022,HM,Hurto de motocicletas,230.0,ene-ago
+3,2022,HM,Hurto de motocicletas,682.0,ene-ago
+15,2022,HM,Hurto de motocicletas,568.0,ene-ago
+12,2022,HM,Hurto de motocicletas,738.0,ene-ago
+9,2023,HM,Hurto de motocicletas,675.0,ene-ago
+20,2023,HM,Hurto de motocicletas,0.0,ene-ago
+18,2023,HM,Hurto de motocicletas,336.0,ene-ago
+17,2023,HM,Hurto de motocicletas,118.0,ene-ago
+13,2023,HM,Hurto de motocicletas,407.0,ene-ago
+16,2023,HM,Hurto de motocicletas,469.0,ene-ago
+14,2023,HM,Hurto de motocicletas,505.0,ene-ago
+1,2023,HM,Hurto de motocicletas,656.0,ene-ago
+2,2023,HM,Hurto de motocicletas,707.0,ene-ago
+4,2023,HM,Hurto de motocicletas,370.0,ene-ago
+5,2023,HM,Hurto de motocicletas,230.0,ene-ago
+19,2023,HM,Hurto de motocicletas,353.0,ene-ago
+7,2023,HM,Hurto de motocicletas,369.0,ene-ago
+8,2023,HM,Hurto de motocicletas,718.0,ene-ago
+10,2023,HM,Hurto de motocicletas,851.0,ene-ago
+11,2023,HM,Hurto de motocicletas,972.0,ene-ago
+6,2023,HM,Hurto de motocicletas,120.0,ene-ago
+3,2023,HM,Hurto de motocicletas,488.0,ene-ago
+15,2023,HM,Hurto de motocicletas,260.0,ene-ago
+12,2023,HM,Hurto de motocicletas,429.0,ene-ago
+9,2024,HM,Hurto de motocicletas,486.0,ene-ago
+20,2024,HM,Hurto de motocicletas,0.0,ene-ago
+18,2024,HM,Hurto de motocicletas,235.0,ene-ago
+17,2024,HM,Hurto de motocicletas,137.0,ene-ago
+13,2024,HM,Hurto de motocicletas,355.0,ene-ago
+16,2024,HM,Hurto de motocicletas,460.0,ene-ago
+14,2024,HM,Hurto de motocicletas,696.0,ene-ago
+1,2024,HM,Hurto de motocicletas,631.0,ene-ago
+2,2024,HM,Hurto de motocicletas,664.0,ene-ago
+4,2024,HM,Hurto de motocicletas,274.0,ene-ago
+5,2024,HM,Hurto de motocicletas,180.0,ene-ago
+19,2024,HM,Hurto de motocicletas,288.0,ene-ago
+7,2024,HM,Hurto de motocicletas,258.0,ene-ago
+8,2024,HM,Hurto de motocicletas,609.0,ene-ago
+10,2024,HM,Hurto de motocicletas,613.0,ene-ago
+11,2024,HM,Hurto de motocicletas,780.0,ene-ago
+6,2024,HM,Hurto de motocicletas,114.0,ene-ago
+3,2024,HM,Hurto de motocicletas,370.0,ene-ago
+15,2024,HM,Hurto de motocicletas,253.0,ene-ago
+12,2024,HM,Hurto de motocicletas,363.0,ene-ago
+9,2025,HM,Hurto de motocicletas,420.0,ene-ago
+20,2025,HM,Hurto de motocicletas,0.0,ene-ago
+18,2025,HM,Hurto de motocicletas,153.0,ene-ago
+17,2025,HM,Hurto de motocicletas,128.0,ene-ago
+13,2025,HM,Hurto de motocicletas,376.0,ene-ago
+16,2025,HM,Hurto de motocicletas,419.0,ene-ago
+14,2025,HM,Hurto de motocicletas,246.0,ene-ago
+1,2025,HM,Hurto de motocicletas,596.0,ene-ago
+2,2025,HM,Hurto de motocicletas,563.0,ene-ago
+4,2025,HM,Hurto de motocicletas,219.0,ene-ago
+5,2025,HM,Hurto de motocicletas,152.0,ene-ago
+19,2025,HM,Hurto de motocicletas,198.0,ene-ago
+7,2025,HM,Hurto de motocicletas,172.0,ene-ago
+8,2025,HM,Hurto de motocicletas,476.0,ene-ago
+10,2025,HM,Hurto de motocicletas,571.0,ene-ago
+11,2025,HM,Hurto de motocicletas,734.0,ene-ago
+6,2025,HM,Hurto de motocicletas,123.0,ene-ago
+3,2025,HM,Hurto de motocicletas,219.0,ene-ago
+15,2025,HM,Hurto de motocicletas,191.0,ene-ago
+12,2025,HM,Hurto de motocicletas,340.0,ene-ago
+9,2026,HM,Hurto de motocicletas,320.0,ene-ago
+20,2026,HM,Hurto de motocicletas,0.0,ene-ago
+18,2026,HM,Hurto de motocicletas,147.0,ene-ago
+17,2026,HM,Hurto de motocicletas,112.0,ene-ago
+13,2026,HM,Hurto de motocicletas,342.0,ene-ago
+16,2026,HM,Hurto de motocicletas,386.0,ene-ago
+14,2026,HM,Hurto de motocicletas,215.0,ene-ago
+1,2026,HM,Hurto de motocicletas,644.0,ene-ago
+2,2026,HM,Hurto de motocicletas,624.0,ene-ago
+4,2026,HM,Hurto de motocicletas,169.0,ene-ago
+5,2026,HM,Hurto de motocicletas,119.0,ene-ago
+19,2026,HM,Hurto de motocicletas,167.0,ene-ago
+7,2026,HM,Hurto de motocicletas,211.0,ene-ago
+8,2026,HM,Hurto de motocicletas,360.0,ene-ago
+10,2026,HM,Hurto de motocicletas,510.0,ene-ago
+11,2026,HM,Hurto de motocicletas,672.0,ene-ago
+6,2026,HM,Hurto de motocicletas,97.0,ene-ago
+3,2026,HM,Hurto de motocicletas,184.0,ene-ago
+15,2026,HM,Hurto de motocicletas,207.0,ene-ago
+12,2026,HM,Hurto de motocicletas,319.0,ene-ago
+9,2018,DS,Delitos sexuales,153.0,ene-ago
+20,2018,DS,Delitos sexuales,8.0,ene-ago
+18,2018,DS,Delitos sexuales,186.0,ene-ago
+17,2018,DS,Delitos sexuales,33.0,ene-ago
+13,2018,DS,Delitos sexuales,80.0,ene-ago
+16,2018,DS,Delitos sexuales,143.0,ene-ago
+14,2018,DS,Delitos sexuales,82.0,ene-ago
+1,2018,DS,Delitos sexuales,177.0,ene-ago
+2,2018,DS,Delitos sexuales,136.0,ene-ago
+4,2018,DS,Delitos sexuales,236.0,ene-ago
+5,2018,DS,Delitos sexuales,221.0,ene-ago
+19,2018,DS,Delitos sexuales,346.0,ene-ago
+7,2018,DS,Delitos sexuales,371.0,ene-ago
+8,2018,DS,Delitos sexuales,442.0,ene-ago
+10,2018,DS,Delitos sexuales,273.0,ene-ago
+11,2018,DS,Delitos sexuales,379.0,ene-ago
+6,2018,DS,Delitos sexuales,99.0,ene-ago
+3,2018,DS,Delitos sexuales,114.0,ene-ago
+15,2018,DS,Delitos sexuales,48.0,ene-ago
+12,2018,DS,Delitos sexuales,66.0,ene-ago
+9,2019,DS,Delitos sexuales,146.0,ene-ago
+20,2019,DS,Delitos sexuales,2.0,ene-ago
+18,2019,DS,Delitos sexuales,239.0,ene-ago
+17,2019,DS,Delitos sexuales,131.0,ene-ago
+13,2019,DS,Delitos sexuales,98.0,ene-ago
+16,2019,DS,Delitos sexuales,210.0,ene-ago
+14,2019,DS,Delitos sexuales,99.0,ene-ago
+1,2019,DS,Delitos sexuales,198.0,ene-ago
+2,2019,DS,Delitos sexuales,95.0,ene-ago
+4,2019,DS,Delitos sexuales,267.0,ene-ago
+5,2019,DS,Delitos sexuales,319.0,ene-ago
+19,2019,DS,Delitos sexuales,422.0,ene-ago
+7,2019,DS,Delitos sexuales,393.0,ene-ago
+8,2019,DS,Delitos sexuales,483.0,ene-ago
+10,2019,DS,Delitos sexuales,325.0,ene-ago
+11,2019,DS,Delitos sexuales,403.0,ene-ago
+6,2019,DS,Delitos sexuales,109.0,ene-ago
+3,2019,DS,Delitos sexuales,109.0,ene-ago
+15,2019,DS,Delitos sexuales,51.0,ene-ago
+12,2019,DS,Delitos sexuales,68.0,ene-ago
+9,2020,DS,Delitos sexuales,112.0,ene-ago
+20,2020,DS,Delitos sexuales,10.0,ene-ago
+18,2020,DS,Delitos sexuales,157.0,ene-ago
+17,2020,DS,Delitos sexuales,96.0,ene-ago
+13,2020,DS,Delitos sexuales,61.0,ene-ago
+16,2020,DS,Delitos sexuales,104.0,ene-ago
+14,2020,DS,Delitos sexuales,100.0,ene-ago
+1,2020,DS,Delitos sexuales,138.0,ene-ago
+2,2020,DS,Delitos sexuales,70.0,ene-ago
+4,2020,DS,Delitos sexuales,208.0,ene-ago
+5,2020,DS,Delitos sexuales,231.0,ene-ago
+19,2020,DS,Delitos sexuales,349.0,ene-ago
+7,2020,DS,Delitos sexuales,320.0,ene-ago
+8,2020,DS,Delitos sexuales,372.0,ene-ago
+10,2020,DS,Delitos sexuales,226.0,ene-ago
+11,2020,DS,Delitos sexuales,392.0,ene-ago
+6,2020,DS,Delitos sexuales,72.0,ene-ago
+3,2020,DS,Delitos sexuales,87.0,ene-ago
+15,2020,DS,Delitos sexuales,38.0,ene-ago
+12,2020,DS,Delitos sexuales,66.0,ene-ago
+9,2021,DS,Delitos sexuales,121.0,ene-ago
+20,2021,DS,Delitos sexuales,0.0,ene-ago
+18,2021,DS,Delitos sexuales,149.0,ene-ago
+17,2021,DS,Delitos sexuales,168.0,ene-ago
+13,2021,DS,Delitos sexuales,104.0,ene-ago
+16,2021,DS,Delitos sexuales,138.0,ene-ago
+14,2021,DS,Delitos sexuales,113.0,ene-ago
+1,2021,DS,Delitos sexuales,171.0,ene-ago
+2,2021,DS,Delitos sexuales,89.0,ene-ago
+4,2021,DS,Delitos sexuales,248.0,ene-ago
+5,2021,DS,Delitos sexuales,243.0,ene-ago
+19,2021,DS,Delitos sexuales,415.0,ene-ago
+7,2021,DS,Delitos sexuales,384.0,ene-ago
+8,2021,DS,Delitos sexuales,399.0,ene-ago
+10,2021,DS,Delitos sexuales,303.0,ene-ago
+11,2021,DS,Delitos sexuales,496.0,ene-ago
+6,2021,DS,Delitos sexuales,90.0,ene-ago
+3,2021,DS,Delitos sexuales,170.0,ene-ago
+15,2021,DS,Delitos sexuales,66.0,ene-ago
+12,2021,DS,Delitos sexuales,88.0,ene-ago
+9,2022,DS,Delitos sexuales,142.0,ene-ago
+20,2022,DS,Delitos sexuales,0.0,ene-ago
+18,2022,DS,Delitos sexuales,233.0,ene-ago
+17,2022,DS,Delitos sexuales,96.0,ene-ago
+13,2022,DS,Delitos sexuales,90.0,ene-ago
+16,2022,DS,Delitos sexuales,197.0,ene-ago
+14,2022,DS,Delitos sexuales,235.0,ene-ago
+1,2022,DS,Delitos sexuales,159.0,ene-ago
+2,2022,DS,Delitos sexuales,124.0,ene-ago
+4,2022,DS,Delitos sexuales,272.0,ene-ago
+5,2022,DS,Delitos sexuales,285.0,ene-ago
+19,2022,DS,Delitos sexuales,468.0,ene-ago
+7,2022,DS,Delitos sexuales,457.0,ene-ago
+8,2022,DS,Delitos sexuales,474.0,ene-ago
+10,2022,DS,Delitos sexuales,344.0,ene-ago
+11,2022,DS,Delitos sexuales,482.0,ene-ago
+6,2022,DS,Delitos sexuales,119.0,ene-ago
+3,2022,DS,Delitos sexuales,168.0,ene-ago
+15,2022,DS,Delitos sexuales,70.0,ene-ago
+12,2022,DS,Delitos sexuales,160.0,ene-ago
+9,2023,DS,Delitos sexuales,114.0,ene-ago
+20,2023,DS,Delitos sexuales,0.0,ene-ago
+18,2023,DS,Delitos sexuales,167.0,ene-ago
+17,2023,DS,Delitos sexuales,26.0,ene-ago
+13,2023,DS,Delitos sexuales,92.0,ene-ago
+16,2023,DS,Delitos sexuales,158.0,ene-ago
+14,2023,DS,Delitos sexuales,230.0,ene-ago
+1,2023,DS,Delitos sexuales,162.0,ene-ago
+2,2023,DS,Delitos sexuales,93.0,ene-ago
+4,2023,DS,Delitos sexuales,260.0,ene-ago
+5,2023,DS,Delitos sexuales,248.0,ene-ago
+19,2023,DS,Delitos sexuales,610.0,ene-ago
+7,2023,DS,Delitos sexuales,372.0,ene-ago
+8,2023,DS,Delitos sexuales,387.0,ene-ago
+10,2023,DS,Delitos sexuales,254.0,ene-ago
+11,2023,DS,Delitos sexuales,361.0,ene-ago
+6,2023,DS,Delitos sexuales,100.0,ene-ago
+3,2023,DS,Delitos sexuales,146.0,ene-ago
+15,2023,DS,Delitos sexuales,51.0,ene-ago
+12,2023,DS,Delitos sexuales,75.0,ene-ago
+9,2024,DS,Delitos sexuales,194.0,ene-ago
+20,2024,DS,Delitos sexuales,0.0,ene-ago
+18,2024,DS,Delitos sexuales,373.0,ene-ago
+17,2024,DS,Delitos sexuales,78.0,ene-ago
+13,2024,DS,Delitos sexuales,276.0,ene-ago
+16,2024,DS,Delitos sexuales,185.0,ene-ago
+14,2024,DS,Delitos sexuales,811.0,ene-ago
+1,2024,DS,Delitos sexuales,281.0,ene-ago
+2,2024,DS,Delitos sexuales,267.0,ene-ago
+4,2024,DS,Delitos sexuales,274.0,ene-ago
+5,2024,DS,Delitos sexuales,466.0,ene-ago
+19,2024,DS,Delitos sexuales,649.0,ene-ago
+7,2024,DS,Delitos sexuales,423.0,ene-ago
+8,2024,DS,Delitos sexuales,572.0,ene-ago
+10,2024,DS,Delitos sexuales,438.0,ene-ago
+11,2024,DS,Delitos sexuales,568.0,ene-ago
+6,2024,DS,Delitos sexuales,143.0,ene-ago
+3,2024,DS,Delitos sexuales,211.0,ene-ago
+15,2024,DS,Delitos sexuales,92.0,ene-ago
+12,2024,DS,Delitos sexuales,132.0,ene-ago
+9,2025,DS,Delitos sexuales,204.0,ene-ago
+20,2025,DS,Delitos sexuales,0.0,ene-ago
+18,2025,DS,Delitos sexuales,245.0,ene-ago
+17,2025,DS,Delitos sexuales,59.0,ene-ago
+13,2025,DS,Delitos sexuales,208.0,ene-ago
+16,2025,DS,Delitos sexuales,324.0,ene-ago
+14,2025,DS,Delitos sexuales,236.0,ene-ago
+1,2025,DS,Delitos sexuales,285.0,ene-ago
+2,2025,DS,Delitos sexuales,180.0,ene-ago
+4,2025,DS,Delitos sexuales,384.0,ene-ago
+5,2025,DS,Delitos sexuales,359.0,ene-ago
+19,2025,DS,Delitos sexuales,730.0,ene-ago
+7,2025,DS,Delitos sexuales,424.0,ene-ago
+8,2025,DS,Delitos sexuales,526.0,ene-ago
+10,2025,DS,Delitos sexuales,568.0,ene-ago
+11,2025,DS,Delitos sexuales,527.0,ene-ago
+6,2025,DS,Delitos sexuales,163.0,ene-ago
+3,2025,DS,Delitos sexuales,314.0,ene-ago
+15,2025,DS,Delitos sexuales,93.0,ene-ago
+12,2025,DS,Delitos sexuales,152.0,ene-ago
+9,2026,DS,Delitos sexuales,253.0,ene-ago
+20,2026,DS,Delitos sexuales,0.0,ene-ago
+18,2026,DS,Delitos sexuales,252.0,ene-ago
+17,2026,DS,Delitos sexuales,32.0,ene-ago
+13,2026,DS,Delitos sexuales,172.0,ene-ago
+16,2026,DS,Delitos sexuales,354.0,ene-ago
+14,2026,DS,Delitos sexuales,286.0,ene-ago
+1,2026,DS,Delitos sexuales,209.0,ene-ago
+2,2026,DS,Delitos sexuales,140.0,ene-ago
+4,2026,DS,Delitos sexuales,347.0,ene-ago
+5,2026,DS,Delitos sexuales,302.0,ene-ago
+19,2026,DS,Delitos sexuales,510.0,ene-ago
+7,2026,DS,Delitos sexuales,381.0,ene-ago
+8,2026,DS,Delitos sexuales,468.0,ene-ago
+10,2026,DS,Delitos sexuales,435.0,ene-ago
+11,2026,DS,Delitos sexuales,462.0,ene-ago
+6,2026,DS,Delitos sexuales,166.0,ene-ago
+3,2026,DS,Delitos sexuales,258.0,ene-ago
+15,2026,DS,Delitos sexuales,56.0,ene-ago
+12,2026,DS,Delitos sexuales,141.0,ene-ago
+9,2018,VI,Violencia intrafamiliar,908.0,ene-ago
+20,2018,VI,Violencia intrafamiliar,16.0,ene-ago
+18,2018,VI,Violencia intrafamiliar,957.0,ene-ago
+17,2018,VI,Violencia intrafamiliar,83.0,ene-ago
+13,2018,VI,Violencia intrafamiliar,396.0,ene-ago
+16,2018,VI,Violencia intrafamiliar,690.0,ene-ago
+14,2018,VI,Violencia intrafamiliar,344.0,ene-ago
+1,2018,VI,Violencia intrafamiliar,977.0,ene-ago
+2,2018,VI,Violencia intrafamiliar,428.0,ene-ago
+4,2018,VI,Violencia intrafamiliar,1667.0,ene-ago
+5,2018,VI,Violencia intrafamiliar,1392.0,ene-ago
+19,2018,VI,Violencia intrafamiliar,2942.0,ene-ago
+7,2018,VI,Violencia intrafamiliar,3304.0,ene-ago
+8,2018,VI,Violencia intrafamiliar,3091.0,ene-ago
+10,2018,VI,Violencia intrafamiliar,2126.0,ene-ago
+11,2018,VI,Violencia intrafamiliar,2694.0,ene-ago
+6,2018,VI,Violencia intrafamiliar,654.0,ene-ago
+3,2018,VI,Violencia intrafamiliar,479.0,ene-ago
+15,2018,VI,Violencia intrafamiliar,310.0,ene-ago
+12,2018,VI,Violencia intrafamiliar,396.0,ene-ago
+9,2019,VI,Violencia intrafamiliar,1000.0,ene-ago
+20,2019,VI,Violencia intrafamiliar,1.0,ene-ago
+18,2019,VI,Violencia intrafamiliar,1183.0,ene-ago
+17,2019,VI,Violencia intrafamiliar,116.0,ene-ago
+13,2019,VI,Violencia intrafamiliar,204.0,ene-ago
+16,2019,VI,Violencia intrafamiliar,773.0,ene-ago
+14,2019,VI,Violencia intrafamiliar,284.0,ene-ago
+1,2019,VI,Violencia intrafamiliar,1039.0,ene-ago
+2,2019,VI,Violencia intrafamiliar,300.0,ene-ago
+4,2019,VI,Violencia intrafamiliar,1668.0,ene-ago
+5,2019,VI,Violencia intrafamiliar,1363.0,ene-ago
+19,2019,VI,Violencia intrafamiliar,2383.0,ene-ago
+7,2019,VI,Violencia intrafamiliar,3016.0,ene-ago
+8,2019,VI,Violencia intrafamiliar,3275.0,ene-ago
+10,2019,VI,Violencia intrafamiliar,1945.0,ene-ago
+11,2019,VI,Violencia intrafamiliar,2885.0,ene-ago
+6,2019,VI,Violencia intrafamiliar,737.0,ene-ago
+3,2019,VI,Violencia intrafamiliar,368.0,ene-ago
+15,2019,VI,Violencia intrafamiliar,283.0,ene-ago
+12,2019,VI,Violencia intrafamiliar,342.0,ene-ago
+9,2020,VI,Violencia intrafamiliar,848.0,ene-ago
+20,2020,VI,Violencia intrafamiliar,15.0,ene-ago
+18,2020,VI,Violencia intrafamiliar,1109.0,ene-ago
+17,2020,VI,Violencia intrafamiliar,169.0,ene-ago
+13,2020,VI,Violencia intrafamiliar,276.0,ene-ago
+16,2020,VI,Violencia intrafamiliar,716.0,ene-ago
+14,2020,VI,Violencia intrafamiliar,351.0,ene-ago
+1,2020,VI,Violencia intrafamiliar,1100.0,ene-ago
+2,2020,VI,Violencia intrafamiliar,347.0,ene-ago
+4,2020,VI,Violencia intrafamiliar,1698.0,ene-ago
+5,2020,VI,Violencia intrafamiliar,1550.0,ene-ago
+19,2020,VI,Violencia intrafamiliar,2778.0,ene-ago
+7,2020,VI,Violencia intrafamiliar,3153.0,ene-ago
+8,2020,VI,Violencia intrafamiliar,3160.0,ene-ago
+10,2020,VI,Violencia intrafamiliar,2499.0,ene-ago
+11,2020,VI,Violencia intrafamiliar,2901.0,ene-ago
+6,2020,VI,Violencia intrafamiliar,615.0,ene-ago
+3,2020,VI,Violencia intrafamiliar,470.0,ene-ago
+15,2020,VI,Violencia intrafamiliar,315.0,ene-ago
+12,2020,VI,Violencia intrafamiliar,431.0,ene-ago
+9,2021,VI,Violencia intrafamiliar,662.0,ene-ago
+20,2021,VI,Violencia intrafamiliar,0.0,ene-ago
+18,2021,VI,Violencia intrafamiliar,1103.0,ene-ago
+17,2021,VI,Violencia intrafamiliar,206.0,ene-ago
+13,2021,VI,Violencia intrafamiliar,654.0,ene-ago
+16,2021,VI,Violencia intrafamiliar,1141.0,ene-ago
+14,2021,VI,Violencia intrafamiliar,385.0,ene-ago
+1,2021,VI,Violencia intrafamiliar,1020.0,ene-ago
+2,2021,VI,Violencia intrafamiliar,361.0,ene-ago
+4,2021,VI,Violencia intrafamiliar,1470.0,ene-ago
+5,2021,VI,Violencia intrafamiliar,1398.0,ene-ago
+19,2021,VI,Violencia intrafamiliar,2033.0,ene-ago
+7,2021,VI,Violencia intrafamiliar,2661.0,ene-ago
+8,2021,VI,Violencia intrafamiliar,2777.0,ene-ago
+10,2021,VI,Violencia intrafamiliar,2102.0,ene-ago
+11,2021,VI,Violencia intrafamiliar,3301.0,ene-ago
+6,2021,VI,Violencia intrafamiliar,558.0,ene-ago
+3,2021,VI,Violencia intrafamiliar,559.0,ene-ago
+15,2021,VI,Violencia intrafamiliar,289.0,ene-ago
+12,2021,VI,Violencia intrafamiliar,477.0,ene-ago
+9,2022,VI,Violencia intrafamiliar,1003.0,ene-ago
+20,2022,VI,Violencia intrafamiliar,0.0,ene-ago
+18,2022,VI,Violencia intrafamiliar,1025.0,ene-ago
+17,2022,VI,Violencia intrafamiliar,611.0,ene-ago
+13,2022,VI,Violencia intrafamiliar,436.0,ene-ago
+16,2022,VI,Violencia intrafamiliar,700.0,ene-ago
+14,2022,VI,Violencia intrafamiliar,582.0,ene-ago
+1,2022,VI,Violencia intrafamiliar,830.0,ene-ago
+2,2022,VI,Violencia intrafamiliar,527.0,ene-ago
+4,2022,VI,Violencia intrafamiliar,1276.0,ene-ago
+5,2022,VI,Violencia intrafamiliar,1348.0,ene-ago
+19,2022,VI,Violencia intrafamiliar,2488.0,ene-ago
+7,2022,VI,Violencia intrafamiliar,2457.0,ene-ago
+8,2022,VI,Violencia intrafamiliar,2852.0,ene-ago
+10,2022,VI,Violencia intrafamiliar,2276.0,ene-ago
+11,2022,VI,Violencia intrafamiliar,2501.0,ene-ago
+6,2022,VI,Violencia intrafamiliar,616.0,ene-ago
+3,2022,VI,Violencia intrafamiliar,647.0,ene-ago
+15,2022,VI,Violencia intrafamiliar,351.0,ene-ago
+12,2022,VI,Violencia intrafamiliar,559.0,ene-ago
+9,2023,VI,Violencia intrafamiliar,720.0,ene-ago
+20,2023,VI,Violencia intrafamiliar,0.0,ene-ago
+18,2023,VI,Violencia intrafamiliar,882.0,ene-ago
+17,2023,VI,Violencia intrafamiliar,87.0,ene-ago
+13,2023,VI,Violencia intrafamiliar,218.0,ene-ago
+16,2023,VI,Violencia intrafamiliar,662.0,ene-ago
+14,2023,VI,Violencia intrafamiliar,386.0,ene-ago
+1,2023,VI,Violencia intrafamiliar,780.0,ene-ago
+2,2023,VI,Violencia intrafamiliar,406.0,ene-ago
+4,2023,VI,Violencia intrafamiliar,1408.0,ene-ago
+5,2023,VI,Violencia intrafamiliar,1129.0,ene-ago
+19,2023,VI,Violencia intrafamiliar,3655.0,ene-ago
+7,2023,VI,Violencia intrafamiliar,2201.0,ene-ago
+8,2023,VI,Violencia intrafamiliar,2068.0,ene-ago
+10,2023,VI,Violencia intrafamiliar,1430.0,ene-ago
+11,2023,VI,Violencia intrafamiliar,2596.0,ene-ago
+6,2023,VI,Violencia intrafamiliar,448.0,ene-ago
+3,2023,VI,Violencia intrafamiliar,614.0,ene-ago
+15,2023,VI,Violencia intrafamiliar,259.0,ene-ago
+12,2023,VI,Violencia intrafamiliar,302.0,ene-ago
+9,2024,VI,Violencia intrafamiliar,1515.0,ene-ago
+20,2024,VI,Violencia intrafamiliar,1.0,ene-ago
+18,2024,VI,Violencia intrafamiliar,1029.0,ene-ago
+17,2024,VI,Violencia intrafamiliar,139.0,ene-ago
+13,2024,VI,Violencia intrafamiliar,521.0,ene-ago
+16,2024,VI,Violencia intrafamiliar,501.0,ene-ago
+14,2024,VI,Violencia intrafamiliar,3189.0,ene-ago
+1,2024,VI,Violencia intrafamiliar,1448.0,ene-ago
+2,2024,VI,Violencia intrafamiliar,682.0,ene-ago
+4,2024,VI,Violencia intrafamiliar,1219.0,ene-ago
+5,2024,VI,Violencia intrafamiliar,1188.0,ene-ago
+19,2024,VI,Violencia intrafamiliar,2635.0,ene-ago
+7,2024,VI,Violencia intrafamiliar,2225.0,ene-ago
+8,2024,VI,Violencia intrafamiliar,2904.0,ene-ago
+10,2024,VI,Violencia intrafamiliar,2351.0,ene-ago
+11,2024,VI,Violencia intrafamiliar,3489.0,ene-ago
+6,2024,VI,Violencia intrafamiliar,450.0,ene-ago
+3,2024,VI,Violencia intrafamiliar,586.0,ene-ago
+15,2024,VI,Violencia intrafamiliar,237.0,ene-ago
+12,2024,VI,Violencia intrafamiliar,561.0,ene-ago
+9,2025,VI,Violencia intrafamiliar,1723.0,ene-ago
+20,2025,VI,Violencia intrafamiliar,0.0,ene-ago
+18,2025,VI,Violencia intrafamiliar,1385.0,ene-ago
+17,2025,VI,Violencia intrafamiliar,144.0,ene-ago
+13,2025,VI,Violencia intrafamiliar,784.0,ene-ago
+16,2025,VI,Violencia intrafamiliar,1645.0,ene-ago
+14,2025,VI,Violencia intrafamiliar,740.0,ene-ago
+1,2025,VI,Violencia intrafamiliar,1201.0,ene-ago
+2,2025,VI,Violencia intrafamiliar,704.0,ene-ago
+4,2025,VI,Violencia intrafamiliar,1641.0,ene-ago
+5,2025,VI,Violencia intrafamiliar,1153.0,ene-ago
+19,2025,VI,Violencia intrafamiliar,3459.0,ene-ago
+7,2025,VI,Violencia intrafamiliar,2190.0,ene-ago
+8,2025,VI,Violencia intrafamiliar,3317.0,ene-ago
+10,2025,VI,Violencia intrafamiliar,3330.0,ene-ago
+11,2025,VI,Violencia intrafamiliar,3148.0,ene-ago
+6,2025,VI,Violencia intrafamiliar,791.0,ene-ago
+3,2025,VI,Violencia intrafamiliar,970.0,ene-ago
+15,2025,VI,Violencia intrafamiliar,339.0,ene-ago
+12,2025,VI,Violencia intrafamiliar,776.0,ene-ago
+9,2026,VI,Violencia intrafamiliar,1712.0,ene-ago
+20,2026,VI,Violencia intrafamiliar,0.0,ene-ago
+18,2026,VI,Violencia intrafamiliar,1652.0,ene-ago
+17,2026,VI,Violencia intrafamiliar,128.0,ene-ago
+13,2026,VI,Violencia intrafamiliar,679.0,ene-ago
+16,2026,VI,Violencia intrafamiliar,1686.0,ene-ago
+14,2026,VI,Violencia intrafamiliar,730.0,ene-ago
+1,2026,VI,Violencia intrafamiliar,1342.0,ene-ago
+2,2026,VI,Violencia intrafamiliar,774.0,ene-ago
+4,2026,VI,Violencia intrafamiliar,2435.0,ene-ago
+5,2026,VI,Violencia intrafamiliar,1880.0,ene-ago
+19,2026,VI,Violencia intrafamiliar,3912.0,ene-ago
+7,2026,VI,Violencia intrafamiliar,3561.0,ene-ago
+8,2026,VI,Violencia intrafamiliar,3927.0,ene-ago
+10,2026,VI,Violencia intrafamiliar,3363.0,ene-ago
+11,2026,VI,Violencia intrafamiliar,3700.0,ene-ago
+6,2026,VI,Violencia intrafamiliar,710.0,ene-ago
+3,2026,VI,Violencia intrafamiliar,1340.0,ene-ago
+15,2026,VI,Violencia intrafamiliar,422.0,ene-ago
+12,2026,VI,Violencia intrafamiliar,906.0,ene-ago

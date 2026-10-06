@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Nota técnica de integración de datos · The data squad</title>
+<style>
+  @page { size: A4; margin: 13mm 14mm 12mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "Segoe UI", "Hanken Grotesk", Arial, sans-serif; font-size: 8.55pt; line-height: 1.36; color: #0f1729; margin: 0; }
+  header { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid #0f1729; padding-bottom: 5px; margin-bottom: 7px; }
+  h1 { font-size: 14.5pt; margin: 0; letter-spacing: -.01em; }
+  .meta { font-size: 7.6pt; color: #475069; text-align: right; }
+  h2 { font-size: 9.2pt; margin: 7px 0 3px; color: #1f4aa8; text-transform: uppercase; letter-spacing: .04em; }
+  p { margin: 0 0 4px; }
+  ul { margin: 0 0 4px; padding-left: 13px; }
+  li { margin-bottom: 2px; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
+  .cifras { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin: 4px 0 6px; }
+  .cifra { border: 1px solid #dce1ea; border-radius: 5px; padding: 5px 6px; }
+  .cifra b { display: block; font-size: 13pt; letter-spacing: -.02em; color: #1f4aa8; }
+  .cifra.p b { color: #8a5300; }
+  .cifra span { font-size: 7.2pt; color: #475069; }
+  table { border-collapse: collapse; width: 100%; font-size: 7.7pt; margin: 2px 0 4px; }
+  th, td { border-bottom: 1px solid #e3e7ee; padding: 2.5px 4px; text-align: left; vertical-align: top; }
+  th { background: #eef1f6; font-weight: 600; }
+  .pie { margin-top: 6px; font-size: 7.2pt; color: #6b748b; border-top: 1px solid #dce1ea; padding-top: 4px; }
+  b.k { color: #0f1729; }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Nota técnica sobre integración de datos públicos</h1>
+    <div style="font-size:9pt;color:#475069">«El miedo que no baja»: inseguridad percibida y delito registrado en Bogotá</div>
+  </div>
+  <div class="meta">Bogotá DataJam Edición 5 · Equipo #16 The data squad<br>Rafael Londoño · Brandow León · Samuel Riveros · octubre 2026</div>
+</header>
+
+<p>Integramos siete fuentes públicas (SCJ, SDP, SCRD, EMV/Datos para la Transparencia, UAESP, DADEP, IDECA) por el código oficial de localidad, con la población de la SDP como denominador. Para dimensionar la usabilidad del portal, además, descargamos por la API CKAN el catálogo completo y todos sus recursos tabulares, y auditamos qué se puede cruzar.</p>
+
+<div class="cifras">
+  <div class="cifra"><b>1.835</b><span>conjuntos y 11.707 recursos en el catálogo</span></div>
+  <div class="cifra"><b>6,7 %</b><span>de 4.598 tablas trae una llave de localidad cruzable</span></div>
+  <div class="cifra"><b>23,9 %</b><span>trae año o fecha; 3,4 % trae sexo</span></div>
+  <div class="cifra"><b>20,8 %</b><span>de los conjuntos sin actualizar desde 2021 o antes</span></div>
+  <div class="cifra p"><b>~170 GB</b><span>de tamaño, casi todo capas geográficas repetidas en 6 formatos</span></div>
+</div>
+
+<div class="cols">
+<div>
+<h2>1. Disponibilidad, calidad y actualización</h2>
+<ul>
+  <li><b class="k">Delito solo por localidad.</b> Los delitos de alto impacto se publican por localidad y en un único corte (enero-agosto), sin UPZ ni mes. No hay delito georreferenciado abierto.</li>
+  <li><b class="k">Información desactualizada.</b> El inventario de alumbrado público (UAESP) más reciente es de agosto de 2019 y está agregado por localidad: no sirve para validar el efecto del alumbrado.</li>
+  <li><b class="k">Encuestas fuera del portal.</b> Las tres encuestas que la SDP llamó fundamentales no están en el portal. La Bienal se baja desde el repositorio del Observatorio de Culturas; la EMV publicada no trae la localidad (la recuperamos del tablero oficial de Datos para la Transparencia); la Encuesta Distrital de Percepción no se pudo descargar en forma automatizada porque el sitio de la SDP corta las conexiones.</li>
+  <li><b class="k">Calidad de archivos.</b> 1.447 tablas con columnas sin nombre útil; archivos cuya extensión no coincide con su formato (XLSX publicados como XLS); números con coma decimal y separador de miles mezclados; tablas en formato ancho (una columna por año).</li>
+  <li><b class="k">Estabilidad.</b> En descargas por volumen el portal y los servicios ArcGIS de Catastro cortaron conexiones; hicieron falta reintentos y concurrencia baja.</li>
+</ul>
+<h2>2. Retos de integración</h2>
+<ul>
+  <li><b class="k">La misma localidad escrita de diez maneras</b> («USAQUÉN», «01 - Usaquen», «1», «Santafe»). Construimos un normalizador al código oficial 1-20.</li>
+  <li><b class="k">Unidades distintas.</b> Personas (encuestas) frente a hechos (registros); conteos frente a tasas; cortes anuales frente a enero-agosto.</li>
+  <li><b class="k">Sesgo de método común.</b> Las preguntas de alumbrado y seguridad de la Bienal están en la misma batería: separamos «hechos» de «calificaciones».</li>
+</ul>
+</div>
+<div>
+<h2>3. Limitaciones</h2>
+<ul>
+  <li>Con 19 localidades las correlaciones territoriales tienen poca potencia: usamos intervalos bootstrap y corrección por pruebas múltiples, y el modelo principal se estima sobre 5.538 personas.</li>
+  <li>La cifra oculta compara personas (EMV, 96 encuestas por localidad) con hechos (SCJ): es un orden de magnitud con intervalos amplios.</li>
+  <li>En el centro las tasas por residente se inflan por población flotante. Los resultados son asociaciones, no efectos causales.</li>
+</ul>
+<h2>4. Recomendaciones para el aprovechamiento de datos públicos</h2>
+<table>
+  <tr><th>Recomendación</th><th>Responsable sugerido</th></tr>
+  <tr><td>Llaves territoriales estándar (código de localidad, UPZ y UPL) y campo de fecha en todo conjunto con dimensión territorial</td><td>IDECA y entidades publicadoras</td></tr>
+  <tr><td>Delitos por UPZ y mes (anonimizados) con la misma serie histórica</td><td>SCJ</td></tr>
+  <tr><td>Microdatos de la Encuesta Distrital de Percepción con diccionario, en el portal y descargables por API</td><td>SDP</td></tr>
+  <tr><td>Variable de localidad en el archivo publicado de la EMV</td><td>Secretaría General</td></tr>
+  <tr><td>Inventario de alumbrado georreferenciado y actualizado</td><td>UAESP</td></tr>
+  <tr><td>Diccionario de datos y fecha de corte visibles; encabezados en la primera fila</td><td>Entidades publicadoras</td></tr>
+</table>
+<h2>5. Utilidad para comprender el problema</h2>
+<p>Ninguna fuente sola explica la brecha. El cruce sí: el delito registrado de la localidad no predice la percepción (AUC 0,609 → 0,611), el entorno sí (0,782), y la brecha entre miedo y registro crece donde más se subregistra (ρ = 0,72; p ajustado 0,004). Sin la integración, la política vería solo el descenso del hurto.</p>
+</div>
+</div>
+<div class="pie">Repositorio con notebook reproducible, almacén y scripts de auditoría: ver correo de entrega. Visor: el-miedo-que-no-baja.vercel.app. Cifras de auditoría: scripts de catálogo y perfilado del almacén (API CKAN, 5 de octubre de 2026).</div>
+</body>
+</html>

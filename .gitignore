@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+visor/node_modules/
+visor/.next/
+visor/.vercel/
+visor/.env*.local
+visor/next-env.d.ts
+visor/*.tsbuildinfo
+powerbi/**/.pbi/cache.abf
+powerbi/**/.pbi/localSettings.json

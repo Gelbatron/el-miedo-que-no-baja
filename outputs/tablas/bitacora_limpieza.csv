@@ -1,0 +1,21 @@
+fuente,paso,detalle
+SCJ delitos,lectura,21 filas (localidades + totales); corte 'Ene-Ago (2025vs2026)' para todos los años
+SCJ delitos,formato,117 columnas año×tipo pasadas a formato largo; 399 celdas vacías descartadas
+SCJ delitos,llave,códigos de localidad 01-20 normalizados a entero; descartados no territoriales: [99]
+SCJ delitos,cobertura,tipos sin dato 2026: ['LP']
+SCJ incidentes 123,lectura,21 filas; corte 'Ene-Ago (2025vs2026)'
+SCJ incidentes 123,formato,81 columnas año×tipo pasadas a formato largo; 0 celdas vacías descartadas
+SDP población,lectura,837 filas (unidad × año × área); 202 columnas sexo×edad simple
+SDP población,control,"Bogotá 2025 = 7,937,898 habitantes (suma de localidades, cabecera + rural)"
+SDP población UPZ,lectura,3472 filas (unidad × año × área); 36 columnas sexo×edad simple
+Bienal 2025,lectura,hoja 'datos': 5860 personas × 537 variables
+Bienal 2025,universo,se conservan adultos (18+): 5639 de 5860; el modelo usa las 19 localidades urbanas
+Bienal 2025,recodificación,escalas 1-4/1-5 → 1 si 'malo/muy malo' o 'insegura/muy insegura'; 'no sabe' queda vacío
+Bienal 2025,peso,"factor de expansión FACTOR: suma 6,308,418 adultos urbanos representados"
+EMV 2024,lectura,3624 encuestas nacionales; 1824 en Bogotá
+EMV 2024,llave,localidad recuperada del tablero oficial (cruce por id de registro); sin localidad: 0
+UAESP alumbrado,vigencia,"último corte publicado en el portal: agosto de 2019, agregado por localidad"
+SCJ incidentes UPZ,formato,81 columnas año×tipo pasadas a formato largo; 0 celdas vacías descartadas
+SCJ incidentes UPZ,geometría,117 UPZ con polígono simplificado (~20 m) en WGS84
+Integración,cruce,5538 personas de la Bienal con el delito e incidentes 123 de su localidad (SCJ 2025)
+Integración,UPZ,incidentes 123 por UPZ con población SDP; 3 UPZ sin población (rurales o nuevas) excluidas

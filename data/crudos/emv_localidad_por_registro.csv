@@ -1,0 +1,3625 @@
+﻿id_procesamiento,municipio,localidad,zona,cod_region
+1,Cali,Comuna 7,Urbano,Sur Occidental
+2,Cali,Comuna 21,Urbano,Sur Occidental
+3,Barranquilla,Comuna 3,Urbano,Norte (Caribe)
+4,Cali,Comuna 7,Urbano,Sur Occidental
+5,Cali,Comuna 18,Urbano,Sur Occidental
+6,Barranquilla,Comuna 8,Urbano,Norte (Caribe)
+7,Cali,Comuna 10,Urbano,Sur Occidental
+8,Barranquilla,Comuna 11,Urbano,Norte (Caribe)
+9,Barranquilla,Comuna 1,Urbano,Norte (Caribe)
+10,Barranquilla,Comuna 13,Urbano,Norte (Caribe)
+11,Cali,Comuna 6,Urbano,Sur Occidental
+12,Cali,Comuna 16,Urbano,Sur Occidental
+13,Cali,Comuna 16,Urbano,Sur Occidental
+14,Cali,Comuna 7,Urbano,Sur Occidental
+15,Cali,Comuna 7,Urbano,Sur Occidental
+16,Cali,Comuna 7,Urbano,Sur Occidental
+17,Cali,Comuna 13,Urbano,Sur Occidental
+18,Barranquilla,Comuna 1,Urbano,Norte (Caribe)
+19,Barranquilla,Comuna 3,Urbano,Norte (Caribe)
+20,Barranquilla,Comuna 11,Urbano,Norte (Caribe)
+21,Bogota,San Cristobal,Urbano,Bogotá
+22,Barranquilla,Comuna 4,Urbano,Norte (Caribe)
+23,Barranquilla,Comuna 4,Urbano,Norte (Caribe)
+24,Bogota,Barrios Unidos,Urbano,Bogotá
+25,Bogota,Barrios Unidos,Urbano,Bogotá
+26,Cali,Comuna 13,Urbano,Sur Occidental
+27,Cali,Comuna 18,Urbano,Sur Occidental
+28,Bogota,Kennedy,Urbano,Bogotá
+29,Barranquilla,Comuna 11,Urbano,Norte (Caribe)
+30,Barranquilla,Comuna 3,Urbano,Norte (Caribe)
+31,Barranquilla,Comuna 8,Urbano,Norte (Caribe)
+32,Barranquilla,Comuna 4,Urbano,Norte (Caribe)
+33,Barranquilla,Comuna 1,Urbano,Norte (Caribe)
+34,Barranquilla,Comuna 1,Urbano,Norte (Caribe)
+35,Cali,Comuna 7,Urbano,Sur Occidental
+36,Barranquilla,Comuna 3,Urbano,Norte (Caribe)
+37,Barranquilla,Comuna 7,Urbano,Norte (Caribe)
+38,Barranquilla,Comuna 7,Urbano,Norte (Caribe)
+39,Barranquilla,Comuna 7,Urbano,Norte (Caribe)
+40,Barranquilla,Comuna 7,Urbano,Norte (Caribe)
+41,Cali,Comuna 18,Urbano,Sur Occidental
+42,Cali,Comuna 20,Urbano,Sur Occidental
+43,Cali,Comuna 14,Urbano,Sur Occidental
+44,Cali,Comuna 13,Urbano,Sur Occidental
+45,Cali,Comuna 20,Urbano,Sur Occidental
+46,Cali,Comuna 14,Urbano,Sur Occidental
+47,Barranquilla,Comuna 5,Urbano,Norte (Caribe)
+48,Bogota,Engativa,Urbano,Bogotá
+49,Barranquilla,Comuna 13,Urbano,Norte (Caribe)
+50,Bogota,San Cristobal,Urbano,Bogotá
+51,Barranquilla,Comuna 5,Urbano,Norte (Caribe)
+52,Bogota,Bosa,Urbano,Bogotá
+53,Barranquilla,Comuna 6,Urbano,Norte (Caribe)
+54,Barranquilla,Comuna 5,Urbano,Norte (Caribe)
+55,Barranquilla,Comuna 13,Urbano,Norte (Caribe)
+56,Barranquilla,Comuna 5,Urbano,Norte (Caribe)
+57,Bogota,Rafael Uribe,Urbano,Bogotá
+58,Bogota,Engativa,Urbano,Bogotá
+59,Bogota,Barrios Unidos,Urbano,Bogotá
+60,Barranquilla,Comuna 6,Urbano,Norte (Caribe)
+61,Soledad,Sin Informacion,Urbano,Norte (Caribe)
+62,Bogota,Kennedy,Urbano,Bogotá
+63,Bogota,Engativa,Urbano,Bogotá
+64,Soledad,Sin Informacion,Urbano,Norte (Caribe)
+65,Bogota,San Cristobal,Urbano,Bogotá
+66,Bogota,Rafael Uribe,Urbano,Bogotá
+67,Bogota,Rafael Uribe,Urbano,Bogotá
+68,Bogota,San Cristobal,Urbano,Bogotá
+69,Barranquilla,Comuna 15,Urbano,Norte (Caribe)
+70,Barranquilla,Comuna 15,Urbano,Norte (Caribe)
+71,Barranquilla,Comuna 15,Urbano,Norte (Caribe)
+72,Soledad,Sin Informacion,Urbano,Norte (Caribe)
+73,Barranquilla,Comuna 8,Urbano,Norte (Caribe)
+74,Barranquilla,Comuna 8,Urbano,Norte (Caribe)
+75,Bogota,Kennedy,Urbano,Bogotá
+76,Barranquilla,Comuna 6,Urbano,Norte (Caribe)
+77,Popayan,Sin Informacion,Urbano,Sur Occidental
+78,Popayan,Sin Informacion,Urbano,Sur Occidental
+79,Soledad,Sin Informacion,Urbano,Norte (Caribe)
+80,Barranquilla,Comuna 11,Urbano,Norte (Caribe)
+81,Riohacha,Sin Informacion,Urbano,Norte (Caribe)
+82,Riohacha,Sin Informacion,Urbano,Norte (Caribe)
+83,Riohacha,Sin Informacion,Urbano,Norte (Caribe)
+84,Puerto Berrio,Sin Informacion,Rural,Cafetera
+85,Puerto Berrio,Sin Informacion,Rural,Cafetera
+86,Popayan,Sin Informacion,Urbano,Sur Occidental
+87,Barranquilla,Comuna 13,Urbano,Norte (Caribe)
+88,Cali,Comuna 21,Urbano,Sur Occidental
+89,Bogota,Bosa,Urbano,Bogotá
+90,Bogota,Bosa,Urbano,Bogotá
+91,Cali,Comuna 21,Urbano,Sur Occidental
+92,Bogota,Engativa,Urbano,Bogotá
+93,Soledad,Sin Informacion,Urbano,Norte (Caribe)
+94,Bogota,Santafe,Urbano,Bogotá
+95,Medellin,Santa Cruz,Urbano,Cafetera
+96,Barranquilla,Comuna 6,Urbano,Norte (Caribe)
+97,Popayan,Sin Informacion,Urbano,Sur Occidental
+98,Bogota,Bosa,Urbano,Bogotá
+99,Puerto Berrio,Sin Informacion,Rural,Cafetera
+100,Puerto Berrio,Sin Informacion,Rural,Cafetera
+101,Puerto Berrio,Sin Informacion,Rural,Cafetera
+102,Puerto Berrio,Sin Informacion,Rural,Cafetera
+103,Soledad,Sin Informacion,Urbano,Norte (Caribe)
+104,Medellin,San Javier,Urbano,Cafetera
+105,Medellin,Aranjuez,Urbano,Cafetera
+106,Medellin,Aranjuez,Urbano,Cafetera
+107,Bogota,Bosa,Urbano,Bogotá
+108,Riohacha,Sin Informacion,Urbano,Norte (Caribe)
+109,Bogota,Rafael Uribe,Urbano,Bogotá
+110,Bogota,Ciudad Bolivar,Urbano,Bogotá
+111,Bogota,Ciudad Bolivar,Urbano,Bogotá
+112,Bogota,Ciudad Bolivar,Urbano,Bogotá
+113,Soledad,Sin Informacion,Urbano,Norte (Caribe)
+114,Soledad,Sin Informacion,Urbano,Norte (Caribe)
+115,Medellin,Manrique,Urbano,Cafetera
+116,Bogota,San Cristobal,Urbano,Bogotá
+117,Cali,Comuna 21,Urbano,Sur Occidental
+118,Cali,Comuna 21,Urbano,Sur Occidental
+119,Medellin,Santa Cruz,Urbano,Cafetera
+120,Puerto Berrio,Sin Informacion,Rural,Cafetera
+121,Puerto Berrio,Sin Informacion,Rural,Cafetera
+122,Medellin,Manrique,Urbano,Cafetera
+123,Puerto Berrio,Sin Informacion,Rural,Cafetera
+124,Puerto Berrio,Sin Informacion,Rural,Cafetera
+125,Popayan,Sin Informacion,Urbano,Sur Occidental
+126,Puerto Berrio,Sin Informacion,Rural,Cafetera
+127,Puerto Berrio,Sin Informacion,Rural,Cafetera
+128,Puerto Berrio,Sin Informacion,Rural,Cafetera
+129,Puerto Berrio,Sin Informacion,Rural,Cafetera
+130,Puerto Berrio,Sin Informacion,Rural,Cafetera
+131,Barranquilla,Comuna 15,Urbano,Norte (Caribe)
+132,Soledad,Sin Informacion,Urbano,Norte (Caribe)
+133,Medellin,San Javier,Urbano,Cafetera
+134,Medellin,San Javier,Urbano,Cafetera
+135,Medellin,San Javier,Urbano,Cafetera
+136,Medellin,Santa Cruz,Urbano,Cafetera
+137,Soledad,Sin Informacion,Urbano,Norte (Caribe)
+138,Agustin Codazzi,Sin Informacion,Rural,Norte (Caribe)
+139,Agustin Codazzi,Sin Informacion,Rural,Norte (Caribe)
+140,Agustin Codazzi,Sin Informacion,Rural,Norte (Caribe)
+141,Agustin Codazzi,Sin Informacion,Rural,Norte (Caribe)
+142,Medellin,San Javier,Urbano,Cafetera
+143,Cali,Comuna 20,Urbano,Sur Occidental
+144,Cali,Comuna 20,Urbano,Sur Occidental
+145,Cali,Comuna 20,Urbano,Sur Occidental
+146,Cali,Comuna 20,Urbano,Sur Occidental
+147,Cali,Comuna 20,Urbano,Sur Occidental
+148,Cali,Comuna 20,Urbano,Sur Occidental
+149,Cali,Comuna 13,Urbano,Sur Occidental
+150,Cali,Comuna 13,Urbano,Sur Occidental
+151,Cali,Comuna 13,Urbano,Sur Occidental
+152,Soledad,Sin Informacion,Urbano,Norte (Caribe)
+153,Soledad,Sin Informacion,Urbano,Norte (Caribe)
+154,Medellin,Santa Cruz,Urbano,Cafetera
+155,Barranquilla,Comuna 17,Urbano,Norte (Caribe)
+156,Barranquilla,Comuna 17,Urbano,Norte (Caribe)
+157,Barranquilla,Comuna 17,Urbano,Norte (Caribe)
+158,Barranquilla,Comuna 17,Urbano,Norte (Caribe)
+159,Medellin,Aranjuez,Urbano,Cafetera
+160,Pereira,Centro,Urbano,Cafetera
+161,Bogota,Engativa,Urbano,Bogotá
+162,Bogota,Kennedy,Urbano,Bogotá
+163,Medellin,Manrique,Urbano,Cafetera
+164,Manizales,Comuna 1 - Atardeceres,Urbano,Cafetera
+165,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+166,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+167,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+168,Yarumal,Sin Informacion,Rural,Cafetera
+169,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+170,Ibague,Comuna 11,Urbano,Centro Oriental
+171,Bogota,Engativa,Urbano,Bogotá
+172,Itagui,Comuna 3,Urbano,Cafetera
+173,Medellin,San Javier,Urbano,Cafetera
+174,Medellin,San Javier,Urbano,Cafetera
+175,Manizales,Comuna 11 - La Macarena,Urbano,Cafetera
+176,Bogota,Bosa,Urbano,Bogotá
+177,Bogota,Engativa,Urbano,Bogotá
+178,Medellin,Santa Cruz,Urbano,Cafetera
+179,Bogota,Ciudad Bolivar,Urbano,Bogotá
+180,Marinilla,Sin Informacion,Rural,Cafetera
+181,Apartado,Sin Informacion,Rural,Cafetera
+182,Apartado,Sin Informacion,Rural,Cafetera
+183,Amaga,Sin Informacion,Rural,Cafetera
+184,Manizales,Comuna 1 - Atardeceres,Urbano,Cafetera
+185,Manizales,Comuna 1 - Atardeceres,Urbano,Cafetera
+186,Ibague,Comuna 11,Urbano,Centro Oriental
+187,Amaga,Sin Informacion,Rural,Cafetera
+188,Yarumal,Sin Informacion,Rural,Cafetera
+189,Fredonia,Sin Informacion,Rural,Cafetera
+190,Medellin,Belen,Urbano,Cafetera
+191,Bogota,Rafael Uribe,Urbano,Bogotá
+192,Bogota,Bosa,Urbano,Bogotá
+193,Bogota,Engativa,Urbano,Bogotá
+194,Bogota,Ciudad Bolivar,Urbano,Bogotá
+195,Manizales,Comuna 11 - La Macarena,Urbano,Cafetera
+196,Manizales,Comuna 1 - Atardeceres,Urbano,Cafetera
+197,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+198,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+199,Apartado,Sin Informacion,Rural,Cafetera
+200,Apartado,Sin Informacion,Rural,Cafetera
+201,Apartado,Sin Informacion,Rural,Cafetera
+202,Bogota,Ciudad Bolivar,Urbano,Bogotá
+203,El Santuario,Sin Informacion,Urbano,Cafetera
+204,El Santuario,Sin Informacion,Urbano,Cafetera
+205,Medellin,San Javier,Urbano,Cafetera
+206,Bogota,Rafael Uribe,Urbano,Bogotá
+207,Bogota,Rafael Uribe,Urbano,Bogotá
+208,Apartado,Sin Informacion,Rural,Cafetera
+209,Marinilla,Sin Informacion,Rural,Cafetera
+210,Bogota,Puente Aranda,Urbano,Bogotá
+211,Yarumal,Sin Informacion,Rural,Cafetera
+212,Ibague,Comuna 11,Urbano,Centro Oriental
+213,Amaga,Sin Informacion,Rural,Cafetera
+214,Bello,Comuna 10,Urbano,Cafetera
+215,Bello,Comuna 10,Urbano,Cafetera
+216,Bello,Comuna 10,Urbano,Cafetera
+217,Marinilla,Sin Informacion,Rural,Cafetera
+218,Bogota,Usaquen,Urbano,Bogotá
+219,Bogota,Usaquen,Urbano,Bogotá
+220,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+221,Jerico,Sin Informacion,Rural,Cafetera
+222,Bogota,Fontibon,Urbano,Bogotá
+223,Bogota,Bosa,Urbano,Bogotá
+224,Apartado,Sin Informacion,Rural,Cafetera
+225,Bogota,Bosa,Urbano,Bogotá
+226,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+227,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+228,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+229,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+230,Amaga,Sin Informacion,Rural,Cafetera
+231,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+232,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+233,Bogota,Usaquen,Urbano,Bogotá
+234,Bogota,Usaquen,Urbano,Bogotá
+235,Riohacha,Sin Informacion,Urbano,Norte (Caribe)
+236,Riohacha,Sin Informacion,Urbano,Norte (Caribe)
+237,Riohacha,Sin Informacion,Urbano,Norte (Caribe)
+238,Bogota,Suba,Urbano,Bogotá
+239,Manizales,Comuna 4 - La Estacion,Urbano,Cafetera
+240,Bogota,Bosa,Urbano,Bogotá
+241,Bogota,Engativa,Urbano,Bogotá
+242,Bogota,Puente Aranda,Urbano,Bogotá
+243,Santa Barbara,Sin Informacion,Rural,Cafetera
+244,Bogota,Engativa,Urbano,Bogotá
+245,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+246,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+247,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+248,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+249,Medellin,La Candelaria,Urbano,Cafetera
+250,Yarumal,Sin Informacion,Rural,Cafetera
+251,Pasto,Sin Informacion,Rural,Sur Occidental
+252,Pasto,Sin Informacion,Rural,Sur Occidental
+253,Cali,Comuna 21,Urbano,Sur Occidental
+254,Cali,Comuna 21,Urbano,Sur Occidental
+255,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+256,Pasto,Comuna 6,Urbano,Sur Occidental
+257,Pasto,Comuna 7,Urbano,Sur Occidental
+258,Bogota,Rafael Uribe,Urbano,Bogotá
+259,Pereira,Centro,Urbano,Cafetera
+260,Pereira,Centro,Urbano,Cafetera
+261,Amaga,Sin Informacion,Rural,Cafetera
+262,Bogota,Fontibon,Urbano,Bogotá
+263,Bogota,Fontibon,Urbano,Bogotá
+264,Bogota,Engativa,Urbano,Bogotá
+265,Ibague,Comuna 6,Urbano,Centro Oriental
+266,Ibague,Comuna 6,Urbano,Centro Oriental
+267,Manizales,Comuna 11 - La Macarena,Urbano,Cafetera
+268,Manizales,Comuna 4 - La Estacion,Urbano,Cafetera
+269,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+270,Turbo,Sin Informacion,Rural,Cafetera
+271,Turbo,Sin Informacion,Rural,Cafetera
+272,Medellin,Buenos Aires,Urbano,Cafetera
+273,Medellin,Belen,Urbano,Cafetera
+274,Turbo,Sin Informacion,Rural,Cafetera
+275,Turbo,Sin Informacion,Rural,Cafetera
+276,Bogota,Ciudad Bolivar,Urbano,Bogotá
+277,Ibague,Comuna 11,Urbano,Centro Oriental
+278,Medellin,La Candelaria,Urbano,Cafetera
+279,Amaga,Sin Informacion,Rural,Cafetera
+280,Yarumal,Sin Informacion,Rural,Cafetera
+281,Yarumal,Sin Informacion,Rural,Cafetera
+282,Yarumal,Sin Informacion,Rural,Cafetera
+283,Yarumal,Sin Informacion,Rural,Cafetera
+284,Cali,Comuna 21,Urbano,Sur Occidental
+285,Cali,Comuna 21,Urbano,Sur Occidental
+286,Bogota,Fontibon,Urbano,Bogotá
+287,Pasto,Comuna 6,Urbano,Sur Occidental
+288,Riohacha,Sin Informacion,Urbano,Norte (Caribe)
+289,Marinilla,Sin Informacion,Rural,Cafetera
+290,Marinilla,Sin Informacion,Rural,Cafetera
+291,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+292,Bogota,Kennedy,Urbano,Bogotá
+293,Popayan,Sin Informacion,Urbano,Sur Occidental
+294,Popayan,Sin Informacion,Urbano,Sur Occidental
+295,Popayan,Sin Informacion,Urbano,Sur Occidental
+296,Popayan,Sin Informacion,Urbano,Sur Occidental
+297,Cartagena,Comuna 9,Urbano,Norte (Caribe)
+298,Agustin Codazzi,Sin Informacion,Rural,Norte (Caribe)
+299,Agustin Codazzi,Sin Informacion,Rural,Norte (Caribe)
+300,Agustin Codazzi,Sin Informacion,Rural,Norte (Caribe)
+301,Agustin Codazzi,Sin Informacion,Rural,Norte (Caribe)
+302,Pereira,Centro,Urbano,Cafetera
+303,Popayan,Sin Informacion,Urbano,Sur Occidental
+304,Popayan,Sin Informacion,Urbano,Sur Occidental
+305,Popayan,Sin Informacion,Urbano,Sur Occidental
+306,Popayan,Sin Informacion,Urbano,Sur Occidental
+307,Medellin,San Javier,Urbano,Cafetera
+308,Bello,Comuna 10,Urbano,Cafetera
+309,Bogota,Suba,Urbano,Bogotá
+310,Apartado,Sin Informacion,Rural,Cafetera
+311,Ibague,Comuna 6,Urbano,Centro Oriental
+312,Bogota,Rafael Uribe,Urbano,Bogotá
+313,Fredonia,Sin Informacion,Rural,Cafetera
+314,Fredonia,Sin Informacion,Rural,Cafetera
+315,El Santuario,Sin Informacion,Urbano,Cafetera
+316,Santa Barbara,Sin Informacion,Rural,Cafetera
+317,Puerto Triunfo,Sin Informacion,Urbano,Cafetera
+318,Puerto Triunfo,Sin Informacion,Urbano,Cafetera
+319,Amaga,Sin Informacion,Rural,Cafetera
+320,Manizales,Comuna 11 - La Macarena,Urbano,Cafetera
+321,Marinilla,Sin Informacion,Rural,Cafetera
+322,Turbo,Sin Informacion,Rural,Cafetera
+323,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+324,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+325,Medellin,Manrique,Urbano,Cafetera
+326,Medellin,Manrique,Urbano,Cafetera
+327,Itagui,Comuna 3,Urbano,Cafetera
+328,Cartagena,Comuna 4,Urbano,Norte (Caribe)
+329,Cartagena,Comuna 4,Urbano,Norte (Caribe)
+330,Bogota,Kennedy,Urbano,Bogotá
+331,Amaga,Sin Informacion,Rural,Cafetera
+332,Cartagena,Comuna 9,Urbano,Norte (Caribe)
+333,Bogota,Rafael Uribe,Urbano,Bogotá
+334,Cali,Comuna 19,Urbano,Sur Occidental
+335,Cali,Comuna 19,Urbano,Sur Occidental
+336,Pasto,Sin Informacion,Rural,Sur Occidental
+337,Pasto,Sin Informacion,Rural,Sur Occidental
+338,Turbo,Sin Informacion,Rural,Cafetera
+339,Turbo,Sin Informacion,Rural,Cafetera
+340,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+341,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+342,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+343,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+344,Bogota,Kennedy,Urbano,Bogotá
+345,Bogota,Kennedy,Urbano,Bogotá
+346,Bogota,Kennedy,Urbano,Bogotá
+347,Ibague,Comuna 6,Urbano,Centro Oriental
+348,Pasto,Comuna 7,Urbano,Sur Occidental
+349,Medellin,Villa Hermosa,Urbano,Cafetera
+350,Medellin,Villa Hermosa,Urbano,Cafetera
+351,Medellin,Villa Hermosa,Urbano,Cafetera
+352,Medellin,Villa Hermosa,Urbano,Cafetera
+353,Cali,Comuna 18,Urbano,Sur Occidental
+354,Cali,Comuna 18,Urbano,Sur Occidental
+355,Turbo,Sin Informacion,Rural,Cafetera
+356,Medellin,Laureles Estadio,Urbano,Cafetera
+357,Medellin,Laureles Estadio,Urbano,Cafetera
+358,Cali,Comuna 4,Urbano,Sur Occidental
+359,Dosquebradas,Comuna 01,Urbano,Cafetera
+360,Dosquebradas,Comuna 01,Urbano,Cafetera
+361,Dosquebradas,Comuna 01,Urbano,Cafetera
+362,Dosquebradas,Comuna 01,Urbano,Cafetera
+363,Manizales,Comuna 4 - La Estacion,Urbano,Cafetera
+364,Puerto Triunfo,Sin Informacion,Urbano,Cafetera
+365,Puerto Triunfo,Sin Informacion,Urbano,Cafetera
+366,Manizales,Comuna 4 - La Estacion,Urbano,Cafetera
+367,Bogota,Teusaquillo,Urbano,Bogotá
+368,Bogota,Usme,Urbano,Bogotá
+369,Apartado,Sin Informacion,Rural,Cafetera
+370,Yarumal,Sin Informacion,Rural,Cafetera
+371,El Santuario,Sin Informacion,Urbano,Cafetera
+372,Jerico,Sin Informacion,Urbano,Cafetera
+373,Bogota,Kennedy,Urbano,Bogotá
+374,Envigado,Comuna 8,Urbano,Cafetera
+375,Puerto Triunfo,Sin Informacion,Urbano,Cafetera
+376,Puerto Berrio,Sin Informacion,Rural,Cafetera
+377,Amaga,Sin Informacion,Urbano,Cafetera
+378,Bogota,Teusaquillo,Urbano,Bogotá
+379,Puerto Triunfo,Sin Informacion,Urbano,Cafetera
+380,Puerto Triunfo,Sin Informacion,Urbano,Cafetera
+381,Bogota,Kennedy,Urbano,Bogotá
+382,Apartado,Sin Informacion,Rural,Cafetera
+383,Amaga,Sin Informacion,Urbano,Cafetera
+384,Abejorral,Sin Informacion,Rural,Cafetera
+385,Abejorral,Sin Informacion,Rural,Cafetera
+386,Bogota,San Cristobal,Urbano,Bogotá
+387,Apartado,Sin Informacion,Rural,Cafetera
+388,Apartado,Sin Informacion,Rural,Cafetera
+389,Santa Barbara,Sin Informacion,Rural,Cafetera
+390,Itagui,Comuna 3,Urbano,Cafetera
+391,Bogota,Rafael Uribe,Urbano,Bogotá
+392,Bogota,Rafael Uribe,Urbano,Bogotá
+393,Turbo,Sin Informacion,Rural,Cafetera
+394,Jardin,Sin Informacion,Urbano,Cafetera
+395,Bogota,Santafe,Urbano,Bogotá
+396,Ibague,Comuna 7,Urbano,Centro Oriental
+397,Marinilla,Sin Informacion,Rural,Cafetera
+398,Marinilla,Sin Informacion,Rural,Cafetera
+399,Marinilla,Sin Informacion,Urbano,Cafetera
+400,Bogota,Bosa,Urbano,Bogotá
+401,Medellin,Santa Cruz,Urbano,Cafetera
+402,Puerto Berrio,Sin Informacion,Rural,Cafetera
+403,Puerto Berrio,Sin Informacion,Rural,Cafetera
+404,Puerto Berrio,Sin Informacion,Rural,Cafetera
+405,Bogota,Teusaquillo,Urbano,Bogotá
+406,Yarumal,Sin Informacion,Rural,Cafetera
+407,Yarumal,Sin Informacion,Rural,Cafetera
+408,Yarumal,Sin Informacion,Rural,Cafetera
+409,Bogota,Engativa,Urbano,Bogotá
+410,Cali,Comuna 5,Urbano,Sur Occidental
+411,Cali,Comuna 5,Urbano,Sur Occidental
+412,Cali,Comuna 5,Urbano,Sur Occidental
+413,Abejorral,Sin Informacion,Rural,Cafetera
+414,Envigado,Comuna 8,Urbano,Cafetera
+415,Turbo,Sin Informacion,Rural,Cafetera
+416,Ibague,Comuna 7,Urbano,Centro Oriental
+417,Ibague,Comuna 7,Urbano,Centro Oriental
+418,Bogota,Bosa,Urbano,Bogotá
+419,Popayan,Sin Informacion,Urbano,Sur Occidental
+420,Popayan,Sin Informacion,Urbano,Sur Occidental
+421,Popayan,Sin Informacion,Urbano,Sur Occidental
+422,Popayan,Sin Informacion,Urbano,Sur Occidental
+423,Popayan,Sin Informacion,Urbano,Sur Occidental
+424,Popayan,Sin Informacion,Urbano,Sur Occidental
+425,Popayan,Sin Informacion,Urbano,Sur Occidental
+426,Amaga,Sin Informacion,Urbano,Cafetera
+427,Manizales,Comuna 9 - Universitario,Urbano,Cafetera
+428,Manizales,Comuna 9 - Universitario,Urbano,Cafetera
+429,Manizales,Comuna 9 - Universitario,Urbano,Cafetera
+430,Manizales,Comuna 9 - Universitario,Urbano,Cafetera
+431,Caucasia,Sin Informacion,Rural,Cafetera
+432,Bogota,Rafael Uribe,Urbano,Bogotá
+433,Marinilla,Sin Informacion,Urbano,Cafetera
+434,Jerico,Sin Informacion,Urbano,Cafetera
+435,Yarumal,Sin Informacion,Rural,Cafetera
+436,Yarumal,Sin Informacion,Rural,Cafetera
+437,Apartado,Sin Informacion,Rural,Cafetera
+438,Bogota,Barrios Unidos,Urbano,Bogotá
+439,Bogota,Barrios Unidos,Urbano,Bogotá
+440,Cartagena,Sin Informacion,Rural,Norte (Caribe)
+441,Cartagena,Sin Informacion,Rural,Norte (Caribe)
+442,Cartagena,Sin Informacion,Rural,Norte (Caribe)
+443,Cartagena,Sin Informacion,Rural,Norte (Caribe)
+444,Apartado,Sin Informacion,Rural,Cafetera
+445,Bogota,Santafe,Urbano,Bogotá
+446,Bogota,Kennedy,Urbano,Bogotá
+447,Ibague,Comuna 7,Urbano,Centro Oriental
+448,Bogota,La Candelaria,Urbano,Bogotá
+449,Bogota,San Cristobal,Urbano,Bogotá
+450,Caucasia,Sin Informacion,Rural,Cafetera
+451,Cali,Comuna 15,Urbano,Sur Occidental
+452,Cali,Comuna 15,Urbano,Sur Occidental
+453,Turbo,Sin Informacion,Rural,Cafetera
+454,Turbo,Sin Informacion,Rural,Cafetera
+455,Turbo,Sin Informacion,Rural,Cafetera
+456,Turbo,Sin Informacion,Rural,Cafetera
+457,Yarumal,Sin Informacion,Rural,Cafetera
+458,Valledupar,Sin Informacion,Urbano,Norte (Caribe)
+459,Valledupar,Sin Informacion,Urbano,Norte (Caribe)
+460,Valledupar,Sin Informacion,Urbano,Norte (Caribe)
+461,Valledupar,Sin Informacion,Urbano,Norte (Caribe)
+462,Cali,Comuna 5,Urbano,Sur Occidental
+463,Itagui,Comuna 3,Urbano,Cafetera
+464,Bogota,Bosa,Urbano,Bogotá
+465,Bogota,Usme,Urbano,Bogotá
+466,Jerico,Sin Informacion,Urbano,Cafetera
+467,Popayan,Sin Informacion,Urbano,Sur Occidental
+468,Popayan,Sin Informacion,Urbano,Sur Occidental
+469,Marinilla,Sin Informacion,Urbano,Cafetera
+470,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+471,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+472,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+473,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+474,Bogota,Teusaquillo,Urbano,Bogotá
+475,Amaga,Sin Informacion,Urbano,Cafetera
+476,Puerto Berrio,Sin Informacion,Rural,Cafetera
+477,Puerto Berrio,Sin Informacion,Rural,Cafetera
+478,Puerto Berrio,Sin Informacion,Rural,Cafetera
+479,Apartado,Sin Informacion,Rural,Cafetera
+480,Yarumal,Sin Informacion,Rural,Cafetera
+481,Fredonia,Sin Informacion,Rural,Cafetera
+482,Fredonia,Sin Informacion,Rural,Cafetera
+483,Fredonia,Sin Informacion,Rural,Cafetera
+484,Fredonia,Sin Informacion,Rural,Cafetera
+485,Fredonia,Sin Informacion,Rural,Cafetera
+486,Apartado,Sin Informacion,Rural,Cafetera
+487,Puerto Triunfo,Sin Informacion,Urbano,Cafetera
+488,Puerto Triunfo,Sin Informacion,Urbano,Cafetera
+489,Jardin,Sin Informacion,Urbano,Cafetera
+490,Popayan,Sin Informacion,Urbano,Sur Occidental
+491,Popayan,Sin Informacion,Urbano,Sur Occidental
+492,Caucasia,Sin Informacion,Rural,Cafetera
+493,Puerto Berrio,Sin Informacion,Rural,Cafetera
+494,Puerto Berrio,Sin Informacion,Rural,Cafetera
+495,Puerto Berrio,Sin Informacion,Rural,Cafetera
+496,Bogota,Santafe,Urbano,Bogotá
+497,Bogota,Barrios Unidos,Urbano,Bogotá
+498,Cartagena,Sin Informacion,Rural,Norte (Caribe)
+499,Cartagena,Sin Informacion,Rural,Norte (Caribe)
+500,Cartagena,Sin Informacion,Rural,Norte (Caribe)
+501,Cartagena,Sin Informacion,Rural,Norte (Caribe)
+502,Santa Barbara,Sin Informacion,Rural,Cafetera
+503,Monteria,Sin Informacion,Rural,Norte (Caribe)
+504,Monteria,Sin Informacion,Rural,Norte (Caribe)
+505,Monteria,Sin Informacion,Rural,Norte (Caribe)
+506,Monteria,Sin Informacion,Rural,Norte (Caribe)
+507,Monteria,Sin Informacion,Rural,Norte (Caribe)
+508,Envigado,Comuna 8,Urbano,Cafetera
+509,Bogota,Rafael Uribe,Urbano,Bogotá
+510,Ibague,Comuna 7,Urbano,Centro Oriental
+511,Turbo,Sin Informacion,Rural,Cafetera
+512,Turbo,Sin Informacion,Rural,Cafetera
+513,Marinilla,Sin Informacion,Urbano,Cafetera
+514,Jerico,Sin Informacion,Urbano,Cafetera
+515,Marinilla,Sin Informacion,Urbano,Cafetera
+516,Ibague,Comuna 7,Urbano,Centro Oriental
+517,Bogota,Los Martires,Urbano,Bogotá
+518,Caucasia,Sin Informacion,Rural,Cafetera
+519,Caucasia,Sin Informacion,Rural,Cafetera
+520,Caucasia,Sin Informacion,Rural,Cafetera
+521,Amaga,Sin Informacion,Urbano,Cafetera
+522,Caucasia,Sin Informacion,Rural,Cafetera
+523,Puerto Berrio,Sin Informacion,Rural,Cafetera
+524,Puerto Berrio,Sin Informacion,Rural,Cafetera
+525,Puerto Berrio,Sin Informacion,Rural,Cafetera
+526,Puerto Berrio,Sin Informacion,Rural,Cafetera
+527,Pereira,El Poblado,Urbano,Cafetera
+528,Pereira,El Poblado,Urbano,Cafetera
+529,Pereira,El Poblado,Urbano,Cafetera
+530,Pereira,El Poblado,Urbano,Cafetera
+531,Puerto Berrio,Sin Informacion,Rural,Cafetera
+532,Puerto Berrio,Sin Informacion,Rural,Cafetera
+533,Puerto Berrio,Sin Informacion,Rural,Cafetera
+534,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+535,Puerto Berrio,Sin Informacion,Urbano,Cafetera
+536,Cali,Comuna 19,Urbano,Sur Occidental
+537,Cali,Comuna 19,Urbano,Sur Occidental
+538,Pasto,Comuna 6,Urbano,Sur Occidental
+539,Pasto,Comuna 6,Urbano,Sur Occidental
+540,Pasto,Comuna 7,Urbano,Sur Occidental
+541,Pasto,Comuna 7,Urbano,Sur Occidental
+542,Caucasia,Sin Informacion,Rural,Cafetera
+543,Caucasia,Sin Informacion,Rural,Cafetera
+544,Caucasia,Sin Informacion,Rural,Cafetera
+545,Caucasia,Sin Informacion,Rural,Cafetera
+546,Abejorral,Sin Informacion,Rural,Cafetera
+547,Abejorral,Sin Informacion,Rural,Cafetera
+548,Bogota,Usme,Urbano,Bogotá
+549,Jardin,Sin Informacion,Urbano,Cafetera
+550,Puerto Triunfo,Sin Informacion,Urbano,Cafetera
+551,Puerto Triunfo,Sin Informacion,Urbano,Cafetera
+552,Puerto Triunfo,Sin Informacion,Urbano,Cafetera
+553,Puerto Triunfo,Sin Informacion,Urbano,Cafetera
+554,Caucasia,Sin Informacion,Rural,Cafetera
+555,Marinilla,Sin Informacion,Urbano,Cafetera
+556,Bogota,Kennedy,Urbano,Bogotá
+557,Marinilla,Sin Informacion,Urbano,Cafetera
+558,Puerto Triunfo,Sin Informacion,Urbano,Cafetera
+559,Marinilla,Sin Informacion,Urbano,Cafetera
+560,Abejorral,Sin Informacion,Rural,Cafetera
+561,Bogota,Engativa,Urbano,Bogotá
+562,Puerto Triunfo,Sin Informacion,Urbano,Cafetera
+563,Cali,Comuna 4,Urbano,Sur Occidental
+564,Dosquebradas,Comuna 05,Urbano,Cafetera
+565,Dosquebradas,Comuna 05,Urbano,Cafetera
+566,Dosquebradas,Comuna 05,Urbano,Cafetera
+567,Dosquebradas,Comuna 05,Urbano,Cafetera
+568,Bogota,Ciudad Bolivar,Urbano,Bogotá
+569,Bogota,Ciudad Bolivar,Urbano,Bogotá
+570,Pasto,Sin Informacion,Rural,Sur Occidental
+571,Pasto,Sin Informacion,Rural,Sur Occidental
+572,Pasto,Sin Informacion,Rural,Sur Occidental
+573,Medellin,Castilla,Urbano,Cafetera
+574,Bogota,Suba,Urbano,Bogotá
+575,Bogota,Suba,Urbano,Bogotá
+576,Bogota,Suba,Urbano,Bogotá
+577,Puerto Triunfo,Sin Informacion,Urbano,Cafetera
+578,Amaga,Sin Informacion,Urbano,Cafetera
+579,Amaga,Sin Informacion,Urbano,Cafetera
+580,Cartagena,Comuna 10,Urbano,Norte (Caribe)
+581,Pasto,Comuna 12,Urbano,Sur Occidental
+582,Amaga,Sin Informacion,Urbano,Cafetera
+583,Bogota,San Cristobal,Urbano,Bogotá
+584,Cartagena,Comuna 15,Urbano,Norte (Caribe)
+585,Cartagena,Comuna 15,Urbano,Norte (Caribe)
+586,Jerico,Sin Informacion,Rural,Cafetera
+587,Apartado,Sin Informacion,Urbano,Cafetera
+588,Cali,Comuna 5,Urbano,Sur Occidental
+589,Pereira,El Oso,Urbano,Cafetera
+590,Bogota,Ciudad Bolivar,Urbano,Bogotá
+591,Puerto Triunfo,Sin Informacion,Rural,Cafetera
+592,Bogota,Bosa,Urbano,Bogotá
+593,Apartado,Sin Informacion,Urbano,Cafetera
+594,Pasto,Comuna 12,Urbano,Sur Occidental
+595,Malambo,Sin Informacion,Urbano,Norte (Caribe)
+596,Malambo,Sin Informacion,Urbano,Norte (Caribe)
+597,Bogota,Bosa,Urbano,Bogotá
+598,Bogota,Suba,Urbano,Bogotá
+599,Bogota,Suba,Urbano,Bogotá
+600,Cartagena,Comuna 10,Urbano,Norte (Caribe)
+601,Cartagena,Comuna 15,Urbano,Norte (Caribe)
+602,Cali,Comuna 14,Urbano,Sur Occidental
+603,Bucaramanga,Comuna 17 - Mutis,Urbano,Centro Oriental
+604,Yarumal,Sin Informacion,Urbano,Cafetera
+605,Yarumal,Sin Informacion,Urbano,Cafetera
+606,Bogota,Usaquen,Urbano,Bogotá
+607,Bogota,Engativa,Urbano,Bogotá
+608,Bogota,Ciudad Bolivar,Urbano,Bogotá
+609,Caucasia,Sin Informacion,Rural,Cafetera
+610,Amaga,Sin Informacion,Urbano,Cafetera
+611,Apartado,Sin Informacion,Urbano,Cafetera
+612,Puerto Triunfo,Sin Informacion,Rural,Cafetera
+613,Peñol,Sin Informacion,Urbano,Cafetera
+614,Bogota,San Cristobal,Urbano,Bogotá
+615,Bogota,San Cristobal,Urbano,Bogotá
+616,Cartagena,Comuna 10,Urbano,Norte (Caribe)
+617,Monteria,Sin Informacion,Rural,Norte (Caribe)
+618,Monteria,Sin Informacion,Rural,Norte (Caribe)
+619,Monteria,Sin Informacion,Rural,Norte (Caribe)
+620,Bogota,Bosa,Urbano,Bogotá
+621,Malambo,Sin Informacion,Urbano,Norte (Caribe)
+622,Cali,Comuna 4,Urbano,Sur Occidental
+623,Yarumal,Sin Informacion,Urbano,Cafetera
+624,Yarumal,Sin Informacion,Urbano,Cafetera
+625,Cartagena,Comuna 15,Urbano,Norte (Caribe)
+626,Bogota,Bosa,Urbano,Bogotá
+627,Bogota,Usme,Urbano,Bogotá
+628,Puerto Triunfo,Sin Informacion,Rural,Cafetera
+629,Floridablanca,Bucarica,Urbano,Centro Oriental
+630,Bogota,Usaquen,Urbano,Bogotá
+631,Medellin,Manrique,Urbano,Cafetera
+632,Bogota,San Cristobal,Urbano,Bogotá
+633,Cali,Comuna 14,Urbano,Sur Occidental
+634,Caucasia,Sin Informacion,Rural,Cafetera
+635,Bogota,Usaquen,Urbano,Bogotá
+636,Bogota,Usaquen,Urbano,Bogotá
+637,San Jeronimo,Sin Informacion,Urbano,Cafetera
+638,Amaga,Sin Informacion,Urbano,Cafetera
+639,Cartagena,Comuna 10,Urbano,Norte (Caribe)
+640,Amaga,Sin Informacion,Urbano,Cafetera
+641,Malambo,Sin Informacion,Urbano,Norte (Caribe)
+642,Bogota,Bosa,Urbano,Bogotá
+643,Yarumal,Sin Informacion,Urbano,Cafetera
+644,Bogota,Suba,Urbano,Bogotá
+645,Bogota,Bosa,Urbano,Bogotá
+646,Bogota,San Cristobal,Urbano,Bogotá
+647,Bogota,Usme,Urbano,Bogotá
+648,Peñol,Sin Informacion,Urbano,Cafetera
+649,Sopetran,Sin Informacion,Urbano,Cafetera
+650,Bogota,Rafael Uribe,Urbano,Bogotá
+651,Apartado,Sin Informacion,Urbano,Cafetera
+652,Apartado,Sin Informacion,Urbano,Cafetera
+653,Caucasia,Sin Informacion,Rural,Cafetera
+654,Turbo,Sin Informacion,Rural,Cafetera
+655,Turbo,Sin Informacion,Rural,Cafetera
+656,Turbo,Sin Informacion,Rural,Cafetera
+657,Turbo,Sin Informacion,Rural,Cafetera
+658,Medellin,Manrique,Urbano,Cafetera
+659,Bogota,Rafael Uribe,Urbano,Bogotá
+660,Bogota,San Cristobal,Urbano,Bogotá
+661,Jerico,Sin Informacion,Rural,Cafetera
+662,Jerico,Sin Informacion,Rural,Cafetera
+663,Cali,Comuna 16,Urbano,Sur Occidental
+664,Cali,Comuna 16,Urbano,Sur Occidental
+665,Cali,Comuna 7,Urbano,Sur Occidental
+666,Malambo,Sin Informacion,Urbano,Norte (Caribe)
+667,Malambo,Sin Informacion,Urbano,Norte (Caribe)
+668,Malambo,Sin Informacion,Urbano,Norte (Caribe)
+669,Malambo,Sin Informacion,Urbano,Norte (Caribe)
+670,Cartagena,Comuna 9,Urbano,Norte (Caribe)
+671,Bogota,San Cristobal,Urbano,Bogotá
+672,Yarumal,Sin Informacion,Urbano,Cafetera
+673,Bogota,Fontibon,Urbano,Bogotá
+674,Apartado,Sin Informacion,Urbano,Cafetera
+675,San Jeronimo,Sin Informacion,Urbano,Cafetera
+676,Bogota,Suba,Urbano,Bogotá
+677,Bogota,Suba,Urbano,Bogotá
+678,Jardin,Sin Informacion,Urbano,Cafetera
+679,Yarumal,Sin Informacion,Urbano,Cafetera
+680,Yarumal,Sin Informacion,Urbano,Cafetera
+681,Bogota,Usaquen,Urbano,Bogotá
+682,Floridablanca,Bucarica,Urbano,Centro Oriental
+683,Bogota,Engativa,Urbano,Bogotá
+684,Caucasia,Sin Informacion,Rural,Cafetera
+685,Caucasia,Sin Informacion,Rural,Cafetera
+686,Caucasia,Sin Informacion,Rural,Cafetera
+687,Caucasia,Sin Informacion,Rural,Cafetera
+688,Caucasia,Sin Informacion,Rural,Cafetera
+689,Apartado,Sin Informacion,Urbano,Cafetera
+690,Bogota,Bosa,Urbano,Bogotá
+691,Sopetran,Sin Informacion,Urbano,Cafetera
+692,Puerto Triunfo,Sin Informacion,Rural,Cafetera
+693,Puerto Triunfo,Sin Informacion,Rural,Cafetera
+694,Caucasia,Sin Informacion,Rural,Cafetera
+695,Caucasia,Sin Informacion,Rural,Cafetera
+696,Caucasia,Sin Informacion,Rural,Cafetera
+697,Caucasia,Sin Informacion,Rural,Cafetera
+698,Peñol,Sin Informacion,Urbano,Cafetera
+699,Sonson,Sin Informacion,Urbano,Cafetera
+700,Medellin,Laureles Estadio,Urbano,Cafetera
+701,Medellin,Laureles Estadio,Urbano,Cafetera
+702,Bogota,Usme,Urbano,Bogotá
+703,Cartagena,Comuna 7,Urbano,Norte (Caribe)
+704,Puerto Triunfo,Sin Informacion,Rural,Cafetera
+705,Puerto Triunfo,Sin Informacion,Rural,Cafetera
+706,Puerto Triunfo,Sin Informacion,Rural,Cafetera
+707,Bogota,Bosa,Urbano,Bogotá
+708,Bogota,Bosa,Urbano,Bogotá
+709,Ibague,Comuna 6,Urbano,Centro Oriental
+710,Ibague,Comuna 6,Urbano,Centro Oriental
+711,Turbo,Sin Informacion,Rural,Cafetera
+712,Turbo,Sin Informacion,Rural,Cafetera
+713,Turbo,Sin Informacion,Rural,Cafetera
+714,Turbo,Sin Informacion,Rural,Cafetera
+715,Bogota,Ciudad Bolivar,Urbano,Bogotá
+716,Medellin,Aranjuez,Urbano,Cafetera
+717,Medellin,Santa Cruz,Urbano,Cafetera
+718,Medellin,Santa Cruz,Urbano,Cafetera
+719,Barranquilla,Comuna 19,Urbano,Norte (Caribe)
+720,Barranquilla,Comuna 19,Urbano,Norte (Caribe)
+721,San Jeronimo,Sin Informacion,Urbano,Cafetera
+722,San Jeronimo,Sin Informacion,Urbano,Cafetera
+723,San Jeronimo,Sin Informacion,Urbano,Cafetera
+724,Medellin,Manrique,Urbano,Cafetera
+725,Bogota,Engativa,Urbano,Bogotá
+726,Amaga,Sin Informacion,Urbano,Cafetera
+727,Amaga,Sin Informacion,Urbano,Cafetera
+728,Bogota,Tunjuelito,Urbano,Bogotá
+729,San Jeronimo,Sin Informacion,Urbano,Cafetera
+730,Cali,Comuna 5,Urbano,Sur Occidental
+731,Cali,Comuna 18,Urbano,Sur Occidental
+732,Cali,Comuna 18,Urbano,Sur Occidental
+733,Cali,Comuna 17,Urbano,Sur Occidental
+734,Cali,Comuna 17,Urbano,Sur Occidental
+735,Cali,Comuna 17,Urbano,Sur Occidental
+736,Cali,Comuna 17,Urbano,Sur Occidental
+737,Cali,Comuna 17,Urbano,Sur Occidental
+738,Cali,Comuna 17,Urbano,Sur Occidental
+739,Cali,Comuna 17,Urbano,Sur Occidental
+740,Bogota,Bosa,Urbano,Bogotá
+741,Amaga,Sin Informacion,Urbano,Cafetera
+742,Amaga,Sin Informacion,Urbano,Cafetera
+743,Pasto,Comuna 12,Urbano,Sur Occidental
+744,Pasto,Comuna 12,Urbano,Sur Occidental
+745,Pasto,Comuna 5,Urbano,Sur Occidental
+746,Bucaramanga,Comuna 17 - Mutis,Urbano,Centro Oriental
+747,Bucaramanga,Comuna 17 - Mutis,Urbano,Centro Oriental
+748,Bucaramanga,Comuna 17 - Mutis,Urbano,Centro Oriental
+749,El Carmen De Viboral,Sin Informacion,Rural,Cafetera
+750,El Carmen De Viboral,Sin Informacion,Rural,Cafetera
+751,El Carmen De Viboral,Sin Informacion,Rural,Cafetera
+752,El Carmen De Viboral,Sin Informacion,Rural,Cafetera
+753,El Carmen De Viboral,Sin Informacion,Rural,Cafetera
+754,El Carmen De Viboral,Sin Informacion,Rural,Cafetera
+755,El Carmen De Viboral,Sin Informacion,Rural,Cafetera
+756,Bello,Comuna 6,Urbano,Cafetera
+757,Bello,Comuna 6,Urbano,Cafetera
+758,Bello,Comuna 6,Urbano,Cafetera
+759,Bello,Comuna 6,Urbano,Cafetera
+760,Cali,Comuna 14,Urbano,Sur Occidental
+761,Cali,Comuna 14,Urbano,Sur Occidental
+762,Cali,Comuna 14,Urbano,Sur Occidental
+763,Peñol,Sin Informacion,Urbano,Cafetera
+764,Apartado,Sin Informacion,Urbano,Cafetera
+765,San Jeronimo,Sin Informacion,Urbano,Cafetera
+766,Sopetran,Sin Informacion,Urbano,Cafetera
+767,Sopetran,Sin Informacion,Urbano,Cafetera
+768,Sopetran,Sin Informacion,Urbano,Cafetera
+769,San Jeronimo,Sin Informacion,Urbano,Cafetera
+770,Pasto,Comuna 5,Urbano,Sur Occidental
+771,Pasto,Comuna 8,Urbano,Sur Occidental
+772,Pasto,Comuna 8,Urbano,Sur Occidental
+773,Pasto,Comuna 8,Urbano,Sur Occidental
+774,Bogota,Suba,Urbano,Bogotá
+775,Bogota,Suba,Urbano,Bogotá
+776,Bucaramanga,Comuna 2 - Nororiental,Urbano,Centro Oriental
+777,Bucaramanga,Comuna 2 - Nororiental,Urbano,Centro Oriental
+778,Bucaramanga,Comuna 2 - Nororiental,Urbano,Centro Oriental
+779,Bucaramanga,Comuna 2 - Nororiental,Urbano,Centro Oriental
+780,Amaga,Sin Informacion,Urbano,Cafetera
+781,Ibague,Comuna 6,Urbano,Centro Oriental
+782,Ibague,Comuna 6,Urbano,Centro Oriental
+783,Dosquebradas,Comuna 02,Urbano,Cafetera
+784,Dosquebradas,Comuna 02,Urbano,Cafetera
+785,Dosquebradas,Comuna 02,Urbano,Cafetera
+786,Dosquebradas,Comuna 02,Urbano,Cafetera
+787,Bogota,Usaquen,Urbano,Bogotá
+788,Pereira,El Oso,Urbano,Cafetera
+789,Pereira,El Oso,Urbano,Cafetera
+790,Pereira,El Oso,Urbano,Cafetera
+791,Valledupar,Sin Informacion,Urbano,Norte (Caribe)
+792,Valledupar,Sin Informacion,Urbano,Norte (Caribe)
+793,Valledupar,Sin Informacion,Urbano,Norte (Caribe)
+794,Valledupar,Sin Informacion,Urbano,Norte (Caribe)
+795,Valledupar,Sin Informacion,Urbano,Norte (Caribe)
+796,Santafe De Antioquia,Sin Informacion,Rural,Cafetera
+797,Santafe De Antioquia,Sin Informacion,Rural,Cafetera
+798,Santafe De Antioquia,Sin Informacion,Rural,Cafetera
+799,Ibague,Comuna 2,Urbano,Centro Oriental
+800,Ibague,Comuna 2,Urbano,Centro Oriental
+801,Ibague,Comuna 2,Urbano,Centro Oriental
+802,Ibague,Comuna 2,Urbano,Centro Oriental
+803,Cali,Comuna 13,Urbano,Sur Occidental
+804,Cali,Comuna 13,Urbano,Sur Occidental
+805,Cali,Comuna 13,Urbano,Sur Occidental
+806,Cali,Comuna 9,Urbano,Sur Occidental
+807,Puerto Triunfo,Sin Informacion,Rural,Cafetera
+808,Puerto Triunfo,Sin Informacion,Rural,Cafetera
+809,Sopetran,Sin Informacion,Urbano,Cafetera
+810,Monteria,Sin Informacion,Urbano,Norte (Caribe)
+811,Amalfi,Sin Informacion,Urbano,Cafetera
+812,Bogota,Ciudad Bolivar,Urbano,Bogotá
+813,Apartado,Sin Informacion,Urbano,Cafetera
+814,Cartagena,Comuna 12,Urbano,Norte (Caribe)
+815,Amalfi,Sin Informacion,Urbano,Cafetera
+816,San Jeronimo,Sin Informacion,Urbano,Cafetera
+817,Apartado,Sin Informacion,Urbano,Cafetera
+818,Cartagena,Comuna 3,Urbano,Norte (Caribe)
+819,Cali,Comuna 7,Urbano,Sur Occidental
+820,Cali,Comuna 5,Urbano,Sur Occidental
+821,Peñol,Sin Informacion,Urbano,Cafetera
+822,Puerto Triunfo,Sin Informacion,Rural,Cafetera
+823,Cali,Comuna 9,Urbano,Sur Occidental
+824,Bogota,Bosa,Urbano,Bogotá
+825,Valledupar,Sin Informacion,Urbano,Norte (Caribe)
+826,Valledupar,Sin Informacion,Urbano,Norte (Caribe)
+827,Sopetran,Sin Informacion,Urbano,Cafetera
+828,Dosquebradas,Comuna 03,Urbano,Cafetera
+829,Dosquebradas,Comuna 03,Urbano,Cafetera
+830,Bogota,San Cristobal,Urbano,Bogotá
+831,Cali,Comuna 14,Urbano,Sur Occidental
+832,Caucasia,Sin Informacion,Rural,Cafetera
+833,Bogota,Kennedy,Urbano,Bogotá
+834,Apartado,Sin Informacion,Urbano,Cafetera
+835,Apartado,Sin Informacion,Urbano,Cafetera
+836,Monteria,Sin Informacion,Urbano,Norte (Caribe)
+837,Bogota,Usaquen,Urbano,Bogotá
+838,Cartagena,Comuna 3,Urbano,Norte (Caribe)
+839,Soledad,Sin Informacion,Urbano,Norte (Caribe)
+840,Soledad,Sin Informacion,Urbano,Norte (Caribe)
+841,Bogota,Rafael Uribe,Urbano,Bogotá
+842,Turbo,Sin Informacion,Urbano,Cafetera
+843,Turbo,Sin Informacion,Urbano,Cafetera
+844,Guarne,Sin Informacion,Rural,Cafetera
+845,Peñol,Sin Informacion,Urbano,Cafetera
+846,Amalfi,Sin Informacion,Urbano,Cafetera
+847,Cali,Comuna 17,Urbano,Sur Occidental
+848,Bogota,Tunjuelito,Urbano,Bogotá
+849,Puerto Triunfo,Sin Informacion,Rural,Cafetera
+850,Monteria,Sin Informacion,Urbano,Norte (Caribe)
+851,Santa Rosa De Osos,Sin Informacion,Urbano,Cafetera
+852,Santa Marta,Comuna 7 - Gaira - Rodadero,Urbano,Norte (Caribe)
+853,El Carmen De Viboral,Sin Informacion,Rural,Cafetera
+854,Turbo,Sin Informacion,Urbano,Cafetera
+855,Turbo,Sin Informacion,Urbano,Cafetera
+856,Bogota,Kennedy,Urbano,Bogotá
+857,Amalfi,Sin Informacion,Urbano,Cafetera
+858,Villavicencio,Comuna 6,Urbano,Centro Oriental
+859,Cali,Comuna 6,Urbano,Sur Occidental
+860,Bogota,Suba,Urbano,Bogotá
+861,Bogota,Suba,Urbano,Bogotá
+862,Bogota,Bosa,Urbano,Bogotá
+863,Bogota,Bosa,Urbano,Bogotá
+864,San Jeronimo,Sin Informacion,Urbano,Cafetera
+865,Floridablanca,Bucarica,Urbano,Centro Oriental
+866,Medellin,San Javier,Urbano,Cafetera
+867,Cali,Comuna 13,Urbano,Sur Occidental
+868,Cali,Comuna 13,Urbano,Sur Occidental
+869,Cali,Comuna 13,Urbano,Sur Occidental
+870,Soledad,Sin Informacion,Urbano,Norte (Caribe)
+871,Soledad,Sin Informacion,Urbano,Norte (Caribe)
+872,Soledad,Sin Informacion,Urbano,Norte (Caribe)
+873,Cartagena,Comuna 3,Urbano,Norte (Caribe)
+874,Amalfi,Sin Informacion,Urbano,Cafetera
+875,Amalfi,Sin Informacion,Urbano,Cafetera
+876,Bogota,Rafael Uribe,Urbano,Bogotá
+877,Monteria,Sin Informacion,Urbano,Norte (Caribe)
+878,Cali,Comuna 5,Urbano,Sur Occidental
+879,Cartagena,Comuna 12,Urbano,Norte (Caribe)
+880,Bogota,San Cristobal,Urbano,Bogotá
+881,Bogota,Bosa,Urbano,Bogotá
+882,Bogota,Bosa,Urbano,Bogotá
+883,Cali,Comuna 9,Urbano,Sur Occidental
+884,Guarne,Sin Informacion,Rural,Cafetera
+885,Villavicencio,Comuna 6,Urbano,Centro Oriental
+886,Cali,Comuna 6,Urbano,Sur Occidental
+887,Valledupar,Sin Informacion,Urbano,Norte (Caribe)
+888,Valledupar,Sin Informacion,Urbano,Norte (Caribe)
+889,Apartado,Sin Informacion,Urbano,Cafetera
+890,Ibague,Comuna 5,Urbano,Centro Oriental
+891,Villavicencio,Comuna 5,Urbano,Centro Oriental
+892,Villavicencio,Comuna 5,Urbano,Centro Oriental
+893,Cali,Comuna 14,Urbano,Sur Occidental
+894,Soledad,Sin Informacion,Urbano,Norte (Caribe)
+895,Soledad,Sin Informacion,Urbano,Norte (Caribe)
+896,Guarne,Sin Informacion,Rural,Cafetera
+897,Guarne,Sin Informacion,Rural,Cafetera
+898,Bogota,San Cristobal,Urbano,Bogotá
+899,Bogota,San Cristobal,Urbano,Bogotá
+900,Bogota,San Cristobal,Urbano,Bogotá
+901,Bogota,Tunjuelito,Urbano,Bogotá
+902,Cali,Comuna 9,Urbano,Sur Occidental
+903,Santa Rosa De Osos,Sin Informacion,Urbano,Cafetera
+904,Santa Rosa De Osos,Sin Informacion,Urbano,Cafetera
+905,Urrao,Sin Informacion,Rural,Cafetera
+906,Urrao,Sin Informacion,Rural,Cafetera
+907,El Carmen De Viboral,Sin Informacion,Rural,Cafetera
+908,Cartagena,Comuna 3,Urbano,Norte (Caribe)
+909,Cartagena,Comuna 12,Urbano,Norte (Caribe)
+910,Amalfi,Sin Informacion,Urbano,Cafetera
+911,Bogota,Bosa,Urbano,Bogotá
+912,Bogota,Suba,Urbano,Bogotá
+913,Santa Rosa De Osos,Sin Informacion,Urbano,Cafetera
+914,Bogota,Kennedy,Urbano,Bogotá
+915,Bogota,Rafael Uribe,Urbano,Bogotá
+916,Bogota,San Cristobal,Urbano,Bogotá
+917,Medellin,Castilla,Urbano,Cafetera
+918,Medellin,Castilla,Urbano,Cafetera
+919,Bogota,Kennedy,Urbano,Bogotá
+920,Bogota,Kennedy,Urbano,Bogotá
+921,Bogota,Kennedy,Urbano,Bogotá
+922,Bogota,Kennedy,Urbano,Bogotá
+923,Medellin,San Javier,Urbano,Cafetera
+924,Floridablanca,Bucarica,Urbano,Centro Oriental
+925,Santa Marta,Comuna 7 - Gaira - Rodadero,Urbano,Norte (Caribe)
+926,Santa Marta,Comuna 7 - Gaira - Rodadero,Urbano,Norte (Caribe)
+927,Bogota,Ciudad Bolivar,Urbano,Bogotá
+928,Amalfi,Sin Informacion,Urbano,Cafetera
+929,Puerto Triunfo,Sin Informacion,Rural,Cafetera
+930,Puerto Triunfo,Sin Informacion,Rural,Cafetera
+931,Barranquilla,Comuna 17,Urbano,Norte (Caribe)
+932,Barranquilla,Comuna 17,Urbano,Norte (Caribe)
+933,Barranquilla,Comuna 17,Urbano,Norte (Caribe)
+934,San Jeronimo,Sin Informacion,Urbano,Cafetera
+935,Bogota,San Cristobal,Urbano,Bogotá
+936,Bogota,Rafael Uribe,Urbano,Bogotá
+937,Sopetran,Sin Informacion,Urbano,Cafetera
+938,Bogota,Bosa,Urbano,Bogotá
+939,Apartado,Sin Informacion,Urbano,Cafetera
+940,Turbo,Sin Informacion,Urbano,Cafetera
+941,Turbo,Sin Informacion,Urbano,Cafetera
+942,Dosquebradas,Comuna 03,Urbano,Cafetera
+943,Dosquebradas,Comuna 03,Urbano,Cafetera
+944,Soledad,Sin Informacion,Urbano,Norte (Caribe)
+945,Puerto Triunfo,Sin Informacion,Rural,Cafetera
+946,Bogota,Ciudad Bolivar,Urbano,Bogotá
+947,Monteria,Sin Informacion,Urbano,Norte (Caribe)
+948,Peñol,Sin Informacion,Urbano,Cafetera
+949,Barranquilla,Comuna 19,Urbano,Norte (Caribe)
+950,Barranquilla,Comuna 19,Urbano,Norte (Caribe)
+951,Pereira,San Joaquin,Urbano,Cafetera
+952,Pereira,San Joaquin,Urbano,Cafetera
+953,Pereira,San Joaquin,Urbano,Cafetera
+954,Pereira,San Joaquin,Urbano,Cafetera
+955,Bogota,Usme,Urbano,Bogotá
+956,Bogota,Kennedy,Urbano,Bogotá
+957,Santa Rosa De Osos,Sin Informacion,Urbano,Cafetera
+958,Cali,Comuna 14,Urbano,Sur Occidental
+959,Cali,Comuna 7,Urbano,Sur Occidental
+960,Cartagena,Comuna 12,Urbano,Norte (Caribe)
+961,Cali,Comuna 7,Urbano,Sur Occidental
+962,Cali,Comuna 7,Urbano,Sur Occidental
+963,Cali,Comuna 7,Urbano,Sur Occidental
+964,Cali,Comuna 2,Urbano,Sur Occidental
+965,Bucaramanga,Comuna 7 - Ciudadela,Urbano,Centro Oriental
+966,Bucaramanga,Comuna 7 - Ciudadela,Urbano,Centro Oriental
+967,Bucaramanga,Comuna 7 - Ciudadela,Urbano,Centro Oriental
+968,Bucaramanga,Comuna 7 - Ciudadela,Urbano,Centro Oriental
+969,Guarne,Sin Informacion,Rural,Cafetera
+970,Guarne,Sin Informacion,Rural,Cafetera
+971,Turbo,Sin Informacion,Urbano,Cafetera
+972,Turbo,Sin Informacion,Urbano,Cafetera
+973,Barranquilla,Comuna 17,Urbano,Norte (Caribe)
+974,Bogota,Puente Aranda,Urbano,Bogotá
+975,Barranquilla,Comuna 17,Urbano,Norte (Caribe)
+976,Barranquilla,Comuna 17,Urbano,Norte (Caribe)
+977,Barranquilla,Comuna 17,Urbano,Norte (Caribe)
+978,Bogota,Suba,Urbano,Bogotá
+979,Bogota,Bosa,Urbano,Bogotá
+980,Bogota,Kennedy,Urbano,Bogotá
+981,Bogota,Engativa,Urbano,Bogotá
+982,San Jeronimo,Sin Informacion,Urbano,Cafetera
+983,San Jeronimo,Sin Informacion,Urbano,Cafetera
+984,San Jeronimo,Sin Informacion,Urbano,Cafetera
+985,San Jeronimo,Sin Informacion,Urbano,Cafetera
+986,Apartado,Sin Informacion,Urbano,Cafetera
+987,Apartado,Sin Informacion,Urbano,Cafetera
+988,Cali,Comuna 21,Urbano,Sur Occidental
+989,Cali,Comuna 21,Urbano,Sur Occidental
+990,Cali,Comuna 21,Urbano,Sur Occidental
+991,Bogota,Rafael Uribe,Urbano,Bogotá
+992,Medellin,Belen,Urbano,Cafetera
+993,Bogota,Kennedy,Urbano,Bogotá
+994,Santa Rosa De Osos,Sin Informacion,Urbano,Cafetera
+995,Santa Rosa De Osos,Sin Informacion,Urbano,Cafetera
+996,Santafe De Antioquia,Sin Informacion,Urbano,Cafetera
+997,Santafe De Antioquia,Sin Informacion,Urbano,Cafetera
+998,Santafe De Antioquia,Sin Informacion,Urbano,Cafetera
+999,Santafe De Antioquia,Sin Informacion,Urbano,Cafetera
+1000,Santa Rosa De Osos,Sin Informacion,Urbano,Cafetera
+1001,Bogota,Ciudad Bolivar,Urbano,Bogotá
+1002,Soledad,Sin Informacion,Urbano,Norte (Caribe)
+1003,Soledad,Sin Informacion,Urbano,Norte (Caribe)
+1004,Soledad,Sin Informacion,Urbano,Norte (Caribe)
+1005,Soledad,Sin Informacion,Urbano,Norte (Caribe)
+1006,Amalfi,Sin Informacion,Urbano,Cafetera
+1007,Amalfi,Sin Informacion,Urbano,Cafetera
+1008,Amalfi,Sin Informacion,Urbano,Cafetera
+1009,Floridablanca,Caldas Reposo,Urbano,Centro Oriental
+1010,Bogota,Kennedy,Urbano,Bogotá
+1011,Cali,Comuna 6,Urbano,Sur Occidental
+1012,Cali,Comuna 6,Urbano,Sur Occidental
+1013,Medellin,Castilla,Urbano,Cafetera
+1014,Barranquilla,Comuna 17,Urbano,Norte (Caribe)
+1015,Caucasia,Sin Informacion,Rural,Cafetera
+1016,Caucasia,Sin Informacion,Rural,Cafetera
+1017,Caucasia,Sin Informacion,Rural,Cafetera
+1018,Caucasia,Sin Informacion,Rural,Cafetera
+1019,Pasto,Comuna 5,Urbano,Sur Occidental
+1020,Pasto,Comuna 5,Urbano,Sur Occidental
+1021,Bucaramanga,Comuna 1 - Norte,Urbano,Centro Oriental
+1022,Bucaramanga,Comuna 1 - Norte,Urbano,Centro Oriental
+1023,Bucaramanga,Comuna 1 - Norte,Urbano,Centro Oriental
+1024,Bucaramanga,Comuna 1 - Norte,Urbano,Centro Oriental
+1025,Cali,Comuna 18,Urbano,Sur Occidental
+1026,Cali,Comuna 18,Urbano,Sur Occidental
+1027,Cali,Comuna 18,Urbano,Sur Occidental
+1028,Bucaramanga,Comuna 4 - Occidental,Urbano,Centro Oriental
+1029,Bucaramanga,Comuna 4 - Occidental,Urbano,Centro Oriental
+1030,Bucaramanga,Comuna 4 - Occidental,Urbano,Centro Oriental
+1031,Bucaramanga,Comuna 4 - Occidental,Urbano,Centro Oriental
+1032,Puerto Triunfo,Sin Informacion,Rural,Cafetera
+1033,Ibague,Comuna 5,Urbano,Centro Oriental
+1034,Cali,Comuna 17,Urbano,Sur Occidental
+1035,Cali,Comuna 17,Urbano,Sur Occidental
+1036,Cali,Comuna 17,Urbano,Sur Occidental
+1037,Cali,Comuna 17,Urbano,Sur Occidental
+1038,Bogota,Kennedy,Urbano,Bogotá
+1039,Bogota,Bosa,Urbano,Bogotá
+1040,Bogota,Bosa,Urbano,Bogotá
+1041,Bogota,Bosa,Urbano,Bogotá
+1042,Bucaramanga,Comuna 14 - Morrorrico,Urbano,Centro Oriental
+1043,Bucaramanga,Comuna 14 - Morrorrico,Urbano,Centro Oriental
+1044,Bucaramanga,Comuna 14 - Morrorrico,Urbano,Centro Oriental
+1045,Bucaramanga,Comuna 14 - Morrorrico,Urbano,Centro Oriental
+1046,Envigado,Comuna 4,Urbano,Cafetera
+1047,Envigado,Comuna 4,Urbano,Cafetera
+1048,Envigado,Comuna 4,Urbano,Cafetera
+1049,Envigado,Comuna 4,Urbano,Cafetera
+1050,Bogota,San Cristobal,Urbano,Bogotá
+1051,Bogota,San Cristobal,Urbano,Bogotá
+1052,Amalfi,Sin Informacion,Urbano,Cafetera
+1053,Amalfi,Sin Informacion,Urbano,Cafetera
+1054,Caucasia,Sin Informacion,Rural,Cafetera
+1055,Caucasia,Sin Informacion,Rural,Cafetera
+1056,Caucasia,Sin Informacion,Rural,Cafetera
+1057,Caucasia,Sin Informacion,Rural,Cafetera
+1058,Medellin,San Javier,Urbano,Cafetera
+1059,Bogota,Usme,Urbano,Bogotá
+1060,San Jeronimo,Sin Informacion,Urbano,Cafetera
+1061,Santa Marta,Comuna 7 - Gaira - Rodadero,Urbano,Norte (Caribe)
+1062,Sopetran,Sin Informacion,Urbano,Cafetera
+1063,Sopetran,Sin Informacion,Urbano,Cafetera
+1064,Sopetran,Sin Informacion,Urbano,Cafetera
+1065,Sopetran,Sin Informacion,Urbano,Cafetera
+1066,Sopetran,Sin Informacion,Urbano,Cafetera
+1067,Bogota,Usaquen,Urbano,Bogotá
+1068,Cali,Comuna 14,Urbano,Sur Occidental
+1069,Cali,Comuna 14,Urbano,Sur Occidental
+1070,Armenia,Comuna 5 El Bosque,Urbano,Cafetera
+1071,Armenia,Comuna 5 El Bosque,Urbano,Cafetera
+1072,Armenia,Comuna 5 El Bosque,Urbano,Cafetera
+1073,Floridablanca,Caldas Reposo,Urbano,Centro Oriental
+1074,Sopetran,Sin Informacion,Urbano,Cafetera
+1075,Sopetran,Sin Informacion,Urbano,Cafetera
+1076,Sopetran,Sin Informacion,Urbano,Cafetera
+1077,Amalfi,Sin Informacion,Urbano,Cafetera
+1078,Pasto,Comuna 3,Urbano,Sur Occidental
+1079,Pasto,Comuna 3,Urbano,Sur Occidental
+1080,Pasto,Comuna 3,Urbano,Sur Occidental
+1081,Pasto,Comuna 3,Urbano,Sur Occidental
+1082,Pasto,Sin Informacion,Rural,Sur Occidental
+1083,Pasto,Comuna 8,Urbano,Sur Occidental
+1084,Amalfi,Sin Informacion,Urbano,Cafetera
+1085,Amalfi,Sin Informacion,Urbano,Cafetera
+1086,Amalfi,Sin Informacion,Urbano,Cafetera
+1087,Floridablanca,Caldas Reposo,Urbano,Centro Oriental
+1088,Cali,Comuna 15,Urbano,Sur Occidental
+1089,Cali,Comuna 15,Urbano,Sur Occidental
+1090,Cali,Comuna 4,Urbano,Sur Occidental
+1091,Pereira,Sin Informacion,Rural,Cafetera
+1092,Pereira,Sin Informacion,Rural,Cafetera
+1093,Pereira,Sin Informacion,Rural,Cafetera
+1094,Pereira,Sin Informacion,Rural,Cafetera
+1095,Ibague,Comuna 8,Urbano,Centro Oriental
+1096,Ibague,Comuna 8,Urbano,Centro Oriental
+1097,Ibague,Comuna 8,Urbano,Centro Oriental
+1098,Ibague,Comuna 8,Urbano,Centro Oriental
+1099,Caucasia,Sin Informacion,Rural,Cafetera
+1100,Caucasia,Sin Informacion,Rural,Cafetera
+1101,Caucasia,Sin Informacion,Rural,Cafetera
+1102,Bogota,Puente Aranda,Urbano,Bogotá
+1103,Cali,Comuna 2,Urbano,Sur Occidental
+1104,Cali,Comuna 2,Urbano,Sur Occidental
+1105,Cartagena,Comuna 4,Urbano,Norte (Caribe)
+1106,Cali,Comuna 2,Urbano,Sur Occidental
+1107,Monteria,Sin Informacion,Urbano,Norte (Caribe)
+1108,Bogota,Engativa,Urbano,Bogotá
+1109,Caucasia,Sin Informacion,Urbano,Cafetera
+1110,Amalfi,Sin Informacion,Urbano,Cafetera
+1111,San Jeronimo,Sin Informacion,Rural,Cafetera
+1112,Sopetran,Sin Informacion,Rural,Cafetera
+1113,Villavicencio,Comuna 1,Urbano,Centro Oriental
+1114,Villavicencio,Comuna 1,Urbano,Centro Oriental
+1115,Guarne,Sin Informacion,Rural,Cafetera
+1116,Cali,Comuna 14,Urbano,Sur Occidental
+1117,Medellin,Buenos Aires,Urbano,Cafetera
+1118,Apartado,Sin Informacion,Urbano,Cafetera
+1119,Guarne,Sin Informacion,Rural,Cafetera
+1120,Bogota,Antonio Nariño,Urbano,Bogotá
+1121,Santa Rosa De Osos,Sin Informacion,Rural,Cafetera
+1122,Cartagena,Comuna 4,Urbano,Norte (Caribe)
+1123,Bogota,Ciudad Bolivar,Urbano,Bogotá
+1124,Bogota,San Cristobal,Urbano,Bogotá
+1125,Apartado,Sin Informacion,Urbano,Cafetera
+1126,Cartagena,Comuna 15,Urbano,Norte (Caribe)
+1127,Cartagena,Comuna 15,Urbano,Norte (Caribe)
+1128,Medellin,Belen,Urbano,Cafetera
+1129,Caucasia,Sin Informacion,Urbano,Cafetera
+1130,Monteria,Sin Informacion,Urbano,Norte (Caribe)
+1131,Bogota,Suba,Urbano,Bogotá
+1132,Bogota,Suba,Urbano,Bogotá
+1133,Bogota,Usaquen,Urbano,Bogotá
+1134,Bogota,Barrios Unidos,Urbano,Bogotá
+1135,Sopetran,Sin Informacion,Rural,Cafetera
+1136,Bogota,Ciudad Bolivar,Urbano,Bogotá
+1137,Bogota,Usme,Urbano,Bogotá
+1138,Bogota,Rafael Uribe,Urbano,Bogotá
+1139,Santa Rosa De Osos,Sin Informacion,Rural,Cafetera
+1140,Apartado,Sin Informacion,Urbano,Cafetera
+1141,Cali,Comuna 2,Urbano,Sur Occidental
+1142,Bogota,Bosa,Urbano,Bogotá
+1143,Bogota,Engativa,Urbano,Bogotá
+1144,Bogota,Engativa,Urbano,Bogotá
+1145,Monteria,Sin Informacion,Urbano,Norte (Caribe)
+1146,Apartado,Sin Informacion,Urbano,Cafetera
+1147,Bogota,Engativa,Urbano,Bogotá
+1148,Bogota,Bosa,Urbano,Bogotá
+1149,Bogota,Bosa,Urbano,Bogotá
+1150,Medellin,Buenos Aires,Urbano,Cafetera
+1151,Bogota,Ciudad Bolivar,Urbano,Bogotá
+1152,Cali,Comuna 2,Urbano,Sur Occidental
+1153,Armenia,Comuna 5 El Bosque,Urbano,Cafetera
+1154,Bogota,Engativa,Urbano,Bogotá
+1155,Cartagena,Comuna 7,Urbano,Norte (Caribe)
+1156,Santa Rosa De Osos,Sin Informacion,Rural,Cafetera
+1157,Bogota,Puente Aranda,Urbano,Bogotá
+1158,Caucasia,Sin Informacion,Urbano,Cafetera
+1159,Cartagena,Comuna 15,Urbano,Norte (Caribe)
+1160,Cartagena,Comuna 15,Urbano,Norte (Caribe)
+1161,Barranquilla,Comuna 2,Urbano,Norte (Caribe)
+1162,San Jeronimo,Sin Informacion,Rural,Cafetera
+1163,Monteria,Sin Informacion,Urbano,Norte (Caribe)
+1164,Santa Rosa De Osos,Sin Informacion,Rural,Cafetera
+1165,Santa Rosa De Osos,Sin Informacion,Rural,Cafetera
+1166,Santa Rosa De Osos,Sin Informacion,Rural,Cafetera
+1167,Santa Marta,Comuna 4 - Polideportivo - El Jardin,Urbano,Norte (Caribe)
+1168,Santa Marta,Comuna 4 - Polideportivo - El Jardin,Urbano,Norte (Caribe)
+1169,Santa Marta,Comuna 4 - Polideportivo - El Jardin,Urbano,Norte (Caribe)
+1170,Santa Marta,Comuna 4 - Polideportivo - El Jardin,Urbano,Norte (Caribe)
+1171,Bogota,San Cristobal,Urbano,Bogotá
+1172,Copacabana,Sin Informacion,Rural,Cafetera
+1173,Cali,Comuna 2,Urbano,Sur Occidental
+1174,Medellin,Buenos Aires,Urbano,Cafetera
+1175,Jerico,Sin Informacion,Rural,Cafetera
+1176,Apartado,Sin Informacion,Urbano,Cafetera
+1177,Cali,Comuna 2,Urbano,Sur Occidental
+1178,Bogota,Suba,Urbano,Bogotá
+1179,Bogota,Suba,Urbano,Bogotá
+1180,Villavicencio,Comuna 1,Urbano,Centro Oriental
+1181,Bogota,Bosa,Urbano,Bogotá
+1182,Bogota,Bosa,Urbano,Bogotá
+1183,Bogota,Rafael Uribe,Urbano,Bogotá
+1184,Apartado,Sin Informacion,Urbano,Cafetera
+1185,Barranquilla,Comuna 2,Urbano,Norte (Caribe)
+1186,Valledupar,Sin Informacion,Urbano,Norte (Caribe)
+1187,Valledupar,Sin Informacion,Urbano,Norte (Caribe)
+1188,Valledupar,Sin Informacion,Urbano,Norte (Caribe)
+1189,Valledupar,Sin Informacion,Urbano,Norte (Caribe)
+1190,Amalfi,Sin Informacion,Urbano,Cafetera
+1191,Amalfi,Sin Informacion,Urbano,Cafetera
+1192,Amalfi,Sin Informacion,Urbano,Cafetera
+1193,Sopetran,Sin Informacion,Rural,Cafetera
+1194,Sopetran,Sin Informacion,Rural,Cafetera
+1195,Bogota,Bosa,Urbano,Bogotá
+1196,Cali,Comuna 2,Urbano,Sur Occidental
+1197,Cali,Comuna 2,Urbano,Sur Occidental
+1198,Cali,Comuna 2,Urbano,Sur Occidental
+1199,Bogota,Kennedy,Urbano,Bogotá
+1200,Bogota,Tunjuelito,Urbano,Bogotá
+1201,Bogota,Usme,Urbano,Bogotá
+1202,Caucasia,Sin Informacion,Rural,Cafetera
+1203,Caucasia,Sin Informacion,Rural,Cafetera
+1204,Caucasia,Sin Informacion,Rural,Cafetera
+1205,Caucasia,Sin Informacion,Rural,Cafetera
+1206,Cartagena,Comuna 7,Urbano,Norte (Caribe)
+1207,Caucasia,Sin Informacion,Rural,Cafetera
+1208,Caucasia,Sin Informacion,Rural,Cafetera
+1209,Caucasia,Sin Informacion,Rural,Cafetera
+1210,Bogota,Usme,Urbano,Bogotá
+1211,Caucasia,Sin Informacion,Rural,Cafetera
+1212,Pereira,Sin Informacion,Rural,Cafetera
+1213,Pereira,Sin Informacion,Rural,Cafetera
+1214,Pereira,Sin Informacion,Rural,Cafetera
+1215,Pereira,Sin Informacion,Rural,Cafetera
+1216,Cali,Comuna 4,Urbano,Sur Occidental
+1217,Cali,Comuna 4,Urbano,Sur Occidental
+1218,Cali,Comuna 4,Urbano,Sur Occidental
+1219,Bogota,Engativa,Urbano,Bogotá
+1220,Bogota,San Cristobal,Urbano,Bogotá
+1221,Bogota,Kennedy,Urbano,Bogotá
+1222,Caucasia,Sin Informacion,Urbano,Cafetera
+1223,Copacabana,Sin Informacion,Rural,Cafetera
+1224,Guarne,Sin Informacion,Urbano,Cafetera
+1225,Monteria,Sin Informacion,Urbano,Norte (Caribe)
+1226,Medellin,La America,Urbano,Cafetera
+1227,Bogota,Engativa,Urbano,Bogotá
+1228,Bogota,Ciudad Bolivar,Urbano,Bogotá
+1229,Caucasia,Sin Informacion,Rural,Cafetera
+1230,Caucasia,Sin Informacion,Rural,Cafetera
+1231,Caucasia,Sin Informacion,Rural,Cafetera
+1232,Caucasia,Sin Informacion,Rural,Cafetera
+1233,Carepa,Sin Informacion,Rural,Cafetera
+1234,Carepa,Sin Informacion,Rural,Cafetera
+1235,Carepa,Sin Informacion,Rural,Cafetera
+1236,Carepa,Sin Informacion,Rural,Cafetera
+1237,Bogota,Ciudad Bolivar,Urbano,Bogotá
+1238,Carepa,Sin Informacion,Rural,Cafetera
+1239,Carepa,Sin Informacion,Rural,Cafetera
+1240,Carepa,Sin Informacion,Rural,Cafetera
+1241,Carepa,Sin Informacion,Rural,Cafetera
+1242,Bogota,Engativa,Urbano,Bogotá
+1243,Bogota,San Cristobal,Urbano,Bogotá
+1244,Peñol,Sin Informacion,Urbano,Cafetera
+1245,Copacabana,Sin Informacion,Rural,Cafetera
+1246,Santa Rosa De Osos,Sin Informacion,Rural,Cafetera
+1247,Bogota,Tunjuelito,Urbano,Bogotá
+1248,Santa Rosa De Osos,Sin Informacion,Rural,Cafetera
+1249,Apartado,Sin Informacion,Urbano,Cafetera
+1250,Amalfi,Sin Informacion,Urbano,Cafetera
+1251,Bogota,Suba,Urbano,Bogotá
+1252,Bogota,Suba,Urbano,Bogotá
+1253,Bogota,Suba,Urbano,Bogotá
+1254,Cali,Comuna 11,Urbano,Sur Occidental
+1255,Cali,Comuna 11,Urbano,Sur Occidental
+1256,Apartado,Sin Informacion,Urbano,Cafetera
+1257,Copacabana,Sin Informacion,Rural,Cafetera
+1258,Copacabana,Sin Informacion,Rural,Cafetera
+1259,Bogota,San Cristobal,Urbano,Bogotá
+1260,Bogota,Usaquen,Urbano,Bogotá
+1261,Bogota,Usaquen,Urbano,Bogotá
+1262,Villavicencio,Comuna 1,Urbano,Centro Oriental
+1263,Villavicencio,Comuna 1,Urbano,Centro Oriental
+1264,Ibague,Comuna 7,Urbano,Centro Oriental
+1265,Ibague,Comuna 7,Urbano,Centro Oriental
+1266,Ibague,Comuna 5,Urbano,Centro Oriental
+1267,Ibague,Comuna 5,Urbano,Centro Oriental
+1268,Cartagena,Comuna 9,Urbano,Norte (Caribe)
+1269,San Jeronimo,Sin Informacion,Rural,Cafetera
+1270,Guarne,Sin Informacion,Urbano,Cafetera
+1271,Bogota,Antonio Nariño,Urbano,Bogotá
+1272,Bogota,Bosa,Urbano,Bogotá
+1273,Barranquilla,Comuna 2,Urbano,Norte (Caribe)
+1274,Barranquilla,Comuna 2,Urbano,Norte (Caribe)
+1275,Bogota,Engativa,Urbano,Bogotá
+1276,Copacabana,Sin Informacion,Rural,Cafetera
+1277,Cali,Comuna 11,Urbano,Sur Occidental
+1278,Cali,Comuna 11,Urbano,Sur Occidental
+1279,Cali,Comuna 11,Urbano,Sur Occidental
+1280,Cali,Comuna 11,Urbano,Sur Occidental
+1281,Santafe De Antioquia,Sin Informacion,Urbano,Cafetera
+1282,Santafe De Antioquia,Sin Informacion,Urbano,Cafetera
+1283,Santafe De Antioquia,Sin Informacion,Urbano,Cafetera
+1284,Santafe De Antioquia,Sin Informacion,Urbano,Cafetera
+1285,Caucasia,Sin Informacion,Urbano,Cafetera
+1286,Caucasia,Sin Informacion,Urbano,Cafetera
+1287,Caucasia,Sin Informacion,Urbano,Cafetera
+1288,Caucasia,Sin Informacion,Urbano,Cafetera
+1289,Bogota,Suba,Urbano,Bogotá
+1290,Cali,Comuna 11,Urbano,Sur Occidental
+1291,Cali,Comuna 11,Urbano,Sur Occidental
+1292,Cali,Comuna 11,Urbano,Sur Occidental
+1293,Cali,Comuna 11,Urbano,Sur Occidental
+1294,Guarne,Sin Informacion,Urbano,Cafetera
+1295,Guarne,Sin Informacion,Urbano,Cafetera
+1296,Medellin,Villa Hermosa,Urbano,Cafetera
+1297,Medellin,Villa Hermosa,Urbano,Cafetera
+1298,Medellin,Villa Hermosa,Urbano,Cafetera
+1299,Medellin,Villa Hermosa,Urbano,Cafetera
+1300,Bogota,Bosa,Urbano,Bogotá
+1301,Bogota,Bosa,Urbano,Bogotá
+1302,Bogota,Bosa,Urbano,Bogotá
+1303,Bucaramanga,Comuna 4 - Occidental,Urbano,Centro Oriental
+1304,Bucaramanga,Comuna 4 - Occidental,Urbano,Centro Oriental
+1305,Bucaramanga,Comuna 4 - Occidental,Urbano,Centro Oriental
+1306,Bucaramanga,Comuna 4 - Occidental,Urbano,Centro Oriental
+1307,Valledupar,Sin Informacion,Urbano,Norte (Caribe)
+1308,San Jeronimo,Sin Informacion,Rural,Cafetera
+1309,Ibague,Comuna 9,Urbano,Centro Oriental
+1310,Ibague,Comuna 9,Urbano,Centro Oriental
+1311,Ibague,Comuna 9,Urbano,Centro Oriental
+1312,Ibague,Comuna 9,Urbano,Centro Oriental
+1313,San Jeronimo,Sin Informacion,Rural,Cafetera
+1314,San Jeronimo,Sin Informacion,Rural,Cafetera
+1315,San Jeronimo,Sin Informacion,Rural,Cafetera
+1316,San Jeronimo,Sin Informacion,Rural,Cafetera
+1317,Amalfi,Sin Informacion,Rural,Cafetera
+1318,Amalfi,Sin Informacion,Rural,Cafetera
+1319,Amalfi,Sin Informacion,Rural,Cafetera
+1320,Amalfi,Sin Informacion,Rural,Cafetera
+1321,Armenia,Comuna 1 Quimbaya,Urbano,Cafetera
+1322,Armenia,Comuna 1 Quimbaya,Urbano,Cafetera
+1323,Armenia,Comuna 1 Quimbaya,Urbano,Cafetera
+1324,Jerico,Sin Informacion,Rural,Cafetera
+1325,Jerico,Sin Informacion,Rural,Cafetera
+1326,Bogota,Fontibon,Urbano,Bogotá
+1327,Bucaramanga,Comuna 14 - Morrorrico,Urbano,Centro Oriental
+1328,Bucaramanga,Comuna 14 - Morrorrico,Urbano,Centro Oriental
+1329,Bucaramanga,Comuna 14 - Morrorrico,Urbano,Centro Oriental
+1330,Bucaramanga,Comuna 14 - Morrorrico,Urbano,Centro Oriental
+1331,Amalfi,Sin Informacion,Rural,Cafetera
+1332,Amalfi,Sin Informacion,Rural,Cafetera
+1333,Amalfi,Sin Informacion,Rural,Cafetera
+1334,Amalfi,Sin Informacion,Rural,Cafetera
+1335,Amalfi,Sin Informacion,Rural,Cafetera
+1336,Amalfi,Sin Informacion,Rural,Cafetera
+1337,Amalfi,Sin Informacion,Rural,Cafetera
+1338,Armenia,Comuna 1 Quimbaya,Urbano,Cafetera
+1339,Sopetran,Sin Informacion,Rural,Cafetera
+1340,Sopetran,Sin Informacion,Rural,Cafetera
+1341,Sopetran,Sin Informacion,Rural,Cafetera
+1342,Sopetran,Sin Informacion,Rural,Cafetera
+1343,Jerico,Sin Informacion,Rural,Cafetera
+1344,Cali,Comuna 14,Urbano,Sur Occidental
+1345,Cali,Comuna 14,Urbano,Sur Occidental
+1346,Cali,Comuna 4,Urbano,Sur Occidental
+1347,Cali,Comuna 18,Urbano,Sur Occidental
+1348,Cali,Comuna 19,Urbano,Sur Occidental
+1349,Cali,Comuna 19,Urbano,Sur Occidental
+1350,Bogota,Usme,Urbano,Bogotá
+1351,Urrao,Sin Informacion,Rural,Cafetera
+1352,Urrao,Sin Informacion,Rural,Cafetera
+1353,Urrao,Sin Informacion,Rural,Cafetera
+1354,Urrao,Sin Informacion,Rural,Cafetera
+1355,Copacabana,Sin Informacion,Rural,Cafetera
+1356,Abejorral,Sin Informacion,Rural,Cafetera
+1357,Abejorral,Sin Informacion,Rural,Cafetera
+1358,Abejorral,Sin Informacion,Rural,Cafetera
+1359,Abejorral,Sin Informacion,Rural,Cafetera
+1360,Abejorral,Sin Informacion,Rural,Cafetera
+1361,Cali,Comuna 6,Urbano,Sur Occidental
+1362,Cartagena,Comuna 3,Urbano,Norte (Caribe)
+1363,Villavicencio,Comuna 4,Urbano,Centro Oriental
+1364,Bogota,San Cristobal,Urbano,Bogotá
+1365,Bogota,Puente Aranda,Urbano,Bogotá
+1366,Cali,Comuna 6,Urbano,Sur Occidental
+1367,Urrao,Sin Informacion,Rural,Cafetera
+1368,Abejorral,Sin Informacion,Rural,Cafetera
+1369,Ibague,Comuna 1,Urbano,Centro Oriental
+1370,Bogota,Bosa,Urbano,Bogotá
+1371,Los Patios,Sin Informacion,Urbano,Centro Oriental
+1372,Guarne,Sin Informacion,Urbano,Cafetera
+1373,Monteria,Sin Informacion,Urbano,Norte (Caribe)
+1374,Monteria,Sin Informacion,Urbano,Norte (Caribe)
+1375,Bogota,Chapinero,Urbano,Bogotá
+1376,Cali,Comuna 18,Urbano,Sur Occidental
+1377,Bogota,Bosa,Urbano,Bogotá
+1378,Bogota,Kennedy,Urbano,Bogotá
+1379,Copacabana,Sin Informacion,Rural,Cafetera
+1380,Bogota,Rafael Uribe,Urbano,Bogotá
+1381,Jerico,Sin Informacion,Urbano,Cafetera
+1382,Cali,Comuna 10,Urbano,Sur Occidental
+1383,Villavicencio,Comuna 4,Urbano,Centro Oriental
+1384,Bogota,Barrios Unidos,Urbano,Bogotá
+1385,Bogota,Usaquen,Urbano,Bogotá
+1386,Bogota,San Cristobal,Urbano,Bogotá
+1387,Cali,Comuna 8,Urbano,Sur Occidental
+1388,Bogota,Suba,Urbano,Bogotá
+1389,Bogota,San Cristobal,Urbano,Bogotá
+1390,Abejorral,Sin Informacion,Rural,Cafetera
+1391,Caucasia,Sin Informacion,Urbano,Cafetera
+1392,Caucasia,Sin Informacion,Urbano,Cafetera
+1393,Cartagena,Comuna 3,Urbano,Norte (Caribe)
+1394,Cali,Comuna 14,Urbano,Sur Occidental
+1395,Guarne,Sin Informacion,Urbano,Cafetera
+1396,Bogota,Usaquen,Urbano,Bogotá
+1397,Cali,Comuna 6,Urbano,Sur Occidental
+1398,Santa Rosa De Osos,Sin Informacion,Rural,Cafetera
+1399,Bogota,Ciudad Bolivar,Urbano,Bogotá
+1400,Bogota,Kennedy,Urbano,Bogotá
+1401,Bogota,Fontibon,Urbano,Bogotá
+1402,Cali,Comuna 19,Urbano,Sur Occidental
+1403,Cali,Comuna 19,Urbano,Sur Occidental
+1404,Cali,Comuna 2,Urbano,Sur Occidental
+1405,Bogota,Usme,Urbano,Bogotá
+1406,Cartagena,Comuna 15,Urbano,Norte (Caribe)
+1407,Cartagena,Comuna 15,Urbano,Norte (Caribe)
+1408,Cartagena,Comuna 15,Urbano,Norte (Caribe)
+1409,Caucasia,Sin Informacion,Urbano,Cafetera
+1410,Bogota,Suba,Urbano,Bogotá
+1411,Caucasia,Sin Informacion,Urbano,Cafetera
+1412,Bogota,Rafael Uribe,Urbano,Bogotá
+1413,Bogota,San Cristobal,Urbano,Bogotá
+1414,Bogota,Bosa,Urbano,Bogotá
+1415,Bogota,Bosa,Urbano,Bogotá
+1416,Cali,Comuna 8,Urbano,Sur Occidental
+1417,Santa Rosa De Osos,Sin Informacion,Rural,Cafetera
+1418,Santa Rosa De Osos,Sin Informacion,Rural,Cafetera
+1419,Santa Rosa De Osos,Sin Informacion,Rural,Cafetera
+1420,Villavicencio,Comuna 4,Urbano,Centro Oriental
+1421,Cartagena,Comuna 3,Urbano,Norte (Caribe)
+1422,Bogota,Engativa,Urbano,Bogotá
+1423,Los Patios,Sin Informacion,Urbano,Centro Oriental
+1424,Los Patios,Sin Informacion,Urbano,Centro Oriental
+1425,Bogota,Bosa,Urbano,Bogotá
+1426,Cartagena,Comuna 15,Urbano,Norte (Caribe)
+1427,Cali,Comuna 10,Urbano,Sur Occidental
+1428,Caucasia,Sin Informacion,Urbano,Cafetera
+1429,Bogota,Barrios Unidos,Urbano,Bogotá
+1430,Bogota,Barrios Unidos,Urbano,Bogotá
+1431,Cali,Comuna 18,Urbano,Sur Occidental
+1432,Cali,Comuna 18,Urbano,Sur Occidental
+1433,Cali,Comuna 8,Urbano,Sur Occidental
+1434,Santa Marta,Comuna 3 - Pescaito,Urbano,Norte (Caribe)
+1435,Santa Marta,Comuna 3 - Pescaito,Urbano,Norte (Caribe)
+1436,Santa Marta,Comuna 3 - Pescaito,Urbano,Norte (Caribe)
+1437,Santa Marta,Comuna 3 - Pescaito,Urbano,Norte (Caribe)
+1438,Valledupar,Sin Informacion,Urbano,Norte (Caribe)
+1439,Valledupar,Sin Informacion,Urbano,Norte (Caribe)
+1440,Valledupar,Sin Informacion,Urbano,Norte (Caribe)
+1441,Valledupar,Sin Informacion,Urbano,Norte (Caribe)
+1442,Bogota,Tunjuelito,Urbano,Bogotá
+1443,Bogota,Tunjuelito,Urbano,Bogotá
+1444,Bogota,Tunjuelito,Urbano,Bogotá
+1445,Bogota,Bosa,Urbano,Bogotá
+1446,Abejorral,Sin Informacion,Rural,Cafetera
+1447,Bogota,Suba,Urbano,Bogotá
+1448,Guarne,Sin Informacion,Urbano,Cafetera
+1449,Cali,Comuna 18,Urbano,Sur Occidental
+1450,Bogota,San Cristobal,Urbano,Bogotá
+1451,Ibague,Comuna 1,Urbano,Centro Oriental
+1452,Ibague,Comuna 1,Urbano,Centro Oriental
+1453,Ibague,Comuna 1,Urbano,Centro Oriental
+1454,Caucasia,Sin Informacion,Urbano,Cafetera
+1455,Caucasia,Sin Informacion,Urbano,Cafetera
+1456,Caucasia,Sin Informacion,Urbano,Cafetera
+1457,Santa Barbara,Sin Informacion,Rural,Cafetera
+1458,Santa Barbara,Sin Informacion,Rural,Cafetera
+1459,Ciudad Bolivar,Sin Informacion,Rural,Cafetera
+1460,Villavicencio,Comuna 1,Urbano,Centro Oriental
+1461,Villavicencio,Comuna 1,Urbano,Centro Oriental
+1462,Villavicencio,Comuna 1,Urbano,Centro Oriental
+1463,Villavicencio,Comuna 1,Urbano,Centro Oriental
+1464,Bogota,Tunjuelito,Urbano,Bogotá
+1465,Bogota,Suba,Urbano,Bogotá
+1466,Jerico,Sin Informacion,Urbano,Cafetera
+1467,Bogota,Puente Aranda,Urbano,Bogotá
+1468,Villavicencio,Comuna 4,Urbano,Centro Oriental
+1469,Bogota,Barrios Unidos,Urbano,Bogotá
+1470,Bogota,Engativa,Urbano,Bogotá
+1471,Bogota,Usme,Urbano,Bogotá
+1472,Bogota,Usaquen,Urbano,Bogotá
+1473,Bogota,Bosa,Urbano,Bogotá
+1474,Bogota,Bosa,Urbano,Bogotá
+1475,Bogota,Bosa,Urbano,Bogotá
+1476,Bogota,Bosa,Urbano,Bogotá
+1477,Cartagena,Comuna 3,Urbano,Norte (Caribe)
+1478,Bogota,Suba,Urbano,Bogotá
+1479,Bogota,Suba,Urbano,Bogotá
+1480,Bogota,Suba,Urbano,Bogotá
+1481,Caucasia,Sin Informacion,Urbano,Cafetera
+1482,Medellin,La Candelaria,Urbano,Cafetera
+1483,Bogota,Kennedy,Urbano,Bogotá
+1484,Gomez Plata,Sin Informacion,Urbano,Cafetera
+1485,Monteria,Sin Informacion,Urbano,Norte (Caribe)
+1486,Bogota,San Cristobal,Urbano,Bogotá
+1487,Bogota,Los Martires,Urbano,Bogotá
+1488,Santa Rosa De Osos,Sin Informacion,Rural,Cafetera
+1489,Caucasia,Sin Informacion,Urbano,Cafetera
+1490,Guarne,Sin Informacion,Urbano,Cafetera
+1491,Chigorodo,Sin Informacion,Rural,Cafetera
+1492,Chigorodo,Sin Informacion,Rural,Cafetera
+1493,Chigorodo,Sin Informacion,Rural,Cafetera
+1494,Chigorodo,Sin Informacion,Rural,Cafetera
+1495,Caucasia,Sin Informacion,Urbano,Cafetera
+1496,Santa Rosa De Osos,Sin Informacion,Rural,Cafetera
+1497,Bogota,Puente Aranda,Urbano,Bogotá
+1498,Bogota,Chapinero,Urbano,Bogotá
+1499,Neiva,Comuna 1,Urbano,Centro Oriental
+1500,Neiva,Comuna 1,Urbano,Centro Oriental
+1501,Neiva,Comuna 1,Urbano,Centro Oriental
+1502,Neiva,Comuna 1,Urbano,Centro Oriental
+1503,Bogota,Suba,Urbano,Bogotá
+1504,Bogota,San Cristobal,Urbano,Bogotá
+1505,Bogota,Barrios Unidos,Urbano,Bogotá
+1506,Caucasia,Sin Informacion,Urbano,Cafetera
+1507,Sonson,Sin Informacion,Urbano,Cafetera
+1508,Sonson,Sin Informacion,Urbano,Cafetera
+1509,Sonson,Sin Informacion,Urbano,Cafetera
+1510,Villavicencio,Comuna 6,Urbano,Centro Oriental
+1511,Jerico,Sin Informacion,Urbano,Cafetera
+1512,Santafe De Antioquia,Sin Informacion,Urbano,Cafetera
+1513,Santafe De Antioquia,Sin Informacion,Urbano,Cafetera
+1514,Santafe De Antioquia,Sin Informacion,Urbano,Cafetera
+1515,Santafe De Antioquia,Sin Informacion,Urbano,Cafetera
+1516,Bogota,Ciudad Bolivar,Urbano,Bogotá
+1517,Bogota,Usme,Urbano,Bogotá
+1518,Villavicencio,Comuna 1,Urbano,Centro Oriental
+1519,Envigado,Comuna 8,Urbano,Cafetera
+1520,Medellin,La Candelaria,Urbano,Cafetera
+1521,Bogota,Engativa,Urbano,Bogotá
+1522,Bogota,Usaquen,Urbano,Bogotá
+1523,Caucasia,Sin Informacion,Urbano,Cafetera
+1524,Caucasia,Sin Informacion,Urbano,Cafetera
+1525,Caucasia,Sin Informacion,Urbano,Cafetera
+1526,Caucasia,Sin Informacion,Urbano,Cafetera
+1527,Gomez Plata,Sin Informacion,Urbano,Cafetera
+1528,Bogota,Suba,Urbano,Bogotá
+1529,Cucuta,Comuna 8  Occidental,Urbano,Centro Oriental
+1530,Cucuta,Comuna 8  Occidental,Urbano,Centro Oriental
+1531,Cucuta,Comuna 8  Occidental,Urbano,Centro Oriental
+1532,Cucuta,Comuna 8  Occidental,Urbano,Centro Oriental
+1533,Bogota,Suba,Urbano,Bogotá
+1534,Santa Rosa De Osos,Sin Informacion,Rural,Cafetera
+1535,Monteria,Sin Informacion,Urbano,Norte (Caribe)
+1536,Los Patios,Sin Informacion,Urbano,Centro Oriental
+1537,Los Patios,Sin Informacion,Urbano,Centro Oriental
+1538,Los Patios,Sin Informacion,Urbano,Centro Oriental
+1539,Santa Barbara,Sin Informacion,Rural,Cafetera
+1540,Santa Barbara,Sin Informacion,Rural,Cafetera
+1541,Bogota,Suba,Urbano,Bogotá
+1542,Cali,Comuna 8,Urbano,Sur Occidental
+1543,Caucasia,Sin Informacion,Urbano,Cafetera
+1544,Neiva,Comuna 1,Urbano,Centro Oriental
+1545,Neiva,Comuna 1,Urbano,Centro Oriental
+1546,Neiva,Comuna 1,Urbano,Centro Oriental
+1547,Neiva,Comuna 1,Urbano,Centro Oriental
+1548,Bogota,Suba,Urbano,Bogotá
+1549,Ciudad Bolivar,Sin Informacion,Rural,Cafetera
+1550,Abejorral,Sin Informacion,Rural,Cafetera
+1551,Abejorral,Sin Informacion,Rural,Cafetera
+1552,Jerico,Sin Informacion,Urbano,Cafetera
+1553,Santa Rosa De Osos,Sin Informacion,Rural,Cafetera
+1554,Caucasia,Sin Informacion,Urbano,Cafetera
+1555,Cartagena,Comuna 7,Urbano,Norte (Caribe)
+1556,Bogota,Suba,Urbano,Bogotá
+1557,Amalfi,Sin Informacion,Rural,Cafetera
+1558,Cali,Comuna 10,Urbano,Sur Occidental
+1559,Amalfi,Sin Informacion,Rural,Cafetera
+1560,Amalfi,Sin Informacion,Rural,Cafetera
+1561,Amalfi,Sin Informacion,Rural,Cafetera
+1562,Amalfi,Sin Informacion,Rural,Cafetera
+1563,Jardin,Sin Informacion,Urbano,Cafetera
+1564,Jardin,Sin Informacion,Urbano,Cafetera
+1565,Caucasia,Sin Informacion,Urbano,Cafetera
+1566,Bucaramanga,Comuna 13 - Oriental,Urbano,Centro Oriental
+1567,Bucaramanga,Comuna 13 - Oriental,Urbano,Centro Oriental
+1568,Cucuta,Comuna 2  Centro Oriental,Urbano,Centro Oriental
+1569,Cucuta,Comuna 2  Centro Oriental,Urbano,Centro Oriental
+1570,Cucuta,Comuna 2  Centro Oriental,Urbano,Centro Oriental
+1571,Cucuta,Comuna 2  Centro Oriental,Urbano,Centro Oriental
+1572,La Union,Sin Informacion,Urbano,Cafetera
+1573,Bogota,Usaquen,Urbano,Bogotá
+1574,Bogota,Usaquen,Urbano,Bogotá
+1575,Chigorodo,Sin Informacion,Rural,Cafetera
+1576,Chigorodo,Sin Informacion,Rural,Cafetera
+1577,Chigorodo,Sin Informacion,Rural,Cafetera
+1578,Chigorodo,Sin Informacion,Rural,Cafetera
+1579,Bogota,Fontibon,Urbano,Bogotá
+1580,Urrao,Sin Informacion,Rural,Cafetera
+1581,Gomez Plata,Sin Informacion,Urbano,Cafetera
+1582,Gomez Plata,Sin Informacion,Urbano,Cafetera
+1583,Gomez Plata,Sin Informacion,Urbano,Cafetera
+1584,Los Patios,Sin Informacion,Urbano,Centro Oriental
+1585,Los Patios,Sin Informacion,Urbano,Centro Oriental
+1586,Amalfi,Sin Informacion,Urbano,Cafetera
+1587,Amalfi,Sin Informacion,Urbano,Cafetera
+1588,Amalfi,Sin Informacion,Rural,Cafetera
+1589,Amalfi,Sin Informacion,Rural,Cafetera
+1590,Amalfi,Sin Informacion,Rural,Cafetera
+1591,Amalfi,Sin Informacion,Rural,Cafetera
+1592,Amalfi,Sin Informacion,Rural,Cafetera
+1593,Amalfi,Sin Informacion,Rural,Cafetera
+1594,Amalfi,Sin Informacion,Rural,Cafetera
+1595,Amalfi,Sin Informacion,Rural,Cafetera
+1596,Sonson,Sin Informacion,Urbano,Cafetera
+1597,Amalfi,Sin Informacion,Rural,Cafetera
+1598,Amalfi,Sin Informacion,Rural,Cafetera
+1599,Amalfi,Sin Informacion,Rural,Cafetera
+1600,Amalfi,Sin Informacion,Rural,Cafetera
+1601,Amalfi,Sin Informacion,Rural,Cafetera
+1602,Bucaramanga,Comuna 13 - Oriental,Urbano,Centro Oriental
+1603,Bucaramanga,Comuna 13 - Oriental,Urbano,Centro Oriental
+1604,Bogota,Bosa,Urbano,Bogotá
+1605,Bogota,Bosa,Urbano,Bogotá
+1606,Cali,Comuna 1,Urbano,Sur Occidental
+1607,Cali,Comuna 1,Urbano,Sur Occidental
+1608,Cali,Comuna 1,Urbano,Sur Occidental
+1609,Bogota,Usme,Urbano,Bogotá
+1610,Bogota,Usme,Urbano,Bogotá
+1611,Cali,Comuna 11,Urbano,Sur Occidental
+1612,Cali,Comuna 11,Urbano,Sur Occidental
+1613,Cali,Comuna 18,Urbano,Sur Occidental
+1614,Andes,Sin Informacion,Rural,Cafetera
+1615,Andes,Sin Informacion,Rural,Cafetera
+1616,Andes,Sin Informacion,Rural,Cafetera
+1617,Villavicencio,Comuna 4,Urbano,Centro Oriental
+1618,Monteria,Sin Informacion,Urbano,Norte (Caribe)
+1619,Barranquilla,Comuna 4,Urbano,Norte (Caribe)
+1620,Caucasia,Sin Informacion,Urbano,Cafetera
+1621,Gomez Plata,Sin Informacion,Urbano,Cafetera
+1622,Valparaiso,Sin Informacion,Rural,Cafetera
+1623,Valparaiso,Sin Informacion,Rural,Cafetera
+1624,Cucuta,Comuna 4  Oriental,Urbano,Centro Oriental
+1625,Caucasia,Sin Informacion,Urbano,Cafetera
+1626,Bogota,San Cristobal,Urbano,Bogotá
+1627,Monteria,Sin Informacion,Urbano,Norte (Caribe)
+1628,Bogota,San Cristobal,Urbano,Bogotá
+1629,Bogota,Ciudad Bolivar,Urbano,Bogotá
+1630,Villavicencio,Comuna 4,Urbano,Centro Oriental
+1631,Sonson,Sin Informacion,Urbano,Cafetera
+1632,Sonson,Sin Informacion,Urbano,Cafetera
+1633,Cali,Comuna 1,Urbano,Sur Occidental
+1634,Cucuta,Comuna 7  Noroccidental,Urbano,Centro Oriental
+1635,Bogota,San Cristobal,Urbano,Bogotá
+1636,Bogota,Los Martires,Urbano,Bogotá
+1637,Chigorodo,Sin Informacion,Urbano,Cafetera
+1638,Ciudad Bolivar,Sin Informacion,Rural,Cafetera
+1639,Gomez Plata,Sin Informacion,Urbano,Cafetera
+1640,Andes,Sin Informacion,Rural,Cafetera
+1641,Caucasia,Sin Informacion,Urbano,Cafetera
+1642,Santa Rosa De Osos,Sin Informacion,Urbano,Cafetera
+1643,Caucasia,Sin Informacion,Urbano,Cafetera
+1644,Bogota,Kennedy,Urbano,Bogotá
+1645,Bogota,Kennedy,Urbano,Bogotá
+1646,Yarumal,Sin Informacion,Rural,Cafetera
+1647,Yarumal,Sin Informacion,Rural,Cafetera
+1648,Chigorodo,Sin Informacion,Urbano,Cafetera
+1649,Villavicencio,Comuna 4,Urbano,Centro Oriental
+1650,Bogota,Engativa,Urbano,Bogotá
+1651,Bogota,Bosa,Urbano,Bogotá
+1652,Jardin,Sin Informacion,Urbano,Cafetera
+1653,Santa Rosa De Osos,Sin Informacion,Urbano,Cafetera
+1654,Bogota,Kennedy,Urbano,Bogotá
+1655,Bogota,Kennedy,Urbano,Bogotá
+1656,Caucasia,Sin Informacion,Urbano,Cafetera
+1657,Andes,Sin Informacion,Rural,Cafetera
+1658,Bogota,Suba,Urbano,Bogotá
+1659,Bogota,Fontibon,Urbano,Bogotá
+1660,Chigorodo,Sin Informacion,Urbano,Cafetera
+1661,Chigorodo,Sin Informacion,Urbano,Cafetera
+1662,Bogota,Chapinero,Urbano,Bogotá
+1663,Bogota,Kennedy,Urbano,Bogotá
+1664,Bogota,Bosa,Urbano,Bogotá
+1665,Bogota,Bosa,Urbano,Bogotá
+1666,Caucasia,Sin Informacion,Urbano,Cafetera
+1667,Bogota,Rafael Uribe,Urbano,Bogotá
+1668,Bogota,Puente Aranda,Urbano,Bogotá
+1669,Ciudad Bolivar,Sin Informacion,Rural,Cafetera
+1670,Bogota,Bosa,Urbano,Bogotá
+1671,Sonson,Sin Informacion,Urbano,Cafetera
+1672,Bogota,Engativa,Urbano,Bogotá
+1673,Bogota,Ciudad Bolivar,Urbano,Bogotá
+1674,Bogota,Bosa,Urbano,Bogotá
+1675,Bogota,Bosa,Urbano,Bogotá
+1676,Amalfi,Sin Informacion,Urbano,Cafetera
+1677,Amalfi,Sin Informacion,Urbano,Cafetera
+1678,Itagui,Comuna 2,Urbano,Cafetera
+1679,Gomez Plata,Sin Informacion,Urbano,Cafetera
+1680,Bogota,Bosa,Urbano,Bogotá
+1681,Bogota,Bosa,Urbano,Bogotá
+1682,Bogota,Kennedy,Urbano,Bogotá
+1683,Villavicencio,Comuna 4,Urbano,Centro Oriental
+1684,Santa Marta,Comuna 1 - Maria Eugenia  -Pando,Urbano,Norte (Caribe)
+1685,Santa Marta,Comuna 1 - Maria Eugenia  -Pando,Urbano,Norte (Caribe)
+1686,Santa Marta,Comuna 1 - Maria Eugenia  -Pando,Urbano,Norte (Caribe)
+1687,Santa Marta,Comuna 1 - Maria Eugenia  -Pando,Urbano,Norte (Caribe)
+1688,Caucasia,Sin Informacion,Urbano,Cafetera
+1689,Valparaiso,Sin Informacion,Rural,Cafetera
+1690,Valparaiso,Sin Informacion,Rural,Cafetera
+1691,Santa Rosa De Osos,Sin Informacion,Urbano,Cafetera
+1692,Santa Rosa De Osos,Sin Informacion,Urbano,Cafetera
+1693,Caucasia,Sin Informacion,Urbano,Cafetera
+1694,Caucasia,Sin Informacion,Urbano,Cafetera
+1695,Caucasia,Sin Informacion,Urbano,Cafetera
+1696,Andes,Sin Informacion,Rural,Cafetera
+1697,Bogota,Kennedy,Urbano,Bogotá
+1698,Santa Rosa De Osos,Sin Informacion,Urbano,Cafetera
+1699,Bogota,Bosa,Urbano,Bogotá
+1700,Bogota,San Cristobal,Urbano,Bogotá
+1701,Caucasia,Sin Informacion,Urbano,Cafetera
+1702,Caucasia,Sin Informacion,Urbano,Cafetera
+1703,Caucasia,Sin Informacion,Urbano,Cafetera
+1704,Caucasia,Sin Informacion,Urbano,Cafetera
+1705,Bogota,Usme,Urbano,Bogotá
+1706,Caucasia,Sin Informacion,Urbano,Cafetera
+1707,Caucasia,Sin Informacion,Urbano,Cafetera
+1708,Caucasia,Sin Informacion,Urbano,Cafetera
+1709,Caucasia,Sin Informacion,Urbano,Cafetera
+1710,Caucasia,Sin Informacion,Urbano,Cafetera
+1711,Bogota,Rafael Uribe,Urbano,Bogotá
+1712,Bogota,Rafael Uribe,Urbano,Bogotá
+1713,Chigorodo,Sin Informacion,Urbano,Cafetera
+1714,Chigorodo,Sin Informacion,Urbano,Cafetera
+1715,Bogota,Chapinero,Urbano,Bogotá
+1716,Bogota,Puente Aranda,Urbano,Bogotá
+1717,Caucasia,Sin Informacion,Urbano,Cafetera
+1718,Gomez Plata,Sin Informacion,Urbano,Cafetera
+1719,Bogota,Tunjuelito,Urbano,Bogotá
+1720,Bogota,Tunjuelito,Urbano,Bogotá
+1721,Bogota,San Cristobal,Urbano,Bogotá
+1722,Bogota,Kennedy,Urbano,Bogotá
+1723,Chigorodo,Sin Informacion,Urbano,Cafetera
+1724,Chigorodo,Sin Informacion,Urbano,Cafetera
+1725,Bogota,Rafael Uribe,Urbano,Bogotá
+1726,Santa Rosa De Osos,Sin Informacion,Urbano,Cafetera
+1727,Andes,Sin Informacion,Rural,Cafetera
+1728,Valledupar,Sin Informacion,Urbano,Norte (Caribe)
+1729,Valledupar,Sin Informacion,Urbano,Norte (Caribe)
+1730,Bogota,Tunjuelito,Urbano,Bogotá
+1731,Bogota,Tunjuelito,Urbano,Bogotá
+1732,Bogota,Tunjuelito,Urbano,Bogotá
+1733,Villavicencio,Comuna 6,Urbano,Centro Oriental
+1734,Bogota,Fontibon,Urbano,Bogotá
+1735,Santa Rosa De Osos,Sin Informacion,Urbano,Cafetera
+1736,Bogota,Bosa,Urbano,Bogotá
+1737,Villavicencio,Comuna 7,Urbano,Centro Oriental
+1738,Villavicencio,Comuna 7,Urbano,Centro Oriental
+1739,Villavicencio,Comuna 7,Urbano,Centro Oriental
+1740,Villavicencio,Comuna 7,Urbano,Centro Oriental
+1741,Bogota,Puente Aranda,Urbano,Bogotá
+1742,Caucasia,Sin Informacion,Urbano,Cafetera
+1743,Bogota,Ciudad Bolivar,Urbano,Bogotá
+1744,Neiva,Comuna 9,Urbano,Centro Oriental
+1745,Neiva,Comuna 9,Urbano,Centro Oriental
+1746,Neiva,Comuna 9,Urbano,Centro Oriental
+1747,Neiva,Comuna 9,Urbano,Centro Oriental
+1748,Bogota,Suba,Urbano,Bogotá
+1749,Bogota,San Cristobal,Urbano,Bogotá
+1750,Cucuta,Comuna 3  Suroriental,Urbano,Centro Oriental
+1751,Cucuta,Comuna 3  Suroriental,Urbano,Centro Oriental
+1752,Cucuta,Comuna 3  Suroriental,Urbano,Centro Oriental
+1753,Cucuta,Comuna 3  Suroriental,Urbano,Centro Oriental
+1754,Santa Rosa De Osos,Sin Informacion,Urbano,Cafetera
+1755,Bogota,Los Martires,Urbano,Bogotá
+1756,Bogota,San Cristobal,Urbano,Bogotá
+1757,Bogota,Suba,Urbano,Bogotá
+1758,Bogota,Suba,Urbano,Bogotá
+1759,Bogota,Kennedy,Urbano,Bogotá
+1760,Bogota,Engativa,Urbano,Bogotá
+1761,Amalfi,Sin Informacion,Urbano,Cafetera
+1762,Amalfi,Sin Informacion,Urbano,Cafetera
+1763,Neiva,Comuna 8,Urbano,Centro Oriental
+1764,Neiva,Comuna 8,Urbano,Centro Oriental
+1765,Neiva,Comuna 8,Urbano,Centro Oriental
+1766,Neiva,Comuna 8,Urbano,Centro Oriental
+1767,Bogota,Rafael Uribe,Urbano,Bogotá
+1768,Cucuta,Comuna 4  Oriental,Urbano,Centro Oriental
+1769,Cucuta,Comuna 4  Oriental,Urbano,Centro Oriental
+1770,Cucuta,Comuna 4  Oriental,Urbano,Centro Oriental
+1771,Cucuta,Comuna 7  Noroccidental,Urbano,Centro Oriental
+1772,Cucuta,Comuna 7  Noroccidental,Urbano,Centro Oriental
+1773,Cucuta,Comuna 7  Noroccidental,Urbano,Centro Oriental
+1774,Santa Rosa De Osos,Sin Informacion,Urbano,Cafetera
+1775,Santafe De Antioquia,Sin Informacion,Rural,Cafetera
+1776,Santafe De Antioquia,Sin Informacion,Rural,Cafetera
+1777,Santafe De Antioquia,Sin Informacion,Rural,Cafetera
+1778,Santafe De Antioquia,Sin Informacion,Rural,Cafetera
+1779,Santafe De Antioquia,Sin Informacion,Rural,Cafetera
+1780,Santafe De Antioquia,Sin Informacion,Rural,Cafetera
+1781,Itagui,Comuna 2,Urbano,Cafetera
+1782,Santa Rosa De Osos,Sin Informacion,Urbano,Cafetera
+1783,Cucuta,Comuna 6  Norte,Urbano,Centro Oriental
+1784,Cucuta,Comuna 6  Norte,Urbano,Centro Oriental
+1785,Cucuta,Comuna 6  Norte,Urbano,Centro Oriental
+1786,Cucuta,Comuna 6  Norte,Urbano,Centro Oriental
+1787,Santa Rosa De Osos,Sin Informacion,Urbano,Cafetera
+1788,Amalfi,Sin Informacion,Urbano,Cafetera
+1789,Amalfi,Sin Informacion,Rural,Cafetera
+1790,Amalfi,Sin Informacion,Rural,Cafetera
+1791,Amalfi,Sin Informacion,Rural,Cafetera
+1792,Amalfi,Sin Informacion,Urbano,Cafetera
+1793,Amalfi,Sin Informacion,Rural,Cafetera
+1794,Amalfi,Sin Informacion,Rural,Cafetera
+1795,Amalfi,Sin Informacion,Rural,Cafetera
+1796,Amalfi,Sin Informacion,Rural,Cafetera
+1797,Amalfi,Sin Informacion,Rural,Cafetera
+1798,Amalfi,Sin Informacion,Rural,Cafetera
+1799,Amalfi,Sin Informacion,Rural,Cafetera
+1800,Amalfi,Sin Informacion,Rural,Cafetera
+1801,Santa Rosa De Osos,Sin Informacion,Urbano,Cafetera
+1802,Gomez Plata,Sin Informacion,Urbano,Cafetera
+1803,Gomez Plata,Sin Informacion,Urbano,Cafetera
+1804,Gomez Plata,Sin Informacion,Urbano,Cafetera
+1805,Gomez Plata,Sin Informacion,Urbano,Cafetera
+1806,Gomez Plata,Sin Informacion,Urbano,Cafetera
+1807,Andes,Sin Informacion,Rural,Cafetera
+1808,Bogota,Bosa,Urbano,Bogotá
+1809,Villavicencio,Comuna 8,Urbano,Centro Oriental
+1810,Sincelejo,Sin Informacion,Urbano,Norte (Caribe)
+1811,Amalfi,Sin Informacion,Urbano,Cafetera
+1812,Bogota,Kennedy,Urbano,Bogotá
+1813,Villavicencio,Comuna 8,Urbano,Centro Oriental
+1814,Amalfi,Sin Informacion,Urbano,Cafetera
+1815,Bogota,San Cristobal,Urbano,Bogotá
+1816,Bogota,Ciudad Bolivar,Urbano,Bogotá
+1817,Bogota,Usme,Urbano,Bogotá
+1818,Bogota,San Cristobal,Urbano,Bogotá
+1819,Amalfi,Sin Informacion,Urbano,Cafetera
+1820,Bogota,Suba,Urbano,Bogotá
+1821,Amalfi,Sin Informacion,Urbano,Cafetera
+1822,Amalfi,Sin Informacion,Urbano,Cafetera
+1823,Bogota,Usaquen,Urbano,Bogotá
+1824,El Carmen De Viboral,Sin Informacion,Rural,Cafetera
+1825,Itagui,Comuna 2,Urbano,Cafetera
+1826,Amalfi,Sin Informacion,Urbano,Cafetera
+1827,Amalfi,Sin Informacion,Urbano,Cafetera
+1828,Sincelejo,Sin Informacion,Urbano,Norte (Caribe)
+1829,Bogota,Rafael Uribe,Urbano,Bogotá
+1830,Bogota,Rafael Uribe,Urbano,Bogotá
+1831,Bogota,Kennedy,Urbano,Bogotá
+1832,Bogota,Usaquen,Urbano,Bogotá
+1833,Cucuta,Comuna 4  Oriental,Urbano,Centro Oriental
+1834,Cucuta,Comuna 4  Oriental,Urbano,Centro Oriental
+1835,Bogota,Kennedy,Urbano,Bogotá
+1836,Bogota,Kennedy,Urbano,Bogotá
+1837,Bogota,Kennedy,Urbano,Bogotá
+1838,Sincelejo,Sin Informacion,Urbano,Norte (Caribe)
+1839,Bogota,San Cristobal,Urbano,Bogotá
+1840,Bogota,Bosa,Urbano,Bogotá
+1841,Bogota,San Cristobal,Urbano,Bogotá
+1842,Amalfi,Sin Informacion,Urbano,Cafetera
+1843,Amalfi,Sin Informacion,Urbano,Cafetera
+1844,Cucuta,Comuna 10 Cementerio,Urbano,Centro Oriental
+1845,Cucuta,Comuna 10 Cementerio,Urbano,Centro Oriental
+1846,Cucuta,Comuna 4  Oriental,Urbano,Centro Oriental
+1847,El Carmen De Viboral,Sin Informacion,Rural,Cafetera
+1848,Bogota,Ciudad Bolivar,Urbano,Bogotá
+1849,La Union,Sin Informacion,Urbano,Cafetera
+1850,Bogota,Usme,Urbano,Bogotá
+1851,Bogota,Ciudad Bolivar,Urbano,Bogotá
+1852,Sincelejo,Sin Informacion,Urbano,Norte (Caribe)
+1853,Itagui,Comuna 2,Urbano,Cafetera
+1854,Amalfi,Sin Informacion,Urbano,Cafetera
+1855,Amalfi,Sin Informacion,Urbano,Cafetera
+1856,Yarumal,Sin Informacion,Rural,Cafetera
+1857,Santa Rosa De Osos,Sin Informacion,Rural,Cafetera
+1858,Bogota,Usme,Urbano,Bogotá
+1859,Bogota,Usaquen,Urbano,Bogotá
+1860,Bogota,Usaquen,Urbano,Bogotá
+1861,Bogota,Usaquen,Urbano,Bogotá
+1862,Bogota,Usaquen,Urbano,Bogotá
+1863,Bogota,Ciudad Bolivar,Urbano,Bogotá
+1864,Bogota,Kennedy,Urbano,Bogotá
+1865,Ciudad Bolivar,Sin Informacion,Rural,Cafetera
+1866,Ciudad Bolivar,Sin Informacion,Rural,Cafetera
+1867,Ciudad Bolivar,Sin Informacion,Rural,Cafetera
+1868,Ciudad Bolivar,Sin Informacion,Rural,Cafetera
+1869,Bogota,Bosa,Urbano,Bogotá
+1870,Yarumal,Sin Informacion,Rural,Cafetera
+1871,Bogota,Usme,Urbano,Bogotá
+1872,Bogota,Ciudad Bolivar,Urbano,Bogotá
+1873,Bogota,Bosa,Urbano,Bogotá
+1874,Bogota,Engativa,Urbano,Bogotá
+1875,Amalfi,Sin Informacion,Urbano,Cafetera
+1876,Bogota,Usaquen,Urbano,Bogotá
+1877,El Carmen De Viboral,Sin Informacion,Rural,Cafetera
+1878,Amalfi,Sin Informacion,Urbano,Cafetera
+1879,Neiva,Comuna 7,Urbano,Centro Oriental
+1880,Neiva,Comuna 7,Urbano,Centro Oriental
+1881,Neiva,Comuna 7,Urbano,Centro Oriental
+1882,Neiva,Comuna 7,Urbano,Centro Oriental
+1883,Bogota,Engativa,Urbano,Bogotá
+1884,Santa Marta,Comuna 6 - Mamatoco - 11 De Noviembre,Urbano,Norte (Caribe)
+1885,Santa Marta,Comuna 6 - Mamatoco - 11 De Noviembre,Urbano,Norte (Caribe)
+1886,Santa Marta,Comuna 6 - Mamatoco - 11 De Noviembre,Urbano,Norte (Caribe)
+1887,Santa Marta,Comuna 6 - Mamatoco - 11 De Noviembre,Urbano,Norte (Caribe)
+1888,Cucuta,Comuna 4  Oriental,Urbano,Centro Oriental
+1889,Bogota,Rafael Uribe,Urbano,Bogotá
+1890,Bogota,Rafael Uribe,Urbano,Bogotá
+1891,Bogota,Rafael Uribe,Urbano,Bogotá
+1892,Santafe De Antioquia,Sin Informacion,Rural,Cafetera
+1893,Santafe De Antioquia,Sin Informacion,Rural,Cafetera
+1894,Santafe De Antioquia,Sin Informacion,Rural,Cafetera
+1895,Santafe De Antioquia,Sin Informacion,Rural,Cafetera
+1896,Bogota,Kennedy,Urbano,Bogotá
+1897,Bogota,Engativa,Urbano,Bogotá
+1898,Bogota,Kennedy,Urbano,Bogotá
+1899,Bogota,Kennedy,Urbano,Bogotá
+1900,Bogota,Kennedy,Urbano,Bogotá
+1901,Bogota,Kennedy,Urbano,Bogotá
+1902,Bogota,Puente Aranda,Urbano,Bogotá
+1903,Bogota,Suba,Urbano,Bogotá
+1904,Bogota,Suba,Urbano,Bogotá
+1905,Barranquilla,Comuna 1,Urbano,Norte (Caribe)
+1906,Barranquilla,Comuna 1,Urbano,Norte (Caribe)
+1907,Bogota,Engativa,Urbano,Bogotá
+1908,Bogota,Engativa,Urbano,Bogotá
+1909,Cucuta,Comuna 10 Cementerio,Urbano,Centro Oriental
+1910,Cucuta,Comuna 10 Cementerio,Urbano,Centro Oriental
+1911,Amalfi,Sin Informacion,Urbano,Cafetera
+1912,Amalfi,Sin Informacion,Urbano,Cafetera
+1913,Amalfi,Sin Informacion,Urbano,Cafetera
+1914,Santa Rosa De Osos,Sin Informacion,Rural,Cafetera
+1915,Santa Rosa De Osos,Sin Informacion,Rural,Cafetera
+1916,Bogota,Tunjuelito,Urbano,Bogotá
+1917,Bogota,Tunjuelito,Urbano,Bogotá
+1918,Bogota,Antonio Nariño,Urbano,Bogotá
+1919,Bogota,Antonio Nariño,Urbano,Bogotá
+1920,Bogota,Usme,Urbano,Bogotá
+1921,Yarumal,Sin Informacion,Rural,Cafetera
+1922,Yarumal,Sin Informacion,Rural,Cafetera
+1923,Yarumal,Sin Informacion,Rural,Cafetera
+1924,Amalfi,Sin Informacion,Urbano,Cafetera
+1925,Bogota,Engativa,Urbano,Bogotá
+1926,Bogota,Kennedy,Urbano,Bogotá
+1927,Bogota,Kennedy,Urbano,Bogotá
+1928,Yarumal,Sin Informacion,Rural,Cafetera
+1929,Villavicencio,Comuna 5,Urbano,Centro Oriental
+1930,Villavicencio,Comuna 4,Urbano,Centro Oriental
+1931,Villavicencio,Comuna 5,Urbano,Centro Oriental
+1932,Villavicencio,Comuna 4,Urbano,Centro Oriental
+1933,Villavicencio,Comuna 4,Urbano,Centro Oriental
+1934,Villavicencio,Comuna 4,Urbano,Centro Oriental
+1935,Bogota,Puente Aranda,Urbano,Bogotá
+1936,La Union,Sin Informacion,Urbano,Cafetera
+1937,La Union,Sin Informacion,Urbano,Cafetera
+1938,La Union,Sin Informacion,Urbano,Cafetera
+1939,Amalfi,Sin Informacion,Urbano,Cafetera
+1940,Amalfi,Sin Informacion,Urbano,Cafetera
+1941,Amalfi,Sin Informacion,Urbano,Cafetera
+1942,Amalfi,Sin Informacion,Urbano,Cafetera
+1943,Barranquilla,Comuna 1,Urbano,Norte (Caribe)
+1944,Bogota,Usaquen,Urbano,Bogotá
+1945,Bogota,Usaquen,Urbano,Bogotá
+1946,Bogota,Usaquen,Urbano,Bogotá
+1947,Cucuta,Comuna 3  Suroriental,Urbano,Centro Oriental
+1948,Bogota,Kennedy,Urbano,Bogotá
+1949,Cucuta,Comuna 8  Occidental,Urbano,Centro Oriental
+1950,Cucuta,Comuna 8  Occidental,Urbano,Centro Oriental
+1951,Cucuta,Comuna 8  Occidental,Urbano,Centro Oriental
+1952,Cucuta,Comuna 8  Occidental,Urbano,Centro Oriental
+1953,Amalfi,Sin Informacion,Urbano,Cafetera
+1954,Santa Rosa De Osos,Sin Informacion,Rural,Cafetera
+1955,Amalfi,Sin Informacion,Urbano,Cafetera
+1956,Santa Rosa De Osos,Sin Informacion,Rural,Cafetera
+1957,Santa Rosa De Osos,Sin Informacion,Rural,Cafetera
+1958,Santa Rosa De Osos,Sin Informacion,Rural,Cafetera
+1959,Santa Rosa De Osos,Sin Informacion,Rural,Cafetera
+1960,Cucuta,Comuna 10 Cementerio,Urbano,Centro Oriental
+1961,Cucuta,Comuna 3  Suroriental,Urbano,Centro Oriental
+1962,Gomez Plata,Sin Informacion,Urbano,Cafetera
+1963,Gomez Plata,Sin Informacion,Urbano,Cafetera
+1964,Bogota,Kennedy,Urbano,Bogotá
+1965,Amalfi,Sin Informacion,Urbano,Cafetera
+1966,Amalfi,Sin Informacion,Urbano,Cafetera
+1967,Amalfi,Sin Informacion,Urbano,Cafetera
+1968,Cucuta,Comuna 10 Cementerio,Urbano,Centro Oriental
+1969,La Union,Sin Informacion,Urbano,Cafetera
+1970,La Union,Sin Informacion,Urbano,Cafetera
+1971,Bogota,Usme,Urbano,Bogotá
+1972,Bogota,La Candelaria,Urbano,Bogotá
+1973,Cucuta,Comuna 9  Suroccidental,Urbano,Centro Oriental
+1974,Cucuta,Comuna 9  Suroccidental,Urbano,Centro Oriental
+1975,Cucuta,Comuna 9  Suroccidental,Urbano,Centro Oriental
+1976,Cucuta,Comuna 9  Suroccidental,Urbano,Centro Oriental
+1977,Villavicencio,Comuna 8,Urbano,Centro Oriental
+1978,Villavicencio,Comuna 8,Urbano,Centro Oriental
+1979,Villavicencio,Comuna 1,Urbano,Centro Oriental
+1980,La Union,Sin Informacion,Urbano,Cafetera
+1981,Sincelejo,Sin Informacion,Urbano,Norte (Caribe)
+1982,Villavicencio,Comuna 1,Urbano,Centro Oriental
+1983,Neiva,Comuna 6,Urbano,Centro Oriental
+1984,Cucuta,Comuna 3  Suroriental,Urbano,Centro Oriental
+1985,Sincelejo,Sin Informacion,Urbano,Norte (Caribe)
+1986,Medellin,La America,Urbano,Cafetera
+1987,El Carmen De Viboral,Sin Informacion,Rural,Cafetera
+1988,El Carmen De Viboral,Sin Informacion,Rural,Cafetera
+1989,Cucuta,Comuna 3  Suroriental,Urbano,Centro Oriental
+1990,Bogota,Bosa,Urbano,Bogotá
+1991,Bogota,Bosa,Urbano,Bogotá
+1992,Sincelejo,Sin Informacion,Urbano,Norte (Caribe)
+1993,Cucuta,Comuna 10 Cementerio,Urbano,Centro Oriental
+1994,Cucuta,Comuna 10 Cementerio,Urbano,Centro Oriental
+1995,Neiva,Comuna 6,Urbano,Centro Oriental
+1996,Barranquilla,Comuna 1,Urbano,Norte (Caribe)
+1997,El Carmen De Viboral,Sin Informacion,Rural,Cafetera
+1998,Sincelejo,Sin Informacion,Urbano,Norte (Caribe)
+1999,Santa Rosa De Osos,Sin Informacion,Urbano,Cafetera
+2000,Santa Rosa De Osos,Sin Informacion,Urbano,Cafetera
+2001,Santa Rosa De Osos,Sin Informacion,Urbano,Cafetera
+2002,Santa Rosa De Osos,Sin Informacion,Urbano,Cafetera
+2003,Bogota,Usaquen,Urbano,Bogotá
+2004,El Carmen De Viboral,Sin Informacion,Rural,Cafetera
+2005,Santa Marta,Comuna 3 - Pescaito,Urbano,Norte (Caribe)
+2006,Santa Marta,Comuna 3 - Pescaito,Urbano,Norte (Caribe)
+2007,Santa Marta,Comuna 3 - Pescaito,Urbano,Norte (Caribe)
+2008,Santa Marta,Comuna 3 - Pescaito,Urbano,Norte (Caribe)
+2009,Neiva,Comuna 6,Urbano,Centro Oriental
+2010,El Santuario,Sin Informacion,Urbano,Cafetera
+2011,El Santuario,Sin Informacion,Urbano,Cafetera
+2012,El Santuario,Sin Informacion,Urbano,Cafetera
+2013,Medellin,La America,Urbano,Cafetera
+2014,Villa Del Rosario,Sin Informacion,Urbano,Centro Oriental
+2015,Villa Del Rosario,Sin Informacion,Urbano,Centro Oriental
+2016,Villa Del Rosario,Sin Informacion,Urbano,Centro Oriental
+2017,Villa Del Rosario,Sin Informacion,Urbano,Centro Oriental
+2018,Neiva,Comuna 6,Urbano,Centro Oriental
+2019,El Santuario,Sin Informacion,Urbano,Cafetera
+2020,Medellin,La America,Urbano,Cafetera
+2021,Villa Del Rosario,Sin Informacion,Urbano,Centro Oriental
+2022,Villa Del Rosario,Sin Informacion,Urbano,Centro Oriental
+2023,Villa Del Rosario,Sin Informacion,Urbano,Centro Oriental
+2024,Villa Del Rosario,Sin Informacion,Urbano,Centro Oriental
+2025,Bogota,Bosa,Urbano,Bogotá
+2026,Bogota,Bosa,Urbano,Bogotá
+2027,Bogota,Teusaquillo,Urbano,Bogotá
+2028,Bogota,Teusaquillo,Urbano,Bogotá
+2029,Bogota,Teusaquillo,Urbano,Bogotá
+2030,Bogota,Teusaquillo,Urbano,Bogotá
+2031,Bogota,Teusaquillo,Urbano,Bogotá
+2032,Bogota,Teusaquillo,Urbano,Bogotá
+2033,Bogota,Teusaquillo,Urbano,Bogotá
+2034,Bogota,Teusaquillo,Urbano,Bogotá
+2035,Bogota,Teusaquillo,Urbano,Bogotá
+2036,Bogota,Teusaquillo,Urbano,Bogotá
+2037,Bogota,Teusaquillo,Urbano,Bogotá
+2038,Bogota,Teusaquillo,Urbano,Bogotá
+2039,Bogota,Teusaquillo,Urbano,Bogotá
+2040,Bogota,Usme,Urbano,Bogotá
+2041,Bogota,Teusaquillo,Urbano,Bogotá
+2042,Bogota,Teusaquillo,Urbano,Bogotá
+2043,Bogota,La Candelaria,Urbano,Bogotá
+2044,Bogota,Teusaquillo,Urbano,Bogotá
+2045,Bogota,Teusaquillo,Urbano,Bogotá
+2046,Bogota,Teusaquillo,Urbano,Bogotá
+2047,Bogota,Teusaquillo,Urbano,Bogotá
+2048,Bogota,Teusaquillo,Urbano,Bogotá
+2049,Bogota,Teusaquillo,Urbano,Bogotá
+2050,Bogota,Teusaquillo,Urbano,Bogotá
+2051,Bogota,Engativa,Urbano,Bogotá
+2052,Bogota,Engativa,Urbano,Bogotá
+2053,Bogota,Teusaquillo,Urbano,Bogotá
+2054,Santafe De Antioquia,Sin Informacion,Urbano,Cafetera
+2055,Bogota,La Candelaria,Urbano,Bogotá
+2056,Bogota,Kennedy,Urbano,Bogotá
+2057,Santafe De Antioquia,Sin Informacion,Urbano,Cafetera
+2058,Bogota,Santafe,Urbano,Bogotá
+2059,Bogota,Antonio Nariño,Urbano,Bogotá
+2060,Santafe De Antioquia,Sin Informacion,Urbano,Cafetera
+2061,Bogota,Suba,Urbano,Bogotá
+2062,Bogota,Puente Aranda,Urbano,Bogotá
+2063,Bogota,Engativa,Urbano,Bogotá
+2064,Bogota,Usme,Urbano,Bogotá
+2065,Bogota,Kennedy,Urbano,Bogotá
+2066,Bogota,Kennedy,Urbano,Bogotá
+2067,Bogota,Bosa,Urbano,Bogotá
+2068,Bogota,Usaquen,Urbano,Bogotá
+2069,Bogota,San Cristobal,Urbano,Bogotá
+2070,Bogota,Bosa,Urbano,Bogotá
+2071,Bogota,Bosa,Urbano,Bogotá
+2072,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2073,Bogota,Usaquen,Urbano,Bogotá
+2074,Bogota,Engativa,Urbano,Bogotá
+2075,Bogota,Antonio Nariño,Urbano,Bogotá
+2076,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2077,Bogota,Usme,Urbano,Bogotá
+2078,Bogota,San Cristobal,Urbano,Bogotá
+2079,Santafe De Antioquia,Sin Informacion,Urbano,Cafetera
+2080,Santafe De Antioquia,Sin Informacion,Urbano,Cafetera
+2081,Santafe De Antioquia,Sin Informacion,Urbano,Cafetera
+2082,Santafe De Antioquia,Sin Informacion,Urbano,Cafetera
+2083,Santafe De Antioquia,Sin Informacion,Urbano,Cafetera
+2084,Bogota,Kennedy,Urbano,Bogotá
+2085,Bogota,Bosa,Urbano,Bogotá
+2086,Santafe De Antioquia,Sin Informacion,Urbano,Cafetera
+2087,Bogota,Puente Aranda,Urbano,Bogotá
+2088,Bogota,Suba,Urbano,Bogotá
+2089,Bogota,Suba,Urbano,Bogotá
+2090,Bogota,Suba,Urbano,Bogotá
+2091,Bogota,Santafe,Urbano,Bogotá
+2092,Santafe De Antioquia,Sin Informacion,Urbano,Cafetera
+2093,Santafe De Antioquia,Sin Informacion,Urbano,Cafetera
+2094,Bogota,San Cristobal,Urbano,Bogotá
+2095,Bogota,Bosa,Urbano,Bogotá
+2096,Bogota,Antonio Nariño,Urbano,Bogotá
+2097,Bogota,Engativa,Urbano,Bogotá
+2098,Bogota,Tunjuelito,Urbano,Bogotá
+2099,Bogota,Puente Aranda,Urbano,Bogotá
+2100,Bogota,Bosa,Urbano,Bogotá
+2101,Bogota,Bosa,Urbano,Bogotá
+2102,Bogota,Kennedy,Urbano,Bogotá
+2103,Bogota,San Cristobal,Urbano,Bogotá
+2104,Bogota,Antonio Nariño,Urbano,Bogotá
+2105,Santafe De Antioquia,Sin Informacion,Urbano,Cafetera
+2106,Bogota,Kennedy,Urbano,Bogotá
+2107,Bogota,Suba,Urbano,Bogotá
+2108,Bogota,Usme,Urbano,Bogotá
+2109,Bogota,Usme,Urbano,Bogotá
+2110,Bogota,Usme,Urbano,Bogotá
+2111,Bogota,Puente Aranda,Urbano,Bogotá
+2112,Bogota,Suba,Urbano,Bogotá
+2113,Bogota,Suba,Urbano,Bogotá
+2114,Bogota,Suba,Urbano,Bogotá
+2115,Bogota,Kennedy,Urbano,Bogotá
+2116,Bogota,Engativa,Urbano,Bogotá
+2117,Bogota,Engativa,Urbano,Bogotá
+2118,Bogota,Engativa,Urbano,Bogotá
+2119,Bogota,Engativa,Urbano,Bogotá
+2120,Bogota,San Cristobal,Urbano,Bogotá
+2121,Bogota,Usaquen,Urbano,Bogotá
+2122,Bogota,Usaquen,Urbano,Bogotá
+2123,Bogota,Puente Aranda,Urbano,Bogotá
+2124,Bogota,Puente Aranda,Urbano,Bogotá
+2125,Bogota,Bosa,Urbano,Bogotá
+2126,Bogota,Engativa,Urbano,Bogotá
+2127,Floridablanca,Altamira,Urbano,Centro Oriental
+2128,Floridablanca,Altamira,Urbano,Centro Oriental
+2129,Floridablanca,Altamira,Urbano,Centro Oriental
+2130,Floridablanca,Altamira,Urbano,Centro Oriental
+2131,Bogota,San Cristobal,Urbano,Bogotá
+2132,Bogota,San Cristobal,Urbano,Bogotá
+2133,Bogota,Kennedy,Urbano,Bogotá
+2134,Valparaiso,Sin Informacion,Rural,Cafetera
+2135,Valparaiso,Sin Informacion,Rural,Cafetera
+2136,Valparaiso,Sin Informacion,Rural,Cafetera
+2137,Valparaiso,Sin Informacion,Rural,Cafetera
+2138,Jardin,Sin Informacion,Urbano,Cafetera
+2139,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2140,Bogota,Puente Aranda,Urbano,Bogotá
+2141,Bogota,Tunjuelito,Urbano,Bogotá
+2142,Bogota,Usme,Urbano,Bogotá
+2143,Bogota,Antonio Nariño,Urbano,Bogotá
+2144,Bogota,Puente Aranda,Urbano,Bogotá
+2145,Bogota,Bosa,Urbano,Bogotá
+2146,Bogota,Antonio Nariño,Urbano,Bogotá
+2147,Bogota,Engativa,Urbano,Bogotá
+2148,Bogota,Kennedy,Urbano,Bogotá
+2149,Bogota,Antonio Nariño,Urbano,Bogotá
+2150,Bogota,Chapinero,Urbano,Bogotá
+2151,Bogota,Engativa,Urbano,Bogotá
+2152,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2153,Bogota,Engativa,Urbano,Bogotá
+2154,Bogota,Usaquen,Urbano,Bogotá
+2155,Floridablanca,La Cumbre El Carmen,Urbano,Centro Oriental
+2156,Bogota,Engativa,Urbano,Bogotá
+2157,Bogota,Usme,Urbano,Bogotá
+2158,Bogota,Kennedy,Urbano,Bogotá
+2159,Bogota,Rafael Uribe,Urbano,Bogotá
+2160,Bogota,Rafael Uribe,Urbano,Bogotá
+2161,Santafe De Antioquia,Sin Informacion,Rural,Cafetera
+2162,Santafe De Antioquia,Sin Informacion,Rural,Cafetera
+2163,Bogota,Puente Aranda,Urbano,Bogotá
+2164,Bogota,Tunjuelito,Urbano,Bogotá
+2165,Bogota,Puente Aranda,Urbano,Bogotá
+2166,Floridablanca,La Cumbre El Carmen,Urbano,Centro Oriental
+2167,Bogota,San Cristobal,Urbano,Bogotá
+2168,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2169,Floridablanca,La Cumbre El Carmen,Urbano,Centro Oriental
+2170,Floridablanca,La Cumbre El Carmen,Urbano,Centro Oriental
+2171,Santafe De Antioquia,Sin Informacion,Rural,Cafetera
+2172,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2173,Bogota,Kennedy,Urbano,Bogotá
+2174,Bogota,Antonio Nariño,Urbano,Bogotá
+2175,La Paz,Sin Informacion,Urbano,Centro Oriental
+2176,La Paz,Sin Informacion,Urbano,Centro Oriental
+2177,Bogota,Puente Aranda,Urbano,Bogotá
+2178,Bucaramanga,Comuna 9 - La Pedregosa,Urbano,Centro Oriental
+2179,Bucaramanga,Comuna 9 - La Pedregosa,Urbano,Centro Oriental
+2180,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2181,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2182,Bogota,Bosa,Urbano,Bogotá
+2183,Bogota,Puente Aranda,Urbano,Bogotá
+2184,Bogota,Engativa,Urbano,Bogotá
+2185,Santafe De Antioquia,Sin Informacion,Rural,Cafetera
+2186,Bogota,Tunjuelito,Urbano,Bogotá
+2187,Santafe De Antioquia,Sin Informacion,Rural,Cafetera
+2188,Santafe De Antioquia,Sin Informacion,Rural,Cafetera
+2189,Bogota,Engativa,Urbano,Bogotá
+2190,Bogota,Usme,Urbano,Bogotá
+2191,Bogota,Usaquen,Urbano,Bogotá
+2192,Bogota,Puente Aranda,Urbano,Bogotá
+2193,Bogota,Puente Aranda,Urbano,Bogotá
+2194,Bogota,Kennedy,Urbano,Bogotá
+2195,Bogota,Engativa,Urbano,Bogotá
+2196,Giron,Sin Informacion,Urbano,Centro Oriental
+2197,Giron,Sin Informacion,Urbano,Centro Oriental
+2198,Giron,Sin Informacion,Urbano,Centro Oriental
+2199,Piedecuesta,Sin Informacion,Urbano,Centro Oriental
+2200,Piedecuesta,Sin Informacion,Urbano,Centro Oriental
+2201,Piedecuesta,Sin Informacion,Urbano,Centro Oriental
+2202,Piedecuesta,Sin Informacion,Urbano,Centro Oriental
+2203,Santafe De Antioquia,Sin Informacion,Rural,Cafetera
+2204,Santafe De Antioquia,Sin Informacion,Rural,Cafetera
+2205,Bogota,Kennedy,Urbano,Bogotá
+2206,Bogota,Puente Aranda,Urbano,Bogotá
+2207,Bogota,Tunjuelito,Urbano,Bogotá
+2208,Bogota,Tunjuelito,Urbano,Bogotá
+2209,Bogota,Tunjuelito,Urbano,Bogotá
+2210,Bogota,Usaquen,Urbano,Bogotá
+2211,Bogota,San Cristobal,Urbano,Bogotá
+2212,Bogota,San Cristobal,Urbano,Bogotá
+2213,Bogota,San Cristobal,Urbano,Bogotá
+2214,Bogota,Suba,Urbano,Bogotá
+2215,Bogota,Suba,Urbano,Bogotá
+2216,Bogota,Suba,Urbano,Bogotá
+2217,Bucaramanga,Comuna 13 - Oriental,Urbano,Centro Oriental
+2218,Bogota,Antonio Nariño,Urbano,Bogotá
+2219,Bucaramanga,Comuna 13 - Oriental,Urbano,Centro Oriental
+2220,Bogota,Chapinero,Urbano,Bogotá
+2221,Bogota,Santafe,Urbano,Bogotá
+2222,Bogota,Usaquen,Urbano,Bogotá
+2223,Bogota,Engativa,Urbano,Bogotá
+2224,Bogota,Engativa,Urbano,Bogotá
+2225,Bogota,Kennedy,Urbano,Bogotá
+2226,Bogota,Kennedy,Urbano,Bogotá
+2227,Bogota,Bosa,Urbano,Bogotá
+2228,Bogota,Tunjuelito,Urbano,Bogotá
+2229,Tunja,Sin Informacion,Urbano,Centro Oriental
+2230,Tunja,Sin Informacion,Urbano,Centro Oriental
+2231,Tunja,Sin Informacion,Urbano,Centro Oriental
+2232,Tunja,Sin Informacion,Urbano,Centro Oriental
+2233,Bogota,Tunjuelito,Urbano,Bogotá
+2234,Bogota,Tunjuelito,Urbano,Bogotá
+2235,Bogota,Puente Aranda,Urbano,Bogotá
+2236,Bogota,Puente Aranda,Urbano,Bogotá
+2237,Bogota,Usaquen,Urbano,Bogotá
+2238,Giron,Sin Informacion,Urbano,Centro Oriental
+2239,Bucaramanga,Comuna 13 - Oriental,Urbano,Centro Oriental
+2240,Bogota,Antonio Nariño,Urbano,Bogotá
+2241,Bogota,Antonio Nariño,Urbano,Bogotá
+2242,Bogota,Suba,Urbano,Bogotá
+2243,Bogota,Suba,Urbano,Bogotá
+2244,Bogota,Antonio Nariño,Urbano,Bogotá
+2245,La Paz,Sin Informacion,Urbano,Centro Oriental
+2246,Bucaramanga,Comuna 13 - Oriental,Urbano,Centro Oriental
+2247,Tunja,Sin Informacion,Urbano,Centro Oriental
+2248,Tunja,Sin Informacion,Urbano,Centro Oriental
+2249,Tunja,Sin Informacion,Urbano,Centro Oriental
+2250,Tunja,Sin Informacion,Urbano,Centro Oriental
+2251,Bucaramanga,Comuna 9 - La Pedregosa,Urbano,Centro Oriental
+2252,Bucaramanga,Comuna 9 - La Pedregosa,Urbano,Centro Oriental
+2253,Bucaramanga,Comuna 7 - Ciudadela,Urbano,Centro Oriental
+2254,Bucaramanga,Comuna 7 - Ciudadela,Urbano,Centro Oriental
+2255,Bucaramanga,Comuna 7 - Ciudadela,Urbano,Centro Oriental
+2256,Bucaramanga,Comuna 7 - Ciudadela,Urbano,Centro Oriental
+2257,Santafe De Antioquia,Sin Informacion,Rural,Cafetera
+2258,Santafe De Antioquia,Sin Informacion,Rural,Cafetera
+2259,Santafe De Antioquia,Sin Informacion,Rural,Cafetera
+2260,Bogota,Engativa,Urbano,Bogotá
+2261,Tunja,Sin Informacion,Urbano,Centro Oriental
+2262,Bogota,Tunjuelito,Urbano,Bogotá
+2263,Floridablanca,Caldas Reposo,Urbano,Centro Oriental
+2264,Bogota,Usaquen,Urbano,Bogotá
+2265,Bogota,Teusaquillo,Urbano,Bogotá
+2266,Giron,Sin Informacion,Urbano,Centro Oriental
+2267,Bogota,Engativa,Urbano,Bogotá
+2268,Bogota,Engativa,Urbano,Bogotá
+2269,Giron,Sin Informacion,Urbano,Centro Oriental
+2270,Giron,Sin Informacion,Urbano,Centro Oriental
+2271,Bogota,Usaquen,Urbano,Bogotá
+2272,Bogota,Teusaquillo,Urbano,Bogotá
+2273,Bogota,Engativa,Urbano,Bogotá
+2274,Bogota,Kennedy,Urbano,Bogotá
+2275,Bogota,Tunjuelito,Urbano,Bogotá
+2276,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2277,Bogota,San Cristobal,Urbano,Bogotá
+2278,La Paz,Sin Informacion,Urbano,Centro Oriental
+2279,La Paz,Sin Informacion,Urbano,Centro Oriental
+2280,Bogota,Antonio Nariño,Urbano,Bogotá
+2281,Bogota,Usme,Urbano,Bogotá
+2282,Bogota,Puente Aranda,Urbano,Bogotá
+2283,Giron,Sin Informacion,Urbano,Centro Oriental
+2284,Giron,Sin Informacion,Urbano,Centro Oriental
+2285,Bogota,Teusaquillo,Urbano,Bogotá
+2286,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2287,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2288,Bogota,Santafe,Urbano,Bogotá
+2289,Giron,Sin Informacion,Urbano,Centro Oriental
+2290,Bogota,Engativa,Urbano,Bogotá
+2291,Bogota,Tunjuelito,Urbano,Bogotá
+2292,Bogota,Engativa,Urbano,Bogotá
+2293,Bogota,Usme,Urbano,Bogotá
+2294,Bogota,Antonio Nariño,Urbano,Bogotá
+2295,Bogota,Puente Aranda,Urbano,Bogotá
+2296,Bogota,San Cristobal,Urbano,Bogotá
+2297,Bogota,Suba,Urbano,Bogotá
+2298,Bogota,Suba,Urbano,Bogotá
+2299,Bogota,Usaquen,Urbano,Bogotá
+2300,Bogota,Usaquen,Urbano,Bogotá
+2301,Giron,Sin Informacion,Urbano,Centro Oriental
+2302,La Paz,Sin Informacion,Urbano,Centro Oriental
+2303,Bogota,Teusaquillo,Urbano,Bogotá
+2304,Bogota,Tunjuelito,Urbano,Bogotá
+2305,Bogota,Suba,Urbano,Bogotá
+2306,Bogota,Engativa,Urbano,Bogotá
+2307,Giron,Sin Informacion,Urbano,Centro Oriental
+2308,Bogota,Usaquen,Urbano,Bogotá
+2309,Giron,Sin Informacion,Urbano,Centro Oriental
+2310,Giron,Sin Informacion,Urbano,Centro Oriental
+2311,Bogota,Usaquen,Urbano,Bogotá
+2312,Bogota,Kennedy,Urbano,Bogotá
+2313,Piedecuesta,Sin Informacion,Urbano,Centro Oriental
+2314,Piedecuesta,Sin Informacion,Urbano,Centro Oriental
+2315,Piedecuesta,Sin Informacion,Urbano,Centro Oriental
+2316,Piedecuesta,Sin Informacion,Urbano,Centro Oriental
+2317,Bogota,Engativa,Urbano,Bogotá
+2318,Bogota,Engativa,Urbano,Bogotá
+2319,Giron,Sin Informacion,Urbano,Centro Oriental
+2320,Floridablanca,La Cumbre El Carmen,Urbano,Centro Oriental
+2321,Floridablanca,La Cumbre El Carmen,Urbano,Centro Oriental
+2322,Floridablanca,La Cumbre El Carmen,Urbano,Centro Oriental
+2323,Floridablanca,La Cumbre El Carmen,Urbano,Centro Oriental
+2324,Bogota,Puente Aranda,Urbano,Bogotá
+2325,Bogota,Puente Aranda,Urbano,Bogotá
+2326,Bogota,Teusaquillo,Urbano,Bogotá
+2327,Bogota,Usme,Urbano,Bogotá
+2328,Bogota,Usme,Urbano,Bogotá
+2329,Giron,Sin Informacion,Urbano,Centro Oriental
+2330,Floridablanca,Altamira,Urbano,Centro Oriental
+2331,Floridablanca,Altamira,Urbano,Centro Oriental
+2332,Floridablanca,Altamira,Urbano,Centro Oriental
+2333,Floridablanca,Altamira,Urbano,Centro Oriental
+2334,La Paz,Sin Informacion,Urbano,Centro Oriental
+2335,Tunja,Sin Informacion,Urbano,Centro Oriental
+2336,Tunja,Sin Informacion,Urbano,Centro Oriental
+2337,Tunja,Sin Informacion,Urbano,Centro Oriental
+2338,Tunja,Sin Informacion,Urbano,Centro Oriental
+2339,Tunja,Sin Informacion,Urbano,Centro Oriental
+2340,Tunja,Sin Informacion,Urbano,Centro Oriental
+2341,Tunja,Sin Informacion,Urbano,Centro Oriental
+2342,La Paz,Sin Informacion,Urbano,Centro Oriental
+2343,Bogota,Bosa,Urbano,Bogotá
+2344,Bogota,Fontibon,Urbano,Bogotá
+2345,Bogota,Usme,Urbano,Bogotá
+2346,Bogota,Puente Aranda,Urbano,Bogotá
+2347,Bogota,Bosa,Urbano,Bogotá
+2348,Bogota,Bosa,Urbano,Bogotá
+2349,Bogota,Engativa,Urbano,Bogotá
+2350,Bogota,Bosa,Urbano,Bogotá
+2351,Bogota,Usme,Urbano,Bogotá
+2352,Bogota,Kennedy,Urbano,Bogotá
+2353,Bogota,Usme,Urbano,Bogotá
+2354,Bogota,Usme,Urbano,Bogotá
+2355,Bogota,Usme,Urbano,Bogotá
+2356,Bogota,Usme,Urbano,Bogotá
+2357,Bogota,Suba,Urbano,Bogotá
+2358,Bogota,Puente Aranda,Urbano,Bogotá
+2359,Bogota,Kennedy,Urbano,Bogotá
+2360,Bogota,Bosa,Urbano,Bogotá
+2361,Bogota,Bosa,Urbano,Bogotá
+2362,Bogota,Suba,Urbano,Bogotá
+2363,Bogota,Suba,Urbano,Bogotá
+2364,Bogota,Tunjuelito,Urbano,Bogotá
+2365,Bogota,Usaquen,Urbano,Bogotá
+2366,Bogota,Tunjuelito,Urbano,Bogotá
+2367,Bogota,Bosa,Urbano,Bogotá
+2368,Bogota,Bosa,Urbano,Bogotá
+2369,Bogota,Bosa,Urbano,Bogotá
+2370,Bogota,Suba,Urbano,Bogotá
+2371,Bogota,Teusaquillo,Urbano,Bogotá
+2372,Bogota,Teusaquillo,Urbano,Bogotá
+2373,Bogota,Teusaquillo,Urbano,Bogotá
+2374,Bogota,Suba,Urbano,Bogotá
+2375,Bogota,Tunjuelito,Urbano,Bogotá
+2376,Bogota,Teusaquillo,Urbano,Bogotá
+2377,Bogota,Teusaquillo,Urbano,Bogotá
+2378,Bogota,Teusaquillo,Urbano,Bogotá
+2379,Bogota,Teusaquillo,Urbano,Bogotá
+2380,Bogota,Teusaquillo,Urbano,Bogotá
+2381,Bogota,Teusaquillo,Urbano,Bogotá
+2382,Bogota,Teusaquillo,Urbano,Bogotá
+2383,Bogota,Teusaquillo,Urbano,Bogotá
+2384,Bogota,Teusaquillo,Urbano,Bogotá
+2385,Bogota,Teusaquillo,Urbano,Bogotá
+2386,Bogota,Teusaquillo,Urbano,Bogotá
+2387,Bogota,Teusaquillo,Urbano,Bogotá
+2388,Bogota,Teusaquillo,Urbano,Bogotá
+2389,Bogota,Teusaquillo,Urbano,Bogotá
+2390,Bogota,Teusaquillo,Urbano,Bogotá
+2391,Bogota,Teusaquillo,Urbano,Bogotá
+2392,Bogota,Teusaquillo,Urbano,Bogotá
+2393,Bogota,Teusaquillo,Urbano,Bogotá
+2394,Bogota,Teusaquillo,Urbano,Bogotá
+2395,Bogota,Teusaquillo,Urbano,Bogotá
+2396,Bogota,Teusaquillo,Urbano,Bogotá
+2397,Bogota,Teusaquillo,Urbano,Bogotá
+2398,Bogota,Teusaquillo,Urbano,Bogotá
+2399,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2400,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2401,Bogota,San Cristobal,Urbano,Bogotá
+2402,Bogota,Usme,Urbano,Bogotá
+2403,Bogota,Fontibon,Urbano,Bogotá
+2404,Bogota,Usaquen,Urbano,Bogotá
+2405,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2406,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2407,Bogota,Usme,Urbano,Bogotá
+2408,Bogota,Barrios Unidos,Urbano,Bogotá
+2409,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2410,Bogota,Usaquen,Urbano,Bogotá
+2411,Bogota,Usaquen,Urbano,Bogotá
+2412,Bogota,Fontibon,Urbano,Bogotá
+2413,Bogota,Usme,Urbano,Bogotá
+2414,Bogota,Usme,Urbano,Bogotá
+2415,Bogota,Usaquen,Urbano,Bogotá
+2416,Bogota,Tunjuelito,Urbano,Bogotá
+2417,Bogota,Tunjuelito,Urbano,Bogotá
+2418,Bogota,Usaquen,Urbano,Bogotá
+2419,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2420,Bogota,Kennedy,Urbano,Bogotá
+2421,Bogota,Kennedy,Urbano,Bogotá
+2422,Bogota,Kennedy,Urbano,Bogotá
+2423,Bogota,San Cristobal,Urbano,Bogotá
+2424,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2425,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2426,Bogota,Barrios Unidos,Urbano,Bogotá
+2427,Bogota,Usme,Urbano,Bogotá
+2428,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2429,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2430,Bogota,Tunjuelito,Urbano,Bogotá
+2431,Bogota,San Cristobal,Urbano,Bogotá
+2432,Bogota,San Cristobal,Urbano,Bogotá
+2433,Bogota,Usaquen,Urbano,Bogotá
+2434,Bogota,Usme,Urbano,Bogotá
+2435,Bogota,Teusaquillo,Urbano,Bogotá
+2436,Bogota,Fontibon,Urbano,Bogotá
+2437,Bogota,Fontibon,Urbano,Bogotá
+2438,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2439,Bogota,Teusaquillo,Urbano,Bogotá
+2440,Bogota,San Cristobal,Urbano,Bogotá
+2441,Bogota,Teusaquillo,Urbano,Bogotá
+2442,Bogota,Teusaquillo,Urbano,Bogotá
+2443,Bogota,Fontibon,Urbano,Bogotá
+2444,Bogota,Fontibon,Urbano,Bogotá
+2445,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2446,Bogota,Teusaquillo,Urbano,Bogotá
+2447,Bogota,Teusaquillo,Urbano,Bogotá
+2448,Bogota,Engativa,Urbano,Bogotá
+2449,Bogota,Teusaquillo,Urbano,Bogotá
+2450,Bogota,Teusaquillo,Urbano,Bogotá
+2451,Bogota,Teusaquillo,Urbano,Bogotá
+2452,Bogota,Teusaquillo,Urbano,Bogotá
+2453,Bogota,Teusaquillo,Urbano,Bogotá
+2454,Bogota,Antonio Nariño,Urbano,Bogotá
+2455,Bogota,San Cristobal,Urbano,Bogotá
+2456,Bogota,Teusaquillo,Urbano,Bogotá
+2457,Bogota,Barrios Unidos,Urbano,Bogotá
+2458,Bogota,Barrios Unidos,Urbano,Bogotá
+2459,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2460,Bogota,Tunjuelito,Urbano,Bogotá
+2461,Bogota,Teusaquillo,Urbano,Bogotá
+2462,Bogota,Teusaquillo,Urbano,Bogotá
+2463,Bogota,Engativa,Urbano,Bogotá
+2464,Bogota,Usme,Urbano,Bogotá
+2465,Bogota,Usme,Urbano,Bogotá
+2466,Bogota,Usme,Urbano,Bogotá
+2467,Bogota,Teusaquillo,Urbano,Bogotá
+2468,Bogota,Teusaquillo,Urbano,Bogotá
+2469,Bogota,Teusaquillo,Urbano,Bogotá
+2470,Bogota,Engativa,Urbano,Bogotá
+2471,Bogota,Teusaquillo,Urbano,Bogotá
+2472,Bogota,Teusaquillo,Urbano,Bogotá
+2473,Bogota,Teusaquillo,Urbano,Bogotá
+2474,Bogota,Teusaquillo,Urbano,Bogotá
+2475,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2476,Bogota,Teusaquillo,Urbano,Bogotá
+2477,Bogota,Antonio Nariño,Urbano,Bogotá
+2478,Bogota,Teusaquillo,Urbano,Bogotá
+2479,Bogota,Teusaquillo,Urbano,Bogotá
+2480,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2481,Bogota,Usaquen,Urbano,Bogotá
+2482,Bogota,Teusaquillo,Urbano,Bogotá
+2483,Bogota,Teusaquillo,Urbano,Bogotá
+2484,Bogota,Teusaquillo,Urbano,Bogotá
+2485,Bogota,Usme,Urbano,Bogotá
+2486,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2487,Bogota,Teusaquillo,Urbano,Bogotá
+2488,Bogota,Teusaquillo,Urbano,Bogotá
+2489,Bogota,Teusaquillo,Urbano,Bogotá
+2490,Bogota,San Cristobal,Urbano,Bogotá
+2491,Bogota,Barrios Unidos,Urbano,Bogotá
+2492,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2493,Bogota,Barrios Unidos,Urbano,Bogotá
+2494,Bogota,San Cristobal,Urbano,Bogotá
+2495,Bogota,Puente Aranda,Urbano,Bogotá
+2496,Bogota,Tunjuelito,Urbano,Bogotá
+2497,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2498,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2499,Bogota,Rafael Uribe,Urbano,Bogotá
+2500,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2501,Bogota,Usme,Urbano,Bogotá
+2502,Bogota,Rafael Uribe,Urbano,Bogotá
+2503,Bogota,Antonio Nariño,Urbano,Bogotá
+2504,Bogota,Tunjuelito,Urbano,Bogotá
+2505,Bogota,Tunjuelito,Urbano,Bogotá
+2506,Bogota,Barrios Unidos,Urbano,Bogotá
+2507,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2508,Bogota,Tunjuelito,Urbano,Bogotá
+2509,Bogota,Fontibon,Urbano,Bogotá
+2510,Bogota,Puente Aranda,Urbano,Bogotá
+2511,Bogota,San Cristobal,Urbano,Bogotá
+2512,Bogota,Usaquen,Urbano,Bogotá
+2513,Bogota,Fontibon,Urbano,Bogotá
+2514,Bogota,Tunjuelito,Urbano,Bogotá
+2515,Bogota,Suba,Urbano,Bogotá
+2516,Bogota,Suba,Urbano,Bogotá
+2517,Bogota,Barrios Unidos,Urbano,Bogotá
+2518,Bogota,Barrios Unidos,Urbano,Bogotá
+2519,Bogota,Usme,Urbano,Bogotá
+2520,Bogota,Puente Aranda,Urbano,Bogotá
+2521,Bogota,San Cristobal,Urbano,Bogotá
+2522,Bogota,Rafael Uribe,Urbano,Bogotá
+2523,Bogota,Rafael Uribe,Urbano,Bogotá
+2524,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2525,Bogota,Tunjuelito,Urbano,Bogotá
+2526,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2527,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2528,Bogota,Barrios Unidos,Urbano,Bogotá
+2529,Bogota,Rafael Uribe,Urbano,Bogotá
+2530,Bogota,Barrios Unidos,Urbano,Bogotá
+2531,Bogota,Puente Aranda,Urbano,Bogotá
+2532,Bogota,Puente Aranda,Urbano,Bogotá
+2533,Bogota,Puente Aranda,Urbano,Bogotá
+2534,Bogota,Puente Aranda,Urbano,Bogotá
+2535,Bogota,San Cristobal,Urbano,Bogotá
+2536,Bogota,Usme,Urbano,Bogotá
+2537,Bogota,Usme,Urbano,Bogotá
+2538,Bogota,Tunjuelito,Urbano,Bogotá
+2539,Bogota,Kennedy,Urbano,Bogotá
+2540,Bogota,Kennedy,Urbano,Bogotá
+2541,Bogota,Puente Aranda,Urbano,Bogotá
+2542,Bogota,Tunjuelito,Urbano,Bogotá
+2543,Bogota,Tunjuelito,Urbano,Bogotá
+2544,Bogota,Tunjuelito,Urbano,Bogotá
+2545,Bogota,Suba,Urbano,Bogotá
+2546,Bogota,Rafael Uribe,Urbano,Bogotá
+2547,Bogota,Antonio Nariño,Urbano,Bogotá
+2548,Bogota,Tunjuelito,Urbano,Bogotá
+2549,Bogota,Tunjuelito,Urbano,Bogotá
+2550,Bogota,Tunjuelito,Urbano,Bogotá
+2551,Bogota,Puente Aranda,Urbano,Bogotá
+2552,Bogota,Puente Aranda,Urbano,Bogotá
+2553,Bogota,Chapinero,Urbano,Bogotá
+2554,Bogota,Chapinero,Urbano,Bogotá
+2555,Bogota,Barrios Unidos,Urbano,Bogotá
+2556,Bogota,Rafael Uribe,Urbano,Bogotá
+2557,Bogota,Puente Aranda,Urbano,Bogotá
+2558,Bogota,Puente Aranda,Urbano,Bogotá
+2559,Bogota,Usme,Urbano,Bogotá
+2560,Bogota,Tunjuelito,Urbano,Bogotá
+2561,Bogota,Tunjuelito,Urbano,Bogotá
+2562,Bogota,Antonio Nariño,Urbano,Bogotá
+2563,Bogota,Tunjuelito,Urbano,Bogotá
+2564,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2565,Bogota,Barrios Unidos,Urbano,Bogotá
+2566,Bogota,Tunjuelito,Urbano,Bogotá
+2567,Bogota,Rafael Uribe,Urbano,Bogotá
+2568,Bogota,San Cristobal,Urbano,Bogotá
+2569,Bogota,Rafael Uribe,Urbano,Bogotá
+2570,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2571,Bogota,Tunjuelito,Urbano,Bogotá
+2572,Bogota,Tunjuelito,Urbano,Bogotá
+2573,Bogota,Puente Aranda,Urbano,Bogotá
+2574,Bogota,Puente Aranda,Urbano,Bogotá
+2575,Bogota,Puente Aranda,Urbano,Bogotá
+2576,Bogota,Puente Aranda,Urbano,Bogotá
+2577,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2578,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2579,Bogota,Rafael Uribe,Urbano,Bogotá
+2580,Bogota,Tunjuelito,Urbano,Bogotá
+2581,Bogota,Tunjuelito,Urbano,Bogotá
+2582,Bogota,Barrios Unidos,Urbano,Bogotá
+2583,Bogota,Rafael Uribe,Urbano,Bogotá
+2584,Bogota,Puente Aranda,Urbano,Bogotá
+2585,Bogota,Puente Aranda,Urbano,Bogotá
+2586,Bogota,Puente Aranda,Urbano,Bogotá
+2587,Bogota,Fontibon,Urbano,Bogotá
+2588,Bogota,Fontibon,Urbano,Bogotá
+2589,Bogota,Fontibon,Urbano,Bogotá
+2590,Bogota,Fontibon,Urbano,Bogotá
+2591,Bogota,San Cristobal,Urbano,Bogotá
+2592,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2593,Bogota,Tunjuelito,Urbano,Bogotá
+2594,Bogota,Tunjuelito,Urbano,Bogotá
+2595,Bogota,Barrios Unidos,Urbano,Bogotá
+2596,Bogota,Rafael Uribe,Urbano,Bogotá
+2597,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2598,Bogota,San Cristobal,Urbano,Bogotá
+2599,Bogota,San Cristobal,Urbano,Bogotá
+2600,Bogota,San Cristobal,Urbano,Bogotá
+2601,Bogota,San Cristobal,Urbano,Bogotá
+2602,Bogota,Engativa,Urbano,Bogotá
+2603,Bogota,Engativa,Urbano,Bogotá
+2604,Bogota,Engativa,Urbano,Bogotá
+2605,Bogota,Engativa,Urbano,Bogotá
+2606,Bogota,Tunjuelito,Urbano,Bogotá
+2607,Bogota,Chapinero,Urbano,Bogotá
+2608,Bogota,Chapinero,Urbano,Bogotá
+2609,Bogota,Chapinero,Urbano,Bogotá
+2610,Bogota,Tunjuelito,Urbano,Bogotá
+2611,Bogota,Tunjuelito,Urbano,Bogotá
+2612,Bogota,Tunjuelito,Urbano,Bogotá
+2613,Bogota,Tunjuelito,Urbano,Bogotá
+2614,Bogota,Tunjuelito,Urbano,Bogotá
+2615,Bogota,Tunjuelito,Urbano,Bogotá
+2616,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2617,Bogota,Barrios Unidos,Urbano,Bogotá
+2618,Bogota,Barrios Unidos,Urbano,Bogotá
+2619,Bogota,San Cristobal,Urbano,Bogotá
+2620,Bogota,Rafael Uribe,Urbano,Bogotá
+2621,Bogota,Puente Aranda,Urbano,Bogotá
+2622,Bogota,Puente Aranda,Urbano,Bogotá
+2623,Bogota,Barrios Unidos,Urbano,Bogotá
+2624,Bogota,Usme,Urbano,Bogotá
+2625,Bogota,Usme,Urbano,Bogotá
+2626,Bogota,Usme,Urbano,Bogotá
+2627,Bogota,Tunjuelito,Urbano,Bogotá
+2628,Bogota,Rafael Uribe,Urbano,Bogotá
+2629,Bogota,Rafael Uribe,Urbano,Bogotá
+2630,Bogota,Puente Aranda,Urbano,Bogotá
+2631,Bogota,Puente Aranda,Urbano,Bogotá
+2632,Bogota,Tunjuelito,Urbano,Bogotá
+2633,Bogota,Tunjuelito,Urbano,Bogotá
+2634,Bogota,Tunjuelito,Urbano,Bogotá
+2635,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2636,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2637,Bogota,Antonio Nariño,Urbano,Bogotá
+2638,Bogota,Puente Aranda,Urbano,Bogotá
+2639,Bogota,Puente Aranda,Urbano,Bogotá
+2640,Bogota,Puente Aranda,Urbano,Bogotá
+2641,Bogota,Puente Aranda,Urbano,Bogotá
+2642,Bogota,Puente Aranda,Urbano,Bogotá
+2643,Bogota,Suba,Urbano,Bogotá
+2644,Bogota,Suba,Urbano,Bogotá
+2645,Bogota,Suba,Urbano,Bogotá
+2646,Bogota,Kennedy,Urbano,Bogotá
+2647,Bogota,Kennedy,Urbano,Bogotá
+2648,Bogota,Santafe,Urbano,Bogotá
+2649,Bogota,Los Martires,Urbano,Bogotá
+2650,Bogota,Los Martires,Urbano,Bogotá
+2651,Bogota,Santafe,Urbano,Bogotá
+2652,Bogota,Los Martires,Urbano,Bogotá
+2653,Bogota,Los Martires,Urbano,Bogotá
+2654,Bogota,Los Martires,Urbano,Bogotá
+2655,Bogota,Los Martires,Urbano,Bogotá
+2656,Bogota,Los Martires,Urbano,Bogotá
+2657,Bogota,Santafe,Urbano,Bogotá
+2658,Bogota,Los Martires,Urbano,Bogotá
+2659,Bogota,Santafe,Urbano,Bogotá
+2660,Bogota,Santafe,Urbano,Bogotá
+2661,Bogota,Santafe,Urbano,Bogotá
+2662,Bogota,Santafe,Urbano,Bogotá
+2663,Bogota,Santafe,Urbano,Bogotá
+2664,Bogota,Los Martires,Urbano,Bogotá
+2665,Bogota,Los Martires,Urbano,Bogotá
+2666,Bogota,Los Martires,Urbano,Bogotá
+2667,Bogota,Los Martires,Urbano,Bogotá
+2668,Bogota,Santafe,Urbano,Bogotá
+2669,Bogota,Los Martires,Urbano,Bogotá
+2670,Bogota,La Candelaria,Urbano,Bogotá
+2671,Bogota,La Candelaria,Urbano,Bogotá
+2672,Bogota,Santafe,Urbano,Bogotá
+2673,Bogota,Santafe,Urbano,Bogotá
+2674,Bogota,Los Martires,Urbano,Bogotá
+2675,Bogota,Los Martires,Urbano,Bogotá
+2676,Bogota,Los Martires,Urbano,Bogotá
+2677,Bogota,Los Martires,Urbano,Bogotá
+2678,Bogota,Los Martires,Urbano,Bogotá
+2679,Bogota,Los Martires,Urbano,Bogotá
+2680,Bogota,Santafe,Urbano,Bogotá
+2681,Bogota,Santafe,Urbano,Bogotá
+2682,Bogota,Santafe,Urbano,Bogotá
+2683,Bogota,La Candelaria,Urbano,Bogotá
+2684,Bogota,Santafe,Urbano,Bogotá
+2685,Bogota,Santafe,Urbano,Bogotá
+2686,Bogota,Los Martires,Urbano,Bogotá
+2687,Bogota,Santafe,Urbano,Bogotá
+2688,Bogota,Santafe,Urbano,Bogotá
+2689,Bogota,Los Martires,Urbano,Bogotá
+2690,Bogota,Santafe,Urbano,Bogotá
+2691,Bogota,Santafe,Urbano,Bogotá
+2692,Bogota,Santafe,Urbano,Bogotá
+2693,Bogota,Santafe,Urbano,Bogotá
+2694,Bogota,Santafe,Urbano,Bogotá
+2695,Bogota,Los Martires,Urbano,Bogotá
+2696,Bogota,Los Martires,Urbano,Bogotá
+2697,Bogota,Santafe,Urbano,Bogotá
+2698,Bogota,Santafe,Urbano,Bogotá
+2699,Bogota,Santafe,Urbano,Bogotá
+2700,Bogota,Santafe,Urbano,Bogotá
+2701,Bogota,Santafe,Urbano,Bogotá
+2702,Bogota,Los Martires,Urbano,Bogotá
+2703,Bogota,Los Martires,Urbano,Bogotá
+2704,Bogota,Los Martires,Urbano,Bogotá
+2705,Bogota,Los Martires,Urbano,Bogotá
+2706,Bogota,Los Martires,Urbano,Bogotá
+2707,Bogota,Los Martires,Urbano,Bogotá
+2708,Bogota,Los Martires,Urbano,Bogotá
+2709,Bogota,Santafe,Urbano,Bogotá
+2710,Bogota,Los Martires,Urbano,Bogotá
+2711,Bogota,Los Martires,Urbano,Bogotá
+2712,Bogota,Santafe,Urbano,Bogotá
+2713,Bogota,Los Martires,Urbano,Bogotá
+2714,Bogota,Santafe,Urbano,Bogotá
+2715,Bogota,Santafe,Urbano,Bogotá
+2716,Bogota,Santafe,Urbano,Bogotá
+2717,Bogota,Santafe,Urbano,Bogotá
+2718,Bogota,Santafe,Urbano,Bogotá
+2719,Bogota,Santafe,Urbano,Bogotá
+2720,Bogota,Santafe,Urbano,Bogotá
+2721,Bogota,Los Martires,Urbano,Bogotá
+2722,Bogota,Los Martires,Urbano,Bogotá
+2723,Bogota,Santafe,Urbano,Bogotá
+2724,Bogota,Santafe,Urbano,Bogotá
+2725,Bogota,Los Martires,Urbano,Bogotá
+2726,Bogota,Santafe,Urbano,Bogotá
+2727,Bogota,Santafe,Urbano,Bogotá
+2728,Bogota,Santafe,Urbano,Bogotá
+2729,Bogota,Santafe,Urbano,Bogotá
+2730,Bogota,Los Martires,Urbano,Bogotá
+2731,Bogota,Los Martires,Urbano,Bogotá
+2732,Bogota,Los Martires,Urbano,Bogotá
+2733,Bogota,Santafe,Urbano,Bogotá
+2734,Bogota,Tunjuelito,Urbano,Bogotá
+2735,Bogota,Tunjuelito,Urbano,Bogotá
+2736,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2737,Bogota,Rafael Uribe,Urbano,Bogotá
+2738,Bogota,Santafe,Urbano,Bogotá
+2739,Bogota,Antonio Nariño,Urbano,Bogotá
+2740,Bogota,Los Martires,Urbano,Bogotá
+2741,Bogota,Antonio Nariño,Urbano,Bogotá
+2742,Bogota,Usme,Urbano,Bogotá
+2743,Bogota,Tunjuelito,Urbano,Bogotá
+2744,Bogota,Los Martires,Urbano,Bogotá
+2745,Bogota,Los Martires,Urbano,Bogotá
+2746,Bogota,Fontibon,Urbano,Bogotá
+2747,Bogota,Fontibon,Urbano,Bogotá
+2748,Bogota,Engativa,Urbano,Bogotá
+2749,Bogota,Engativa,Urbano,Bogotá
+2750,Bogota,Usme,Urbano,Bogotá
+2751,Bogota,San Cristobal,Urbano,Bogotá
+2752,Bogota,La Candelaria,Urbano,Bogotá
+2753,Bogota,La Candelaria,Urbano,Bogotá
+2754,Bogota,La Candelaria,Urbano,Bogotá
+2755,Bogota,Santafe,Urbano,Bogotá
+2756,Bogota,Los Martires,Urbano,Bogotá
+2757,Bogota,Santafe,Urbano,Bogotá
+2758,Bogota,San Cristobal,Urbano,Bogotá
+2759,Bogota,Kennedy,Urbano,Bogotá
+2760,Bogota,Barrios Unidos,Urbano,Bogotá
+2761,Bogota,Antonio Nariño,Urbano,Bogotá
+2762,Bogota,Usaquen,Urbano,Bogotá
+2763,Bogota,Barrios Unidos,Urbano,Bogotá
+2764,Bogota,Fontibon,Urbano,Bogotá
+2765,Bogota,Fontibon,Urbano,Bogotá
+2766,Bogota,Fontibon,Urbano,Bogotá
+2767,Bogota,Fontibon,Urbano,Bogotá
+2768,Bogota,Fontibon,Urbano,Bogotá
+2769,Bogota,Fontibon,Urbano,Bogotá
+2770,Bogota,Rafael Uribe,Urbano,Bogotá
+2771,Bogota,Usme,Urbano,Bogotá
+2772,Bogota,Santafe,Urbano,Bogotá
+2773,Bogota,Fontibon,Urbano,Bogotá
+2774,Bogota,Fontibon,Urbano,Bogotá
+2775,Bogota,San Cristobal,Urbano,Bogotá
+2776,Bogota,Fontibon,Urbano,Bogotá
+2777,Bogota,Rafael Uribe,Urbano,Bogotá
+2778,Bogota,Fontibon,Urbano,Bogotá
+2779,Bogota,Usaquen,Urbano,Bogotá
+2780,Bogota,Fontibon,Urbano,Bogotá
+2781,Bogota,Tunjuelito,Urbano,Bogotá
+2782,Bogota,Tunjuelito,Urbano,Bogotá
+2783,Bogota,Tunjuelito,Urbano,Bogotá
+2784,Bogota,Barrios Unidos,Urbano,Bogotá
+2785,Bogota,Kennedy,Urbano,Bogotá
+2786,Bogota,Puente Aranda,Urbano,Bogotá
+2787,Bogota,Puente Aranda,Urbano,Bogotá
+2788,Bogota,Puente Aranda,Urbano,Bogotá
+2789,Bogota,Los Martires,Urbano,Bogotá
+2790,Bogota,Los Martires,Urbano,Bogotá
+2791,Bogota,Chapinero,Urbano,Bogotá
+2792,Bogota,Chapinero,Urbano,Bogotá
+2793,Bogota,Chapinero,Urbano,Bogotá
+2794,Bogota,Chapinero,Urbano,Bogotá
+2795,Bogota,Los Martires,Urbano,Bogotá
+2796,Bogota,Tunjuelito,Urbano,Bogotá
+2797,Bogota,Usaquen,Urbano,Bogotá
+2798,Bogota,Antonio Nariño,Urbano,Bogotá
+2799,Bogota,La Candelaria,Urbano,Bogotá
+2800,Bogota,La Candelaria,Urbano,Bogotá
+2801,Bogota,Engativa,Urbano,Bogotá
+2802,Bogota,Engativa,Urbano,Bogotá
+2803,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2804,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2805,Bogota,Fontibon,Urbano,Bogotá
+2806,Bogota,Usme,Urbano,Bogotá
+2807,Bogota,Fontibon,Urbano,Bogotá
+2808,Bogota,San Cristobal,Urbano,Bogotá
+2809,Bogota,Los Martires,Urbano,Bogotá
+2810,Bogota,Barrios Unidos,Urbano,Bogotá
+2811,Bogota,La Candelaria,Urbano,Bogotá
+2812,Bogota,Antonio Nariño,Urbano,Bogotá
+2813,Bogota,Rafael Uribe,Urbano,Bogotá
+2814,Bogota,Rafael Uribe,Urbano,Bogotá
+2815,Bogota,Kennedy,Urbano,Bogotá
+2816,Bogota,Kennedy,Urbano,Bogotá
+2817,Bogota,Kennedy,Urbano,Bogotá
+2818,Bogota,Rafael Uribe,Urbano,Bogotá
+2819,Bogota,Tunjuelito,Urbano,Bogotá
+2820,Bogota,Tunjuelito,Urbano,Bogotá
+2821,Bogota,Tunjuelito,Urbano,Bogotá
+2822,Bogota,Antonio Nariño,Urbano,Bogotá
+2823,Bogota,Tunjuelito,Urbano,Bogotá
+2824,Bogota,Chapinero,Urbano,Bogotá
+2825,Bogota,Antonio Nariño,Urbano,Bogotá
+2826,Bogota,Usme,Urbano,Bogotá
+2827,Bogota,Fontibon,Urbano,Bogotá
+2828,Bogota,Los Martires,Urbano,Bogotá
+2829,Bogota,Engativa,Urbano,Bogotá
+2830,Bogota,Antonio Nariño,Urbano,Bogotá
+2831,Bogota,Kennedy,Urbano,Bogotá
+2832,Bogota,Usme,Urbano,Bogotá
+2833,Bogota,Los Martires,Urbano,Bogotá
+2834,Bogota,La Candelaria,Urbano,Bogotá
+2835,Bogota,La Candelaria,Urbano,Bogotá
+2836,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2837,Bogota,Rafael Uribe,Urbano,Bogotá
+2838,Bogota,Chapinero,Urbano,Bogotá
+2839,Bogota,Antonio Nariño,Urbano,Bogotá
+2840,Bogota,Barrios Unidos,Urbano,Bogotá
+2841,Bogota,San Cristobal,Urbano,Bogotá
+2842,Bogota,Los Martires,Urbano,Bogotá
+2843,Bogota,La Candelaria,Urbano,Bogotá
+2844,Bogota,Los Martires,Urbano,Bogotá
+2845,Bogota,Kennedy,Urbano,Bogotá
+2846,Bogota,Barrios Unidos,Urbano,Bogotá
+2847,Bogota,Fontibon,Urbano,Bogotá
+2848,Bogota,Fontibon,Urbano,Bogotá
+2849,Bogota,Fontibon,Urbano,Bogotá
+2850,Bogota,Fontibon,Urbano,Bogotá
+2851,Bogota,San Cristobal,Urbano,Bogotá
+2852,Bogota,Puente Aranda,Urbano,Bogotá
+2853,Bogota,Puente Aranda,Urbano,Bogotá
+2854,Bogota,Rafael Uribe,Urbano,Bogotá
+2855,Bogota,Fontibon,Urbano,Bogotá
+2856,Bogota,Antonio Nariño,Urbano,Bogotá
+2857,Bogota,Kennedy,Urbano,Bogotá
+2858,Bogota,Tunjuelito,Urbano,Bogotá
+2859,Bogota,Fontibon,Urbano,Bogotá
+2860,Bogota,Fontibon,Urbano,Bogotá
+2861,Bogota,Antonio Nariño,Urbano,Bogotá
+2862,Bogota,Chapinero,Urbano,Bogotá
+2863,Bogota,Antonio Nariño,Urbano,Bogotá
+2864,Bogota,Antonio Nariño,Urbano,Bogotá
+2865,Bogota,Puente Aranda,Urbano,Bogotá
+2866,Bogota,Fontibon,Urbano,Bogotá
+2867,Bogota,Los Martires,Urbano,Bogotá
+2868,Bogota,Tunjuelito,Urbano,Bogotá
+2869,Bogota,Tunjuelito,Urbano,Bogotá
+2870,Bogota,Tunjuelito,Urbano,Bogotá
+2871,Bogota,Usme,Urbano,Bogotá
+2872,Bogota,Usme,Urbano,Bogotá
+2873,Bogota,La Candelaria,Urbano,Bogotá
+2874,Bogota,La Candelaria,Urbano,Bogotá
+2875,Bogota,Rafael Uribe,Urbano,Bogotá
+2876,Bogota,San Cristobal,Urbano,Bogotá
+2877,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2878,Bogota,Barrios Unidos,Urbano,Bogotá
+2879,Bogota,Los Martires,Urbano,Bogotá
+2880,Bogota,Engativa,Urbano,Bogotá
+2881,Bogota,Engativa,Urbano,Bogotá
+2882,Bogota,Engativa,Urbano,Bogotá
+2883,Bogota,Los Martires,Urbano,Bogotá
+2884,Bogota,Los Martires,Urbano,Bogotá
+2885,Bogota,Kennedy,Urbano,Bogotá
+2886,Bogota,Chapinero,Urbano,Bogotá
+2887,Bogota,Chapinero,Urbano,Bogotá
+2888,Bogota,Chapinero,Urbano,Bogotá
+2889,Bogota,Chapinero,Urbano,Bogotá
+2890,Bogota,Fontibon,Urbano,Bogotá
+2891,Bogota,La Candelaria,Urbano,Bogotá
+2892,Bogota,La Candelaria,Urbano,Bogotá
+2893,Bogota,Barrios Unidos,Urbano,Bogotá
+2894,Bogota,La Candelaria,Urbano,Bogotá
+2895,Bogota,Santafe,Urbano,Bogotá
+2896,Bogota,Santafe,Urbano,Bogotá
+2897,Bogota,Santafe,Urbano,Bogotá
+2898,Bogota,Santafe,Urbano,Bogotá
+2899,Bogota,Tunjuelito,Urbano,Bogotá
+2900,Bogota,Rafael Uribe,Urbano,Bogotá
+2901,Bogota,Rafael Uribe,Urbano,Bogotá
+2902,Bogota,Antonio Nariño,Urbano,Bogotá
+2903,Bogota,San Cristobal,Urbano,Bogotá
+2904,Bogota,Fontibon,Urbano,Bogotá
+2905,Bogota,Rafael Uribe,Urbano,Bogotá
+2906,Bogota,Antonio Nariño,Urbano,Bogotá
+2907,Bogota,Fontibon,Urbano,Bogotá
+2908,Bogota,Los Martires,Urbano,Bogotá
+2909,Bogota,Engativa,Urbano,Bogotá
+2910,Bogota,Usme,Urbano,Bogotá
+2911,Bogota,Usme,Urbano,Bogotá
+2912,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2913,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2914,Bogota,Chapinero,Urbano,Bogotá
+2915,Bogota,Rafael Uribe,Urbano,Bogotá
+2916,Bogota,Antonio Nariño,Urbano,Bogotá
+2917,Bogota,Fontibon,Urbano,Bogotá
+2918,Bogota,Fontibon,Urbano,Bogotá
+2919,Bogota,Santafe,Urbano,Bogotá
+2920,Bogota,Fontibon,Urbano,Bogotá
+2921,Bogota,Antonio Nariño,Urbano,Bogotá
+2922,Bogota,Suba,Urbano,Bogotá
+2923,Bogota,Suba,Urbano,Bogotá
+2924,Bogota,Santafe,Urbano,Bogotá
+2925,Bogota,Antonio Nariño,Urbano,Bogotá
+2926,Bogota,Engativa,Urbano,Bogotá
+2927,Bogota,Chapinero,Urbano,Bogotá
+2928,Bogota,Kennedy,Urbano,Bogotá
+2929,Bogota,Tunjuelito,Urbano,Bogotá
+2930,Bogota,Tunjuelito,Urbano,Bogotá
+2931,Bogota,Rafael Uribe,Urbano,Bogotá
+2932,Bogota,Puente Aranda,Urbano,Bogotá
+2933,Bogota,Chapinero,Urbano,Bogotá
+2934,Bogota,Chapinero,Urbano,Bogotá
+2935,Bogota,La Candelaria,Urbano,Bogotá
+2936,Bogota,La Candelaria,Urbano,Bogotá
+2937,Bogota,La Candelaria,Urbano,Bogotá
+2938,Bogota,Barrios Unidos,Urbano,Bogotá
+2939,Bogota,Antonio Nariño,Urbano,Bogotá
+2940,Bogota,Antonio Nariño,Urbano,Bogotá
+2941,Bogota,Antonio Nariño,Urbano,Bogotá
+2942,Bogota,Usaquen,Urbano,Bogotá
+2943,Bogota,La Candelaria,Urbano,Bogotá
+2944,Bogota,La Candelaria,Urbano,Bogotá
+2945,Bogota,Los Martires,Urbano,Bogotá
+2946,Bogota,Santafe,Urbano,Bogotá
+2947,Bogota,Los Martires,Urbano,Bogotá
+2948,Bogota,Fontibon,Urbano,Bogotá
+2949,Bogota,La Candelaria,Urbano,Bogotá
+2950,Bogota,Usme,Urbano,Bogotá
+2951,Bogota,Usme,Urbano,Bogotá
+2952,Bogota,Tunjuelito,Urbano,Bogotá
+2953,Bogota,Usaquen,Urbano,Bogotá
+2954,Bogota,Barrios Unidos,Urbano,Bogotá
+2955,Bogota,Barrios Unidos,Urbano,Bogotá
+2956,Bogota,Barrios Unidos,Urbano,Bogotá
+2957,Bogota,Santafe,Urbano,Bogotá
+2958,Bogota,La Candelaria,Urbano,Bogotá
+2959,Bogota,Antonio Nariño,Urbano,Bogotá
+2960,Bogota,Antonio Nariño,Urbano,Bogotá
+2961,Bogota,Antonio Nariño,Urbano,Bogotá
+2962,Bogota,La Candelaria,Urbano,Bogotá
+2963,Bogota,Fontibon,Urbano,Bogotá
+2964,Bogota,Fontibon,Urbano,Bogotá
+2965,Bogota,Fontibon,Urbano,Bogotá
+2966,Bogota,Engativa,Urbano,Bogotá
+2967,Bogota,Santafe,Urbano,Bogotá
+2968,Bogota,Barrios Unidos,Urbano,Bogotá
+2969,Bogota,Chapinero,Urbano,Bogotá
+2970,Bogota,Chapinero,Urbano,Bogotá
+2971,Bogota,Fontibon,Urbano,Bogotá
+2972,Bogota,Puente Aranda,Urbano,Bogotá
+2973,Bogota,Fontibon,Urbano,Bogotá
+2974,Bogota,Fontibon,Urbano,Bogotá
+2975,Bogota,Chapinero,Urbano,Bogotá
+2976,Bogota,Suba,Urbano,Bogotá
+2977,Bogota,Antonio Nariño,Urbano,Bogotá
+2978,Bogota,Los Martires,Urbano,Bogotá
+2979,Bogota,Los Martires,Urbano,Bogotá
+2980,Bogota,Kennedy,Urbano,Bogotá
+2981,Bogota,Ciudad Bolivar,Urbano,Bogotá
+2982,Bogota,Barrios Unidos,Urbano,Bogotá
+2983,Bogota,Rafael Uribe,Urbano,Bogotá
+2984,Bogota,Rafael Uribe,Urbano,Bogotá
+2985,Bogota,La Candelaria,Urbano,Bogotá
+2986,Bogota,Usme,Urbano,Bogotá
+2987,Bogota,Usme,Urbano,Bogotá
+2988,Bogota,Usme,Urbano,Bogotá
+2989,Bogota,Usme,Urbano,Bogotá
+2990,Bogota,Chapinero,Urbano,Bogotá
+2991,Bogota,La Candelaria,Urbano,Bogotá
+2992,Bogota,Los Martires,Urbano,Bogotá
+2993,Bogota,Fontibon,Urbano,Bogotá
+2994,Bogota,Chapinero,Urbano,Bogotá
+2995,Bogota,Chapinero,Urbano,Bogotá
+2996,Bogota,La Candelaria,Urbano,Bogotá
+2997,Bogota,Antonio Nariño,Urbano,Bogotá
+2998,Bogota,La Candelaria,Urbano,Bogotá
+2999,Bogota,Suba,Urbano,Bogotá
+3000,Bogota,Suba,Urbano,Bogotá
+3001,Bogota,Puente Aranda,Urbano,Bogotá
+3002,Bogota,La Candelaria,Urbano,Bogotá
+3003,Bogota,Antonio Nariño,Urbano,Bogotá
+3004,Bogota,Fontibon,Urbano,Bogotá
+3005,Bogota,La Candelaria,Urbano,Bogotá
+3006,Bogota,Barrios Unidos,Urbano,Bogotá
+3007,Bogota,Teusaquillo,Urbano,Bogotá
+3008,Bogota,Teusaquillo,Urbano,Bogotá
+3009,Bogota,Kennedy,Urbano,Bogotá
+3010,Bogota,Antonio Nariño,Urbano,Bogotá
+3011,Bogota,Santafe,Urbano,Bogotá
+3012,Bogota,Fontibon,Urbano,Bogotá
+3013,Bogota,Fontibon,Urbano,Bogotá
+3014,Bogota,Suba,Urbano,Bogotá
+3015,Bogota,Los Martires,Urbano,Bogotá
+3016,Bogota,Barrios Unidos,Urbano,Bogotá
+3017,Bogota,Antonio Nariño,Urbano,Bogotá
+3018,Bogota,Fontibon,Urbano,Bogotá
+3019,Bogota,Los Martires,Urbano,Bogotá
+3020,Bogota,Santafe,Urbano,Bogotá
+3021,Bogota,La Candelaria,Urbano,Bogotá
+3022,Bogota,La Candelaria,Urbano,Bogotá
+3023,Bogota,Antonio Nariño,Urbano,Bogotá
+3024,Bogota,Puente Aranda,Urbano,Bogotá
+3025,Bogota,Fontibon,Urbano,Bogotá
+3026,Bogota,La Candelaria,Urbano,Bogotá
+3027,Bogota,La Candelaria,Urbano,Bogotá
+3028,Bogota,Teusaquillo,Urbano,Bogotá
+3029,Bogota,Teusaquillo,Urbano,Bogotá
+3030,Bogota,Puente Aranda,Urbano,Bogotá
+3031,Bogota,La Candelaria,Urbano,Bogotá
+3032,Bogota,La Candelaria,Urbano,Bogotá
+3033,Bogota,La Candelaria,Urbano,Bogotá
+3034,Bogota,La Candelaria,Urbano,Bogotá
+3035,Bogota,Fontibon,Urbano,Bogotá
+3036,Bogota,Fontibon,Urbano,Bogotá
+3037,Bogota,Barrios Unidos,Urbano,Bogotá
+3038,Bogota,Barrios Unidos,Urbano,Bogotá
+3039,Bogota,Rafael Uribe,Urbano,Bogotá
+3040,Fomeque,Sin Informacion,Rural,Centro Oriental
+3041,Fomeque,Sin Informacion,Rural,Centro Oriental
+3042,Bogota,La Candelaria,Urbano,Bogotá
+3043,Bogota,La Candelaria,Urbano,Bogotá
+3044,Bogota,Kennedy,Urbano,Bogotá
+3045,Bogota,Santafe,Urbano,Bogotá
+3046,Bogota,Barrios Unidos,Urbano,Bogotá
+3047,Bogota,Barrios Unidos,Urbano,Bogotá
+3048,Bogota,Fontibon,Urbano,Bogotá
+3049,Bogota,Usme,Urbano,Bogotá
+3050,Bogota,Usme,Urbano,Bogotá
+3051,Bogota,Usme,Urbano,Bogotá
+3052,Bogota,Fontibon,Urbano,Bogotá
+3053,Bogota,Rafael Uribe,Urbano,Bogotá
+3054,Bogota,Rafael Uribe,Urbano,Bogotá
+3055,Bogota,Rafael Uribe,Urbano,Bogotá
+3056,Bogota,Rafael Uribe,Urbano,Bogotá
+3057,Bogota,Chapinero,Urbano,Bogotá
+3058,Bogota,Chapinero,Urbano,Bogotá
+3059,Bogota,Suba,Urbano,Bogotá
+3060,Bogota,Suba,Urbano,Bogotá
+3061,Bogota,Antonio Nariño,Urbano,Bogotá
+3062,Bogota,Antonio Nariño,Urbano,Bogotá
+3063,Bogota,Tunjuelito,Urbano,Bogotá
+3064,Bogota,Tunjuelito,Urbano,Bogotá
+3065,Bogota,Fontibon,Urbano,Bogotá
+3066,Bogota,Tunjuelito,Urbano,Bogotá
+3067,Bogota,Antonio Nariño,Urbano,Bogotá
+3068,Bogota,Antonio Nariño,Urbano,Bogotá
+3069,Bogota,Barrios Unidos,Urbano,Bogotá
+3070,Bogota,La Candelaria,Urbano,Bogotá
+3071,Bogota,Fontibon,Urbano,Bogotá
+3072,Bogota,Chapinero,Urbano,Bogotá
+3073,Bogota,Chapinero,Urbano,Bogotá
+3074,Bogota,Antonio Nariño,Urbano,Bogotá
+3075,Bogota,Fontibon,Urbano,Bogotá
+3076,Garagoa,Sin Informacion,Rural,Centro Oriental
+3077,Bogota,La Candelaria,Urbano,Bogotá
+3078,Bogota,Rafael Uribe,Urbano,Bogotá
+3079,Fomeque,Sin Informacion,Rural,Centro Oriental
+3080,Bogota,Fontibon,Urbano,Bogotá
+3081,Bogota,Santafe,Urbano,Bogotá
+3082,Garagoa,Sin Informacion,Rural,Centro Oriental
+3083,Bogota,Barrios Unidos,Urbano,Bogotá
+3084,Bogota,Barrios Unidos,Urbano,Bogotá
+3085,Bogota,La Candelaria,Urbano,Bogotá
+3086,Bogota,Antonio Nariño,Urbano,Bogotá
+3087,Bogota,Ciudad Bolivar,Urbano,Bogotá
+3088,Bogota,Los Martires,Urbano,Bogotá
+3089,Bogota,La Candelaria,Urbano,Bogotá
+3090,Dibulla,Sin Informacion,Rural,Norte (Caribe)
+3091,Bogota,La Candelaria,Urbano,Bogotá
+3092,Bogota,Los Martires,Urbano,Bogotá
+3093,Purificacion,Sin Informacion,Rural,Centro Oriental
+3094,Purificacion,Sin Informacion,Rural,Centro Oriental
+3095,Bogota,La Candelaria,Urbano,Bogotá
+3096,Bogota,Los Martires,Urbano,Bogotá
+3097,Bogota,Puente Aranda,Urbano,Bogotá
+3098,Bogota,Antonio Nariño,Urbano,Bogotá
+3099,Fomeque,Sin Informacion,Rural,Centro Oriental
+3100,Garagoa,Sin Informacion,Rural,Centro Oriental
+3101,Bogota,Fontibon,Urbano,Bogotá
+3102,Bogota,La Candelaria,Urbano,Bogotá
+3103,Bogota,Rafael Uribe,Urbano,Bogotá
+3104,Bogota,Antonio Nariño,Urbano,Bogotá
+3105,Bogota,Antonio Nariño,Urbano,Bogotá
+3106,Garagoa,Sin Informacion,Rural,Centro Oriental
+3107,Bogota,La Candelaria,Urbano,Bogotá
+3108,Dibulla,Sin Informacion,Rural,Norte (Caribe)
+3109,Dibulla,Sin Informacion,Rural,Norte (Caribe)
+3110,Bogota,Chapinero,Urbano,Bogotá
+3111,Bogota,La Candelaria,Urbano,Bogotá
+3112,Bogota,La Candelaria,Urbano,Bogotá
+3113,Bogota,Ciudad Bolivar,Urbano,Bogotá
+3114,Bogota,Ciudad Bolivar,Urbano,Bogotá
+3115,Bogota,La Candelaria,Urbano,Bogotá
+3116,Socha,Sin Informacion,Rural,Centro Oriental
+3117,Socha,Sin Informacion,Rural,Centro Oriental
+3118,Fomeque,Sin Informacion,Rural,Centro Oriental
+3119,Socha,Sin Informacion,Rural,Centro Oriental
+3120,Dibulla,Sin Informacion,Rural,Norte (Caribe)
+3121,Bogota,Barrios Unidos,Urbano,Bogotá
+3122,Bogota,Fontibon,Urbano,Bogotá
+3123,Bogota,Los Martires,Urbano,Bogotá
+3124,Bogota,Fontibon,Urbano,Bogotá
+3125,Bogota,Fontibon,Urbano,Bogotá
+3126,Bogota,Barrios Unidos,Urbano,Bogotá
+3127,Bogota,Barrios Unidos,Urbano,Bogotá
+3128,Bogota,Barrios Unidos,Urbano,Bogotá
+3129,Bogota,Barrios Unidos,Urbano,Bogotá
+3130,Bogota,Usme,Urbano,Bogotá
+3131,Bogota,Usme,Urbano,Bogotá
+3132,Bogota,Usme,Urbano,Bogotá
+3133,Bogota,Usme,Urbano,Bogotá
+3134,Bogota,Usme,Urbano,Bogotá
+3135,Bogota,Usme,Urbano,Bogotá
+3136,Bogota,Usme,Urbano,Bogotá
+3137,Bogota,Engativa,Urbano,Bogotá
+3138,Bogota,Engativa,Urbano,Bogotá
+3139,Bogota,Engativa,Urbano,Bogotá
+3140,Bogota,Rafael Uribe,Urbano,Bogotá
+3141,Bogota,Puente Aranda,Urbano,Bogotá
+3142,Bogota,Barrios Unidos,Urbano,Bogotá
+3143,Bogota,Barrios Unidos,Urbano,Bogotá
+3144,Bogota,Barrios Unidos,Urbano,Bogotá
+3145,Bogota,Barrios Unidos,Urbano,Bogotá
+3146,Bogota,Barrios Unidos,Urbano,Bogotá
+3147,Dibulla,Sin Informacion,Rural,Norte (Caribe)
+3148,Bogota,San Cristobal,Urbano,Bogotá
+3149,Bogota,La Candelaria,Urbano,Bogotá
+3150,Bogota,La Candelaria,Urbano,Bogotá
+3151,Bogota,La Candelaria,Urbano,Bogotá
+3152,Bogota,La Candelaria,Urbano,Bogotá
+3153,Fomeque,Sin Informacion,Rural,Centro Oriental
+3154,Bogota,La Candelaria,Urbano,Bogotá
+3155,Bogota,Rafael Uribe,Urbano,Bogotá
+3156,Bogota,Antonio Nariño,Urbano,Bogotá
+3157,Bogota,Antonio Nariño,Urbano,Bogotá
+3158,Bogota,Los Martires,Urbano,Bogotá
+3159,Bogota,La Candelaria,Urbano,Bogotá
+3160,Landazuri,Sin Informacion,Rural,Centro Oriental
+3161,Landazuri,Sin Informacion,Rural,Centro Oriental
+3162,Landazuri,Sin Informacion,Rural,Centro Oriental
+3163,Landazuri,Sin Informacion,Rural,Centro Oriental
+3164,Bogota,Suba,Urbano,Bogotá
+3165,Bogota,Suba,Urbano,Bogotá
+3166,Bogota,Suba,Urbano,Bogotá
+3167,Bogota,Fontibon,Urbano,Bogotá
+3168,Bogota,Fontibon,Urbano,Bogotá
+3169,El Cerrito,Sin Informacion,Rural,Sur Occidental
+3170,El Cerrito,Sin Informacion,Rural,Sur Occidental
+3171,El Cerrito,Sin Informacion,Rural,Sur Occidental
+3172,El Cerrito,Sin Informacion,Rural,Sur Occidental
+3173,Bogota,Barrios Unidos,Urbano,Bogotá
+3174,Bogota,Barrios Unidos,Urbano,Bogotá
+3175,Bogota,Barrios Unidos,Urbano,Bogotá
+3176,Bogota,Barrios Unidos,Urbano,Bogotá
+3177,Bogota,Los Martires,Urbano,Bogotá
+3178,Bogota,Barrios Unidos,Urbano,Bogotá
+3179,Socha,Sin Informacion,Rural,Centro Oriental
+3180,Bogota,Puente Aranda,Urbano,Bogotá
+3181,Purificacion,Sin Informacion,Rural,Centro Oriental
+3182,Purificacion,Sin Informacion,Rural,Centro Oriental
+3183,Bogota,Ciudad Bolivar,Urbano,Bogotá
+3184,Bogota,Ciudad Bolivar,Urbano,Bogotá
+3185,Buenos Aires,Sin Informacion,Rural,Sur Occidental
+3186,Buenos Aires,Sin Informacion,Rural,Sur Occidental
+3187,Buenos Aires,Sin Informacion,Rural,Sur Occidental
+3188,Buenos Aires,Sin Informacion,Rural,Sur Occidental
+3189,Bogota,Rafael Uribe,Urbano,Bogotá
+3190,Bogota,La Candelaria,Urbano,Bogotá
+3191,Dibulla,Sin Informacion,Rural,Norte (Caribe)
+3192,Socha,Sin Informacion,Rural,Centro Oriental
+3193,Garagoa,Sin Informacion,Rural,Centro Oriental
+3194,Bogota,La Candelaria,Urbano,Bogotá
+3195,Fomeque,Sin Informacion,Rural,Centro Oriental
+3196,Bogota,La Candelaria,Urbano,Bogotá
+3197,Bogota,Suba,Urbano,Bogotá
+3198,Bogota,Los Martires,Urbano,Bogotá
+3199,Bogota,La Candelaria,Urbano,Bogotá
+3200,Fomeque,Sin Informacion,Rural,Centro Oriental
+3201,Bogota,Barrios Unidos,Urbano,Bogotá
+3202,Garagoa,Sin Informacion,Rural,Centro Oriental
+3203,Bogota,Barrios Unidos,Urbano,Bogotá
+3204,Dibulla,Sin Informacion,Rural,Norte (Caribe)
+3205,Dibulla,Sin Informacion,Rural,Norte (Caribe)
+3206,Bogota,La Candelaria,Urbano,Bogotá
+3207,Bogota,Antonio Nariño,Urbano,Bogotá
+3208,Bogota,La Candelaria,Urbano,Bogotá
+3209,Bogota,Puente Aranda,Urbano,Bogotá
+3210,Bogota,La Candelaria,Urbano,Bogotá
+3211,Bogota,Los Martires,Urbano,Bogotá
+3212,Bogota,La Candelaria,Urbano,Bogotá
+3213,Bogota,La Candelaria,Urbano,Bogotá
+3214,Bogota,Suba,Urbano,Bogotá
+3215,Bogota,La Candelaria,Urbano,Bogotá
+3216,El Cerrito,Sin Informacion,Rural,Sur Occidental
+3217,El Cerrito,Sin Informacion,Rural,Sur Occidental
+3218,Buenos Aires,Sin Informacion,Rural,Sur Occidental
+3219,Buenos Aires,Sin Informacion,Rural,Sur Occidental
+3220,Bogota,Chapinero,Urbano,Bogotá
+3221,Bogota,La Candelaria,Urbano,Bogotá
+3222,Garagoa,Sin Informacion,Rural,Centro Oriental
+3223,Bogota,Barrios Unidos,Urbano,Bogotá
+3224,Bogota,Barrios Unidos,Urbano,Bogotá
+3225,Bogota,Antonio Nariño,Urbano,Bogotá
+3226,Bogota,Antonio Nariño,Urbano,Bogotá
+3227,Bogota,San Cristobal,Urbano,Bogotá
+3228,Bogota,Antonio Nariño,Urbano,Bogotá
+3229,Bogota,Barrios Unidos,Urbano,Bogotá
+3230,Bogota,Barrios Unidos,Urbano,Bogotá
+3231,Bogota,Puente Aranda,Urbano,Bogotá
+3232,Bogota,Bosa,Urbano,Bogotá
+3233,Bogota,Bosa,Urbano,Bogotá
+3234,Garagoa,Sin Informacion,Rural,Centro Oriental
+3235,Bogota,La Candelaria,Urbano,Bogotá
+3236,Bogota,Engativa,Urbano,Bogotá
+3237,Bogota,Fontibon,Urbano,Bogotá
+3238,Bogota,Fontibon,Urbano,Bogotá
+3239,Bogota,Fontibon,Urbano,Bogotá
+3240,Bogota,Fontibon,Urbano,Bogotá
+3241,Bogota,Rafael Uribe,Urbano,Bogotá
+3242,Bogota,San Cristobal,Urbano,Bogotá
+3243,El Cerrito,Sin Informacion,Rural,Sur Occidental
+3244,El Cerrito,Sin Informacion,Rural,Sur Occidental
+3245,Bogota,Suba,Urbano,Bogotá
+3246,Bogota,Santafe,Urbano,Bogotá
+3247,Bogota,Barrios Unidos,Urbano,Bogotá
+3248,Bogota,Barrios Unidos,Urbano,Bogotá
+3249,Bogota,Barrios Unidos,Urbano,Bogotá
+3250,Socha,Sin Informacion,Rural,Centro Oriental
+3251,Socha,Sin Informacion,Rural,Centro Oriental
+3252,Socha,Sin Informacion,Rural,Centro Oriental
+3253,Bogota,Usme,Urbano,Bogotá
+3254,Bogota,Usme,Urbano,Bogotá
+3255,Bogota,Usme,Urbano,Bogotá
+3256,Bogota,Usme,Urbano,Bogotá
+3257,Bogota,Usme,Urbano,Bogotá
+3258,Bogota,Usme,Urbano,Bogotá
+3259,Bogota,Puente Aranda,Urbano,Bogotá
+3260,Timana,Sin Informacion,Rural,Centro Oriental
+3261,Timana,Sin Informacion,Rural,Centro Oriental
+3262,Timana,Sin Informacion,Rural,Centro Oriental
+3263,Timana,Sin Informacion,Rural,Centro Oriental
+3264,Bogota,Barrios Unidos,Urbano,Bogotá
+3265,Bogota,San Cristobal,Urbano,Bogotá
+3266,Bogota,Antonio Nariño,Urbano,Bogotá
+3267,Bogota,Antonio Nariño,Urbano,Bogotá
+3268,Bogota,La Candelaria,Urbano,Bogotá
+3269,Bogota,La Candelaria,Urbano,Bogotá
+3270,Bogota,Santafe,Urbano,Bogotá
+3271,Bogota,La Candelaria,Urbano,Bogotá
+3272,Bogota,Rafael Uribe,Urbano,Bogotá
+3273,Bogota,Rafael Uribe,Urbano,Bogotá
+3274,Bogota,Rafael Uribe,Urbano,Bogotá
+3275,Bogota,Puente Aranda,Urbano,Bogotá
+3276,Bogota,La Candelaria,Urbano,Bogotá
+3277,Bogota,La Candelaria,Urbano,Bogotá
+3278,Purificacion,Sin Informacion,Rural,Centro Oriental
+3279,Purificacion,Sin Informacion,Rural,Centro Oriental
+3280,Purificacion,Sin Informacion,Rural,Centro Oriental
+3281,Purificacion,Sin Informacion,Rural,Centro Oriental
+3282,Taminango,Sin Informacion,Rural,Sur Occidental
+3283,Taminango,Sin Informacion,Rural,Sur Occidental
+3284,Taminango,Sin Informacion,Rural,Sur Occidental
+3285,Taminango,Sin Informacion,Rural,Sur Occidental
+3286,Buenos Aires,Sin Informacion,Rural,Sur Occidental
+3287,Buenos Aires,Sin Informacion,Rural,Sur Occidental
+3288,Bogota,La Candelaria,Urbano,Bogotá
+3289,Linares,Sin Informacion,Rural,Sur Occidental
+3290,Linares,Sin Informacion,Rural,Sur Occidental
+3291,Linares,Sin Informacion,Rural,Sur Occidental
+3292,Linares,Sin Informacion,Rural,Sur Occidental
+3293,Linares,Sin Informacion,Rural,Sur Occidental
+3294,Landazuri,Sin Informacion,Rural,Centro Oriental
+3295,Landazuri,Sin Informacion,Rural,Centro Oriental
+3296,Landazuri,Sin Informacion,Rural,Centro Oriental
+3297,Landazuri,Sin Informacion,Rural,Centro Oriental
+3298,Bogota,Antonio Nariño,Urbano,Bogotá
+3299,Bogota,Los Martires,Urbano,Bogotá
+3300,Taminango,Sin Informacion,Rural,Sur Occidental
+3301,Bogota,Antonio Nariño,Urbano,Bogotá
+3302,Bogota,San Cristobal,Urbano,Bogotá
+3303,Bogota,La Candelaria,Urbano,Bogotá
+3304,Arroyohondo,Sin Informacion,Rural,Norte (Caribe)
+3305,Arroyohondo,Sin Informacion,Rural,Norte (Caribe)
+3306,Bogota,Antonio Nariño,Urbano,Bogotá
+3307,Bogota,Rafael Uribe,Urbano,Bogotá
+3308,Bogota,Tunjuelito,Urbano,Bogotá
+3309,Bogota,La Candelaria,Urbano,Bogotá
+3310,Bogota,Los Martires,Urbano,Bogotá
+3311,Bogota,Chapinero,Urbano,Bogotá
+3312,Bogota,Antonio Nariño,Urbano,Bogotá
+3313,Bogota,Santafe,Urbano,Bogotá
+3314,Bogota,San Cristobal,Urbano,Bogotá
+3315,Bogota,Chapinero,Urbano,Bogotá
+3316,Bogota,Antonio Nariño,Urbano,Bogotá
+3317,Bogota,Kennedy,Urbano,Bogotá
+3318,Bogota,Santafe,Urbano,Bogotá
+3319,Bogota,Suba,Urbano,Bogotá
+3320,Bogota,Suba,Urbano,Bogotá
+3321,Arroyohondo,Sin Informacion,Rural,Norte (Caribe)
+3322,Arroyohondo,Sin Informacion,Rural,Norte (Caribe)
+3323,Bogota,Usaquen,Urbano,Bogotá
+3324,Bogota,Fontibon,Urbano,Bogotá
+3325,Bogota,Los Martires,Urbano,Bogotá
+3326,Bogota,Santafe,Urbano,Bogotá
+3327,Bogota,San Cristobal,Urbano,Bogotá
+3328,Bogota,Rafael Uribe,Urbano,Bogotá
+3329,Bogota,Los Martires,Urbano,Bogotá
+3330,Bogota,Los Martires,Urbano,Bogotá
+3331,Candelaria,Sin Informacion,Rural,Sur Occidental
+3332,Candelaria,Sin Informacion,Rural,Sur Occidental
+3333,Candelaria,Sin Informacion,Rural,Sur Occidental
+3334,Candelaria,Sin Informacion,Rural,Sur Occidental
+3335,Bogota,La Candelaria,Urbano,Bogotá
+3336,Bogota,La Candelaria,Urbano,Bogotá
+3337,Bogota,Suba,Urbano,Bogotá
+3338,Bogota,Chapinero,Urbano,Bogotá
+3339,Bogota,Engativa,Urbano,Bogotá
+3340,Bogota,Engativa,Urbano,Bogotá
+3341,Bogota,Puente Aranda,Urbano,Bogotá
+3342,Bogota,Puente Aranda,Urbano,Bogotá
+3343,Bogota,Puente Aranda,Urbano,Bogotá
+3344,Bogota,Santafe,Urbano,Bogotá
+3345,Linares,Sin Informacion,Rural,Sur Occidental
+3346,Linares,Sin Informacion,Rural,Sur Occidental
+3347,Linares,Sin Informacion,Rural,Sur Occidental
+3348,Bogota,Usaquen,Urbano,Bogotá
+3349,Bogota,Usaquen,Urbano,Bogotá
+3350,Bogota,Barrios Unidos,Urbano,Bogotá
+3351,Taminango,Sin Informacion,Rural,Sur Occidental
+3352,Taminango,Sin Informacion,Rural,Sur Occidental
+3353,Taminango,Sin Informacion,Rural,Sur Occidental
+3354,Bogota,Los Martires,Urbano,Bogotá
+3355,Bogota,San Cristobal,Urbano,Bogotá
+3356,Bogota,Engativa,Urbano,Bogotá
+3357,Bogota,Antonio Nariño,Urbano,Bogotá
+3358,Bogota,Fontibon,Urbano,Bogotá
+3359,Bogota,Fontibon,Urbano,Bogotá
+3360,Bogota,Santafe,Urbano,Bogotá
+3361,Bogota,Barrios Unidos,Urbano,Bogotá
+3362,Bogota,Barrios Unidos,Urbano,Bogotá
+3363,Bogota,Santafe,Urbano,Bogotá
+3364,Bogota,Santafe,Urbano,Bogotá
+3365,Bogota,Santafe,Urbano,Bogotá
+3366,Bogota,Barrios Unidos,Urbano,Bogotá
+3367,Bogota,Barrios Unidos,Urbano,Bogotá
+3368,Bogota,Santafe,Urbano,Bogotá
+3369,Bogota,Santafe,Urbano,Bogotá
+3370,Bogota,Barrios Unidos,Urbano,Bogotá
+3371,Bogota,Santafe,Urbano,Bogotá
+3372,Timana,Sin Informacion,Rural,Centro Oriental
+3373,Timana,Sin Informacion,Rural,Centro Oriental
+3374,Timana,Sin Informacion,Rural,Centro Oriental
+3375,Timana,Sin Informacion,Rural,Centro Oriental
+3376,Bogota,Usaquen,Urbano,Bogotá
+3377,Bogota,Usaquen,Urbano,Bogotá
+3378,Bogota,Usaquen,Urbano,Bogotá
+3379,Bogota,Los Martires,Urbano,Bogotá
+3380,Bogota,Puente Aranda,Urbano,Bogotá
+3381,Bogota,Puente Aranda,Urbano,Bogotá
+3382,Bogota,Tunjuelito,Urbano,Bogotá
+3383,Bogota,Tunjuelito,Urbano,Bogotá
+3384,Bogota,Kennedy,Urbano,Bogotá
+3385,Bogota,La Candelaria,Urbano,Bogotá
+3386,Bogota,La Candelaria,Urbano,Bogotá
+3387,Bogota,La Candelaria,Urbano,Bogotá
+3388,Bogota,La Candelaria,Urbano,Bogotá
+3389,Bogota,San Cristobal,Urbano,Bogotá
+3390,Bogota,Los Martires,Urbano,Bogotá
+3391,Bogota,Los Martires,Urbano,Bogotá
+3392,Bogota,Barrios Unidos,Urbano,Bogotá
+3393,Bogota,La Candelaria,Urbano,Bogotá
+3394,Bogota,La Candelaria,Urbano,Bogotá
+3395,Bogota,Rafael Uribe,Urbano,Bogotá
+3396,Bogota,Usaquen,Urbano,Bogotá
+3397,Bogota,Chapinero,Urbano,Bogotá
+3398,Bogota,Rafael Uribe,Urbano,Bogotá
+3399,Bogota,Barrios Unidos,Urbano,Bogotá
+3400,Bogota,Chapinero,Urbano,Bogotá
+3401,Bogota,Suba,Urbano,Bogotá
+3402,Arroyohondo,Sin Informacion,Rural,Norte (Caribe)
+3403,Arroyohondo,Sin Informacion,Rural,Norte (Caribe)
+3404,Bogota,Usaquen,Urbano,Bogotá
+3405,Bogota,Usaquen,Urbano,Bogotá
+3406,Candelaria,Sin Informacion,Rural,Sur Occidental
+3407,Candelaria,Sin Informacion,Rural,Sur Occidental
+3408,Bogota,Los Martires,Urbano,Bogotá
+3409,Bogota,Kennedy,Urbano,Bogotá
+3410,Bogota,Chapinero,Urbano,Bogotá
+3411,Bogota,Ciudad Bolivar,Urbano,Bogotá
+3412,Bogota,Ciudad Bolivar,Urbano,Bogotá
+3413,Bogota,Chapinero,Urbano,Bogotá
+3414,Bogota,Teusaquillo,Urbano,Bogotá
+3415,Bogota,Fontibon,Urbano,Bogotá
+3416,Bogota,Fontibon,Urbano,Bogotá
+3417,Arroyohondo,Sin Informacion,Rural,Norte (Caribe)
+3418,Arroyohondo,Sin Informacion,Rural,Norte (Caribe)
+3419,Bogota,Antonio Nariño,Urbano,Bogotá
+3420,Bogota,Chapinero,Urbano,Bogotá
+3421,Bogota,Los Martires,Urbano,Bogotá
+3422,Bogota,Los Martires,Urbano,Bogotá
+3423,Bogota,Usaquen,Urbano,Bogotá
+3424,Bogota,Rafael Uribe,Urbano,Bogotá
+3425,Bogota,Rafael Uribe,Urbano,Bogotá
+3426,Bogota,Puente Aranda,Urbano,Bogotá
+3427,Bogota,Chapinero,Urbano,Bogotá
+3428,Bogota,La Candelaria,Urbano,Bogotá
+3429,Bogota,Usaquen,Urbano,Bogotá
+3430,Bogota,Usaquen,Urbano,Bogotá
+3431,Bogota,Usaquen,Urbano,Bogotá
+3432,Bogota,Usaquen,Urbano,Bogotá
+3433,Bogota,Chapinero,Urbano,Bogotá
+3434,Bogota,Chapinero,Urbano,Bogotá
+3435,Bogota,Chapinero,Urbano,Bogotá
+3436,Bogota,Usaquen,Urbano,Bogotá
+3437,Bogota,Suba,Urbano,Bogotá
+3438,Bogota,Usaquen,Urbano,Bogotá
+3439,Bogota,Usaquen,Urbano,Bogotá
+3440,Bogota,Usaquen,Urbano,Bogotá
+3441,Bogota,Usaquen,Urbano,Bogotá
+3442,Bogota,Usaquen,Urbano,Bogotá
+3443,Bogota,La Candelaria,Urbano,Bogotá
+3444,Bogota,Engativa,Urbano,Bogotá
+3445,Bogota,Engativa,Urbano,Bogotá
+3446,Bogota,Fontibon,Urbano,Bogotá
+3447,Bogota,Fontibon,Urbano,Bogotá
+3448,Bogota,Chapinero,Urbano,Bogotá
+3449,Bogota,Usaquen,Urbano,Bogotá
+3450,Bogota,Usaquen,Urbano,Bogotá
+3451,Bogota,Rafael Uribe,Urbano,Bogotá
+3452,Bogota,Usaquen,Urbano,Bogotá
+3453,Bogota,Puente Aranda,Urbano,Bogotá
+3454,Bogota,Puente Aranda,Urbano,Bogotá
+3455,Bogota,Chapinero,Urbano,Bogotá
+3456,Bogota,Chapinero,Urbano,Bogotá
+3457,Bogota,Chapinero,Urbano,Bogotá
+3458,Bogota,Antonio Nariño,Urbano,Bogotá
+3459,Bogota,Rafael Uribe,Urbano,Bogotá
+3460,Bogota,Rafael Uribe,Urbano,Bogotá
+3461,Candelaria,Sin Informacion,Rural,Sur Occidental
+3462,Candelaria,Sin Informacion,Rural,Sur Occidental
+3463,Bogota,Usaquen,Urbano,Bogotá
+3464,Bogota,Usme,Urbano,Bogotá
+3465,Bogota,Usme,Urbano,Bogotá
+3466,Bogota,Usme,Urbano,Bogotá
+3467,Bogota,Chapinero,Urbano,Bogotá
+3468,Bogota,Chapinero,Urbano,Bogotá
+3469,Bogota,Chapinero,Urbano,Bogotá
+3470,Bogota,Teusaquillo,Urbano,Bogotá
+3471,Bogota,Usaquen,Urbano,Bogotá
+3472,Bogota,Suba,Urbano,Bogotá
+3473,Bogota,Suba,Urbano,Bogotá
+3474,Bogota,Suba,Urbano,Bogotá
+3475,Bogota,Suba,Urbano,Bogotá
+3476,Bogota,Suba,Urbano,Bogotá
+3477,Bogota,Chapinero,Urbano,Bogotá
+3478,Bogota,Chapinero,Urbano,Bogotá
+3479,Bogota,Chapinero,Urbano,Bogotá
+3480,Bogota,Chapinero,Urbano,Bogotá
+3481,Bogota,Santafe,Urbano,Bogotá
+3482,Bogota,Santafe,Urbano,Bogotá
+3483,Bogota,Chapinero,Urbano,Bogotá
+3484,Bogota,Chapinero,Urbano,Bogotá
+3485,Bogota,Chapinero,Urbano,Bogotá
+3486,Bogota,Chapinero,Urbano,Bogotá
+3487,Bogota,Suba,Urbano,Bogotá
+3488,Bogota,Chapinero,Urbano,Bogotá
+3489,Bogota,Chapinero,Urbano,Bogotá
+3490,Bogota,Antonio Nariño,Urbano,Bogotá
+3491,Bogota,Usaquen,Urbano,Bogotá
+3492,Bogota,Chapinero,Urbano,Bogotá
+3493,Bogota,Los Martires,Urbano,Bogotá
+3494,Bogota,Usaquen,Urbano,Bogotá
+3495,Pamplona,Sin Informacion,Rural,Centro Oriental
+3496,Pamplona,Sin Informacion,Rural,Centro Oriental
+3497,Pamplona,Sin Informacion,Rural,Centro Oriental
+3498,Pamplona,Sin Informacion,Rural,Centro Oriental
+3499,Bogota,Ciudad Bolivar,Urbano,Bogotá
+3500,Bogota,Puente Aranda,Urbano,Bogotá
+3501,Bogota,Chapinero,Urbano,Bogotá
+3502,Bogota,Los Martires,Urbano,Bogotá
+3503,Ponedera,Sin Informacion,Rural,Norte (Caribe)
+3504,Bogota,San Cristobal,Urbano,Bogotá
+3505,Bogota,Antonio Nariño,Urbano,Bogotá
+3506,Bogota,Antonio Nariño,Urbano,Bogotá
+3507,Bogota,Santafe,Urbano,Bogotá
+3508,Bogota,Chapinero,Urbano,Bogotá
+3509,Bogota,Chapinero,Urbano,Bogotá
+3510,Bogota,Usaquen,Urbano,Bogotá
+3511,Bogota,Chapinero,Urbano,Bogotá
+3512,Bogota,Chapinero,Urbano,Bogotá
+3513,Bogota,Chapinero,Urbano,Bogotá
+3514,Ponedera,Sin Informacion,Rural,Norte (Caribe)
+3515,Bogota,Barrios Unidos,Urbano,Bogotá
+3516,Bogota,Ciudad Bolivar,Urbano,Bogotá
+3517,Bogota,Puente Aranda,Urbano,Bogotá
+3518,Bogota,Barrios Unidos,Urbano,Bogotá
+3519,Bogota,Chapinero,Urbano,Bogotá
+3520,Bogota,Antonio Nariño,Urbano,Bogotá
+3521,Bogota,Antonio Nariño,Urbano,Bogotá
+3522,Bogota,Los Martires,Urbano,Bogotá
+3523,Ponedera,Sin Informacion,Rural,Norte (Caribe)
+3524,Bogota,Antonio Nariño,Urbano,Bogotá
+3525,Bogota,Santafe,Urbano,Bogotá
+3526,Bogota,Santafe,Urbano,Bogotá
+3527,Bogota,Los Martires,Urbano,Bogotá
+3528,Bogota,Santafe,Urbano,Bogotá
+3529,Ponedera,Sin Informacion,Rural,Norte (Caribe)
+3530,Bogota,Antonio Nariño,Urbano,Bogotá
+3531,Bogota,Santafe,Urbano,Bogotá
+3532,Bogota,Fontibon,Urbano,Bogotá
+3533,Bogota,Los Martires,Urbano,Bogotá
+3534,Bogota,Ciudad Bolivar,Urbano,Bogotá
+3535,Bogota,La Candelaria,Urbano,Bogotá
+3536,Bogota,Barrios Unidos,Urbano,Bogotá
+3537,Bogota,Los Martires,Urbano,Bogotá
+3538,Bogota,Teusaquillo,Urbano,Bogotá
+3539,Bogota,Puente Aranda,Urbano,Bogotá
+3540,Bogota,Santafe,Urbano,Bogotá
+3541,Bogota,Chapinero,Urbano,Bogotá
+3542,Bogota,Chapinero,Urbano,Bogotá
+3543,Bogota,Puente Aranda,Urbano,Bogotá
+3544,Bogota,Chapinero,Urbano,Bogotá
+3545,Bogota,Usaquen,Urbano,Bogotá
+3546,Bogota,Antonio Nariño,Urbano,Bogotá
+3547,Bogota,Antonio Nariño,Urbano,Bogotá
+3548,Bogota,Antonio Nariño,Urbano,Bogotá
+3549,Bogota,Antonio Nariño,Urbano,Bogotá
+3550,Bogota,Antonio Nariño,Urbano,Bogotá
+3551,Bogota,Antonio Nariño,Urbano,Bogotá
+3552,Bogota,Chapinero,Urbano,Bogotá
+3553,Bogota,Chapinero,Urbano,Bogotá
+3554,Bogota,Chapinero,Urbano,Bogotá
+3555,Bogota,Chapinero,Urbano,Bogotá
+3556,Bogota,Rafael Uribe,Urbano,Bogotá
+3557,Bogota,Rafael Uribe,Urbano,Bogotá
+3558,Bogota,Rafael Uribe,Urbano,Bogotá
+3559,Bogota,Chapinero,Urbano,Bogotá
+3560,Bogota,Santafe,Urbano,Bogotá
+3561,Bogota,Santafe,Urbano,Bogotá
+3562,Pamplona,Sin Informacion,Rural,Centro Oriental
+3563,Pamplona,Sin Informacion,Rural,Centro Oriental
+3564,Pamplona,Sin Informacion,Rural,Centro Oriental
+3565,Pamplona,Sin Informacion,Rural,Centro Oriental
+3566,Bogota,La Candelaria,Urbano,Bogotá
+3567,Bogota,Chapinero,Urbano,Bogotá
+3568,Bogota,Chapinero,Urbano,Bogotá
+3569,Bogota,Rafael Uribe,Urbano,Bogotá
+3570,Bogota,Santafe,Urbano,Bogotá
+3571,Bogota,Fontibon,Urbano,Bogotá
+3572,Bogota,Antonio Nariño,Urbano,Bogotá
+3573,Bogota,Barrios Unidos,Urbano,Bogotá
+3574,Bogota,Barrios Unidos,Urbano,Bogotá
+3575,Bogota,Antonio Nariño,Urbano,Bogotá
+3576,Bogota,Chapinero,Urbano,Bogotá
+3577,Bogota,Rafael Uribe,Urbano,Bogotá
+3578,Bogota,Chapinero,Urbano,Bogotá
+3579,Bogota,San Cristobal,Urbano,Bogotá
+3580,Bogota,Puente Aranda,Urbano,Bogotá
+3581,Bogota,Chapinero,Urbano,Bogotá
+3582,Bogota,Fontibon,Urbano,Bogotá
+3583,Bogota,Fontibon,Urbano,Bogotá
+3584,Bogota,Fontibon,Urbano,Bogotá
+3585,Bogota,La Candelaria,Urbano,Bogotá
+3586,Bogota,Barrios Unidos,Urbano,Bogotá
+3587,Bogota,Ciudad Bolivar,Urbano,Bogotá
+3588,Bogota,Puente Aranda,Urbano,Bogotá
+3589,Bogota,Chapinero,Urbano,Bogotá
+3590,Bogota,Barrios Unidos,Urbano,Bogotá
+3591,Bogota,Chapinero,Urbano,Bogotá
+3592,Bogota,Los Martires,Urbano,Bogotá
+3593,Bogota,Barrios Unidos,Urbano,Bogotá
+3594,Bogota,Chapinero,Urbano,Bogotá
+3595,Bogota,Barrios Unidos,Urbano,Bogotá
+3596,Bogota,Antonio Nariño,Urbano,Bogotá
+3597,Bogota,Usaquen,Urbano,Bogotá
+3598,Bogota,Chapinero,Urbano,Bogotá
+3599,Bogota,La Candelaria,Urbano,Bogotá
+3600,Bogota,Chapinero,Urbano,Bogotá
+3601,Bogota,Chapinero,Urbano,Bogotá
+3602,Bogota,Barrios Unidos,Urbano,Bogotá
+3603,Bogota,Santafe,Urbano,Bogotá
+3604,Bogota,Usaquen,Urbano,Bogotá
+3605,Bogota,Los Martires,Urbano,Bogotá
+3606,Bogota,Ciudad Bolivar,Urbano,Bogotá
+3607,Bogota,Usaquen,Urbano,Bogotá
+3608,Bogota,Usaquen,Urbano,Bogotá
+3609,Bogota,Ciudad Bolivar,Urbano,Bogotá
+3610,Bogota,Usaquen,Urbano,Bogotá
+3611,Bogota,Chapinero,Urbano,Bogotá
+3612,Bogota,Engativa,Urbano,Bogotá
+3613,Bogota,Engativa,Urbano,Bogotá
+3614,Bogota,Usaquen,Urbano,Bogotá
+3615,Bogota,Los Martires,Urbano,Bogotá
+3616,Bogota,Chapinero,Urbano,Bogotá
+3617,Bogota,Santafe,Urbano,Bogotá
+3618,Bogota,Antonio Nariño,Urbano,Bogotá
+3619,Bogota,Santafe,Urbano,Bogotá
+3620,Bogota,Teusaquillo,Urbano,Bogotá
+3621,Ponedera,Sin Informacion,Rural,Norte (Caribe)
+3622,Ponedera,Sin Informacion,Rural,Norte (Caribe)
+3623,Ponedera,Sin Informacion,Rural,Norte (Caribe)
+3624,Ponedera,Sin Informacion,Rural,Norte (Caribe)
