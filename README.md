@@ -11,7 +11,7 @@ Bogotá DataJam Edición 5 (2026) · Equipo #16 **The data squad**: Rafael Estiv
 | Libro de datos en Excel | [`docs/Libro_de_datos_El_miedo_que_no_baja.xlsx`](docs/) (tablas, fórmulas vivas y simulador) |
 | Formulario de caracterización | [`docs/Formulario_caracterizacion_The_data_squad.docx`](docs/) |
 | Nota técnica (1 página) | [`docs/Nota_tecnica_integracion_datos_The_data_squad.pdf`](docs/) |
-| Presentación del pitch | [`docs/pitch/`](docs/pitch/) (PPTX con notas del orador y PDF) y modo **Presentar** en el visor |
+| Presentación (clase interactiva) | modo **Presentar** del visor (`/presentar`, guion en `/presentar/guion`); respaldo sin internet en [`docs/pitch/`](docs/pitch/) (PDF y PPTX con notas) |
 | Datos exportables (CSV, GeoJSON) | [`visor/public/descargas/`](visor/public/descargas/) y [`outputs/`](outputs/) |
 
 ![Delitos registrados frente a percepción](outputs/figuras/fig1_serie_delitos.png)
@@ -92,7 +92,7 @@ jupyter notebook notebooks/el_miedo_que_no_baja.ipynb
 
 # Después: libro de Excel y presentación del pitch (leen outputs/)
 python src/excel.py                  # en Windows usa Excel para guardar los valores; --sin-excel lo omite
-python docs/pitch/construir_pitch.py
+python docs/pitch/capturar_presentacion.py   # con el visor corriendo en local (VISOR_SIN_CLAVE=1)
 ```
 
 - **Descarga de datos:** `src/fuentes.py` baja cada fuente desde su servicio oficial y la deja en `data/crudos/`, con registro de URL, fecha y sha1. Si el archivo ya existe, usa la copia local, así que el análisis corre sin red con los datos incluidos en el repositorio.
@@ -127,6 +127,7 @@ src/
   figuras.py       figuras PNG
   exportar.py      JSON del visor, CSV/GeoJSON descargables, tablas Power BI
   excel.py         libro de datos en Excel (tablas, fórmulas vivas, simulador)
+  clase.py         datos de la presentación interactiva (coeficientes, réplicas, índice por partes)
   pipeline.py      orquestación de punta a punta
 outputs/
   figuras/         figuras del informe

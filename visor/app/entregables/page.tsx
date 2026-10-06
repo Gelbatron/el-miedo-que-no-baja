@@ -46,9 +46,9 @@ const ITEMS: Item[] = [
   },
   {
     titulo: "Presentación para la sustentación",
-    detalle: "Ocho láminas para el pitch de 6 minutos: problema, datos y método, tres hallazgos, recomendaciones e indicador. También en modo presentación dentro del visor, con gráficas en vivo, cronómetro y notas del orador.",
+    detalle: "Una clase interactiva dentro del visor: cada lámina se revela por pasos, con demostraciones en vivo (el índice paso a paso, dos vecinos iguales, 300 repeticiones del modelo). Modo pitch de 6 minutos con cronómetro y notas del orador, y respaldo en PDF y PowerPoint para proyectar sin internet.",
     ver: "/presentar",
-    descargar: [{ href: "/entregables/Pitch_El_miedo_que_no_baja_The_data_squad.pdf", formato: "PDF" }, { href: "/entregables/Pitch_El_miedo_que_no_baja_The_data_squad.pptx", formato: "PowerPoint (.pptx)" }],
+    descargar: [{ href: "/presentar/guion", formato: "Guion" }, { href: "/entregables/Pitch_El_miedo_que_no_baja_The_data_squad.pdf", formato: "PDF" }, { href: "/entregables/Pitch_El_miedo_que_no_baja_The_data_squad.pptx", formato: "PowerPoint (.pptx)" }],
     requisito: "Jornada final",
   },
   {

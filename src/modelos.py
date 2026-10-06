@@ -68,7 +68,8 @@ def logit_ame(df: pd.DataFrame, y: str, xs: list[str], cluster: str = "localidad
         filas.append({"variable": c, "ame_pp": ame[c], "ic_inf": lo, "ic_sup": hi,
                       "p": float(robust.pvalues[c]), "coef": float(res.params[c])})
     out = pd.DataFrame(filas)
-    out.attrs.update(n=int(len(d)), y=y, media=float(np.average(d[y], weights=d[peso])), n_boot=len(B))
+    out.attrs.update(n=int(len(d)), y=y, media=float(np.average(d[y], weights=d[peso])), n_boot=len(B),
+                     replicas={c: [float(v) for v in B[c]] for c in xs})  # listas: un DataFrame en attrs rompe pd.concat
     return out
 
 

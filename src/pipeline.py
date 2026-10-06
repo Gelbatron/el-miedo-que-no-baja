@@ -189,6 +189,8 @@ def figuras_y_exportes(res: dict):
              F.brecha_cifra(T["ibs"], T["cifra_oculta"], S["ibs_vs_cifra_oculta"]["rho"]), F.genero(S["emv_por_sexo"]),
              F.ranking_ibs(T["ibs"])]
     rutas.append(EX.visor(res, ETIQUETAS))
+    import clase as CL  # datos de la presentación interactiva del visor
+    rutas.append(CL.guardar(CL.construir(P, res["eb"], PERFIL, DELITO, HECHOS, replicas=R["m_hechos"].attrs.get("replicas"))))
     return rutas
 
 
