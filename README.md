@@ -89,6 +89,10 @@ python src/pipeline.py
 
 # Opción B: el notebook paso a paso
 jupyter notebook notebooks/el_miedo_que_no_baja.ipynb
+
+# Después: libro de Excel y presentación del pitch (leen outputs/)
+python src/excel.py                  # en Windows usa Excel para guardar los valores; --sin-excel lo omite
+python docs/pitch/construir_pitch.py
 ```
 
 - **Descarga de datos:** `src/fuentes.py` baja cada fuente desde su servicio oficial y la deja en `data/crudos/`, con registro de URL, fecha y sha1. Si el archivo ya existe, usa la copia local, así que el análisis corre sin red con los datos incluidos en el repositorio.
@@ -122,6 +126,7 @@ src/
   modelos.py       logit ponderado con AME, wild bootstrap, AUC por bloques, escenarios
   figuras.py       figuras PNG
   exportar.py      JSON del visor, CSV/GeoJSON descargables, tablas Power BI
+  excel.py         libro de datos en Excel (tablas, fórmulas vivas, simulador)
   pipeline.py      orquestación de punta a punta
 outputs/
   figuras/         figuras del informe
