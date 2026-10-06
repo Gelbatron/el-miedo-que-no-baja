@@ -1,0 +1,551 @@
+table Localidades
+	lineageTag: 218329dd-e467-5281-8a60-b16e02bb4774
+
+	column localidad
+		dataType: int64
+		formatString: 0
+		lineageTag: b822f3d1-605c-5e93-a9f4-f901ae1a78d8
+		summarizeBy: none
+		sourceColumn: localidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre
+		dataType: string
+		lineageTag: d67e4b46-1197-51e0-84e4-fadcd2107cc8
+		summarizeBy: none
+		sourceColumn: nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column poblacion
+		dataType: int64
+		formatString: #,0
+		lineageTag: bd8cd086-2fe8-5816-a2d9-f1f662844ca9
+		summarizeBy: none
+		sourceColumn: poblacion
+
+		annotation SummarizationSetBy = Automatic
+
+	/// % que califica insegura su zona (Bienal 2025, ponderado). Escala 0-100.
+	column zona_insegura
+		dataType: double
+		formatString: 0.0
+		lineageTag: bd8846ee-110e-5334-988b-f643b3ea3a32
+		summarizeBy: none
+		sourceColumn: zona_insegura
+
+		annotation SummarizationSetBy = Automatic
+
+	column zona_insegura_ee
+		dataType: double
+		formatString: 0.0
+		lineageTag: afd21bed-9992-5a3b-ac71-ee0a357394da
+		summarizeBy: none
+		sourceColumn: zona_insegura_ee
+
+		annotation SummarizationSetBy = Automatic
+
+	column zona_insegura_mujeres
+		dataType: double
+		formatString: 0.0
+		lineageTag: 82a5534d-3ded-5f0d-9e76-9693f23fd5f7
+		summarizeBy: none
+		sourceColumn: zona_insegura_mujeres
+
+		annotation SummarizationSetBy = Automatic
+
+	column zona_insegura_hombres
+		dataType: double
+		formatString: 0.0
+		lineageTag: 6d6140b0-c853-58ee-8775-f1bb0b7a8aeb
+		summarizeBy: none
+		sourceColumn: zona_insegura_hombres
+
+		annotation SummarizationSetBy = Automatic
+
+	column ciudad_insegura
+		dataType: double
+		formatString: 0.0
+		lineageTag: bb60ba18-cec1-5dc3-bfbd-b229f7080fe0
+		summarizeBy: none
+		sourceColumn: ciudad_insegura
+
+		annotation SummarizationSetBy = Automatic
+
+	column ciudad_insegura_ee
+		dataType: double
+		formatString: 0.0
+		lineageTag: 0f7216c5-df90-514a-af3f-4969ad449e1e
+		summarizeBy: none
+		sourceColumn: ciudad_insegura_ee
+
+		annotation SummarizationSetBy = Automatic
+
+	column ciudad_insegura_mujeres
+		dataType: double
+		formatString: 0.0
+		lineageTag: e71afea2-de68-5f3d-9146-47d8df9623e3
+		summarizeBy: none
+		sourceColumn: ciudad_insegura_mujeres
+
+		annotation SummarizationSetBy = Automatic
+
+	column ciudad_insegura_hombres
+		dataType: double
+		formatString: 0.0
+		lineageTag: 93379847-09ed-529a-aa33-8e062ee2eb1a
+		summarizeBy: none
+		sourceColumn: ciudad_insegura_hombres
+
+		annotation SummarizationSetBy = Automatic
+
+	column ciudad_peor_que_antes
+		dataType: double
+		formatString: 0.0
+		lineageTag: 06c0683c-cba0-5537-8aa2-78067274179e
+		summarizeBy: none
+		sourceColumn: ciudad_peor_que_antes
+
+		annotation SummarizationSetBy = Automatic
+
+	column ciudad_peor_que_antes_ee
+		dataType: double
+		formatString: 0.0
+		lineageTag: 4331d6a2-8062-5051-8d52-67cd80e65e0a
+		summarizeBy: none
+		sourceColumn: ciudad_peor_que_antes_ee
+
+		annotation SummarizationSetBy = Automatic
+
+	column ciudad_peor_que_antes_mujeres
+		dataType: double
+		formatString: 0.0
+		lineageTag: 860bf1f2-88e3-50af-96cd-a4d5f92abc14
+		summarizeBy: none
+		sourceColumn: ciudad_peor_que_antes_mujeres
+
+		annotation SummarizationSetBy = Automatic
+
+	column ciudad_peor_que_antes_hombres
+		dataType: double
+		formatString: 0.0
+		lineageTag: 8def102e-b682-5768-8714-605bb6681931
+		summarizeBy: none
+		sourceColumn: ciudad_peor_que_antes_hombres
+
+		annotation SummarizationSetBy = Automatic
+
+	column miedo_espacio_publico
+		dataType: double
+		formatString: 0.0
+		lineageTag: 0bfab7be-42b8-537f-b336-448312154112
+		summarizeBy: none
+		sourceColumn: miedo_espacio_publico
+
+		annotation SummarizationSetBy = Automatic
+
+	column miedo_espacio_publico_ee
+		dataType: double
+		formatString: 0.0
+		lineageTag: 5bf8c5c5-9a06-54d0-a8c5-9e100537374a
+		summarizeBy: none
+		sourceColumn: miedo_espacio_publico_ee
+
+		annotation SummarizationSetBy = Automatic
+
+	column miedo_espacio_publico_mujeres
+		dataType: double
+		formatString: 0.0
+		lineageTag: 4598fe17-a8e5-52f2-bf0e-4877ecd0f213
+		summarizeBy: none
+		sourceColumn: miedo_espacio_publico_mujeres
+
+		annotation SummarizationSetBy = Automatic
+
+	column miedo_espacio_publico_hombres
+		dataType: double
+		formatString: 0.0
+		lineageTag: 49c43796-e999-56f0-9304-5e200725baa5
+		summarizeBy: none
+		sourceColumn: miedo_espacio_publico_hombres
+
+		annotation SummarizationSetBy = Automatic
+
+	column alumbrado_malo
+		dataType: double
+		formatString: 0.0
+		lineageTag: a627252e-50eb-5204-b85f-fba9b7a19add
+		summarizeBy: none
+		sourceColumn: alumbrado_malo
+
+		annotation SummarizationSetBy = Automatic
+
+	column alumbrado_malo_ee
+		dataType: double
+		formatString: 0.0
+		lineageTag: 0477fadb-8072-594d-8d19-2c8b8d3a5d87
+		summarizeBy: none
+		sourceColumn: alumbrado_malo_ee
+
+		annotation SummarizationSetBy = Automatic
+
+	column alumbrado_malo_mujeres
+		dataType: double
+		formatString: 0.0
+		lineageTag: e6b11a26-dedc-5e4a-9eb2-aeecde974f5a
+		summarizeBy: none
+		sourceColumn: alumbrado_malo_mujeres
+
+		annotation SummarizationSetBy = Automatic
+
+	column alumbrado_malo_hombres
+		dataType: double
+		formatString: 0.0
+		lineageTag: 281f64ba-347d-5f70-895e-63872863be68
+		summarizeBy: none
+		sourceColumn: alumbrado_malo_hombres
+
+		annotation SummarizationSetBy = Automatic
+
+	column parque_spa
+		dataType: double
+		formatString: 0.0
+		lineageTag: a12b686d-3944-525c-ba11-234f64af8558
+		summarizeBy: none
+		sourceColumn: parque_spa
+
+		annotation SummarizationSetBy = Automatic
+
+	column parque_spa_ee
+		dataType: double
+		formatString: 0.0
+		lineageTag: 7e503a3d-45d6-592b-b57a-6a004eca2bf5
+		summarizeBy: none
+		sourceColumn: parque_spa_ee
+
+		annotation SummarizationSetBy = Automatic
+
+	column parque_spa_mujeres
+		dataType: double
+		formatString: 0.0
+		lineageTag: 50e25276-3afc-543a-9589-8a42da9fae94
+		summarizeBy: none
+		sourceColumn: parque_spa_mujeres
+
+		annotation SummarizationSetBy = Automatic
+
+	column parque_spa_hombres
+		dataType: double
+		formatString: 0.0
+		lineageTag: 45cf205d-766c-522e-9e13-3398cbd7c486
+		summarizeBy: none
+		sourceColumn: parque_spa_hombres
+
+		annotation SummarizationSetBy = Automatic
+
+	column parque_acoso
+		dataType: double
+		formatString: 0.0
+		lineageTag: 7a26ac4e-b31c-5c14-8cd9-06456402c578
+		summarizeBy: none
+		sourceColumn: parque_acoso
+
+		annotation SummarizationSetBy = Automatic
+
+	column parque_acoso_ee
+		dataType: double
+		formatString: 0.0
+		lineageTag: 873681cc-b17a-5d40-b5a7-b77f98ffac18
+		summarizeBy: none
+		sourceColumn: parque_acoso_ee
+
+		annotation SummarizationSetBy = Automatic
+
+	column parque_acoso_mujeres
+		dataType: double
+		formatString: 0.0
+		lineageTag: 78ddf15e-cf96-5ca9-8140-70df826ac273
+		summarizeBy: none
+		sourceColumn: parque_acoso_mujeres
+
+		annotation SummarizationSetBy = Automatic
+
+	column parque_acoso_hombres
+		dataType: double
+		formatString: 0.0
+		lineageTag: 168d90f3-69f8-5a29-8e00-a6f5d3fae3dc
+		summarizeBy: none
+		sourceColumn: parque_acoso_hombres
+
+		annotation SummarizationSetBy = Automatic
+
+	column presencio_acoso
+		dataType: double
+		formatString: 0.0
+		lineageTag: 643cfb79-7122-58f4-9a02-5c95e04bf3b4
+		summarizeBy: none
+		sourceColumn: presencio_acoso
+
+		annotation SummarizationSetBy = Automatic
+
+	column presencio_acoso_ee
+		dataType: double
+		formatString: 0.0
+		lineageTag: 739b2919-49f8-530e-baee-f883edc66b49
+		summarizeBy: none
+		sourceColumn: presencio_acoso_ee
+
+		annotation SummarizationSetBy = Automatic
+
+	column presencio_acoso_mujeres
+		dataType: double
+		formatString: 0.0
+		lineageTag: 2f058552-65c2-5a76-afd7-40b10fb22217
+		summarizeBy: none
+		sourceColumn: presencio_acoso_mujeres
+
+		annotation SummarizationSetBy = Automatic
+
+	column presencio_acoso_hombres
+		dataType: double
+		formatString: 0.0
+		lineageTag: 8c87838f-8d43-58e9-bece-a6d353a18ab3
+		summarizeBy: none
+		sourceColumn: presencio_acoso_hombres
+
+		annotation SummarizationSetBy = Automatic
+
+	column emv_victima
+		dataType: double
+		formatString: 0.0
+		lineageTag: ba0ed4a2-dd99-547b-a007-e09ba4096ad2
+		summarizeBy: none
+		sourceColumn: emv_victima
+
+		annotation SummarizationSetBy = Automatic
+
+	column emv_victima_ee
+		dataType: double
+		formatString: 0.0
+		lineageTag: 5c6b7eb1-68b5-5a5e-ba31-684ec0806eb5
+		summarizeBy: none
+		sourceColumn: emv_victima_ee
+
+		annotation SummarizationSetBy = Automatic
+
+	column emv_barrio_inseguro
+		dataType: double
+		formatString: 0.0
+		lineageTag: 8bb8b0f1-c237-51fe-82af-3b4bd818ab15
+		summarizeBy: none
+		sourceColumn: emv_barrio_inseguro
+
+		annotation SummarizationSetBy = Automatic
+
+	column emv_barrio_inseguro_ee
+		dataType: double
+		formatString: 0.0
+		lineageTag: 2255b390-f695-59e9-921a-8622f52bf5ae
+		summarizeBy: none
+		sourceColumn: emv_barrio_inseguro_ee
+
+		annotation SummarizationSetBy = Automatic
+
+	column emv_no_sale_noche
+		dataType: double
+		formatString: 0.0
+		lineageTag: e3eeb86d-ea9e-541b-8ee0-beb64a4f783f
+		summarizeBy: none
+		sourceColumn: emv_no_sale_noche
+
+		annotation SummarizationSetBy = Automatic
+
+	column emv_no_sale_noche_ee
+		dataType: double
+		formatString: 0.0
+		lineageTag: e9c83d55-497d-5ce4-ad9f-91d264dbdb1e
+		summarizeBy: none
+		sourceColumn: emv_no_sale_noche_ee
+
+		annotation SummarizationSetBy = Automatic
+
+	column emv_teme_acoso_sexual
+		dataType: double
+		formatString: 0.0
+		lineageTag: 4ecadacb-2d0f-58d2-a0c1-6a617ee3da8c
+		summarizeBy: none
+		sourceColumn: emv_teme_acoso_sexual
+
+		annotation SummarizationSetBy = Automatic
+
+	column emv_teme_acoso_sexual_ee
+		dataType: double
+		formatString: 0.0
+		lineageTag: b7e2f462-1312-531c-9411-ff7ede7a7418
+		summarizeBy: none
+		sourceColumn: emv_teme_acoso_sexual_ee
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Delitos de alto impacto registrados por 100.000 habitantes (SCJ, ene-ago 2025, sin lesiones personales).
+	column delitos_alto_impacto_100k
+		dataType: double
+		formatString: 0.0
+		lineageTag: 1e36ee0e-90e7-5e53-8123-7ea811b0bc1a
+		summarizeBy: none
+		sourceColumn: delitos_alto_impacto_100k
+
+		annotation SummarizationSetBy = Automatic
+
+	column hurtos_100k
+		dataType: double
+		formatString: 0.0
+		lineageTag: 74cf4971-cf61-53b7-814f-921194dc44ca
+		summarizeBy: none
+		sourceColumn: hurtos_100k
+
+		annotation SummarizationSetBy = Automatic
+
+	column homicidios_100k
+		dataType: double
+		formatString: 0.0
+		lineageTag: 65176ac7-13ce-5ef3-8e47-06768fdf0751
+		summarizeBy: none
+		sourceColumn: homicidios_100k
+
+		annotation SummarizationSetBy = Automatic
+
+	column vif_ds_100k_mujeres
+		dataType: double
+		formatString: 0.0
+		lineageTag: 70f80cee-54b0-5c6c-8c0c-5205e4b59736
+		summarizeBy: none
+		sourceColumn: vif_ds_100k_mujeres
+
+		annotation SummarizationSetBy = Automatic
+
+	column incidentes_narcoticos_100k
+		dataType: double
+		formatString: 0.0
+		lineageTag: 95695213-50e0-5650-9c87-a759ab4eda3e
+		summarizeBy: none
+		sourceColumn: incidentes_narcoticos_100k
+
+		annotation SummarizationSetBy = Automatic
+
+	column incidentes_rinas_100k
+		dataType: double
+		formatString: 0.0
+		lineageTag: 868b69fc-68e6-508b-a707-b8865cc078ab
+		summarizeBy: none
+		sourceColumn: incidentes_rinas_100k
+
+		annotation SummarizationSetBy = Automatic
+
+	column incidentes_maltrato_mujer_100k
+		dataType: double
+		formatString: 0.0
+		lineageTag: c4119cce-d008-5335-9be3-f601e2a98178
+		summarizeBy: none
+		sourceColumn: incidentes_maltrato_mujer_100k
+
+		annotation SummarizationSetBy = Automatic
+
+	column area_km2
+		dataType: double
+		formatString: #,0.0
+		lineageTag: bdc4f40b-850a-5bd9-b76c-c33ca1fc3233
+		summarizeBy: none
+		sourceColumn: area_km2
+
+		annotation SummarizationSetBy = Automatic
+
+	column luminarias_km2_2019
+		dataType: double
+		formatString: #,0.0
+		lineageTag: 2ec446c4-9b72-5483-b412-db2355cb31ea
+		summarizeBy: none
+		sourceColumn: luminarias_km2_2019
+
+		annotation SummarizationSetBy = Automatic
+
+	column ep_efectivo_m2_hab
+		dataType: double
+		formatString: 0.0
+		lineageTag: 9c3b2747-5510-5834-9c06-58d858431185
+		summarizeBy: none
+		sourceColumn: ep_efectivo_m2_hab
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Índice de Brecha de Seguridad = z(% zona insegura) - z(log delitos de alto impacto por 100 mil). Positivo: más miedo del que explica el delito registrado.
+	column ibs
+		dataType: double
+		formatString: 0.00
+		lineageTag: 47753456-cf75-5d91-b2af-b886b37ef41c
+		summarizeBy: none
+		sourceColumn: ibs
+
+		annotation SummarizationSetBy = Automatic
+
+	column ibs_p05
+		dataType: double
+		formatString: 0.00
+		lineageTag: 6cddfa0d-8057-5484-8c70-a253d88c5d38
+		summarizeBy: none
+		sourceColumn: ibs_p05
+
+		annotation SummarizationSetBy = Automatic
+
+	column ibs_p95
+		dataType: double
+		formatString: 0.00
+		lineageTag: d37661ac-23c3-5fea-96f6-7b19f6dbfb9b
+		summarizeBy: none
+		sourceColumn: ibs_p95
+
+		annotation SummarizationSetBy = Automatic
+
+	column puesto
+		dataType: int64
+		formatString: 0
+		lineageTag: 31d04f26-03de-5e2e-a1ed-03a5268fc984
+		summarizeBy: none
+		sourceColumn: puesto
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Proporción de réplicas bootstrap en que la localidad queda entre las 5 de mayor Índice de Brecha.
+	column prob_top5
+		dataType: double
+		formatString: 0 %
+		lineageTag: 0b608884-fe44-5657-81ba-d0f853ec0684
+		summarizeBy: none
+		sourceColumn: prob_top5
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Víctimas estimadas (EMV 2024) por cada delito de alto impacto registrado (SCJ 2024).
+	column cifra_oculta
+		dataType: double
+		formatString: 0.0
+		lineageTag: ad1789b4-ae25-5608-b826-a86906b23e77
+		summarizeBy: none
+		sourceColumn: cifra_oculta
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Localidades = m
+		mode: import
+		source =
+				let
+				    Carpeta = if Text.EndsWith(RutaDatos, "\") then RutaDatos else RutaDatos & "\",
+				    Origen = Csv.Document(File.Contents(Carpeta & "dim_localidad_indicadores.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars = true]),
+				    Tipos = Table.TransformColumnTypes(Encabezados, {{"localidad", Int64.Type}, {"nombre", type text}, {"poblacion", Int64.Type}, {"zona_insegura", type number}, {"zona_insegura_ee", type number}, {"zona_insegura_mujeres", type number}, {"zona_insegura_hombres", type number}, {"ciudad_insegura", type number}, {"ciudad_insegura_ee", type number}, {"ciudad_insegura_mujeres", type number}, {"ciudad_insegura_hombres", type number}, {"ciudad_peor_que_antes", type number}, {"ciudad_peor_que_antes_ee", type number}, {"ciudad_peor_que_antes_mujeres", type number}, {"ciudad_peor_que_antes_hombres", type number}, {"miedo_espacio_publico", type number}, {"miedo_espacio_publico_ee", type number}, {"miedo_espacio_publico_mujeres", type number}, {"miedo_espacio_publico_hombres", type number}, {"alumbrado_malo", type number}, {"alumbrado_malo_ee", type number}, {"alumbrado_malo_mujeres", type number}, {"alumbrado_malo_hombres", type number}, {"parque_spa", type number}, {"parque_spa_ee", type number}, {"parque_spa_mujeres", type number}, {"parque_spa_hombres", type number}, {"parque_acoso", type number}, {"parque_acoso_ee", type number}, {"parque_acoso_mujeres", type number}, {"parque_acoso_hombres", type number}, {"presencio_acoso", type number}, {"presencio_acoso_ee", type number}, {"presencio_acoso_mujeres", type number}, {"presencio_acoso_hombres", type number}, {"emv_victima", type number}, {"emv_victima_ee", type number}, {"emv_barrio_inseguro", type number}, {"emv_barrio_inseguro_ee", type number}, {"emv_no_sale_noche", type number}, {"emv_no_sale_noche_ee", type number}, {"emv_teme_acoso_sexual", type number}, {"emv_teme_acoso_sexual_ee", type number}, {"delitos_alto_impacto_100k", type number}, {"hurtos_100k", type number}, {"homicidios_100k", type number}, {"vif_ds_100k_mujeres", type number}, {"incidentes_narcoticos_100k", type number}, {"incidentes_rinas_100k", type number}, {"incidentes_maltrato_mujer_100k", type number}, {"area_km2", type number}, {"luminarias_km2_2019", type number}, {"ep_efectivo_m2_hab", type number}, {"ibs", type number}, {"ibs_p05", type number}, {"ibs_p95", type number}, {"puesto", Int64.Type}, {"prob_top5", type number}, {"cifra_oculta", type number}}, "en-US")
+				in
+				    Tipos
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,25 @@
+model Model
+	culture: es-CO
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: es-CO
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["RutaDatos", "Localidades", "Delitos", "Efectos marginales", "AUC por bloque", "Género", "Bogotá", "Medidas"]
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Localidades
+ref table Delitos
+ref table 'Efectos marginales'
+ref table 'AUC por bloque'
+ref table Género
+ref table Bogotá
+ref table Medidas
+
+ref cultureInfo es-CO
+

@@ -1,0 +1,99 @@
+﻿codigo,tipo,anio,casos
+DS,Delitos sexuales,2018,3593.0
+DS,Delitos sexuales,2019,4167.0
+DS,Delitos sexuales,2020,3209.0
+DS,Delitos sexuales,2021,3955.0
+DS,Delitos sexuales,2022,4575.0
+DS,Delitos sexuales,2023,3906.0
+DS,Delitos sexuales,2024,6433.0
+DS,Delitos sexuales,2025,5981.0
+DS,Delitos sexuales,2026,5224.0
+H,Homicidios,2018,684.0
+H,Homicidios,2019,656.0
+H,Homicidios,2020,654.0
+H,Homicidios,2021,763.0
+H,Homicidios,2022,658.0
+H,Homicidios,2023,712.0
+H,Homicidios,2024,747.0
+H,Homicidios,2025,799.0
+H,Homicidios,2026,740.0
+HA,Hurto de automotores,2018,4826.0
+HA,Hurto de automotores,2019,4876.0
+HA,Hurto de automotores,2020,4054.0
+HA,Hurto de automotores,2021,4682.0
+HA,Hurto de automotores,2022,4675.0
+HA,Hurto de automotores,2023,2800.0
+HA,Hurto de automotores,2024,2945.0
+HA,Hurto de automotores,2025,2176.0
+HA,Hurto de automotores,2026,2029.0
+HB,Hurto de bicicletas,2018,5349.0
+HB,Hurto de bicicletas,2019,5226.0
+HB,Hurto de bicicletas,2020,7148.0
+HB,Hurto de bicicletas,2021,6738.0
+HB,Hurto de bicicletas,2022,5560.0
+HB,Hurto de bicicletas,2023,5428.0
+HB,Hurto de bicicletas,2024,5193.0
+HB,Hurto de bicicletas,2025,4661.0
+HB,Hurto de bicicletas,2026,5133.0
+HC,Hurto a comercio,2018,45079.0
+HC,Hurto a comercio,2019,39779.0
+HC,Hurto a comercio,2020,30342.0
+HC,Hurto a comercio,2021,36621.0
+HC,Hurto a comercio,2022,38042.0
+HC,Hurto a comercio,2023,36932.0
+HC,Hurto a comercio,2024,27120.0
+HC,Hurto a comercio,2025,23027.0
+HC,Hurto a comercio,2026,24374.0
+HCE,Hurto de celulares,2018,5514.0
+HCE,Hurto de celulares,2019,5396.0
+HCE,Hurto de celulares,2020,4290.0
+HCE,Hurto de celulares,2021,6516.0
+HCE,Hurto de celulares,2022,6555.0
+HCE,Hurto de celulares,2023,3708.0
+HCE,Hurto de celulares,2024,3895.0
+HCE,Hurto de celulares,2025,3060.0
+HCE,Hurto de celulares,2026,2923.0
+HM,Hurto de motocicletas,2018,27634.0
+HM,Hurto de motocicletas,2019,27347.0
+HM,Hurto de motocicletas,2020,18012.0
+HM,Hurto de motocicletas,2021,17337.0
+HM,Hurto de motocicletas,2022,15453.0
+HM,Hurto de motocicletas,2023,9033.0
+HM,Hurto de motocicletas,2024,7766.0
+HM,Hurto de motocicletas,2025,6296.0
+HM,Hurto de motocicletas,2026,5805.0
+HP,Hurto a personas,2018,170219.0
+HP,Hurto a personas,2019,210160.0
+HP,Hurto a personas,2020,128255.0
+HP,Hurto a personas,2021,159145.0
+HP,Hurto a personas,2022,178532.0
+HP,Hurto a personas,2023,106736.0
+HP,Hurto a personas,2024,85924.0
+HP,Hurto a personas,2025,84225.0
+HP,Hurto a personas,2026,73563.0
+HR,Hurto a residencias,2018,19486.0
+HR,Hurto a residencias,2019,18624.0
+HR,Hurto a residencias,2020,15904.0
+HR,Hurto a residencias,2021,15121.0
+HR,Hurto a residencias,2022,9866.0
+HR,Hurto a residencias,2023,5518.0
+HR,Hurto a residencias,2024,4171.0
+HR,Hurto a residencias,2025,4014.0
+HR,Hurto a residencias,2026,4289.0
+LP,Lesiones personales,2018,19167.0
+LP,Lesiones personales,2019,15830.0
+LP,Lesiones personales,2020,9998.0
+LP,Lesiones personales,2021,14811.0
+LP,Lesiones personales,2022,13855.0
+LP,Lesiones personales,2023,12438.0
+LP,Lesiones personales,2024,12140.0
+LP,Lesiones personales,2025,12431.0
+VI,Violencia intrafamiliar,2018,23854.0
+VI,Violencia intrafamiliar,2019,23165.0
+VI,Violencia intrafamiliar,2020,24501.0
+VI,Violencia intrafamiliar,2021,23157.0
+VI,Violencia intrafamiliar,2022,23085.0
+VI,Violencia intrafamiliar,2023,20251.0
+VI,Violencia intrafamiliar,2024,26870.0
+VI,Violencia intrafamiliar,2025,29440.0
+VI,Violencia intrafamiliar,2026,34859.0

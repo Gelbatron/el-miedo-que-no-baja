@@ -1,0 +1,65 @@
+table Bogotá
+	lineageTag: f801abaa-5692-5b94-a4cf-d6239c9f25a2
+
+	column indicador
+		dataType: string
+		lineageTag: 492400e6-ab50-58a8-97e1-bfcb77c4dfec
+		summarizeBy: none
+		sourceColumn: indicador
+
+		annotation SummarizationSetBy = Automatic
+
+	column descripcion
+		dataType: string
+		lineageTag: 728aeeb5-8fc1-5ec6-8478-fb5e97d317f3
+		summarizeBy: none
+		sourceColumn: descripcion
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor
+		dataType: double
+		formatString: 0.0
+		lineageTag: 3ecb5933-5f7b-504e-b8e6-8b5ddb688b82
+		summarizeBy: none
+		sourceColumn: valor
+
+		annotation SummarizationSetBy = Automatic
+
+	column unidad
+		dataType: string
+		lineageTag: f49955be-e246-5aa8-996d-245e8a62e2d3
+		summarizeBy: none
+		sourceColumn: unidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column fuente
+		dataType: string
+		lineageTag: 8029f01e-80fa-579c-b157-3bb34a02ab73
+		summarizeBy: none
+		sourceColumn: fuente
+
+		annotation SummarizationSetBy = Automatic
+
+	column origen
+		dataType: string
+		lineageTag: 6f544ab7-3964-5acb-b893-bda38dfd6592
+		summarizeBy: none
+		sourceColumn: origen
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Bogotá = m
+		mode: import
+		source =
+				let
+				    Carpeta = if Text.EndsWith(RutaDatos, "\") then RutaDatos else RutaDatos & "\",
+				    Origen = Csv.Document(File.Contents(Carpeta & "dim_bogota.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars = true]),
+				    Tipos = Table.TransformColumnTypes(Encabezados, {{"indicador", type text}, {"descripcion", type text}, {"valor", type number}, {"unidad", type text}, {"fuente", type text}, {"origen", type text}}, "en-US")
+				in
+				    Tipos
+
+	annotation PBI_ResultType = Table
+

@@ -35,7 +35,7 @@ export default function Datos() {
           <h3>Entregables del DataJam</h3>
           <ul style={{ margin: 0, paddingLeft: "1.2em", display: "grid", gap: 8, color: "var(--tinta-2)" }}>
             <li>Notebook, repositorio, formulario, nota técnica, presentación y ficha del indicador: <a href="/entregables">página Entregables</a>.</li>
-            <li>Tablero de Power BI: carpeta <span className="mono">powerbi/</span> del repositorio.</li>
+            <li>Tablero de Power BI: <a href="/entregables/ElMiedoQueNoBaja.pbix" download>ElMiedoQueNoBaja.pbix</a> (también como proyecto PBIP en la carpeta <span className="mono">powerbi/</span> del repositorio).</li>
           </ul>
         </div>
         <div className="tarjeta">

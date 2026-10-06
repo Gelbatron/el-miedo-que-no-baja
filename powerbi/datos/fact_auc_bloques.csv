@@ -1,0 +1,7 @@
+﻿bloque,variables,auc,auc_sd,pliegues
+"Perfil (sexo, edad, estrato, tenencia)","mujer, edad, estrato, arrienda",0.6085785720666519,0.022877587856057334,25
+Perfil + delito registrado,"mujer, edad, estrato, arrienda, hurtos_100k_miles, homicidios_100k, narcoticos_100k_cientos",0.6113259930946809,0.020660159963311588,25
+Perfil + hechos del entorno,"mujer, edad, estrato, arrienda, parque_atracos, parque_spa, sin_parque, presencio_acoso, conflictos_vecinos",0.654627712382383,0.023635899404105612,25
+Perfil + hechos + delito,"mujer, edad, estrato, arrienda, parque_atracos, parque_spa, sin_parque, presencio_acoso, conflictos_vecinos, hurtos_100k_miles, homicidios_100k, narcoticos_100k_cientos",0.6564479793978313,0.022964694190029823,25
+Perfil + calificación del entorno,"mujer, edad, estrato, arrienda, alumbrado_malo, ventas_informales_malo",0.7548208448917763,0.01628297662595898,25
+Todo,"mujer, edad, estrato, arrienda, hurtos_100k_miles, homicidios_100k, narcoticos_100k_cientos, parque_atracos, parque_spa, sin_parque, presencio_acoso, conflictos_vecinos, alumbrado_malo, ventas_informales_malo",0.7824976181276108,0.017395953005261894,25

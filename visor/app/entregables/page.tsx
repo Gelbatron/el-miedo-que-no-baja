@@ -22,7 +22,7 @@ const ITEMS: Item[] = [
     titulo: "Visualización o visor interpretativo",
     detalle: "Este visor (mapas, brecha, modelos, género, simulador, indicador) con descargas CSV y GeoJSON, y el tablero de Power BI en la carpeta powerbi/ del repositorio.",
     ver: "/",
-    descargar: [{ href: "/datos", formato: "CSV y GeoJSON" }, { href: `${REPO}/tree/main/powerbi`, formato: "Power BI" }],
+    descargar: [{ href: "/entregables/ElMiedoQueNoBaja.pbix", formato: "Power BI (.pbix)" }, { href: "/datos", formato: "CSV y GeoJSON" }],
     requisito: "TdR 11.3",
   },
   {
