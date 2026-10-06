@@ -2,7 +2,7 @@
 import { D, R, fmt, signo } from "@/lib/datos";
 import { C } from "@/lib/clase";
 import { Motor, type Diapo } from "./Motor";
-import { CifraOculta, Datos, Indice, Paradoja, Portada, Termometros } from "./diapos-a";
+import { BOGOTA, CifraOculta, Datos, Indice, Paradoja, Portada, Termometros } from "./diapos-a";
 import { Cierre, Genero, Prediccion, Propuesta, Repeticiones, SimuladorClase, Vecinos } from "./diapos-b";
 
 const AME = Object.fromEntries(D.ame.m_hechos.map((f) => [f.variable, f]));
@@ -82,7 +82,7 @@ export const DIAPOS: Diapo[] = [
   {
     id: "cifra-oculta", corto: "Hallazgo 1 · cifra oculta", ante: "5 · Hallazgo 1", titulo: "Donde sobra miedo, el delito no se está registrando", pasos: 3,
     quien: "Rafael", tiempo: "2:25-3:05",
-    nota: `Primer hallazgo: por cada delito registrado hay ${fmt(R.cifra_oculta_bogota)} víctimas según la Encuesta Mundial de Valores; en Bosa, 10,6 (cambien el selector). (→) Y donde hay más miedo que registro, hay más delito sin registrar: correlación de 0,72. (→) ¿Casualidad? Probamos siete relaciones y solo esta sobrevive a la corrección por pruebas múltiples. El miedo de la periferia no es exagerado: es delito que no llega a las cifras.`,
+    nota: `Primer hallazgo. Hagamos la cuenta en tres pasos (señálenlos): el ${fmt(BOGOTA.emv_victima)} % de los adultos dice haber sido víctima de un delito en el último año, unos ${fmt(Math.round(BOGOTA.victimas_estimadas / 1e5) / 10, 1)} millones de personas; la Secretaría registró unos ${fmt(Math.round(BOGOTA.delitos_registrados / 1e3), 0)} mil delitos. Por cada 100 víctimas, el registro tiene ${fmt(100 / BOGOTA.razon, 0)} delitos. (Cambien el selector a Bosa: ${fmt(100 / bosa.razon, 0)} de cada 100.) (→) Y donde hay más miedo que registro, más delito se queda sin registrar: correlación de 0,72. (→) ¿Casualidad? Probamos siete relaciones y solo esta sobrevive a la corrección por pruebas múltiples. El miedo de la periferia no es exagerado: es delito que no llega a las cifras.`,
     profundizar: (
       <>
         <h3>Cifra oculta y pruebas múltiples</h3>
