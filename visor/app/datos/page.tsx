@@ -34,10 +34,8 @@ export default function Datos() {
         <div className="tarjeta">
           <h3>Entregables del DataJam</h3>
           <ul style={{ margin: 0, paddingLeft: "1.2em", display: "grid", gap: 8, color: "var(--tinta-2)" }}>
-            <li>Repositorio con notebook reproducible, scripts, datos y documentación (enlace en el correo de entrega).</li>
+            <li>Notebook, repositorio, formulario, nota técnica, presentación y ficha del indicador: <a href="/entregables">página Entregables</a>.</li>
             <li>Tablero de Power BI: carpeta <span className="mono">powerbi/</span> del repositorio.</li>
-            <li>Nota técnica de integración de datos (PDF, 1 página): <span className="mono">docs/</span>.</li>
-            <li>Formulario de caracterización diligenciado: <span className="mono">docs/</span>.</li>
           </ul>
         </div>
         <div className="tarjeta">

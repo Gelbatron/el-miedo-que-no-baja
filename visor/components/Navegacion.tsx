@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 const RUTAS = [
   ["/", "Resumen"], ["/mapa", "Mapa"], ["/brecha", "La brecha"], ["/que-explica", "Qué la explica"],
   ["/genero", "Género"], ["/tendencia", "Tendencia"], ["/simulador", "Simulador"], ["/indicador", "Indicador"],
-  ["/metodologia", "Método"], ["/datos", "Datos"],
+  ["/metodologia", "Método"], ["/datos", "Datos"], ["/entregables", "Entregables"],
 ] as const;
 
 export function Navegacion() {
