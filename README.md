@@ -78,7 +78,7 @@ La localidad de cada registro de la EMV no viene en el archivo publicado. Se rec
 Requisitos: Python 3.11 o superior. El visor necesita además Node 20 o superior.
 
 ```bash
-git clone <url-del-repositorio> && cd el-miedo-que-no-baja
+git clone https://github.com/rlondono1620-max/el-miedo-que-no-baja.git && cd el-miedo-que-no-baja
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
@@ -91,6 +91,7 @@ jupyter notebook notebooks/el_miedo_que_no_baja.ipynb
 
 - **Descarga de datos:** `src/fuentes.py` baja cada fuente desde su servicio oficial y la deja en `data/crudos/`, con registro de URL, fecha y sha1. Si el archivo ya existe, usa la copia local, así que el análisis corre sin red con los datos incluidos en el repositorio.
 - **Resultados idénticos:** las semillas están fijas, así que dos corridas dan las mismas cifras.
+- **En Windows:** clona en una ruta corta (por ejemplo `C:\proyectos\el-miedo-que-no-baja`) o habilita las rutas largas del sistema. Algunas dependencias, como scikit-learn, tienen rutas internas muy profundas y su instalación falla en silencio si se supera el límite de 260 caracteres.
 
 ## 6. Despliegue del visor
 

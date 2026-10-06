@@ -23,7 +23,7 @@ Enviamos la entrega final del equipo **The data squad** (#16) para el Bogotá Da
 - Samuel Esteban Riveros Cubides
 
 **Enlaces:**
-- **Repositorio:** [ENLACE AL REPOSITORIO]. Contiene el notebook reproducible, los scripts, los datos, el README con las instrucciones de ejecución y despliegue, el tablero de Power BI y la documentación.
+- **Repositorio:** https://github.com/rlondono1620-max/el-miedo-que-no-baja. Contiene el notebook reproducible, los scripts, los datos, el README con las instrucciones de ejecución y despliegue, el tablero de Power BI y la documentación.
 - **Visor desplegado:** https://el-miedo-que-no-baja.vercel.app (clave de acceso: **[CLAVE]**).
 
 **Adjuntos de este correo:**
