@@ -55,7 +55,7 @@ export const DIAPOS: Diapo[] = [
         <h3>Cómo se calcula la cifra oculta</h3>
         <p><b>Víctimas:</b> % de adultos que dicen haber sido víctimas en el último año (Encuesta Mundial de Valores 2024) × adultos de la localidad (SDP). <b>Delitos:</b> registro de la Secretaría de Seguridad en 2024, enero a agosto llevado a 12 meses.</p>
         <p>Compara personas con hechos, así que se lee como orden de magnitud. Con 96 encuestas por localidad, cada razón lleva su intervalo: Bosa {fmt(bosa.razon)} víctimas por delito (IC 95 % de {fmt(bosa.razon_inf)} a {fmt(bosa.razon_sup)}).</p>
-        <p>En el centro (Los Mártires, La Candelaria) se registran tantos delitos como víctimas residentes o más: allí llega gente de toda la ciudad.</p>
+        <p><b>Dónde pasa y dónde vive:</b> la encuesta pregunta si la persona fue víctima, sin decir dónde; el registro cuenta dónde ocurrió el delito. Al centro (Los Mártires, La Candelaria, Santa Fe, Chapinero) llega gente de toda la ciudad, así que allí la razón sale baja, y en la periferia puede salir alta. En el total de Bogotá ese efecto se compensa: por eso la cifra principal es la de la ciudad.</p>
       </>
     ),
     render: () => <CifraOculta />,
@@ -119,6 +119,7 @@ export const DIAPOS: Diapo[] = [
         <h3>Pruebas múltiples</h3>
         <p>Cruzamos siete pares de indicadores entre localidades (miedo y delito, víctimas y delito, alumbrado y luminarias, entre otros). Con siete pruebas, alguna saldría «significativa» por puro azar.</p>
         <p>La corrección de Benjamini-Hochberg ajusta los valores p por el número de pruebas. Solo el Índice de Brecha frente a la cifra oculta queda bajo 0,05 (p ajustado 0,004).</p>
+        <p><b>Límite:</b> parte de la razón alta de la periferia puede venir de residentes que son víctimas en otras localidades (el registro cuenta dónde pasa el delito). Por eso se lee como señal fuerte, no como medida exacta, y por eso proponemos encuestas de victimización por UPL que pregunten dónde ocurrió.</p>
       </>
     ),
     render: (p) => <Prueba paso={p} />,

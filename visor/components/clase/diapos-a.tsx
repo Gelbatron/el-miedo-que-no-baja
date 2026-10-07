@@ -474,14 +474,46 @@ export function CifraOculta() {
           )}
         </PasoCuenta>
       </div>
-      <div style={{ display: "grid", gap: 10, alignContent: "start", justifyItems: "start" }}>
-        <p className="cl-clave">Por cada <span style={{ color: "var(--percepcion-texto)" }}>100 víctimas</span>, el registro oficial tiene <span style={{ color: "var(--registro-texto)" }}>{fmt(porCien, 0)} delitos</span>.</p>
-        <CienVictimas registrados={k} />
-        <div style={{ display: "flex", gap: 20, fontSize: 16, color: "var(--tinta-2)" }}>
-          <span><b style={{ color: "var(--registro)" }}>●</b> {k} quedan en el registro</span>
-          <span><b style={{ color: "var(--percepcion)" }}>●</b> {100 - k} no llegan a las cifras</span>
+      {f.razon < 1 ? <MasRegistroQueVictimas f={f} /> : (
+        <div style={{ display: "grid", gap: 10, alignContent: "start", justifyItems: "start" }}>
+          <p className="cl-clave">Por cada <span style={{ color: "var(--percepcion-texto)" }}>100 víctimas</span>, el registro oficial tiene <span style={{ color: "var(--registro-texto)" }}>{fmt(porCien, 0)} delitos</span>.</p>
+          <CienVictimas registrados={k} />
+          <div style={{ display: "flex", gap: 20, fontSize: 16, color: "var(--tinta-2)" }}>
+            <span><b style={{ color: "var(--registro)" }}>●</b> {k} quedan en el registro</span>
+            <span><b style={{ color: "var(--percepcion)" }}>●</b> {100 - k} no llegan a las cifras</span>
+          </div>
+          {f.localidad !== 0 && f.razon < 2 && (
+            <p className="cl-txt" style={{ fontSize: 15 }}>Ojo: {f.nombre} está en el centro. Allí también se registran delitos contra gente que vive en otras localidades, así que aquí la cifra oculta sale <b>más baja</b> de lo que es.</p>
+          )}
         </div>
-        {f.razon < 1.05 && <p className="cl-txt" style={{ fontSize: 15 }}>En {f.nombre} se registran tantos delitos como víctimas residentes, o más: allí llega gente de toda la ciudad.</p>}
+      )}
+    </div>
+  );
+}
+
+/** Cuando hay más delitos registrados que víctimas residentes, la cuadrícula engañaría: se comparan las dos cifras y se explica por qué. */
+function MasRegistroQueVictimas({ f }: { f: Oculta }) {
+  const max = Math.max(f.victimas_estimadas, f.delitos_registrados);
+  const barra = (v: number, color: string, texto: string, valor: string) => (
+    <div style={{ display: "grid", gap: 4 }}>
+      <span style={{ fontSize: 16 }}>{texto}</span>
+      <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+        <span style={{ height: 34, width: `${(v / max) * 400}px`, background: color, borderRadius: 6 }} />
+        <b className="cl-num" style={{ fontSize: 26, color }}>{valor}</b>
+      </div>
+    </div>
+  );
+  return (
+    <div style={{ display: "grid", gap: 16, alignContent: "start" }}>
+      <p className="cl-clave">Aquí la cuenta no aplica igual: hay más delitos registrados que víctimas que viven en {f.nombre}.</p>
+      {barra(f.victimas_estimadas, "var(--percepcion)", "Víctimas que viven aquí (encuesta)", `≈ ${fmt(cien(f.victimas_estimadas), 0)}`)}
+      {barra(f.delitos_registrados, "var(--registro)", "Delitos registrados aquí (Secretaría)", `≈ ${fmt(cien(f.delitos_registrados), 0)}`)}
+      <div className="cl-tarjeta" style={{ borderLeft: "6px solid var(--oro)" }}>
+        <b style={{ fontSize: 18 }}>No es que aquí se denuncie todo.</b>
+        <span className="cl-txt" style={{ fontSize: 16 }}>
+          El registro cuenta <b>dónde pasó</b> el delito; la encuesta, <b>dónde vive</b> la víctima. Al centro llega gente de toda la ciudad a trabajar, estudiar y comprar,
+          y muchos de los delitos que se registran aquí son contra personas que viven en otras localidades. Por eso la cifra más sólida es la de toda Bogotá: {fmt(100 / BOGOTA.razon, 0)} de cada 100.
+        </span>
       </div>
     </div>
   );
