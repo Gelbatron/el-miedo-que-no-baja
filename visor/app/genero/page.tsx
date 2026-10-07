@@ -53,7 +53,7 @@ export default function Genero() {
       </section>
 
       <section className="tarjeta">
-        <h2>Mientras el hurto baja, las violencias de género suben</h2>
+        <h2>Mientras el hurto casi no se mueve, las violencias de género suben</h2>
         <p className="nota">Casos registrados por la SCJ entre enero y agosto de cada año, índice 2018 = 100.</p>
         <div className="leyenda">
           <span><i style={{ background: "var(--registro)" }} />Hurto a personas</span>

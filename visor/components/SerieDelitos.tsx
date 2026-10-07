@@ -8,7 +8,7 @@ const TIPOS = Array.from(new Set(D.serie_delitos.map((f) => `${f.codigo}|${f.tip
 const COLORES = ["var(--registro)", "var(--percepcion)", "var(--mujeres)", "var(--hombres)"];
 
 export function SerieDelitos() {
-  const [sel, setSel] = useState<string[]>(["HP", "HM", "HR", "VI"]);
+  const [sel, setSel] = useState<string[]>(["HP", "HR", "VI", "DS"]);
   const [modo, setModo] = useState<"indice" | "casos">("indice");
   const series = sel.slice(0, 4).map((cod, i) => {
     const f = D.serie_delitos.filter((x) => x.codigo === cod).sort((a, b) => a.anio - b.anio);
@@ -16,7 +16,7 @@ export function SerieDelitos() {
     const nombre = TIPOS.find(([c]) => c === cod)?.[1] ?? cod;
     return {
       nombre, color: COLORES[i],
-      puntos: f.map((p) => ({ x: p.anio, y: modo === "indice" ? (p.casos / base) * 100 : p.casos, tip: `<b>${nombre}</b> · ${p.anio}<br>${fmt(p.casos, 0)} casos (ene-ago)<br>Índice ${fmt((p.casos / base) * 100, 0)}` })),
+      puntos: f.map((p) => ({ x: p.anio, y: modo === "indice" ? (p.casos / base) * 100 : p.casos, tip: `<b>${nombre}</b> · ${p.anio}<br>${fmt(p.casos, 0)} casos (ene-ago)<br>Índice ${fmt((p.casos / base) * 100, 0)}<br><small>${p.fuente}</small>` })),
     };
   });
   const alternar = (cod: string) => setSel((s) => (s.includes(cod) ? s.filter((c) => c !== cod) : s.length >= 4 ? [...s.slice(1), cod] : [...s, cod]));
@@ -38,7 +38,8 @@ export function SerieDelitos() {
         ))}
       </div>
       {series.length > 0 && <Lineas series={series} bandas={[BANDA_PANDEMIA]} base={modo === "indice" ? 100 : undefined} ymax={modo === "indice" ? 200 : undefined} unidad={modo === "indice" ? "" : "casos"} />}
-      <p className="nota">Lesiones personales no tiene dato de 2026 en la fuente.</p>
+      <p className="nota">Hurto a personas, residencias y automotores: registro de la Policía (SIEDCO), porque la capa SCJ cambia de escala en 2023. Bicicletas: capa SCJ, sin serie externa para validarla.
+        Comercio, celulares y motocicletas no se muestran: desde 2023 esas columnas de la capa no coinciden con su nombre. Lesiones personales no tiene dato de 2026 en la fuente.</p>
     </section>
   );
 }

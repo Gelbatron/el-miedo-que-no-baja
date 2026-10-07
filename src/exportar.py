@@ -120,7 +120,8 @@ def visor(res: dict, etiquetas: dict) -> Path:
                         "valores": {str(int(u)): round(float(x), 1) for u, x in zip(sub["upz"], sub["tasa"])},
                         "casos": {str(int(u)): int(c) for u, c in zip(sub["upz"], sub["casos"])}}
 
-    serie_del = t["delitos"].groupby(["codigo", "tipo", "anio"], as_index=False)["casos"].sum()
+    import validacion_registro as VR  # serie validada: SIEDCO donde la capa SCJ tiene quiebre
+    serie_del = VR.serie_bogota_validada(t["delitos"])[["codigo", "tipo", "anio", "casos", "fuente", "estado", "casos_capa_scj"]]
     serie_inc = t["incidentes"].groupby(["codigo", "tipo", "anio"], as_index=False)["casos"].sum()
 
     def ame(df):
@@ -175,7 +176,7 @@ def visor(res: dict, etiquetas: dict) -> Path:
     # tablas para Power BI (modelo estrella simple)
     PBI.mkdir(parents=True, exist_ok=True)
     panel.to_csv(PBI / "dim_localidad_indicadores.csv", index=False, encoding="utf-8-sig")
-    serie_del.to_csv(PBI / "fact_delitos_serie.csv", index=False, encoding="utf-8-sig")
+    serie_del[["codigo", "tipo", "anio", "casos"]].to_csv(PBI / "fact_delitos_serie.csv", index=False, encoding="utf-8-sig")
     R["m_hechos"].assign(etiqueta=R["m_hechos"]["variable"].map(etiquetas), modelo="Hechos del entorno").pipe(
         lambda a: pd.concat([a, R["m_calif"].assign(etiqueta=R["m_calif"]["variable"].map(etiquetas), modelo="Con calificaciones")])
     ).to_csv(PBI / "fact_efectos_marginales.csv", index=False, encoding="utf-8-sig")

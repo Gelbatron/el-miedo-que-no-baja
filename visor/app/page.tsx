@@ -1,7 +1,8 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { D, R, fmt, signo } from "@/lib/datos";
-import { BANDA_PANDEMIA, PANDEMIA, enLista } from "@/lib/historia";
+import { BANDA_PANDEMIA, HURTO, PANDEMIA, enLista } from "@/lib/historia";
+import { F } from "@/lib/frentes";
 import { MapaDoble } from "@/components/MapaDoble";
 import { Icono } from "@/components/Iconos";
 import { Lineas } from "@/components/Graficos";
@@ -10,13 +11,14 @@ export default function Historia() {
   const a = R.ame_hechos, w = R.emv_mujer_ame;
   const top5 = new Set((D.ibs as Record<string, number>[]).slice(0, 5).map((f) => Number(f.localidad)));
   const { ancho, alto } = D.geo;
-  const porCien = 100 / R.cifra_oculta_bogota;
+  const porDiez = 10 / R.cifra_oculta_bogota;
   const bosa = (D.cifra_oculta as unknown as { localidad: number; razon: number }[]).find((f) => f.localidad === 7)!;
   const esc = D.escenarios.find((e) => e.grupo === "total" && e.localidad === 0)!;
   const menos50 = esc.p00 - (esc.p00 + esc.p10 + esc.p01 + esc.p11) / 4;
-  const indice = (cod: string, nombre: string, color: string) => {
+  const indice = (cod: string, nombre: string, color: string, capa = false) => {
     const f = D.serie_delitos.filter((x) => x.codigo === cod).sort((p, q) => p.anio - q.anio);
-    return { nombre, color, puntos: f.map((p) => ({ x: p.anio, y: (p.casos / f[0].casos) * 100, tip: `<b>${nombre}</b> · ${p.anio}<br>${fmt(p.casos, 0)} casos (ene-ago)` })) };
+    const v = (p: (typeof f)[number]) => (capa ? p.casos_capa_scj ?? p.casos : p.casos);
+    return { nombre, color, punteada: capa, puntos: f.map((p) => ({ x: p.anio, y: (v(p) / v(f[0])) * 100, tip: `<b>${nombre}</b> · ${p.anio}<br>${fmt(v(p), 0)} casos (ene-ago)` })) };
   };
   return (
     <>
@@ -27,8 +29,8 @@ export default function Historia() {
             <h1>El miedo <em>que no baja</em></h1>
             <div className="heroe-raya" />
             <p className="bajada">
-              Revisamos los datos de la Secretaría de Seguridad: el hurto viene bajando muchísimo. Pero los hechos violentos van al revés y la gente no lo siente.
-              Esta es la historia de esa brecha, en cuatro pasos.
+              La capa abierta de la Secretaría de Seguridad dice que el hurto cayó {fmt(Math.abs(HURTO.capa2022a2026), 0)} % desde 2022. El registro de la Policía dice {fmt(Math.abs(HURTO.policia2022a2026), 0)} %.
+              La violencia sube y 3 de cada 4 personas sienten insegura la ciudad. Esta es la historia de por qué el miedo no baja, en cuatro pasos.
             </p>
             <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
               <a className="boton blanco" href="#historia">Empezar la historia ↓</a>
@@ -48,12 +50,12 @@ export default function Historia() {
 
       <div className="contenedor">
         <section className="cifras-heroe">
-          <Cifra etiqueta="El hurto baja muchísimo · SCJ" valor={`${signo(R.hurto_personas.cambio_pct, 0)} %`} tono="registro"
-            texto={`hurto a personas registrado entre enero y agosto, de ${fmt(R.hurto_personas["2019"], 0)} casos en 2019 a ${fmt(R.hurto_personas["2026"], 0)} en 2026.`} />
-          <Cifra etiqueta="Pero la gente no lo siente · Bienal 2025" valor={`${fmt(R.ciudad_insegura_pct, 0)} %`} tono="percepcion"
+          <Cifra etiqueta="El hurto, según la Policía" valor={`${signo(HURTO.policia2022a2026, 0)} %`} tono="registro"
+            texto={`desde 2022, enero a agosto (${fmt(HURTO.policia2022, 0)} → ${fmt(HURTO.policia2026, 0)} casos). La capa abierta de la SCJ dice ${signo(HURTO.capa2022a2026, 0)} %: tiene un quiebre en 2023.`} />
+          <Cifra etiqueta="Y la gente lo siente · Bienal 2025" valor={`${fmt(R.ciudad_insegura_pct, 0)} %`} tono="percepcion"
             texto="dice que Bogotá es insegura: 3 de cada 4 personas." />
-          <Cifra etiqueta="Y mucho delito no se denuncia" valor={`${fmt(porCien, 0)} de 100`} tono="vino" compacto
-            texto="víctimas tiene su delito en el registro oficial. Las otras no llegan a las cifras." />
+          <Cifra etiqueta="Y mucho delito no se denuncia" valor={`${fmt(porDiez, 1)} de 10`} tono="vino" compacto
+            texto="víctimas tiene su delito en el registro oficial. Las demás no llegan a las cifras." />
         </section>
       </div>
 
@@ -66,31 +68,33 @@ export default function Historia() {
             </h2>
           </div>
 
-          <Acto n={1} nombre="El problema" frase="En el papel, Bogotá mejora. La gente no lo siente.">
+          <Acto n={1} nombre="El problema" frase="En el papel, Bogotá mejora. ¿De verdad?">
             <p className="relato">
-              Resulta que estuvimos revisando los datos de la Secretaría de Seguridad y el hurto a personas viene bajando muchísimo: <b>{signo(R.hurto_personas.cambio_pct, 0)} % desde 2019</b>.
-              Pero hay hechos violentos que van al revés: la <b>violencia intrafamiliar subió {fmt(R.vif_cambio_pct_2018_2026, 0)} %</b> y los <b>delitos sexuales {fmt(R.delitos_sexuales_cambio_pct_2018_2026, 0)} %</b> desde 2018.
-              Y cuando lo cruzamos con las encuestas, <b>3 de cada 4 personas dicen que Bogotá es insegura</b>.
+              La capa abierta de la Secretaría de Seguridad dice que el hurto a personas cayó <b>{fmt(Math.abs(HURTO.capa2019a2026), 0)} % desde 2019</b>. Pero el registro de la Policía,
+              el mismo hurto y los mismos meses, dice <b>{signo(HURTO.policia2019a2026, 0)} %</b>: hasta 2022 la capa contaba más del doble, y desde 2023 coinciden caso por caso.
+              Mientras tanto, la <b>violencia intrafamiliar subió {fmt(R.vif_cambio_pct_2018_2026, 0)} %</b> y los <b>delitos sexuales {fmt(R.delitos_sexuales_cambio_pct_2018_2026, 0)} %</b> desde 2018.
+              Y <b>3 de cada 4 personas dicen que Bogotá es insegura</b>. El miedo no contradice los datos.
             </p>
             <div className="tarjeta">
               <div className="leyenda">
-                <span><i style={{ background: "var(--registro)" }} />Hurto a personas</span>
+                <span><i style={{ background: "var(--registro)" }} />Hurto a personas, Policía</span>
+                <span><i style={{ background: "var(--tinta-3)" }} />Hurto, capa abierta SCJ (punteada)</span>
                 <span><i style={{ background: "var(--mujeres)" }} />Violencia intrafamiliar</span>
                 <span><i style={{ background: "var(--vino)" }} />Delitos sexuales</span>
                 <span className="nota">Casos registrados enero-agosto, índice 2018 = 100</span>
               </div>
-              <Lineas base={100} ymax={200} bandas={[BANDA_PANDEMIA]} series={[indice("HP", "Hurto a personas", "var(--registro)"), indice("VI", "Violencia intrafamiliar", "var(--mujeres)"), indice("DS", "Delitos sexuales", "var(--vino)")]} />
+              <Lineas base={100} ymax={200} bandas={[BANDA_PANDEMIA]} series={[indice("HP", "Hurto, Policía", "var(--registro)"), indice("HP", "Hurto, capa SCJ", "var(--tinta-3)", true), indice("VI", "Violencia intrafamiliar", "var(--mujeres)"), indice("DS", "Delitos sexuales", "var(--vino)")]} />
             </div>
             <div className="ojo">
-              <b className="t">Ojo con la pandemia</b>
+              <b className="t">Ojo con la pandemia y con la serie</b>
               <p className="relato" style={{ fontSize: "1.02rem" }}>
-                En 2020 el hurto cayó {fmt(-PANDEMIA.hurto2020, 0)} % por el encierro y en 2022 volvió casi a lo de antes ({fmt(PANDEMIA.hurto2022sobre2019, 0)} % de 2019).
-                Pero desde 2022 siguió bajando: <b>{fmt(-PANDEMIA.hurto2022a2026, 0)} % menos</b>. O sea, no es solo la pandemia. Eso sí: en 2023 cayeron todos los tipos de hurto a la vez,
-                entre {fmt(PANDEMIA.caida2023min, 0)} % y {fmt(PANDEMIA.caida2023max, 0)} % en un solo año. ¿Menos delito o menos denuncia? El registro solo no lo dice.
+                Con la serie de la Policía, en 2020 el hurto cayó {fmt(-PANDEMIA.hurto2020, 0)} % por el encierro y en 2022 volvió al {fmt(PANDEMIA.hurto2022sobre2019, 0)} % de 2019.
+                En 2023 <b>subió {fmt(PANDEMIA.hurto2023, 0)} %</b>, y en 2026 está {fmt(Math.abs(PANDEMIA.hurto2022a2026), 0)} % por debajo de 2022. La capa abierta muestra lo contrario en 2023
+                porque ese año cambia de escala. Lo comprobamos con la Policía, con Medicina Legal y con la encuesta del DANE: la denuncia no cayó, subió.
               </p>
             </div>
             <p className="relato">
-              <b>Y mucho delito ni siquiera se denuncia.</b> Por cada 100 personas que dicen haber sido víctimas, el registro oficial tiene <b>{fmt(porCien, 0)} delitos</b>; en Bosa, {fmt(100 / bosa.razon, 0)}.
+              <b>Y mucho delito ni siquiera se denuncia.</b> De cada 10 personas que dicen haber sido víctimas, el registro oficial tiene <b>{fmt(porDiez, 1)} delitos</b>; en Bosa, {fmt(10 / bosa.razon, 1)}.
               Por eso el mapa de las denuncias no es el mapa del miedo:
             </p>
             <div className="tarjeta"><MapaDoble /></div>
@@ -98,13 +102,13 @@ export default function Historia() {
             <Detalle enlaces={[["/tendencia", "Lo que se registra, año por año"], ["/mapa", "El mapa por indicador"]]} />
           </Acto>
 
-          <Acto n={2} nombre="Lo que hicimos" frase="Juntamos lo que la gente siente con lo que el Estado registra.">
+          <Acto n={2} nombre="Lo que hicimos" frase="Validamos las fuentes entre sí y después las juntamos.">
             <p className="relato">
-              Juntamos siete fuentes públicas: dos encuestas para lo que la gente siente, la Secretaría de Seguridad para lo que el Estado registra, y población, parques y alumbrado.
-              Con eso armamos un <b>índice que dice en qué localidades hay más miedo del que muestran las cifras</b>. Y lo comprobamos de varias formas para no engañarnos.
+              Juntamos {F.confiabilidad.length} fuentes públicas de los cuatro frentes: lo que se registra, lo que la gente vive, lo que siente y las condiciones del entorno. Cada una lleva un <b>score de confiabilidad</b>.
+              Antes de modelar comparamos cada serie con otra independiente, y así apareció el quiebre del hurto. Después armamos un <b>índice que dice en qué localidades hay más miedo del que muestran las cifras</b>.
             </p>
             <div className="rejilla r3">
-              <Paso n="1" titulo="Juntamos todo" texto={`Dos encuestas (${fmt(R.n_bienal, 0)} y ${fmt(R.n_emv_bogota, 0)} personas), los registros de la Secretaría de Seguridad 2018-2026 y datos de población, alumbrado y espacio público, unidos por localidad.`} />
+              <Paso n="1" titulo="Juntamos y validamos" texto={`Encuestas (${fmt(R.n_bienal, 0)} y ${fmt(R.n_emv_bogota, 0)} personas, más el DANE y la Cámara de Comercio), registros de la SCJ, la Policía, Medicina Legal y Salud, y población, alumbrado y espacio público, unidos por localidad.`} />
               <Paso n="2" titulo="Armamos un índice" texto="Pusimos el miedo y el delito en la misma regla y los restamos: así se ve dónde sobra miedo frente a lo que se registra." />
               <Paso n="3" titulo="Lo comprobamos" texto={`Donde sobra miedo, más delito se queda sin denunciar (correlación de ${fmt(R.ibs_vs_cifra_oculta.rho, 2)}), y fue la única de siete relaciones que pasó la prueba contra el azar.`} />
             </div>
@@ -152,8 +156,8 @@ export default function Historia() {
 
       <section className="banda gris">
         <div className="contenedor rejilla r4" style={{ textAlign: "center" }}>
-          {[["7", "fuentes públicas integradas por localidad"], [fmt(R.n_bienal, 0), "adultos en la Bienal de Cultura Ciudadana 2025"],
-            [fmt(R.n_emv_bogota, 0), "encuestas de la EMV 2024 en Bogotá"], ["2018-2026", "series de delitos con el mismo corte"]].map(([v, t]) => (
+          {[[String(F.confiabilidad.length), "fuentes públicas, cada una con su score"], [fmt(R.n_bienal, 0), "adultos en la Bienal de Cultura Ciudadana 2025"],
+            [fmt(R.n_emv_bogota, 0), "encuestas de la EMV 2024 en Bogotá"], ["2018-2026", "series validadas con la Policía y Medicina Legal"]].map(([v, t]) => (
             <div key={t} style={{ display: "grid", gap: 4 }}>
               <b style={{ fontFamily: "var(--f-display)", fontWeight: 800, fontSize: "2rem", color: "var(--rojo)" }}>{v}</b>
               <span className="nota" style={{ fontSize: ".9rem" }}>{t}</span>

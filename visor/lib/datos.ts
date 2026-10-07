@@ -12,7 +12,8 @@ type Datos = {
   valores: Record<string, Record<string, Record<string, number | null>>>;
   upz: Record<string, { nombre: string; valores: Record<string, number>; casos: Record<string, number> }>;
   panel: Fila[];
-  serie_delitos: { codigo: string; tipo: string; anio: number; casos: number }[];
+  /** Serie validada (src/validacion_registro.py): SIEDCO donde la capa SCJ tiene quiebre; `casos_capa_scj` guarda la capa. */
+  serie_delitos: { codigo: string; tipo: string; anio: number; casos: number; fuente: string; estado: string; casos_capa_scj: number | null }[];
   serie_incidentes: { codigo: string; tipo: string; anio: number; casos: number }[];
   ame: Record<"m_hechos" | "m_calif" | "m_ciudad" | "m_miedo", Ame[]>;
   ame_efectos_fijos: Ame[];

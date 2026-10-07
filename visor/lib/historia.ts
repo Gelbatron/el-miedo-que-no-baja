@@ -1,4 +1,5 @@
 import { D } from "./datos";
+import { F } from "./frentes";
 
 /** La historia que cuenta el visor, en el orden en que se recorre. */
 export const ACTOS = ["El problema", "Lo que hicimos", "Lo que encontramos", "Por qué importa", "Para revisar"] as const;
@@ -22,16 +23,31 @@ export const BANDA_PANDEMIA = { desde: 2019.55, hasta: 2021.45, etiqueta: "Pande
 const serie = (cod: string) => Object.fromEntries(D.serie_delitos.filter((f) => f.codigo === cod).map((f) => [f.anio, f.casos])) as Record<number, number>;
 const pct = (a: number, b: number) => (b / a - 1) * 100;
 
-/** El efecto pandemia en el registro, calculado de la serie de la SCJ (enero-agosto). */
-export const PANDEMIA = (() => {
-  const hp = serie("HP"), vi = serie("VI");
-  const caidas2023 = ["HP", "HCE", "HM", "HR", "HA"].map((c) => { const s = serie(c); return -pct(s[2022], s[2023]); });
+/** El hurto a personas en las dos series: la capa abierta de la SCJ y el registro de la Policía (SIEDCO), enero-agosto. */
+export const HURTO = (() => {
+  const h = Object.fromEntries(F.registro.hurto_personas.map((f) => [f.anio, f])) as Record<number, (typeof F.registro.hurto_personas)[number]>;
+  const raz = F.registro.razones.filter((r) => r.codigo === "HP" && r.anio < 2023).map((r) => r.razon_scj_siedco ?? 0);
   return {
-    hurto2020: pct(hp[2019], hp[2020]),
-    hurto2022sobre2019: (hp[2022] / hp[2019]) * 100,
-    hurto2022a2026: pct(hp[2022], hp[2026]),
-    caida2023min: Math.min(...caidas2023),
-    caida2023max: Math.max(...caidas2023),
+    capa2022a2026: pct(h[2022].capa_scj, h[2026].capa_scj),
+    capa2019a2026: pct(h[2019].capa_scj, h[2026].capa_scj),
+    capa2023: pct(h[2022].capa_scj, h[2023].capa_scj),
+    policia2022a2026: pct(h[2022].siedco, h[2026].siedco),
+    policia2019a2026: pct(h[2019].siedco, h[2026].siedco),
+    policia2023: pct(h[2022].siedco, h[2023].siedco),
+    policia2022: h[2022].siedco, policia2026: h[2026].siedco, capa2022: h[2022].capa_scj, capa2026: h[2026].capa_scj,
+    razonMin: Math.min(...raz), razonMax: Math.max(...raz),
+  };
+})();
+
+/** El efecto pandemia en el registro (enero-agosto): hurto con la serie de la Policía; violencia intrafamiliar con la SCJ, validada. */
+export const PANDEMIA = (() => {
+  const vi = serie("VI");
+  const h = Object.fromEntries(F.registro.hurto_personas.map((f) => [f.anio, f.siedco])) as Record<number, number>;
+  return {
+    hurto2020: pct(h[2019], h[2020]),
+    hurto2022sobre2019: (h[2022] / h[2019]) * 100,
+    hurto2022a2026: HURTO.policia2022a2026,
+    hurto2023: HURTO.policia2023,
     vif2020: pct(vi[2019], vi[2020]),
     vif2022a2026: pct(vi[2022], vi[2026]),
   };

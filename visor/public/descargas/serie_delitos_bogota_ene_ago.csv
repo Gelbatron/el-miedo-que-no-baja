@@ -1,99 +1,72 @@
-﻿codigo,tipo,anio,casos
-DS,Delitos sexuales,2018,3593.0
-DS,Delitos sexuales,2019,4167.0
-DS,Delitos sexuales,2020,3209.0
-DS,Delitos sexuales,2021,3955.0
-DS,Delitos sexuales,2022,4575.0
-DS,Delitos sexuales,2023,3906.0
-DS,Delitos sexuales,2024,6433.0
-DS,Delitos sexuales,2025,5981.0
-DS,Delitos sexuales,2026,5224.0
-H,Homicidios,2018,684.0
-H,Homicidios,2019,656.0
-H,Homicidios,2020,654.0
-H,Homicidios,2021,763.0
-H,Homicidios,2022,658.0
-H,Homicidios,2023,712.0
-H,Homicidios,2024,747.0
-H,Homicidios,2025,799.0
-H,Homicidios,2026,740.0
-HA,Hurto de automotores,2018,4826.0
-HA,Hurto de automotores,2019,4876.0
-HA,Hurto de automotores,2020,4054.0
-HA,Hurto de automotores,2021,4682.0
-HA,Hurto de automotores,2022,4675.0
-HA,Hurto de automotores,2023,2800.0
-HA,Hurto de automotores,2024,2945.0
-HA,Hurto de automotores,2025,2176.0
-HA,Hurto de automotores,2026,2029.0
-HB,Hurto de bicicletas,2018,5349.0
-HB,Hurto de bicicletas,2019,5226.0
-HB,Hurto de bicicletas,2020,7148.0
-HB,Hurto de bicicletas,2021,6738.0
-HB,Hurto de bicicletas,2022,5560.0
-HB,Hurto de bicicletas,2023,5428.0
-HB,Hurto de bicicletas,2024,5193.0
-HB,Hurto de bicicletas,2025,4661.0
-HB,Hurto de bicicletas,2026,5133.0
-HC,Hurto a comercio,2018,45079.0
-HC,Hurto a comercio,2019,39779.0
-HC,Hurto a comercio,2020,30342.0
-HC,Hurto a comercio,2021,36621.0
-HC,Hurto a comercio,2022,38042.0
-HC,Hurto a comercio,2023,36932.0
-HC,Hurto a comercio,2024,27120.0
-HC,Hurto a comercio,2025,23027.0
-HC,Hurto a comercio,2026,24374.0
-HCE,Hurto de celulares,2018,5514.0
-HCE,Hurto de celulares,2019,5396.0
-HCE,Hurto de celulares,2020,4290.0
-HCE,Hurto de celulares,2021,6516.0
-HCE,Hurto de celulares,2022,6555.0
-HCE,Hurto de celulares,2023,3708.0
-HCE,Hurto de celulares,2024,3895.0
-HCE,Hurto de celulares,2025,3060.0
-HCE,Hurto de celulares,2026,2923.0
-HM,Hurto de motocicletas,2018,27634.0
-HM,Hurto de motocicletas,2019,27347.0
-HM,Hurto de motocicletas,2020,18012.0
-HM,Hurto de motocicletas,2021,17337.0
-HM,Hurto de motocicletas,2022,15453.0
-HM,Hurto de motocicletas,2023,9033.0
-HM,Hurto de motocicletas,2024,7766.0
-HM,Hurto de motocicletas,2025,6296.0
-HM,Hurto de motocicletas,2026,5805.0
-HP,Hurto a personas,2018,170219.0
-HP,Hurto a personas,2019,210160.0
-HP,Hurto a personas,2020,128255.0
-HP,Hurto a personas,2021,159145.0
-HP,Hurto a personas,2022,178532.0
-HP,Hurto a personas,2023,106736.0
-HP,Hurto a personas,2024,85924.0
-HP,Hurto a personas,2025,84225.0
-HP,Hurto a personas,2026,73563.0
-HR,Hurto a residencias,2018,19486.0
-HR,Hurto a residencias,2019,18624.0
-HR,Hurto a residencias,2020,15904.0
-HR,Hurto a residencias,2021,15121.0
-HR,Hurto a residencias,2022,9866.0
-HR,Hurto a residencias,2023,5518.0
-HR,Hurto a residencias,2024,4171.0
-HR,Hurto a residencias,2025,4014.0
-HR,Hurto a residencias,2026,4289.0
-LP,Lesiones personales,2018,19167.0
-LP,Lesiones personales,2019,15830.0
-LP,Lesiones personales,2020,9998.0
-LP,Lesiones personales,2021,14811.0
-LP,Lesiones personales,2022,13855.0
-LP,Lesiones personales,2023,12438.0
-LP,Lesiones personales,2024,12140.0
-LP,Lesiones personales,2025,12431.0
-VI,Violencia intrafamiliar,2018,23854.0
-VI,Violencia intrafamiliar,2019,23165.0
-VI,Violencia intrafamiliar,2020,24501.0
-VI,Violencia intrafamiliar,2021,23157.0
-VI,Violencia intrafamiliar,2022,23085.0
-VI,Violencia intrafamiliar,2023,20251.0
-VI,Violencia intrafamiliar,2024,26870.0
-VI,Violencia intrafamiliar,2025,29440.0
-VI,Violencia intrafamiliar,2026,34859.0
+﻿codigo,tipo,anio,casos,fuente,estado,casos_capa_scj
+HP,Hurto a personas,2018,67633,Policía Nacional (SIEDCO),quiebre,170219
+HP,Hurto a personas,2019,82390,Policía Nacional (SIEDCO),quiebre,210220
+HP,Hurto a personas,2020,53135,Policía Nacional (SIEDCO),quiebre,128265
+HP,Hurto a personas,2021,68077,Policía Nacional (SIEDCO),quiebre,159153
+HP,Hurto a personas,2022,78419,Policía Nacional (SIEDCO),quiebre,178534
+HP,Hurto a personas,2023,106823,Policía Nacional (SIEDCO),quiebre,106824
+HP,Hurto a personas,2024,86196,Policía Nacional (SIEDCO),quiebre,86196
+HP,Hurto a personas,2025,88116,Policía Nacional (SIEDCO),quiebre,88114
+HP,Hurto a personas,2026,75124,Policía Nacional (SIEDCO),quiebre,75863
+HR,Hurto a residencias,2018,7009,Policía Nacional (SIEDCO),quiebre,19486
+HR,Hurto a residencias,2019,6673,Policía Nacional (SIEDCO),quiebre,18631
+HR,Hurto a residencias,2020,5303,Policía Nacional (SIEDCO),quiebre,15906
+HR,Hurto a residencias,2021,5215,Policía Nacional (SIEDCO),quiebre,15129
+HR,Hurto a residencias,2022,4311,Policía Nacional (SIEDCO),quiebre,9867
+HR,Hurto a residencias,2023,5519,Policía Nacional (SIEDCO),quiebre,5519
+HR,Hurto a residencias,2024,4184,Policía Nacional (SIEDCO),quiebre,4184
+HR,Hurto a residencias,2025,4165,Policía Nacional (SIEDCO),quiebre,4165
+HR,Hurto a residencias,2026,4406,Policía Nacional (SIEDCO),quiebre,4447
+HA,Hurto de automotores,2018,2415,Policía Nacional (SIEDCO),quiebre,4826
+HA,Hurto de automotores,2019,2435,Policía Nacional (SIEDCO),quiebre,4876
+HA,Hurto de automotores,2020,2028,Policía Nacional (SIEDCO),quiebre,4056
+HA,Hurto de automotores,2021,2334,Policía Nacional (SIEDCO),quiebre,4682
+HA,Hurto de automotores,2022,2429,Policía Nacional (SIEDCO),quiebre,4675
+HA,Hurto de automotores,2023,2800,Policía Nacional (SIEDCO),quiebre,2800
+HA,Hurto de automotores,2024,2945,Policía Nacional (SIEDCO),quiebre,2945
+HA,Hurto de automotores,2025,2176,Policía Nacional (SIEDCO),quiebre,2176
+HA,Hurto de automotores,2026,2020,Policía Nacional (SIEDCO),quiebre,2039
+HB,Hurto de bicicletas,2018,5349,SCJ (sin serie externa),sin_validar,5349
+HB,Hurto de bicicletas,2019,5226,SCJ (sin serie externa),sin_validar,5226
+HB,Hurto de bicicletas,2020,7148,SCJ (sin serie externa),sin_validar,7148
+HB,Hurto de bicicletas,2021,6738,SCJ (sin serie externa),sin_validar,6738
+HB,Hurto de bicicletas,2022,5560,SCJ (sin serie externa),sin_validar,5560
+HB,Hurto de bicicletas,2023,5428,SCJ (sin serie externa),sin_validar,5428
+HB,Hurto de bicicletas,2024,5193,SCJ (sin serie externa),sin_validar,5193
+HB,Hurto de bicicletas,2025,4661,SCJ (sin serie externa),sin_validar,4661
+HB,Hurto de bicicletas,2026,5133,SCJ (sin serie externa),sin_validar,5133
+H,Homicidios,2018,684,SCJ (validada con SIEDCO),validada,684
+H,Homicidios,2019,656,SCJ (validada con SIEDCO),validada,656
+H,Homicidios,2020,654,SCJ (validada con SIEDCO),validada,654
+H,Homicidios,2021,763,SCJ (validada con SIEDCO),validada,763
+H,Homicidios,2022,658,SCJ (validada con SIEDCO),validada,658
+H,Homicidios,2023,712,SCJ (validada con SIEDCO),validada,712
+H,Homicidios,2024,747,SCJ (validada con SIEDCO),validada,747
+H,Homicidios,2025,799,SCJ (validada con SIEDCO),validada,799
+H,Homicidios,2026,740,SCJ (validada con SIEDCO),validada,740
+LP,Lesiones personales,2018,19167,SCJ (validada con SIEDCO),validada,19167
+LP,Lesiones personales,2019,15830,SCJ (validada con SIEDCO),validada,15830
+LP,Lesiones personales,2020,9998,SCJ (validada con SIEDCO),validada,9998
+LP,Lesiones personales,2021,14811,SCJ (validada con SIEDCO),validada,14811
+LP,Lesiones personales,2022,13855,SCJ (validada con SIEDCO),validada,13855
+LP,Lesiones personales,2023,12438,SCJ (validada con SIEDCO),validada,12438
+LP,Lesiones personales,2024,12140,SCJ (validada con SIEDCO),validada,12140
+LP,Lesiones personales,2025,12431,SCJ (validada con SIEDCO),validada,12431
+VI,Violencia intrafamiliar,2018,23854,SCJ (validada con SIEDCO),validada,23854
+VI,Violencia intrafamiliar,2019,23165,SCJ (validada con SIEDCO),validada,23165
+VI,Violencia intrafamiliar,2020,24501,SCJ (validada con SIEDCO),validada,24501
+VI,Violencia intrafamiliar,2021,23157,SCJ (validada con SIEDCO),validada,23157
+VI,Violencia intrafamiliar,2022,23085,SCJ (validada con SIEDCO),validada,23085
+VI,Violencia intrafamiliar,2023,20251,SCJ (validada con SIEDCO),validada,20251
+VI,Violencia intrafamiliar,2024,26870,SCJ (validada con SIEDCO),validada,26870
+VI,Violencia intrafamiliar,2025,29440,SCJ (validada con SIEDCO),validada,29440
+VI,Violencia intrafamiliar,2026,34859,SCJ (validada con SIEDCO),validada,34859
+DS,Delitos sexuales,2018,3593,SCJ (validada con SIEDCO),validada,3593
+DS,Delitos sexuales,2019,4167,SCJ (validada con SIEDCO),validada,4167
+DS,Delitos sexuales,2020,3209,SCJ (validada con SIEDCO),validada,3209
+DS,Delitos sexuales,2021,3955,SCJ (validada con SIEDCO),validada,3955
+DS,Delitos sexuales,2022,4575,SCJ (validada con SIEDCO),validada,4575
+DS,Delitos sexuales,2023,3906,SCJ (validada con SIEDCO),validada,3906
+DS,Delitos sexuales,2024,6433,SCJ (validada con SIEDCO),validada,6433
+DS,Delitos sexuales,2025,5981,SCJ (validada con SIEDCO),validada,5981
+DS,Delitos sexuales,2026,5224,SCJ (validada con SIEDCO),validada,5224

@@ -1,0 +1,12 @@
+codigo,tipo,estado,desde,fuente_bogota,detalle,razon_min_2018_2022,razon_max_2018_2022
+HP,Hurto a personas,quiebre,2023.0,SIEDCO,La capa vale 2.28 a 2.55 veces el SIEDCO en 2018-2022 y lo mismo desde 2023.,2.2766676443208915,2.5515232431120283
+HR,Hurto a residencias,quiebre,2023.0,SIEDCO,La capa vale 2.29 a 3.00 veces el SIEDCO en 2018-2022 y lo mismo desde 2023.,2.2887961029923454,2.999434282481614
+HA,Hurto de automotores,quiebre,2023.0,SIEDCO,La capa vale 1.92 a 2.01 veces el SIEDCO en 2018-2022 y lo mismo desde 2023.,1.9246603540551668,2.005998286203942
+HB,Hurto de bicicletas,sin_validar,2018.0,SCJ,Sin serie externa con qué contrastar.,,
+HC,Hurto a comercio,no_coincide,,ninguna,No coincide con el SIEDCO en ningún año: definición distinta.,3.049268255306107,5.103568553796619
+HCE,Hurto de celulares,no_coincide,,ninguna,La columna no coincide con su delito en el SIEDCO; desde 2023 repite otro delito.,,
+HM,Hurto de motocicletas,no_coincide,,ninguna,La columna no coincide con su delito en el SIEDCO; desde 2023 repite otro delito.,4.566489361702128,10.165739710789767
+H,Homicidios,validada,2018.0,SCJ,Razón SCJ/SIEDCO entre 1.00 y 1.02 en 2018-2025.,1.0,1.0171073094867806
+LP,Lesiones personales,validada,2018.0,SCJ,Razón SCJ/SIEDCO entre 1.00 y 1.09 en 2018-2025.,0.9969105042854295,1.0876744977868573
+VI,Violencia intrafamiliar,validada,2018.0,SCJ,Razón SCJ/SIEDCO entre 1.00 y 1.00 en 2018-2025.,0.9991622685766943,1.0000431685732787
+DS,Delitos sexuales,validada,2018.0,SCJ,Razón SCJ/SIEDCO entre 1.00 y 1.00 en 2018-2025.,0.9996887643946467,1.0007199424046076

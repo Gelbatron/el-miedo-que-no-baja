@@ -21,7 +21,7 @@ export type Diapo = {
 
 type Modo = "pitch" | "clase";
 const ANCHO = 1280, ALTO = 720, DURACION = 6 * 60;
-const ACTOS = ["El problema", "Lo que hicimos", "Lo que encontramos", "Por qué importa"];
+const ACTOS = ["El problema", "Lo que hicimos", "Lo que encontramos", "Qué proponemos"];
 
 export function Motor({ diapos }: { diapos: Diapo[] }) {
   const [modo, setModo] = useState<Modo>("pitch");

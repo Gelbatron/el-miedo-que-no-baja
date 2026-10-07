@@ -1,5 +1,5 @@
 import { EnSimple } from "@/components/EnSimple";
-import { PANDEMIA } from "@/lib/historia";
+import { HURTO, PANDEMIA } from "@/lib/historia";
 import { D, R, fmt, signo } from "@/lib/datos";
 import { SerieDelitos } from "@/components/SerieDelitos";
 
@@ -11,25 +11,26 @@ export default function Tendencia() {
   return (
     <div className="contenedor pagina">
       <header className="cabecera-pagina">
-        <p className="antetitulo">Registro oficial 2018-2026 · Secretaría de Seguridad</p>
-        <h1 style={{ fontSize: "clamp(2rem,4vw,3rem)" }}>Los delitos contra el patrimonio bajan; el miedo no lo registra</h1>
-        <EnSimple>{`El hurto registrado viene bajando, con un bache por la pandemia en 2020 (${signo(PANDEMIA.hurto2020, 0)} %). En 2022 volvió casi a lo de antes y desde ahí cayó ${fmt(-PANDEMIA.hurto2022a2026, 0)} %. La violencia intrafamiliar, en cambio, subió ${fmt(PANDEMIA.vif2022a2026, 0)} % desde 2022. Ojo: en 2023 cayeron todos los hurtos a la vez; puede ser menos delito o menos denuncia.`}</EnSimple>
+        <p className="antetitulo">Registro oficial 2018-2026 · validado con la Policía y Medicina Legal</p>
+        <h1 style={{ fontSize: "clamp(2rem,4vw,3rem)" }}>El hurto casi no bajó; la violencia sube</h1>
+        <EnSimple>{`Con el registro de la Policía, el hurto a personas de 2026 está ${fmt(Math.abs(HURTO.policia2022a2026), 0)} % por debajo de 2022. La capa abierta de la SCJ dice ${fmt(Math.abs(HURTO.capa2022a2026), 0)} %, pero hasta 2022 contaba más del doble de hurtos que la Policía. La violencia intrafamiliar subió ${fmt(PANDEMIA.vif2022a2026, 0)} % desde 2022.`}</EnSimple>
         <p className="bajada">
-          Comparamos siempre enero a agosto, el único periodo que la SCJ publica para todos los años, incluido 2026. El {fmt(R.ciudad_peor_que_antes_pct)} % de los adultos cree que la ciudad
+          Comparamos siempre enero a agosto, el único periodo publicado para todos los años, incluido 2026. Cada serie se contrastó con otra fuente: homicidios, lesiones, delitos sexuales y
+          violencia intrafamiliar coinciden con la Policía todos los años; los hurtos de la capa SCJ solo desde 2023. El {fmt(R.ciudad_peor_que_antes_pct)} % de los adultos cree que la ciudad
           está menos segura que el año pasado (Bienal 2025), mientras el hurto a personas registrado cambió {signo(cambio("HP"))} % entre 2024 y 2025.
         </p>
       </header>
       <SerieDelitos />
       <section className="tarjeta" style={{ borderLeft: "5px solid var(--oro)" }}>
-        <h3>El efecto pandemia</h3>
+        <h3>El efecto pandemia y el quiebre de 2023</h3>
         <p style={{ color: "var(--tinta-2)" }}>
-          En 2020 el hurto a personas registrado cayó {fmt(-PANDEMIA.hurto2020, 0)} % por el encierro. En 2022 volvió al {fmt(PANDEMIA.hurto2022sobre2019, 0)} % de lo que era en 2019.
-          Desde ahí siguió bajando: {fmt(-PANDEMIA.hurto2022a2026, 0)} % menos entre 2022 y 2026. O sea, la caída no es solo pandemia.
+          Con la serie de la Policía, en 2020 el hurto a personas cayó {fmt(-PANDEMIA.hurto2020, 0)} % por el encierro y en 2022 volvió al {fmt(PANDEMIA.hurto2022sobre2019, 0)} % de lo que era en 2019.
+          En 2023 subió {fmt(PANDEMIA.hurto2023, 0)} %, y en 2026 está {fmt(Math.abs(PANDEMIA.hurto2022a2026), 0)} % por debajo de 2022.
         </p>
         <p style={{ color: "var(--tinta-2)" }}>
-          Pero hay una señal para revisar: entre 2022 y 2023 todos los tipos de hurto cayeron a la vez, entre {fmt(PANDEMIA.caida2023min, 0)} % y {fmt(PANDEMIA.caida2023max, 0)} % en un solo año
-          (personas, celulares, motos, residencias y automotores). Una caída tan pareja puede ser menos delito o menos denuncia, y el registro solo no lo distingue.
-          Por eso proponemos medir también con encuestas de victimización.
+          La capa abierta de la SCJ cuenta {fmt(HURTO.razonMin, 1)} a {fmt(HURTO.razonMax, 1)} veces más hurtos a personas que la Policía de 2018 a 2022, y desde 2023 coincide caso por caso.
+          Por eso en esa capa el hurto «cae» {fmt(Math.abs(HURTO.capa2023), 0)} % en 2023. La encuesta del DANE no muestra menos denuncia ese periodo: la denuncia del hurto pasó de 36 % (2021) a 43 % (2023).
+          En esta página, hurto a personas, residencias y automotores salen del registro de la Policía; los demás delitos, de la SCJ, validados.
         </p>
         <p style={{ color: "var(--tinta-2)" }}>
           La violencia intrafamiliar casi no se movió con la pandemia ({fmt(PANDEMIA.vif2020, 0)} % en 2020) y desde 2022 subió {fmt(PANDEMIA.vif2022a2026, 0)} %.
@@ -39,7 +40,8 @@ export default function Tendencia() {
         <h3>Cómo leer esta serie</h3>
         <p style={{ color: "var(--tinta-2)" }}>
           Un delito registrado es una denuncia o un caso conocido por la autoridad, no un delito ocurrido. Que el hurto registrado baje puede reflejar menos hurtos
-          o menos denuncias. Por eso la serie se lee junto a la cifra oculta (página La brecha): en la periferia hay hasta {fmt(R.cifra_oculta_max[1])} víctimas por cada delito registrado.
+          o menos denuncias, y una serie puede cambiar de método. Por eso la serie se valida con otra fuente y se lee junto a la cifra oculta (página La brecha):
+          en la periferia hay hasta {fmt(R.cifra_oculta_max[1])} víctimas por cada delito registrado.
         </p>
       </section>
     </div>

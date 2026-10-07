@@ -56,26 +56,35 @@ def _guardar(fig, nombre):
     return ruta
 
 
-def serie(delitos: pd.DataFrame):
-    s = delitos.groupby(["codigo", "anio"])["casos"].sum().unstack()
-    fig, ax = plt.subplots(figsize=(8, 4))
-    finales = []
-    for cod, nombre, col in (("HP", "Hurto a personas", REG), ("VI", "Violencia intrafamiliar", MUJ), ("DS", "Delitos sexuales", PERC)):
-        y = s.loc[cod] / s.loc[cod, 2018] * 100
+def serie(validada: pd.DataFrame):
+    """Serie validada (src/validacion_registro.py): hurto a personas del SIEDCO y, punteada, la capa SCJ con su quiebre."""
+    s = validada.pivot(index="codigo", columns="anio", values="casos")
+    capa = validada[validada["codigo"] == "HP"].set_index("anio")["casos_capa_scj"]
+    fig, ax = plt.subplots(figsize=(8, 4.2))
+    ax.axvspan(2019.55, 2021.45, color=TINTA, alpha=0.06, lw=0)
+    ax.text(2020.5, 192, "Pandemia", ha="center", va="top", fontsize=8.5, color=TINTA2)
+    yc = capa / capa.loc[2018] * 100
+    ax.plot(yc.index, yc.values, color=REG, lw=1.6, ls=(0, (3, 2)), alpha=0.75)
+    finales = [[yc.iloc[-1], yc.index[-1], f"Hurto, capa abierta SCJ {yc.iloc[-1]:.0f}"]]
+    for cod, nombre, col in (("HP", "Hurto a personas, Policía", REG), ("VI", "Violencia intrafamiliar", MUJ), ("DS", "Delitos sexuales", PERC)):
+        y = s.loc[cod].dropna() / s.loc[cod, 2018] * 100
         ax.plot(y.index, y.values, color=col, lw=2.2, marker="o", ms=4)
         finales.append([y.iloc[-1], y.index[-1], f"{nombre} {y.iloc[-1]:.0f}"])
+    ax.annotate("En 2023 la capa cambia de escala: antes\ncontaba 2,3 a 2,6 veces lo de la Policía", (2023, yc.loc[2023]), xytext=(2023.25, 14),
+                fontsize=8, color=TINTA2, arrowprops=dict(arrowstyle="-", color=TINTA2, lw=0.8))
     finales.sort()  # etiquetas sin choque: mínimo 9 puntos de índice entre una y otra
     for i in range(1, len(finales)):
         finales[i][0] = max(finales[i][0], finales[i - 1][0] + 9)
     for yy, xx, txt in finales:
         ax.annotate(txt, (xx, yy), xytext=(8, 0), textcoords="offset points", va="center", color=TINTA, fontsize=9, fontproperties=NEGRITA)
     ax.axhline(100, color=TINTA2, lw=1)
-    ax.set_xlim(2017.7, 2028.2)  # aire a la derecha para las etiquetas finales
+    ax.set_xlim(2017.7, 2029.6)  # aire a la derecha para las etiquetas finales
     ax.set_xticks(range(2018, 2027, 2))
     ax.spines["bottom"].set_bounds(2018, 2026)
     ax.set_ylim(0, 200)
     _titulo(ax, "Delitos registrados en Bogotá, enero-agosto (índice 2018 = 100)")
-    ax.text(0, -0.16, "Fuente: SCJ, Delitos de alto impacto por localidad.", transform=ax.transAxes, fontsize=8, color=TINTA2)
+    ax.text(0, -0.16, "Fuentes: Policía Nacional (SIEDCO, datos.gov.co) para hurto a personas; SCJ, Delitos de alto impacto, para "
+            "violencia intrafamiliar y delitos sexuales (validadas con SIEDCO).", transform=ax.transAxes, fontsize=7.5, color=TINTA2)
     return _guardar(fig, "fig1_serie_delitos")
 
 

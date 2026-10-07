@@ -1,0 +1,21 @@
+Codigo Localidad ;Localidad ;Cantidad de luminaria;Porcentaje;Luminarias Tecnologia Fluorescente;Luminarias Tecnologia LED;Luminarias Tecnologia Halogenuros Metalicos;Luminarias Tecnologia SODIO;Potencia Instalada en kW Fluorescente;Potencia Instalada en kW Tecnologia LED;Potencia Instalada en kW  Tecnologia Halogenuros Metalicos;Potencia Instalada en kW  Tecnologia SODIO
+1;Usaquen;25.705;7,37%;0;237;5129;20339;0;49,62;657,07;2844,1
+2;Chapinero;13.129;3,77%;0;1368;9128;2633;0;156,29;1047,86;525,85
+3;Santafe;9.396;2,69%;18;1470;4556;3352;0,64;274,13;472,02;546,14
+4;San Cristobal;17.816;5,11%;0;154;3594;14068;0;31,8;404,06;1248,66
+5;Usme;16.259;4,66%;0;79;3751;12429;0;14,24;367,89;1132,34
+6;Tunjuelito;7.184;2,06%;0;366;5762;1056;0;68,36;574,42;230,1
+7;Bosa;20.773;5,96%;0;216;1731;18826;0;34,37;250,21;1754,18
+8;Kennedy;38.812;11,13%;0;948;4924;32940;0;123,36;684,6;3779,16
+9;Fontibon;16.727;4,80%;0;334;4037;12356;0;61,17;515,91;1798,7
+10;Engativa;36.146;10,37%;0;1739;8377;26030;0;377,41;1058,73;2982,37
+11;Suba;42.917;12,31%;0;910;13370;28637;0;152,58;1567,72;3517,3
+12;Barrios Unidos;11.563;3,32%;0;720;8715;2128;0;167,93;1025,69;511,42
+13;Teusaquillo;14.816;4,25%;0;2619;8302;3895;0;415,09;948,32;953,98
+14;Los Martires;7.026;2,02%;0;377;4954;1695;0;88,78;573,04;352,98
+15;Antonio Narino;5.896;1,69%;0;4606;394;896;0;331,62;61;156,79
+16;Puente Aranda;18.539;5,32%;0;1153;1977;15409;0;252;318,77;2097,41
+17;La Candelaria;2.828;0,81%;0;142;1161;1525;0;19,7;139,87;270,64
+18;Rafael Uribe;16.166;4,64%;0;10635;855;4676;0;581,96;141,27;523,99
+19;Ciudad Bolivar;26.742;7,67%;0;352;4411;21979;0;67,08;502,77;1923,22
+20;Sumapaz;214;0,06%;0;0;192;22;0;0;18,32;4,64

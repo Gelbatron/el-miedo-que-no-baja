@@ -1,0 +1,17 @@
+fuente,paso,detalle
+INMLCF (SDS),duplicación,13138 filas; cada muerte aparece con código 0 (Bogotá) y con su localidad; diferencia 0 vs suma 1-21 por año: 0
+INMLCF (SDS),sin localidad,"muertes con localidad 'Sin dato' (código 21) por año: 2015: 10 (2%), 2016: 6 (1%), 2017: 4 (1%), 2018: 11 (2%), 2019: 14 (3%), 2020: 14 (3%), 2021: 17 (3%), 2022: 49 (8%), 2023: 53 (8%), 2024: 51 (8%), 2025: 21 (3%), 2026: 10 (3%)"
+SDM SIGAT,duplicación,"share de registros con formulario 'AA' excluidos (muertos) por año: 2015: 50%, 2016: 50%, 2017: 50%, 2018: 50%, 2019: 50%, 2020: 45%"
+SDM SIGAT,llave,registros sin localidad reconocible (solo cuentan en Bogotá): {}
+SDM SIGAT,control,"siniestros con víctimas, SIGAT sin 'AA' vs histórico del portal: 2015: SIGAT 10164 vs portal 10210; 2016: SIGAT 10294 vs portal 10312; 2017: SIGAT 10131 vs portal 10182; 2018: SIGAT 11838 vs portal 11928; 2019: SIGAT 11944 vs portal 12145; 2020: SIGAT 8667 vs portal 8817"
+IDECA suelo,área urbana,suelo urbano total 370.5 km² (SUECSUELO=1); suma por localidad 370.5 km²; sin suelo urbano: [20]
+IDECA malla vial,longitud,"139,106 ejes; 9,390 km totales; 9,344 km dentro de las 20 localidades y 8,145 km en suelo urbano (geometría simplificada a 1 m en la descarga)"
+IDU cicloinfraestructura,longitud,"red de biciusuarios 697.2 km; exclusiva (≥50 % dentro de polígono de ciclorruta) 489.8 km; IDU dic-2024 publica 677,5 km de red y 470,8 km de ciclorruta+bicicarril con diagnóstico"
+IDU estado malla,idu_estado_malla_2024_12,"100,508 calzadas urbanas; 13,373.3 km-carril, 13,290.6 con estado; PCI medio 71.0; PCI<56: 22.4 %"
+IDU estado malla,idu_estado_malla_2026_06,"102,238 calzadas urbanas; 13,860.0 km-carril, 13,721.5 con estado; PCI medio 71.4; PCI<56: 21.4 %"
+IDU estado superficial (portal),diagnóstico,"104,550 calzadas, códigos [1, 2, 3, 4, 5, 6, 8, 12, 13]; el código coincide con el TIPO de superficie de la calzada (CALTSUPERF) en 93.4% de 104,104 cruces: el archivo no trae el estado (PCI)"
+UAESP alumbrado,lectura,"52 cortes (2017-05 a 2024-05); luminarias del operador entre 344,910 y 356,543; cortes con <20 localidades: []"
+UAESP alumbrado,duplicados,cortes idénticos a uno anterior: {'2017-11': '2017-09'}
+SCJ hurtos,quiebre 2023,"variación Bogotá 2022→2023 (ene-ago): HP: -40%, HA: -40%, HM: -42%, HB: -2%, H: +8%; no se usan: HM (la columna 'motocicletas' repite caso por caso el hurto a comercio del SIEDCO desde 2023), HCE (la columna 'celulares' repite el hurto de motocicletas del SIEDCO desde 2023), HC (hurto a comercio no coincide con el SIEDCO en ningún año)"
+SDMujer seguridad nocturna,iluminación,"64,995 puntos (ola 2019: 44,335); % ninguna o poca: 2016: 25.2%, 2019: 1.1%; puntos por localidad en 2019 entre 280 y 5193"
+SDMujer seguridad nocturna,control,"diferencia máxima con seguridad_nocturna_localidad.csv (frente de género, 2019): 0.05 pp"

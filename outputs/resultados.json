@@ -1,10 +1,24 @@
 {
  "hurto_personas": {
-  "2019": 210160,
-  "2026": 73563,
-  "cambio_pct": -65.0
+  "2019": 82390,
+  "2022": 78419,
+  "2023": 106823,
+  "2026": 75124,
+  "cambio_pct": -8.8,
+  "cambio_2022_pct": -4.2,
+  "cambio_2022_2023_pct": 36.2,
+  "fuente": "Policía Nacional (SIEDCO), enero-agosto"
  },
- "hurto_motos_cambio_pct": -78.8,
+ "hurto_personas_capa": {
+  "2019": 210220,
+  "2022": 178534,
+  "2026": 75863,
+  "cambio_pct": -63.9,
+  "cambio_2022_pct": -57.5,
+  "razon_min": 2.28,
+  "razon_max": 2.55,
+  "fuente": "SCJ, capa Delitos de alto impacto, enero-agosto"
+ },
  "vif_cambio_pct_2018_2026": 46.1,
  "delitos_sexuales_cambio_pct_2018_2026": 45.4,
  "ciudad_insegura_pct": 74.0,

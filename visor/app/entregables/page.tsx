@@ -7,7 +7,7 @@ type Item = { titulo: string; detalle: string; ver?: string; descargar?: { href:
 const ITEMS: Item[] = [
   {
     titulo: "Producto analítico reproducible (notebook)",
-    detalle: "Notebook de Python ejecutado de punta a punta: auditoría de datos, descarga desde los servicios oficiales, limpieza con bitácora, integración de siete fuentes, modelos, validaciones, índice y exportes.",
+    detalle: "Notebook de Python ejecutado de punta a punta: auditoría de datos, descarga desde los servicios oficiales, limpieza con bitácora, validación del registro contra la Policía y Medicina Legal, integración de 16 fuentes con su score de confiabilidad, modelos estadísticos y de machine learning, índice y exportes.",
     ver: "/entregables/notebook_el_miedo_que_no_baja.html",
     descargar: [{ href: `${REPO}/blob/main/notebooks/el_miedo_que_no_baja.ipynb`, formato: ".ipynb en GitHub" }],
     requisito: "TdR 11.2",

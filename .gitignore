@@ -13,3 +13,6 @@ powerbi/**/.pbi/localSettings.json
 
 # respaldo local del tablero antes del cambio de colores
 powerbi/_build/*_respaldo.pbix
+
+# crudos de más de 100 MB (límite de GitHub): src/fuentes_genero.py los vuelve a bajar de la URL oficial
+data/crudos/sds_sivim_violencia_2013_2026.csv

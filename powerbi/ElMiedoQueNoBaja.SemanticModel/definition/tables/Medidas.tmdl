@@ -311,7 +311,7 @@ table Medidas
 		displayFolder: 5. Género
 		lineageTag: 405a3d0c-3aff-5b9d-9cba-8ef911773111
 
-	measure 'Texto hurto a personas' = "De " & FORMAT([Hurto a personas 2019], "#,0") & " a " & FORMAT([Hurto a personas 2026], "#,0") & " casos (SCJ)"
+	measure 'Texto hurto a personas' = "De " & FORMAT([Hurto a personas 2019], "#,0") & " a " & FORMAT([Hurto a personas 2026], "#,0") & " casos (Policía, SIEDCO; la capa SCJ tiene un quiebre en 2023)"
 		displayFolder: 9. Textos
 		lineageTag: 1adfb436-b72f-5218-b5e9-ea490221fa3c
 

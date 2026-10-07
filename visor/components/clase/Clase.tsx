@@ -1,10 +1,13 @@
 "use client";
 import { D, R, fmt, signo } from "@/lib/datos";
 import { C } from "@/lib/clase";
-import { PANDEMIA } from "@/lib/historia";
+import { HURTO, PANDEMIA } from "@/lib/historia";
 import { Motor, type Diapo } from "./Motor";
 import { BOGOTA, CifraOculta, Datos, Indice, Paradoja, Portada, Prueba, Termometros } from "./diapos-a";
 import { Cierre, Genero, Prediccion, Propuesta, Repeticiones, SimuladorClase, Vecinos } from "./diapos-b";
+import { Frentes, Modelos, Tendencias, Validacion } from "./diapos-c";
+import { Estrategias, Hipotesis, Lecturas, Mujeres, Tipologia, Union } from "./diapos-d";
+import { F, encuesta, ficha, tendencia } from "@/lib/frentes";
 
 const AME = Object.fromEntries(D.ame.m_hechos.map((f) => [f.variable, f]));
 const FE = Object.fromEntries(D.ame_efectos_fijos.map((f) => [f.variable, f]));
@@ -20,11 +23,10 @@ const vecina = (() => {
   return { p0, atracos: pr({ ...r, parque_atracos: 1 }) - p0, conflictos: pr({ ...r, conflictos_vecinos: 1 }) - p0 };
 })();
 const g = D.emv_genero.teme_acoso_sexual.find((f) => f.variable === "mujer")!;
-const cada100 = (r: number) => fmt(100 / r, 0);
 
 // Cuatro actos, la historia que cuenta el equipo:
 // 0 el problema · 1 lo que hicimos · 2 lo que encontramos · 3 por qué importa
-export const DIAPOS: Diapo[] = [
+const ANTERIORES: Diapo[] = [
   {
     id: "inicio", corto: "Portada", pasos: 1, roja: true, quien: "Brandow", tiempo: "0:00-0:10",
     nota: "Somos The data squad. Les vamos a contar algo que encontramos en los datos de Bogotá y que no cuadra.",
@@ -33,15 +35,15 @@ export const DIAPOS: Diapo[] = [
 
   /* ---------- Acto 1 · El problema ---------- */
   {
-    id: "paradoja", corto: "En el papel mejora", acto: 0, ante: "El problema · 1", titulo: "En el papel, Bogotá mejora. La gente no lo siente.", pasos: 3,
+    id: "paradoja", corto: "En el papel mejora", acto: 0, ante: "El problema · 1", titulo: "En el papel, Bogotá mejora. ¿De verdad?", pasos: 4,
     quien: "Brandow", tiempo: "0:10-0:45",
-    nota: `Resulta que estuvimos revisando los datos de la Secretaría de Seguridad y el hurto viene bajando muchísimo: ${signo(R.hurto_personas.cambio_pct, 0)} % desde 2019. Ojo, ahí está la pandemia (la franja gris): en 2020 cayó por el encierro, pero en 2022 volvió casi a lo de antes y desde entonces bajó ${fmt(-PANDEMIA.hurto2022a2026, 0)} %. No es solo la pandemia. (→) Pero hay hechos violentos que van al revés: la violencia intrafamiliar y los delitos sexuales subieron cerca de 45 %. (→) Y cuando lo cruzamos con las encuestas, 3 de cada 4 personas dicen que Bogotá es insegura. O sea: en el papel la ciudad mejora, pero la gente no lo siente.`,
+    nota: `La capa abierta de la Secretaría de Seguridad dice que el hurto a personas cayó ${signo(HURTO.capa2019a2026, 0)} % desde 2019. (→) Pero el registro de la Policía, el mismo hurto y los mismos meses, dice ${signo(HURTO.policia2019a2026, 0)} %. Hasta 2022 la capa contaba más del doble; desde 2023 son idénticas. (→) Y los hechos violentos suben: violencia intrafamiliar y delitos sexuales cerca de 45 %. (→) Con eso, que 3 de cada 4 personas digan que Bogotá es insegura ya no es una paradoja.`,
     profundizar: (
       <>
-        <h3>El efecto pandemia</h3>
-        <p>En 2020 el hurto a personas registrado cayó {fmt(-PANDEMIA.hurto2020, 0)} % por el encierro. En 2022 volvió al {fmt(PANDEMIA.hurto2022sobre2019, 0)} % de su nivel de 2019, y desde ahí bajó {fmt(-PANDEMIA.hurto2022a2026, 0)} % hasta 2026: la caída no es solo pandemia.</p>
-        <p>Una señal para revisar: entre 2022 y 2023 todos los tipos de hurto (personas, celulares, motos, residencias y automotores) cayeron a la vez, entre {fmt(PANDEMIA.caida2023min, 0)} % y {fmt(PANDEMIA.caida2023max, 0)} % en un solo año. Una caída tan pareja puede ser menos delito o menos denuncia; el registro solo no lo distingue. Por eso medimos también con encuestas.</p>
-        <p>La violencia intrafamiliar casi no se movió con la pandemia ({signo(PANDEMIA.vif2020, 0)} % en 2020) y desde 2022 subió {fmt(PANDEMIA.vif2022a2026, 0)} %.</p>
+        <h3>El efecto pandemia, con la serie de la Policía</h3>
+        <p>En 2020 el hurto a personas registrado cayó {fmt(-PANDEMIA.hurto2020, 0)} % por el encierro. En 2022 volvió al {fmt(PANDEMIA.hurto2022sobre2019, 0)} % de su nivel de 2019; en 2023 subió {fmt(PANDEMIA.hurto2023, 0)} %, y en 2026 está {fmt(Math.abs(PANDEMIA.hurto2022a2026), 0)} % por debajo de 2022.</p>
+        <p>La capa abierta de la SCJ dice otra cosa porque de 2018 a 2022 cuenta {fmt(HURTO.razonMin, 2)} a {fmt(HURTO.razonMax, 2)} veces lo que registra la Policía, y desde 2023 coincide caso por caso. La caída de 2023 es el paso de una escala a la otra.</p>
+        <p>La violencia intrafamiliar casi no se movió con la pandemia ({signo(PANDEMIA.vif2020, 0)} % en 2020) y desde 2022 subió {fmt(PANDEMIA.vif2022a2026, 0)} %. Esa serie sí coincide con la Policía todos los años.</p>
       </>
     ),
     render: (p) => <Paradoja paso={p} />,
@@ -49,7 +51,7 @@ export const DIAPOS: Diapo[] = [
   {
     id: "cifra-oculta", corto: "Mucho delito no se denuncia", acto: 0, ante: "El problema · 2", titulo: "Y mucho delito ni siquiera se denuncia", pasos: 1,
     quien: "Brandow", tiempo: "0:45-1:15",
-    nota: `Y nos dimos cuenta de que mucho delito ni siquiera llega a las cifras. Hagan la cuenta con nosotros (señalen los tres pasos): el ${fmt(BOGOTA.emv_victima)} % de los adultos dice haber sido víctima en el último año, unos ${fmt(Math.round(BOGOTA.victimas_estimadas / 1e5) / 10, 1)} millones de personas; la Secretaría registró unos ${fmt(Math.round(BOGOTA.delitos_registrados / 1e3), 0)} mil delitos. Por cada 100 víctimas, solo ${cada100(BOGOTA.razon)} quedan en el registro. (Cambien el selector a Bosa: ${cada100(bosa.razon)}.)`,
+    nota: `Y nos dimos cuenta de que mucho delito ni siquiera llega a las cifras. Hagan la cuenta con nosotros (señalen los tres pasos): el ${fmt(BOGOTA.emv_victima)} % de los adultos dice haber sido víctima en el último año, unos ${fmt(Math.round(BOGOTA.victimas_estimadas / 1e5) / 10, 1)} millones de personas; la Secretaría registró unos ${fmt(Math.round(BOGOTA.delitos_registrados / 1e3), 0)} mil delitos. De cada 10 víctimas, ${fmt(10 / BOGOTA.razon, 1)} quedan en el registro. Con las encuestas del DANE y de la Cámara de Comercio la cuenta da cerca de 3 de cada 10: cambia el nivel, no la conclusión. (Cambien el selector a Bosa: ${fmt(10 / bosa.razon, 1)}.)`,
     profundizar: (
       <>
         <h3>Cómo se calcula la cifra oculta</h3>
@@ -207,6 +209,186 @@ export const DIAPOS: Diapo[] = [
     nota: "Bogotá ya tiene los datos para cerrar esta brecha. Solo hay que leerlos juntos. Gracias.",
     render: () => <Cierre />,
   },
+];
+
+/* ====== La historia: inicio (cómo se mide y qué dice cada fuente), nudo (validar, unir y modelar), desenlace (estrategias) ====== */
+const B = (id: string) => ANTERIORES.find((d) => d.id === id)!;
+const hp = tendencia("HP"), hom = tendencia("H"), vif = tendencia("VI"), ds = tendencia("DS");
+const ctx = F.ml.contexto_localidad;
+const fichaScore = (f: string) => fmt(ficha(f)?.score ?? NaN, 0);
+const noDen = { dane: 100 - (encuesta("DANE", "tasa_denuncia", "cualquier_delito_con_isd", 2023) ?? 0), ccb: 100 - (encuesta("CCB", "tasa_denuncia", "cualquier_delito", 2025) ?? 0) };
+const tip = (F.tipologia?.localidades ?? []) as Record<string, string | number>[];
+const perfilDe = (nombre: string) => String(tip.find((l) => l.nombre === nombre)?.perfil_nombre ?? "");
+
+export const DIAPOS: Diapo[] = [
+  { ...B("inicio"), tiempo: "0:00-0:10",
+    nota: "Somos The data squad. ¿Qué tan segura es Bogotá? Depende de a quién le preguntes. Y una de las respuestas que más circula tiene un problema que encontramos en los datos." },
+
+  /* ---------- Inicio · El problema ---------- */
+  {
+    id: "frentes", corto: "Cómo se mide", acto: 0, ante: "El problema · 1", titulo: "¿Qué tan segura es Bogotá? Depende de cómo la midas", pasos: 3,
+    quien: "Brandow", tiempo: "0:10-0:30",
+    nota: "La seguridad se mide desde cuatro frentes: lo que se registra, lo que la gente vive, lo que siente y las condiciones del entorno. (→) Cada fuente lleva un score de confiabilidad de 0 a 100: años comparables, actualidad, precisión, detalle territorial, validez y si cuadra con otra fuente. No todas pesan igual. (→) Y ninguna, sola, cubre los cuatro frentes.",
+    profundizar: (
+      <>
+        <h3>Cómo se calcula el score de confiabilidad</h3>
+        <p>Seis criterios de 0 a 1, ponderados: años comparables de la serie (20 %), actualidad (15 %), precisión o tamaño de muestra (20 %), detalle territorial (15 %), validez para medir el fenómeno (15 %) y verificación externa, es decir, si coincide con una fuente independiente (15 %).</p>
+        <p>Un quiebre corta la serie: los hurtos de la capa SCJ solo son comparables desde 2023 y no cuadran con la Policía antes, así que bajan a {fichaScore("SCJ · hurtos")}. Homicidios, lesiones, sexuales y violencia intrafamiliar de la misma capa coinciden con la Policía y con Medicina Legal: {fichaScore("SCJ · homicidios, lesiones, sexuales y VIF")}.</p>
+        <p>La Encuesta Mundial de Valores mide la victimización de forma directa, pero tiene 96 encuestas por localidad y una sola edición: {fichaScore("Encuesta Mundial de Valores 2024")}. La encuesta de acoso callejero es un formulario en línea (autoselección): {fichaScore("Encuesta de acoso callejero 2025")}.</p>
+        <p>Semáforo: 75 o más, alta; 55 a 74, media; menos de 55, baja. Cálculo en <span className="mono">src/confiabilidad.py</span>.</p>
+      </>
+    ),
+    render: (p) => <Frentes paso={p} />,
+  },
+  {
+    id: "lecturas", corto: "Cada fuente por separado", acto: 0, ante: "El problema · 2", titulo: "Cada fuente, por separado, cuenta otra historia", pasos: 6,
+    quien: "Brandow", tiempo: "0:30-1:25",
+    nota: `Leamos cada fuente sola y qué concluiríamos con ella. (en cada →, lean la conclusión) La capa abierta de la Secretaría: el hurto cayó ${signo(HURTO.capa2022a2026, 0)} % desde 2022, «Bogotá es mucho más segura». Pero la Policía, el mismo hurto y los mismos meses: ${signo(HURTO.policia2022a2026, 0)} %, «el hurto casi no bajó». Los homicidios suben ${fmt(hom.post_cambio_anual_pct, 1)} % al año y la violencia intrafamiliar ${fmt(vif.post_cambio_anual_pct, 0)} %, «la violencia sube». Entre ${fmt(Math.min(noDen.dane, noDen.ccb), 0)} y ${fmt(Math.max(noDen.dane, noDen.ccb), 0)} % de las víctimas no denuncia, «la mayoría no denuncia». Y 3 de cada 4 dicen que la ciudad es insegura. (→) El miedo no contradice los datos.`,
+    profundizar: (
+      <>
+        <h3>De dónde sale cada cifra</h3>
+        <ul>
+          <li>Hurto a personas, enero-agosto: capa «Delitos de alto impacto» de la SCJ ({fmt(HURTO.capa2022, 0)} → {fmt(HURTO.capa2026, 0)}) y SIEDCO de la Policía en datos.gov.co ({fmt(HURTO.policia2022, 0)} → {fmt(HURTO.policia2026, 0)}).</li>
+          <li>Homicidios, violencia intrafamiliar y delitos sexuales: binomial negativa de panel, 19 localidades, 2022-2026, con efectos fijos y población como exposición; series que coinciden con la Policía todos los años.</li>
+          <li>Denuncia: Encuesta de Convivencia del DANE (2023, cualquier delito) y Encuesta de Percepción y Victimización de la Cámara de Comercio (2025).</li>
+          <li>Percepción y confianza en la Policía: Bienal de Cultura Ciudadana 2025, ponderada; el DANE mide lo mismo en 2024.</li>
+        </ul>
+      </>
+    ),
+    render: (p) => <Lecturas paso={p} />,
+  },
+  { ...B("paradoja"), acto: 0, ante: "El problema · clase", soloClase: true, tiempo: "clase" },
+  { ...B("termometros"), acto: 0, ante: "El problema · clase", soloClase: true, tiempo: "clase" },
+
+  /* ---------- Nudo · Lo que hicimos ---------- */
+  {
+    id: "union", corto: "Unir las fuentes", acto: 1, ante: "Lo que hicimos · 1", titulo: "Unimos las fuentes para responder cuatro preguntas", pasos: 3,
+    quien: "Rafael", tiempo: "1:25-1:40",
+    nota: "Por eso unimos las fuentes para responder cuatro preguntas: quién es más vulnerable, dónde y en qué crece la inseguridad, si la percepción y las cifras cuadran, y qué hacer primero. (→) Con una sola llave territorial, tasas por habitante, los factores de expansión de cada encuesta y el mismo corte de meses. (→) Y con tres modelos. Pero antes de modelar, validamos.",
+    profundizar: B("datos").profundizar,
+    render: (p) => <Union paso={p} />,
+  },
+  { ...B("datos"), acto: 1, ante: "Lo que hicimos · clase", soloClase: true, tiempo: "clase" },
+  {
+    id: "validacion", corto: "Validar antes de modelar", acto: 1, ante: "Lo que hicimos · 2 · validación cruzada", titulo: "Antes de modelar, validamos: la serie de hurto tenía un quiebre", pasos: 3,
+    quien: "Rafael", tiempo: "1:40-2:10",
+    nota: `Antes de modelar comparamos cada serie con una fuente independiente. La capa abierta dice ${signo(HURTO.capa2022a2026, 0)} % en hurto desde 2022. (→) La Policía, ${signo(HURTO.policia2022a2026, 0)} %. De 2018 a 2022 la capa contaba ${fmt(HURTO.razonMin, 1)} a ${fmt(HURTO.razonMax, 1)} veces más; desde 2023 coinciden caso por caso. En homicidios, lesiones, delitos sexuales y violencia intrafamiliar coinciden todos los años, y los homicidios cuadran con Medicina Legal. (→) ¿Y si cayó la denuncia? La encuesta del DANE dice que no: la denuncia subió. Para que la caída fuera real, la denuncia habría tenido que desplomarse. Cambió cómo se arma la serie, no la calle.`,
+    profundizar: (
+      <>
+        <h3>Cómo se validó</h3>
+        <p>Para cada delito y año (enero-agosto, Bogotá) dividimos los casos de la capa SCJ entre los del SIEDCO publicado por la Policía en datos.gov.co, y los homicidios también entre los de Medicina Legal. Una razón entre 0,95 y 1,10 cuenta como la misma serie.</p>
+        <p><b>Resultado:</b> homicidios, lesiones, delitos sexuales y violencia intrafamiliar, validadas en 2018-2025. Hurto a personas, residencias y automotores, con quiebre: comparables solo desde 2023 (para Bogotá usamos el SIEDCO). La razón exacta de 2,00 en automotores sugiere hechos contados dos veces, pero la capa no documenta su método: es una hipótesis.</p>
+        <p><b>Hallazgo adicional:</b> desde 2023, la columna «motocicletas» de la capa repite caso por caso el hurto a comercio de la Policía, y la de «celulares» repite el de motos. Esas tres columnas no se usan por tipo.</p>
+        <p><b>Contrafactual (DANE, 2021 frente a 2023):</b> la victimización por hurto no cambió (de 7,3 % a 6,9 %, p = 0,50) y la denuncia subió de 36 % a 43 %. Para explicar la caída de la capa, la denuncia tendría que haber bajado a cerca de 25 %. El 5 de septiembre de 2023 la Alcaldía informó que el hurto iba 23 % por encima de 2022: la misma dirección que el SIEDCO.</p>
+        <p>Código: <span className="mono">src/fuentes_victimizacion.py</span> y <span className="mono">src/validacion_registro.py</span>. Es una recomendación técnica de documentación, no una evaluación de ninguna entidad.</p>
+      </>
+    ),
+    render: (p) => <Validacion paso={p} />,
+  },
+  {
+    id: "tendencias", corto: "Modelo 1: tendencias", acto: 1, ante: "Lo que hicimos · 3 · modelo estadístico", titulo: "Con series comparables: el hurto está casi igual y la violencia sube", pasos: 3,
+    quien: "Rafael", tiempo: "2:10-2:30",
+    nota: `Primer modelo, ya con series comparables: los hurtos bajan desde 2023, ${signo(hp.post_cambio_anual_pct, 0)} % al año, pero 2023 fue un pico. Frente a 2022 la Policía registra ${signo(HURTO.policia2022a2026, 0)} %. (→) Y la violencia sube: homicidios ${signo(hom.post_cambio_anual_pct, 1)} % al año, delitos sexuales ${signo(ds.post_cambio_anual_pct, 1)} % y violencia intrafamiliar ${signo(vif.post_cambio_anual_pct, 1)} %. (→) El modelo controla tamaño, localidad y sobredispersión, y deja la pandemia fuera.`,
+    profundizar: (
+      <>
+        <h3>El modelo de tendencias</h3>
+        <p>Para cada delito: binomial negativa de panel, 19 localidades, enero-agosto, con efectos fijos de localidad y log(población) como exposición. Errores agrupados por localidad. Cambio anual = exp(β) − 1 del término lineal de año.</p>
+        <p><b>Ventana:</b> 2022-2026 para las series validadas; 2023-2026 para hurto a personas, residencias y automotores, la parte comparable. Bicicletas no tiene con qué validarse y su tendencia no es significativa. Comercio, celulares y motocicletas no se modelan.</p>
+        <p>Cálculo en <span className="mono">src/tendencias.py</span>; resultados en <span className="mono">outputs/tablas/tendencias_resumen.csv</span>.</p>
+      </>
+    ),
+    render: (p) => <Tendencias paso={p} />,
+  },
+  {
+    id: "modelos", corto: "Modelo 2: qué explica el miedo", acto: 1, ante: "Lo que hicimos · 4 · modelo supervisado", titulo: "Machine learning: qué explica el miedo, y qué no", pasos: 3,
+    quien: "Rafael", tiempo: "2:30-2:55",
+    nota: `Segundo modelo: entrenamos tres modelos para predecir quién siente insegura su zona y los probamos con personas que no vieron. Aciertan hasta 85 de cada 100. (→) Lo que más explica es lo que pasa en el barrio: atracos, conflictos, parques. (→) Y la prueba clave: el delito registrado no agrega nada a saber en qué localidad vive la persona: ${fmt(ctx[1].mean, 3)} frente a ${fmt(ctx[2].mean, 3)}. El miedo sigue a lo que la gente vive, no a la estadística.`,
+    profundizar: (
+      <>
+        <h3>Diseño del aprendizaje supervisado</h3>
+        <p>Bienal 2025, 5.538 adultos. Regresión logística, bosque aleatorio y gradient boosting, entrenados con el factor de expansión. Validación: 5 particiones × 5 repeticiones; AUC ponderada fuera de muestra.</p>
+        <p><b>Importancia por bloques:</b> se permutan juntas las variables de un bloque en los datos de prueba y se mide cuánta AUC se pierde.</p>
+        <p><b>Cuidado:</b> las calificaciones del barrio comparten cuestionario con la pregunta de seguridad (efecto halo: ruido y aire pesan casi como el alumbrado). Por eso las conclusiones se apoyan en hechos.</p>
+        <p><b>Prueba de contexto:</b> con 19 localidades, tres tasas identifican la localidad. Comparar con efectos fijos de localidad muestra que el delito registrado no aporta información propia. Las tasas son de 2025, posteriores al quiebre de la serie.</p>
+      </>
+    ),
+    render: (p) => <Modelos paso={p} />,
+  },
+  { ...B("prediccion"), acto: 1, ante: "Lo que hicimos · clase", soloClase: true },
+  { ...B("vecinos"), acto: 1, ante: "Lo que hicimos · clase", soloClase: true, tiempo: "clase" },
+  { ...B("repeticiones"), acto: 1, ante: "Lo que hicimos · clase", soloClase: true, tiempo: "clase" },
+  {
+    id: "tipologia", corto: "Modelo 3: tipos de localidad", acto: 1, ante: "Lo que hicimos · 5 · modelo no supervisado", titulo: "Cinco tipos de localidad, cada uno con su estrategia", pasos: 2,
+    quien: "Samuel", tiempo: "2:55-3:15",
+    nota: `Tercer modelo, sin variable objetivo: agrupamos las 19 localidades por sus cuatro frentes a la vez. (→) Salen cinco perfiles. Por ejemplo, San Cristóbal, Usme y Ciudad Bolívar: «${perfilDe("Usme")}». Bosa, Kennedy, Suba: «${perfilDe("Bosa")}». Cada perfil pide una estrategia distinta.`,
+    profundizar: (
+      <>
+        <h3>Tipología de localidades</h3>
+        <p>Ocho indicadores estandarizados de los cuatro frentes (los asimétricos en logaritmo): delitos y homicidios por 100.000, víctimas (EMV), violencia contra mujeres registrada, % que siente insegura su zona, miedo en el espacio público, luminarias por km² y espacio público por habitante.</p>
+        <p>Componentes principales para ver las dimensiones y agrupamiento jerárquico de Ward. El número de perfiles se eligió con el coeficiente de silueta: 0,16 para 4 y 5 perfiles. Es una estructura débil: los perfiles describen, no son grupos naturales.</p>
+        <p>Estabilidad: 500 repeticiones quitando un indicador y remuestreando localidades. Los nombres salen de reglas fijas sobre el centroide de cada perfil, no a mano. Quedó fuera la auditoría nocturna de 2019: el 86 % de sus puntos sale «brillante» y no distingue entre localidades.</p>
+      </>
+    ),
+    render: (p) => <Tipologia paso={p} />,
+  },
+
+  /* ---------- Nudo · Lo que encontramos ---------- */
+  { ...B("cifra-oculta"), acto: 2, ante: "Lo que encontramos · 1", titulo: "De cada 10 víctimas, menos de 2 llegan al registro", quien: "Samuel", tiempo: "3:15-3:35" },
+  { ...B("indice"), acto: 2, ante: "Lo que encontramos · 2", quien: "Samuel", tiempo: "3:35-3:55" },
+  { ...B("prueba"), acto: 2, ante: "Lo que encontramos · clase", soloClase: true, tiempo: "clase" },
+  {
+    id: "genero", corto: "Las mujeres", acto: 2, ante: "Lo que encontramos · 3", titulo: "Las mujeres: el miedo en la calle, la violencia en la casa", pasos: 3,
+    quien: "Samuel", tiempo: "3:55-4:20",
+    nota: "Con las mujeres hay dos problemas distintos. En la calle: 5 de cada 10 mujeres fueron acosadas el último año, y casi ninguna denuncia. (→) En la casa: la violencia contra ellas que llega a Salud subió 43 % desde 2019, y 8 de cada 10 casos pasan en la vivienda. Las más afectadas son niñas y adolescentes. (→) Son dos problemas distintos: una luminaria no resuelve la violencia en la casa.",
+    profundizar: (
+      <>
+        <h3>Fuentes y cuidados</h3>
+        <p><b>SIVIM</b> (Secretaría de Salud), 2019-2025: casos notificados al sector salud, tasa por 100.000 mujeres con la población de la SDP. Intervalo del cambio con binomial negativa. El 65 % del aumento está en niñas de 6 a 17 años, y desde 2022 crece la notificación escolar: parte del aumento es mejor registro. La violencia de pareja o expareja pasó de 5.298 a 10.525 casos.</p>
+        <p><b>Acoso callejero</b> (Veeduría 2025): formulario en línea sin factor de expansión; describe a quienes respondieron (2.742 mujeres, 877 hombres), no estima la población.</p>
+        <p><b>Temor al acoso</b> (Encuesta Mundial de Valores 2024): logit ponderado con sexo, edad, estrato y victimización.</p>
+        <p><b>Hipótesis probadas</b> (Spearman, 19 localidades, Benjamini-Hochberg): iluminación, estado del sendero e internet público frente a la tasa de violencia contra mujeres. Ninguna sobrevive. Con n = 19 solo se detectaría |ρ| ≥ 0,60 con 80 % de potencia: es ausencia de evidencia de una relación fuerte, no prueba de que no exista.</p>
+      </>
+    ),
+    render: (p) => <Mujeres paso={p} />,
+  },
+  { ...B("genero"), id: "genero-emv", corto: "Ellas temen más", acto: 2, ante: "Lo que encontramos · clase", soloClase: true, tiempo: "clase" },
+  {
+    id: "hipotesis", corto: "Lo que probamos", acto: 2, ante: "Lo que encontramos · 4", titulo: "Lo que probamos: ocho hipótesis, con su veredicto", pasos: 3,
+    quien: "Samuel", tiempo: "4:20-4:40",
+    nota: "Probamos ocho hipótesis, incluidas las que cualquiera daría por ciertas. (→) Cinco no se sostienen: la serie de hurto no era comparable, el delito registrado no explica el miedo, peor alumbrado o peores vías no traen más hurto, y más luz o internet no se asocian con menos violencia contra ellas. Tres sí: el entorno del barrio, la cifra oculta y el miedo de las mujeres. (→) Un nulo también es evidencia: evita gastar en lo que no mueve la aguja.",
+    profundizar: (
+      <>
+        <h3>Cómo se probó cada una</h3>
+        <ul>
+          <li><b>Alumbrado y vías:</b> Spearman entre las 19 localidades urbanas, IC por bootstrap (10.000), p por permutación y Benjamini-Hochberg dentro de cada bloque. 0 de 23 pruebas sobreviven en la especificación principal (hurtos 2025). El inventario de luminarias sigue a la vía (40 a 57 por km), así que no mide «peor alumbrado»; no hay datos abiertos de luminarias apagadas ni de lux.</li>
+          <li><b>Mujeres:</b> Spearman con la tasa SIVIM 2025, IC BCa y Benjamini-Hochberg.</li>
+          <li><b>Potencia:</b> con n = 19, solo se detecta |ρ| ≥ 0,60 con 80 % de potencia. «No se sostiene» quiere decir que no hay evidencia de una relación fuerte por localidad, no que no exista en la cuadra.</li>
+          <li><b>Lo que sí se asocia con el hurto:</b> las muertes en vía (ρ ≈ 0,55 con el promedio 2023-2025), pero ambas tasas comparten el denominador de residentes y miden actividad y tránsito, no alumbrado.</li>
+        </ul>
+        <p>Código: <span className="mono">src/fuentes_movilidad.py</span>, <span className="mono">src/fuentes_genero.py</span>, <span className="mono">src/modelos.py</span> y <span className="mono">src/aprendizaje.py</span>.</p>
+      </>
+    ),
+    render: (p) => <Hipotesis paso={p} />,
+  },
+
+  /* ---------- Desenlace · Qué proponemos ---------- */
+  {
+    id: "estrategias", corto: "Estrategias", acto: 3, ante: "Qué proponemos", titulo: "Estrategias que solo aparecen al unir los datos", pasos: 3,
+    quien: "Brandow", tiempo: "4:40-5:35",
+    nota: "Y aquí está lo que ninguna fuente sola deja ver. Cada estrategia trae el dato que la sostiene, su nivel de evidencia y cómo se mide. (→ recorran de a dos)",
+    profundizar: (
+      <>
+        <h3>Nivel de evidencia</h3>
+        <p><b>Alta:</b> fuentes con score de 70 o más, prueba significativa tras corregir por pruebas múltiples y robusta a otra especificación.</p>
+        <p><b>Media:</b> falla una de las dos condiciones.</p>
+        <p><b>Exploratoria:</b> fuente débil o resultado no significativo. Se reporta igual, porque un nulo también es evidencia.</p>
+      </>
+    ),
+    render: (p) => <Estrategias paso={p} />,
+  },
+  { ...B("simulador"), acto: 3, ante: "Qué proponemos · clase", soloClase: true },
+  { ...B("propuesta"), acto: 3, ante: "Qué proponemos · clase", soloClase: true, tiempo: "clase" },
+  { ...B("cierre"), tiempo: "5:35-5:45", nota: "Bogotá ya tiene los datos para cerrar esta brecha. Solo hay que validarlos y leerlos juntos. Gracias." },
 ];
 
 export function Clase() {

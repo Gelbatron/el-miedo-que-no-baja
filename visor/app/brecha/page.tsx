@@ -27,7 +27,7 @@ export default function Brecha() {
       <header className="cabecera-pagina">
         <p className="antetitulo">Índice de Brecha de Seguridad · cifra oculta</p>
         <h1 style={{ fontSize: "clamp(2rem,4vw,3rem)" }}>Donde hay más miedo que delito, el delito no se está registrando</h1>
-        <EnSimple>{`El índice dice en qué localidades hay más miedo del que muestran las cifras: arriba están ${enLista(R.ibs_top5)}. Y justo ahí es donde más delito se queda sin denunciar: en Bogotá, por cada 100 víctimas solo hay ${fmt(100 / R.cifra_oculta_bogota, 0)} delitos registrados.`}</EnSimple>
+        <EnSimple>{`El índice dice en qué localidades hay más miedo del que muestran las cifras: arriba están ${enLista(R.ibs_top5)}. Y justo ahí es donde más delito se queda sin denunciar: en Bogotá, de cada 10 víctimas solo ${fmt(10 / R.cifra_oculta_bogota, 1)} tienen su delito en el registro.`}</EnSimple>
         <p className="bajada">
           El índice compara, en desviaciones estándar, el porcentaje que siente insegura su zona con el logaritmo de los delitos de alto impacto
           registrados por 100.000 habitantes. Positivo: más miedo del que explica el registro. Negativo: más registro que miedo entre quienes viven ahí.

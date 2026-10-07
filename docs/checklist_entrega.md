@@ -9,7 +9,7 @@ Cada requisito de los términos de referencia (TdR) y de la ficha metodológica,
 | Repositorio en GitHub/GitLab con /data, /notebooks o /scripts, /outputs, /docs y README | raíz del repositorio | ✔ |
 | README: problema, fuentes, metodología, ejecución, despliegue, estructura | `README.md` (secciones 1 a 7) | ✔ |
 | Notebook Python documentado y reproducible | `notebooks/el_miedo_que_no_baja.ipynb` (ejecutado) y `src/pipeline.py` | ✔ |
-| Integración efectiva de mínimo 3 fuentes públicas | 7 fuentes (SCJ, SDP, SCRD, EMV, UAESP, DADEP, IDECA), secciones 2 a 4 del notebook | ✔ |
+| Integración efectiva de mínimo 3 fuentes públicas | 18 fuentes con score de confiabilidad: 7 de núcleo (SCJ, SDP, SCRD, EMV, UAESP, DADEP, IDECA) y 11 de validación y frentes (Policía/SIEDCO, Medicina Legal, DANE, CCB, SIVIM, Secretaría de la Mujer, Veeduría, Secretaría General, Movilidad, IDU, serie de alumbrado UAESP); secciones 2 a 5 y 11.1 del notebook | ✔ |
 | Evidencia de limpieza, transformación y cruce | sección 3 del notebook y `outputs/tablas/bitacora_limpieza.csv` | ✔ |
 | Archivo de dependencias | `requirements.txt` y `visor/package.json` | ✔ |
 | Visualización que muestre la brecha, con lectura territorial, exportable | visor web desplegado + `powerbi/` + CSV/GeoJSON en `visor/public/descargas/` y `outputs/geo/` | ✔ |

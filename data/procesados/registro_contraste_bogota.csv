@@ -1,0 +1,339 @@
+anio,codigo,delito,fuente,periodo,casos,completo
+2018,DS,Delitos sexuales,SCJ capa Delitos Alto Impacto,ene-ago,3593.0,True
+2019,DS,Delitos sexuales,SCJ capa Delitos Alto Impacto,ene-ago,4170.0,True
+2020,DS,Delitos sexuales,SCJ capa Delitos Alto Impacto,ene-ago,3212.0,True
+2021,DS,Delitos sexuales,SCJ capa Delitos Alto Impacto,ene-ago,3957.0,True
+2022,DS,Delitos sexuales,SCJ capa Delitos Alto Impacto,ene-ago,4575.0,True
+2023,DS,Delitos sexuales,SCJ capa Delitos Alto Impacto,ene-ago,3923.0,True
+2024,DS,Delitos sexuales,SCJ capa Delitos Alto Impacto,ene-ago,6596.0,True
+2025,DS,Delitos sexuales,SCJ capa Delitos Alto Impacto,ene-ago,6501.0,True
+2026,DS,Delitos sexuales,SCJ capa Delitos Alto Impacto,ene-ago,5798.0,True
+2015,DS,Delitos sexuales,"SIEDCO (Policía Nacional, datos.gov.co)",anio,3030.0,True
+2016,DS,Delitos sexuales,"SIEDCO (Policía Nacional, datos.gov.co)",anio,3248.0,True
+2017,DS,Delitos sexuales,"SIEDCO (Policía Nacional, datos.gov.co)",anio,3957.0,True
+2018,DS,Delitos sexuales,"SIEDCO (Policía Nacional, datos.gov.co)",anio,5279.0,True
+2019,DS,Delitos sexuales,"SIEDCO (Policía Nacional, datos.gov.co)",anio,6308.0,True
+2020,DS,Delitos sexuales,"SIEDCO (Policía Nacional, datos.gov.co)",anio,5102.0,True
+2021,DS,Delitos sexuales,"SIEDCO (Policía Nacional, datos.gov.co)",anio,6206.0,True
+2022,DS,Delitos sexuales,"SIEDCO (Policía Nacional, datos.gov.co)",anio,6597.0,True
+2023,DS,Delitos sexuales,"SIEDCO (Policía Nacional, datos.gov.co)",anio,6782.0,True
+2024,DS,Delitos sexuales,"SIEDCO (Policía Nacional, datos.gov.co)",anio,9668.0,True
+2025,DS,Delitos sexuales,"SIEDCO (Policía Nacional, datos.gov.co)",anio,8939.0,True
+2026,DS,Delitos sexuales,"SIEDCO (Policía Nacional, datos.gov.co)",anio,5561.0,False
+2015,DS,Delitos sexuales,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,2136.0,True
+2016,DS,Delitos sexuales,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,2233.0,True
+2017,DS,Delitos sexuales,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,2601.0,True
+2018,DS,Delitos sexuales,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,3592.0,True
+2019,DS,Delitos sexuales,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,4167.0,True
+2020,DS,Delitos sexuales,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,3213.0,True
+2021,DS,Delitos sexuales,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,3955.0,True
+2022,DS,Delitos sexuales,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,4575.0,True
+2023,DS,Delitos sexuales,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,3923.0,True
+2024,DS,Delitos sexuales,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,6596.0,True
+2025,DS,Delitos sexuales,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,6501.0,True
+2026,DS,Delitos sexuales,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,5561.0,True
+2015,H,Homicidios,INMLCF presuntos homicidios (definitivo),anio,1372.0,True
+2016,H,Homicidios,INMLCF presuntos homicidios (definitivo),anio,1302.0,True
+2017,H,Homicidios,INMLCF presuntos homicidios (definitivo),anio,1151.0,True
+2018,H,Homicidios,INMLCF presuntos homicidios (definitivo),anio,1089.0,True
+2019,H,Homicidios,INMLCF presuntos homicidios (definitivo),anio,1094.0,True
+2020,H,Homicidios,INMLCF presuntos homicidios (definitivo),anio,1040.0,True
+2021,H,Homicidios,INMLCF presuntos homicidios (definitivo),anio,1134.0,True
+2022,H,Homicidios,INMLCF presuntos homicidios (definitivo),anio,1099.0,True
+2023,H,Homicidios,INMLCF presuntos homicidios (definitivo),anio,1132.0,True
+2024,H,Homicidios,INMLCF presuntos homicidios (definitivo),anio,1254.0,True
+2015,H,Homicidios,INMLCF presuntos homicidios (definitivo),ene-ago,892.0,True
+2016,H,Homicidios,INMLCF presuntos homicidios (definitivo),ene-ago,867.0,True
+2017,H,Homicidios,INMLCF presuntos homicidios (definitivo),ene-ago,746.0,True
+2018,H,Homicidios,INMLCF presuntos homicidios (definitivo),ene-ago,703.0,True
+2019,H,Homicidios,INMLCF presuntos homicidios (definitivo),ene-ago,690.0,True
+2020,H,Homicidios,INMLCF presuntos homicidios (definitivo),ene-ago,655.0,True
+2021,H,Homicidios,INMLCF presuntos homicidios (definitivo),ene-ago,769.0,True
+2022,H,Homicidios,INMLCF presuntos homicidios (definitivo),ene-ago,672.0,True
+2023,H,Homicidios,INMLCF presuntos homicidios (definitivo),ene-ago,748.0,True
+2024,H,Homicidios,INMLCF presuntos homicidios (definitivo),ene-ago,774.0,True
+2025,H,Homicidios,INMLCF presuntos homicidios (preliminar),anio,1203.0,True
+2026,H,Homicidios,INMLCF presuntos homicidios (preliminar),anio,648.0,False
+2025,H,Homicidios,INMLCF presuntos homicidios (preliminar),ene-ago,826.0,True
+2026,H,Homicidios,INMLCF presuntos homicidios (preliminar),ene-ago,645.0,False
+2018,H,Homicidios,SCJ capa Delitos Alto Impacto,ene-ago,684.0,True
+2019,H,Homicidios,SCJ capa Delitos Alto Impacto,ene-ago,656.0,True
+2020,H,Homicidios,SCJ capa Delitos Alto Impacto,ene-ago,654.0,True
+2021,H,Homicidios,SCJ capa Delitos Alto Impacto,ene-ago,763.0,True
+2022,H,Homicidios,SCJ capa Delitos Alto Impacto,ene-ago,658.0,True
+2023,H,Homicidios,SCJ capa Delitos Alto Impacto,ene-ago,712.0,True
+2024,H,Homicidios,SCJ capa Delitos Alto Impacto,ene-ago,747.0,True
+2025,H,Homicidios,SCJ capa Delitos Alto Impacto,ene-ago,799.0,True
+2026,H,Homicidios,SCJ capa Delitos Alto Impacto,ene-ago,740.0,True
+2015,H,Homicidios,"SIEDCO (Policía Nacional, datos.gov.co)",anio,1340.0,True
+2016,H,Homicidios,"SIEDCO (Policía Nacional, datos.gov.co)",anio,1263.0,True
+2017,H,Homicidios,"SIEDCO (Policía Nacional, datos.gov.co)",anio,1134.0,True
+2018,H,Homicidios,"SIEDCO (Policía Nacional, datos.gov.co)",anio,1064.0,True
+2019,H,Homicidios,"SIEDCO (Policía Nacional, datos.gov.co)",anio,1052.0,True
+2020,H,Homicidios,"SIEDCO (Policía Nacional, datos.gov.co)",anio,1024.0,True
+2021,H,Homicidios,"SIEDCO (Policía Nacional, datos.gov.co)",anio,1126.0,True
+2022,H,Homicidios,"SIEDCO (Policía Nacional, datos.gov.co)",anio,1017.0,True
+2023,H,Homicidios,"SIEDCO (Policía Nacional, datos.gov.co)",anio,1084.0,True
+2024,H,Homicidios,"SIEDCO (Policía Nacional, datos.gov.co)",anio,1214.0,True
+2025,H,Homicidios,"SIEDCO (Policía Nacional, datos.gov.co)",anio,1186.0,True
+2026,H,Homicidios,"SIEDCO (Policía Nacional, datos.gov.co)",anio,740.0,False
+2015,H,Homicidios,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,867.0,True
+2016,H,Homicidios,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,834.0,True
+2017,H,Homicidios,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,736.0,True
+2018,H,Homicidios,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,684.0,True
+2019,H,Homicidios,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,656.0,True
+2020,H,Homicidios,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,643.0,True
+2021,H,Homicidios,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,753.0,True
+2022,H,Homicidios,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,658.0,True
+2023,H,Homicidios,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,712.0,True
+2024,H,Homicidios,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,747.0,True
+2025,H,Homicidios,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,799.0,True
+2026,H,Homicidios,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,740.0,True
+2018,HA,Hurto de automotores,SCJ capa Delitos Alto Impacto,ene-ago,4826.0,True
+2019,HA,Hurto de automotores,SCJ capa Delitos Alto Impacto,ene-ago,4876.0,True
+2020,HA,Hurto de automotores,SCJ capa Delitos Alto Impacto,ene-ago,4056.0,True
+2021,HA,Hurto de automotores,SCJ capa Delitos Alto Impacto,ene-ago,4682.0,True
+2022,HA,Hurto de automotores,SCJ capa Delitos Alto Impacto,ene-ago,4675.0,True
+2023,HA,Hurto de automotores,SCJ capa Delitos Alto Impacto,ene-ago,2800.0,True
+2024,HA,Hurto de automotores,SCJ capa Delitos Alto Impacto,ene-ago,2945.0,True
+2025,HA,Hurto de automotores,SCJ capa Delitos Alto Impacto,ene-ago,2176.0,True
+2026,HA,Hurto de automotores,SCJ capa Delitos Alto Impacto,ene-ago,2039.0,True
+2015,HA,Hurto de automotores,"SIEDCO (Policía Nacional, datos.gov.co)",anio,2284.0,True
+2016,HA,Hurto de automotores,"SIEDCO (Policía Nacional, datos.gov.co)",anio,2653.0,True
+2017,HA,Hurto de automotores,"SIEDCO (Policía Nacional, datos.gov.co)",anio,3414.0,True
+2018,HA,Hurto de automotores,"SIEDCO (Policía Nacional, datos.gov.co)",anio,3650.0,True
+2019,HA,Hurto de automotores,"SIEDCO (Policía Nacional, datos.gov.co)",anio,3634.0,True
+2020,HA,Hurto de automotores,"SIEDCO (Policía Nacional, datos.gov.co)",anio,3429.0,True
+2021,HA,Hurto de automotores,"SIEDCO (Policía Nacional, datos.gov.co)",anio,3791.0,True
+2022,HA,Hurto de automotores,"SIEDCO (Policía Nacional, datos.gov.co)",anio,3731.0,True
+2023,HA,Hurto de automotores,"SIEDCO (Policía Nacional, datos.gov.co)",anio,4234.0,True
+2024,HA,Hurto de automotores,"SIEDCO (Policía Nacional, datos.gov.co)",anio,4146.0,True
+2025,HA,Hurto de automotores,"SIEDCO (Policía Nacional, datos.gov.co)",anio,3318.0,True
+2026,HA,Hurto de automotores,"SIEDCO (Policía Nacional, datos.gov.co)",anio,2020.0,False
+2015,HA,Hurto de automotores,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,1479.0,True
+2016,HA,Hurto de automotores,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,1682.0,True
+2017,HA,Hurto de automotores,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,2243.0,True
+2018,HA,Hurto de automotores,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,2415.0,True
+2019,HA,Hurto de automotores,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,2435.0,True
+2020,HA,Hurto de automotores,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,2028.0,True
+2021,HA,Hurto de automotores,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,2334.0,True
+2022,HA,Hurto de automotores,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,2429.0,True
+2023,HA,Hurto de automotores,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,2800.0,True
+2024,HA,Hurto de automotores,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,2945.0,True
+2025,HA,Hurto de automotores,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,2176.0,True
+2026,HA,Hurto de automotores,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,2020.0,True
+2018,HB,Hurto de bicicletas,SCJ capa Delitos Alto Impacto,ene-ago,5349.0,True
+2019,HB,Hurto de bicicletas,SCJ capa Delitos Alto Impacto,ene-ago,5229.0,True
+2020,HB,Hurto de bicicletas,SCJ capa Delitos Alto Impacto,ene-ago,7148.0,True
+2021,HB,Hurto de bicicletas,SCJ capa Delitos Alto Impacto,ene-ago,6739.0,True
+2022,HB,Hurto de bicicletas,SCJ capa Delitos Alto Impacto,ene-ago,5560.0,True
+2023,HB,Hurto de bicicletas,SCJ capa Delitos Alto Impacto,ene-ago,5428.0,True
+2024,HB,Hurto de bicicletas,SCJ capa Delitos Alto Impacto,ene-ago,5194.0,True
+2025,HB,Hurto de bicicletas,SCJ capa Delitos Alto Impacto,ene-ago,4699.0,True
+2026,HB,Hurto de bicicletas,SCJ capa Delitos Alto Impacto,ene-ago,5140.0,True
+2018,HC,Hurto a comercio,SCJ capa Delitos Alto Impacto,ene-ago,45079.0,True
+2019,HC,Hurto a comercio,SCJ capa Delitos Alto Impacto,ene-ago,39796.0,True
+2020,HC,Hurto a comercio,SCJ capa Delitos Alto Impacto,ene-ago,30346.0,True
+2021,HC,Hurto a comercio,SCJ capa Delitos Alto Impacto,ene-ago,36623.0,True
+2022,HC,Hurto a comercio,SCJ capa Delitos Alto Impacto,ene-ago,38042.0,True
+2023,HC,Hurto a comercio,SCJ capa Delitos Alto Impacto,ene-ago,36932.0,True
+2024,HC,Hurto a comercio,SCJ capa Delitos Alto Impacto,ene-ago,27135.0,True
+2025,HC,Hurto a comercio,SCJ capa Delitos Alto Impacto,ene-ago,23204.0,True
+2026,HC,Hurto a comercio,SCJ capa Delitos Alto Impacto,ene-ago,24387.0,True
+2015,HC,Hurto a comercio,"SIEDCO (Policía Nacional, datos.gov.co)",anio,5921.0,True
+2016,HC,Hurto a comercio,"SIEDCO (Policía Nacional, datos.gov.co)",anio,4372.0,True
+2017,HC,Hurto a comercio,"SIEDCO (Policía Nacional, datos.gov.co)",anio,16730.0,True
+2018,HC,Hurto a comercio,"SIEDCO (Policía Nacional, datos.gov.co)",anio,18629.0,True
+2019,HC,Hurto a comercio,"SIEDCO (Policía Nacional, datos.gov.co)",anio,18690.0,True
+2020,HC,Hurto a comercio,"SIEDCO (Policía Nacional, datos.gov.co)",anio,11841.0,True
+2021,HC,Hurto a comercio,"SIEDCO (Policía Nacional, datos.gov.co)",anio,11123.0,True
+2022,HC,Hurto a comercio,"SIEDCO (Policía Nacional, datos.gov.co)",anio,11596.0,True
+2023,HC,Hurto a comercio,"SIEDCO (Policía Nacional, datos.gov.co)",anio,11664.0,True
+2024,HC,Hurto a comercio,"SIEDCO (Policía Nacional, datos.gov.co)",anio,10976.0,True
+2025,HC,Hurto a comercio,"SIEDCO (Policía Nacional, datos.gov.co)",anio,8208.0,True
+2026,HC,Hurto a comercio,"SIEDCO (Policía Nacional, datos.gov.co)",anio,5787.0,False
+2015,HC,Hurto a comercio,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,4169.0,True
+2016,HC,Hurto a comercio,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,3058.0,True
+2017,HC,Hurto a comercio,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,11116.0,True
+2018,HC,Hurto a comercio,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,12837.0,True
+2019,HC,Hurto a comercio,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,13051.0,True
+2020,HC,Hurto a comercio,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,8270.0,True
+2021,HC,Hurto a comercio,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,7767.0,True
+2022,HC,Hurto a comercio,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,7454.0,True
+2023,HC,Hurto a comercio,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,9036.0,True
+2024,HC,Hurto a comercio,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,7788.0,True
+2025,HC,Hurto a comercio,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,6461.0,True
+2026,HC,Hurto a comercio,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,5787.0,True
+2018,HCE,Hurto de celulares,SCJ capa Delitos Alto Impacto,ene-ago,5514.0,True
+2019,HCE,Hurto de celulares,SCJ capa Delitos Alto Impacto,ene-ago,5396.0,True
+2020,HCE,Hurto de celulares,SCJ capa Delitos Alto Impacto,ene-ago,4290.0,True
+2021,HCE,Hurto de celulares,SCJ capa Delitos Alto Impacto,ene-ago,6516.0,True
+2022,HCE,Hurto de celulares,SCJ capa Delitos Alto Impacto,ene-ago,6555.0,True
+2023,HCE,Hurto de celulares,SCJ capa Delitos Alto Impacto,ene-ago,3709.0,True
+2024,HCE,Hurto de celulares,SCJ capa Delitos Alto Impacto,ene-ago,3899.0,True
+2025,HCE,Hurto de celulares,SCJ capa Delitos Alto Impacto,ene-ago,3060.0,True
+2026,HCE,Hurto de celulares,SCJ capa Delitos Alto Impacto,ene-ago,2947.0,True
+2018,HM,Hurto de motocicletas,SCJ capa Delitos Alto Impacto,ene-ago,27634.0,True
+2019,HM,Hurto de motocicletas,SCJ capa Delitos Alto Impacto,ene-ago,27417.0,True
+2020,HM,Hurto de motocicletas,SCJ capa Delitos Alto Impacto,ene-ago,18016.0,True
+2021,HM,Hurto de motocicletas,SCJ capa Delitos Alto Impacto,ene-ago,17345.0,True
+2022,HM,Hurto de motocicletas,SCJ capa Delitos Alto Impacto,ene-ago,15453.0,True
+2023,HM,Hurto de motocicletas,SCJ capa Delitos Alto Impacto,ene-ago,9036.0,True
+2024,HM,Hurto de motocicletas,SCJ capa Delitos Alto Impacto,ene-ago,7788.0,True
+2025,HM,Hurto de motocicletas,SCJ capa Delitos Alto Impacto,ene-ago,6461.0,True
+2026,HM,Hurto de motocicletas,SCJ capa Delitos Alto Impacto,ene-ago,5925.0,True
+2015,HM,Hurto de motocicletas,"SIEDCO (Policía Nacional, datos.gov.co)",anio,3282.0,True
+2016,HM,Hurto de motocicletas,"SIEDCO (Policía Nacional, datos.gov.co)",anio,3102.0,True
+2017,HM,Hurto de motocicletas,"SIEDCO (Policía Nacional, datos.gov.co)",anio,3417.0,True
+2018,HM,Hurto de motocicletas,"SIEDCO (Policía Nacional, datos.gov.co)",anio,3997.0,True
+2019,HM,Hurto de motocicletas,"SIEDCO (Policía Nacional, datos.gov.co)",anio,4158.0,True
+2020,HM,Hurto de motocicletas,"SIEDCO (Policía Nacional, datos.gov.co)",anio,3651.0,True
+2021,HM,Hurto de motocicletas,"SIEDCO (Policía Nacional, datos.gov.co)",anio,4836.0,True
+2022,HM,Hurto de motocicletas,"SIEDCO (Policía Nacional, datos.gov.co)",anio,5049.0,True
+2023,HM,Hurto de motocicletas,"SIEDCO (Policía Nacional, datos.gov.co)",anio,5567.0,True
+2024,HM,Hurto de motocicletas,"SIEDCO (Policía Nacional, datos.gov.co)",anio,5510.0,True
+2025,HM,Hurto de motocicletas,"SIEDCO (Policía Nacional, datos.gov.co)",anio,4799.0,True
+2026,HM,Hurto de motocicletas,"SIEDCO (Policía Nacional, datos.gov.co)",anio,2950.0,False
+2015,HM,Hurto de motocicletas,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,2141.0,True
+2016,HM,Hurto de motocicletas,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,2070.0,True
+2017,HM,Hurto de motocicletas,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,2296.0,True
+2018,HM,Hurto de motocicletas,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,2758.0,True
+2019,HM,Hurto de motocicletas,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,2697.0,True
+2020,HM,Hurto de motocicletas,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,2145.0,True
+2021,HM,Hurto de motocicletas,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,3260.0,True
+2022,HM,Hurto de motocicletas,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,3384.0,True
+2023,HM,Hurto de motocicletas,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,3709.0,True
+2024,HM,Hurto de motocicletas,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,3899.0,True
+2025,HM,Hurto de motocicletas,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,3060.0,True
+2026,HM,Hurto de motocicletas,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,2950.0,True
+2018,HP,Hurto a personas,SCJ capa Delitos Alto Impacto,ene-ago,170219.0,True
+2019,HP,Hurto a personas,SCJ capa Delitos Alto Impacto,ene-ago,210220.0,True
+2020,HP,Hurto a personas,SCJ capa Delitos Alto Impacto,ene-ago,128265.0,True
+2021,HP,Hurto a personas,SCJ capa Delitos Alto Impacto,ene-ago,159153.0,True
+2022,HP,Hurto a personas,SCJ capa Delitos Alto Impacto,ene-ago,178534.0,True
+2023,HP,Hurto a personas,SCJ capa Delitos Alto Impacto,ene-ago,106824.0,True
+2024,HP,Hurto a personas,SCJ capa Delitos Alto Impacto,ene-ago,86196.0,True
+2025,HP,Hurto a personas,SCJ capa Delitos Alto Impacto,ene-ago,88114.0,True
+2026,HP,Hurto a personas,SCJ capa Delitos Alto Impacto,ene-ago,75863.0,True
+2015,HP,Hurto a personas,"SIEDCO (Policía Nacional, datos.gov.co)",anio,27563.0,True
+2016,HP,Hurto a personas,"SIEDCO (Policía Nacional, datos.gov.co)",anio,37954.0,True
+2017,HP,Hurto a personas,"SIEDCO (Policía Nacional, datos.gov.co)",anio,76906.0,True
+2018,HP,Hurto a personas,"SIEDCO (Policía Nacional, datos.gov.co)",anio,105964.0,True
+2019,HP,Hurto a personas,"SIEDCO (Policía Nacional, datos.gov.co)",anio,127842.0,True
+2020,HP,Hurto a personas,"SIEDCO (Policía Nacional, datos.gov.co)",anio,83136.0,True
+2021,HP,Hurto a personas,"SIEDCO (Policía Nacional, datos.gov.co)",anio,109428.0,True
+2022,HP,Hurto a personas,"SIEDCO (Policía Nacional, datos.gov.co)",anio,137157.0,True
+2023,HP,Hurto a personas,"SIEDCO (Policía Nacional, datos.gov.co)",anio,158745.0,True
+2024,HP,Hurto a personas,"SIEDCO (Policía Nacional, datos.gov.co)",anio,130504.0,True
+2025,HP,Hurto a personas,"SIEDCO (Policía Nacional, datos.gov.co)",anio,123017.0,True
+2026,HP,Hurto a personas,"SIEDCO (Policía Nacional, datos.gov.co)",anio,75124.0,False
+2015,HP,Hurto a personas,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,19213.0,True
+2016,HP,Hurto a personas,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,25553.0,True
+2017,HP,Hurto a personas,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,44007.0,True
+2018,HP,Hurto a personas,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,67633.0,True
+2019,HP,Hurto a personas,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,82390.0,True
+2020,HP,Hurto a personas,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,53135.0,True
+2021,HP,Hurto a personas,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,68077.0,True
+2022,HP,Hurto a personas,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,78419.0,True
+2023,HP,Hurto a personas,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,106823.0,True
+2024,HP,Hurto a personas,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,86196.0,True
+2025,HP,Hurto a personas,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,88116.0,True
+2026,HP,Hurto a personas,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,75124.0,True
+2018,HR,Hurto a residencias,SCJ capa Delitos Alto Impacto,ene-ago,19486.0,True
+2019,HR,Hurto a residencias,SCJ capa Delitos Alto Impacto,ene-ago,18631.0,True
+2020,HR,Hurto a residencias,SCJ capa Delitos Alto Impacto,ene-ago,15906.0,True
+2021,HR,Hurto a residencias,SCJ capa Delitos Alto Impacto,ene-ago,15129.0,True
+2022,HR,Hurto a residencias,SCJ capa Delitos Alto Impacto,ene-ago,9867.0,True
+2023,HR,Hurto a residencias,SCJ capa Delitos Alto Impacto,ene-ago,5519.0,True
+2024,HR,Hurto a residencias,SCJ capa Delitos Alto Impacto,ene-ago,4184.0,True
+2025,HR,Hurto a residencias,SCJ capa Delitos Alto Impacto,ene-ago,4165.0,True
+2026,HR,Hurto a residencias,SCJ capa Delitos Alto Impacto,ene-ago,4447.0,True
+2015,HR,Hurto a residencias,"SIEDCO (Policía Nacional, datos.gov.co)",anio,3632.0,True
+2016,HR,Hurto a residencias,"SIEDCO (Policía Nacional, datos.gov.co)",anio,3667.0,True
+2017,HR,Hurto a residencias,"SIEDCO (Policía Nacional, datos.gov.co)",anio,9051.0,True
+2018,HR,Hurto a residencias,"SIEDCO (Policía Nacional, datos.gov.co)",anio,10022.0,True
+2019,HR,Hurto a residencias,"SIEDCO (Policía Nacional, datos.gov.co)",anio,9908.0,True
+2020,HR,Hurto a residencias,"SIEDCO (Policía Nacional, datos.gov.co)",anio,8606.0,True
+2021,HR,Hurto a residencias,"SIEDCO (Policía Nacional, datos.gov.co)",anio,7784.0,True
+2022,HR,Hurto a residencias,"SIEDCO (Policía Nacional, datos.gov.co)",anio,7319.0,True
+2023,HR,Hurto a residencias,"SIEDCO (Policía Nacional, datos.gov.co)",anio,8224.0,True
+2024,HR,Hurto a residencias,"SIEDCO (Policía Nacional, datos.gov.co)",anio,6096.0,True
+2025,HR,Hurto a residencias,"SIEDCO (Policía Nacional, datos.gov.co)",anio,6073.0,True
+2026,HR,Hurto a residencias,"SIEDCO (Policía Nacional, datos.gov.co)",anio,4406.0,False
+2015,HR,Hurto a residencias,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,2493.0,True
+2016,HR,Hurto a residencias,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,2680.0,True
+2017,HR,Hurto a residencias,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,5882.0,True
+2018,HR,Hurto a residencias,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,7009.0,True
+2019,HR,Hurto a residencias,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,6673.0,True
+2020,HR,Hurto a residencias,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,5303.0,True
+2021,HR,Hurto a residencias,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,5215.0,True
+2022,HR,Hurto a residencias,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,4311.0,True
+2023,HR,Hurto a residencias,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,5519.0,True
+2024,HR,Hurto a residencias,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,4184.0,True
+2025,HR,Hurto a residencias,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,4165.0,True
+2026,HR,Hurto a residencias,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,4406.0,True
+2018,LP,Lesiones personales,SCJ capa Delitos Alto Impacto,ene-ago,19167.0,True
+2019,LP,Lesiones personales,SCJ capa Delitos Alto Impacto,ene-ago,15847.0,True
+2020,LP,Lesiones personales,SCJ capa Delitos Alto Impacto,ene-ago,10003.0,True
+2021,LP,Lesiones personales,SCJ capa Delitos Alto Impacto,ene-ago,14811.0,True
+2022,LP,Lesiones personales,SCJ capa Delitos Alto Impacto,ene-ago,13855.0,True
+2023,LP,Lesiones personales,SCJ capa Delitos Alto Impacto,ene-ago,12440.0,True
+2024,LP,Lesiones personales,SCJ capa Delitos Alto Impacto,ene-ago,12201.0,True
+2025,LP,Lesiones personales,SCJ capa Delitos Alto Impacto,ene-ago,12875.0,True
+2015,LP,Lesiones personales,"SIEDCO (Policía Nacional, datos.gov.co)",anio,13346.0,True
+2016,LP,Lesiones personales,"SIEDCO (Policía Nacional, datos.gov.co)",anio,20610.0,True
+2017,LP,Lesiones personales,"SIEDCO (Policía Nacional, datos.gov.co)",anio,25061.0,True
+2018,LP,Lesiones personales,"SIEDCO (Policía Nacional, datos.gov.co)",anio,25762.0,True
+2019,LP,Lesiones personales,"SIEDCO (Policía Nacional, datos.gov.co)",anio,22819.0,True
+2020,LP,Lesiones personales,"SIEDCO (Policía Nacional, datos.gov.co)",anio,17601.0,True
+2021,LP,Lesiones personales,"SIEDCO (Policía Nacional, datos.gov.co)",anio,22859.0,True
+2022,LP,Lesiones personales,"SIEDCO (Policía Nacional, datos.gov.co)",anio,19566.0,True
+2023,LP,Lesiones personales,"SIEDCO (Policía Nacional, datos.gov.co)",anio,20060.0,True
+2024,LP,Lesiones personales,"SIEDCO (Policía Nacional, datos.gov.co)",anio,19173.0,True
+2025,LP,Lesiones personales,"SIEDCO (Policía Nacional, datos.gov.co)",anio,20327.0,True
+2026,LP,Lesiones personales,"SIEDCO (Policía Nacional, datos.gov.co)",anio,15299.0,False
+2015,LP,Lesiones personales,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,9825.0,True
+2016,LP,Lesiones personales,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,14541.0,True
+2017,LP,Lesiones personales,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,16026.0,True
+2018,LP,Lesiones personales,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,17622.0,True
+2019,LP,Lesiones personales,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,15847.0,True
+2020,LP,Lesiones personales,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,10034.0,True
+2021,LP,Lesiones personales,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,14816.0,True
+2022,LP,Lesiones personales,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,13855.0,True
+2023,LP,Lesiones personales,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,12440.0,True
+2024,LP,Lesiones personales,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,12201.0,True
+2025,LP,Lesiones personales,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,12876.0,True
+2026,LP,Lesiones personales,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,15299.0,True
+2018,VI,Violencia intrafamiliar,SCJ capa Delitos Alto Impacto,ene-ago,23854.0,True
+2019,VI,Violencia intrafamiliar,SCJ capa Delitos Alto Impacto,ene-ago,23166.0,True
+2020,VI,Violencia intrafamiliar,SCJ capa Delitos Alto Impacto,ene-ago,24501.0,True
+2021,VI,Violencia intrafamiliar,SCJ capa Delitos Alto Impacto,ene-ago,23159.0,True
+2022,VI,Violencia intrafamiliar,SCJ capa Delitos Alto Impacto,ene-ago,23086.0,True
+2023,VI,Violencia intrafamiliar,SCJ capa Delitos Alto Impacto,ene-ago,20331.0,True
+2024,VI,Violencia intrafamiliar,SCJ capa Delitos Alto Impacto,ene-ago,27209.0,True
+2025,VI,Violencia intrafamiliar,SCJ capa Delitos Alto Impacto,ene-ago,31445.0,True
+2026,VI,Violencia intrafamiliar,SCJ capa Delitos Alto Impacto,ene-ago,38970.0,True
+2015,VI,Violencia intrafamiliar,"SIEDCO (Policía Nacional, datos.gov.co)",anio,13412.0,True
+2016,VI,Violencia intrafamiliar,"SIEDCO (Policía Nacional, datos.gov.co)",anio,25252.0,True
+2017,VI,Violencia intrafamiliar,"SIEDCO (Policía Nacional, datos.gov.co)",anio,32513.0,True
+2018,VI,Violencia intrafamiliar,"SIEDCO (Policía Nacional, datos.gov.co)",anio,33853.0,True
+2019,VI,Violencia intrafamiliar,"SIEDCO (Policía Nacional, datos.gov.co)",anio,36179.0,True
+2020,VI,Violencia intrafamiliar,"SIEDCO (Policía Nacional, datos.gov.co)",anio,37310.0,True
+2021,VI,Violencia intrafamiliar,"SIEDCO (Policía Nacional, datos.gov.co)",anio,36170.0,True
+2022,VI,Violencia intrafamiliar,"SIEDCO (Policía Nacional, datos.gov.co)",anio,33857.0,True
+2023,VI,Violencia intrafamiliar,"SIEDCO (Policía Nacional, datos.gov.co)",anio,36549.0,True
+2024,VI,Violencia intrafamiliar,"SIEDCO (Policía Nacional, datos.gov.co)",anio,43771.0,True
+2025,VI,Violencia intrafamiliar,"SIEDCO (Policía Nacional, datos.gov.co)",anio,47359.0,True
+2026,VI,Violencia intrafamiliar,"SIEDCO (Policía Nacional, datos.gov.co)",anio,37905.0,False
+2015,VI,Violencia intrafamiliar,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,9322.0,True
+2016,VI,Violencia intrafamiliar,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,17607.0,True
+2017,VI,Violencia intrafamiliar,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,21843.0,True
+2018,VI,Violencia intrafamiliar,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,23874.0,True
+2019,VI,Violencia intrafamiliar,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,23165.0,True
+2020,VI,Violencia intrafamiliar,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,24503.0,True
+2021,VI,Violencia intrafamiliar,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,23164.0,True
+2022,VI,Violencia intrafamiliar,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,23086.0,True
+2023,VI,Violencia intrafamiliar,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,20331.0,True
+2024,VI,Violencia intrafamiliar,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,27209.0,True
+2025,VI,Violencia intrafamiliar,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,31445.0,True
+2026,VI,Violencia intrafamiliar,"SIEDCO (Policía Nacional, datos.gov.co)",ene-ago,37905.0,True

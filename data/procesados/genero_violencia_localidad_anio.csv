@@ -1,0 +1,841 @@
+localidad,nombre,anio,sexo_victima,casos,poblacion,tasa_100k,anio_completo,periodo
+0,Bogotá D.C.,2013,Hombres,9930,3466060,286.5,True,ene-dic
+0,Bogotá D.C.,2013,Mujeres,20163,3762367,535.9,True,ene-dic
+0,Bogotá D.C.,2013,Total,30093,7228427,416.3,True,ene-dic
+0,Bogotá D.C.,2014,Hombres,10126,3476538,291.3,True,ene-dic
+0,Bogotá D.C.,2014,Mujeres,23311,3776411,617.3,True,ene-dic
+0,Bogotá D.C.,2014,Total,33437,7252949,461.0,True,ene-dic
+0,Bogotá D.C.,2015,Hombres,10416,3484883,298.9,True,ene-dic
+0,Bogotá D.C.,2015,Mujeres,25042,3788382,661.0,True,ene-dic
+0,Bogotá D.C.,2015,Total,35458,7273265,487.5,True,ene-dic
+0,Bogotá D.C.,2016,Hombres,8830,3495609,252.6,True,ene-dic
+0,Bogotá D.C.,2016,Mujeres,22072,3805309,580.0,True,ene-dic
+0,Bogotá D.C.,2016,Total,30902,7300918,423.3,True,ene-dic
+0,Bogotá D.C.,2017,Hombres,8671,3511579,246.9,True,ene-dic
+0,Bogotá D.C.,2017,Mujeres,20280,3825870,530.1,True,ene-dic
+0,Bogotá D.C.,2017,Total,28951,7337449,394.6,True,ene-dic
+0,Bogotá D.C.,2018,Hombres,8880,3544078,250.6,True,ene-dic
+0,Bogotá D.C.,2018,Mujeres,21830,3868488,564.3,True,ene-dic
+0,Bogotá D.C.,2018,Total,30710,7412566,414.3,True,ene-dic
+0,Bogotá D.C.,2019,Hombres,9448,3633389,260.0,True,ene-dic
+0,Bogotá D.C.,2019,Mujeres,23429,3959482,591.7,True,ene-dic
+0,Bogotá D.C.,2019,Total,32877,7592871,433.0,True,ene-dic
+0,Bogotá D.C.,2020,Hombres,6355,3703072,171.6,True,ene-dic
+0,Bogotá D.C.,2020,Mujeres,17294,4029089,429.2,True,ene-dic
+0,Bogotá D.C.,2020,Total,23649,7732161,305.9,True,ene-dic
+0,Bogotá D.C.,2021,Hombres,8141,3746794,217.3,True,ene-dic
+0,Bogotá D.C.,2021,Mujeres,22199,4076540,544.6,True,ene-dic
+0,Bogotá D.C.,2021,Total,30340,7823334,387.8,True,ene-dic
+0,Bogotá D.C.,2022,Hombres,11035,3770222,292.7,True,ene-dic
+0,Bogotá D.C.,2022,Mujeres,30283,4103094,738.1,True,ene-dic
+0,Bogotá D.C.,2022,Total,41318,7873316,524.8,True,ene-dic
+0,Bogotá D.C.,2023,Hombres,13724,3786692,362.4,True,ene-dic
+0,Bogotá D.C.,2023,Mujeres,32155,4120589,780.3,True,ene-dic
+0,Bogotá D.C.,2023,Total,45879,7907281,580.2,True,ene-dic
+0,Bogotá D.C.,2024,Hombres,16539,3797817,435.5,True,ene-dic
+0,Bogotá D.C.,2024,Mujeres,34531,4131722,835.8,True,ene-dic
+0,Bogotá D.C.,2024,Total,51070,7929539,644.0,True,ene-dic
+0,Bogotá D.C.,2025,Hombres,17514,3802031,460.6,True,ene-dic
+0,Bogotá D.C.,2025,Mujeres,34979,4135867,845.7,True,ene-dic
+0,Bogotá D.C.,2025,Total,52493,7937898,661.3,True,ene-dic
+0,Bogotá D.C.,2026,Hombres,8921,3801020,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+0,Bogotá D.C.,2026,Mujeres,16739,4134734,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+0,Bogotá D.C.,2026,Total,25660,7935754,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+1,Usaquén,2013,Hombres,989,235036,420.8,True,ene-dic
+1,Usaquén,2013,Mujeres,1620,276631,585.6,True,ene-dic
+1,Usaquén,2013,Total,2609,511667,509.9,True,ene-dic
+1,Usaquén,2014,Hombres,913,237319,384.7,True,ene-dic
+1,Usaquén,2014,Mujeres,1847,279168,661.6,True,ene-dic
+1,Usaquén,2014,Total,2760,516487,534.4,True,ene-dic
+1,Usaquén,2015,Hombres,892,239216,372.9,True,ene-dic
+1,Usaquén,2015,Mujeres,1906,281264,677.7,True,ene-dic
+1,Usaquén,2015,Total,2798,520480,537.6,True,ene-dic
+1,Usaquén,2016,Hombres,734,241066,304.5,True,ene-dic
+1,Usaquén,2016,Mujeres,1632,283497,575.7,True,ene-dic
+1,Usaquén,2016,Total,2366,524563,451.0,True,ene-dic
+1,Usaquén,2017,Hombres,652,243116,268.2,True,ene-dic
+1,Usaquén,2017,Mujeres,1355,285808,474.1,True,ene-dic
+1,Usaquén,2017,Total,2007,528924,379.4,True,ene-dic
+1,Usaquén,2018,Hombres,432,246937,174.9,True,ene-dic
+1,Usaquén,2018,Mujeres,966,288756,334.5,True,ene-dic
+1,Usaquén,2018,Total,1398,535693,261.0,True,ene-dic
+1,Usaquén,2019,Hombres,348,253770,137.1,True,ene-dic
+1,Usaquén,2019,Mujeres,782,296936,263.4,True,ene-dic
+1,Usaquén,2019,Total,1130,550706,205.2,True,ene-dic
+1,Usaquén,2020,Hombres,242,257778,93.9,True,ene-dic
+1,Usaquén,2020,Mujeres,619,301095,205.6,True,ene-dic
+1,Usaquén,2020,Total,861,558873,154.1,True,ene-dic
+1,Usaquén,2021,Hombres,325,261614,124.2,True,ene-dic
+1,Usaquén,2021,Mujeres,792,305916,258.9,True,ene-dic
+1,Usaquén,2021,Total,1117,567530,196.8,True,ene-dic
+1,Usaquén,2022,Hombres,424,264113,160.5,True,ene-dic
+1,Usaquén,2022,Mujeres,1242,308233,402.9,True,ene-dic
+1,Usaquén,2022,Total,1666,572346,291.1,True,ene-dic
+1,Usaquén,2023,Hombres,555,265130,209.3,True,ene-dic
+1,Usaquén,2023,Mujeres,1375,309026,444.9,True,ene-dic
+1,Usaquén,2023,Total,1930,574156,336.1,True,ene-dic
+1,Usaquén,2024,Hombres,712,265343,268.3,True,ene-dic
+1,Usaquén,2024,Mujeres,1478,308917,478.4,True,ene-dic
+1,Usaquén,2024,Total,2190,574260,381.4,True,ene-dic
+1,Usaquén,2025,Hombres,783,264844,295.6,True,ene-dic
+1,Usaquén,2025,Mujeres,1593,308081,517.1,True,ene-dic
+1,Usaquén,2025,Total,2376,572925,414.7,True,ene-dic
+1,Usaquén,2026,Hombres,370,263718,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+1,Usaquén,2026,Mujeres,779,306618,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+1,Usaquén,2026,Total,1149,570336,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+2,Chapinero,2013,Hombres,73,69685,104.8,True,ene-dic
+2,Chapinero,2013,Mujeres,218,79727,273.4,True,ene-dic
+2,Chapinero,2013,Total,291,149412,194.8,True,ene-dic
+2,Chapinero,2014,Hombres,90,70612,127.5,True,ene-dic
+2,Chapinero,2014,Mujeres,244,80206,304.2,True,ene-dic
+2,Chapinero,2014,Total,334,150818,221.5,True,ene-dic
+2,Chapinero,2015,Hombres,158,71444,221.2,True,ene-dic
+2,Chapinero,2015,Mujeres,263,80552,326.5,True,ene-dic
+2,Chapinero,2015,Total,421,151996,277.0,True,ene-dic
+2,Chapinero,2016,Hombres,122,72269,168.8,True,ene-dic
+2,Chapinero,2016,Mujeres,185,80935,228.6,True,ene-dic
+2,Chapinero,2016,Total,307,153204,200.4,True,ene-dic
+2,Chapinero,2017,Hombres,107,73158,146.3,True,ene-dic
+2,Chapinero,2017,Mujeres,253,81348,311.0,True,ene-dic
+2,Chapinero,2017,Total,360,154506,233.0,True,ene-dic
+2,Chapinero,2018,Hombres,107,74402,143.8,True,ene-dic
+2,Chapinero,2018,Mujeres,294,82077,358.2,True,ene-dic
+2,Chapinero,2018,Total,401,156479,256.3,True,ene-dic
+2,Chapinero,2019,Hombres,108,77991,138.5,True,ene-dic
+2,Chapinero,2019,Mujeres,272,85157,319.4,True,ene-dic
+2,Chapinero,2019,Total,380,163148,232.9,True,ene-dic
+2,Chapinero,2020,Hombres,71,79391,89.4,True,ene-dic
+2,Chapinero,2020,Mujeres,158,86561,182.5,True,ene-dic
+2,Chapinero,2020,Total,229,165952,138.0,True,ene-dic
+2,Chapinero,2021,Hombres,91,79794,114.0,True,ene-dic
+2,Chapinero,2021,Mujeres,241,87109,276.7,True,ene-dic
+2,Chapinero,2021,Total,332,166903,198.9,True,ene-dic
+2,Chapinero,2022,Hombres,132,79415,166.2,True,ene-dic
+2,Chapinero,2022,Mujeres,388,87227,444.8,True,ene-dic
+2,Chapinero,2022,Total,520,166642,312.0,True,ene-dic
+2,Chapinero,2023,Hombres,156,78824,197.9,True,ene-dic
+2,Chapinero,2023,Mujeres,387,87080,444.4,True,ene-dic
+2,Chapinero,2023,Total,543,165904,327.3,True,ene-dic
+2,Chapinero,2024,Hombres,221,78139,282.8,True,ene-dic
+2,Chapinero,2024,Mujeres,410,86797,472.4,True,ene-dic
+2,Chapinero,2024,Total,631,164936,382.6,True,ene-dic
+2,Chapinero,2025,Hombres,228,77320,294.9,True,ene-dic
+2,Chapinero,2025,Mujeres,430,86373,497.8,True,ene-dic
+2,Chapinero,2025,Total,658,163693,402.0,True,ene-dic
+2,Chapinero,2026,Hombres,126,76396,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+2,Chapinero,2026,Mujeres,215,85856,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+2,Chapinero,2026,Total,341,162252,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+3,Santa Fe,2013,Hombres,147,50613,290.4,True,ene-dic
+3,Santa Fe,2013,Mujeres,359,51053,703.2,True,ene-dic
+3,Santa Fe,2013,Total,506,101666,497.7,True,ene-dic
+3,Santa Fe,2014,Hombres,206,50705,406.3,True,ene-dic
+3,Santa Fe,2014,Mujeres,413,51220,806.3,True,ene-dic
+3,Santa Fe,2014,Total,619,101925,607.3,True,ene-dic
+3,Santa Fe,2015,Hombres,177,50788,348.5,True,ene-dic
+3,Santa Fe,2015,Mujeres,460,51367,895.5,True,ene-dic
+3,Santa Fe,2015,Total,637,102155,623.6,True,ene-dic
+3,Santa Fe,2016,Hombres,143,50901,280.9,True,ene-dic
+3,Santa Fe,2016,Mujeres,381,51584,738.6,True,ene-dic
+3,Santa Fe,2016,Total,524,102485,511.3,True,ene-dic
+3,Santa Fe,2017,Hombres,187,51117,365.8,True,ene-dic
+3,Santa Fe,2017,Mujeres,444,51867,856.0,True,ene-dic
+3,Santa Fe,2017,Total,631,102984,612.7,True,ene-dic
+3,Santa Fe,2018,Hombres,189,51631,366.1,True,ene-dic
+3,Santa Fe,2018,Mujeres,524,52354,1000.9,True,ene-dic
+3,Santa Fe,2018,Total,713,103985,685.7,True,ene-dic
+3,Santa Fe,2019,Hombres,290,52751,549.8,True,ene-dic
+3,Santa Fe,2019,Mujeres,572,53175,1075.7,True,ene-dic
+3,Santa Fe,2019,Total,862,105926,813.8,True,ene-dic
+3,Santa Fe,2020,Hombres,129,53669,240.4,True,ene-dic
+3,Santa Fe,2020,Mujeres,367,54155,677.7,True,ene-dic
+3,Santa Fe,2020,Total,496,107824,460.0,True,ene-dic
+3,Santa Fe,2021,Hombres,175,54577,320.6,True,ene-dic
+3,Santa Fe,2021,Mujeres,487,55254,881.4,True,ene-dic
+3,Santa Fe,2021,Total,662,109831,602.7,True,ene-dic
+3,Santa Fe,2022,Hombres,210,55116,381.0,True,ene-dic
+3,Santa Fe,2022,Mujeres,611,55952,1092.0,True,ene-dic
+3,Santa Fe,2022,Total,821,111068,739.2,True,ene-dic
+3,Santa Fe,2023,Hombres,220,55650,395.3,True,ene-dic
+3,Santa Fe,2023,Mujeres,512,56496,906.3,True,ene-dic
+3,Santa Fe,2023,Total,732,112146,652.7,True,ene-dic
+3,Santa Fe,2024,Hombres,234,56054,417.5,True,ene-dic
+3,Santa Fe,2024,Mujeres,554,56891,973.8,True,ene-dic
+3,Santa Fe,2024,Total,788,112945,697.7,True,ene-dic
+3,Santa Fe,2025,Hombres,214,56270,380.3,True,ene-dic
+3,Santa Fe,2025,Mujeres,581,57117,1017.2,True,ene-dic
+3,Santa Fe,2025,Total,795,113387,701.1,True,ene-dic
+3,Santa Fe,2026,Hombres,100,56327,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+3,Santa Fe,2026,Mujeres,244,57223,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+3,Santa Fe,2026,Total,344,113550,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+4,San Cristóbal,2013,Hombres,874,186353,469.0,True,ene-dic
+4,San Cristóbal,2013,Mujeres,1738,197718,879.0,True,ene-dic
+4,San Cristóbal,2013,Total,2612,384071,680.1,True,ene-dic
+4,San Cristóbal,2014,Hombres,941,185728,506.7,True,ene-dic
+4,San Cristóbal,2014,Mujeres,2134,197349,1081.3,True,ene-dic
+4,San Cristóbal,2014,Total,3075,383077,802.7,True,ene-dic
+4,San Cristóbal,2015,Hombres,856,185168,462.3,True,ene-dic
+4,San Cristóbal,2015,Mujeres,2028,197079,1029.0,True,ene-dic
+4,San Cristóbal,2015,Total,2884,382247,754.5,True,ene-dic
+4,San Cristóbal,2016,Hombres,612,184891,331.0,True,ene-dic
+4,San Cristóbal,2016,Mujeres,1427,197211,723.6,True,ene-dic
+4,San Cristóbal,2016,Total,2039,382102,533.6,True,ene-dic
+4,San Cristóbal,2017,Hombres,632,185034,341.6,True,ene-dic
+4,San Cristóbal,2017,Mujeres,1362,197662,689.1,True,ene-dic
+4,San Cristóbal,2017,Total,1994,382696,521.0,True,ene-dic
+4,San Cristóbal,2018,Hombres,633,186898,338.7,True,ene-dic
+4,San Cristóbal,2018,Mujeres,1544,198616,777.4,True,ene-dic
+4,San Cristóbal,2018,Total,2177,385514,564.7,True,ene-dic
+4,San Cristóbal,2019,Hombres,942,189906,496.0,True,ene-dic
+4,San Cristóbal,2019,Mujeres,1957,202416,966.8,True,ene-dic
+4,San Cristóbal,2019,Total,2899,392322,738.9,True,ene-dic
+4,San Cristóbal,2020,Hombres,389,193584,200.9,True,ene-dic
+4,San Cristóbal,2020,Mujeres,1092,206182,529.6,True,ene-dic
+4,San Cristóbal,2020,Total,1481,399766,370.5,True,ene-dic
+4,San Cristóbal,2021,Hombres,524,194161,269.9,True,ene-dic
+4,San Cristóbal,2021,Mujeres,1506,207180,726.9,True,ene-dic
+4,San Cristóbal,2021,Total,2030,401341,505.8,True,ene-dic
+4,San Cristóbal,2022,Hombres,599,194001,308.8,True,ene-dic
+4,San Cristóbal,2022,Mujeres,1882,207519,906.9,True,ene-dic
+4,San Cristóbal,2022,Total,2481,401520,617.9,True,ene-dic
+4,San Cristóbal,2023,Hombres,695,193934,358.4,True,ene-dic
+4,San Cristóbal,2023,Mujeres,1677,207772,807.1,True,ene-dic
+4,San Cristóbal,2023,Total,2372,401706,590.5,True,ene-dic
+4,San Cristóbal,2024,Hombres,755,193852,389.5,True,ene-dic
+4,San Cristóbal,2024,Mujeres,1732,207917,833.0,True,ene-dic
+4,San Cristóbal,2024,Total,2487,401769,619.0,True,ene-dic
+4,San Cristóbal,2025,Hombres,706,193558,364.7,True,ene-dic
+4,San Cristóbal,2025,Mujeres,1774,207856,853.5,True,ene-dic
+4,San Cristóbal,2025,Total,2480,401414,617.8,True,ene-dic
+4,San Cristóbal,2026,Hombres,293,193159,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+4,San Cristóbal,2026,Mujeres,736,207660,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+4,San Cristóbal,2026,Total,1029,400819,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+5,Usme,2013,Hombres,883,171345,515.3,True,ene-dic
+5,Usme,2013,Mujeres,1917,177171,1082.0,True,ene-dic
+5,Usme,2013,Total,2800,348516,803.4,True,ene-dic
+5,Usme,2014,Hombres,890,172625,515.6,True,ene-dic
+5,Usme,2014,Mujeres,2215,178626,1240.0,True,ene-dic
+5,Usme,2014,Total,3105,351251,884.0,True,ene-dic
+5,Usme,2015,Hombres,795,173705,457.7,True,ene-dic
+5,Usme,2015,Mujeres,2149,179853,1194.9,True,ene-dic
+5,Usme,2015,Total,2944,353558,832.7,True,ene-dic
+5,Usme,2016,Hombres,705,174827,403.3,True,ene-dic
+5,Usme,2016,Mujeres,1763,181218,972.9,True,ene-dic
+5,Usme,2016,Total,2468,356045,693.2,True,ene-dic
+5,Usme,2017,Hombres,780,176156,442.8,True,ene-dic
+5,Usme,2017,Mujeres,1585,182657,867.7,True,ene-dic
+5,Usme,2017,Total,2365,358813,659.1,True,ene-dic
+5,Usme,2018,Hombres,791,176971,447.0,True,ene-dic
+5,Usme,2018,Mujeres,1713,186423,918.9,True,ene-dic
+5,Usme,2018,Total,2504,363394,689.1,True,ene-dic
+5,Usme,2019,Hombres,644,183590,350.8,True,ene-dic
+5,Usme,2019,Mujeres,1723,191297,900.7,True,ene-dic
+5,Usme,2019,Total,2367,374887,631.4,True,ene-dic
+5,Usme,2020,Hombres,610,187789,324.8,True,ene-dic
+5,Usme,2020,Mujeres,1442,195612,737.2,True,ene-dic
+5,Usme,2020,Total,2052,383401,535.2,True,ene-dic
+5,Usme,2021,Hombres,720,190185,378.6,True,ene-dic
+5,Usme,2021,Mujeres,1625,198601,818.2,True,ene-dic
+5,Usme,2021,Total,2345,388786,603.2,True,ene-dic
+5,Usme,2022,Hombres,847,192020,441.1,True,ene-dic
+5,Usme,2022,Mujeres,2160,200852,1075.4,True,ene-dic
+5,Usme,2022,Total,3007,392872,765.4,True,ene-dic
+5,Usme,2023,Hombres,1159,193917,597.7,True,ene-dic
+5,Usme,2023,Mujeres,2391,202944,1178.2,True,ene-dic
+5,Usme,2023,Total,3550,396861,894.5,True,ene-dic
+5,Usme,2024,Hombres,1401,195564,716.4,True,ene-dic
+5,Usme,2024,Mujeres,2535,204749,1238.1,True,ene-dic
+5,Usme,2024,Total,3936,400313,983.2,True,ene-dic
+5,Usme,2025,Hombres,1348,196893,684.6,True,ene-dic
+5,Usme,2025,Mujeres,2569,206244,1245.6,True,ene-dic
+5,Usme,2025,Total,3917,403137,971.6,True,ene-dic
+5,Usme,2026,Hombres,735,198050,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+5,Usme,2026,Mujeres,1244,207553,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+5,Usme,2026,Total,1979,405603,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+6,Tunjuelito,2013,Hombres,230,83668,274.9,True,ene-dic
+6,Tunjuelito,2013,Mujeres,446,87749,508.3,True,ene-dic
+6,Tunjuelito,2013,Total,676,171417,394.4,True,ene-dic
+6,Tunjuelito,2014,Hombres,207,83499,247.9,True,ene-dic
+6,Tunjuelito,2014,Mujeres,531,87363,607.8,True,ene-dic
+6,Tunjuelito,2014,Total,738,170862,431.9,True,ene-dic
+6,Tunjuelito,2015,Hombres,173,83364,207.5,True,ene-dic
+6,Tunjuelito,2015,Mujeres,453,87024,520.5,True,ene-dic
+6,Tunjuelito,2015,Total,626,170388,367.4,True,ene-dic
+6,Tunjuelito,2016,Hombres,143,83365,171.5,True,ene-dic
+6,Tunjuelito,2016,Mujeres,396,86883,455.8,True,ene-dic
+6,Tunjuelito,2016,Total,539,170248,316.6,True,ene-dic
+6,Tunjuelito,2017,Hombres,245,83545,293.3,True,ene-dic
+6,Tunjuelito,2017,Mujeres,591,86895,680.1,True,ene-dic
+6,Tunjuelito,2017,Total,836,170440,490.5,True,ene-dic
+6,Tunjuelito,2018,Hombres,263,83369,315.5,True,ene-dic
+6,Tunjuelito,2018,Mujeres,558,88263,632.2,True,ene-dic
+6,Tunjuelito,2018,Total,821,171632,478.3,True,ene-dic
+6,Tunjuelito,2019,Hombres,236,85805,275.0,True,ene-dic
+6,Tunjuelito,2019,Mujeres,645,89676,719.3,True,ene-dic
+6,Tunjuelito,2019,Total,881,175481,502.0,True,ene-dic
+6,Tunjuelito,2020,Hombres,236,87302,270.3,True,ene-dic
+6,Tunjuelito,2020,Mujeres,532,91189,583.4,True,ene-dic
+6,Tunjuelito,2020,Total,768,178491,430.3,True,ene-dic
+6,Tunjuelito,2021,Hombres,233,87522,266.2,True,ene-dic
+6,Tunjuelito,2021,Mujeres,533,91530,582.3,True,ene-dic
+6,Tunjuelito,2021,Total,766,179052,427.8,True,ene-dic
+6,Tunjuelito,2022,Hombres,308,87071,353.7,True,ene-dic
+6,Tunjuelito,2022,Mujeres,731,91586,798.2,True,ene-dic
+6,Tunjuelito,2022,Total,1039,178657,581.6,True,ene-dic
+6,Tunjuelito,2023,Hombres,370,86711,426.7,True,ene-dic
+6,Tunjuelito,2023,Mujeres,765,91577,835.4,True,ene-dic
+6,Tunjuelito,2023,Total,1135,178288,636.6,True,ene-dic
+6,Tunjuelito,2024,Hombres,400,86379,463.1,True,ene-dic
+6,Tunjuelito,2024,Mujeres,791,91540,864.1,True,ene-dic
+6,Tunjuelito,2024,Total,1191,177919,669.4,True,ene-dic
+6,Tunjuelito,2025,Hombres,387,85971,450.2,True,ene-dic
+6,Tunjuelito,2025,Mujeres,795,91399,869.8,True,ene-dic
+6,Tunjuelito,2025,Total,1182,177370,666.4,True,ene-dic
+6,Tunjuelito,2026,Hombres,230,85498,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+6,Tunjuelito,2026,Mujeres,432,91223,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+6,Tunjuelito,2026,Total,662,176721,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+7,Bosa,2013,Hombres,1588,319347,497.3,True,ene-dic
+7,Bosa,2013,Mujeres,3141,337422,930.9,True,ene-dic
+7,Bosa,2013,Total,4729,656769,720.0,True,ene-dic
+7,Bosa,2014,Hombres,1682,322651,521.3,True,ene-dic
+7,Bosa,2014,Mujeres,3561,342123,1040.9,True,ene-dic
+7,Bosa,2014,Total,5243,664774,788.7,True,ene-dic
+7,Bosa,2015,Hombres,1544,325275,474.7,True,ene-dic
+7,Bosa,2015,Mujeres,3681,346129,1063.5,True,ene-dic
+7,Bosa,2015,Total,5225,671404,778.2,True,ene-dic
+7,Bosa,2016,Hombres,1181,327737,360.3,True,ene-dic
+7,Bosa,2016,Mujeres,3184,350171,909.3,True,ene-dic
+7,Bosa,2016,Total,4365,677908,643.9,True,ene-dic
+7,Bosa,2017,Hombres,901,330392,272.7,True,ene-dic
+7,Bosa,2017,Mujeres,2323,354178,655.9,True,ene-dic
+7,Bosa,2017,Total,3224,684570,471.0,True,ene-dic
+7,Bosa,2018,Hombres,927,334223,277.4,True,ene-dic
+7,Bosa,2018,Mujeres,2561,360174,711.0,True,ene-dic
+7,Bosa,2018,Total,3488,694397,502.3,True,ene-dic
+7,Bosa,2019,Hombres,1032,340010,303.5,True,ene-dic
+7,Bosa,2019,Mujeres,3117,367163,848.9,True,ene-dic
+7,Bosa,2019,Total,4149,707173,586.7,True,ene-dic
+7,Bosa,2020,Hombres,783,347767,225.2,True,ene-dic
+7,Bosa,2020,Mujeres,2386,375138,636.0,True,ene-dic
+7,Bosa,2020,Total,3169,722905,438.4,True,ene-dic
+7,Bosa,2021,Hombres,848,353585,239.8,True,ene-dic
+7,Bosa,2021,Mujeres,2608,381674,683.3,True,ene-dic
+7,Bosa,2021,Total,3456,735259,470.0,True,ene-dic
+7,Bosa,2022,Hombres,1229,358572,342.7,True,ene-dic
+7,Bosa,2022,Mujeres,3546,386573,917.3,True,ene-dic
+7,Bosa,2022,Total,4775,745145,640.8,True,ene-dic
+7,Bosa,2023,Hombres,1694,363094,466.5,True,ene-dic
+7,Bosa,2023,Mujeres,4126,390748,1055.9,True,ene-dic
+7,Bosa,2023,Total,5820,753842,772.0,True,ene-dic
+7,Bosa,2024,Hombres,2063,366970,562.2,True,ene-dic
+7,Bosa,2024,Mujeres,4389,394283,1113.2,True,ene-dic
+7,Bosa,2024,Total,6452,761253,847.6,True,ene-dic
+7,Bosa,2025,Hombres,2098,370184,566.7,True,ene-dic
+7,Bosa,2025,Mujeres,4171,397156,1050.2,True,ene-dic
+7,Bosa,2025,Total,6269,767340,817.0,True,ene-dic
+7,Bosa,2026,Hombres,1062,372927,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+7,Bosa,2026,Mujeres,2024,399575,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+7,Bosa,2026,Total,3086,772502,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+8,Kennedy,2013,Hombres,757,481661,157.2,True,ene-dic
+8,Kennedy,2013,Mujeres,1915,514630,372.1,True,ene-dic
+8,Kennedy,2013,Total,2672,996291,268.2,True,ene-dic
+8,Kennedy,2014,Hombres,925,482745,191.6,True,ene-dic
+8,Kennedy,2014,Mujeres,2362,516423,457.4,True,ene-dic
+8,Kennedy,2014,Total,3287,999168,329.0,True,ene-dic
+8,Kennedy,2015,Hombres,1074,483553,222.1,True,ene-dic
+8,Kennedy,2015,Mujeres,2756,517984,532.1,True,ene-dic
+8,Kennedy,2015,Total,3830,1001537,382.4,True,ene-dic
+8,Kennedy,2016,Hombres,886,484709,182.8,True,ene-dic
+8,Kennedy,2016,Mujeres,2524,520270,485.1,True,ene-dic
+8,Kennedy,2016,Total,3410,1004979,339.3,True,ene-dic
+8,Kennedy,2017,Hombres,835,486609,171.6,True,ene-dic
+8,Kennedy,2017,Mujeres,2025,523056,387.1,True,ene-dic
+8,Kennedy,2017,Total,2860,1009665,283.3,True,ene-dic
+8,Kennedy,2018,Hombres,871,488032,178.5,True,ene-dic
+8,Kennedy,2018,Mujeres,2363,531716,444.4,True,ene-dic
+8,Kennedy,2018,Total,3234,1019748,317.1,True,ene-dic
+8,Kennedy,2019,Hombres,1136,493558,230.2,True,ene-dic
+8,Kennedy,2019,Mujeres,3027,533815,567.1,True,ene-dic
+8,Kennedy,2019,Total,4163,1027373,405.2,True,ene-dic
+8,Kennedy,2020,Hombres,840,503223,166.9,True,ene-dic
+8,Kennedy,2020,Mujeres,2350,543728,432.2,True,ene-dic
+8,Kennedy,2020,Total,3190,1046951,304.7,True,ene-dic
+8,Kennedy,2021,Hombres,1091,510068,213.9,True,ene-dic
+8,Kennedy,2021,Mujeres,3147,551114,571.0,True,ene-dic
+8,Kennedy,2021,Total,4238,1061182,399.4,True,ene-dic
+8,Kennedy,2022,Hombres,1532,513826,298.2,True,ene-dic
+8,Kennedy,2022,Mujeres,4132,555639,743.6,True,ene-dic
+8,Kennedy,2022,Total,5664,1069465,529.6,True,ene-dic
+8,Kennedy,2023,Hombres,1837,516520,355.6,True,ene-dic
+8,Kennedy,2023,Mujeres,4497,558620,805.0,True,ene-dic
+8,Kennedy,2023,Total,6334,1075140,589.1,True,ene-dic
+8,Kennedy,2024,Hombres,2175,518347,419.6,True,ene-dic
+8,Kennedy,2024,Mujeres,4864,560548,867.7,True,ene-dic
+8,Kennedy,2024,Total,7039,1078895,652.4,True,ene-dic
+8,Kennedy,2025,Hombres,2523,519159,486.0,True,ene-dic
+8,Kennedy,2025,Mujeres,4987,561439,888.3,True,ene-dic
+8,Kennedy,2025,Total,7510,1080598,695.0,True,ene-dic
+8,Kennedy,2026,Hombres,1308,519216,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+8,Kennedy,2026,Mujeres,2357,561526,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+8,Kennedy,2026,Total,3665,1080742,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+9,Fontibón,2013,Hombres,290,166431,174.2,True,ene-dic
+9,Fontibón,2013,Mujeres,654,184915,353.7,True,ene-dic
+9,Fontibón,2013,Total,944,351346,268.7,True,ene-dic
+9,Fontibón,2014,Hombres,388,167556,231.6,True,ene-dic
+9,Fontibón,2014,Mujeres,947,186541,507.7,True,ene-dic
+9,Fontibón,2014,Total,1335,354097,377.0,True,ene-dic
+9,Fontibón,2015,Hombres,322,168448,191.2,True,ene-dic
+9,Fontibón,2015,Mujeres,910,187940,484.2,True,ene-dic
+9,Fontibón,2015,Total,1232,356388,345.7,True,ene-dic
+9,Fontibón,2016,Hombres,324,169348,191.3,True,ene-dic
+9,Fontibón,2016,Mujeres,889,189456,469.2,True,ene-dic
+9,Fontibón,2016,Total,1213,358804,338.1,True,ene-dic
+9,Fontibón,2017,Hombres,227,170407,133.2,True,ene-dic
+9,Fontibón,2017,Mujeres,704,191067,368.5,True,ene-dic
+9,Fontibón,2017,Total,931,361474,257.6,True,ene-dic
+9,Fontibón,2018,Hombres,204,173463,117.6,True,ene-dic
+9,Fontibón,2018,Mujeres,653,192421,339.4,True,ene-dic
+9,Fontibón,2018,Total,857,365884,234.2,True,ene-dic
+9,Fontibón,2019,Hombres,268,178158,150.4,True,ene-dic
+9,Fontibón,2019,Mujeres,721,198960,362.4,True,ene-dic
+9,Fontibón,2019,Total,989,377118,262.3,True,ene-dic
+9,Fontibón,2020,Hombres,243,181305,134.0,True,ene-dic
+9,Fontibón,2020,Mujeres,655,202272,323.8,True,ene-dic
+9,Fontibón,2020,Total,898,383577,234.1,True,ene-dic
+9,Fontibón,2021,Hombres,305,183282,166.4,True,ene-dic
+9,Fontibón,2021,Mujeres,816,204762,398.5,True,ene-dic
+9,Fontibón,2021,Total,1121,388044,288.9,True,ene-dic
+9,Fontibón,2022,Hombres,398,184113,216.2,True,ene-dic
+9,Fontibón,2022,Mujeres,1113,206148,539.9,True,ene-dic
+9,Fontibón,2022,Total,1511,390261,387.2,True,ene-dic
+9,Fontibón,2023,Hombres,471,184598,255.1,True,ene-dic
+9,Fontibón,2023,Mujeres,1332,206909,643.8,True,ene-dic
+9,Fontibón,2023,Total,1803,391507,460.5,True,ene-dic
+9,Fontibón,2024,Hombres,581,184658,314.6,True,ene-dic
+9,Fontibón,2024,Mujeres,1296,207242,625.4,True,ene-dic
+9,Fontibón,2024,Total,1877,391900,478.9,True,ene-dic
+9,Fontibón,2025,Hombres,621,184296,337.0,True,ene-dic
+9,Fontibón,2025,Mujeres,1245,207179,600.9,True,ene-dic
+9,Fontibón,2025,Total,1866,391475,476.7,True,ene-dic
+9,Fontibón,2026,Hombres,342,183607,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+9,Fontibón,2026,Mujeres,674,206788,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+9,Fontibón,2026,Total,1016,390395,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+10,Engativá,2013,Hombres,1064,372241,285.8,True,ene-dic
+10,Engativá,2013,Mujeres,1886,412346,457.4,True,ene-dic
+10,Engativá,2013,Total,2950,784587,376.0,True,ene-dic
+10,Engativá,2014,Hombres,804,371758,216.3,True,ene-dic
+10,Engativá,2014,Mujeres,1693,412215,410.7,True,ene-dic
+10,Engativá,2014,Total,2497,783973,318.5,True,ene-dic
+10,Engativá,2015,Hombres,754,371303,203.1,True,ene-dic
+10,Engativá,2015,Mujeres,1634,412130,396.5,True,ene-dic
+10,Engativá,2015,Total,2388,783433,304.8,True,ene-dic
+10,Engativá,2016,Hombres,602,371321,162.1,True,ene-dic
+10,Engativá,2016,Mujeres,1401,412808,339.4,True,ene-dic
+10,Engativá,2016,Total,2003,784129,255.4,True,ene-dic
+10,Engativá,2017,Hombres,610,372061,164.0,True,ene-dic
+10,Engativá,2017,Mujeres,1503,414078,363.0,True,ene-dic
+10,Engativá,2017,Total,2113,786139,268.8,True,ene-dic
+10,Engativá,2018,Hombres,661,374253,176.6,True,ene-dic
+10,Engativá,2018,Mujeres,1519,418265,363.2,True,ene-dic
+10,Engativá,2018,Total,2180,792518,275.1,True,ene-dic
+10,Engativá,2019,Hombres,646,379603,170.2,True,ene-dic
+10,Engativá,2019,Mujeres,1586,423177,374.8,True,ene-dic
+10,Engativá,2019,Total,2232,802780,278.0,True,ene-dic
+10,Engativá,2020,Hombres,435,386180,112.6,True,ene-dic
+10,Engativá,2020,Mujeres,1143,429980,265.8,True,ene-dic
+10,Engativá,2020,Total,1578,816160,193.3,True,ene-dic
+10,Engativá,2021,Hombres,629,390085,161.2,True,ene-dic
+10,Engativá,2021,Mujeres,1794,434237,413.1,True,ene-dic
+10,Engativá,2021,Total,2423,824322,293.9,True,ene-dic
+10,Engativá,2022,Hombres,866,391310,221.3,True,ene-dic
+10,Engativá,2022,Mujeres,2704,436272,619.8,True,ene-dic
+10,Engativá,2022,Total,3570,827582,431.4,True,ene-dic
+10,Engativá,2023,Hombres,1142,391744,291.5,True,ene-dic
+10,Engativá,2023,Mujeres,2815,437088,644.0,True,ene-dic
+10,Engativá,2023,Total,3957,828832,477.4,True,ene-dic
+10,Engativá,2024,Hombres,1440,391590,367.7,True,ene-dic
+10,Engativá,2024,Mujeres,3010,437163,688.5,True,ene-dic
+10,Engativá,2024,Total,4450,828753,537.0,True,ene-dic
+10,Engativá,2025,Hombres,1616,390760,413.6,True,ene-dic
+10,Engativá,2025,Mujeres,3160,436619,723.7,True,ene-dic
+10,Engativá,2025,Total,4776,827379,577.2,True,ene-dic
+10,Engativá,2026,Hombres,802,389399,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+10,Engativá,2026,Mujeres,1558,435534,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+10,Engativá,2026,Total,2360,824933,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+11,Suba,2013,Hombres,857,520604,164.6,True,ene-dic
+11,Suba,2013,Mujeres,1993,581757,342.6,True,ene-dic
+11,Suba,2013,Total,2850,1102361,258.5,True,ene-dic
+11,Suba,2014,Hombres,970,524966,184.8,True,ene-dic
+11,Suba,2014,Mujeres,2210,587199,376.4,True,ene-dic
+11,Suba,2014,Total,3180,1112165,285.9,True,ene-dic
+11,Suba,2015,Hombres,932,528542,176.3,True,ene-dic
+11,Suba,2015,Mujeres,2350,591790,397.1,True,ene-dic
+11,Suba,2015,Total,3282,1120332,292.9,True,ene-dic
+11,Suba,2016,Hombres,773,532063,145.3,True,ene-dic
+11,Suba,2016,Mujeres,2044,596690,342.6,True,ene-dic
+11,Suba,2016,Total,2817,1128753,249.6,True,ene-dic
+11,Suba,2017,Hombres,768,536074,143.3,True,ene-dic
+11,Suba,2017,Mujeres,1883,601794,312.9,True,ene-dic
+11,Suba,2017,Total,2651,1137868,233.0,True,ene-dic
+11,Suba,2018,Hombres,859,542437,158.4,True,ene-dic
+11,Suba,2018,Mujeres,2314,609950,379.4,True,ene-dic
+11,Suba,2018,Total,3173,1152387,275.3,True,ene-dic
+11,Suba,2019,Hombres,927,561773,165.0,True,ene-dic
+11,Suba,2019,Mujeres,2086,630871,330.7,True,ene-dic
+11,Suba,2019,Total,3013,1192644,252.6,True,ene-dic
+11,Suba,2020,Hombres,549,572894,95.8,True,ene-dic
+11,Suba,2020,Mujeres,1666,640604,260.1,True,ene-dic
+11,Suba,2020,Total,2215,1213498,182.5,True,ene-dic
+11,Suba,2021,Hombres,763,582179,131.1,True,ene-dic
+11,Suba,2021,Mujeres,2504,648076,386.4,True,ene-dic
+11,Suba,2021,Total,3267,1230255,265.6,True,ene-dic
+11,Suba,2022,Hombres,1223,588067,208.0,True,ene-dic
+11,Suba,2022,Mujeres,3658,651141,561.8,True,ene-dic
+11,Suba,2022,Total,4881,1239208,393.9,True,ene-dic
+11,Suba,2023,Hombres,1700,591517,287.4,True,ene-dic
+11,Suba,2023,Mujeres,3874,652534,593.7,True,ene-dic
+11,Suba,2023,Total,5574,1244051,448.1,True,ene-dic
+11,Suba,2024,Hombres,2114,593684,356.1,True,ene-dic
+11,Suba,2024,Mujeres,4508,652952,690.4,True,ene-dic
+11,Suba,2024,Total,6622,1246636,531.2,True,ene-dic
+11,Suba,2025,Hombres,2277,594568,383.0,True,ene-dic
+11,Suba,2025,Mujeres,4742,652069,727.2,True,ene-dic
+11,Suba,2025,Total,7019,1246637,563.0,True,ene-dic
+11,Suba,2026,Hombres,1206,594378,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+11,Suba,2026,Mujeres,2224,650123,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+11,Suba,2026,Total,3430,1244501,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+12,Barrios Unidos,2013,Hombres,147,69836,210.5,True,ene-dic
+12,Barrios Unidos,2013,Mujeres,310,75597,410.1,True,ene-dic
+12,Barrios Unidos,2013,Total,457,145433,314.2,True,ene-dic
+12,Barrios Unidos,2014,Hombres,159,68011,233.8,True,ene-dic
+12,Barrios Unidos,2014,Mujeres,436,73503,593.2,True,ene-dic
+12,Barrios Unidos,2014,Total,595,141514,420.5,True,ene-dic
+12,Barrios Unidos,2015,Hombres,210,66465,316.0,True,ene-dic
+12,Barrios Unidos,2015,Mujeres,400,71785,557.2,True,ene-dic
+12,Barrios Unidos,2015,Total,610,138250,441.2,True,ene-dic
+12,Barrios Unidos,2016,Hombres,148,65218,226.9,True,ene-dic
+12,Barrios Unidos,2016,Mujeres,317,70521,449.5,True,ene-dic
+12,Barrios Unidos,2016,Total,465,135739,342.6,True,ene-dic
+12,Barrios Unidos,2017,Hombres,146,64274,227.2,True,ene-dic
+12,Barrios Unidos,2017,Mujeres,277,69616,397.9,True,ene-dic
+12,Barrios Unidos,2017,Total,423,133890,315.9,True,ene-dic
+12,Barrios Unidos,2018,Hombres,131,62070,211.1,True,ene-dic
+12,Barrios Unidos,2018,Mujeres,297,71056,418.0,True,ene-dic
+12,Barrios Unidos,2018,Total,428,133126,321.5,True,ene-dic
+12,Barrios Unidos,2019,Hombres,113,65700,172.0,True,ene-dic
+12,Barrios Unidos,2019,Mujeres,239,72616,329.1,True,ene-dic
+12,Barrios Unidos,2019,Total,352,138316,254.5,True,ene-dic
+12,Barrios Unidos,2020,Hombres,77,66673,115.5,True,ene-dic
+12,Barrios Unidos,2020,Mujeres,203,73564,276.0,True,ene-dic
+12,Barrios Unidos,2020,Total,280,140237,199.7,True,ene-dic
+12,Barrios Unidos,2021,Hombres,96,67054,143.2,True,ene-dic
+12,Barrios Unidos,2021,Mujeres,266,73933,359.8,True,ene-dic
+12,Barrios Unidos,2021,Total,362,140987,256.8,True,ene-dic
+12,Barrios Unidos,2022,Hombres,144,66929,215.2,True,ene-dic
+12,Barrios Unidos,2022,Mujeres,370,73961,500.3,True,ene-dic
+12,Barrios Unidos,2022,Total,514,140890,364.8,True,ene-dic
+12,Barrios Unidos,2023,Hombres,199,66723,298.2,True,ene-dic
+12,Barrios Unidos,2023,Mujeres,445,73907,602.1,True,ene-dic
+12,Barrios Unidos,2023,Total,644,140630,457.9,True,ene-dic
+12,Barrios Unidos,2024,Hombres,272,66559,408.7,True,ene-dic
+12,Barrios Unidos,2024,Mujeres,475,73743,644.1,True,ene-dic
+12,Barrios Unidos,2024,Total,747,140302,532.4,True,ene-dic
+12,Barrios Unidos,2025,Hombres,294,66286,443.5,True,ene-dic
+12,Barrios Unidos,2025,Mujeres,502,73470,683.3,True,ene-dic
+12,Barrios Unidos,2025,Total,796,139756,569.6,True,ene-dic
+12,Barrios Unidos,2026,Hombres,180,65937,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+12,Barrios Unidos,2026,Mujeres,285,73129,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+12,Barrios Unidos,2026,Total,465,139066,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+13,Teusaquillo,2013,Hombres,57,64352,88.6,True,ene-dic
+13,Teusaquillo,2013,Mujeres,134,77420,173.1,True,ene-dic
+13,Teusaquillo,2013,Total,191,141772,134.7,True,ene-dic
+13,Teusaquillo,2014,Hombres,66,64247,102.7,True,ene-dic
+13,Teusaquillo,2014,Mujeres,136,77786,174.8,True,ene-dic
+13,Teusaquillo,2014,Total,202,142033,142.2,True,ene-dic
+13,Teusaquillo,2015,Hombres,91,64108,141.9,True,ene-dic
+13,Teusaquillo,2015,Mujeres,192,78137,245.7,True,ene-dic
+13,Teusaquillo,2015,Total,283,142245,199.0,True,ene-dic
+13,Teusaquillo,2016,Hombres,73,64028,114.0,True,ene-dic
+13,Teusaquillo,2016,Mujeres,180,78605,229.0,True,ene-dic
+13,Teusaquillo,2016,Total,253,142633,177.4,True,ene-dic
+13,Teusaquillo,2017,Hombres,78,64045,121.8,True,ene-dic
+13,Teusaquillo,2017,Mujeres,167,79166,210.9,True,ene-dic
+13,Teusaquillo,2017,Total,245,143211,171.1,True,ene-dic
+13,Teusaquillo,2018,Hombres,74,67745,109.2,True,ene-dic
+13,Teusaquillo,2018,Mujeres,252,76781,328.2,True,ene-dic
+13,Teusaquillo,2018,Total,326,144526,225.6,True,ene-dic
+13,Teusaquillo,2019,Hombres,101,69301,145.7,True,ene-dic
+13,Teusaquillo,2019,Mujeres,302,83113,363.4,True,ene-dic
+13,Teusaquillo,2019,Total,403,152414,264.4,True,ene-dic
+13,Teusaquillo,2020,Hombres,75,70288,106.7,True,ene-dic
+13,Teusaquillo,2020,Mujeres,204,84051,242.7,True,ene-dic
+13,Teusaquillo,2020,Total,279,154339,180.8,True,ene-dic
+13,Teusaquillo,2021,Hombres,91,71249,127.7,True,ene-dic
+13,Teusaquillo,2021,Mujeres,307,85202,360.3,True,ene-dic
+13,Teusaquillo,2021,Total,398,156451,254.4,True,ene-dic
+13,Teusaquillo,2022,Hombres,143,71984,198.7,True,ene-dic
+13,Teusaquillo,2022,Mujeres,406,85691,473.8,True,ene-dic
+13,Teusaquillo,2022,Total,549,157675,348.2,True,ene-dic
+13,Teusaquillo,2023,Hombres,144,72179,199.5,True,ene-dic
+13,Teusaquillo,2023,Mujeres,441,85735,514.4,True,ene-dic
+13,Teusaquillo,2023,Total,585,157914,370.5,True,ene-dic
+13,Teusaquillo,2024,Hombres,182,72277,251.8,True,ene-dic
+13,Teusaquillo,2024,Mujeres,520,85648,607.1,True,ene-dic
+13,Teusaquillo,2024,Total,702,157925,444.5,True,ene-dic
+13,Teusaquillo,2025,Hombres,220,72191,304.7,True,ene-dic
+13,Teusaquillo,2025,Mujeres,533,85375,624.3,True,ene-dic
+13,Teusaquillo,2025,Total,753,157566,477.9,True,ene-dic
+13,Teusaquillo,2026,Hombres,124,71929,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+13,Teusaquillo,2026,Mujeres,270,84932,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+13,Teusaquillo,2026,Total,394,156861,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+14,Los Mártires,2013,Hombres,128,35987,355.7,True,ene-dic
+14,Los Mártires,2013,Mujeres,307,39740,772.5,True,ene-dic
+14,Los Mártires,2013,Total,435,75727,574.4,True,ene-dic
+14,Los Mártires,2014,Hombres,127,35238,360.4,True,ene-dic
+14,Los Mártires,2014,Mujeres,315,39544,796.6,True,ene-dic
+14,Los Mártires,2014,Total,442,74782,591.1,True,ene-dic
+14,Los Mártires,2015,Hombres,110,34570,318.2,True,ene-dic
+14,Los Mártires,2015,Mujeres,385,39417,976.7,True,ene-dic
+14,Los Mártires,2015,Total,495,73987,669.0,True,ene-dic
+14,Los Mártires,2016,Hombres,119,34023,349.8,True,ene-dic
+14,Los Mártires,2016,Mujeres,292,39417,740.8,True,ene-dic
+14,Los Mártires,2016,Total,411,73440,559.6,True,ene-dic
+14,Los Mártires,2017,Hombres,150,33622,446.1,True,ene-dic
+14,Los Mártires,2017,Mujeres,351,39490,888.8,True,ene-dic
+14,Los Mártires,2017,Total,501,73112,685.3,True,ene-dic
+14,Los Mártires,2018,Hombres,123,35873,342.9,True,ene-dic
+14,Los Mártires,2018,Mujeres,381,37404,1018.6,True,ene-dic
+14,Los Mártires,2018,Total,504,73277,687.8,True,ene-dic
+14,Los Mártires,2019,Hombres,245,38757,632.1,True,ene-dic
+14,Los Mártires,2019,Mujeres,470,44200,1063.3,True,ene-dic
+14,Los Mártires,2019,Total,715,82957,861.9,True,ene-dic
+14,Los Mártires,2020,Hombres,83,39409,210.6,True,ene-dic
+14,Los Mártires,2020,Mujeres,247,44893,550.2,True,ene-dic
+14,Los Mártires,2020,Total,330,84302,391.4,True,ene-dic
+14,Los Mártires,2021,Hombres,135,39411,342.5,True,ene-dic
+14,Los Mártires,2021,Mujeres,352,45279,777.4,True,ene-dic
+14,Los Mártires,2021,Total,487,84690,575.0,True,ene-dic
+14,Los Mártires,2022,Hombres,159,39145,406.2,True,ene-dic
+14,Los Mártires,2022,Mujeres,390,45356,859.9,True,ene-dic
+14,Los Mártires,2022,Total,549,84501,649.7,True,ene-dic
+14,Los Mártires,2023,Hombres,190,39030,486.8,True,ene-dic
+14,Los Mártires,2023,Mujeres,379,45365,835.4,True,ene-dic
+14,Los Mártires,2023,Total,569,84395,674.2,True,ene-dic
+14,Los Mártires,2024,Hombres,189,38935,485.4,True,ene-dic
+14,Los Mártires,2024,Mujeres,409,45349,901.9,True,ene-dic
+14,Los Mártires,2024,Total,598,84284,709.5,True,ene-dic
+14,Los Mártires,2025,Hombres,233,38768,601.0,True,ene-dic
+14,Los Mártires,2025,Mujeres,408,45219,902.3,True,ene-dic
+14,Los Mártires,2025,Total,641,83987,763.2,True,ene-dic
+14,Los Mártires,2026,Hombres,83,38554,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+14,Los Mártires,2026,Mujeres,169,45013,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+14,Los Mártires,2026,Total,252,83567,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+15,Antonio Nariño,2013,Hombres,93,40071,232.1,True,ene-dic
+15,Antonio Nariño,2013,Mujeres,204,43884,464.9,True,ene-dic
+15,Antonio Nariño,2013,Total,297,83955,353.8,True,ene-dic
+15,Antonio Nariño,2014,Hombres,94,39232,239.6,True,ene-dic
+15,Antonio Nariño,2014,Mujeres,278,43116,644.8,True,ene-dic
+15,Antonio Nariño,2014,Total,372,82348,451.7,True,ene-dic
+15,Antonio Nariño,2015,Hombres,96,38522,249.2,True,ene-dic
+15,Antonio Nariño,2015,Mujeres,248,42492,583.6,True,ene-dic
+15,Antonio Nariño,2015,Total,344,81014,424.6,True,ene-dic
+15,Antonio Nariño,2016,Hombres,95,37964,250.2,True,ene-dic
+15,Antonio Nariño,2016,Mujeres,195,42050,463.7,True,ene-dic
+15,Antonio Nariño,2016,Total,290,80014,362.4,True,ene-dic
+15,Antonio Nariño,2017,Hombres,75,37579,199.6,True,ene-dic
+15,Antonio Nariño,2017,Mujeres,219,41757,524.5,True,ene-dic
+15,Antonio Nariño,2017,Total,294,79336,370.6,True,ene-dic
+15,Antonio Nariño,2018,Hombres,94,37925,247.9,True,ene-dic
+15,Antonio Nariño,2018,Mujeres,250,41304,605.3,True,ene-dic
+15,Antonio Nariño,2018,Total,344,79229,434.2,True,ene-dic
+15,Antonio Nariño,2019,Hombres,129,38097,338.6,True,ene-dic
+15,Antonio Nariño,2019,Mujeres,307,41998,731.0,True,ene-dic
+15,Antonio Nariño,2019,Total,436,80095,544.4,True,ene-dic
+15,Antonio Nariño,2020,Hombres,69,38705,178.3,True,ene-dic
+15,Antonio Nariño,2020,Mujeres,197,42651,461.9,True,ene-dic
+15,Antonio Nariño,2020,Total,266,81356,327.0,True,ene-dic
+15,Antonio Nariño,2021,Hombres,90,38578,233.3,True,ene-dic
+15,Antonio Nariño,2021,Mujeres,256,42660,600.1,True,ene-dic
+15,Antonio Nariño,2021,Total,346,81238,425.9,True,ene-dic
+15,Antonio Nariño,2022,Hombres,112,38192,293.3,True,ene-dic
+15,Antonio Nariño,2022,Mujeres,323,42599,758.2,True,ene-dic
+15,Antonio Nariño,2022,Total,435,80791,538.4,True,ene-dic
+15,Antonio Nariño,2023,Hombres,116,37875,306.3,True,ene-dic
+15,Antonio Nariño,2023,Mujeres,286,42537,672.4,True,ene-dic
+15,Antonio Nariño,2023,Total,402,80412,499.9,True,ene-dic
+15,Antonio Nariño,2024,Hombres,131,37616,348.3,True,ene-dic
+15,Antonio Nariño,2024,Mujeres,277,42491,651.9,True,ene-dic
+15,Antonio Nariño,2024,Total,408,80107,509.3,True,ene-dic
+15,Antonio Nariño,2025,Hombres,118,37338,316.0,True,ene-dic
+15,Antonio Nariño,2025,Mujeres,296,42420,697.8,True,ene-dic
+15,Antonio Nariño,2025,Total,414,79758,519.1,True,ene-dic
+15,Antonio Nariño,2026,Hombres,47,37066,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+15,Antonio Nariño,2026,Mujeres,145,42336,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+15,Antonio Nariño,2026,Total,192,79402,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+16,Puente Aranda,2013,Hombres,221,116099,190.4,True,ene-dic
+16,Puente Aranda,2013,Mujeres,391,125539,311.5,True,ene-dic
+16,Puente Aranda,2013,Total,612,241638,253.3,True,ene-dic
+16,Puente Aranda,2014,Hombres,180,116250,154.8,True,ene-dic
+16,Puente Aranda,2014,Mujeres,437,124882,349.9,True,ene-dic
+16,Puente Aranda,2014,Total,617,241132,255.9,True,ene-dic
+16,Puente Aranda,2015,Hombres,245,116427,210.4,True,ene-dic
+16,Puente Aranda,2015,Mujeres,538,124270,432.9,True,ene-dic
+16,Puente Aranda,2015,Total,783,240697,325.3,True,ene-dic
+16,Puente Aranda,2016,Hombres,184,116758,157.6,True,ene-dic
+16,Puente Aranda,2016,Mujeres,496,123915,400.3,True,ene-dic
+16,Puente Aranda,2016,Total,680,240673,282.5,True,ene-dic
+16,Puente Aranda,2017,Hombres,162,117310,138.1,True,ene-dic
+16,Puente Aranda,2017,Mujeres,466,123804,376.4,True,ene-dic
+16,Puente Aranda,2017,Total,628,241114,260.5,True,ene-dic
+16,Puente Aranda,2018,Hombres,172,117754,146.1,True,ene-dic
+16,Puente Aranda,2018,Mujeres,515,125151,411.5,True,ene-dic
+16,Puente Aranda,2018,Total,687,242905,282.8,True,ene-dic
+16,Puente Aranda,2019,Hombres,242,120652,200.6,True,ene-dic
+16,Puente Aranda,2019,Mujeres,667,126585,526.9,True,ene-dic
+16,Puente Aranda,2019,Total,909,247237,367.7,True,ene-dic
+16,Puente Aranda,2020,Hombres,151,122500,123.3,True,ene-dic
+16,Puente Aranda,2020,Mujeres,472,128355,367.7,True,ene-dic
+16,Puente Aranda,2020,Total,623,250855,248.4,True,ene-dic
+16,Puente Aranda,2021,Hombres,172,123312,139.5,True,ene-dic
+16,Puente Aranda,2021,Mujeres,595,128929,461.5,True,ene-dic
+16,Puente Aranda,2021,Total,767,252241,304.1,True,ene-dic
+16,Puente Aranda,2022,Hombres,273,123378,221.3,True,ene-dic
+16,Puente Aranda,2022,Mujeres,753,129113,583.2,True,ene-dic
+16,Puente Aranda,2022,Total,1026,252491,406.4,True,ene-dic
+16,Puente Aranda,2023,Hombres,336,123355,272.4,True,ene-dic
+16,Puente Aranda,2023,Mujeres,957,129142,741.0,True,ene-dic
+16,Puente Aranda,2023,Total,1293,252497,512.1,True,ene-dic
+16,Puente Aranda,2024,Hombres,473,123272,383.7,True,ene-dic
+16,Puente Aranda,2024,Mujeres,1049,128990,813.2,True,ene-dic
+16,Puente Aranda,2024,Total,1522,252262,603.3,True,ene-dic
+16,Puente Aranda,2025,Hombres,574,123034,466.5,True,ene-dic
+16,Puente Aranda,2025,Mujeres,1095,128677,851.0,True,ene-dic
+16,Puente Aranda,2025,Total,1669,251711,663.1,True,ene-dic
+16,Puente Aranda,2026,Hombres,288,122713,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+16,Puente Aranda,2026,Mujeres,491,128277,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+16,Puente Aranda,2026,Total,779,250990,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+17,La Candelaria,2013,Hombres,25,9033,276.8,True,ene-dic
+17,La Candelaria,2013,Mujeres,56,8709,643.0,True,ene-dic
+17,La Candelaria,2013,Total,81,17742,456.5,True,ene-dic
+17,La Candelaria,2014,Hombres,25,8909,280.6,True,ene-dic
+17,La Candelaria,2014,Mujeres,69,8585,803.7,True,ene-dic
+17,La Candelaria,2014,Total,94,17494,537.3,True,ene-dic
+17,La Candelaria,2015,Hombres,29,8831,328.4,True,ene-dic
+17,La Candelaria,2015,Mujeres,96,8459,1134.9,True,ene-dic
+17,La Candelaria,2015,Total,125,17290,723.0,True,ene-dic
+17,La Candelaria,2016,Hombres,27,8776,307.7,True,ene-dic
+17,La Candelaria,2016,Mujeres,78,8365,932.5,True,ene-dic
+17,La Candelaria,2016,Total,105,17141,612.6,True,ene-dic
+17,La Candelaria,2017,Hombres,26,8761,296.8,True,ene-dic
+17,La Candelaria,2017,Mujeres,74,8288,892.9,True,ene-dic
+17,La Candelaria,2017,Total,100,17049,586.5,True,ene-dic
+17,La Candelaria,2018,Hombres,24,9012,266.3,True,ene-dic
+17,La Candelaria,2018,Mujeres,85,8063,1054.2,True,ene-dic
+17,La Candelaria,2018,Total,109,17075,638.4,True,ene-dic
+17,La Candelaria,2019,Hombres,45,9085,495.3,True,ene-dic
+17,La Candelaria,2019,Mujeres,91,8260,1101.7,True,ene-dic
+17,La Candelaria,2019,Total,136,17345,784.1,True,ene-dic
+17,La Candelaria,2020,Hombres,29,9175,316.1,True,ene-dic
+17,La Candelaria,2020,Mujeres,54,8333,648.0,True,ene-dic
+17,La Candelaria,2020,Total,83,17508,474.1,True,ene-dic
+17,La Candelaria,2021,Hombres,28,9066,308.8,True,ene-dic
+17,La Candelaria,2021,Mujeres,81,8295,976.5,True,ene-dic
+17,La Candelaria,2021,Total,109,17361,627.8,True,ene-dic
+17,La Candelaria,2022,Hombres,38,8942,425.0,True,ene-dic
+17,La Candelaria,2022,Mujeres,128,8229,1555.5,True,ene-dic
+17,La Candelaria,2022,Total,166,17171,966.7,True,ene-dic
+17,La Candelaria,2023,Hombres,39,8857,440.3,True,ene-dic
+17,La Candelaria,2023,Mujeres,96,8190,1172.2,True,ene-dic
+17,La Candelaria,2023,Total,135,17047,791.9,True,ene-dic
+17,La Candelaria,2024,Hombres,38,8772,433.2,True,ene-dic
+17,La Candelaria,2024,Mujeres,84,8155,1030.0,True,ene-dic
+17,La Candelaria,2024,Total,122,16927,720.7,True,ene-dic
+17,La Candelaria,2025,Hombres,38,8693,437.1,True,ene-dic
+17,La Candelaria,2025,Mujeres,86,8108,1060.7,True,ene-dic
+17,La Candelaria,2025,Total,124,16801,738.1,True,ene-dic
+17,La Candelaria,2026,Hombres,13,8600,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+17,La Candelaria,2026,Mujeres,34,8067,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+17,La Candelaria,2026,Total,47,16667,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+18,Rafael Uribe Uribe,2013,Hombres,563,177213,317.7,True,ene-dic
+18,Rafael Uribe Uribe,2013,Mujeres,1077,184905,582.5,True,ene-dic
+18,Rafael Uribe Uribe,2013,Total,1640,362118,452.9,True,ene-dic
+18,Rafael Uribe Uribe,2014,Hombres,552,177156,311.6,True,ene-dic
+18,Rafael Uribe Uribe,2014,Mujeres,1250,184322,678.2,True,ene-dic
+18,Rafael Uribe Uribe,2014,Total,1802,361478,498.5,True,ene-dic
+18,Rafael Uribe Uribe,2015,Hombres,616,177121,347.8,True,ene-dic
+18,Rafael Uribe Uribe,2015,Mujeres,1513,183803,823.2,True,ene-dic
+18,Rafael Uribe Uribe,2015,Total,2129,360924,589.9,True,ene-dic
+18,Rafael Uribe Uribe,2016,Hombres,633,177329,357.0,True,ene-dic
+18,Rafael Uribe Uribe,2016,Mujeres,1340,183681,729.5,True,ene-dic
+18,Rafael Uribe Uribe,2016,Total,1973,361010,546.5,True,ene-dic
+18,Rafael Uribe Uribe,2017,Hombres,590,177873,331.7,True,ene-dic
+18,Rafael Uribe Uribe,2017,Mujeres,1333,183849,725.1,True,ene-dic
+18,Rafael Uribe Uribe,2017,Total,1923,361722,531.6,True,ene-dic
+18,Rafael Uribe Uribe,2018,Hombres,667,180338,369.9,True,ene-dic
+18,Rafael Uribe Uribe,2018,Mujeres,1532,184194,831.7,True,ene-dic
+18,Rafael Uribe Uribe,2018,Total,2199,364532,603.2,True,ene-dic
+18,Rafael Uribe Uribe,2019,Hombres,764,184454,414.2,True,ene-dic
+18,Rafael Uribe Uribe,2019,Mujeres,1702,188527,902.8,True,ene-dic
+18,Rafael Uribe Uribe,2019,Total,2466,372981,661.2,True,ene-dic
+18,Rafael Uribe Uribe,2020,Hombres,338,187871,179.9,True,ene-dic
+18,Rafael Uribe Uribe,2020,Mujeres,1015,191923,528.9,True,ene-dic
+18,Rafael Uribe Uribe,2020,Total,1353,379794,356.2,True,ene-dic
+18,Rafael Uribe Uribe,2021,Hombres,455,188838,240.9,True,ene-dic
+18,Rafael Uribe Uribe,2021,Mujeres,1256,193040,650.6,True,ene-dic
+18,Rafael Uribe Uribe,2021,Total,1711,381878,448.0,True,ene-dic
+18,Rafael Uribe Uribe,2022,Hombres,613,188106,325.9,True,ene-dic
+18,Rafael Uribe Uribe,2022,Mujeres,1681,193403,869.2,True,ene-dic
+18,Rafael Uribe Uribe,2022,Total,2294,381509,601.3,True,ene-dic
+18,Rafael Uribe Uribe,2023,Hombres,568,187444,303.0,True,ene-dic
+18,Rafael Uribe Uribe,2023,Mujeres,1460,193567,754.3,True,ene-dic
+18,Rafael Uribe Uribe,2023,Total,2028,381011,532.3,True,ene-dic
+18,Rafael Uribe Uribe,2024,Hombres,698,186725,373.8,True,ene-dic
+18,Rafael Uribe Uribe,2024,Mujeres,1649,193558,851.9,True,ene-dic
+18,Rafael Uribe Uribe,2024,Total,2347,380283,617.2,True,ene-dic
+18,Rafael Uribe Uribe,2025,Hombres,717,185800,385.9,True,ene-dic
+18,Rafael Uribe Uribe,2025,Mujeres,1634,193309,845.3,True,ene-dic
+18,Rafael Uribe Uribe,2025,Total,2351,379109,620.1,True,ene-dic
+18,Rafael Uribe Uribe,2026,Hombres,323,184722,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+18,Rafael Uribe Uribe,2026,Mujeres,705,192900,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+18,Rafael Uribe Uribe,2026,Total,1028,377622,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+19,Ciudad Bolívar,2013,Hombres,865,294764,293.5,True,ene-dic
+19,Ciudad Bolívar,2013,Mujeres,1683,303775,554.0,True,ene-dic
+19,Ciudad Bolívar,2013,Total,2548,598539,425.7,True,ene-dic
+19,Ciudad Bolívar,2014,Hombres,837,295665,283.1,True,ene-dic
+19,Ciudad Bolívar,2014,Mujeres,2130,304608,699.3,True,ene-dic
+19,Ciudad Bolívar,2014,Total,2967,600273,494.3,True,ene-dic
+19,Ciudad Bolívar,2015,Hombres,1261,296405,425.4,True,ene-dic
+19,Ciudad Bolívar,2015,Mujeres,2961,305311,969.8,True,ene-dic
+19,Ciudad Bolívar,2015,Total,4222,601716,701.7,True,ene-dic
+19,Ciudad Bolívar,2016,Hombres,1258,297417,423.0,True,ene-dic
+19,Ciudad Bolívar,2016,Mujeres,3267,306465,1066.0,True,ene-dic
+19,Ciudad Bolívar,2016,Total,4525,603882,749.3,True,ene-dic
+19,Ciudad Bolívar,2017,Hombres,1469,298861,491.5,True,ene-dic
+19,Ciudad Bolívar,2017,Mujeres,3317,307938,1077.2,True,ene-dic
+19,Ciudad Bolívar,2017,Total,4786,606799,788.7,True,ene-dic
+19,Ciudad Bolívar,2018,Hombres,1608,299144,537.5,True,ene-dic
+19,Ciudad Bolívar,2018,Mujeres,3403,313983,1083.8,True,ene-dic
+19,Ciudad Bolívar,2018,Total,5011,613127,817.3,True,ene-dic
+19,Ciudad Bolívar,2019,Hombres,1205,308746,390.3,True,ene-dic
+19,Ciudad Bolívar,2019,Mujeres,3125,319924,976.8,True,ene-dic
+19,Ciudad Bolívar,2019,Total,4330,628670,688.8,True,ene-dic
+19,Ciudad Bolívar,2020,Hombres,987,315843,312.5,True,ene-dic
+19,Ciudad Bolívar,2020,Mujeres,2437,327146,744.9,True,ene-dic
+19,Ciudad Bolívar,2020,Total,3424,642989,532.5,True,ene-dic
+19,Ciudad Bolívar,2021,Hombres,1338,320471,417.5,True,ene-dic
+19,Ciudad Bolívar,2021,Mujeres,2983,332062,898.3,True,ene-dic
+19,Ciudad Bolívar,2021,Total,4321,652533,662.2,True,ene-dic
+19,Ciudad Bolívar,2022,Hombres,1752,324114,540.6,True,ene-dic
+19,Ciudad Bolívar,2022,Mujeres,4026,335878,1198.6,True,ene-dic
+19,Ciudad Bolívar,2022,Total,5778,659992,875.5,True,ene-dic
+19,Ciudad Bolívar,2023,Hombres,2113,327765,644.7,True,ene-dic
+19,Ciudad Bolívar,2023,Mujeres,4294,339603,1264.4,True,ene-dic
+19,Ciudad Bolívar,2023,Total,6407,667368,960.0,True,ene-dic
+19,Ciudad Bolívar,2024,Hombres,2447,331241,738.7,True,ene-dic
+19,Ciudad Bolívar,2024,Mujeres,4455,343018,1298.8,True,ene-dic
+19,Ciudad Bolívar,2024,Total,6902,674259,1023.6,True,ene-dic
+19,Ciudad Bolívar,2025,Hombres,2487,334237,744.1,True,ene-dic
+19,Ciudad Bolívar,2025,Mujeres,4316,345969,1247.5,True,ene-dic
+19,Ciudad Bolívar,2025,Total,6803,680206,1000.1,True,ene-dic
+19,Ciudad Bolívar,2026,Hombres,1265,336935,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+19,Ciudad Bolívar,2026,Mujeres,2125,348592,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos
+19,Ciudad Bolívar,2026,Total,3390,685527,,False,parcial: probable ene-jun (el archivo no trae mes); no comparar con años completos

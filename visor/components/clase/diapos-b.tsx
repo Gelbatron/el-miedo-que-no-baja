@@ -324,7 +324,7 @@ export function Cierre() {
     <div style={{ display: "grid", gridTemplateColumns: "1fr 280px", gap: 48, height: "100%", alignItems: "center" }}>
       <div>
         <p className="cl-ante" style={{ color: "#ffd98a" }}>El miedo que no baja · The data squad</p>
-        <p className="cl-heroe" style={{ fontSize: 62, lineHeight: 1.02 }}>Bogotá ya produce los datos para cerrar esta brecha.<br /><span>Hay que leerlos juntos.</span></p>
+        <p className="cl-heroe" style={{ fontSize: 62, lineHeight: 1.02 }}>Bogotá ya produce los datos para cerrar esta brecha.<br /><span>Hay que validarlos y leerlos juntos.</span></p>
         <div className="cl-raya" />
         <p className="cl-pregunta" style={{ fontSize: 22 }}>Visor, notebook, repositorio, Power BI y Excel: todo reproducible con fuentes públicas.</p>
         <p className="cl-equipo">Rafael Estiven Londoño Camacho · Brandow Brusly León Rodríguez · Samuel Esteban Riveros Cubides</p>

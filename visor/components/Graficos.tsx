@@ -64,7 +64,7 @@ export function Barras({ filas, ancho = 760, unidad = "", dec = 1, maximo, color
 
 /* ---------- líneas (series en el tiempo) ---------- */
 export function Lineas({ series, ancho = 760, alto = 320, ymin = 0, ymax, unidad = "", base, bandas }: {
-  series: { nombre: string; color: string; puntos: { x: number; y: number; tip?: string }[] }[]; ancho?: number; alto?: number; ymin?: number; ymax?: number; unidad?: string; base?: number;
+  series: { nombre: string; color: string; punteada?: boolean; puntos: { x: number; y: number; tip?: string }[] }[]; ancho?: number; alto?: number; ymin?: number; ymax?: number; unidad?: string; base?: number;
   bandas?: { desde: number; hasta: number; etiqueta: string }[];
 }) {
   const ml = 46, mr = 190, mt = 14, mb = 30;
@@ -100,7 +100,7 @@ export function Lineas({ series, ancho = 760, alto = 320, ymin = 0, ymax, unidad
       ))}
       {series.map((s) => (
         <g key={s.nombre}>
-          <path d={"M" + s.puntos.map((p) => `${X(p.x).toFixed(1)},${Y(p.y).toFixed(1)}`).join("L")} className="linea" style={{ stroke: s.color }} />
+          <path d={"M" + s.puntos.map((p) => `${X(p.x).toFixed(1)},${Y(p.y).toFixed(1)}`).join("L")} className="linea" style={{ stroke: s.color, ...(s.punteada ? { strokeDasharray: "6 5", strokeWidth: 2 } : {}) }} />
           {s.puntos.map((p) => (
             <circle key={p.x} cx={X(p.x)} cy={Y(p.y)} r={4.5} fill={s.color} className="punto" data-tip={p.tip ?? `<b>${s.nombre}</b> · ${p.x}<br>${fmt(p.y, 0)} ${unidad}`} />
           ))}

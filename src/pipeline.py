@@ -21,6 +21,7 @@ import fuentes  # noqa: E402
 import indicadores as I  # noqa: E402
 import limpieza as L  # noqa: E402
 import modelos as M  # noqa: E402
+import validacion_registro as VR  # noqa: E402
 from territorio import LOCALIDADES  # noqa: E402
 
 RAIZ = Path(__file__).resolve().parents[1]
@@ -142,8 +143,11 @@ def guardar(t, P, eb, iu, R, T):
 
 def resumen(t, P, eb, R, T) -> dict:
     """Las cifras que se citan en el informe, el visor y el pitch, en un solo lugar."""
-    serie = I.serie_bogota(t["delitos"])
-    s = serie.pivot(index="codigo", columns="anio", values="casos")
+    capa = VR.hurto_personas().set_index("anio")[["capa_scj"]].T.rename(index={"capa_scj": "HP"})  # total de la capa SCJ, como el SIEDCO
+    s = VR.serie_bogota_validada(t["delitos"]).pivot(index="codigo", columns="anio", values="casos")  # serie validada
+    raz = VR.razones()
+    raz_hp = raz[(raz["codigo"] == "HP") & (raz["anio"] < 2023)]["razon_scj_siedco"]
+    cambio = lambda x, a, b: round(float((x.loc["HP", b] / x.loc["HP", a] - 1) * 100), 1)  # noqa: E731
     w = lambda c: float(np.average(eb[c], weights=eb["peso"]) * 100)
     ame = lambda m, v: {k: round(float(R[m].set_index("variable").loc[v, k]), 2) for k in ("ame_pp", "ic_inf", "ic_sup", "p")}
     auc = R["auc"].set_index("bloque")["auc"].round(3).to_dict()
@@ -152,9 +156,14 @@ def resumen(t, P, eb, R, T) -> dict:
     pct = lambda col, sexo: float(np.average(emv[emv["mujer"] == sexo][col], weights=emv[emv["mujer"] == sexo]["peso"]) * 100)
     V = T["validaciones"].set_index("prueba")
     return {
-        "hurto_personas": {"2019": int(s.loc["HP", 2019]), "2026": int(s.loc["HP", 2026]),
-                           "cambio_pct": round((s.loc["HP", 2026] / s.loc["HP", 2019] - 1) * 100, 1)},
-        "hurto_motos_cambio_pct": round((s.loc["HM", 2026] / s.loc["HM", 2019] - 1) * 100, 1),
+        # hurto a personas: registro de la Policía (SIEDCO), la serie comparable; la capa SCJ tiene un quiebre en 2023
+        "hurto_personas": {"2019": int(s.loc["HP", 2019]), "2022": int(s.loc["HP", 2022]), "2023": int(s.loc["HP", 2023]),
+                           "2026": int(s.loc["HP", 2026]), "cambio_pct": cambio(s, 2019, 2026), "cambio_2022_pct": cambio(s, 2022, 2026),
+                           "cambio_2022_2023_pct": cambio(s, 2022, 2023), "fuente": "Policía Nacional (SIEDCO), enero-agosto"},
+        "hurto_personas_capa": {"2019": int(capa.loc["HP", 2019]), "2022": int(capa.loc["HP", 2022]), "2026": int(capa.loc["HP", 2026]),
+                                "cambio_pct": cambio(capa, 2019, 2026), "cambio_2022_pct": cambio(capa, 2022, 2026),
+                                "razon_min": round(float(raz_hp.min()), 2), "razon_max": round(float(raz_hp.max()), 2),
+                                "fuente": "SCJ, capa Delitos de alto impacto, enero-agosto"},
         "vif_cambio_pct_2018_2026": round((s.loc["VI", 2026] / s.loc["VI", 2018] - 1) * 100, 1),
         "delitos_sexuales_cambio_pct_2018_2026": round((s.loc["DS", 2026] / s.loc["DS", 2018] - 1) * 100, 1),
         "ciudad_insegura_pct": round(w("ciudad_insegura"), 1), "zona_insegura_pct": round(w("zona_insegura"), 1),
@@ -185,13 +194,31 @@ def figuras_y_exportes(res: dict):
     import figuras as F
 
     t, P, R, T, S = res["t"], res["P"], res["R"], res["T"], res["S"]
-    rutas = [F.serie(t["delitos"]), F.mapas(t["geo"], P), F.efectos(R["m_hechos"], ETIQUETAS), F.auc(R["auc"]),
+    VR.correr(t["delitos"])  # validación del registro: antes de cualquier serie
+    rutas = [F.serie(VR.serie_bogota_validada(t["delitos"])), F.mapas(t["geo"], P), F.efectos(R["m_hechos"], ETIQUETAS), F.auc(R["auc"]),
              F.brecha_cifra(T["ibs"], T["cifra_oculta"], S["ibs_vs_cifra_oculta"]["rho"]), F.genero(S["emv_por_sexo"]),
              F.ranking_ibs(T["ibs"])]
     rutas.append(EX.visor(res, ETIQUETAS))
     import clase as CL  # datos de la presentación interactiva del visor
     rutas.append(CL.guardar(CL.construir(P, res["eb"], PERFIL, DELITO, HECHOS, replicas=R["m_hechos"].attrs.get("replicas"))))
+    rutas.append(frentes())
     return rutas
+
+
+def frentes(aprendizaje: bool = False) -> Path:
+    """Tendencias en ventana comparable, score de confiabilidad y tipología; exporta visor/data/frentes.json.
+    El aprendizaje supervisado (src/aprendizaje.py, unos minutos) se corre aparte o con aprendizaje=True."""
+    import confiabilidad as CF
+    import frentes as FR
+    import tendencias as TE
+    import tipologia as TI
+    TE.correr()
+    CF.tabla().to_csv(TAB / "confiabilidad_fuentes.csv", index=False)
+    TI.correr()
+    if aprendizaje:
+        import aprendizaje as AP
+        AP.correr()
+    return FR.guardar(FR.construir())
 
 
 def correr(n_boot: int = 300, exportes: bool = True) -> dict:

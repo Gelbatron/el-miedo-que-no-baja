@@ -8,7 +8,7 @@ const DESCARGAS = [
   ["indice_brecha_seguridad.csv", "Índice de Brecha de Seguridad con intervalos y puesto (CSV)"],
   ["cifra_oculta_localidad.csv", "Víctimas estimadas frente a delitos registrados por localidad (CSV)"],
   ["efectos_marginales_modelo_principal.csv", "Efectos marginales del modelo principal con intervalos (CSV)"],
-  ["serie_delitos_bogota_ene_ago.csv", "Delitos de alto impacto en Bogotá, enero a agosto 2018-2026 (CSV)"],
+  ["serie_delitos_bogota_ene_ago.csv", "Delitos de alto impacto en Bogotá, enero a agosto 2018-2026, serie validada: hurtos de la Policía (SIEDCO) y casos de la capa SCJ al lado (CSV)"],
   ["incidentes_123_upz_2025.csv", "Llamadas a la Línea 123 por UPZ y tipo, con tasas (CSV)"],
   ["localidades_brecha_seguridad.geojson", "Localidades (huella urbana) con todos los indicadores (GeoJSON, EPSG:4326)"],
   ["upz_incidentes_123.geojson", "UPZ con tasas de llamadas 123 (GeoJSON, EPSG:4326)"],

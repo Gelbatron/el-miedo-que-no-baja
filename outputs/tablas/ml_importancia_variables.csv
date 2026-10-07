@@ -1,0 +1,22 @@
+variable,mean,std,etiqueta,bloque
+ventas_informales_malo,0.05838467943723897,0.014229750986204834,Ventas informales,Condiciones del barrio
+zonas_verdes_malas,0.026852314943056007,0.0059158881432355625,Zonas verdes malas,Condiciones del barrio
+ruido_malo,0.02491772963436661,0.006725958335845737,Ruido,Condiciones del barrio
+conflictos_vecinos,0.02007696599460322,0.006160071747806354,Conflictos entre vecinos,Hechos en su entorno
+aire_malo,0.014460753823019487,0.005209535720498814,Calidad del aire mala,Condiciones del barrio
+sin_parque,0.012934045626798354,0.006125925024538852,No tiene parque cerca,Hechos en su entorno
+conexion_peatonal_mala,0.012174443639658637,0.004255190074445188,Andenes y conexión peatonal malos,Condiciones del barrio
+homicidios_100k,0.009973722179928002,0.006208265621714598,Homicidios en la localidad,Delito registrado en su localidad
+desconfia_policia,0.007774462643683116,0.0036160978320220567,No confía en la Policía (nada o poco),Confianza en la Policía
+estrato,0.007631840840528734,0.0037050786870475513,Estrato,"Perfil (sexo, edad, estrato, arriendo)"
+hurtos_100k_miles,0.006426890013417021,0.004502045858356172,Hurtos registrados en la localidad,Delito registrado en su localidad
+parque_atracos,0.006316280660977793,0.0036836478575596175,Atracos en el parque cercano,Hechos en su entorno
+edad,0.006259142404221447,0.004510392638162242,Edad,"Perfil (sexo, edad, estrato, arriendo)"
+narcoticos_100k_cientos,0.005029906636413029,0.003787800281564297,Llamadas 123 por narcóticos,Delito registrado en su localidad
+parque_acoso,0.004650347276151905,0.0024990779334218387,Acoso en el parque,Hechos en su entorno
+parque_spa,0.0032547415608534624,0.002103236564026871,Venta o consumo de drogas en el parque,Hechos en su entorno
+presencio_acoso,0.0019077182496222145,0.001477751186371868,Presenció acoso a mujeres,Hechos en su entorno
+arrienda,0.001187127444769942,0.0019388958289528943,Vive en arriendo,"Perfil (sexo, edad, estrato, arriendo)"
+parque_rinas,0.0010342398593365632,0.00139997497972782,Riñas en el parque,Hechos en su entorno
+alumbrado_malo,0.0003309308431736868,0.002219969330694591,Alumbrado malo,Condiciones del barrio
+mujer,-0.000587804391838147,0.0017582480734305158,Ser mujer,"Perfil (sexo, edad, estrato, arriendo)"

@@ -2,7 +2,8 @@
 import { useState } from "react";
 import { D, R, fmt, signo } from "@/lib/datos";
 import { C } from "@/lib/clase";
-import { BANDA_PANDEMIA, PANDEMIA } from "@/lib/historia";
+import { BANDA_PANDEMIA, HURTO } from "@/lib/historia";
+import { encuesta } from "@/lib/frentes";
 import { Ap, Cifra, lin, useListo } from "./piezas";
 
 type Panel = { localidad: number; nombre: string; poblacion: number; zona_insegura: number; delitos_alto_impacto_100k: number; ibs: number };
@@ -38,22 +39,24 @@ export function Paradoja({ paso }: { paso: number }) {
   const listo = useListo();
   const W = 700, H = 470, ml = 52, mr = 210, mt = 26, mb = 40;
   const X = lin(2018, 2026, ml, W - mr), Y = lin(0, 200, H - mb, mt);
-  const indice = (cod: string) => {
+  const indice = (cod: string, capa = false) => {
     const f = D.serie_delitos.filter((x) => x.codigo === cod).sort((a, b) => a.anio - b.anio);
-    return f.map((p) => ({ x: p.anio, y: (p.casos / f[0].casos) * 100, casos: p.casos }));
+    const v = (p: (typeof f)[number]) => (capa ? p.casos_capa_scj ?? p.casos : p.casos);
+    return f.map((p) => ({ x: p.anio, y: (v(p) / v(f[0])) * 100, casos: v(p) }));
   };
   const series = [
-    { cod: "HP", nombre: "Hurto a personas", color: "var(--registro)", desde: 0 },
-    { cod: "VI", nombre: "Violencia intrafamiliar", color: "var(--mujeres)", desde: 1 },
-    { cod: "DS", nombre: "Delitos sexuales", color: "var(--vino)", desde: 1 },
-  ].map((s) => ({ ...s, puntos: indice(s.cod) }));
+    { cod: "HPc", nombre: "Hurto, capa abierta", color: "var(--tinta-3)", desde: 0, puntos: indice("HP", true), punteada: true },
+    { cod: "HP", nombre: "Hurto, Policía", color: "var(--registro)", desde: 1, puntos: indice("HP") },
+    { cod: "VI", nombre: "Violencia intrafamiliar", color: "var(--mujeres)", desde: 2, puntos: indice("VI") },
+    { cod: "DS", nombre: "Delitos sexuales", color: "var(--vino)", desde: 2, puntos: indice("DS") },
+  ];
   const finales = series.map((s) => ({ s, y: Y(s.puntos[s.puntos.length - 1].y) })).sort((a, b) => a.y - b.y);
   for (let k = 1; k < finales.length; k++) if (finales[k].y - finales[k - 1].y < 22) finales[k].y = finales[k - 1].y + 22;
   const vis = (s: { desde: number }) => listo && paso >= s.desde;
   return (
     <div style={{ display: "grid", gridTemplateColumns: "700px 1fr", gap: 36, height: "100%", alignItems: "start" }}>
       <svg className="cl-g" viewBox={`0 0 ${W} ${H}`} role="img" aria-label="Delitos registrados en Bogotá, enero a agosto, índice 2018 = 100">
-        <text x={ml} y={12} style={{ fontSize: 14, fill: "var(--tinta-3)" }}>Casos registrados enero-agosto · índice 2018 = 100 · SCJ</text>
+        <text x={ml} y={12} style={{ fontSize: 14, fill: "var(--tinta-3)" }}>Casos registrados enero-agosto · índice 2018 = 100</text>
         {[0, 50, 100, 150, 200].map((t) => (
           <g key={t}>
             <line x1={ml} x2={W - mr} y1={Y(t)} y2={Y(t)} className={t === 100 ? "eje" : "grid"} />
@@ -65,7 +68,8 @@ export function Paradoja({ paso }: { paso: number }) {
         <text x={(X(BANDA_PANDEMIA.desde) + X(BANDA_PANDEMIA.hasta)) / 2} y={Y(200) + 18} textAnchor="middle" style={{ fontSize: 14, fontWeight: 700, fill: "var(--tinta-2)" }}>Pandemia</text>
         {series.map((s) => (
           <g key={s.cod}>
-            <path pathLength={1} className={`cl-trazo${vis(s) ? " si" : ""}`} fill="none" stroke={s.color} strokeWidth={4.5} strokeLinejoin="round" strokeLinecap="round"
+            <path pathLength={1} className={`cl-trazo${vis(s) ? " si" : ""}`} fill="none" stroke={s.color} strokeWidth={s.punteada ? 3 : 4.5} strokeLinejoin="round" strokeLinecap="round"
+              style={s.punteada && vis(s) ? { strokeDasharray: "0.012 0.01", strokeDashoffset: 0 } : undefined}
               d={"M" + s.puntos.map((p) => `${X(p.x).toFixed(1)},${Y(p.y).toFixed(1)}`).join("L")} />
             <g className={`cl-sap${vis(s) ? " si" : ""}`} style={{ transitionDelay: vis(s) ? "1.1s" : "0s" }}>
               {s.puntos.map((p) => (
@@ -82,24 +86,24 @@ export function Paradoja({ paso }: { paso: number }) {
       </svg>
       <div style={{ display: "grid", gap: 12 }}>
         <Ap si={paso >= 0}>
-          <Cifra ante="El hurto baja muchísimo · SCJ" valor={`${signo(R.hurto_personas.cambio_pct, 0)} %`} color="var(--registro-texto)" tam={46}
-            texto={<>hurto a personas desde 2019. No es solo la pandemia: desde 2022 cayó {fmt(-PANDEMIA.hurto2022a2026, 0)} %.</>} />
+          <Cifra ante="La capa abierta de la SCJ" valor={`${signo(HURTO.capa2019a2026, 0)} %`} color="var(--tinta-2)" tam={36}
+            texto={<>hurto a personas desde 2019, y {signo(HURTO.capa2022a2026, 0)} % desde 2022, ya sin pandemia.</>} />
         </Ap>
         <Ap si={paso >= 1}>
+          <Cifra ante="El registro de la Policía" valor={`${signo(HURTO.policia2019a2026, 0)} %`} color="var(--registro-texto)" tam={36}
+            texto={<>el mismo hurto, los mismos meses ({signo(HURTO.policia2022a2026, 0)} % desde 2022). Antes de 2023 la capa contaba {fmt(HURTO.razonMin, 1)} a {fmt(HURTO.razonMax, 1)} veces más.</>} />
+        </Ap>
+        <Ap si={paso >= 2}>
           <div className="cl-tarjeta" style={{ borderTop: "6px solid var(--mujeres)", gap: 2 }}>
-            <span className="cl-ante" style={{ color: "var(--mujeres)" }}>Pero los hechos violentos van al revés</span>
+            <span className="cl-ante" style={{ color: "var(--mujeres)" }}>Y los hechos violentos suben</span>
             <div style={{ display: "flex", gap: 22, alignItems: "baseline" }}>
-              <span><span className="cl-num" style={{ fontSize: 36, color: "var(--mujeres)" }}>{signo(R.vif_cambio_pct_2018_2026, 0)} %</span><br /><span style={{ fontSize: 15 }}>violencia intrafamiliar</span></span>
-              <span><span className="cl-num" style={{ fontSize: 36, color: "var(--vino)" }}>{signo(R.delitos_sexuales_cambio_pct_2018_2026, 0)} %</span><br /><span style={{ fontSize: 15 }}>delitos sexuales</span></span>
+              <span><span className="cl-num" style={{ fontSize: 34, color: "var(--mujeres)" }}>{signo(R.vif_cambio_pct_2018_2026, 0)} %</span><br /><span style={{ fontSize: 15 }}>violencia intrafamiliar</span></span>
+              <span><span className="cl-num" style={{ fontSize: 34, color: "var(--vino)" }}>{signo(R.delitos_sexuales_cambio_pct_2018_2026, 0)} %</span><br /><span style={{ fontSize: 15 }}>delitos sexuales</span></span>
               <span style={{ fontSize: 13, color: "var(--tinta-3)", alignSelf: "end" }}>2018-2026</span>
             </div>
           </div>
         </Ap>
-        <Ap si={paso >= 2}>
-          <Cifra ante="Y la gente no lo siente · Bienal 2025" valor={`${fmt(R.ciudad_insegura_pct, 0)} %`} color="var(--percepcion-texto)" tam={46}
-            texto={<>dice que Bogotá es insegura: 3 de cada 4.</>} />
-        </Ap>
-        <Ap si={paso >= 2} retraso={350}><p className="cl-clave" style={{ fontSize: 22 }}>En el papel la ciudad mejora, pero la gente no lo siente.</p></Ap>
+        <Ap si={paso >= 3}><p className="cl-clave" style={{ fontSize: 19 }}>Y {fmt(R.ciudad_insegura_pct, 0)} % dice que Bogotá es insegura. El miedo no contradice los datos.</p></Ap>
       </div>
     </div>
   );
@@ -413,21 +417,41 @@ export const BOGOTA: Oculta = (() => {
 })();
 const cien = (n: number) => Math.round(n / 100) * 100;
 
-/** 100 víctimas; en azul, cuántos delitos tiene el registro por cada 100. */
-function CienVictimas({ registrados }: { registrados: number }) {
-  const lado = 36, t = 27;
+/** 10 víctimas; en azul, la parte que llega al registro (con fracción: 1,8 pinta una persona y ocho décimas de otra). */
+function DiezVictimas({ registrados }: { registrados: number }) {
+  const lado = 58, t = 50, r = Math.max(0, Math.min(10, registrados));
   return (
-    <svg className="cl-g" viewBox={`0 0 ${10 * lado} ${10 * lado}`} role="img" aria-label={`Por cada 100 víctimas, ${registrados} delitos registrados`} style={{ maxWidth: 360 }}>
-      {Array.from({ length: 100 }, (_, k) => {
-        const azul = k < registrados, x = (k % 10) * lado + lado / 2, y = Math.floor(k / 10) * lado + lado / 2 + 2;
-        return (
-          <g key={k} style={{ color: azul ? "var(--registro)" : "var(--percepcion)", transition: `color .3s ease ${k * 7}ms` }}>
-            <circle cx={x} cy={y - t * 0.3} r={t * 0.18} fill="currentColor" />
-            <path d={`M${x - t * 0.3},${y + t * 0.42} Q${x - t * 0.3},${y - t * 0.06} ${x},${y - t * 0.06} Q${x + t * 0.3},${y - t * 0.06} ${x + t * 0.3},${y + t * 0.42} Z`} fill="currentColor" />
-          </g>
-        );
-      })}
+    <svg className="cl-g" viewBox={`0 0 ${10 * lado} ${lado + 6}`} role="img" aria-label={`De cada 10 víctimas, ${fmt(r, 1)} llegan al registro`} style={{ maxWidth: 580 }}>
+      <defs>
+        <clipPath id="dv-registro"><rect x={0} y={0} width={Math.floor(r) * lado + (r % 1) * lado} height={lado + 6} /></clipPath>
+      </defs>
+      {[["var(--percepcion)", undefined], ["var(--registro)", "url(#dv-registro)"]].map(([color, clip]) => (
+        <g key={color} clipPath={clip} style={{ color }}>
+          {Array.from({ length: 10 }, (_, k) => {
+            const x = k * lado + lado / 2, y = lado / 2 + 6;
+            return (
+              <g key={k}>
+                <circle cx={x} cy={y - t * 0.3} r={t * 0.18} fill="currentColor" />
+                <path d={`M${x - t * 0.3},${y + t * 0.42} Q${x - t * 0.3},${y - t * 0.06} ${x},${y - t * 0.06} Q${x + t * 0.3},${y - t * 0.06} ${x + t * 0.3},${y + t * 0.42} Z`} fill="currentColor" />
+              </g>
+            );
+          })}
+        </g>
+      ))}
     </svg>
+  );
+}
+
+/** La misma cuenta para Bogotá con otras dos encuestas de victimización (DANE 2023 y CCB 2024). */
+function OtrasEncuestas() {
+  const adultos = BOGOTA.victimas_estimadas / (BOGOTA.emv_victima / 100);
+  const dane = encuesta("DANE", "victimizacion", "cualquier_delito_con_isd", 2023), ccb = encuesta("CCB", "victimizacion", "cualquier_delito", 2024);
+  const de10 = (pct?: number) => (pct ? fmt((BOGOTA.delitos_registrados / (adultos * pct / 100)) * 10, 1) : "s. d.");
+  return (
+    <p className="cl-txt" style={{ fontSize: 15 }}>
+      Con las otras dos encuestas de victimización la cuenta da <b>{de10(dane)}</b> (DANE, {fmt(dane, 0)} % de víctimas) y <b>{de10(ccb)}</b> (Cámara de Comercio, {fmt(ccb, 0)} %).
+      El nivel cambia según la encuesta; la conclusión no: la mayoría no llega al registro.
+    </p>
   );
 }
 
@@ -447,7 +471,7 @@ export function CifraOculta() {
   const [sel, setSel] = useState(0);
   const f = OCULTA.find((c) => c.localidad === sel) ?? BOGOTA;
   const adultos = f.victimas_estimadas / (f.emv_victima / 100);
-  const porCien = 100 / f.razon, k = Math.min(100, Math.round(porCien));
+  const porDiez = 10 / f.razon;
   const orden = [...OCULTA].sort((a, b) => b.razon - a.razon);
   return (
     <div style={{ display: "grid", gridTemplateColumns: "520px 1fr", gap: 44, height: "100%" }}>
@@ -476,12 +500,13 @@ export function CifraOculta() {
       </div>
       {f.razon < 1 ? <MasRegistroQueVictimas f={f} /> : (
         <div style={{ display: "grid", gap: 10, alignContent: "start", justifyItems: "start" }}>
-          <p className="cl-clave">Por cada <span style={{ color: "var(--percepcion-texto)" }}>100 víctimas</span>, el registro oficial tiene <span style={{ color: "var(--registro-texto)" }}>{fmt(porCien, 0)} delitos</span>.</p>
-          <CienVictimas registrados={k} />
+          <p className="cl-clave">De cada <span style={{ color: "var(--percepcion-texto)" }}>10 víctimas</span>, el registro oficial tiene <span style={{ color: "var(--registro-texto)" }}>{fmt(porDiez, 1)} delitos</span>.</p>
+          <DiezVictimas registrados={porDiez} />
           <div style={{ display: "flex", gap: 20, fontSize: 16, color: "var(--tinta-2)" }}>
-            <span><b style={{ color: "var(--registro)" }}>●</b> {k} quedan en el registro</span>
-            <span><b style={{ color: "var(--percepcion)" }}>●</b> {100 - k} no llegan a las cifras</span>
+            <span><b style={{ color: "var(--registro)" }}>●</b> {fmt(porDiez, 1)} quedan en el registro</span>
+            <span><b style={{ color: "var(--percepcion)" }}>●</b> {fmt(10 - porDiez, 1)} no llegan a las cifras</span>
           </div>
+          {f.localidad === 0 && <OtrasEncuestas />}
           {f.localidad !== 0 && f.razon < 2 && (
             <p className="cl-txt" style={{ fontSize: 15 }}>Ojo: {f.nombre} está en el centro. Allí también se registran delitos contra gente que vive en otras localidades, así que aquí la cifra oculta sale <b>más baja</b> de lo que es.</p>
           )}
@@ -512,7 +537,7 @@ function MasRegistroQueVictimas({ f }: { f: Oculta }) {
         <b style={{ fontSize: 18 }}>No es que aquí se denuncie todo.</b>
         <span className="cl-txt" style={{ fontSize: 16 }}>
           El registro cuenta <b>dónde pasó</b> el delito; la encuesta, <b>dónde vive</b> la víctima. Al centro llega gente de toda la ciudad a trabajar, estudiar y comprar,
-          y muchos de los delitos que se registran aquí son contra personas que viven en otras localidades. Por eso la cifra más sólida es la de toda Bogotá: {fmt(100 / BOGOTA.razon, 0)} de cada 100.
+          y muchos de los delitos que se registran aquí son contra personas que viven en otras localidades. Por eso la cifra más sólida es la de toda Bogotá: {fmt(10 / BOGOTA.razon, 1)} de cada 10.
         </span>
       </div>
     </div>

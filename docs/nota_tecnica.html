@@ -40,7 +40,7 @@
   <div class="meta">Bogotá DataJam Edición 5 · Equipo #16 The data squad<br>Rafael Londoño · Brandow León · Samuel Riveros · octubre 2026</div>
 </header>
 
-<p>Integramos siete fuentes públicas (SCJ, SDP, SCRD, EMV/Datos para la Transparencia, UAESP, DADEP, IDECA) por el código oficial de localidad, con la población de la SDP como denominador. Para dimensionar la usabilidad del portal, además, descargamos por la API CKAN el catálogo completo y todos sus recursos tabulares, y auditamos qué se puede cruzar.</p>
+<p>Integramos 18 fuentes públicas por el código oficial de localidad, con la población de la SDP como denominador: siete de núcleo (SCJ, SDP, SCRD, EMV/Datos para la Transparencia, UAESP, DADEP, IDECA) y once para validar y ampliar (Policía/SIEDCO, Medicina Legal, DANE, Cámara de Comercio, SIVIM, Secretaría de la Mujer, Veeduría, Secretaría General, Movilidad, IDU y la serie de alumbrado de la UAESP). Antes de modelar, contrastamos cada serie con una fuente independiente. Para dimensionar la usabilidad del portal, además, descargamos por la API CKAN el catálogo completo y todos sus recursos tabulares, y auditamos qué se puede cruzar.</p>
 
 <div class="cifras">
   <div class="cifra"><b>1.835</b><span>conjuntos y 11.707 recursos en el catálogo</span></div>
@@ -55,9 +55,10 @@
 <h2>1. Disponibilidad, calidad y actualización</h2>
 <ul>
   <li><b class="k">Delito solo por localidad.</b> Los delitos de alto impacto se publican por localidad y en un único corte (enero-agosto), sin UPZ ni mes. No hay delito georreferenciado abierto.</li>
+  <li><b class="k">Series no comparables en el tiempo.</b> En la capa de delitos de alto impacto, el hurto a personas, residencias y automotores de 2018-2022 vale 2 a 3 veces lo que publica la Policía (SIEDCO) para los mismos meses; desde 2023 coinciden caso por caso, y la capa no documenta el cambio. Con ella, el hurto a personas cae 58 % de 2022 a 2026; con la Policía, 4 %, y la encuesta del DANE confirma esta última (denuncia del hurto: 36 % en 2021, 43 % en 2023). Desde 2023, además, las columnas de motos y celulares repiten otros delitos del SIEDCO. Homicidios, lesiones, delitos sexuales y violencia intrafamiliar sí coinciden todos los años.</li>
   <li><b class="k">Información desactualizada.</b> El inventario de alumbrado público (UAESP) más reciente es de agosto de 2019 y está agregado por localidad: no sirve para validar el efecto del alumbrado.</li>
   <li><b class="k">Encuestas fuera del portal.</b> Las tres encuestas que la SDP llamó fundamentales no están en el portal. La Bienal se baja desde el repositorio del Observatorio de Culturas; la EMV publicada no trae la localidad (la recuperamos del tablero oficial de Datos para la Transparencia); la Encuesta Distrital de Percepción no se pudo descargar en forma automatizada porque el sitio de la SDP corta las conexiones.</li>
-  <li><b class="k">Calidad de archivos.</b> 1.447 tablas con columnas sin nombre útil; archivos cuya extensión no coincide con su formato (XLSX publicados como XLS); números con coma decimal y separador de miles mezclados; tablas en formato ancho (una columna por año).</li>
+  <li><b class="k">Calidad de archivos.</b> 1.447 tablas con columnas sin nombre útil; archivos cuya extensión no coincide con su formato (XLSX publicados como XLS); números con coma decimal y separador de miles mezclados; tablas en formato ancho (una columna por año); registros duplicados (cada muerte en vía aparece dos veces en el archivo de la SDS) y una capa de «estado superficial» de la malla vial que no trae el estado.</li>
   <li><b class="k">Estabilidad.</b> En descargas por volumen el portal y los servicios ArcGIS de Catastro cortaron conexiones; hicieron falta reintentos y concurrencia baja.</li>
 </ul>
 <h2>2. Retos de integración</h2>
@@ -82,10 +83,11 @@
   <tr><td>Microdatos de la Encuesta Distrital de Percepción con diccionario, en el portal y descargables por API</td><td>SDP</td></tr>
   <tr><td>Variable de localidad en el archivo publicado de la EMV</td><td>Secretaría General</td></tr>
   <tr><td>Inventario de alumbrado georreferenciado y actualizado</td><td>UAESP</td></tr>
+  <tr><td>Documentar en los metadatos los cambios de método de cada serie, publicar la serie empalmada y contrastarla con SIEDCO y Medicina Legal antes de publicar</td><td>SCJ (OAIEE)</td></tr>
   <tr><td>Diccionario de datos y fecha de corte visibles; encabezados en la primera fila</td><td>Entidades publicadoras</td></tr>
 </table>
 <h2>5. Utilidad para comprender el problema</h2>
-<p>Ninguna fuente sola explica la brecha. El cruce sí: el delito registrado de la localidad no predice la percepción (AUC 0,609 → 0,611), el entorno sí (0,782), y la brecha entre miedo y registro crece donde más se subregistra (ρ = 0,72; p ajustado 0,004). Sin la integración, la política vería solo el descenso del hurto.</p>
+<p>Ninguna fuente sola explica la brecha. El cruce sí: el delito registrado de la localidad no predice la percepción (AUC 0,609 → 0,611), el entorno sí (0,782), y la brecha entre miedo y registro crece donde más se subregistra (ρ = 0,72; p ajustado 0,004). Sin la integración, la política vería un descenso del hurto que no aparece en el registro de la Policía ni en la encuesta del DANE.</p>
 </div>
 </div>
 <div class="pie">Repositorio con notebook reproducible, almacén y scripts de auditoría: ver correo de entrega. Visor: el-miedo-que-no-baja.vercel.app. Cifras de auditoría: scripts de catálogo y perfilado del almacén (API CKAN, 5 de octubre de 2026).</div>

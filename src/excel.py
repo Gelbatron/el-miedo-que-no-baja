@@ -363,6 +363,9 @@ def cargar() -> dict:
     d = {"res": json.loads((OUT / "resultados.json").read_text(encoding="utf-8")),
          "panel": pd.read_csv(PROC / "panel_localidad_2025.csv"),
          "delitos": pd.read_csv(PROC / "scj_delitos_localidad_largo.csv")}
+    import validacion_registro as VR  # serie validada: SIEDCO donde la capa SCJ tiene quiebre
+    d["serie"] = VR.serie_bogota_validada(d["delitos"])
+    d["hurto"] = pd.read_csv(TAB / "registro_hurto_personas.csv")
     for n in ["ibs", "cifra_oculta", "m_hechos", "m_calif", "m_ciudad", "m_miedo", "m_efectos_fijos", "lpm_wild",
               "auc", "emv_no_sale_noche", "emv_teme_acoso_sexual", "emv_barrio_inseguro", "escenarios",
               "validaciones", "bitacora_limpieza"]:
@@ -903,14 +906,15 @@ def hoja_genero(ws, D, R):
 
 
 def hoja_serie(ws, D, R):
-    d = D["delitos"]
-    s = d.groupby(["codigo", "tipo", "anio"], as_index=False)["casos"].sum()
+    s = D["serie"][["codigo", "tipo", "anio", "casos", "fuente"]]
     anios = sorted(s["anio"].unique())
-    orden = ["HP", "HCE", "HC", "HR", "HA", "HM", "HB", "H", "LP", "VI", "DS"]
-    tipos = s.drop_duplicates("codigo").set_index("codigo")["tipo"]
+    orden = ["HP", "HR", "HA", "HB", "H", "LP", "VI", "DS"]
+    t0 = s.drop_duplicates("codigo").set_index("codigo")
+    tipos = {c: t0.loc[c, "tipo"] + (" (Policía)" if str(t0.loc[c, "fuente"]).startswith("Policía") else "") for c in orden}
     ancho_tabla = 3 + len(anios) + 2
-    cabecera(ws, "Serie de delitos registrados", "Bogotá, enero-agosto de cada año (corte comparable que publica la "
-             "SCJ; 2026 solo trae ese periodo). Suma de las 20 localidades.", ancho_tabla)
+    cabecera(ws, "Serie de delitos registrados", "Bogotá, enero-agosto de cada año. Hurto a personas, residencias y "
+             "automotores: registro de la Policía (SIEDCO), porque la capa SCJ cambia de escala en 2023. Los demás: SCJ, "
+             "validados con la Policía y Medicina Legal.", ancho_tabla)
     anchos(ws, {"B": 8, "C": 26})
     for i in range(len(anios)):
         ws.column_dimensions[L(4 + i)].width = 10
@@ -940,12 +944,13 @@ def hoja_serie(ws, D, R):
     ws.conditional_formatting.add(rango_cambio, FormulaRule(formula=[f'AND(ISNUMBER({L(cy)}{f + 1}),{L(cy)}{f + 1}>0)'],
                                                             font=Font(name=LETRA, bold=True, color=VINO)))
     R["hurto_cambio"] = f"Serie_delitos!${L(cy + 1)}${filas['HP']}"
-    texto(ws, fu + 1, 2, ancho_tabla, "Lesiones personales no tiene dato publicado para 2026. Fuente: SCJ, Delito de "
-          "alto impacto (data/procesados/scj_delitos_localidad_largo.csv). Azul: baja; vino: sube.",
+    texto(ws, fu + 1, 2, ancho_tabla, "Lesiones personales no tiene dato publicado para 2026. Fuentes: Policía Nacional, "
+          "SIEDCO en datos.gov.co (filas «Policía»); SCJ, Delito de alto impacto (las demás). Comercio, celulares y motocicletas "
+          "no se muestran: desde 2023 esas columnas de la capa no coinciden con su nombre. Azul: baja; vino: sube.",
           size=8.5, color=GRIS, italic=True)
     # gráfico
     salto(ws, fu + 3)
-    g = seccion(ws, fu + 3, 2, "2. Índice 2018 = 100: el hurto baja; la violencia intrafamiliar y los delitos sexuales suben")
+    g = seccion(ws, fu + 3, 2, "2. Índice 2018 = 100: el hurto a personas no baja frente a 2018; la violencia intrafamiliar y los delitos sexuales suben")
     gi = g + 21
     fi = seccion(ws, gi, 2, "3. Índice 2018 = 100 (fórmulas sobre la tabla 1)")
     encabezados(ws, fi, 2, ["Código", "Tipo de delito"] + [str(a) for a in anios], alto=30)
@@ -977,8 +982,23 @@ def hoja_serie(ws, D, R):
     ws.add_chart(ch, f"B{g}")
     texto(ws, fiu + 1, 2, ancho_tabla, "Cada celda = casos del año / casos de 2018 × 100. Más de 100: sube frente a "
           "2018 (rosado); menos de 100: baja (azul).", size=8.5, color=GRIS, italic=True)
+    # 4. la capa abierta frente a la Policía
+    fc = seccion(ws, fiu + 3, 2, "4. Hurto a personas: la capa abierta de la SCJ frente al registro de la Policía (enero-agosto)")
+    encabezados(ws, fc, 2, ["", "Serie"] + [str(a) for a in anios], alto=30)
+    hu = D["hurto"].set_index("anio")
+    filas_c = [("SCJ", "Capa abierta SCJ", "capa_scj"), ("SIEDCO", "Policía (SIEDCO)", "siedco")]
+    for i, (cod, nom, col) in enumerate(filas_c, start=1):
+        fila_datos(ws, fc + i, 2, [cod, nom] + [None if pd.isna(hu.loc[a, col]) else int(hu.loc[a, col]) for a in anios], [CEN, TXT] + [ENT] * len(anios))
+    fr_ = fc + 3
+    fila_datos(ws, fr_, 2, ["÷", "Capa ÷ Policía"] + [f"={L(4 + j)}{fc + 1}/{L(4 + j)}{fc + 2}" for j in range(len(anios))],
+               [CEN, TXT] + ["0.00"] * len(anios), bold=True)
+    ws.conditional_formatting.add(f"{L(4)}{fr_}:{L(3 + len(anios))}{fr_}", FormulaRule(formula=[f"{L(4)}{fr_}>1.1"], font=Font(name=LETRA, bold=True, color=VINO)))
+    texto(ws, fr_ + 1, 2, ancho_tabla, "De 2018 a 2022 la capa cuenta 2,3 a 2,6 veces lo que registra la Policía; desde 2023 coinciden caso por "
+          "caso. Por eso en la capa el hurto «cae» 58 % de 2022 a 2026 y en la Policía, 4 %. La encuesta del DANE confirma a la Policía "
+          "(denuncia del hurto: 36 % en 2021, 43 % en 2023). Fuente: outputs/tablas/registro_hurto_personas.csv.",
+          size=8.5, color=GRIS, italic=True)
     ws.freeze_panes = "D6"
-    imprimir(ws, area=f"A1:{L(ancho_tabla)}{fiu + 2}")
+    imprimir(ws, area=f"A1:{L(ancho_tabla)}{fr_ + 2}")
 
 
 def hoja_simulador(ws, D, R):
@@ -1175,8 +1195,9 @@ def hoja_diccionario(ws, D, R):
          "2019, agosto (último publicado)", "Panel_localidad, Cifra_oculta"),
         ("Indicador", "ep_efectivo_m2_hab", "Espacio público efectivo", "Espacio público efectivo por habitante.",
          "m² por habitante", "DADEP, indicador de espacio público", "Último corte publicado", "Panel_localidad"),
-        ("Serie", "casos (Serie_delitos)", "Casos registrados", "Casos de cada delito de alto impacto en Bogotá, "
-         "suma de las 20 localidades.", "casos", "SCJ, Delito de alto impacto", "2018-2026, enero-agosto",
+        ("Serie", "casos (Serie_delitos)", "Casos registrados", "Casos de cada delito de alto impacto en Bogotá. "
+         "Hurto a personas, residencias y automotores: Policía (SIEDCO); los demás: suma de las 20 localidades de la SCJ.",
+         "casos", "Policía Nacional (SIEDCO); SCJ, Delito de alto impacto", "2018-2026, enero-agosto",
          "Serie_delitos, Resumen"),
         ("Serie", "indice_2018", "Índice 2018 = 100", "Casos del año / casos de 2018 × 100.", "índice",
          "Cálculo propio", "2018-2026, enero-agosto", "Serie_delitos"),
@@ -1315,7 +1336,7 @@ def hoja_bitacora(ws, D, R):
 
 def hoja_resumen(ws, D, R):
     res = D["res"]
-    cabecera(ws, "Resumen", "El delito registrado baja; el miedo no. Cifras clave y los tres hallazgos.", 16)
+    cabecera(ws, "Resumen", "El hurto casi no bajó, la violencia sube y el miedo no baja. Cifras clave y los cuatro hallazgos.", 16)
     for i in range(2, 17):
         ws.column_dimensions[L(i)].width = 2.2 if i in (5, 9, 13) else 11
     poner(ws, 6, 2, "CIFRAS CLAVE", size=8.5, bold=True, color=GRIS, v="bottom")
@@ -1326,8 +1347,9 @@ def hoja_resumen(ws, D, R):
     auc = res["auc"]
     bloques = list(D["auc"]["bloque"])
     tarjetas = [
-        ("REGISTRO · SCJ", AZUL, f"={R['hurto_cambio']}", VAR,
-         f"en el hurto a personas registrado, enero-agosto 2019 → 2026 ({es(hp['2019'], 0)} → {es(hp['2026'], 0)} casos).",
+        ("REGISTRO · POLICÍA (SIEDCO)", AZUL, f"={R['hurto_cambio']}", VAR,
+         f"en el hurto a personas, enero-agosto 2019 → 2026 ({es(hp['2019'], 0)} → {es(hp['2026'], 0)} casos). La capa "
+         f"abierta de la SCJ dice {es(res['hurto_personas_capa']['cambio_pct'], 0)} %: tiene un quiebre en 2023.",
          "Serie_delitos"),
         ("PERCEPCIÓN · BIENAL 2025", ORO, res["ciudad_insegura_pct"] / 100, PCT,
          "de los adultos califica Bogotá como insegura o muy insegura.", "resultados.json (Bienal 2025, ponderado)"),
@@ -1375,7 +1397,14 @@ def hoja_resumen(ws, D, R):
     em = res["emv_mujer_ame"]
     cv = res["ame_hechos"]["conflictos_vecinos"]
     lw = D["lpm_wild"].set_index("variable").loc["hurtos_100k_miles", "p_wild"]
+    hc = res["hurto_personas_capa"]
     hall = [
+        ("El hurto no bajó como parecía.",
+         f"La capa abierta de la SCJ muestra el hurto a personas {es(hc['cambio_2022_pct'], 0)} % de 2022 a 2026; el registro "
+         f"de la Policía, {es(hp['cambio_2022_pct'], 0)} % (y {signo(hp['cambio_2022_2023_pct'], 0)} % en 2023). De 2018 a 2022 "
+         f"la capa cuenta {es(hc['razon_min'], 2)} a {es(hc['razon_max'], 2)} veces lo de la Policía y desde 2023 coincide: es un "
+         "quiebre de serie, no un cambio en la calle. La encuesta del DANE lo confirma (la denuncia del hurto subió de 36 % a 43 %). "
+         "Homicidios, delitos sexuales y violencia intrafamiliar suben en series validadas."),
         ("La ciudad no ve buena parte de su delito.",
          f"Hay unas {es(res['cifra_oculta_bogota'])} víctimas por cada delito de alto impacto registrado, de "
          f"{es(res['cifra_oculta_max'][1])} en {res['cifra_oculta_max'][0]} a {es(res['cifra_oculta_min'][1])} en "
@@ -1394,7 +1423,7 @@ def hoja_resumen(ws, D, R):
          f"victimización ({es(vb['mujeres'])} % frente a {es(vb['hombres'])} %)."),
     ]
     f = 17
-    poner(ws, f, 2, "TRES HALLAZGOS", size=8.5, bold=True, color=GRIS, v="bottom")
+    poner(ws, f, 2, "CUATRO HALLAZGOS", size=8.5, bold=True, color=GRIS, v="bottom")
     ws.row_dimensions[f].height = 22
     for i, (tit, txt) in enumerate(hall, start=1):
         f += 1
