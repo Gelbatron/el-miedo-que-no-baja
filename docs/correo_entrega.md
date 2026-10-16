@@ -9,6 +9,7 @@
 - `Nota_tecnica_integracion_datos_The_data_squad.pdf` (1 página)
 - `ElMiedoQueNoBaja.pbix` (archivo fuente del tablero de Power BI)
 - `Libro_de_datos_El_miedo_que_no_baja.xlsx` (adicional: cifras con fórmulas vivas y simulador)
+- `Informe_tecnico_El_miedo_que_no_baja.pdf` (adicional: informe técnico completo)
 
 **Antes de enviar:** el repositorio debe estar público y el enlace debe abrir en una ventana privada.
 
@@ -28,9 +29,9 @@ Contiene el notebook reproducible ya ejecutado (`notebooks/el_miedo_que_no_baja.
 
 Muestra la brecha por localidad, con mapas, tendencias validadas, índice, simulador y descargas en CSV y GeoJSON para visores institucionales. La página **Entregables** reúne todos los documentos y **Presentar** es la sustentación interactiva.
 
-**3. Adjuntos:** formulario de caracterización (DOCX y PDF), nota técnica sobre integración de datos públicos (PDF), archivo fuente del tablero (`.pbix`) y libro de datos en Excel.
+**3. Adjuntos:** formulario de caracterización (DOCX y PDF), nota técnica sobre integración de datos públicos (PDF), archivo fuente del tablero (`.pbix`), libro de datos en Excel e informe técnico completo (PDF).
 
-Un punto que quisimos documentar con cuidado: antes de modelar validamos cada serie contra una fuente independiente. La serie abierta de hurtos de 2018-2022 no es comparable con la de 2023 en adelante (vale entre 2,3 y 2,6 veces el registro de la Policía). Lo dejamos en la nota técnica como recomendación de documentación, no como evaluación de ninguna entidad.
+Un punto que quisimos documentar con cuidado: antes de modelar validamos cada serie contra una fuente independiente. La serie abierta de hurtos de 2018-2022 no es comparable con la de 2023 en adelante (vale entre 2,3 y 2,6 veces el registro de la Policía). Lo dejamos en la nota técnica como recomendación de documentación, no como evaluación de ninguna entidad. También reportamos las hipótesis que no se sostienen: de ocho, dos se sostienen y seis no, y cada veredicto trae su prueba.
 
 Quedamos atentos a cualquier inquietud.
 

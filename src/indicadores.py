@@ -155,6 +155,30 @@ def spearman(x: pd.Series, y: pd.Series, n_boot: int = 2000, semilla: int = 5) -
     return {"rho": float(rho), "p": float(p), "ic_inf": float(lo), "ic_sup": float(hi), "n": int(len(d))}
 
 
+def spearman_parcial(x: pd.Series, y: pd.Series, z: pd.Series, n_boot: int = 2000, semilla: int = 5) -> dict:
+    """Spearman parcial de x e y controlando z: correlación de los residuos de los rangos (gl = n - 3).
+    Sirve para ver si una relación entre dos índices sobrevive cuando se quita lo que ambos comparten."""
+    d = pd.concat([x, y, z], axis=1).dropna()
+
+    def calc(dd):
+        r = dd.rank()
+        ex = r.iloc[:, 0] - np.polyval(np.polyfit(r.iloc[:, 2], r.iloc[:, 0], 1), r.iloc[:, 2])
+        ey = r.iloc[:, 1] - np.polyval(np.polyfit(r.iloc[:, 2], r.iloc[:, 1], 1), r.iloc[:, 2])
+        return float(np.corrcoef(ex, ey)[0, 1])
+
+    rho, n = calc(d), len(d)
+    t = rho * np.sqrt((n - 3) / max(1e-12, 1 - rho ** 2))
+    p = float(2 * stats.t.sf(abs(t), n - 3))
+    rng = np.random.default_rng(semilla)
+    bs = []
+    for _ in range(n_boot):
+        r = calc(d.iloc[rng.integers(0, n, n)])
+        if np.isfinite(r):
+            bs.append(r)
+    lo, hi = np.percentile(bs, [2.5, 97.5])
+    return {"rho": rho, "p": p, "ic_inf": float(lo), "ic_sup": float(hi), "n": int(n)}
+
+
 def bh(pvalores) -> np.ndarray:
     """Benjamini-Hochberg: p-valores ajustados por pruebas múltiples."""
     p = np.asarray(pvalores, dtype=float)

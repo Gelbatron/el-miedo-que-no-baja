@@ -1,0 +1,637 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Informe técnico · El miedo que no baja</title>
+<style>
+  @font-face { font-family: "Montserrat Local"; src: url("../assets/fuentes/Montserrat-ExtraBold.ttf") format("truetype"); font-weight: 700 900; }
+  @page {
+    size: A4; margin: 13.5mm 14mm 14mm 14mm;
+    @bottom-left { content: "El miedo que no baja \00B7  Informe t\00E9 cnico \00B7  Equipo #16 The data squad \00B7  Bogot\00E1  DataJam Edici\00F3 n 5"; font-family: "Segoe UI", Arial, sans-serif; font-size: 6.8pt; color: #8a8a8a; }
+    @bottom-right { content: counter(page) " / " counter(pages); font-family: "Segoe UI", Arial, sans-serif; font-size: 6.8pt; color: #8a8a8a; }
+  }
+  @page :first { margin: 0; @bottom-left { content: none; } @bottom-right { content: none; } }
+  :root { --rojo: #bf0a00; --vino: #ab0f24; --oro: #d99a16; --oro-t: #8a5a00; --azul: #3366cc; --azul-t: #1f4a9e; --tinta: #1e1e1e; --tinta2: #4b4b4b; --tinta3: #767676; --linea: #e3e3e3; --fondo: #f5f5f4; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #fff; }
+  body { font-family: "Segoe UI", "Hanken Grotesk", Arial, sans-serif; font-size: 8.3pt; line-height: 1.36; color: var(--tinta); }
+  .mont { font-family: "Montserrat Local", Montserrat, "Segoe UI", Arial, sans-serif; font-weight: 800; }
+  p { margin: 0 0 5px; }
+  ul, ol { margin: 0 0 6px; padding-left: 15px; }
+  li { margin-bottom: 2.5px; }
+  b, strong { font-weight: 600; }
+  a { color: var(--azul-t); text-decoration: none; }
+  code { font-family: Consolas, "Cascadia Mono", monospace; font-size: 7.9pt; background: #f3f3f3; padding: 0 2px; border-radius: 2px; }
+  .salto { break-before: page; }
+  .franja { height: 5px; background: linear-gradient(90deg, #bf0a00 0 72%, #e9a924 72% 100%); }
+
+  /* ---------- portada ---------- */
+  .portada { height: 297mm; width: 210mm; padding: 0; position: relative; overflow: hidden; break-after: page; }
+  .portada .franja { height: 7px; }
+  .portada .dentro { padding: 20mm 21mm 0 21mm; }
+  .portada .evento { font-size: 8.3pt; letter-spacing: .14em; text-transform: uppercase; color: var(--tinta2); font-weight: 600; }
+  .portada .tipo { margin-top: 46mm; font-size: 9pt; letter-spacing: .16em; text-transform: uppercase; color: var(--oro-t); font-weight: 700; }
+  .portada h1 { font-family: "Montserrat Local", Montserrat, Arial, sans-serif; font-weight: 800; font-size: 40pt; line-height: 1.02; letter-spacing: -.025em; color: var(--rojo); margin: 3mm 0 4mm; }
+  .portada .sub { font-size: 15.5pt; line-height: 1.25; color: var(--tinta); max-width: 135mm; font-weight: 400; }
+  .portada .regla { height: 1.5px; background: var(--rojo); width: 30mm; margin: 12mm 0 9mm; }
+  .portada .tres { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5mm; }
+  .portada .tres div { border-top: 3px solid var(--azul); padding-top: 3mm; }
+  .portada .tres div.p { border-top-color: var(--oro); }
+  .portada .tres div.v { border-top-color: var(--vino); }
+  .portada .tres b { display: block; font-family: "Montserrat Local", Montserrat, Arial, sans-serif; font-weight: 800; font-size: 19pt; letter-spacing: -.02em; color: var(--azul-t); line-height: 1.1; margin-bottom: 1.5mm; }
+  .portada .tres div.p b { color: var(--oro-t); }
+  .portada .tres div.v b { color: var(--vino); }
+  .portada .tres span { font-size: 8.3pt; color: var(--tinta2); line-height: 1.38; display: block; }
+  .portada .equipo { margin-top: 16mm; font-size: 9.2pt; line-height: 1.55; color: var(--tinta); }
+  .portada .equipo .k { font-size: 7.6pt; letter-spacing: .12em; text-transform: uppercase; color: var(--tinta3); font-weight: 600; display: block; margin-bottom: 1mm; }
+  .portada .aviso { position: absolute; left: 21mm; right: 21mm; bottom: 16mm; border-top: 1px solid #d6d6d6; padding-top: 3.5mm; font-size: 7.6pt; line-height: 1.45; color: var(--tinta2); }
+  .portada .aviso b { color: var(--tinta); }
+
+  /* ---------- índice ---------- */
+  .indice { list-style: none; padding: 0; margin: 4mm 0 0; }
+  .indice li { display: flex; align-items: baseline; gap: 6px; font-size: 10pt; margin: 0 0 2.2mm; }
+  .indice li.sub { font-size: 8.8pt; color: var(--tinta2); margin: 0 0 1.4mm 7mm; }
+  .indice li .pt { flex: 1; border-bottom: 1px dotted #b8b8b8; transform: translateY(-3px); }
+  .indice li .n { font-variant-numeric: tabular-nums; color: var(--tinta2); min-width: 14px; text-align: right; }
+  .indice li .num { color: var(--rojo); font-weight: 700; min-width: 18px; display: inline-block; }
+
+  /* ---------- títulos ---------- */
+  h1.sec { font-family: "Montserrat Local", Montserrat, "Segoe UI", Arial, sans-serif; font-weight: 800; font-size: 15pt; letter-spacing: -.015em; color: var(--rojo); margin: 0 0 3mm; padding-bottom: 2mm; border-bottom: 1.5px solid var(--rojo); break-after: avoid; }
+  h1.sec .num { color: var(--tinta3); font-weight: 800; margin-right: 6px; }
+  h2 { font-family: "Montserrat Local", Montserrat, "Segoe UI", Arial, sans-serif; font-weight: 800; font-size: 10pt; color: var(--rojo); margin: 3.8mm 0 1.4mm; break-after: avoid; letter-spacing: -.005em; }
+  h3 { font-size: 9pt; font-weight: 700; margin: 3mm 0 1mm; color: var(--tinta); break-after: avoid; }
+  .lead { font-size: 9.3pt; line-height: 1.45; color: var(--tinta); }
+  .gris { color: var(--tinta3); }
+
+  /* ---------- tablas ---------- */
+  .cap { font-size: 8pt; font-weight: 700; margin: 3mm 0 1.2mm; color: var(--tinta); break-after: avoid; }
+  .cap span { color: var(--rojo); }
+  table.t { border-collapse: collapse; width: 100%; font-size: 7.3pt; line-height: 1.28; margin: 0 0 1.2mm; break-inside: auto; }
+  table.t.compacta { font-size: 6.85pt; }
+  table.t.metodos { font-size: 6.7pt; }
+  table.t.anexo td { white-space: nowrap; }
+  table.t th { background: var(--vino); color: #fff; font-weight: 600; text-align: left; padding: 3px 5px; vertical-align: bottom; line-height: 1.2; }
+  table.t td { border-bottom: 1px solid var(--linea); padding: 2.2px 4.5px; vertical-align: top; }
+  table.t tr { break-inside: avoid; }
+  table.t tbody tr:nth-child(even) td { background: #fafafa; }
+  table.t .r { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  table.t .c { text-align: center; }
+  table.t td.b { font-weight: 600; }
+  table.t td.adv { color: var(--tinta2); }
+  table.t th.r { text-align: right; }
+  table.t th.c { text-align: center; }
+  table.t .ic { color: var(--tinta3); font-size: .93em; }
+  table.t code, .fte code, figcaption code { font-size: .92em; background: none; padding: 0; color: var(--tinta2); }
+  table.t b.fuera { color: var(--azul-t); font-weight: 700; }
+  table.t tr.destaca td { background: #fbf1ef !important; font-weight: 600; }
+  table.t tr.parcial td { background: #fff !important; font-style: italic; color: var(--tinta2); border-top: 1px dashed #c9c9c9; }
+  .fte { font-size: 6.9pt; color: var(--tinta3); line-height: 1.35; margin: 0 0 3mm; }
+  .sem { display: inline-block; padding: 0 5px; border-radius: 8px; font-size: 6.6pt; font-weight: 700; }
+  .sem.alta { background: #dfe8f8; color: var(--azul-t); }
+  .sem.media { background: #fbefd4; color: var(--oro-t); }
+  .sem.baja { background: #ececec; color: #555; }
+  .ev { display: inline-block; padding: 1px 6px; border-radius: 8px; font-size: 6.7pt; font-weight: 700; color: #fff; }
+  .ev.alta { background: var(--azul); }
+  .ev.media { background: var(--oro); }
+  .ev.exploratoria { background: #c4c4c4; color: #1e1e1e; }
+  .ver { display: inline-block; padding: 1px 6px; border-radius: 8px; font-size: 6.8pt; font-weight: 700; white-space: nowrap; }
+  .ver.si { background: var(--azul); color: #fff; }
+  .ver.no { background: #e4e4e4; color: #333; }
+
+  /* ---------- figuras ---------- */
+  figure { margin: 2mm 0 2.5mm; break-inside: avoid; }
+  figure img { width: 100%; display: block; }
+  figure.w img { margin: 0 auto; }
+  h1.sec.sigue { margin-top: 6mm; }
+  figure.m80 img { width: 80%; margin: 0 auto; }
+  figure.m72 img { width: 72%; margin: 0 auto; }
+  figcaption { margin-top: 1.5mm; font-size: 7.7pt; line-height: 1.38; color: var(--tinta2); }
+  figcaption b { color: var(--tinta); }
+  figcaption .fte { display: block; margin: .6mm 0 0; }
+
+  /* ---------- bloques ---------- */
+  .clave { border-left: 3px solid var(--rojo); background: #fbf3f2; padding: 2.6mm 3.4mm; margin: 2.5mm 0 3mm; break-inside: avoid; }
+  .clave p:last-child { margin-bottom: 0; }
+  .alcance { border-left: 3px solid var(--oro); background: #fdf7ea; padding: 2.6mm 3.4mm; margin: 2.5mm 0 3mm; break-inside: avoid; }
+  .alcance p:last-child, .nota p:last-child { margin-bottom: 0; }
+  .nota { background: var(--fondo); border-radius: 4px; padding: 2.4mm 3.2mm; margin: 2mm 0 3mm; break-inside: avoid; font-size: 8.3pt; }
+  .etq { font-size: 7pt; letter-spacing: .1em; text-transform: uppercase; font-weight: 700; color: var(--rojo); display: block; margin-bottom: 1mm; }
+  .alcance .etq { color: var(--oro-t); }
+  .cifras { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2mm; margin: 2.5mm 0 3mm; }
+  .cifra { background: var(--fondo); border-top: 3px solid var(--azul); border-radius: 3px; padding: 1.8mm 2.2mm 2mm; }
+  .cifra b { display: block; font-family: "Montserrat Local", Montserrat, Arial, sans-serif; font-weight: 800; font-size: 13pt; letter-spacing: -.02em; color: var(--azul-t); line-height: 1.15; }
+  .cifra.p { border-top-color: var(--oro); }
+  .cifra.p b { color: var(--oro-t); }
+  .cifra.v { border-top-color: var(--vino); }
+  .cifra.v b { color: var(--vino); }
+  .cifra span { font-size: 7pt; color: var(--tinta2); line-height: 1.3; display: block; margin-top: .6mm; }
+  .dos { display: grid; grid-template-columns: 1fr 1fr; gap: 0 6mm; }
+  .dos > div > :first-child { margin-top: 0; }
+  .hallazgos { counter-reset: h; list-style: none; padding: 0; margin: 0 0 2mm; }
+  .hallazgos li { counter-increment: h; position: relative; padding-left: 7mm; margin-bottom: 1.4mm; }
+  .hallazgos li::before { content: counter(h); position: absolute; left: 0; top: .2mm; width: 4.6mm; height: 4.6mm; border-radius: 50%; background: var(--rojo); color: #fff; font-size: 7pt; font-weight: 700; text-align: center; line-height: 4.6mm; }
+  .recos { list-style: none; padding: 0; margin: 0; }
+  .recos li { display: grid; grid-template-columns: 19mm 1fr; gap: 2mm; margin-bottom: 1mm; align-items: baseline; }
+  .recos li .ev { justify-self: start; }
+  pre { font-family: Consolas, "Cascadia Mono", monospace; font-size: 7.5pt; line-height: 1.4; background: #f4f4f4; border-left: 3px solid var(--azul); padding: 2.4mm 3mm; margin: 1.5mm 0 3mm; white-space: pre-wrap; break-inside: avoid; }
+  .cadena { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.5mm; margin: 2mm 0 3mm; }
+  .cadena div { background: var(--fondo); border-radius: 3px; padding: 2mm; font-size: 7.4pt; line-height: 1.3; color: var(--tinta2); border-top: 2px solid var(--rojo); }
+  .cadena b { display: block; color: var(--tinta); font-size: 7.8pt; margin-bottom: .6mm; }
+  .refs { font-size: 6.8pt; line-height: 1.3; padding-left: 14px; }
+  .refs li { margin-bottom: .9mm; break-inside: avoid; }
+  .refs a { word-break: break-all; }
+</style>
+</head>
+<body>
+
+<!-- ================================================================ PORTADA -->
+<section class="portada">
+  <div class="franja"></div>
+  <div class="dentro">
+    <div class="evento">Bogotá DataJam · Edición 5 · 2026</div>
+    <div class="tipo">Informe técnico</div>
+    <h1>El miedo<br>que no baja</h1>
+    <div class="sub">Inseguridad percibida y delito registrado en Bogotá: validación del registro, cifra oculta y prioridades territoriales</div>
+    <div class="regla"></div>
+    <div class="tres">
+      <div><b>−4,2 %</b><span>cambio del hurto a personas entre enero-agosto de 2022 y de 2026 en el registro de la Policía. La capa abierta de la SCJ dice −57,5 %.</span></div>
+      <div class="p"><b>1,8 a 3,0</b><span>de cada 10 víctimas tienen su delito en el registro, según la encuesta de victimización que se use.</span></div>
+      <div class="v"><b>ρ = 0,03</b><span>entre las víctimas que reporta la encuesta y el delito registrado, por localidad: el registro no dice dónde están las víctimas.</span></div>
+    </div>
+    <div class="equipo">
+      <span class="k">Equipo #16 · The data squad</span>
+      Rafael Estiven Londoño Camacho<br>Brandow Brusly León Rodríguez<br>Samuel Esteban Riveros Cubides<br>
+      <span class="gris">Bogotá, 16 de octubre de 2026</span>
+    </div>
+  </div>
+  <div class="aviso">
+    <b>Aviso.</b> Documento técnico independiente, preparado por un equipo participante del Bogotá DataJam como material adicional a los entregables del concurso. <b>No es un documento oficial de la Alcaldía Mayor de Bogotá ni de sus entidades</b> y no usa sus logos ni escudos. Las entidades se mencionan como productoras de los datos abiertos que se usan. Las observaciones sobre series publicadas son recomendaciones técnicas de documentación, no evaluaciones institucionales. Todas las cifras salen de los archivos del repositorio del proyecto: github.com/rlondono1620-max/el-miedo-que-no-baja.
+  </div>
+</section>
+
+<!-- ================================================================ ÍNDICE -->
+<section>
+  <h1 class="sec">Contenido</h1>
+  <ol class="indice">
+    <li><span class="num">1</span>Resumen ejecutivo<span class="pt"></span><span class="n">3</span></li>
+    <li><span class="num">2</span>Problema público, pregunta analítica e hipótesis<span class="pt"></span><span class="n">4</span></li>
+    <li><span class="num">3</span>Datos: cuatro frentes y 18 fuentes con score de confiabilidad<span class="pt"></span><span class="n">4</span></li>
+    <li><span class="num">4</span>Validación del registro: el hallazgo central<span class="pt"></span><span class="n">5</span></li>
+    <li><span class="num">5</span>Métodos<span class="pt"></span><span class="n">7</span></li>
+    <li><span class="num">6</span>Resultados<span class="pt"></span><span class="n">8</span></li>
+    <li class="sub">6.1 Tendencias · 6.2 Qué explica el miedo · 6.3 Cifra oculta · 6.4 Índice de Brecha<span class="pt"></span><span class="n"></span></li>
+    <li class="sub">6.5 Tipología · 6.6 Género · 6.7 Alumbrado y vías · 6.8 Marcador de hipótesis<span class="pt"></span><span class="n"></span></li>
+    <li><span class="num">7</span>Estrategias y el Índice de Brecha como indicador<span class="pt"></span><span class="n">13</span></li>
+    <li><span class="num">8</span>Limitaciones y amenazas a la validez<span class="pt"></span><span class="n">14</span></li>
+    <li><span class="num">9</span>Reproducibilidad y referencias de las fuentes<span class="pt"></span><span class="n">14</span></li>
+    <li><span class="num">A</span>Anexo. Indicadores por localidad<span class="pt"></span><span class="n">15</span></li>
+  </ol>
+
+  <div class="dos" style="margin-top:5mm">
+    <div>
+      <h2 style="margin-top:0">Cómo leer este informe</h2>
+      <ul>
+        <li><b>Trazabilidad.</b> Cada cifra sale de un archivo del repositorio; el cuadro de abajo da la ruta de las principales. Las tablas se generan con un script desde esos mismos CSV.</li>
+        <li><b>Colores.</b> Oro: lo que se siente. Azul: lo que se registra. Vino y rojo: énfasis.</li>
+        <li><b>Incertidumbre.</b> IC 95 %, salvo el Índice de Brecha (90 %). «p BH»: p ajustado por Benjamini-Hochberg.</li>
+        <li><b>Delito:</b> enero-agosto de cada año, el único corte por localidad para todos los años. <b>pp:</b> puntos porcentuales. Tasas por 100.000 con población SDP.</li>
+        <li><b>Asociación, no causalidad.</b> Los escenarios son sensibilidades del modelo.</li>
+      </ul>
+    </div>
+    <div>
+      <h2 style="margin-top:0">Siglas</h2>
+      <p style="font-size:7.3pt;line-height:1.38;color:var(--tinta2)"><b>AME</b> efecto marginal promedio · <b>AUC</b> área bajo la curva ROC, fuera de muestra · <b>Capa SCJ</b> capa «Delitos de alto impacto» de la Secretaría de Seguridad, Convivencia y Justicia (OAIEE) · <b>SIEDCO</b> registro de la Policía Nacional en datos.gov.co · <b>INMLCF</b> Medicina Legal · <b>ECSC</b> Encuesta de Convivencia y Seguridad Ciudadana (DANE) · <b>EPV · CCB</b> Encuesta de Percepción y Victimización, Cámara de Comercio de Bogotá · <b>EMV</b> Encuesta Mundial de Valores 2024 · <b>Bienal</b> Encuesta Bienal de Cultura Ciudadana 2025 · <b>SIVIM</b> vigilancia de violencia intrafamiliar y de género (Salud) · <b>IBS</b> Índice de Brecha de Seguridad · <b>EDP</b> Encuesta Distrital de Percepción · <b>UPL</b> Unidad de Planeamiento Local · <b>NB2</b> binomial negativa tipo 2 · <b>BH</b> Benjamini-Hochberg.</p>
+    </div>
+  </div>
+  <h2 style="margin-top:3mm">Trazabilidad de las cifras clave</h2>
+  <table class="t compacta">
+    <colgroup><col style="width:36%"><col style="width:20%"><col style="width:44%"></colgroup>
+    <thead><tr><th>Cifra</th><th class="r">Valor</th><th>Archivo y campo</th></tr></thead>
+    <tbody>
+      <tr><td>Hurto a personas 2022-2026, capa SCJ / SIEDCO</td><td class="r">−57,5 % / −4,2 %</td><td><code>resultados.json</code>: hurto_personas_capa.cambio_2022_pct; hurto_personas.cambio_2022_pct</td></tr>
+      <tr><td>Hurto a personas 2019-2026, capa SCJ / SIEDCO</td><td class="r">−63,9 % / −8,8 %</td><td><code>resultados.json</code>: cambio_pct de las mismas claves</td></tr>
+      <tr><td>Hurto a personas 2022-2023, SIEDCO</td><td class="r">+36,2 %</td><td><code>resultados.json</code>: hurto_personas.cambio_2022_2023_pct</td></tr>
+      <tr><td>Razón capa ÷ SIEDCO, hurto a personas 2018-2022</td><td class="r">2,28 a 2,55</td><td><code>registro_estado_series.csv</code>: razon_min / razon_max_2018_2022</td></tr>
+      <tr><td>Denuncia necesaria frente a medida (ECSC 2023)</td><td class="r">25,2 % / 42,9 %</td><td><code>docs/notas/frente_victimizacion.md</code> §4b; <code>registro_hurto_personas.csv</code></td></tr>
+      <tr><td>Tendencias anuales (VIF, sexuales, homicidios)</td><td class="r">+11,2 / +7,5 / +3,3 %</td><td><code>tendencias_resumen.csv</code>: post_cambio_anual_pct, post_ic_inf, post_ic_sup</td></tr>
+      <tr><td>Víctimas por delito registrado, Bogotá</td><td class="r">5,6</td><td><code>resultados.json</code>: cifra_oculta_bogota; <code>cifra_oculta.csv</code></td></tr>
+      <tr><td>De cada 10 víctimas en el registro: EMV / DANE / CCB</td><td class="r">1,8 / 3,0 / 2,9</td><td><code>cifra_oculta.csv</code> y <code>frentes.json</code> (encuestas): delitos ÷ (adultos × % víctimas)</td></tr>
+      <tr><td>Atracos en el parque; conflictos vecinales (AME)</td><td class="r">+13,3 / +14,7 pp</td><td><code>m_hechos.csv</code>: ame_pp, ic_inf, ic_sup</td></tr>
+      <tr><td>Hurto registrado: p wild cluster bootstrap</td><td class="r">0,92</td><td><code>lpm_wild.csv</code>: p_wild</td></tr>
+      <tr><td>Prueba de contexto: localidad / localidad + delito</td><td class="r">0,726 / 0,724</td><td><code>ml_contexto_localidad.csv</code>: mean</td></tr>
+      <tr><td>IBS frente a cifra oculta: bruta / parcial (controla el delito registrado)</td><td class="r">0,72 / −0,02 (p = 0,93)</td><td><code>validaciones.csv</code>; <code>validacion_parcial.csv</code>; <code>resultados.json</code>: ibs_vs_cifra_oculta, ibs_vs_cifra_oculta_parcial</td></tr>
+      <tr><td>Miedo (zona insegura) frente a cifra oculta</td><td class="r">0,16 (p = 0,51)</td><td><code>resultados.json</code>: zona_vs_cifra_oculta</td></tr>
+      <tr><td>Víctimas (EMV) frente a delito registrado</td><td class="r">0,03 (p = 0,91)</td><td><code>resultados.json</code>: victimas_vs_registro</td></tr>
+      <tr><td>Top 5 del IBS y probabilidad de top 5</td><td class="r">Usme … San Cristóbal</td><td><code>ibs.csv</code>: ibs, ibs_p05, ibs_p95, prob_top5</td></tr>
+      <tr><td>Silueta de la tipología (k = 5)</td><td class="r">0,160</td><td><code>tipologia_silueta.csv</code></td></tr>
+      <tr><td>Mujeres: temor al acoso / evita salir de noche (AME)</td><td class="r">+18,0 / +6,5 pp</td><td><code>emv_teme_acoso_sexual.csv</code>, <code>emv_no_sale_noche.csv</code></td></tr>
+      <tr><td>SIVIM mujeres 2019-2025; casos en vivienda</td><td class="r">+42,9 %; 79,3 %</td><td><code>docs/notas/frente_genero.md</code>; <code>frentes.json</code>: genero.perfil</td></tr>
+      <tr><td>Alumbrado y vías: pruebas que sobreviven a BH</td><td class="r">0 de 23</td><td><code>frentes.json</code>: movilidad.pruebas (p_bh_bloque)</td></tr>
+      <tr><td>Score de confiabilidad de las 18 fuentes</td><td class="r">46,0 a 95,5</td><td><code>confiabilidad_fuentes.csv</code>: score, semaforo</td></tr>
+    </tbody>
+  </table>
+  <p class="fte">Todas las rutas son relativas a <code>outputs/tablas/</code> salvo que se indique otra carpeta. Las figuras nuevas de este informe están en <code>outputs/figuras/informe_*.png</code>.</p>
+</section>
+
+<!-- ================================================================ 1. RESUMEN -->
+<section class="salto">
+  <h1 class="sec"><span class="num">1</span>Resumen ejecutivo</h1>
+  <p class="lead">El 74,0 % de los adultos de Bogotá califica la ciudad como insegura y el 48,4 % dice lo mismo de su zona (Bienal 2025, 5.538 personas). La lectura habitual es que el miedo no acompaña al delito, porque la capa abierta muestra el hurto muy por debajo de 2019. Antes de explicar esa distancia validamos la serie, y la premisa cambia.</p>
+
+  <div class="clave">
+    <span class="etq">Hallazgo central</span>
+    <p><b>El hurto no bajó como parecía.</b> Entre enero-agosto de 2022 y de 2026 la capa de la SCJ cae 57,5 % (63,9 % frente a 2019). El registro de la Policía (SIEDCO) cae 4,2 % (8,8 % frente a 2019), después de subir 36,2 % en 2023. De 2018 a 2022 la capa cuenta entre 2,28 y 2,55 veces los hurtos a personas de la Policía; de 2023 a 2025 la razón es 1,00. La encuesta del DANE respalda la serie de la Policía: para que la caída de la capa se explicara con menos denuncia, la denuncia del hurto habría tenido que bajar a 25,2 % en 2023, y el DANE midió 42,9 %.</p>
+  </div>
+
+  <div class="cifras">
+    <div class="cifra"><b>−4,2 %</b><span>hurto a personas 2022-2026 en el SIEDCO; la capa SCJ dice −57,5 %</span></div>
+    <div class="cifra p"><b>1,8 de 10</b><span>víctimas con su delito en el registro (EMV); 3,0 con el DANE y 2,9 con la CCB</span></div>
+    <div class="cifra p"><b>+13,3 pp</b><span>probabilidad de sentir insegura la zona si hay atracos en el parque cercano</span></div>
+    <div class="cifra v"><b>ρ = 0,03</b><span>víctimas (EMV) y delito registrado entre localidades: el registro no sigue a las víctimas</span></div>
+    <div class="cifra p"><b>+18,0 pp</b><span>temor de las mujeres al acoso sexual, a igual edad, estrato y victimización</span></div>
+  </div>
+
+  <h2>Cinco hallazgos</h2>
+  <ol class="hallazgos">
+    <li><b>Las series comparables suben.</b> Binomial negativa de panel en la ventana comparable: violencia intrafamiliar +11,2 % al año (IC 95 % 4,1 a 18,9), delitos sexuales +7,5 % (3,0 a 12,2) y homicidios +3,3 % (0,5 a 6,1). El hurto a personas sí baja desde 2023, con la serie ya homogénea: −9,4 % al año (−12,7 a −6,0).</li>
+    <li><b>La ciudad no ve buena parte de su delito.</b> En 2024 hubo unas 5,6 víctimas (EMV) por cada delito de alto impacto registrado (SCJ): de cada 10 víctimas, 1,8 quedan en el registro. Con la ECSC del DANE la cuenta da 3,0 y con la encuesta de la CCB, 2,9: cambia el nivel, no la conclusión.</li>
+    <li><b>El barrio se siente por lo que pasa en él.</b> Ver atracos en el parque cercano suma 13,3 pp a la probabilidad de sentir insegura la zona (6,2 a 17,5); los conflictos vecinales, 14,7 pp (3,9 a 23,8). El hurto registrado de la localidad no tiene efecto (−0,1 pp; wild cluster bootstrap p = 0,92); el homicidio registrado sí, pero pequeño (+0,47 pp; p wild = 0,033). En aprendizaje supervisado, el delito registrado no mejora el AUC frente a saber en qué localidad vive la persona (0,724 frente a 0,726).</li>
+    <li><b>El registro no dice dónde están las víctimas.</b> Entre localidades, las víctimas que reporta la EMV no siguen al delito registrado (ρ = 0,03; p = 0,91). El Índice de Brecha de Seguridad ordena dónde actuar primero: Usme, Ciudad Bolívar, Bosa, Kennedy y San Cristóbal, en el top 5 en el 91 % o más de las réplicas bootstrap. Ordena; no prueba causas.</li>
+    <li><b>Para las mujeres hay dos problemas distintos.</b> En la calle, a igual victimización, temen más el acoso sexual (+18,0 pp; 12,9 a 23,4) y evitan más salir de noche (+6,5 pp; 1,0 a 11,5). En la casa, la violencia contra mujeres notificada al sector salud (SIVIM) subió 42,9 % entre 2019 y 2025 (24,4 a 64,3), y el 79,3 % de los casos de 2025 ocurrió en la vivienda.</li>
+  </ol>
+  <div class="alcance"><span class="etq">Una corrección que hicimos nosotros</span><p>Nuestra primera versión presentaba como hallazgo que el Índice de Brecha crece donde más delito queda sin registrar (ρ = 0,72, que pasa la corrección por pruebas múltiples). La relación es mecánica: el índice resta el delito registrado y la cifra oculta divide por él. Al controlarlo, la correlación cae a −0,02 (p = 0,93); la prueba directa entre miedo y cifra oculta da 0,16 (p = 0,51). H2 no se sostiene y así la reportamos (sección 6.4).</p></div>
+  <p>Los nulos también orientan el gasto: ninguna de las 23 pruebas de alumbrado y vías frente al hurto sobrevive a la corrección, y ni la iluminación ni el internet público se asocian con la violencia contra mujeres por localidad. De ocho hipótesis, dos se sostienen y seis no (sección 6.8).</p>
+
+  <h2>Recomendaciones (nivel de evidencia)</h2>
+  <ul class="recos">
+    <li><span class="ev alta">alta</span><span><b>Validar antes de decidir:</b> documentar el cambio de 2023 en los metadatos, publicar la serie empalmada y contrastarla con el SIEDCO y Medicina Legal.</span></li>
+    <li><span class="ev alta">alta</span><span><b>Barrios que se sienten seguros:</b> parques sin atracos y mediación vecinal, en el orden del Índice de Brecha.</span></li>
+    <li><span class="ev media">media</span><span><b>Repartir por víctimas, no solo por denuncias</b>, y <b>medir lo que no se denuncia</b> con una encuesta de victimización por UPL.</span></li>
+    <li><span class="ev media">media</span><span><b>Dos rutas para las mujeres:</b> rutas nocturnas y denuncia fácil del acoso; detección en colegios y salud para la violencia en la casa.</span></li>
+    <li><span class="ev exploratoria">exploratoria</span><span><b>Paquete conjunto para San Cristóbal, Usme y Ciudad Bolívar:</b> alumbrado y senderos, presencia en parques y foco en homicidios.</span></li>
+  </ul>
+</section>
+
+<!-- ================================================================ 2. PROBLEMA -->
+<section class="salto">
+  <h1 class="sec"><span class="num">2</span>Problema público, pregunta analítica e hipótesis</h1>
+  <h2>2.1 El problema</h2>
+  <p>La percepción de inseguridad en Bogotá es alta. En la Bienal 2025, el 74,0 % de los adultos califica la ciudad como insegura, el 48,4 % califica mala o muy mala la seguridad de su zona, el 36,2 % cree que la ciudad está peor que el año anterior y el 10,8 % siente miedo en el espacio público. La ECSC del DANE da una cifra cercana para la ciudad: 78,7 % en la edición 2024.</p>
+  <p>La política de seguridad se planea, se asigna y se evalúa sobre todo con el delito registrado. Esa base tiene tres puntos ciegos que este proyecto mide:</p>
+  <ol>
+    <li><b>La serie puede cambiar de método sin que el cambio quede documentado.</b> Si pasa, una tendencia puede reflejar el registro y no la calle.</li>
+    <li><b>El registro no incluye el delito que no se denuncia.</b> Si la denuncia varía entre territorios, el mapa del registro no es el mapa del delito.</li>
+    <li><b>El registro no recoge lo que forma la sensación de inseguridad</b> en el entorno inmediato de las personas.</li>
+  </ol>
+  <p>Con esos puntos ciegos, el Distrito puede dar por resuelto un delito que no bajó, asignar menos recursos donde menos se denuncia e invertir en intervenciones que no mueven la percepción. Los usuarios del análisis son los equipos de planeación y análisis de seguridad, las alcaldías locales y quienes diseñan las encuestas de percepción y victimización.</p>
+
+  <h2>2.2 Pregunta analítica</h2>
+  <div class="clave"><p><b>¿Por qué la inseguridad percibida no baja cuando el delito registrado sí, y en qué territorios debe intervenir primero el Distrito?</b></p></div>
+  <p>Se descompone en cuatro preguntas operativas: (a) ¿bajó de verdad el delito registrado?; (b) ¿qué explica que una persona sienta insegura su zona?; (c) ¿cuánto delito no llega al registro y dónde?; (d) ¿cómo cambia la experiencia de las mujeres?</p>
+
+  <h2>2.3 Hipótesis y criterios de decisión</h2>
+  <table class="t">
+    <colgroup><col style="width:6%"><col style="width:33%"><col style="width:33%"><col style="width:28%"></colgroup>
+    <thead><tr><th>Id</th><th>Enunciado</th><th>Prueba</th><th>Se sostiene si</th></tr></thead>
+    <tbody>
+      <tr><td class="b">H0</td><td>Antes de comparar percepción y registro hay que validar que la serie del registro sea comparable en el tiempo.</td><td>Razón capa SCJ ÷ SIEDCO y SCJ ÷ Medicina Legal por delito y año; contraste con la ECSC (DANE) y la EPV (CCB).</td><td>Alguna serie sale del rango 0,95 a 1,10 en algún año, o las encuestas contradicen la tendencia de la capa.</td></tr>
+      <tr><td class="b">H1</td><td>La percepción del barrio depende más del entorno inmediato que del delito registrado en la localidad.</td><td>Logit ponderado con AME; efectos fijos de localidad; wild cluster bootstrap; AUC por bloques; aprendizaje supervisado con prueba de contexto.</td><td>Hechos del entorno con IC que excluye cero; delito registrado sin efecto y sin ganancia de AUC.</td></tr>
+      <tr><td class="b">H2</td><td>Parte de la distancia entre miedo y registro es subregistro: donde hay más miedo que delito registrado, más delito queda fuera de las cifras.</td><td>Spearman entre el Índice de Brecha y las víctimas por delito registrado (IC bootstrap, BH); control del delito registrado que comparten los dos índices (Spearman parcial); prueba directa entre miedo y cifra oculta.</td><td>ρ &gt; 0 con p ajustado &lt; 0,05 y la relación sobrevive al control del delito registrado. ‡</td></tr>
+      <tr><td class="b">H3</td><td>A igual victimización, las mujeres restringen más su vida y temen más el acoso sexual.</td><td>Logit ponderado (EMV) con sexo, edad, estrato y haber sido víctima.</td><td>Efecto de ser mujer &gt; 0 con IC que excluye cero.</td></tr>
+    </tbody>
+  </table>
+  <p class="fte">‡ El control y la prueba directa de H2 se agregaron al revisar el primer resultado, cuando vimos que los dos índices comparten el delito registrado (sección 6.4). Además se probaron tres hipótesis que el debate público suele dar por ciertas: peor alumbrado trae más hurto; vías en mal estado traen más hurto; más luz o internet público se asocian con menos violencia contra las mujeres. El marcador completo está en la sección 6.8.</p>
+
+  <h2>2.4 Alcance</h2>
+  <p>Unidades: persona (Bienal, EMV), localidad (las 19 urbanas; Sumapaz queda fuera por ser rural) y ciudad (series de tiempo). Periodos: delito enero-agosto de 2018 a 2026; percepción 2025; victimización 2024 (EMV), años de referencia 2013 a 2023 (ECSC) y 2015 a 2025 (CCB). Cada eslabón (problema, datos, validación, métodos, decisión) deja un archivo en el repositorio; la página 2 traza las cifras clave.</p>
+</section>
+
+<!-- ================================================================ 3. DATOS -->
+<section>
+  <h1 class="sec sigue"><span class="num">3</span>Datos: cuatro frentes y 18 fuentes con score de confiabilidad</h1>
+  <p>Ninguna fuente sola explica la brecha entre miedo y delito. Por eso organizamos 18 fuentes públicas en cuatro frentes y una base común: <b>lo que se registra</b> (SCJ, SIEDCO, Medicina Legal, SIVIM, Línea 123), <b>lo que se vive</b> (EMV, ECSC, EPV de la CCB, encuesta de acoso de la Veeduría), <b>lo que se siente</b> (Bienal 2025) y <b>las condiciones</b> del entorno (luminarias de la UAESP, malla vial del IDU, siniestralidad vial, espacio público del DADEP, internet público y auditoría nocturna de la Secretaría de la Mujer). La población de la SDP es el denominador de todas las tasas y los límites de IDECA dan la geometría.</p>
+
+  <h2>3.1 Score de confiabilidad</h2>
+  <p>No todas las fuentes sostienen lo mismo: una encuesta de un año con 96 personas por localidad no pesa igual que un registro de nueve años. El score hace explícito ese peso: <b>score = 100 × Σ peso × criterio</b>, con cada criterio entre 0 y 1 (<code>src/confiabilidad.py</code>). Un quiebre de serie corta los años comparables. Niveles: alta ≥ 75; media 55 a 74; baja &lt; 55.</p>
+  <table class="t compacta">
+    <colgroup><col style="width:17%"><col style="width:7%"><col style="width:76%"></colgroup>
+    <thead><tr><th>Criterio</th><th class="r">Peso</th><th>Escala (valor del criterio)</th></tr></thead>
+    <tbody>
+      <tr><td class="b">Años comparables</td><td class="r">20 %</td><td>8 o más: 1 · 5 a 7: 0,75 · 3 a 4: 0,5 · 2: 0,35 · 1: 0,2</td></tr>
+      <tr><td class="b">Actualidad</td><td class="r">15 %</td><td>Años desde el último dato (referencia 2026): 0: 1 · 1: 0,85 · 2: 0,7 · 3 a 4: 0,5 · 5 o más: 0,2</td></tr>
+      <tr><td class="b">Precisión</td><td class="r">20 %</td><td>Universo o registro completo: 1 · encuesta con 250 o más casos por localidad: 0,9 · 100 a 249: 0,7 · menos de 100: 0,5 · proyección demográfica: 0,8 · auditoría sin muestreo probabilístico: 0,6 · encuesta sin error por indicador: 0,4 · encuesta no probabilística: 0,3</td></tr>
+      <tr><td class="b">Detalle territorial</td><td class="r">15 %</td><td>Punto o segmento: 1 · UPZ o UPL: 0,85 · localidad: 0,7 · solo ciudad: 0,3</td></tr>
+      <tr><td class="b">Validez</td><td class="r">15 %</td><td>Mide directo el fenómeno: 1 · con sesgo conocido (subregistro, autorreporte, llamadas sin verificar): 0,6 · aproximación indirecta: 0,4</td></tr>
+      <tr><td class="b">Verificación externa</td><td class="r">15 %</td><td>Coincide con una fuente independiente: 1 · no hay con qué contrastarla: 0,6 · coincide en parte: 0,4 · la contradice: 0</td></tr>
+    </tbody>
+  </table>
+  <div class="cap"><span>Tabla 1.</span> Las 18 fuentes, ordenadas por score de confiabilidad</div>
+  <table class="t compacta"><colgroup><col style="width:15%"><col style="width:11%"><col style="width:10%"><col style="width:6%"><col style="width:6%"><col style="width:6%"><col style="width:7%"><col style="width:39%"></colgroup><thead><tr><th class="b">Fuente</th><th class="">Entidad</th><th class="">Frente</th><th class="r">Años comp.</th><th class="r">Último</th><th class="r">Score</th><th class="c">Nivel</th><th class="adv">Advertencia principal</th></tr></thead><tbody><tr class=""><td class="b">Siniestralidad vial</td><td class="">SDM y Medicina Legal</td><td class="">Las condiciones</td><td class="r">11</td><td class="r">2026</td><td class="r">95,5</td><td class="c"><span class="sem alta">Alta</span></td><td class="adv">Muertes en vía: Medicina Legal 612 y Movilidad 597 en 2025. Se cuentan donde ocurren, no donde vive la víctima.</td></tr><tr class=""><td class="b">Medicina Legal · homicidios</td><td class="">INMLCF</td><td class="">Lo que se registra</td><td class="r">9</td><td class="r">2026</td><td class="r">95,5</td><td class="c"><span class="sem alta">Alta</span></td><td class="adv">Valida homicidios, no hurtos. 2025-2026 preliminar.</td></tr><tr class=""><td class="b">SCJ · homicidios, lesiones, sexuales y VIF</td><td class="">Secretaría de Seguridad</td><td class="">Lo que se registra</td><td class="r">9</td><td class="r">2026</td><td class="r">89,5</td><td class="c"><span class="sem alta">Alta</span></td><td class="adv">Coincide con la Policía todos los años (razón 1,00-1,09) y los homicidios con Medicina Legal (95-100 %). Cuenta lo denunciado.</td></tr><tr class=""><td class="b">Proyecciones de población</td><td class="">SDP</td><td class="">Base para las tasas</td><td class="r">9</td><td class="r">2026</td><td class="r">87,8</td><td class="c"><span class="sem alta">Alta</span></td><td class="adv">Proyección post-censo 2018.</td></tr><tr class=""><td class="b">Incidentes Línea 123</td><td class="">Secretaría de Seguridad</td><td class="">Lo que se registra</td><td class="r">9</td><td class="r">2026</td><td class="r">85,8</td><td class="c"><span class="sem alta">Alta</span></td><td class="adv">Llamadas, no delitos verificados.</td></tr><tr class=""><td class="b">Registro de la Policía (SIEDCO)</td><td class="">Policía Nacional</td><td class="">Lo que se registra</td><td class="r">9</td><td class="r">2026</td><td class="r">83,5</td><td class="c"><span class="sem alta">Alta</span></td><td class="adv">Solo trae municipio. Coincide con Medicina Legal en homicidios y con la capa SCJ desde 2023.</td></tr><tr class=""><td class="b">Estado de la malla vial (PCI)</td><td class="">IDU</td><td class="">Las condiciones</td><td class="r">2</td><td class="r">2026</td><td class="r">81,0</td><td class="c"><span class="sem alta">Alta</span></td><td class="adv">Dos cortes comparables (diciembre 2024 y junio 2026); 22 % de los km-carril en mal estado.</td></tr><tr class=""><td class="b">SIVIM · violencia contra las mujeres</td><td class="">Secretaría de Salud</td><td class="">Lo que se registra</td><td class="r">5</td><td class="r">2026</td><td class="r">80,7</td><td class="c"><span class="sem alta">Alta</span></td><td class="adv">Casos notificados al sector salud. Desde 2022 crece la notificación escolar: el aumento mezcla violencia y registro.</td></tr><tr class=""><td class="b">Inventario de luminarias 2017-2024</td><td class="">UAESP</td><td class="">Las condiciones</td><td class="r">8</td><td class="r">2024</td><td class="r">76,0</td><td class="c"><span class="sem alta">Alta</span></td><td class="adv">Cuenta luminarias, no su estado: sigue a la vía (40 a 57 por km). De 2019 a 2024 el total cambia 0,7 % y lo LED pasa a 70 %.</td></tr><tr class=""><td class="b">Bienal de Cultura Ciudadana 2025</td><td class="">Secretaría de Cultura</td><td class="">Lo que se siente</td><td class="r">1</td><td class="r">2025</td><td class="r">75,2</td><td class="c"><span class="sem alta">Alta</span></td><td class="adv">Una sola edición comparable. Su 74 % de ciudad insegura cuadra con el 79 % del DANE (2024).</td></tr><tr class=""><td class="b">SCJ · hurtos</td><td class="">Secretaría de Seguridad</td><td class="">Lo que se registra</td><td class="r">4</td><td class="r">2026</td><td class="r">70,5</td><td class="c"><span class="sem media">Media</span></td><td class="adv">Comparable solo desde 2023: antes la capa cuenta 2 a 3 veces lo que registra la Policía. Comercio, celulares y motos no coinciden con su nombre.</td></tr><tr class=""><td class="b">Percepción y Victimización (CCB)</td><td class="">Cámara de Comercio de Bogotá</td><td class="">Lo que se vive</td><td class="r">6</td><td class="r">2025</td><td class="r">70,2</td><td class="c"><span class="sem media">Media</span></td><td class="adv">Sin error por indicador; pregunta por «este año» con campo en meses distintos. Su 2022-2023 cuadra con la Policía.</td></tr><tr class=""><td class="b">Encuesta de Convivencia (ECSC)</td><td class="">DANE</td><td class="">Lo que se vive</td><td class="r">4</td><td class="r">2023</td><td class="r">70,0</td><td class="c"><span class="sem media">Media</span></td><td class="adv">Sin 2022 ni 2024-2026. Quiebre en 2019 (cambió el mes de campo). Su 2021-2023 cuadra con la Policía, no con la capa SCJ.</td></tr><tr class=""><td class="b">Puntos de internet gratuito</td><td class="">Secretaría General</td><td class="">Las condiciones</td><td class="r">1</td><td class="r">2026</td><td class="r">69,0</td><td class="c"><span class="sem media">Media</span></td><td class="adv">Inventario de zonas wifi y centros CETIC; no mide uso.</td></tr><tr class=""><td class="b">Espacio público efectivo</td><td class="">DADEP</td><td class="">Las condiciones</td><td class="r">1</td><td class="r">2022</td><td class="r">57,0</td><td class="c"><span class="sem media">Media</span></td><td class="adv">La capa no informa su año de corte: se trata como de hace 3-4 años.</td></tr><tr class=""><td class="b">Encuesta Mundial de Valores 2024</td><td class="">Datos para la Transparencia</td><td class="">Lo que se vive</td><td class="r">1</td><td class="r">2024</td><td class="r">56,0</td><td class="c"><span class="sem media">Media</span></td><td class="adv">96 encuestas por localidad. Mide más victimización (25 %) que el DANE y la CCB (15 %); las tres coinciden en que la mayoría no llega al registro.</td></tr><tr class=""><td class="b">Encuesta de acoso callejero 2025</td><td class="">Veeduría Distrital</td><td class="">Lo que se vive</td><td class="r">1</td><td class="r">2025</td><td class="r">51,2</td><td class="c"><span class="sem baja">Baja</span></td><td class="adv">Responde quien quiere (autoselección): sirve para describir, no para estimar.</td></tr><tr class=""><td class="b">Seguridad nocturna para las mujeres 2019</td><td class="">Secretaría de la Mujer</td><td class="">Las condiciones</td><td class="r">1</td><td class="r">2019</td><td class="r">46,0</td><td class="c"><span class="sem baja">Baja</span></td><td class="adv">Solo vías principales y ciclorrutas. El orden de localidades no se sostiene entre 2016 y 2019.</td></tr></tbody></table>
+  <p class="fte">Fuente: <code>outputs/tablas/confiabilidad_fuentes.csv</code>. La capa de hurtos de la SCJ baja a nivel medio (70,5) porque su serie solo es comparable desde 2023; sus homicidios, lesiones, delitos sexuales y violencia intrafamiliar quedan en nivel alto (89,5).</p>
+
+  <h2>3.2 Auditoría: lo ideal frente a lo disponible</h2>
+  <table class="t compacta">
+    <colgroup><col style="width:19%"><col style="width:31%"><col style="width:15%"><col style="width:35%"></colgroup>
+    <thead><tr><th>Variable ideal</th><th>Lo disponible</th><th>Granularidad</th><th>Limitación y manejo</th></tr></thead>
+    <tbody>
+      <tr><td class="b">Delito ocurrido por barrio y mes</td><td>Delitos de alto impacto por localidad, SCJ, enero-agosto 2018-2026</td><td>Localidad</td><td>Registro = denuncias. Se contrasta con victimización (EMV, ECSC, CCB) para estimar la cifra oculta.</td></tr>
+      <tr><td class="b">Percepción frecuente por UPL</td><td>Bienal de Cultura Ciudadana 2025, microdatos con factor de expansión</td><td>Persona, representativa por localidad</td><td>Un solo año. Para el seguimiento se propone la Encuesta Distrital de Percepción (por UPL).</td></tr>
+      <tr><td class="b">Victimización por localidad</td><td>Encuesta Mundial de Valores, ola 8, 2024</td><td>Persona, 96 por localidad</td><td>Intervalos amplios; ponderación nacional. La localidad se recuperó del tablero oficial y se verificó (96 por localidad).</td></tr>
+      <tr><td class="b">Estado del alumbrado por cuadra</td><td>Luminarias por localidad, UAESP (52 cortes, 2017-2024)</td><td>Localidad</td><td>Cuenta luminarias, no si encienden ni cuánta luz dan: sirve como validación débil.</td></tr>
+      <tr><td class="b">Desorden en el espacio público</td><td>Llamadas a la Línea 123 (narcóticos, riñas, maltrato a mujer), SCJ</td><td>Localidad y UPZ</td><td>Mide llamadas, no hechos verificados.</td></tr>
+      <tr><td class="b">Entorno inmediato de la persona</td><td>Hechos reportados en la Bienal: atracos y drogas en el parque, conflictos vecinales, acoso presenciado</td><td>Persona</td><td>Autorreporte. Se separa de las calificaciones que comparten batería con la pregunta de seguridad.</td></tr>
+      <tr><td class="b">Población para tasas</td><td>Proyecciones SDP 2005-2035 por sexo y edad simple</td><td>Localidad y UPZ</td><td>Proyecciones posteriores al censo 2018, no conteos.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>3.3 Lo que encontramos en el portal de datos abiertos</h2>
+  <p>Para dimensionar qué se puede cruzar, descargamos por la API CKAN el catálogo completo del portal: 1.835 conjuntos y 11.707 recursos. De 4.598 tablas, el 6,7 % trae una llave de localidad cruzable, el 23,9 % trae año o fecha y el 3,4 % trae sexo; el 20,8 % de los conjuntos no se actualiza desde 2021 o antes (auditoría del 5 de octubre de 2026, scripts en <code>auditoria_portal/</code>). Los retos de integración más costosos fueron la misma localidad escrita de diez maneras («USAQUÉN», «01 - Usaquen», «1»), resuelta con un normalizador al código oficial 1-20; tablas en formato ancho (una columna por delito y año); archivos cuya extensión no coincide con su formato; y registros duplicados (cada muerte en vía aparece dos veces en el archivo de la SDS; los formularios «A» y «AA» del SIGAT repiten el mismo siniestro). Cada paso queda en una bitácora con controles de totales (<code>outputs/tablas/bitacora_limpieza.csv</code>).</p>
+</section>
+
+<!-- ================================================================ 4. VALIDACIÓN -->
+<section>
+  <h1 class="sec sigue"><span class="num">4</span>Validación del registro: el hallazgo central</h1>
+  <p>Comparar miedo con delito exige que el delito se mida igual en el tiempo. Antes de modelar dividimos cada serie de la capa SCJ entre el registro de la Policía (SIEDCO) para el mismo delito y los mismos meses, y los homicidios también entre los de Medicina Legal. Regla del proyecto: una razón entre 0,95 y 1,10 cuenta como la misma serie (<code>src/validacion_registro.py</code>).</p>
+
+  <figure>
+    <img style="width:92%;margin:0 auto" src="../outputs/figuras/informe_registro.png" alt="Razón capa SCJ sobre SIEDCO por año y delito, e índices del hurto a personas">
+    <figcaption><b>Figura 1. En 2023 la capa cambia de escala en tres hurtos; las demás series coinciden con la Policía todos los años.</b> Izquierda: razón capa SCJ ÷ SIEDCO, enero-agosto; en gris, homicidios, lesiones, delitos sexuales y violencia intrafamiliar. Derecha: hurto a personas con índice 2022 = 100 en la capa, en el SIEDCO y en la victimización por hurto de la EPV (calculada como victimización × porcentaje de víctimas de hurto).
+      <span class="fte">Fuentes: SCJ, capa «Delitos de alto impacto» (OAIEE, corte 31 de agosto de 2026); Policía Nacional, SIEDCO (datos.gov.co); CCB, EPV 2021-2025. Tablas: <code>registro_razon_scj_siedco.csv</code>, <code>registro_hurto_personas.csv</code>.</span></figcaption>
+  </figure>
+
+  <div class="cap"><span>Tabla 2.</span> Razón capa SCJ ÷ SIEDCO por delito y año, enero-agosto (en azul, fuera del rango 0,95 a 1,10)</div>
+  <table class="t"><colgroup></colgroup><thead><tr><th class="b">Año</th><th class="r">Hurto a personas</th><th class="r">Hurto a residencias</th><th class="r">Hurto de automotores</th><th class="r">Homicidios</th><th class="r">Lesiones personales</th><th class="r">Delitos sexuales</th><th class="r">Violencia intrafamiliar</th></tr></thead><tbody><tr class=""><td class="b">2018</td><td class="r"><b class="fuera">2,52</b></td><td class="r"><b class="fuera">2,78</b></td><td class="r"><b class="fuera">2,00</b></td><td class="r">1,00</td><td class="r">1,09</td><td class="r">1,00</td><td class="r">1,00</td></tr><tr class=""><td class="b">2019</td><td class="r"><b class="fuera">2,55</b></td><td class="r"><b class="fuera">2,79</b></td><td class="r"><b class="fuera">2,00</b></td><td class="r">1,00</td><td class="r">1,00</td><td class="r">1,00</td><td class="r">1,00</td></tr><tr class=""><td class="b">2020</td><td class="r"><b class="fuera">2,41</b></td><td class="r"><b class="fuera">3,00</b></td><td class="r"><b class="fuera">2,00</b></td><td class="r">1,02</td><td class="r">1,00</td><td class="r">1,00</td><td class="r">1,00</td></tr><tr class=""><td class="b">2021</td><td class="r"><b class="fuera">2,34</b></td><td class="r"><b class="fuera">2,90</b></td><td class="r"><b class="fuera">2,01</b></td><td class="r">1,01</td><td class="r">1,00</td><td class="r">1,00</td><td class="r">1,00</td></tr><tr class=""><td class="b">2022</td><td class="r"><b class="fuera">2,28</b></td><td class="r"><b class="fuera">2,29</b></td><td class="r"><b class="fuera">1,92</b></td><td class="r">1,00</td><td class="r">1,00</td><td class="r">1,00</td><td class="r">1,00</td></tr><tr class=""><td class="b">2023</td><td class="r">1,00</td><td class="r">1,00</td><td class="r">1,00</td><td class="r">1,00</td><td class="r">1,00</td><td class="r">1,00</td><td class="r">1,00</td></tr><tr class=""><td class="b">2024</td><td class="r">1,00</td><td class="r">1,00</td><td class="r">1,00</td><td class="r">1,00</td><td class="r">1,00</td><td class="r">1,00</td><td class="r">1,00</td></tr><tr class=""><td class="b">2025</td><td class="r">1,00</td><td class="r">1,00</td><td class="r">1,00</td><td class="r">1,00</td><td class="r">1,00</td><td class="r">1,00</td><td class="r">1,00</td></tr><tr class=""><td class="b">2026 *</td><td class="r">1,01</td><td class="r">1,01</td><td class="r">1,01</td><td class="r">1,00</td><td class="r">s. d.</td><td class="r">1,04</td><td class="r">1,03</td></tr></tbody></table>
+  <p class="fte">* 2026: corte enero-agosto de la capa frente al SIEDCO disponible a la fecha de consulta. Lesiones personales 2026 no está en la capa. Fuente: <code>outputs/tablas/registro_razon_scj_siedco.csv</code>.</p>
+
+  <h2>4.1 Qué cambió</h2>
+  <ul>
+    <li><b>El cambio afecta solo a tres hurtos y empieza en 2023:</b> personas (2,28 a 2,55 veces en 2018-2022), residencias (2,29 a 3,00) y automotores (1,92 a 2,01). Homicidios, lesiones personales, delitos sexuales y violencia intrafamiliar están entre 1,00 y 1,09 en todos los años, y los homicidios de la capa equivalen a entre el 95 % y el 100 % de los de Medicina Legal.</li>
+    <li><b>La caída de 2023 en la capa (−40,2 % en hurto a personas) es el paso de una escala a la otra.</b> En el SIEDCO el mismo delito sube 36,2 % ese año.</li>
+    <li><b>Dos columnas de la capa repiten otro delito.</b> Desde 2023, la columna «celulares» repite caso por caso el hurto de motocicletas del SIEDCO y la de «motocicletas» repite el hurto a comercio (Tabla 3). El hurto a comercio de la capa no coincide con el SIEDCO en ningún año (razón 3,0 a 5,1). Estas tres columnas no se analizan por tipo.</li>
+  </ul>
+  <div class="cap"><span>Tabla 3.</span> Columnas de la capa con etiqueta cruzada (capa = SIEDCO, casos enero-agosto)</div>
+  <table class="t"><colgroup></colgroup><thead><tr><th class="b">Columna de la capa</th><th class="">Dice medir</th><th class="">Desde 2023 coincide con</th><th class="r">2023</th><th class="r">2024</th><th class="r">2025</th></tr></thead><tbody><tr class=""><td class="b">HCE</td><td class="">Hurto de celulares</td><td class="">Hurto de motocicletas (SIEDCO)</td><td class="r">3.709 = 3.709</td><td class="r">3.899 = 3.899</td><td class="r">3.060 = 3.060</td></tr><tr class=""><td class="b">HM</td><td class="">Hurto de motocicletas</td><td class="">Hurto a comercio (SIEDCO)</td><td class="r">9.036 = 9.036</td><td class="r">7.788 = 7.788</td><td class="r">6.461 = 6.461</td></tr></tbody></table>
+  <p class="fte">Fuente: <code>outputs/tablas/registro_etiquetas_cruzadas.csv</code>.</p>
+
+  <h2>4.2 Prueba independiente: ¿cayó el delito, cayó la denuncia o cambió el registro?</h2>
+  <div class="cap"><span>Tabla 4.</span> Hurto a personas en Bogotá: registro y encuestas de victimización</div>
+  <table class="t"><colgroup></colgroup><thead><tr><th class="b">Año</th><th class="r">Capa SCJ<br>ene-ago</th><th class="r">SIEDCO<br>ene-ago</th><th class="r">Razón</th><th class="r">SIEDCO<br>año completo</th><th class="r">ECSC: víctimas<br>de hurto (%)</th><th class="r">ECSC: denuncia<br>del hurto (%)</th><th class="r">CCB: víctimas<br>de hurto (%) †</th><th class="r">CCB: denuncia<br>del hurto (%)</th></tr></thead><tbody><tr class=""><td class="b">2018</td><td class="r">170.219</td><td class="r">67.633</td><td class="r">2,52</td><td class="r">105.964</td><td class="r">17,6</td><td class="r">37,0</td><td class="r">s. d.</td><td class="r">s. d.</td></tr><tr class=""><td class="b">2019</td><td class="r">210.220</td><td class="r">82.390</td><td class="r">2,55</td><td class="r">127.842</td><td class="r">10,6</td><td class="r">37,5</td><td class="r">s. d.</td><td class="r">s. d.</td></tr><tr class=""><td class="b">2020</td><td class="r">128.265</td><td class="r">53.135</td><td class="r">2,41</td><td class="r">83.136</td><td class="r">7,0</td><td class="r">34,3</td><td class="r">s. d.</td><td class="r">s. d.</td></tr><tr class=""><td class="b">2021</td><td class="r">159.153</td><td class="r">68.077</td><td class="r">2,34</td><td class="r">109.428</td><td class="r">7,3</td><td class="r">36,0</td><td class="r">15,9</td><td class="r">s. d.</td></tr><tr class=""><td class="b">2022</td><td class="r">178.534</td><td class="r">78.419</td><td class="r">2,28</td><td class="r">137.157</td><td class="r">s. d.</td><td class="r">s. d.</td><td class="r">12,8</td><td class="r">38,6</td></tr><tr class=""><td class="b">2023</td><td class="r">106.824</td><td class="r">106.823</td><td class="r">1,00</td><td class="r">158.745</td><td class="r">6,9</td><td class="r">42,9</td><td class="r">14,7</td><td class="r">38,8</td></tr><tr class=""><td class="b">2024</td><td class="r">86.196</td><td class="r">86.196</td><td class="r">1,00</td><td class="r">130.504</td><td class="r">s. d.</td><td class="r">s. d.</td><td class="r">11,8</td><td class="r">51,1</td></tr><tr class=""><td class="b">2025</td><td class="r">88.114</td><td class="r">88.116</td><td class="r">1,00</td><td class="r">123.017</td><td class="r">s. d.</td><td class="r">s. d.</td><td class="r">11,1</td><td class="r">43,2</td></tr><tr class=""><td class="b">2026</td><td class="r">75.863</td><td class="r">75.124</td><td class="r">1,01</td><td class="r">parcial</td><td class="r">s. d.</td><td class="r">s. d.</td><td class="r">s. d.</td><td class="r">s. d.</td></tr></tbody></table>
+  <p class="fte">ECSC: año de referencia (la edición N pregunta por el año N−1); no hubo encuesta para 2017 ni 2022, y desde 2019 el campo pasó al segundo semestre, por lo que 2018 y antes no se comparan con 2019 y después. s. d.: sin dato. † Victimización por hurto de la CCB calculada = victimización × % de víctimas que sufrió hurto. La CCB no publica errores por indicador. Fuente: <code>outputs/tablas/registro_hurto_personas.csv</code>.</p>
+  <div class="dos">
+    <div>
+      <h3>ECSC del DANE, 2021 frente a 2023</h3>
+      <p>Es la única encuesta oficial con errores publicados. La victimización por hurto a personas pasa de 7,3 % a 6,9 % (−0,47 pp; IC 95 % −1,83 a 0,89; p = 0,50). La denuncia del hurto sube de 36,0 % a 42,9 % (+6,9 pp; p = 0,15) y la de cualquier delito, de 35,4 % a 43,1 % (p = 0,028).</p>
+      <div class="clave"><span class="etq">Contrafactual</span><p>Si la caída de la capa entre 2021 y 2023 (razón 0,67) se explicara por menos denuncia, con las víctimas que estimó el DANE (473 mil en 2021 y 454 mil en 2023) la denuncia del hurto habría tenido que bajar de 36,0 % a <b>25,2 %</b>. La ECSC midió <b>42,9 %</b> (EE 3,81 pp), 4,6 errores estándar por encima. La hipótesis «cayó la denuncia» queda descartada para ese intervalo.</p></div>
+    </div>
+    <div>
+      <h3>EPV de la Cámara de Comercio, 2022 frente a 2023</h3>
+      <p>La victimización por hurto (calculada) pasa de 12,8 % a 14,7 % y la denuncia del hurto, de 38,6 % a 38,8 %. Víctimas × denuncia sube 14,9 %, en línea con el SIEDCO de año completo (+15,7 %). La capa dice −40 %.</p>
+      <h3>Desde 2023: una baja real y moderada</h3>
+      <p>Con las dos series ya iguales, el registro baja 17,5 % entre 2023 y 2025. En la EPV la victimización por hurto baja 24 % y la denuncia sube de 38,8 % a 43,2 %: lo que cae desde 2023 parece ser el delito, no la denuncia. Es una sola encuesta, sin errores por indicador.</p>
+    </div>
+  </div>
+  <div class="alcance">
+    <span class="etq">Alcance de este hallazgo (regla 11.5 de las bases)</span>
+    <p>El hallazgo describe la comparabilidad de una serie publicada. No evalúa a la entidad ni su gestión. La capa no documenta su método para 2018-2022; que la razón de automotores sea casi exactamente 2,00 sugiere hechos contados dos veces (por ejemplo, al sumar dos bases sin deduplicar), pero es una hipótesis que solo la OAIEE puede confirmar. <b>Recomendación técnica de documentación:</b> anotar el cambio de 2023 en los metadatos de la capa, publicar la serie empalmada y contrastar cada serie con el SIEDCO y Medicina Legal antes de publicarla.</p>
+    <p><b>Consecuencias para este análisis.</b> Las tendencias de hurto usan el SIEDCO (Bogotá) o la ventana 2023-2026 (localidades). Los cortes transversales de 2024-2025 no se afectan, porque desde 2023 la capa coincide con el SIEDCO.</p>
+  </div>
+</section>
+
+<!-- ================================================================ 5. MÉTODOS -->
+<section>
+  <h1 class="sec sigue"><span class="num">5</span>Métodos</h1>
+  <p>Cada paso vive en un módulo de <code>src/</code> y corre de punta a punta con <code>python src/pipeline.py</code>. La tabla resume la especificación, cómo se mide la incertidumbre y dónde queda el resultado. Las semillas de los remuestreos están fijas.</p>
+  <table class="t compacta metodos">
+    <colgroup><col style="width:13%"><col style="width:49%"><col style="width:24%"><col style="width:14%"></colgroup>
+    <thead><tr><th>Paso</th><th>Especificación</th><th>Incertidumbre e inferencia</th><th>Salida</th></tr></thead>
+    <tbody>
+      <tr><td class="b">Integración</td><td>Llave territorial: normalizador de nombres y códigos al código oficial de localidad (1-20); análisis en las 19 urbanas. Tasas por 100.000 habitantes con la población SDP del mismo año. Microdatos con su factor de expansión (Bienal) o de ponderación (EMV). A cada persona de la Bienal se le asigna el delito y las llamadas 123 de su localidad. Delito siempre enero-agosto.</td><td>Bitácora por fuente con conteos y controles de totales.</td><td><code>data/procesados/</code>, <code>bitacora_limpieza.csv</code></td></tr>
+      <tr><td class="b">Validación del registro</td><td>Razón capa SCJ ÷ SIEDCO y ÷ Medicina Legal por delito y año. Entre 0,95 y 1,10: misma serie.</td><td>Contraste con la ECSC (errores publicados) y la EPV.</td><td><code>registro_*.csv</code></td></tr>
+      <tr><td class="b">Tendencias</td><td>Binomial negativa de panel (19 localidades × años, enero-agosto): log μ = log(población) + efecto fijo de localidad + término de tiempo. Ventana 2022-2026 en series validadas; 2023-2026 en hurtos con quiebre.</td><td>Errores agrupados por localidad; IC 95 % del cambio anual.</td><td><code>tendencias_resumen.csv</code></td></tr>
+      <tr><td class="b">Diagnóstico (H1)</td><td>Logit ponderado por el factor de expansión. Resultado: califica mala o muy mala la seguridad de su zona (P66.8). Variables: perfil (sexo, edad, estrato, arriendo), delito registrado de la localidad (hurtos y homicidios por 100.000, llamadas 123 por narcóticos) y hechos del entorno tomados de otras preguntas (P72, P53, P11, P67). Efectos marginales promedio (AME).</td><td>IC 95 % por bootstrap de conglomerados (300 réplicas, se remuestrean localidades); p con errores agrupados.</td><td><code>m_hechos.csv</code></td></tr>
+      <tr><td class="b">Robustez</td><td>(a) Efectos fijos de localidad; (b) modelo lineal ponderado; (c) otros resultados: ciudad insegura y miedo en el espacio público; (d) calificaciones de la misma batería (alumbrado, ventas informales) en un modelo aparte, por sesgo de método común.</td><td>Wild cluster bootstrap con pesos de Webb (999 réplicas): p válido con 19 conglomerados.</td><td><code>m_efectos_fijos</code>, <code>lpm_wild</code>, <code>m_ciudad</code>, <code>m_miedo</code>, <code>m_calif</code></td></tr>
+      <tr><td class="b">Predictivo</td><td>AUC fuera de muestra por bloques de variables (regresión logística).</td><td>Validación cruzada estratificada 5 × 5, ponderada.</td><td><code>auc.csv</code></td></tr>
+      <tr><td class="b">Aprendizaje supervisado</td><td>Regresión logística L2, bosque aleatorio (400 árboles, hoja mínima 20) y gradient boosting por histogramas (300 iteraciones, tasa 0,05, 15 hojas, hoja mínima 40, L2 = 1), con el factor de expansión como peso. Importancia por bloques: se permutan juntas las variables de un bloque en los datos de prueba (gradient boosting). Prueba de contexto: delito registrado frente a efectos fijos de localidad.</td><td>5 × 5 particiones (25 evaluaciones); AUC ponderada; media y desviación estándar.</td><td><code>ml_*.csv</code></td></tr>
+      <tr><td class="b">Aprendizaje no supervisado</td><td>Ocho indicadores estandarizados de los cuatro frentes (logaritmo en tasas asimétricas); componentes principales; agrupamiento jerárquico de Ward; k entre 3 y 5 elegido por silueta.</td><td>Estabilidad con 500 perturbaciones: quitar un indicador al azar y remuestrear localidades.</td><td><code>tipologia_*.csv</code></td></tr>
+      <tr><td class="b">Validaciones territoriales</td><td>Spearman entre las 19 localidades para ocho relaciones entre percepción, victimización, registro y entorno. Si dos índices comparten un componente, Spearman parcial: correlación de los residuos de los rangos frente a ese componente.</td><td>IC bootstrap (2.000 réplicas); Benjamini-Hochberg; parcial con gl = n − 3.</td><td><code>validaciones.csv</code>, <code>validacion_parcial.csv</code></td></tr>
+      <tr><td class="b">Cifra oculta</td><td>Víctimas estimadas (% víctima en la EMV × adultos SDP 2024) ÷ delitos de alto impacto SCJ 2024 (enero-agosto × 12/8). Compara personas con hechos: es un orden de magnitud.</td><td>IC con el error estándar de la EMV por localidad; sensibilidad con la ECSC y la EPV.</td><td><code>cifra_oculta.csv</code></td></tr>
+      <tr><td class="b">Índice de Brecha</td><td>IBS = z(% zona insegura) − z(ln delitos de alto impacto por 100.000). El logaritmo corrige la asimetría de la tasa en el centro. Comparte el delito registrado con la cifra oculta: no se usa para validarla.</td><td>Bootstrap ponderado dentro de cada localidad (1.000 réplicas): IC 90 % y probabilidad de top 5.</td><td><code>ibs.csv</code></td></tr>
+      <tr><td class="b">Género</td><td>EMV: logit ponderado con sexo, edad, estrato y haber sido víctima. SIVIM: tasas por 100.000 mujeres; IC de los cambios con binomial negativa NB2 (α = 0,0276, panel 19 × 2013-2025 con efectos fijos de localidad y año).</td><td>AME con bootstrap por localidades; Spearman con IC BCa y BH para las hipótesis de entorno.</td><td><code>emv_*.csv</code>, <code>genero_*</code></td></tr>
+      <tr><td class="b">Alumbrado y vías</td><td>23 pruebas de Spearman entre condiciones (luminarias, malla vial, siniestralidad, calidad del alumbrado) y hurtos de 2025 por 100.000.</td><td>IC bootstrap (10.000 réplicas), p por permutación, BH dentro de cada bloque.</td><td><code>movilidad_pruebas_hipotesis.csv</code></td></tr>
+      <tr><td class="b">Escenarios</td><td>Probabilidad predicha media por localidad con alumbrado malo = 0, atracos en el parque = 0, o ambos (modelo de hechos más alumbrado).</td><td>Sensibilidad del modelo, no efecto causal.</td><td><code>escenarios.csv</code></td></tr>
+    </tbody>
+  </table>
+  <div class="nota"><p><b>Por qué estas decisiones.</b> Con 19 localidades los errores agrupados analíticos son optimistas: por eso los IC de los AME salen de un bootstrap de conglomerados y la prueba clave del delito registrado usa wild cluster bootstrap. Las calificaciones del entorno comparten batería con la pregunta de seguridad y pueden inflarse por el juicio general de la persona: el modelo principal usa solo hechos de otras preguntas. Los modelos flexibles sirven para comprobar que la conclusión no depende de la forma funcional del logit.</p></div>
+</section>
+
+<!-- ================================================================ 6. RESULTADOS -->
+<section>
+  <h1 class="sec sigue"><span class="num">6</span>Resultados</h1>
+  <h2>6.1 Tendencias en la ventana comparable</h2>
+  <figure>
+    <img style="width:82%;margin:0 auto" src="../outputs/figuras/informe_tendencias.png" alt="Cambio anual promedio por delito con intervalos de confianza">
+    <figcaption><b>Figura 2. En las series validadas suben la violencia intrafamiliar, los delitos sexuales y los homicidios; desde 2023 bajan los hurtos.</b> Binomial negativa de panel, 19 localidades, enero-agosto, con efectos fijos de localidad y población como exposición.
+      <span class="fte">Fuentes: SCJ (capa validada con el SIEDCO), Policía Nacional (SIEDCO), SDP. Tabla: <code>tendencias_resumen.csv</code>.</span></figcaption>
+  </figure>
+  <p>La violencia intrafamiliar crece 11,2 % al año, los delitos sexuales 7,5 % y los homicidios 3,3 %; los tres IC excluyen el cero. Lesiones personales baja 3,4 % al año (2022-2025). Los hurtos con quiebre solo se leen desde 2023: personas −9,4 %, automotores −8,7 % y residencias −6,9 % al año. El hurto de bicicletas no tiene serie externa para validarlo y su tendencia no se distingue de cero (−1,4 %; −5,1 a 2,4). Frente a 2019, la tasa de 2026 es 1,62 veces la de entonces en violencia intrafamiliar, 1,26 en delitos sexuales y 1,09 en homicidios.</p>
+
+  <h2>6.2 Qué explica sentir insegura la zona (H1)</h2>
+  <figure >
+    <img style="width:76%;margin:0 auto" src="../outputs/figuras/fig3_efectos_marginales.png" alt="Efectos marginales promedio del modelo principal">
+    <figcaption><b>Figura 3. Lo que pasa en el barrio pesa; el delito registrado de la localidad no.</b> Logit ponderado, Bienal 2025 (n = 5.538). En oro, efectos que suben la probabilidad; en azul, los que la bajan; en gris, IC que incluye el cero.
+      <span class="fte">Fuentes: SCRD, Bienal 2025; SCJ; SDP. Tabla: <code>m_hechos.csv</code>.</span></figcaption>
+  </figure>
+  <div class="cap"><span>Tabla 5.</span> Robustez del modelo principal (efectos marginales promedio en puntos porcentuales)</div>
+  <table class="t"><colgroup><col style="width:30%"><col style="width:18%"><col style="width:19%"><col style="width:13%"><col style="width:20%"></colgroup><thead><tr><th class="b">Variable</th><th class="r">Modelo principal<br>AME pp [IC 95 %]</th><th class="r">Efectos fijos de localidad<br>AME pp [IC 95 %]</th><th class="r">Lineal: p wild<br>(Webb, 999)</th><th class="r">Con calificaciones<br>AME pp [IC 95 %]</th></tr></thead><tbody><tr class=""><td class="b">Atracos en el parque más cercano</td><td class="r">+13,3 <span class='ic'>[6,2; 17,5]</span></td><td class="r">+12,3 <span class='ic'>[5,9; 15,9]</span></td><td class="r">< 0,001</td><td class="r">+10,2 <span class='ic'>[4,1; 14,3]</span></td></tr><tr class=""><td class="b">Conflictos vecinales (de ninguno a todos)</td><td class="r">+14,7 <span class='ic'>[3,9; 23,8]</span></td><td class="r">+15,4 <span class='ic'>[5,3; 25,0]</span></td><td class="r">0,046</td><td class="r">+11,7 <span class='ic'>[5,2; 18,8]</span></td></tr><tr class=""><td class="b">No tiene parque cerca</td><td class="r">−6,9 <span class='ic'>[−12,7; −2,6]</span></td><td class="r">−7,1 <span class='ic'>[−11,3; −3,0]</span></td><td class="r"><span class='gris'>no probado</span></td><td class="r">−13,1 <span class='ic'>[−17,6; −8,9]</span></td></tr><tr class=""><td class="b">Estrato (por nivel)</td><td class="r">−8,2 <span class='ic'>[−10,5; −3,4]</span></td><td class="r">−4,2 <span class='ic'>[−8,3; −0,5]</span></td><td class="r"><span class='gris'>no probado</span></td><td class="r">−5,8 <span class='ic'>[−7,1; −2,4]</span></td></tr><tr class=""><td class="b">Homicidios en la localidad (+1 por 100.000)</td><td class="r">+0,5 <span class='ic'>[0,0; 1,3]</span></td><td class="r"><span class='gris'>absorbido</span></td><td class="r">0,033</td><td class="r">+0,3 <span class='ic'>[−0,1; 1,4]</span></td></tr><tr class=""><td class="b">Hurtos en la localidad (+1.000 por 100.000)</td><td class="r">−0,1 <span class='ic'>[−5,6; 1,7]</span></td><td class="r"><span class='gris'>absorbido</span></td><td class="r">0,919</td><td class="r">−1,0 <span class='ic'>[−7,0; 1,4]</span></td></tr><tr class=""><td class="b">Llamadas 123 por narcóticos (+100 por 100.000)</td><td class="r">−0,4 <span class='ic'>[−2,0; 2,0]</span></td><td class="r"><span class='gris'>absorbido</span></td><td class="r">0,543</td><td class="r">+0,5 <span class='ic'>[−1,4; 3,0]</span></td></tr></tbody></table>
+  <p class="fte">«Absorbido»: con efectos fijos de localidad el delito registrado (un valor por localidad) no se identifica. Calificaciones del modelo complementario: alumbrado malo +15,7 pp [9,8; 20,1] y ventas informales malas +35,0 pp [30,4; 39,9]; comparten batería con la pregunta de seguridad y pueden estar infladas por sesgo de método común. Fuentes: <code>m_hechos</code>, <code>m_efectos_fijos</code>, <code>lpm_wild</code>, <code>m_calif</code>.</p>
+  <div class="dos">
+    <div>
+      <p>Ver atracos en el parque cercano (+13,3 pp) y vivir con conflictos vecinales (+14,7 pp) elevan con fuerza la probabilidad de sentir insegura la zona, y los dos efectos se sostienen con efectos fijos de localidad y con el wild bootstrap. El hurto registrado no tiene efecto en ninguna especificación (p wild = 0,92). El homicidio sí, pero pequeño: +0,47 pp por cada homicidio adicional por 100.000 habitantes (IC 0,02 a 1,31; p wild = 0,033); es la única variable del registro con señal. El estrato alto protege (−8,2 pp por nivel).</p>
+      <p>El barrio se juzga por el barrio. Para la ciudad en general los hechos del entorno no pesan (atracos en el parque +0,4 pp; IC −3,7 a 4,2). En el miedo al espacio público pesan la venta o consumo de drogas en el parque (+4,3 pp; 3,0 a 6,3) y ser mujer (+3,9 pp; 1,9 a 5,7).</p>
+    </div>
+    <div>
+      <div class="cap" style="margin-top:0"><span>Tabla 6.</span> Capacidad predictiva por bloques (AUC, validación cruzada 5 × 5)</div>
+      <table class="t"><colgroup><col style="width:68%"><col style="width:16%"><col style="width:16%"></colgroup><thead><tr><th class="b">Bloque de variables (logística)</th><th class="r">AUC</th><th class="r">DE</th></tr></thead><tbody><tr class=""><td class="b">Perfil (sexo, edad, estrato, tenencia)</td><td class="r">0,609</td><td class="r">0,023</td></tr><tr class=""><td class="b">Perfil + delito registrado</td><td class="r">0,611</td><td class="r">0,021</td></tr><tr class=""><td class="b">Perfil + hechos del entorno</td><td class="r">0,655</td><td class="r">0,024</td></tr><tr class=""><td class="b">Perfil + hechos + delito</td><td class="r">0,656</td><td class="r">0,023</td></tr><tr class=""><td class="b">Perfil + calificación del entorno</td><td class="r">0,755</td><td class="r">0,016</td></tr><tr class=""><td class="b">Todo</td><td class="r">0,782</td><td class="r">0,017</td></tr></tbody></table>
+      <p class="fte">Sumar el delito registrado al perfil mejora el AUC en 0,003; sumar los hechos del entorno, en 0,046. Fuente: <code>auc.csv</code>.</p>
+    </div>
+  </div>
+  <figure>
+    <img style="width:90%;margin:0 auto" src="../outputs/figuras/informe_aprendizaje.png" alt="AUC por modelo, importancia por bloques y prueba de contexto">
+    <figcaption><b>Figura 4. Los modelos flexibles confirman el resultado del logit.</b> Izquierda: AUC fuera de muestra con y sin las calificaciones del entorno. Centro: AUC que se pierde al permutar cada bloque (gradient boosting, sin calificaciones). Derecha: prueba de contexto; barras de error = desviación estándar en 25 evaluaciones.
+      <span class="fte">Fuentes: Bienal 2025, SCJ. Tablas: <code>ml_comparacion_modelos*.csv</code>, <code>ml_importancia_bloques_sin_calificaciones.csv</code>, <code>ml_contexto_localidad.csv</code>.</span></figcaption>
+  </figure>
+  <p>El AUC es la probabilidad de ordenar bien una pareja tomada al azar: una persona que siente insegura su zona y otra que no. Con hechos del entorno y contexto, los modelos flexibles ordenan bien 72 de cada 100 parejas (bosque aleatorio 0,724; gradient boosting 0,723; logística 0,682). Con las calificaciones del barrio, 85 de cada 100 (gradient boosting 0,850; bosque 0,847; logística 0,832), con la cautela del sesgo de método común: esas calificaciones concentran la importancia (0,253 de AUC perdida). Sin ellas, los hechos del entorno son el bloque que más AUC aporta (0,098). El delito registrado pierde 0,059 al permutarse, pero la prueba de contexto muestra que esa información es la localidad: con efectos fijos de localidad el AUC es 0,726 y al sumar el delito registrado queda en 0,724. El 54,1 % de los adultos desconfía de la Policía; ese bloque aporta 0,036.</p>
+
+  <h2>6.3 Cifra oculta</h2>
+  <p>En 2024 hubo unas 5,6 víctimas por cada delito registrado. La EMV mide más victimización (24,6 % de los adultos) que la ECSC (14,7 %) y la EPV (15,3 %), así que la proporción que llega al registro va de 1,8 a 3,0 de cada 10. Por eso reportamos un rango y no un valor único. Por localidad, la razón va de 10,6 en Bosa a 0,7 en Los Mártires; en el centro el registro cuenta dónde ocurre el delito y la encuesta dónde vive la víctima, y la población flotante baja la razón. Con 96 encuestas por localidad los intervalos son amplios (Bosa: 7,0 a 14,3). Entre localidades, las víctimas que reporta la EMV no siguen al delito registrado (ρ = 0,03; p = 0,91): el registro no dice dónde están las víctimas, y eso respalda repartir por víctimas, no solo por denuncias.</p>
+  <div class="cap"><span>Tabla 7.</span> Relaciones territoriales entre las 19 localidades (Spearman, IC bootstrap y corrección BH sobre las ocho pruebas)</div>
+  <table class="t"><colgroup><col style="width:52%"><col style="width:10%"><col style="width:18%"><col style="width:10%"><col style="width:10%"></colgroup><thead><tr><th class="b">Relación entre las 19 localidades</th><th class="r">ρ</th><th class="r">IC 95 %</th><th class="r">p</th><th class="r">p BH</th></tr></thead><tbody><tr class=""><td class="b">Drogas en el parque (Bienal) y llamadas 123 por narcóticos</td><td class="r">−0,08</td><td class="r">−0,57 a 0,40</td><td class="r">0,732</td><td class="r">0,836</td></tr><tr class=""><td class="b">Zona insegura (Bienal) y llamadas 123 por riñas</td><td class="r">+0,22</td><td class="r">−0,33 a 0,66</td><td class="r">0,355</td><td class="r">0,711</td></tr><tr class=""><td class="b">Alumbrado malo (Bienal) y luminarias por km² (UAESP 2019)</td><td class="r">−0,11</td><td class="r">−0,59 a 0,43</td><td class="r">0,652</td><td class="r">0,836</td></tr><tr class=""><td class="b">Víctimas (EMV) y delitos registrados (SCJ)</td><td class="r">+0,03</td><td class="r">−0,49 a 0,50</td><td class="r">0,915</td><td class="r">0,915</td></tr><tr class=""><td class="b">Zona insegura (Bienal) y delitos registrados (SCJ)</td><td class="r">−0,25</td><td class="r">−0,69 a 0,30</td><td class="r">0,304</td><td class="r">0,711</td></tr><tr class=""><td class="b">Barrio inseguro (EMV) y zona insegura (Bienal)</td><td class="r">+0,35</td><td class="r">−0,21 a 0,76</td><td class="r">0,147</td><td class="r">0,589</td></tr><tr class=""><td class="b">Zona insegura (Bienal) y víctimas por delito registrado (prueba directa)</td><td class="r">+0,16</td><td class="r">−0,32 a 0,58</td><td class="r">0,509</td><td class="r">0,815</td></tr><tr class="destaca"><td class="b">Índice de Brecha y víctimas por delito registrado (mecánica †)</td><td class="r">+0,72</td><td class="r">0,41 a 0,88</td><td class="r">< 0,001</td><td class="r">0,005</td></tr><tr class="parcial"><td class="b">† La misma relación controlando el delito registrado (Spearman parcial, gl = n − 3)</td><td class="r">−0,02</td><td class="r">−0,49 a 0,58</td><td class="r">0,929</td><td class="r"><span class='gris'>no aplica</span></td></tr></tbody></table>
+  <p class="fte">Siete de las ocho relaciones son nulas: el registro no ordena las localidades como la victimización ni como la percepción. La única que pasa la corrección (Índice de Brecha y cifra oculta) es mecánica: al controlar el delito registrado desaparece (fila en cursiva) y la prueba directa entre miedo y cifra oculta es nula. Fuentes: <code>validaciones.csv</code>, <code>validacion_parcial.csv</code>.</p>
+  <figure>
+    <img style="width:86%;margin:0 auto" src="../outputs/figuras/informe_cifra_oculta.png" alt="Víctimas por delito registrado por localidad y sensibilidad por encuesta">
+    <figcaption><b>Figura 5. De cada 10 víctimas, entre 1,8 y 3,0 tienen su delito en el registro, según la encuesta.</b> Izquierda: víctimas estimadas por delito de alto impacto registrado en 2024, por localidad, con IC 95 % por el error de la EMV. Derecha: la misma cuenta para Bogotá con la EMV (2024), la ECSC (referencia 2023, con incidentes digitales) y la EPV (2024).
+      <span class="fte">Fuentes: Datos para la Transparencia (EMV 2024), DANE (ECSC), CCB (EPV), SCJ, SDP. Tabla: <code>cifra_oculta.csv</code>; sensibilidad calculada con <code>visor/data/frentes.json</code>.</span></figcaption>
+  </figure>
+
+  <h2>6.4 Índice de Brecha y la prueba de H2: una relación mecánica</h2>
+  <p>El IBS mide cuántas desviaciones estándar se separa el miedo de lo que muestra el registro. Los cinco valores más altos son Usme (+2,67; IC 90 % 2,23 a 2,98), Ciudad Bolívar (+2,34), Bosa (+1,97), Kennedy (+1,72) y San Cristóbal (+1,54), con probabilidad de top 5 en el bootstrap de 1,00; 1,00; 0,995; 0,983 y 0,909. La sexta, Rafael Uribe Uribe (+0,91), entra al top 5 en el 11 % de las réplicas, así que el corte es estable. En el otro extremo están Los Mártires (−2,12) y Teusaquillo (−2,03), donde la tasa por residente se infla por la población flotante. <b>El ranking ordena dónde actuar primero; no prueba causas.</b> La tabla completa está en el Anexo.</p>
+  <p><b>Probamos nuestro propio titular.</b> La primera versión del análisis presentaba como hallazgo que el IBS crece donde más delito queda sin registrar: ρ = 0,72 (IC 95 % 0,41 a 0,88), que pasa la corrección BH (p ajustado 0,005). Antes de cerrarlo revisamos cómo se construye cada índice. El IBS resta z(ln delitos registrados) y la cifra oculta divide por los delitos registrados: los dos llevan el registro adentro. Entre localidades, el delito registrado se asocia con la cifra oculta con ρ = −0,92 y con el IBS con ρ = −0,79 (Figura 6, paneles A y B). Dos índices que comparten un componente tan fuerte se correlacionan aunque el miedo y el subregistro no tengan relación.</p>
+  <figure>
+    <img style="width:92%;margin:0 auto" src="../outputs/figuras/informe_brecha_mecanica.png" alt="Delito registrado frente a cifra oculta e Índice de Brecha, y miedo frente a cifra oculta">
+    <figcaption><b>Figura 6. La correlación entre el Índice de Brecha y la cifra oculta viene del delito registrado que los dos comparten.</b> A y B: cada índice frente a los delitos de alto impacto registrados por 100.000 (escala logarítmica). C: prueba directa, sin componentes compartidos, entre el % que siente insegura su zona y las víctimas por delito registrado. Oro: IBS positivo; azul: negativo.
+      <span class="fte">Fuentes: Bienal 2025, EMV 2024, SCJ, SDP. Tablas: <code>ibs.csv</code>, <code>cifra_oculta.csv</code>, <code>data/procesados/panel_localidad_2025.csv</code>; pruebas en <code>validaciones.csv</code> y <code>validacion_parcial.csv</code>.</span></figcaption>
+  </figure>
+  <p>Dos pruebas lo confirman. Con Spearman parcial, controlando el delito registrado (residuos de los rangos, gl = n − 3), la correlación cae a −0,02 (IC 95 % −0,49 a 0,58; p = 0,93). La prueba directa entre el % que siente insegura su zona y la cifra oculta da ρ = 0,16 (IC 95 % −0,32 a 0,58; p = 0,51). <b>H2 no se sostiene.</b> Lo que sí se sostiene es más simple y sirve igual para decidir: el registro no ordena las localidades como la victimización (ρ = 0,03), y de cada 10 víctimas solo entre 1,8 y 3,0 llegan al registro.</p>
+  <div class="nota"><p><b>Por qué lo reportamos así.</b> La corrección por pruebas múltiples protege contra el azar, no contra relaciones construidas. Cuando dos indicadores comparten un componente, la prueba que cuenta es la parcial o la directa. Cualquier evaluador puede repetirla con <code>src/indicadores.py</code> (función <code>spearman_parcial</code>).</p></div>
+
+  <h2>6.5 Tipología de localidades (aprendizaje no supervisado)</h2>
+  <figure>
+    <img style="width:88%;margin:0 auto" src="../outputs/figuras/informe_tipologia.png" alt="Localidades en los dos primeros componentes principales y silueta por número de perfiles">
+    <figcaption><b>Figura 7. Cinco perfiles con estructura débil: la tipología describe, no infiere.</b> Izquierda: las 19 localidades en los dos primeros componentes; el tamaño del punto crece con la estabilidad. Derecha: silueta media para 3, 4 y 5 perfiles.
+      <span class="fte">Fuentes: SCJ, EMV, SIVIM, Bienal, UAESP, DADEP. Tablas: <code>tipologia_localidades.csv</code>, <code>tipologia_pca_cargas.csv</code>, <code>tipologia_silueta.csv</code>.</span></figcaption>
+  </figure>
+  <p>La silueta es baja con cualquier número de perfiles (0,142 con tres; 0,160 con cuatro y con cinco), así que los grupos no están bien separados y se presentan como descripción. El primer componente ordena por registro y violencia contra mujeres (cargas de 0,58 en delitos de alto impacto y 0,61 en violencia intrafamiliar y sexual); el segundo opone luminarias (+0,48) a homicidios (−0,47) y percepción de inseguridad (−0,46). El perfil más útil para decidir agrupa a San Cristóbal, Usme y Ciudad Bolívar: miedo alto, pocas luminarias y más homicidios con poco delito registrado. Su centroide está 1,20 desviaciones estándar arriba en zona insegura, 0,81 arriba en homicidios, 1,05 abajo en delitos registrados y 1,58 abajo en luminarias. La estabilidad (frecuencia con que cada localidad queda con sus pares en 500 perturbaciones) es 0,62, 0,42 y 0,77. Santa Fe forma un perfil propio. Detalle en <code>tipologia_perfiles_z.csv</code> y en el Anexo.</p>
+
+  <h2>6.6 Enfoque de género (H3)</h2>
+  <figure>
+      <img style="width:74%;margin:0 auto" src="../outputs/figuras/fig6_genero.png" alt="Mujeres frente a hombres en indicadores de la EMV">
+      <figcaption><b>Figura 8. Ellas son menos víctimas y temen más.</b> Porcentaje de adultos en Bogotá, EMV 2024, ponderado.
+        <span class="fte">Fuente: Datos para la Transparencia, EMV 2024 (n = 1.824). Tablas: <code>emv_*.csv</code>.</span></figcaption>
+    </figure>
+  <p>En la EMV las mujeres reportan menos victimización que los hombres (20,6 % frente a 28,4 %) y aun así temen más. Con sexo, edad, estrato y victimización como controles, ser mujer suma <b>+18,0 pp</b> al temor al acoso sexual (12,9 a 23,4), <b>+9,3 pp</b> a sentir inseguro el barrio (5,0 a 13,9) y <b>+6,5 pp</b> a evitar salir de noche (1,0 a 11,5). Haber sido víctima suma 19,5 pp a sentir inseguro el barrio.</p>
+  <p>En la encuesta de acoso callejero de la Veeduría (2025), que es un formulario en línea y solo describe, el 51,8 % de las mujeres que respondieron (n = 2.742) dice haber sido acosada en el último año, frente al 16,1 % de los hombres (n = 877). Solo el 8,4 % de ellas denunció.</p>
+  <figure>
+    <img style="width:86%;margin:0 auto" src="../outputs/figuras/informe_genero.png" alt="Tasa SIVIM por sexo 2013-2025 y lugar de los casos en mujeres en 2025">
+    <figcaption><b>Figura 9. La violencia contra mujeres notificada al sector salud sube y ocurre sobre todo en la vivienda.</b> Izquierda: casos SIVIM por 100.000 personas del mismo sexo. Derecha: lugar de los casos en mujeres, 2025.
+      <span class="fte">Fuentes: Secretaría Distrital de Salud (SIVIM), SDP. Tablas: <code>data/procesados/genero_violencia_localidad_anio.csv</code>, <code>genero_violencia_perfil.csv</code>.</span></figcaption>
+  </figure>
+  <p>La tasa SIVIM en mujeres pasó de 591,7 por 100.000 en 2019 a 845,7 en 2025 (+42,9 %; IC 95 % 24,4 a 64,3). Frente a 2022 el cambio es +14,6 % (−0,4 a 31,8) y no se distingue de cero. Parte del aumento es registro: el 64,8 % del aumento de casos en mujeres entre 2019 y 2025 está en niñas de 6 a 17 años, y la violencia sexual notificada en establecimientos educativos pasó de 411 a 2.835 casos. Las adultas también suben (+40,2 % en mujeres de 18 años o más). El 79,3 % de los casos de 2025 ocurrió en la vivienda y el 4,5 % en la vía pública. Por eso la iluminación (ρ = 0,02) y los puntos de internet público (ρ = −0,28) no se asocian con esa violencia por localidad; el menor p ajustado es 0,38. Con 19 localidades, una prueba al 5 % solo tiene 80 % de potencia para |ρ| ≥ 0,60: «no hay evidencia» no equivale a «no hay relación».</p>
+
+  <h2>6.7 Alumbrado y vías frente al hurto</h2>
+  <figure>
+    <img style="width:98%;margin:0 auto" src="../outputs/figuras/informe_movilidad.png" alt="23 correlaciones de Spearman entre condiciones del entorno y hurtos">
+    <figcaption><b>Figura 10. Ninguna de las 23 pruebas sobrevive a Benjamini-Hochberg; las dos más fuertes van al revés de la hipótesis.</b> Spearman entre las 19 localidades urbanas, hurtos de enero-agosto de 2025 por 100.000. En azul, p por permutación &lt; 0,05 sin ajustar.
+      <span class="fte">Fuentes: UAESP, IDU, IDECA, SDM, SDS con datos del INMLCF, Bienal 2025, Secretaría de la Mujer, SCJ. Tabla: <code>movilidad_pruebas_hipotesis.csv</code>.</span></figcaption>
+  </figure>
+  <p>Donde hay más luminarias por km de vía hay más hurto a personas (ρ = 0,48; p = 0,040) y de bicicletas (ρ = 0,52; p = 0,027): es el centro, con más luz y más hurto por residente; tras la corrección, p = 0,119. El inventario no mide «peor alumbrado»: hay entre 39,6 (Ciudad Bolívar) y 56,8 (La Candelaria) luminarias por km de vía, con una variación de 10 % entre localidades, porque las luminarias siguen a la vía. La malla vial tiene 22,4 % de km-carril en mal estado (diciembre de 2024) y no se asocia con el hurto (ρ entre −0,35 y 0,28). En una sensibilidad con el promedio 2023-2025, el hurto sí sube con las muertes en vía (ρ de 0,53 a 0,57; p ajustado 0,029), pero las dos tasas comparten el denominador de residentes; al controlar por habitantes por km de vía, el ρ parcial baja a 0,30-0,38. Lo más probable es que ambas midan actividad y tránsito de no residentes.</p>
+
+  <h2>6.8 Marcador de hipótesis</h2>
+  <div class="cap"><span>Tabla 8.</span> Ocho hipótesis probadas: dos se sostienen y seis no</div>
+  <table class="t"><colgroup><col style="width:25%"><col style="width:8%"><col style="width:24%"><col style="width:30%"><col style="width:13%"></colgroup><thead><tr><th class="b">Lo que se esperaba</th><th class="c">Hipótesis</th><th class="">Cómo se probó</th><th class="">Lo que salió</th><th class="c">Veredicto</th></tr></thead><tbody><tr class=""><td class="b">La serie de hurto es comparable en el tiempo</td><td class="c">H0</td><td class="">Razón capa SCJ ÷ SIEDCO por año</td><td class="">2,28 a 2,55 veces hasta 2022; 1,00 desde 2023</td><td class="c"><span class="ver no">No se sostiene</span></td></tr><tr class=""><td class="b">El delito registrado explica el miedo</td><td class="c">H1</td><td class="">Logit con wild bootstrap; prueba de contexto en ML</td><td class="">p wild = 0,92; AUC 0,726 sin él y 0,724 con él</td><td class="c"><span class="ver no">No se sostiene</span></td></tr><tr class=""><td class="b">Peor alumbrado, más hurto</td><td class="c">Adicional</td><td class="">Spearman, 19 localidades, BH</td><td class="">Luminarias por km de vía ρ = +0,48 (al revés); alumbrado malo ρ = −0,02</td><td class="c"><span class="ver no">No se sostiene</span></td></tr><tr class=""><td class="b">Vías en mal estado, más hurto</td><td class="c">Adicional</td><td class="">Spearman con el PCI del IDU</td><td class="">ρ = −0,35, p BH = 0,34</td><td class="c"><span class="ver no">No se sostiene</span></td></tr><tr class=""><td class="b">Más luz o internet, menos violencia contra ellas</td><td class="c">Adicional</td><td class="">Spearman con la tasa SIVIM</td><td class="">Iluminación ρ = +0,02; conectividad ρ = −0,28</td><td class="c"><span class="ver no">No se sostiene</span></td></tr><tr class=""><td class="b">El entorno del barrio explica el miedo</td><td class="c">H1</td><td class="">AME con IC por bootstrap de localidades</td><td class="">Atracos en el parque +13,3 pp [6,2; 17,5]</td><td class="c"><span class="ver si">Se sostiene</span></td></tr><tr class=""><td class="b">Donde sobra miedo, falta denuncia</td><td class="c">H2</td><td class="">Spearman con BH; parcial controlando el delito registrado; prueba directa</td><td class="">ρ = 0,72 bruta, pero mecánica: parcial −0,02 (p = 0,93); miedo y cifra oculta 0,16 (p = 0,51)</td><td class="c"><span class="ver no">No se sostiene</span></td></tr><tr class=""><td class="b">A igual victimización, ellas temen más</td><td class="c">H3</td><td class="">Logit ponderado (EMV)</td><td class="">+18,0 pp de temor al acoso [12,9; 23,4]</td><td class="c"><span class="ver si">Se sostiene</span></td></tr></tbody></table>
+  <p class="fte">El rechazo de «la serie de hurto es comparable» confirma H0: había que validar antes de comparar. H2 pasó la primera prueba y cayó con el control por el componente compartido (sección 6.4). Un resultado nulo también es evidencia: evita gastar en lo que no mueve la percepción. Fuentes: <code>registro_estado_series.csv</code>, <code>lpm_wild.csv</code>, <code>ml_contexto_localidad.csv</code>, <code>movilidad_pruebas_hipotesis.csv</code>, <code>genero_pruebas_spearman.csv</code>, <code>m_hechos.csv</code>, <code>validaciones.csv</code>, <code>validacion_parcial.csv</code>, <code>emv_teme_acoso_sexual.csv</code>.</p>
+</section>
+
+<!-- ================================================================ 7. ESTRATEGIAS -->
+<section>
+  <h1 class="sec sigue"><span class="num">7</span>Estrategias y el Índice de Brecha como indicador</h1>
+  <p>Cada estrategia sale de un resultado del análisis y lleva un nivel de evidencia que combina la fuente más débil que usa con la prueba estadística: <b>alta</b> si las fuentes tienen score ≥ 70 y la prueba es significativa tras corregir por pruebas múltiples y robusta a otra especificación; <b>media</b> si falla una de las dos condiciones; <b>exploratoria</b> si la fuente es débil o el resultado no es significativo (<code>src/confiabilidad.py</code>).</p>
+  <div class="cap"><span>Tabla 9.</span> Seis estrategias con evidencia e indicador de seguimiento</div>
+  <table class="t compacta"><colgroup><col style="width:3%"><col style="width:14%"><col style="width:29%"><col style="width:29%"><col style="width:9%"><col style="width:16%"></colgroup><thead><tr><th class="c">#</th><th class="b">Estrategia</th><th class="">Por qué (evidencia)</th><th class="">Qué hacer</th><th class="c">Evidencia</th><th class="">Indicador de seguimiento</th></tr></thead><tbody><tr class=""><td class="c">1</td><td class="b">Validar antes de decidir</td><td class="">La capa abierta dice −57,5 % de hurto a personas desde 2022; la Policía, −4,2 %.</td><td class="">Documentar el cambio de 2023 en los metadatos, publicar la serie empalmada y contrastar cada serie con SIEDCO y Medicina Legal antes de publicarla.</td><td class="c"><span class="ev alta">alta</span></td><td class="">Razón capa ÷ SIEDCO entre 0,95 y 1,10 en todo delito y año</td></tr><tr class=""><td class="c">2</td><td class="b">Barrios que se sienten seguros</td><td class="">Atracos en el parque: +13,3 pp; conflictos vecinales: +14,7 pp. El hurto registrado no pesa.</td><td class="">Parques activos y sin atracos, mediación de conflictos vecinales. Sensibilidad del modelo: unas 467 mil personas menos con miedo si se cubre la mitad.</td><td class="c"><span class="ev alta">alta</span></td><td class="">% que califica mala la seguridad de su zona</td></tr><tr class=""><td class="c">3</td><td class="b">Repartir por víctimas, no solo por denuncias</td><td class="">Las víctimas que reporta la encuesta no siguen al delito registrado entre localidades (ρ = 0,03), y de cada 10 víctimas solo 1,8 a 3,0 llegan al registro.</td><td class="">Asignar con víctimas estimadas por encuesta además del registro. Usar el Índice de Brecha para ordenar territorios, no como prueba de subregistro.</td><td class="c"><span class="ev media">media</span></td><td class="">Víctimas estimadas e Índice de Brecha, por UPL</td></tr><tr class=""><td class="c">4</td><td class="b">Medir lo que no se denuncia</td><td class="">El 57 % de las víctimas no denuncia (ECSC, 2023). La encuesta oficial no se hizo en 2022 y no tiene datos de 2024 a 2026.</td><td class="">Encuesta de victimización por UPL cada semestre (EDP), que pregunte si denunció y dónde ocurrió el hecho.</td><td class="c"><span class="ev media">media</span></td><td class="">Tasa de denuncia y víctimas por delito registrado, por UPL</td></tr><tr class=""><td class="c">5</td><td class="b">Dos rutas para las mujeres</td><td class="">8 de cada 10 casos de violencia contra ellas notificados a salud ocurren en la vivienda; a igual victimización, +18,0 pp de temor al acoso.</td><td class="">Calle: rutas nocturnas y denuncia fácil del acoso. Casa: detección en colegios y servicios de salud, donde ya llegan los casos.</td><td class="c"><span class="ev media">media</span></td><td class="">% de mujeres que evita salir de noche; tasa SIVIM; % de acoso denunciado</td></tr><tr class=""><td class="c">6</td><td class="b">Paquete para San Cristóbal, Usme y Ciudad Bolívar</td><td class="">Mismo perfil: miedo alto, pocas luminarias, más homicidios. En San Cristóbal la tasa de homicidios de 2025-2026 supera en 54 % la de 2022-2023.</td><td class="">Alumbrado y senderos, presencia en parques y foco en homicidios, juntos y en el mismo territorio.</td><td class="c"><span class="ev exploratoria">exploratoria</span></td><td class="">Índice de Brecha y homicidios por 100.000</td></tr></tbody></table>
+  <div class="nota"><p><b>Escenarios (sensibilidad del modelo).</b> En Bogotá, el modelo predice que el 48,4 % califica mala la seguridad de su zona. Si nadie calificara malo el alumbrado, la cifra bajaría a 37,5 %; si ningún parque tuviera atracos, a 44,6 %; con ambas condiciones, a 33,5 %. Con la mitad de cobertura en las dos palancas la baja es de 7,4 pp, unas 467 mil personas sobre 6.308.418 adultos urbanos. El alumbrado entra como calificación de la misma batería que la pregunta de seguridad, así que su parte está probablemente sobrestimada. Un piloto con línea base y grupo de comparación confirmaría el efecto. Fuente: <code>escenarios.csv</code>.</p></div>
+
+  <h2>7.1 Ficha técnica del Índice de Brecha de Seguridad</h2>
+  <table class="t compacta">
+    <colgroup><col style="width:17%"><col style="width:83%"></colgroup>
+    <thead><tr><th>Campo</th><th>Definición</th></tr></thead>
+    <tbody>
+      <tr><td class="b">Objetivo</td><td>Ordenar los territorios donde la inseguridad percibida supera lo que muestra el delito registrado, para priorizar intervenciones de entorno. Ordena; no prueba causas.</td></tr>
+      <tr><td class="b">Fórmula</td><td>IBS = z(% de adultos que califican mala o muy mala la seguridad de su zona) − z(ln de delitos de alto impacto por 100.000 habitantes). La estandarización se hace entre las localidades (o UPL) del mismo periodo.</td></tr>
+      <tr><td class="b">Unidad y lectura</td><td>Desviaciones estándar. Positivo: más miedo que registro. Negativo: más registro que miedo entre quienes viven ahí.</td></tr>
+      <tr><td class="b">Fuentes</td><td>Percepción: Encuesta Distrital de Percepción (SDP) o Bienal de Cultura Ciudadana (SCRD). Delito: SCJ, delitos de alto impacto (sin lesiones personales). Población: SDP, proyecciones 2005-2035.</td></tr>
+      <tr><td class="b">Periodicidad y desagregación</td><td>Semestral por sector de UPL y anual por localidad y UPL (representatividad de la EDP); bienal con la Bienal. Localidad, UPL, sexo, edad y estrato (la percepción admite todas; el delito, solo territorio).</td></tr>
+      <tr><td class="b">Incertidumbre</td><td>IC 90 % por bootstrap ponderado de la encuesta (1.000 réplicas); se reporta la probabilidad de cada territorio de estar en el top 5.</td></tr>
+      <tr><td class="b">Línea base 2025</td><td>48,4 % califica mala la seguridad de su zona; 74,0 % califica insegura la ciudad. Top 5: Usme (+2,67), Ciudad Bolívar (+2,34), Bosa (+1,97), Kennedy (+1,72) y San Cristóbal (+1,54).</td></tr>
+      <tr><td class="b">Acompañantes</td><td>(1) Víctimas por delito registrado (cifra oculta), EMV o EDP frente a SCJ. (2) % de mujeres que evita salir de noche, por sexo.</td></tr>
+      <tr><td class="b">Meta sugerida</td><td>IBS menor a +1 en las cinco localidades priorizadas y menor cifra oculta en la periferia al cierre del periodo de gobierno.</td></tr>
+      <tr><td class="b">Limitaciones</td><td>El delito registrado son denuncias y tiene subregistro. En el centro la tasa por residente se infla por la población flotante. La percepción tiene error muestral (ver intervalos). No sirve para validar la cifra oculta: los dos comparten el delito registrado (sección 6.4). Cálculo: <code>src/indicadores.py</code>, función <code>indice_brecha</code>.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ================================================================ 8. LIMITACIONES -->
+<section>
+  <h1 class="sec sigue"><span class="num">8</span>Limitaciones y amenazas a la validez</h1>
+  <p>Las agrupamos por el tipo de conclusión que pueden afectar. Para cada una indicamos qué hicimos y qué riesgo queda.</p>
+  <table class="t compacta">
+    <colgroup><col style="width:15%"><col style="width:30%"><col style="width:31%"><col style="width:24%"></colgroup>
+    <thead><tr><th>Tipo</th><th>Amenaza</th><th>Qué hicimos</th><th>Riesgo que queda</th></tr></thead>
+    <tbody>
+      <tr><td class="b">Validez interna</td><td>Asociación, no causalidad: no hay asignación aleatoria y puede haber confusión territorial.</td><td>Controles de perfil, efectos fijos de localidad, varias especificaciones y modelos flexibles.</td><td>Los AME y los escenarios no son efectos causales.</td></tr>
+      <tr><td class="b">Validez interna</td><td>Sesgo de método común: alumbrado y ventas informales se califican en la misma batería que la seguridad de la zona.</td><td>Modelo principal solo con hechos de otras preguntas; calificaciones reportadas aparte.</td><td>El peso del alumbrado en los escenarios está probablemente sobrestimado.</td></tr>
+      <tr><td class="b">Medición</td><td>Quiebre de la capa SCJ en los hurtos; método de 2018-2022 no documentado.</td><td>Validación con SIEDCO, Medicina Legal, ECSC y EPV; tendencias solo en la ventana comparable.</td><td>La causa del quiebre (doble conteo) es una hipótesis.</td></tr>
+      <tr><td class="b">Medición</td><td>El registro son denuncias; SIVIM cuenta casos notificados, no personas, y desde 2022 crece la notificación escolar.</td><td>Cifra oculta con tres encuestas; lectura del SIVIM por grupo de edad y lugar.</td><td>No se puede separar cuánto del aumento SIVIM es violencia y cuánto notificación.</td></tr>
+      <tr><td class="b">Medición</td><td>Las encuestas de victimización no coinciden en nivel (EMV 24,6 %, ECSC 14,7 %, EPV 15,3 %). La cifra oculta compara personas con hechos.</td><td>Rango de 1,8 a 3,0 de cada 10 en lugar de un valor único; lectura como orden de magnitud.</td><td>El nivel exacto del subregistro es incierto; la conclusión no cambia.</td></tr>
+      <tr><td class="b">Medición</td><td>La ECSC no tiene 2022 ni 2024-2026 y cambió el mes de campo en 2019; en 2023 la recordación es de 10 a 28 meses. La EPV no publica errores por indicador y sus cifras se transcribieron de gráficos.</td><td>Contraste formal 2021-2023; cada cifra de la CCB con documento, página y gráfico en <code>victimizacion_transcritos.csv</code>.</td><td>Si la recordación sesga, sesga hacia menos victimización, lo que refuerza que el delito no cayó.</td></tr>
+      <tr><td class="b">Medición</td><td>Luminarias instaladas no son luz. La auditoría nocturna de 2019 tiene efecto techo y su orden de localidades no se repite frente a 2016.</td><td>Sensibilidad con la percepción del alumbrado y la auditoría.</td><td>No hay datos abiertos de luminarias apagadas ni de niveles de iluminación medidos.</td></tr>
+      <tr><td class="b">Conclusión estadística</td><td>Con 19 localidades las pruebas territoriales tienen poca potencia (80 % solo para |ρ| ≥ 0,60); muchas pruebas a la vez.</td><td>IC bootstrap, p por permutación y corrección BH; wild cluster bootstrap para pocos conglomerados.</td><td>Un nulo territorial puede ocultar relaciones moderadas.</td></tr>
+      <tr><td class="b">Conclusión estadística</td><td>Índices con un componente compartido: el IBS y la cifra oculta llevan el delito registrado y se correlacionan por construcción (ρ = 0,72).</td><td>Spearman parcial (−0,02) y prueba directa (0,16); H2 se reporta como no sostenida.</td><td>El IBS sirve para ordenar territorios, no como evidencia de subregistro.</td></tr>
+      <tr><td class="b">Conclusión estadística</td><td>Tipología con estructura débil (silueta ≈ 0,16).</td><td>Se presenta como descripción, con estabilidad por localidad.</td><td>Los perfiles pueden cambiar con otros indicadores.</td></tr>
+      <tr><td class="b">Validez externa</td><td>La Bienal es un solo año; la EMV tiene 96 encuestas por localidad con ponderación nacional; el delito solo existe por localidad y enero-agosto.</td><td>Intervalos por bootstrap y se propone la EDP por UPL para el seguimiento.</td><td>Resultados por localidad, no por barrio. La EDP 2025 no se pudo descargar en forma automatizada.</td></tr>
+      <tr><td class="b">Validez externa</td><td>En el centro las tasas por residente se inflan por la población flotante. Sumapaz (rural) queda fuera.</td><td>Logaritmo en el IBS; lectura explícita del centro en cifra oculta e IBS.</td><td>El centro se lee con cautela en toda medida por residente.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ================================================================ 9. REPRODUCIBILIDAD -->
+<section>
+  <h1 class="sec sigue"><span class="num">9</span>Reproducibilidad y referencias de las fuentes</h1>
+  <div class="dos" style="grid-template-columns: .86fr 1.14fr">
+    <div>
+      <h2 style="margin-top:0">9.1 Cómo correrlo</h2>
+      <p>Requisitos: Python 3.11 o superior (el visor necesita además Node 20 o superior).</p>
+<pre>git clone https://github.com/rlondono1620-max/el-miedo-que-no-baja.git
+cd el-miedo-que-no-baja
+python -m venv .venv
+.venv\Scripts\activate   # Linux o macOS: source .venv/bin/activate
+pip install -r requirements.txt
+python src/pipeline.py   # todo el análisis, ≈ 6 min
+jupyter notebook notebooks/el_miedo_que_no_baja.ipynb</pre>
+      <ul>
+        <li><b>Descarga con registro.</b> <code>src/fuentes.py</code> baja cada fuente desde su servicio oficial a <code>data/crudos/</code> y anota URL, fecha, bytes y sha1 en <code>registro_descargas.csv</code>. Las notas de <code>docs/notas/</code> dan la URL de cada recurso. Si el archivo existe usa la copia local: el análisis corre sin red.</li>
+        <li><b>Resultados idénticos.</b> Las semillas de los remuestreos están fijas. El pipeline se probó desde un clon limpio del repositorio en GitHub y reprodujo las mismas cifras.</li>
+        <li><b>Un solo origen de cifras.</b> <code>outputs/resultados.json</code> y <code>outputs/tablas/</code> alimentan el notebook, el visor, el libro de Excel, el tablero de Power BI y este informe.</li>
+      </ul>
+      <h2 style="margin-top:2.5mm">9.2 Entregables</h2>
+      <p>Notebook ejecutado (<code>notebooks/</code>), visor interpretativo (el-miedo-que-no-baja.vercel.app, con clave), tablero de Power BI (<code>powerbi/</code>), libro de datos con fórmulas vivas y simulador (<code>docs/</code>), nota técnica de una página y este informe.</p>
+    </div>
+    <div>
+      <h2 style="margin-top:0">9.3 Fuentes de datos</h2>
+      <ol class="refs">
+        <li>SCJ (OAIEE). Delitos de alto impacto por localidad. <a href="https://datosabiertos.bogota.gov.co/dataset/delito-de-alto-impacto-bogota-d-c">datosabiertos.bogota.gov.co/dataset/delito-de-alto-impacto-bogota-d-c</a> · servicio: <a href="https://oaiee.scj.gov.co/agc/rest/services/Tematicos_Pub/CifrasSCJ/MapServer/0">oaiee.scj.gov.co/agc/rest/services/Tematicos_Pub/CifrasSCJ/MapServer/0</a></li>
+        <li>SCJ. Incidentes reportados a la Línea 123. <a href="https://oaiee.scj.gov.co/agc/rest/services/Tematicos_Pub/CifrasSCJ/MapServer">oaiee.scj.gov.co/agc/rest/services/Tematicos_Pub/CifrasSCJ/MapServer</a></li>
+        <li>Policía Nacional (SIEDCO), publicado por MinDefensa. <a href="https://www.datos.gov.co/d/4rxi-8m8d">datos.gov.co/d/4rxi-8m8d</a> y conjuntos 7mn7-vzqp, 7i2x-h5vp, csb4-y6v2, m8fd-ahd9, jr6v-i33g, bz43-8ahq, gepp-dxcs</li>
+        <li>INMLCF. Presuntos homicidios. <a href="https://www.datos.gov.co/d/vtub-3de2">datos.gov.co/d/vtub-3de2</a> · <a href="https://www.datos.gov.co/d/2kpj-cktv">datos.gov.co/d/2kpj-cktv</a></li>
+        <li>DANE. Encuesta de Convivencia y Seguridad Ciudadana. <a href="https://www.dane.gov.co/index.php/estadisticas-por-tema/seguridad-y-defensa/encuesta-de-convivencia-y-seguridad-ciudadana-ecsc">dane.gov.co (ECSC)</a> · boletín 2024: <a href="https://www.dane.gov.co/files/operaciones/ECSC/bol-ECSC-2024.pdf">dane.gov.co/files/operaciones/ECSC/bol-ECSC-2024.pdf</a> · metodología: <a href="https://www.dane.gov.co/files/operaciones/ECSC/met-ECSC.pdf">dane.gov.co/files/operaciones/ECSC/met-ECSC.pdf</a></li>
+        <li>CCB. Encuesta de Percepción y Victimización 2025. <a href="https://assets.ctfassets.net/n1ptkpqt763u/4K3x5p5DuldDQiWajUfAHu/61a2b7a5a0392c06953d6dc6124baa03/2026.02.16_EPV_2025_WEB.pdf">assets.ctfassets.net/…/2026.02.16_EPV_2025_WEB.pdf</a></li>
+        <li>SCRD. Encuesta Bienal de Cultura Ciudadana 2025. <a href="https://observatoriocultura.github.io/observatorio/#/ebc/encuesta-cultura-ciudadana-2025">observatoriocultura.github.io/observatorio</a></li>
+        <li>Secretaría General. Encuesta Mundial de Valores, ola 8 (2024), Datos para la Transparencia. <a href="https://gobiernoabiertobogota.gov.co/transparencia">gobiernoabiertobogota.gov.co/transparencia</a></li>
+        <li>SDP. Proyecciones de población 2005-2035. <a href="https://datosabiertos.bogota.gov.co/dataset/proyecciones-y-retroproyecciones-de-poblacion-2005-2035">datosabiertos.bogota.gov.co/dataset/proyecciones-y-retroproyecciones-de-poblacion-2005-2035</a></li>
+        <li>Secretaría de Salud. Violencia intrafamiliar y de género (SIVIM). <a href="https://datosabiertos.bogota.gov.co/dataset/a1e1ef90-10c0-436f-a290-d1f7c1cf2242">datosabiertos.bogota.gov.co/dataset/a1e1ef90-10c0-436f-a290-d1f7c1cf2242</a></li>
+        <li>Secretaría de la Mujer. Seguridad nocturna para las mujeres. <a href="https://datosabiertos.bogota.gov.co/dataset/f714e477-8e2a-44a2-87c0-17b491a01bcc">datosabiertos.bogota.gov.co/dataset/f714e477-8e2a-44a2-87c0-17b491a01bcc</a></li>
+        <li>Veeduría Distrital. Encuesta de acoso sexual callejero 2025. <a href="https://datosabiertos.bogota.gov.co/dataset/307da72b-f2a4-4e5c-bcbe-238a67844b71">datosabiertos.bogota.gov.co/dataset/307da72b-f2a4-4e5c-bcbe-238a67844b71</a></li>
+        <li>Secretaría General. Conectividad pública gratuita. <a href="https://serviciosgis.catastrobogota.gov.co/arcgis/rest/services/serviciospublicos/conectividad/MapServer/0">serviciosgis.catastrobogota.gov.co/…/conectividad/MapServer/0</a></li>
+        <li>UAESP. Alumbrado público y modelo de prestación. <a href="https://datosabiertos.bogota.gov.co/dataset/alumbrado_publico_lt">datosabiertos.bogota.gov.co/dataset/alumbrado_publico_lt</a></li>
+        <li>IDU. Estado de la malla vial (PCI). <a href="https://services2.arcgis.com/qAnmJmgmnVso8Fzo/arcgis/rest/services/EstadoMallaVialOD555/FeatureServer/2">services2.arcgis.com/…/EstadoMallaVialOD555/FeatureServer/2</a></li>
+        <li>SDM. Siniestralidad vial (SIGAT). <a href="https://sig.simur.gov.co/arcgis/rest/services/Accidentalidad/AccidentalidadAnalisis/FeatureServer">sig.simur.gov.co/…/AccidentalidadAnalisis/FeatureServer</a> · SDS, mortalidad en tránsito: <a href="https://datosabiertos.bogota.gov.co/dataset/bded0839-a912-467d-94c5-8561dbefcb22">datosabiertos.bogota.gov.co/dataset/bded0839-a912-467d-94c5-8561dbefcb22</a></li>
+        <li>DADEP. Indicador de espacio público. <a href="https://datosabiertos.bogota.gov.co/dataset/indicador-espacio-publico-localidad-bogota-d-c">datosabiertos.bogota.gov.co/dataset/indicador-espacio-publico-localidad-bogota-d-c</a></li>
+        <li>UAECD (IDECA). Localidad, Bogotá D.C. <a href="https://datosabiertos.bogota.gov.co/dataset/localidad-bogota-d-c">datosabiertos.bogota.gov.co/dataset/localidad-bogota-d-c</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================ ANEXO A -->
+<section>
+  <h1 class="sec sigue"><span class="num">A</span>Anexo. Indicadores por localidad</h1>
+  <p>Ordenadas por el Índice de Brecha de Seguridad. Zona insegura: Bienal 2025, ponderada. Delitos de alto impacto: SCJ, enero-agosto 2025. Víctimas por delito: EMV 2024 frente a SCJ 2024. Estabilidad: frecuencia con que la localidad queda con los demás miembros de su perfil en 500 perturbaciones.</p>
+  <table class="t compacta anexo"><colgroup><col style="width:3%"><col style="width:13%"><col style="width:8%"><col style="width:10%"><col style="width:16%"><col style="width:7%"><col style="width:15%"><col style="width:28%"></colgroup><thead><tr><th class="r">#</th><th class="b">Localidad</th><th class="r">Zona insegura (%)</th><th class="r">Delitos alto impacto por 100.000</th><th class="r">IBS [IC 90 %]</th><th class="r">P(top 5)</th><th class="r">Víctimas por delito [IC 95 %]</th><th class="">Perfil de la tipología (estabilidad)</th></tr></thead><tbody><tr class=""><td class="r">1</td><td class="b">Usme</td><td class="r">64,6</td><td class="r">1.083</td><td class="r">+2,67 <span class='ic'>[2,23; 2,98]</span></td><td class="r">1,000</td><td class="r">7,6 <span class='ic'>[4,4; 10,8]</span></td><td class="">Miedo alto, poca luz, más homicidios (0,42)</td></tr><tr class=""><td class="r">2</td><td class="b">Ciudad Bolívar</td><td class="r">65,4</td><td class="r">1.444</td><td class="r">+2,34 <span class='ic'>[1,94; 2,61]</span></td><td class="r">1,000</td><td class="r">7,0 <span class='ic'>[4,3; 9,6]</span></td><td class="">Miedo alto, poca luz, más homicidios (0,77)</td></tr><tr class=""><td class="r">3</td><td class="b">Bosa</td><td class="r">57,1</td><td class="r">1.127</td><td class="r">+1,97 <span class='ic'>[1,49; 2,39]</span></td><td class="r">0,995</td><td class="r">10,6 <span class='ic'>[7,0; 14,3]</span></td><td class="">Más víctimas que denuncias (0,58)</td></tr><tr class=""><td class="r">4</td><td class="b">Kennedy</td><td class="r">58,4</td><td class="r">1.475</td><td class="r">+1,72 <span class='ic'>[1,29; 2,08]</span></td><td class="r">0,983</td><td class="r">9,1 <span class='ic'>[6,3; 11,9]</span></td><td class="">Más víctimas que denuncias (0,61)</td></tr><tr class=""><td class="r">5</td><td class="b">San Cristóbal</td><td class="r">55,7</td><td class="r">1.413</td><td class="r">+1,54 <span class='ic'>[1,00; 2,02]</span></td><td class="r">0,909</td><td class="r">9,0 <span class='ic'>[5,9; 12,1]</span></td><td class="">Miedo alto, poca luz, más homicidios (0,62)</td></tr><tr class=""><td class="r">6</td><td class="b">Rafael Uribe Uribe</td><td class="r">49,7</td><td class="r">1.542</td><td class="r">+0,91 <span class='ic'>[0,42; 1,38]</span></td><td class="r">0,110</td><td class="r">7,3 <span class='ic'>[4,5; 10,0]</span></td><td class="">Más víctimas que denuncias (0,29)</td></tr><tr class=""><td class="r">7</td><td class="b">Engativá</td><td class="r">49,4</td><td class="r">2.047</td><td class="r">+0,50 <span class='ic'>[0,18; 0,82]</span></td><td class="r">0,002</td><td class="r">6,3 <span class='ic'>[4,0; 8,6]</span></td><td class="">Mucho registro, miedo promedio (0,58)</td></tr><tr class=""><td class="r">8</td><td class="b">Suba</td><td class="r">40,5</td><td class="r">1.425</td><td class="r">+0,23 <span class='ic'>[−0,06; 0,59]</span></td><td class="r">0,001</td><td class="r">8,2 <span class='ic'>[5,2; 11,3]</span></td><td class="">Más víctimas que denuncias (0,54)</td></tr><tr class=""><td class="r">9</td><td class="b">Antonio Nariño</td><td class="r">49,3</td><td class="r">3.679</td><td class="r">−0,31 <span class='ic'>[−0,78; 0,13]</span></td><td class="r">0,000</td><td class="r">3,0 <span class='ic'>[1,9; 4,2]</span></td><td class="">Mucho registro, miedo promedio (0,65)</td></tr><tr class=""><td class="r">10</td><td class="b">Santa Fe</td><td class="r">58,1</td><td class="r">6.732</td><td class="r">−0,39 <span class='ic'>[−0,99; 0,10]</span></td><td class="r">0,000</td><td class="r">1,6 <span class='ic'>[1,0; 2,2]</span></td><td class="">Todo alto: registro, violencia y miedo (1,00)</td></tr><tr class=""><td class="r">11</td><td class="b">Puente Aranda</td><td class="r">45,2</td><td class="r">3.763</td><td class="r">−0,69 <span class='ic'>[−1,16; −0,17]</span></td><td class="r">0,000</td><td class="r">4,9 <span class='ic'>[3,2; 6,7]</span></td><td class="">Mucho registro, miedo promedio (0,67)</td></tr><tr class=""><td class="r">12</td><td class="b">Tunjuelito</td><td class="r">36,0</td><td class="r">2.132</td><td class="r">−0,70 <span class='ic'>[−1,05; −0,23]</span></td><td class="r">0,000</td><td class="r">8,0 <span class='ic'>[5,5; 10,6]</span></td><td class="">Más víctimas que denuncias (0,46)</td></tr><tr class=""><td class="r">13</td><td class="b">Barrios Unidos</td><td class="r">47,3</td><td class="r">4.388</td><td class="r">−0,72 <span class='ic'>[−1,18; −0,27]</span></td><td class="r">0,000</td><td class="r">2,4 <span class='ic'>[1,4; 3,4]</span></td><td class="">Mucho registro, miedo promedio (0,68)</td></tr><tr class=""><td class="r">14</td><td class="b">La Candelaria</td><td class="r">61,0</td><td class="r">11.351</td><td class="r">−0,85 <span class='ic'>[−1,60; −0,25]</span></td><td class="r">0,000</td><td class="r">1,0 <span class='ic'>[0,6; 1,5]</span></td><td class="">Mucho registro, miedo promedio (0,46)</td></tr><tr class=""><td class="r">15</td><td class="b">Chapinero</td><td class="r">50,5</td><td class="r">6.466</td><td class="r">−0,98 <span class='ic'>[−1,48; −0,52]</span></td><td class="r">0,000</td><td class="r">1,9 <span class='ic'>[1,1; 2,6]</span></td><td class="">Mucho registro, miedo promedio (0,63)</td></tr><tr class=""><td class="r">16</td><td class="b">Usaquén</td><td class="r">24,8</td><td class="r">1.782</td><td class="r">−1,41 <span class='ic'>[−1,63; −1,01]</span></td><td class="r">0,000</td><td class="r">5,1 <span class='ic'>[2,7; 7,4]</span></td><td class="">Se sienten seguras (0,95)</td></tr><tr class=""><td class="r">17</td><td class="b">Fontibón</td><td class="r">27,1</td><td class="r">2.511</td><td class="r">−1,68 <span class='ic'>[−1,92; −1,29]</span></td><td class="r">0,000</td><td class="r">4,7 <span class='ic'>[3,0; 6,5]</span></td><td class="">Se sienten seguras (0,95)</td></tr><tr class=""><td class="r">18</td><td class="b">Teusaquillo</td><td class="r">37,5</td><td class="r">6.227</td><td class="r">−2,03 <span class='ic'>[−2,44; −1,51]</span></td><td class="r">0,000</td><td class="r">3,8 <span class='ic'>[2,7; 4,9]</span></td><td class="">Mucho registro, miedo promedio (0,17)</td></tr><tr class=""><td class="r">19</td><td class="b">Los Mártires</td><td class="r">39,7</td><td class="r">7.610</td><td class="r">−2,12 <span class='ic'>[−2,60; −1,55]</span></td><td class="r">0,000</td><td class="r">0,7 <span class='ic'>[0,5; 0,9]</span></td><td class="">Mucho registro, miedo promedio (0,26)</td></tr></tbody></table>
+  <p class="fte">Fuentes: <code>outputs/tablas/ibs.csv</code>, <code>cifra_oculta.csv</code>, <code>tipologia_localidades.csv</code>.</p>
+  <figure>
+    <img style="width:80%;margin:0 auto" src="../outputs/figuras/fig2_mapas_percepcion_registro.png" alt="Mapas de percepción y de registro por localidad">
+    <figcaption><b>Figura A1. Percepción y registro no dibujan el mismo mapa.</b> Izquierda: % que califica mala la seguridad de su zona (Bienal 2025). Derecha: delitos de alto impacto por 100.000 habitantes (SCJ, enero-agosto 2025). Quintiles; Sumapaz no se incluye.
+      <span class="fte">Fuentes: SCRD, SCJ, SDP, IDECA. Capas en <code>outputs/geo/</code>.</span></figcaption>
+  </figure>
+</section>
+
+</body>
+</html>

@@ -4,7 +4,9 @@ zona_insegura_pct,Califica insegura su propia zona,48.4,%,"Encuesta Bienal de Cu
 ciudad_peor_que_antes_pct,Cree que la ciudad está peor que antes,36.2,%,"Encuesta Bienal de Cultura Ciudadana 2025, microdatos con factor de expansión",resultados.json:ciudad_peor_que_antes_pct
 miedo_espacio_publico_pct,Siente miedo en el espacio público,10.8,%,"Encuesta Bienal de Cultura Ciudadana 2025, microdatos con factor de expansión",resultados.json:miedo_espacio_publico_pct
 cifra_oculta_bogota,Víctimas estimadas por cada delito registrado,5.5852084181374595,veces,EMV 2024 (víctimas) / SCJ 2024 (delitos de alto impacto registrados),cifra_oculta.csv: suma víctimas / suma delitos
-rho_ibs_cifra_oculta,Correlación de Spearman entre el Índice de Brecha y la cifra oculta,0.716,rho,Panel por localidad (19 localidades),resultados.json:ibs_vs_cifra_oculta.rho
+rho_ibs_cifra_oculta,"Correlación de Spearman entre el Índice de Brecha y la cifra oculta (bruta: mecánica, ambos usan el delito registrado)",0.716,rho,Panel por localidad (19 localidades),resultados.json:ibs_vs_cifra_oculta.rho
+rho_ibs_cifra_oculta_parcial,La misma correlación controlando el delito registrado (Spearman parcial),-0.023,rho,Panel por localidad (19 localidades),resultados.json:ibs_vs_cifra_oculta_parcial.rho
+rho_victimas_registro,Correlación entre víctimas de la encuesta y delitos registrados,0.026,rho,EMV 2024 y SCJ 2024 (19 localidades),resultados.json:victimas_vs_registro.rho
 n_bienal,Encuestas de la Bienal 2025 usadas,5538.0,personas,"Encuesta Bienal de Cultura Ciudadana 2025, microdatos con factor de expansión",resultados.json:n_bienal
 n_emv_bogota,Encuestas de la EMV 2024 en Bogotá,1824.0,personas,"Encuesta Mundial de Valores ola 8 (2024), logit ponderado: efecto de ser mujer a igual edad, estrato y victimización",resultados.json:n_emv_bogota
 ame_mujer_teme_acoso_sexual,Ser mujer: temor al acoso sexual,18.02,pp,"Encuesta Mundial de Valores ola 8 (2024), logit ponderado: efecto de ser mujer a igual edad, estrato y victimización",resultados.json:emv_mujer_ame.teme_acoso_sexual.ame_pp

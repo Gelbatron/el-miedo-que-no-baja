@@ -245,12 +245,12 @@ export function hipotesis(): Hip[] {
   const rho = (f: FilaG | undefined) => `ρ = ${signo(num(f, "rho"), 2)}`;
   return [
     { h: "La serie de hurto es comparable en el tiempo", prueba: "Capa SCJ ÷ Policía, por año", dato: `${fmt(HURTO.razonMin, 1)}-${fmt(HURTO.razonMax, 1)}× hasta 2022; 1,0× desde 2023`, sostiene: false },
-    { h: "El delito registrado explica el miedo", prueba: "Logit + wild bootstrap; ML con prueba de contexto", dato: `p = ${fmt(wild.p_wild, 2)}; AUC ${fmt(ctx[2].mean, 3)} sin él, ${fmt(ctx[3].mean, 3)} con él`, sostiene: false },
+    { h: "El delito registrado explica el miedo", prueba: "Logit + wild bootstrap; ML con prueba de contexto", dato: `p wild = ${fmt(wild.p_wild, 2)}; AUC ${fmt(ctx[2].mean, 3)} sin él, ${fmt(ctx[3].mean, 3)} con él`, sostiene: false },
     { h: "Peor alumbrado, más hurto", prueba: "Spearman, 19 localidades, Benjamini-Hochberg", dato: `luminarias por km de vía ${rho(lum)} (al revés); alumbrado malo ${rho(alu)}`, sostiene: false },
     { h: "Vías en mal estado, más hurto", prueba: "Spearman con el PCI del IDU", dato: `${rho(pci)}, no significativa`, sostiene: false },
     { h: "Más luz o internet, menos violencia contra ellas", prueba: "Spearman con la tasa SIVIM", dato: `${rho(gp("Iluminación"))} y ${rho(gp("Puntos de conectividad"))}`, sostiene: false },
     { h: "El entorno del barrio explica el miedo", prueba: "Efecto marginal, IC por bootstrap de localidades", dato: `atracos en el parque ${signo(at.ame_pp, 1)} pp (IC ${fmt(at.ic_inf, 1)} a ${fmt(at.ic_sup, 1)})`, sostiene: true },
-    { h: "Donde sobra miedo, falta denuncia", prueba: "Spearman con corrección por pruebas múltiples", dato: `ρ = ${fmt(v.rho, 2)}, p ajustado = ${fmt(v.p_bh, 3)}`, sostiene: true },
+    { h: "Donde sobra miedo, falta denuncia", prueba: "Spearman parcial, controlando el delito registrado", dato: `ρ = ${fmt(v.rho, 2)}, pero mecánica: parcial ${fmt(R.ibs_vs_cifra_oculta_parcial.rho, 2)}`, sostiene: false },
     { h: "A igual victimización, ellas temen más", prueba: "Logit ponderado (EMV)", dato: `${signo(mu.ame_pp, 1)} pp de temor al acoso (IC ${fmt(mu.ic_inf, 1)} a ${fmt(mu.ic_sup, 1)})`, sostiene: true },
   ];
 }
@@ -299,7 +299,7 @@ export function estrategias(): Estrategia[] {
       porque: `La capa abierta dice ${signo(HURTO.capa2022a2026, 0)} % de hurto desde 2022; la Policía, ${signo(HURTO.policia2022a2026, 0)} %. Con una sola serie, el hurto se habría dado por resuelto.`,
       accion: "Documentar el cambio de 2023 en los metadatos, publicar la serie empalmada y contrastar cada serie con la Policía y Medicina Legal.", mide: "Razón capa ÷ Policía = 1 en todo delito y año" },
     { titulo: "Repartir por víctimas, no por denuncias", evidencia: "media",
-      porque: `Donde sobra miedo, falta denuncia (ρ = ${fmt(v.rho, 2)}). Si los recursos siguen a las denuncias, la periferia que no denuncia recibe menos.`,
+      porque: `Entre localidades, las víctimas que reporta la encuesta no siguen al delito registrado (ρ = ${fmt(R.victimas_vs_registro.rho, 2)}). Si los recursos siguen a las denuncias, no siguen a las víctimas.`,
       accion: "Asignar con el Índice de Brecha y las víctimas estimadas, no solo con el registro.", mide: "Índice de Brecha por UPL" },
     { titulo: "Medir lo que no se denuncia", evidencia: "media",
       porque: `${fmt(noDen, 0)} % de las víctimas no denuncia, y la encuesta oficial no se hizo en 2022 ni tiene datos de 2024 a 2026.`,

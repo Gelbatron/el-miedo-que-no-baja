@@ -113,14 +113,14 @@ const ANTERIORES: Diapo[] = [
     render: (p) => <Indice paso={p} />,
   },
   {
-    id: "prueba", corto: "No es casualidad", acto: 1, ante: "Lo que hicimos · 3", titulo: "No es casualidad: donde sobra miedo, falta denuncia", pasos: 2,
+    id: "prueba", corto: "¿Falta denuncia donde sobra miedo?", acto: 1, ante: "Lo que hicimos · 3", titulo: "¿Donde sobra miedo, falta denuncia? Parecía que sí", pasos: 2,
     quien: "Rafael", tiempo: "2:40-3:05",
-    nota: "¿Y eso es real? Donde el índice marca más miedo, más delito se queda sin denunciar: correlación de 0,72. (→) Probamos siete relaciones distintas y esta es la única que pasa la corrección por azar. O sea: el miedo de la periferia no es exagerado, es delito que no llega a las cifras.",
+    nota: `¿Donde el índice marca más miedo, más delito se queda sin denunciar? La correlación da 0,72 y pasa la corrección por pruebas múltiples. (→) Pero los dos índices usan el delito registrado: uno lo resta y el otro lo divide. Controlando por él, la correlación queda en ${fmt(R.ibs_vs_cifra_oculta_parcial.rho, 2)}. Es mecánica, y lo decimos. Lo que sí se sostiene: las víctimas que reporta la encuesta no siguen al registro.`,
     profundizar: (
       <>
         <h3>Pruebas múltiples</h3>
-        <p>Cruzamos siete pares de indicadores entre localidades (miedo y delito, víctimas y delito, alumbrado y luminarias, entre otros). Con siete pruebas, alguna saldría «significativa» por puro azar.</p>
-        <p>La corrección de Benjamini-Hochberg ajusta los valores p por el número de pruebas. Solo el Índice de Brecha frente a la cifra oculta queda bajo 0,05 (p ajustado 0,004).</p>
+        <p>Cruzamos ocho pares de indicadores entre localidades (miedo y delito, víctimas y delito, miedo y cifra oculta, alumbrado y luminarias, entre otros). Con ocho pruebas, alguna saldría «significativa» por puro azar.</p>
+        <p>La corrección de Benjamini-Hochberg ajusta los valores p por el número de pruebas. Solo el Índice de Brecha frente a la cifra oculta queda bajo 0,05, pero esa relación es mecánica: el índice resta el log del delito registrado y la cifra oculta lo divide. Spearman parcial controlando el delito registrado: {fmt(R.ibs_vs_cifra_oculta_parcial.rho, 2)} (p = {fmt(R.ibs_vs_cifra_oculta_parcial.p, 2)}). La prueba directa, miedo frente a cifra oculta, da ρ = {fmt(R.zona_vs_cifra_oculta.rho, 2)}, no significativa.</p>
         <p><b>Límite:</b> parte de la razón alta de la periferia puede venir de residentes que son víctimas en otras localidades (el registro cuenta dónde pasa el delito). Por eso se lee como señal fuerte, no como medida exacta, y por eso proponemos encuestas de victimización por UPL que pregunten dónde ocurrió.</p>
       </>
     ),
@@ -302,7 +302,7 @@ export const DIAPOS: Diapo[] = [
   {
     id: "modelos", corto: "Modelo 2: qué explica el miedo", acto: 1, ante: "Lo que hicimos · 4 · modelo supervisado", titulo: "Machine learning: qué explica el miedo, y qué no", pasos: 3,
     quien: "Rafael", tiempo: "2:30-2:55",
-    nota: `Segundo modelo: entrenamos tres modelos para predecir quién siente insegura su zona y los probamos con personas que no vieron. Aciertan hasta 85 de cada 100. (→) Lo que más explica es lo que pasa en el barrio: atracos, conflictos, parques. (→) Y la prueba clave: el delito registrado no agrega nada a saber en qué localidad vive la persona: ${fmt(ctx[1].mean, 3)} frente a ${fmt(ctx[2].mean, 3)}. El miedo sigue a lo que la gente vive, no a la estadística.`,
+    nota: `Segundo modelo: entrenamos tres modelos para predecir quién siente insegura su zona y los probamos con personas que no vieron. Con hechos y contexto ordenan bien 72 de cada 100 parejas; con las calificaciones del barrio, 85. (→) Lo que más explica es lo que pasa en el barrio: atracos, conflictos, parques. (→) Y la prueba clave: el delito registrado no agrega nada a saber en qué localidad vive la persona: ${fmt(ctx[1].mean, 3)} frente a ${fmt(ctx[2].mean, 3)}. El miedo sigue a lo que la gente vive, no a la estadística.`,
     profundizar: (
       <>
         <h3>Diseño del aprendizaje supervisado</h3>
@@ -355,7 +355,7 @@ export const DIAPOS: Diapo[] = [
   {
     id: "hipotesis", corto: "Lo que probamos", acto: 2, ante: "Lo que encontramos · 4", titulo: "Lo que probamos: ocho hipótesis, con su veredicto", pasos: 3,
     quien: "Samuel", tiempo: "4:20-4:40",
-    nota: "Probamos ocho hipótesis, incluidas las que cualquiera daría por ciertas. (→) Cinco no se sostienen: la serie de hurto no era comparable, el delito registrado no explica el miedo, peor alumbrado o peores vías no traen más hurto, y más luz o internet no se asocian con menos violencia contra ellas. Tres sí: el entorno del barrio, la cifra oculta y el miedo de las mujeres. (→) Un nulo también es evidencia: evita gastar en lo que no mueve la aguja.",
+    nota: "Probamos ocho hipótesis, incluidas las que cualquiera daría por ciertas. (→) Seis no se sostienen: la serie de hurto no era comparable, el delito registrado no explica el miedo, peor alumbrado o peores vías no traen más hurto, más luz o internet no se asocian con menos violencia contra ellas, y la relación entre miedo y cifra oculta era mecánica. Dos sí: el entorno del barrio y el miedo de las mujeres. (→) Un nulo también es evidencia: evita gastar en lo que no mueve la aguja.",
     profundizar: (
       <>
         <h3>Cómo se probó cada una</h3>

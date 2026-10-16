@@ -44,4 +44,6 @@ Cada requisito de los términos de referencia (TdR) y de la ficha metodológica,
 - [ ] Alguien que no escribió el código clona el repositorio, instala `requirements.txt` y corre `python src/pipeline.py` sin errores.
 - [ ] Visor abre con la clave en un navegador limpio; la clave va en el cuerpo del correo.
 - [ ] `.pbix` actualizado con la serie validada (abrir el `.pbip`, Actualizar, Guardar como `.pbix`) y adjunto al correo.
+- [ ] Adjuntar también el informe técnico completo (`docs/Informe_tecnico_El_miedo_que_no_baja.pdf`, 15 páginas).
+- [ ] Releer la corrección de H2 antes del pitch: la correlación de 0,72 entre el Índice de Brecha y la cifra oculta es mecánica (parcial −0,02); se presenta como hipótesis no sostenida.
 - [ ] Correo con el asunto exacto «DataJam – Entrega final – The data squad», enviado el 16 antes de las 11:59 p. m. (mejor con margen).

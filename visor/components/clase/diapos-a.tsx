@@ -349,6 +349,7 @@ export function Indice({ paso }: { paso: number }) {
 const PRUEBAS: [string, string][] = [
   ["Índice de Brecha", "Índice de Brecha vs cifra oculta"], ["Barrio inseguro", "Miedo según la EMV vs según la Bienal"],
   ["Zona insegura (Bienal) vs delitos", "Miedo en la zona vs delitos registrados"], ["Zona insegura (Bienal) vs ri", "Miedo en la zona vs llamadas por riñas"],
+  ["Zona insegura (Bienal) vs cifra", "Miedo en la zona vs cifra oculta"],
   ["Drogas", "Drogas en el parque vs llamadas por narcóticos"], ["Alumbrado", "Alumbrado malo vs luminarias por km² (2019)"],
   ["Víctimas", "Víctimas (encuesta) vs delitos registrados"],
 ];
@@ -390,7 +391,7 @@ function Pruebas() {
   const W = 640, fila = 48, top = 34, H = filas.length * fila + top + 8, x0 = 330, xr = W - 70;
   const X = (p: number) => x0 + ((Math.log10(Math.max(p, 0.001)) + 3) / 3) * (xr - x0);
   return (
-    <svg className="cl-g" viewBox={`0 0 ${W} ${H}`} role="img" aria-label="Valor p ajustado de siete relaciones entre localidades">
+    <svg className="cl-g" viewBox={`0 0 ${W} ${H}`} role="img" aria-label="Valor p ajustado de ocho relaciones entre localidades">
       {[0.001, 0.01, 0.1, 1].map((t) => <text key={t} x={X(t)} y={18} className="tick" textAnchor="middle">{fmt(t, t < 0.01 ? 3 : t < 0.1 ? 2 : t < 1 ? 1 : 0)}</text>)}
       <rect x={x0} y={top - 6} width={X(0.05) - x0} height={H - top} fill="var(--rojo)" opacity={0.07} />
       <line x1={X(0.05)} x2={X(0.05)} y1={top - 8} y2={H} stroke="var(--rojo)" strokeWidth={2} strokeDasharray="6 5" />
@@ -547,6 +548,7 @@ function MasRegistroQueVictimas({ f }: { f: Oculta }) {
 /* ---------- La prueba: el índice y el delito escondido van juntos ---------- */
 export function Prueba({ paso }: { paso: number }) {
   const v = D.validaciones.find((x) => x.prueba.startsWith("Índice de Brecha"))!;
+  const pa = R.ibs_vs_cifra_oculta_parcial;
   const p0 = paso === 0;
   return (
     <div style={{ display: "grid", gridTemplateColumns: "420px 1fr", gap: 44, height: "100%" }}>
@@ -557,16 +559,16 @@ export function Prueba({ paso }: { paso: number }) {
           <p className="cl-txt" style={{ fontSize: 18 }}><b>Hacia la derecha:</b> más delito que no llega al registro.</p>
           <div className="cl-tarjeta" style={{ borderLeft: "6px solid var(--rojo)" }}>
             <span className="cl-num" style={{ fontSize: 44, color: "var(--rojo)" }}>ρ = {fmt(v.rho, 2)}</span>
-            <span className="cl-txt" style={{ fontSize: 16 }}>Suben juntas (IC 95 % de {fmt(v.ic_inf, 2)} a {fmt(v.ic_sup, 2)}).</span>
-            <b style={{ fontSize: 18 }}>Donde la gente tiene más miedo, más delito se queda escondido.</b>
+            <span className="cl-txt" style={{ fontSize: 16 }}>Parecen subir juntas (IC 95 % de {fmt(v.ic_inf, 2)} a {fmt(v.ic_sup, 2)}).</span>
+            <b style={{ fontSize: 18 }}>Pero los dos ejes usan el delito registrado: uno lo resta, el otro lo divide.</b>
           </div>
         </div>
         <div className="cl-capa" style={{ display: "grid", gap: 16, alignContent: "start", opacity: p0 ? 0 : 1, transition: "opacity .4s" }}>
-          <p className="cl-txt" style={{ fontSize: 18 }}>¿Y si es casualidad? Probamos <b>siete relaciones</b> entre localidades.</p>
-          <p className="cl-txt" style={{ fontSize: 18 }}>Con tantas pruebas, alguna sale «significativa» por azar. Corregimos por eso (Benjamini-Hochberg).</p>
+          <p className="cl-txt" style={{ fontSize: 18 }}>Probamos <b>ocho relaciones</b> entre localidades y corregimos por pruebas múltiples (Benjamini-Hochberg).</p>
+          <p className="cl-txt" style={{ fontSize: 18 }}>Solo pasa la del índice con la cifra oculta. Controlando el delito registrado, cae a <b>{fmt(pa.rho, 2)}</b>: es mecánica.</p>
           <div className="cl-tarjeta" style={{ borderLeft: "6px solid var(--rojo)" }}>
-            <b style={{ fontSize: 20 }}>Solo esta sobrevive.</b>
-            <span className="cl-txt" style={{ fontSize: 17 }}>El miedo de la periferia no es exagerado: es delito que no llega a las cifras.</span>
+            <b style={{ fontSize: 20 }}>Lo honesto: no podemos probar que donde sobra miedo falte denuncia.</b>
+            <span className="cl-txt" style={{ fontSize: 17 }}>Lo que sí se sostiene: las víctimas que reporta la encuesta no siguen al registro (ρ = {fmt(R.victimas_vs_registro.rho, 2)}).</span>
           </div>
         </div>
       </div>
@@ -575,7 +577,7 @@ export function Prueba({ paso }: { paso: number }) {
           <DispersionOculta />
         </div>
         <div className="cl-capa" style={{ opacity: p0 ? 0 : 1, transition: "opacity .5s", pointerEvents: p0 ? "none" : "auto" }}>
-          <p className="cl-txt" style={{ fontSize: 15, marginBottom: 6 }}>Valor p ajustado: a la izquierda de la línea roja, la relación no es azar.</p>
+          <p className="cl-txt" style={{ fontSize: 15, marginBottom: 6 }}>Valor p ajustado: a la izquierda de la línea roja, la relación no es azar (lo que no dice si es mecánica).</p>
           <Pruebas />
         </div>
       </div>

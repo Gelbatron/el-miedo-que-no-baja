@@ -27,7 +27,7 @@ export default function Brecha() {
       <header className="cabecera-pagina">
         <p className="antetitulo">Índice de Brecha de Seguridad · cifra oculta</p>
         <h1 style={{ fontSize: "clamp(2rem,4vw,3rem)" }}>Donde hay más miedo que delito, el delito no se está registrando</h1>
-        <EnSimple>{`El índice dice en qué localidades hay más miedo del que muestran las cifras: arriba están ${enLista(R.ibs_top5)}. Y justo ahí es donde más delito se queda sin denunciar: en Bogotá, de cada 10 víctimas solo ${fmt(10 / R.cifra_oculta_bogota, 1)} tienen su delito en el registro.`}</EnSimple>
+        <EnSimple>{`El índice dice en qué localidades hay más miedo del que muestran las cifras: arriba están ${enLista(R.ibs_top5)}. El índice ordena prioridades; no prueba causas. Y en toda la ciudad, de cada 10 víctimas solo ${fmt(10 / R.cifra_oculta_bogota, 1)} tienen su delito en el registro.`}</EnSimple>
         <p className="bajada">
           El índice compara, en desviaciones estándar, el porcentaje que siente insegura su zona con el logaritmo de los delitos de alto impacto
           registrados por 100.000 habitantes. Positivo: más miedo del que explica el registro. Negativo: más registro que miedo entre quienes viven ahí.
@@ -48,17 +48,19 @@ export default function Brecha() {
       </section>
 
       <section className="tarjeta">
-        <h2>La prueba: la brecha va donde va el subregistro</h2>
+        <h2>¿La brecha va donde va el subregistro? Parecía que sí; no se sostiene</h2>
         <p className="bajada" style={{ fontSize: "1rem" }}>
           Cruzamos el índice con la cifra oculta: adultos que dicen haber sido víctimas en el último año (EMV 2024) por cada delito de alto impacto
           que registró la SCJ en 2024. Spearman <b>ρ = {fmt(v.rho, 2)}</b> (IC 95 % {fmt(v.ic_inf, 2)} a {fmt(v.ic_sup, 2)}; {pval(v.p)}; ajustado por siete
-          pruebas con Benjamini-Hochberg, p = {fmt(v.p_bh, 3)}). Es la única relación territorial que sobrevive a la corrección.
+          pruebas con Benjamini-Hochberg, p = {fmt(v.p_bh, 3)}). Pero los dos índices usan el delito registrado (el índice lo resta, la cifra oculta lo divide):
+          controlando por él, la correlación parcial es {fmt(R.ibs_vs_cifra_oculta_parcial.rho, 2)}. Es una relación mecánica, no una prueba. La prueba directa, el miedo
+          frente a la cifra oculta, da ρ = {fmt(R.zona_vs_cifra_oculta.rho, 2)}, no significativa.
         </p>
         <Dispersion puntos={disp2} ejeX="Víctimas estimadas por cada delito registrado (EMV 2024 / SCJ 2024)" ejeY="Índice de Brecha (z)"
           colorDe={(p) => (p.y > 0 ? "var(--percepcion)" : "var(--registro)")} />
         <p className="nota">
           Lectura: en Bosa, Kennedy y San Cristóbal hay unas 9 a 11 víctimas por cada delito registrado; en Los Mártires y La Candelaria, cerca de 1.
-          Parte del miedo &ldquo;sobrante&rdquo; de la periferia es delito real que no llega a los registros. Advertencia: personas y hechos no son la misma unidad;
+          Esa diferencia mezcla subregistro con el hecho de que el registro cuenta dónde ocurre el delito y la encuesta dónde vive la víctima. Advertencia: personas y hechos no son la misma unidad;
           la razón es un orden de magnitud, con intervalo por la muestra de la EMV (96 encuestas por localidad).
         </p>
       </section>

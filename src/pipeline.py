@@ -116,11 +116,19 @@ def territorio(P, eb, t) -> dict:
     for nombre, a, b in pruebas:
         r = I.spearman(P[a], P[b])
         val.append({"prueba": nombre, **r})
-    m = out["ibs"].merge(out["cifra_oculta"], on="localidad")
+    m = out["ibs"].merge(out["cifra_oculta"], on="localidad").merge(P[["localidad", "zona_insegura", "delitos_alto_impacto_100k"]], on="localidad")
+    # la prueba directa: ¿donde hay más miedo hay más delito sin denunciar?
+    val.append({"prueba": "Zona insegura (Bienal) vs cifra oculta (víctimas por delito registrado)", **I.spearman(m["zona_insegura"], m["razon"])})
     val.append({"prueba": "Índice de Brecha vs cifra oculta (víctimas por delito registrado)", **I.spearman(m["ibs"], m["razon"])})
     V = pd.DataFrame(val)
     V["p_bh"] = I.bh(V["p"])
     out["validaciones"] = V
+    # el índice y la cifra oculta comparten el delito registrado (uno lo resta, la otra lo divide): se controla
+    out["validacion_parcial"] = pd.DataFrame([{
+        "prueba": "Índice de Brecha vs cifra oculta, controlando el delito registrado (Spearman parcial)",
+        **I.spearman_parcial(m["ibs"], m["razon"], m["delitos_alto_impacto_100k"]),
+        "rho_delito_ibs": float(I.spearman(m["delitos_alto_impacto_100k"], m["ibs"])["rho"]),
+        "rho_delito_cifra": float(I.spearman(m["delitos_alto_impacto_100k"], m["razon"])["rho"])}])
     return out
 
 
@@ -183,6 +191,12 @@ def resumen(t, P, eb, R, T) -> dict:
         "cifra_oculta_min": [LOCALIDADES[int(co.loc[co["razon"].idxmin(), "localidad"])], round(float(co["razon"].min()), 1)],
         "ibs_vs_cifra_oculta": {k: round(float(v), 3) for k, v in V.loc["Índice de Brecha vs cifra oculta (víctimas por delito registrado)",
                                                                      ["rho", "p", "ic_inf", "ic_sup", "p_bh"]].items()},
+        "ibs_vs_cifra_oculta_parcial": {k: round(float(v), 3) for k, v in T["validacion_parcial"].iloc[0][
+            ["rho", "p", "ic_inf", "ic_sup", "rho_delito_ibs", "rho_delito_cifra"]].items()},
+        "zona_vs_cifra_oculta": {k: round(float(v), 3) for k, v in V.loc["Zona insegura (Bienal) vs cifra oculta (víctimas por delito registrado)",
+                                                                      ["rho", "p", "ic_inf", "ic_sup", "p_bh"]].items()},
+        "victimas_vs_registro": {k: round(float(v), 3) for k, v in V.loc["Víctimas (EMV) vs delitos registrados (SCJ)",
+                                                                      ["rho", "p", "ic_inf", "ic_sup", "p_bh"]].items()},
         "ibs_top5": [LOCALIDADES[int(l)] for l in T["ibs"]["localidad"].head(5)],
         "poblacion_2025": int(t["poblacion"][(t["poblacion"]["anio"] == 2025) & (t["poblacion"]["grupo"] == "total")]["personas"].sum()),
     }
@@ -196,7 +210,7 @@ def figuras_y_exportes(res: dict):
     t, P, R, T, S = res["t"], res["P"], res["R"], res["T"], res["S"]
     VR.correr(t["delitos"])  # validación del registro: antes de cualquier serie
     rutas = [F.serie(VR.serie_bogota_validada(t["delitos"])), F.mapas(t["geo"], P), F.efectos(R["m_hechos"], ETIQUETAS), F.auc(R["auc"]),
-             F.brecha_cifra(T["ibs"], T["cifra_oculta"], S["ibs_vs_cifra_oculta"]["rho"]), F.genero(S["emv_por_sexo"]),
+             F.brecha_cifra(T["ibs"], T["cifra_oculta"], S["ibs_vs_cifra_oculta"]["rho"], S["ibs_vs_cifra_oculta_parcial"]["rho"]), F.genero(S["emv_por_sexo"]),
              F.ranking_ibs(T["ibs"])]
     rutas.append(EX.visor(res, ETIQUETAS))
     import clase as CL  # datos de la presentación interactiva del visor

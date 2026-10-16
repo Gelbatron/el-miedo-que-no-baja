@@ -182,7 +182,29 @@
   "p": 0.001,
   "ic_inf": 0.412,
   "ic_sup": 0.876,
-  "p_bh": 0.004
+  "p_bh": 0.005
+ },
+ "ibs_vs_cifra_oculta_parcial": {
+  "rho": -0.023,
+  "p": 0.929,
+  "ic_inf": -0.488,
+  "ic_sup": 0.577,
+  "rho_delito_ibs": -0.788,
+  "rho_delito_cifra": -0.916
+ },
+ "zona_vs_cifra_oculta": {
+  "rho": 0.161,
+  "p": 0.509,
+  "ic_inf": -0.319,
+  "ic_sup": 0.581,
+  "p_bh": 0.815
+ },
+ "victimas_vs_registro": {
+  "rho": 0.026,
+  "p": 0.915,
+  "ic_inf": -0.492,
+  "ic_sup": 0.504,
+  "p_bh": 0.915
  },
  "ibs_top5": [
   "Usme",

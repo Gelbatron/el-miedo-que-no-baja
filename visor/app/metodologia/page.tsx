@@ -94,7 +94,7 @@ export default function Metodologia() {
               <tbody>{D.validaciones.map((v) => <tr key={v.prueba}><td>{v.prueba}</td><td className="n">{fmt(v.rho, 2)}</td><td className="n">{fmt(v.p_bh, 3)}</td></tr>)}</tbody>
             </table>
           </div>
-          <p className="nota">Seis de siete pruebas son nulas: los registros administrativos no reflejan la percepción ni la victimización. La única que sobrevive (Índice de Brecha frente a cifra oculta, {pval(D.validaciones.at(-1)!.p)}) es el hallazgo central.</p>
+          <p className="nota">Siete de ocho pruebas son nulas: los registros administrativos no reflejan la percepción ni la victimización. La única que pasa la corrección (Índice de Brecha frente a cifra oculta, {pval(D.validaciones.at(-1)!.p)}) es mecánica: los dos usan el delito registrado y, al controlarlo, la correlación parcial es prácticamente cero.</p>
         </div>
       </section>
 

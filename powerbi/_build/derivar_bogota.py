@@ -34,8 +34,12 @@ filas = [
     ("cifra_oculta_bogota", "Víctimas estimadas por cada delito registrado",
      co["victimas_estimadas"].sum() / co["delitos_registrados"].sum(), "veces",
      "EMV 2024 (víctimas) / SCJ 2024 (delitos de alto impacto registrados)", "cifra_oculta.csv: suma víctimas / suma delitos"),
-    ("rho_ibs_cifra_oculta", "Correlación de Spearman entre el Índice de Brecha y la cifra oculta",
+    ("rho_ibs_cifra_oculta", "Correlación de Spearman entre el Índice de Brecha y la cifra oculta (bruta: mecánica, ambos usan el delito registrado)",
      r["ibs_vs_cifra_oculta"]["rho"], "rho", "Panel por localidad (19 localidades)", "resultados.json:ibs_vs_cifra_oculta.rho"),
+    ("rho_ibs_cifra_oculta_parcial", "La misma correlación controlando el delito registrado (Spearman parcial)",
+     r["ibs_vs_cifra_oculta_parcial"]["rho"], "rho", "Panel por localidad (19 localidades)", "resultados.json:ibs_vs_cifra_oculta_parcial.rho"),
+    ("rho_victimas_registro", "Correlación entre víctimas de la encuesta y delitos registrados",
+     r["victimas_vs_registro"]["rho"], "rho", "EMV 2024 y SCJ 2024 (19 localidades)", "resultados.json:victimas_vs_registro.rho"),
     ("n_bienal", "Encuestas de la Bienal 2025 usadas", r["n_bienal"], "personas", BIENAL, "resultados.json:n_bienal"),
     ("n_emv_bogota", "Encuestas de la EMV 2024 en Bogotá", r["n_emv_bogota"], "personas", EMV, "resultados.json:n_emv_bogota"),
 ]

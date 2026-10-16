@@ -646,8 +646,10 @@ def hoja_cifra(ws, D, R):
     fvu = fv + len(V)
     ws.conditional_formatting.add(f"B{fv + 1}:N{fvu}", FormulaRule(formula=[f'$N{fv + 1}="Sí"'],
                                                                      font=Font(name=LETRA, bold=True, color=ROJO)))
-    texto(ws, fvu + 1, 2, 15, "Solo la relación entre el Índice de Brecha y la cifra oculta sobrevive a la corrección "
-          "por pruebas múltiples. Fuente: outputs/tablas/validaciones.csv (IC por bootstrap de 2.000 réplicas).",
+    texto(ws, fvu + 1, 2, 15, "La relación entre el Índice de Brecha y la cifra oculta sobrevive a la corrección, pero es "
+          "mecánica: los dos usan el delito registrado y, al controlarlo, la correlación parcial es prácticamente cero "
+          "(outputs/tablas/validacion_parcial.csv). El miedo no se parece a la cifra oculta. Fuente: outputs/tablas/validaciones.csv "
+          "(IC por bootstrap de 2.000 réplicas).",
           size=8.5, color=GRIS, italic=True)
     rho_fila = V.index[V["prueba"].str.startswith("Índice de Brecha")][0] + fv + 1
     R["cifra"] = {"bogota": f"Cifra_oculta!$J${fb}", "rho": f"Cifra_oculta!$J${fr}",
@@ -1367,9 +1369,9 @@ def hoja_resumen(ws, D, R):
         ("GÉNERO · EMV 2024", MUJER, f"={R['genero']['teme_acoso_sexual']}", PP,
          f"de temor al acoso sexual por ser mujer, a igual edad, estrato y victimización (IC 95 % {es(mu['ic_inf'])} "
          f"a {es(mu['ic_sup'])}).", "Genero"),
-        ("TERRITORIO · VALIDACIÓN", ROJO, f"={R['cifra']['rho']}", '"ρ = "0.00',
-         f"entre el Índice de Brecha y la cifra oculta (Spearman, IC 95 % {es(rho['ic_inf'], 2)} a "
-         f"{es(rho['ic_sup'], 2)}; p ajustado = {es(rho['p_bh'], 3)}).", "Cifra_oculta"),
+        ("TERRITORIO · CONTROL", ROJO, res["ibs_vs_cifra_oculta_parcial"]["rho"], '"ρ = "0.00;"ρ = −"0.00',
+         f"entre el Índice de Brecha y la cifra oculta al controlar el delito registrado: la de {es(rho['rho'], 2)} era "
+         "mecánica, porque ambos usan el mismo registro.", "Cifra_oculta"),
         ("PREDICCIÓN · AUC", AZUL, f"={R['auc'][bloques[1]]}-{R['auc'][bloques[0]]}", '+0.000;"−"0.000',
          f"de AUC al sumar el delito registrado al perfil ({es(auc[bloques[0]], 3)} → {es(auc[bloques[1]], 3)}); "
          f"con el entorno llega a {es(auc['Todo'], 3)}.", "Modelos"),
@@ -1408,9 +1410,10 @@ def hoja_resumen(ws, D, R):
         ("La ciudad no ve buena parte de su delito.",
          f"Hay unas {es(res['cifra_oculta_bogota'])} víctimas por cada delito de alto impacto registrado, de "
          f"{es(res['cifra_oculta_max'][1])} en {res['cifra_oculta_max'][0]} a {es(res['cifra_oculta_min'][1])} en "
-         f"{res['cifra_oculta_min'][0]}. El Índice de Brecha crece donde más se subregistra: ρ = {es(rho['rho'], 2)} "
-         f"(IC 95 % {es(rho['ic_inf'], 2)} a {es(rho['ic_sup'], 2)}; p ajustado = {es(rho['p_bh'], 3)}), la única "
-         "relación territorial que sobrevive a la corrección por pruebas múltiples."),
+         f"{res['cifra_oculta_min'][0]}. Las víctimas que reporta la encuesta no siguen al delito registrado entre localidades "
+         f"(ρ = {es(res['victimas_vs_registro']['rho'], 2)}). La relación entre el Índice de Brecha y la cifra oculta "
+         f"(ρ = {es(rho['rho'], 2)}) es mecánica: al controlar el delito registrado queda en "
+         f"{es(res['ibs_vs_cifra_oculta_parcial']['rho'], 2)}."),
         ("El barrio se siente por lo que pasa en él.",
          f"Ver atracos en el parque cercano suma {signo(am['ame_pp'])} pp a la probabilidad de sentir insegura la "
          f"zona y los conflictos vecinales hasta {signo(cv['ame_pp'])} pp. El hurto registrado de la localidad no tiene "

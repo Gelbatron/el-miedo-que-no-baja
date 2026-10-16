@@ -37,7 +37,7 @@ export const LOCALIDADES: Record<number, string> = Object.fromEntries(D.geo.loca
 const nf = (dec: number) => new Intl.NumberFormat("es-CO", { minimumFractionDigits: dec, maximumFractionDigits: dec });
 export function fmt(x: number | null | undefined, dec = 1) {
   if (x === null || x === undefined || Number.isNaN(x)) return "s. d.";
-  return nf(dec).format(x);
+  return nf(dec).format(x).replace("-", "−");
 }
 export function signo(x: number, dec = 1) {
   return `${x > 0 ? "+" : x < 0 ? "−" : ""}${fmt(Math.abs(x), dec)}`;

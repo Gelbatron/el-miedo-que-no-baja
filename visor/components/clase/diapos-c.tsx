@@ -228,7 +228,7 @@ export function Modelos({ paso }: { paso: number }) {
         </div>
       </div>
       <div style={{ display: "grid", gap: 14, alignContent: "start" }}>
-        <Ap si={paso >= 0}><p className="cl-txt" style={{ fontSize: 18 }}>Entrenamos tres modelos para predecir quién siente insegura su zona y los probamos con personas que no vieron. Los flexibles (bosque y gradient boosting) aciertan <b>{fmt(sin[2].mean * 100, 0)} de cada 100 parejas</b>; con las calificaciones del barrio, <b>{fmt(con[2].mean * 100, 0)}</b>.</p></Ap>
+        <Ap si={paso >= 0}><p className="cl-txt" style={{ fontSize: 18 }}>Entrenamos tres modelos para predecir quién siente insegura su zona y los probamos con personas que no vieron. Los flexibles (bosque y gradient boosting) ordenan bien <b>{fmt(sin[2].mean * 100, 0)} de cada 100 parejas</b>; con las calificaciones del barrio, <b>{fmt(con[2].mean * 100, 0)}</b>.</p></Ap>
         <Ap si={paso >= 1}><p className="cl-txt" style={{ fontSize: 18 }}><b style={{ color: "var(--percepcion-texto)" }}>Lo que más explica es lo que pasa en el barrio</b> (atracos, conflictos, parques). Las calificaciones del barrio pesan aún más, pero comparten cuestionario con la pregunta de seguridad: las tratamos con cuidado.</p></Ap>
         <Ap si={paso >= 2}>
           <div className="cl-tarjeta" style={{ borderLeft: "6px solid var(--vino)" }}>

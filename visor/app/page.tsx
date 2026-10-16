@@ -110,7 +110,7 @@ export default function Historia() {
             <div className="rejilla r3">
               <Paso n="1" titulo="Juntamos y validamos" texto={`Encuestas (${fmt(R.n_bienal, 0)} y ${fmt(R.n_emv_bogota, 0)} personas, más el DANE y la Cámara de Comercio), registros de la SCJ, la Policía, Medicina Legal y Salud, y población, alumbrado y espacio público, unidos por localidad.`} />
               <Paso n="2" titulo="Armamos un índice" texto="Pusimos el miedo y el delito en la misma regla y los restamos: así se ve dónde sobra miedo frente a lo que se registra." />
-              <Paso n="3" titulo="Lo comprobamos" texto={`Donde sobra miedo, más delito se queda sin denunciar (correlación de ${fmt(R.ibs_vs_cifra_oculta.rho, 2)}), y fue la única de siete relaciones que pasó la prueba contra el azar.`} />
+              <Paso n="3" titulo="Lo comprobamos" texto={`Probamos ocho hipótesis y reportamos también las que no se sostienen. Ejemplo: el índice y la cifra oculta se correlacionan (${fmt(R.ibs_vs_cifra_oculta.rho, 2)}), pero al controlar el delito registrado queda en ${fmt(R.ibs_vs_cifra_oculta_parcial.rho, 2)}: es mecánica.`} />
             </div>
             <p className="relato">Donde hay más miedo del que muestran las cifras: <b>{enLista(R.ibs_top5)}</b>.</p>
             <Detalle enlaces={[["/brecha", "El índice y el delito que no se denuncia"], ["/metodologia", "Cómo lo hicimos, paso a paso"]]} />

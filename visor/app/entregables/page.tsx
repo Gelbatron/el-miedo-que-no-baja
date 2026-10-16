@@ -7,10 +7,16 @@ type Item = { titulo: string; detalle: string; ver?: string; descargar?: { href:
 const ITEMS: Item[] = [
   {
     titulo: "Producto analítico reproducible (notebook)",
-    detalle: "Notebook de Python ejecutado de punta a punta: auditoría de datos, descarga desde los servicios oficiales, limpieza con bitácora, validación del registro contra la Policía y Medicina Legal, integración de 16 fuentes con su score de confiabilidad, modelos estadísticos y de machine learning, índice y exportes.",
+    detalle: "Notebook de Python ejecutado de punta a punta: auditoría de datos, descarga desde los servicios oficiales, limpieza con bitácora, validación del registro contra la Policía y Medicina Legal, integración de 18 fuentes con su score de confiabilidad, modelos estadísticos y de machine learning, índice y exportes.",
     ver: "/entregables/notebook_el_miedo_que_no_baja.html",
     descargar: [{ href: `${REPO}/blob/main/notebooks/el_miedo_que_no_baja.ipynb`, formato: ".ipynb en GitHub" }],
     requisito: "TdR 11.2",
+  },
+  {
+    titulo: "Informe técnico completo",
+    detalle: "15 páginas: problema e hipótesis, las 18 fuentes con su score, validación del registro, métodos, resultados con intervalos, las ocho hipótesis con su veredicto (incluida la que corregimos nosotros), estrategias, limitaciones y la trazabilidad de cada cifra.",
+    ver: "/entregables/Informe_tecnico_El_miedo_que_no_baja.pdf",
+    requisito: "Adicional",
   },
   {
     titulo: "Repositorio técnico estructurado",

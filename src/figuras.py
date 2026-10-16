@@ -163,7 +163,7 @@ def _etiquetar(ax, xs, ys, nombres, fontsize=7.5):
         ocupado.append(((b.x0, b.y0), (b.x1, b.y1)))
 
 
-def brecha_cifra(ibs: pd.DataFrame, co: pd.DataFrame, rho: float):
+def brecha_cifra(ibs: pd.DataFrame, co: pd.DataFrame, rho: float, rho_parcial: float | None = None):
     m = ibs.merge(co[["localidad", "razon"]], on="localidad")
     fig, ax = plt.subplots(figsize=(8, 5))
     ax.scatter(m["razon"], m["ibs"], s=60, c=[PERC if v > 0 else REG for v in m["ibs"]], edgecolor="white", zorder=3)
@@ -174,7 +174,10 @@ def brecha_cifra(ibs: pd.DataFrame, co: pd.DataFrame, rho: float):
     ax.axhline(0, color=TINTA2, lw=.8)
     ax.set_xlabel("Víctimas estimadas por cada delito registrado (EMV 2024 / SCJ 2024)")
     ax.set_ylabel("Índice de Brecha de Seguridad (z)")
-    _titulo(ax, f"Donde hay más miedo que delito, más delito queda sin registrar (Spearman {rho:.2f})".replace(".", ","))
+    titulo = f"Índice de Brecha y cifra oculta: Spearman {rho:.2f}"
+    if rho_parcial is not None:  # los dos índices comparten el delito registrado: la relación es mecánica
+        titulo += f", pero controlando el delito registrado {rho_parcial:.2f}"
+    _titulo(ax, titulo.replace(".", ","), fontsize=11.5)
     return _guardar(fig, "fig5_brecha_vs_cifra_oculta")
 
 
