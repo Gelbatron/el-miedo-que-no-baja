@@ -3,7 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const RUTAS = [
-  ["/", "La historia"], ["/tendencia", "Tendencia"], ["/mapa", "Mapa"], ["/brecha", "La brecha"], ["/que-explica", "Qué la explica"],
+  ["/", "La historia"], ["/video", "Video"], ["/tendencia", "Tendencia"], ["/mapa", "Mapa"], ["/brecha", "La brecha"], ["/que-explica", "Qué la explica"],
   ["/genero", "Género"], ["/simulador", "Simulador"], ["/indicador", "Indicador"],
   ["/metodologia", "Método"], ["/datos", "Datos"], ["/entregables", "Entregables"],
 ] as const;

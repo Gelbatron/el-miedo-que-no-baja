@@ -1,0 +1,3739 @@
+{
+ "video": "/video/el-miedo-que-no-baja.mp4",
+ "poster": "/video/poster.jpg",
+ "duracion": 239.46,
+ "capitulos": [
+  {
+   "id": "sabias",
+   "titulo": "¿Sabías que…?",
+   "foto": 15.6,
+   "enlace": [
+    "/tendencia",
+    "Ver la tendencia validada"
+   ],
+   "resumen": "Dos cifras oficiales que no se pueden creer al mismo tiempo: el hurto cae y el miedo no.",
+   "datos": [
+    "La capa abierta de hurtos marca −58 % entre enero y agosto de 2022 y de 2026.",
+    "Desde 2019, entre 69 % y 84 % de la gente dice que Bogotá es insegura (DANE): entre 7 y 8 de cada 10."
+   ],
+   "fuentes": "Capa de delitos de alto impacto (Secretaría de Seguridad, datos abiertos) · Encuesta de Convivencia y Seguridad Ciudadana (DANE)",
+   "ini": 0.0,
+   "fin": 19.86,
+   "imagen": "/video/cap-1.jpg"
+  },
+  {
+   "id": "importa",
+   "titulo": "¿Por qué importa?",
+   "foto": 33.5,
+   "enlace": [
+    "/genero",
+    "Ver el enfoque de género"
+   ],
+   "resumen": "El miedo cambia cómo se vive la ciudad, y las cifras deciden dónde se invierte.",
+   "datos": [
+    "48,4 % califica insegura su propia zona (Bienal 2025).",
+    "63,5 % de las mujeres evita salir de noche (EMV 2024)."
+   ],
+   "fuentes": "Encuesta Bienal de Cultura Ciudadana 2025 · Encuesta Mundial de Valores 2024 (Bogotá)",
+   "ini": 19.86,
+   "fin": 35.78,
+   "imagen": "/video/cap-2.jpg"
+  },
+  {
+   "id": "fuentes",
+   "titulo": "Cada fuente, una historia",
+   "foto": 63.0,
+   "enlace": [
+    "/metodologia",
+    "Ver cómo se integran"
+   ],
+   "resumen": "Cinco fuentes, cinco versiones. Por separado se contradicen; juntas se entienden.",
+   "datos": [
+    "Capa abierta: −58 % de hurto. Policía, mismo delito y mismos meses: −4 %.",
+    "Cámara de Comercio: víctimas de hurto de 16 % a 11 % (2021 → 2025).",
+    "DANE: denuncia del hurto de 36 % a 43 % (2021 → 2023).",
+    "Salud: violencia contra las mujeres +43 % (tasa, 2019 → 2025)."
+   ],
+   "fuentes": "SCJ · Policía Nacional (SIEDCO) · Cámara de Comercio de Bogotá (EPV) · DANE (ECSC) · SIVIM (Secretaría de Salud)",
+   "ini": 35.78,
+   "fin": 69.79,
+   "imagen": "/video/cap-3.jpg"
+  },
+  {
+   "id": "hallazgos",
+   "titulo": "Lo que encontramos",
+   "foto": 82.9,
+   "enlace": [
+    "/brecha",
+    "Ver la brecha por localidad"
+   ],
+   "resumen": "Cuatro hallazgos que solo aparecen al cruzar las fuentes.",
+   "datos": [
+    "1. Hasta 2022 la capa contaba entre 2,3 y 2,6 veces los hurtos de la Policía; desde 2023, 1,0.",
+    "2. Crece la violencia: homicidios 3,3 %, delitos sexuales 7,5 % y violencia intrafamiliar 11,2 % al año (IC 95 % 4,1 a 18,9 en la última).",
+    "3. De cada 10 víctimas, 1,8 llegan al registro oficial.",
+    "4. Ver atracos en el parque suma 13,3 puntos de probabilidad de sentir insegura la zona; a igual victimización, las mujeres temen 18,0 puntos más el acoso."
+   ],
+   "fuentes": "Validación capa ÷ Policía · binomial negativa de panel · EMV 2024 frente a SCJ 2024 · logit con efectos marginales (Bienal y EMV)",
+   "ini": 69.79,
+   "fin": 113.55,
+   "imagen": "/video/cap-4.jpg"
+  },
+  {
+   "id": "metodo",
+   "titulo": "Cómo lo hicimos",
+   "foto": 164.6,
+   "enlace": [
+    "/metodologia",
+    "Ver la metodología completa"
+   ],
+   "resumen": "Cinco pasos, y una hipótesis que descartamos nosotros mismos.",
+   "datos": [
+    "Juntar: 18 fuentes públicas en 4 frentes, cada una con una nota de confiabilidad de 0 a 100.",
+    "Unir: un código oficial por localidad y todas las cifras por cada 100.000 habitantes (población de la SDP).",
+    "Validar: cada serie contra una fuente independiente; así apareció el quiebre de 2023.",
+    "Modelar: tendencias, 3 modelos de machine learning con 5.538 personas (los flexibles ordenan bien 72 de cada 100 parejas sin las calificaciones del barrio) y 5 perfiles de localidad.",
+    "Poner a prueba: 8 hipótesis; 2 se sostienen. La correlación de 0,72 entre el índice y la cifra oculta cayó a −0,02 al controlar el delito registrado: era mecánica."
+   ],
+   "fuentes": "Repositorio del proyecto: notebook reproducible, src/pipeline.py y outputs/tablas",
+   "ini": 113.55,
+   "fin": 165.64,
+   "imagen": "/video/cap-5.jpg"
+  },
+  {
+   "id": "indice",
+   "titulo": "La herramienta",
+   "foto": 179.6,
+   "enlace": [
+    "/indicador",
+    "Ver la ficha del indicador"
+   ],
+   "resumen": "Un indicador que Bogotá puede actualizar con datos que ya produce.",
+   "datos": [
+    "Índice de Brecha de Seguridad = z(% que siente insegura su zona) − z(log delitos por 100.000).",
+    "Usme 2,67, Ciudad Bolívar 2,34, Bosa 1,97, Kennedy 1,72 y San Cristóbal 1,54.",
+    "Ordena dónde actuar primero; no prueba causas."
+   ],
+   "fuentes": "Bienal 2025 · SCJ · población SDP · 1.000 réplicas bootstrap",
+   "ini": 165.64,
+   "fin": 182.95,
+   "imagen": "/video/cap-6.jpg"
+  },
+  {
+   "id": "frentes",
+   "titulo": "4 frentes de trabajo",
+   "foto": 216.0,
+   "enlace": [
+    "/simulador",
+    "Probar el simulador"
+   ],
+   "resumen": "Lo que proponemos para la Alcaldía Mayor de Bogotá.",
+   "datos": [
+    "1. Validar antes de decidir: documentar el cambio de 2023, publicar la serie empalmada y contrastar con la Policía y Medicina Legal.",
+    "2. Medir lo que no se denuncia: encuesta de victimización por UPL y recursos repartidos por víctimas, no solo por denuncias.",
+    "3. Barrios que se sientan seguros: parques sin atracos, mediación entre vecinos y alumbrado. Con la mitad mejorada, unas 467.000 personas menos con miedo (estimación del modelo).",
+    "4. Dos rutas para las mujeres: calle (rutas nocturnas, denuncia fácil del acoso) y casa (8 de cada 10 casos pasan en la vivienda)."
+   ],
+   "fuentes": "Escenarios del modelo de entorno · SIVIM 2025 · ficha de estrategias del informe técnico",
+   "ini": 182.95,
+   "fin": 226.86,
+   "imagen": "/video/cap-7.jpg"
+  },
+  {
+   "id": "cierre",
+   "titulo": "Cierre",
+   "foto": 238.0,
+   "enlace": [
+    "/entregables",
+    "Ver todos los entregables"
+   ],
+   "resumen": "El miedo no contradice los datos: contradice una serie sin validar.",
+   "datos": [
+    "Bogotá ya produce la información para cerrar esta brecha. Solo hay que validarla y leerla junta."
+   ],
+   "fuentes": "The data squad · Bogotá DataJam 2026",
+   "ini": 226.86,
+   "fin": 239.46,
+   "imagen": "/video/cap-8.jpg"
+  }
+ ],
+ "frases": [
+  {
+   "cap": 0,
+   "ini": 0.08,
+   "fin": 5.36,
+   "palabras": [
+    {
+     "t": 0.08,
+     "w": "¿Sabías"
+    },
+    {
+     "t": 0.56,
+     "w": "que"
+    },
+    {
+     "t": 0.72,
+     "w": "según"
+    },
+    {
+     "t": 0.96,
+     "w": "los"
+    },
+    {
+     "t": 1.04,
+     "w": "datos"
+    },
+    {
+     "t": 1.28,
+     "w": "abiertos"
+    },
+    {
+     "t": 1.6,
+     "w": "de"
+    },
+    {
+     "t": 1.68,
+     "w": "Bogotá,"
+    },
+    {
+     "t": 2.24,
+     "w": "el"
+    },
+    {
+     "t": 2.32,
+     "w": "hurto"
+    },
+    {
+     "t": 2.64,
+     "w": "de"
+    },
+    {
+     "t": 2.72,
+     "w": "personas"
+    },
+    {
+     "t": 3.04,
+     "w": "cayó"
+    },
+    {
+     "t": 3.28,
+     "w": "en"
+    },
+    {
+     "t": 3.36,
+     "w": "un"
+    },
+    {
+     "t": 3.44,
+     "w": "58 %"
+    },
+    {
+     "t": 4.24,
+     "w": "desde"
+    },
+    {
+     "t": 4.48,
+     "w": "el"
+    },
+    {
+     "t": 4.56,
+     "w": "2022?"
+    }
+   ]
+  },
+  {
+   "cap": 0,
+   "ini": 5.52,
+   "fin": 7.12,
+   "palabras": [
+    {
+     "t": 5.52,
+     "w": "Sin"
+    },
+    {
+     "t": 5.76,
+     "w": "embargo,"
+    },
+    {
+     "t": 6.08,
+     "w": "el"
+    },
+    {
+     "t": 6.24,
+     "w": "miedo"
+    },
+    {
+     "t": 6.48,
+     "w": "no"
+    },
+    {
+     "t": 6.64,
+     "w": "baja."
+    }
+   ]
+  },
+  {
+   "cap": 0,
+   "ini": 7.12,
+   "fin": 11.84,
+   "palabras": [
+    {
+     "t": 7.12,
+     "w": "Desde"
+    },
+    {
+     "t": 7.36,
+     "w": "el"
+    },
+    {
+     "t": 7.44,
+     "w": "2019,"
+    },
+    {
+     "t": 8.32,
+     "w": "entre"
+    },
+    {
+     "t": 8.56,
+     "w": "7"
+    },
+    {
+     "t": 8.96,
+     "w": "y"
+    },
+    {
+     "t": 9.12,
+     "w": "8"
+    },
+    {
+     "t": 9.36,
+     "w": "de"
+    },
+    {
+     "t": 9.44,
+     "w": "cada"
+    },
+    {
+     "t": 9.68,
+     "w": "10"
+    },
+    {
+     "t": 9.92,
+     "w": "personas"
+    },
+    {
+     "t": 10.24,
+     "w": "dicen"
+    },
+    {
+     "t": 10.48,
+     "w": "que"
+    },
+    {
+     "t": 10.64,
+     "w": "la"
+    },
+    {
+     "t": 10.72,
+     "w": "ciudad"
+    },
+    {
+     "t": 10.96,
+     "w": "es"
+    },
+    {
+     "t": 11.04,
+     "w": "insegura."
+    }
+   ]
+  },
+  {
+   "cap": 0,
+   "ini": 11.84,
+   "fin": 14.08,
+   "palabras": [
+    {
+     "t": 11.84,
+     "w": "¿Cómo"
+    },
+    {
+     "t": 12.16,
+     "w": "pueden"
+    },
+    {
+     "t": 12.4,
+     "w": "ser"
+    },
+    {
+     "t": 12.56,
+     "w": "ciertas"
+    },
+    {
+     "t": 12.91,
+     "w": "las"
+    },
+    {
+     "t": 13.25,
+     "w": "dos"
+    },
+    {
+     "t": 13.6,
+     "w": "cosas?"
+    }
+   ]
+  },
+  {
+   "cap": 0,
+   "ini": 14.08,
+   "fin": 20.16,
+   "palabras": [
+    {
+     "t": 14.08,
+     "w": "Te"
+    },
+    {
+     "t": 14.32,
+     "w": "contamos"
+    },
+    {
+     "t": 14.8,
+     "w": "lo"
+    },
+    {
+     "t": 14.88,
+     "w": "que"
+    },
+    {
+     "t": 15.04,
+     "w": "está"
+    },
+    {
+     "t": 15.2,
+     "w": "detrás"
+    },
+    {
+     "t": 15.52,
+     "w": "de"
+    },
+    {
+     "t": 15.6,
+     "w": "las"
+    },
+    {
+     "t": 15.68,
+     "w": "cifras"
+    },
+    {
+     "t": 16.0,
+     "w": "de"
+    },
+    {
+     "t": 16.16,
+     "w": "seguridad"
+    },
+    {
+     "t": 16.56,
+     "w": "y"
+    },
+    {
+     "t": 16.72,
+     "w": "los"
+    },
+    {
+     "t": 16.96,
+     "w": "cuatro"
+    },
+    {
+     "t": 17.28,
+     "w": "frentes"
+    },
+    {
+     "t": 17.6,
+     "w": "de"
+    },
+    {
+     "t": 17.76,
+     "w": "trabajo"
+    },
+    {
+     "t": 18.0,
+     "w": "que"
+    },
+    {
+     "t": 18.16,
+     "w": "proponemos"
+    },
+    {
+     "t": 18.72,
+     "w": "para"
+    },
+    {
+     "t": 18.88,
+     "w": "cerrar"
+    },
+    {
+     "t": 19.2,
+     "w": "esta"
+    },
+    {
+     "t": 19.44,
+     "w": "brecha."
+    }
+   ]
+  },
+  {
+   "cap": 1,
+   "ini": 20.16,
+   "fin": 21.36,
+   "palabras": [
+    {
+     "t": 20.16,
+     "w": "¿Por"
+    },
+    {
+     "t": 20.48,
+     "w": "qué"
+    },
+    {
+     "t": 20.72,
+     "w": "importa?"
+    }
+   ]
+  },
+  {
+   "cap": 1,
+   "ini": 21.36,
+   "fin": 23.84,
+   "palabras": [
+    {
+     "t": 21.36,
+     "w": "Porque"
+    },
+    {
+     "t": 21.68,
+     "w": "el"
+    },
+    {
+     "t": 21.76,
+     "w": "miedo"
+    },
+    {
+     "t": 22.08,
+     "w": "cambia"
+    },
+    {
+     "t": 22.48,
+     "w": "cómo"
+    },
+    {
+     "t": 22.72,
+     "w": "vivimos"
+    },
+    {
+     "t": 23.12,
+     "w": "en"
+    },
+    {
+     "t": 23.2,
+     "w": "la"
+    },
+    {
+     "t": 23.36,
+     "w": "ciudad."
+    }
+   ]
+  },
+  {
+   "cap": 1,
+   "ini": 23.84,
+   "fin": 29.92,
+   "palabras": [
+    {
+     "t": 23.84,
+     "w": "Casi"
+    },
+    {
+     "t": 24.16,
+     "w": "la"
+    },
+    {
+     "t": 24.24,
+     "w": "mitad"
+    },
+    {
+     "t": 24.56,
+     "w": "de"
+    },
+    {
+     "t": 24.64,
+     "w": "la"
+    },
+    {
+     "t": 24.72,
+     "w": "gente"
+    },
+    {
+     "t": 24.96,
+     "w": "califica"
+    },
+    {
+     "t": 25.44,
+     "w": "insegura"
+    },
+    {
+     "t": 26.0,
+     "w": "su"
+    },
+    {
+     "t": 26.08,
+     "w": "propia"
+    },
+    {
+     "t": 26.4,
+     "w": "zona,"
+    },
+    {
+     "t": 26.88,
+     "w": "y"
+    },
+    {
+     "t": 27.16,
+     "w": "6"
+    },
+    {
+     "t": 27.44,
+     "w": "de"
+    },
+    {
+     "t": 27.72,
+     "w": "cada"
+    },
+    {
+     "t": 28.0,
+     "w": "10"
+    },
+    {
+     "t": 28.28,
+     "w": "mujeres"
+    },
+    {
+     "t": 28.56,
+     "w": "evitan"
+    },
+    {
+     "t": 29.04,
+     "w": "salir"
+    },
+    {
+     "t": 29.28,
+     "w": "de"
+    },
+    {
+     "t": 29.44,
+     "w": "noche."
+    }
+   ]
+  },
+  {
+   "cap": 1,
+   "ini": 29.92,
+   "fin": 32.8,
+   "palabras": [
+    {
+     "t": 29.92,
+     "w": "¿Y"
+    },
+    {
+     "t": 30.16,
+     "w": "por"
+    },
+    {
+     "t": 30.24,
+     "w": "qué"
+    },
+    {
+     "t": 30.4,
+     "w": "con"
+    },
+    {
+     "t": 30.56,
+     "w": "esa"
+    },
+    {
+     "t": 30.72,
+     "w": "cifra"
+    },
+    {
+     "t": 31.04,
+     "w": "se"
+    },
+    {
+     "t": 31.12,
+     "w": "decide"
+    },
+    {
+     "t": 31.52,
+     "w": "dónde"
+    },
+    {
+     "t": 31.76,
+     "w": "invertir"
+    },
+    {
+     "t": 32.08,
+     "w": "en"
+    },
+    {
+     "t": 32.24,
+     "w": "seguridad?"
+    }
+   ]
+  },
+  {
+   "cap": 1,
+   "ini": 32.8,
+   "fin": 36.08,
+   "palabras": [
+    {
+     "t": 32.8,
+     "w": "Si"
+    },
+    {
+     "t": 32.96,
+     "w": "se"
+    },
+    {
+     "t": 33.12,
+     "w": "leen"
+    },
+    {
+     "t": 33.52,
+     "w": "mal,"
+    },
+    {
+     "t": 33.76,
+     "w": "el"
+    },
+    {
+     "t": 33.84,
+     "w": "presupuesto"
+    },
+    {
+     "t": 34.32,
+     "w": "llega"
+    },
+    {
+     "t": 34.64,
+     "w": "a"
+    },
+    {
+     "t": 34.72,
+     "w": "un"
+    },
+    {
+     "t": 34.88,
+     "w": "lugar"
+    },
+    {
+     "t": 35.12,
+     "w": "equivocado."
+    }
+   ]
+  },
+  {
+   "cap": 2,
+   "ini": 36.08,
+   "fin": 36.8,
+   "palabras": [
+    {
+     "t": 36.08,
+     "w": "El"
+    },
+    {
+     "t": 36.32,
+     "w": "problema."
+    }
+   ]
+  },
+  {
+   "cap": 2,
+   "ini": 36.96,
+   "fin": 40.48,
+   "palabras": [
+    {
+     "t": 36.96,
+     "w": "Si"
+    },
+    {
+     "t": 37.12,
+     "w": "miras"
+    },
+    {
+     "t": 37.52,
+     "w": "cada"
+    },
+    {
+     "t": 37.76,
+     "w": "fuente"
+    },
+    {
+     "t": 38.0,
+     "w": "por"
+    },
+    {
+     "t": 38.24,
+     "w": "separado,"
+    },
+    {
+     "t": 38.72,
+     "w": "cada"
+    },
+    {
+     "t": 38.88,
+     "w": "una"
+    },
+    {
+     "t": 39.12,
+     "w": "cuenta"
+    },
+    {
+     "t": 39.44,
+     "w": "una"
+    },
+    {
+     "t": 39.52,
+     "w": "historia"
+    },
+    {
+     "t": 39.84,
+     "w": "distinta."
+    }
+   ]
+  },
+  {
+   "cap": 2,
+   "ini": 40.48,
+   "fin": 44.0,
+   "palabras": [
+    {
+     "t": 40.48,
+     "w": "La"
+    },
+    {
+     "t": 40.64,
+     "w": "capa"
+    },
+    {
+     "t": 40.96,
+     "w": "abierta"
+    },
+    {
+     "t": 41.28,
+     "w": "del"
+    },
+    {
+     "t": 41.52,
+     "w": "hurto"
+    },
+    {
+     "t": 41.92,
+     "w": "dice"
+    },
+    {
+     "t": 42.08,
+     "w": "que"
+    },
+    {
+     "t": 42.16,
+     "w": "cayeron"
+    },
+    {
+     "t": 42.64,
+     "w": "un"
+    },
+    {
+     "t": 42.8,
+     "w": "58 %."
+    }
+   ]
+  },
+  {
+   "cap": 2,
+   "ini": 44.0,
+   "fin": 48.16,
+   "palabras": [
+    {
+     "t": 44.0,
+     "w": "La"
+    },
+    {
+     "t": 44.16,
+     "w": "Policía"
+    },
+    {
+     "t": 44.56,
+     "w": "para"
+    },
+    {
+     "t": 44.72,
+     "w": "el"
+    },
+    {
+     "t": 44.8,
+     "w": "mismo"
+    },
+    {
+     "t": 45.12,
+     "w": "delito"
+    },
+    {
+     "t": 45.44,
+     "w": "y"
+    },
+    {
+     "t": 45.6,
+     "w": "los"
+    },
+    {
+     "t": 45.68,
+     "w": "mismos"
+    },
+    {
+     "t": 45.92,
+     "w": "meses"
+    },
+    {
+     "t": 46.32,
+     "w": "dice"
+    },
+    {
+     "t": 46.48,
+     "w": "que"
+    },
+    {
+     "t": 46.64,
+     "w": "bajaron"
+    },
+    {
+     "t": 47.04,
+     "w": "apenas"
+    },
+    {
+     "t": 47.36,
+     "w": "un"
+    },
+    {
+     "t": 47.52,
+     "w": "4 %."
+    }
+   ]
+  },
+  {
+   "cap": 2,
+   "ini": 48.32,
+   "fin": 54.64,
+   "palabras": [
+    {
+     "t": 48.32,
+     "w": "La"
+    },
+    {
+     "t": 48.48,
+     "w": "Cámara"
+    },
+    {
+     "t": 48.88,
+     "w": "de"
+    },
+    {
+     "t": 48.96,
+     "w": "Comercio"
+    },
+    {
+     "t": 49.36,
+     "w": "dice"
+    },
+    {
+     "t": 49.6,
+     "w": "que"
+    },
+    {
+     "t": 49.76,
+     "w": "menos"
+    },
+    {
+     "t": 50.16,
+     "w": "gente"
+    },
+    {
+     "t": 50.48,
+     "w": "fue"
+    },
+    {
+     "t": 50.72,
+     "w": "víctima"
+    },
+    {
+     "t": 51.04,
+     "w": "de"
+    },
+    {
+     "t": 51.2,
+     "w": "hurto"
+    },
+    {
+     "t": 51.76,
+     "w": "del"
+    },
+    {
+     "t": 52.0,
+     "w": "16 %"
+    },
+    {
+     "t": 52.8,
+     "w": "al"
+    },
+    {
+     "t": 53.04,
+     "w": "11 %"
+    },
+    {
+     "t": 53.6,
+     "w": "desde"
+    },
+    {
+     "t": 53.76,
+     "w": "el"
+    },
+    {
+     "t": 53.92,
+     "w": "2021."
+    }
+   ]
+  },
+  {
+   "cap": 2,
+   "ini": 54.8,
+   "fin": 59.28,
+   "palabras": [
+    {
+     "t": 54.8,
+     "w": "El"
+    },
+    {
+     "t": 54.96,
+     "w": "DANE"
+    },
+    {
+     "t": 55.44,
+     "w": "dice"
+    },
+    {
+     "t": 55.6,
+     "w": "que"
+    },
+    {
+     "t": 55.76,
+     "w": "la"
+    },
+    {
+     "t": 55.84,
+     "w": "gente"
+    },
+    {
+     "t": 56.08,
+     "w": "denuncia"
+    },
+    {
+     "t": 56.8,
+     "w": "del"
+    },
+    {
+     "t": 57.12,
+     "w": "36 %"
+    },
+    {
+     "t": 58.08,
+     "w": "a"
+    },
+    {
+     "t": 58.24,
+     "w": "43 %."
+    }
+   ]
+  },
+  {
+   "cap": 2,
+   "ini": 59.45,
+   "fin": 63.85,
+   "palabras": [
+    {
+     "t": 59.45,
+     "w": "Y"
+    },
+    {
+     "t": 59.69,
+     "w": "Salud"
+    },
+    {
+     "t": 60.09,
+     "w": "dice"
+    },
+    {
+     "t": 60.33,
+     "w": "que"
+    },
+    {
+     "t": 60.49,
+     "w": "la"
+    },
+    {
+     "t": 60.57,
+     "w": "violencia"
+    },
+    {
+     "t": 60.97,
+     "w": "contra"
+    },
+    {
+     "t": 61.13,
+     "w": "las"
+    },
+    {
+     "t": 61.21,
+     "w": "mujeres"
+    },
+    {
+     "t": 61.53,
+     "w": "subió"
+    },
+    {
+     "t": 61.85,
+     "w": "un"
+    },
+    {
+     "t": 62.01,
+     "w": "43 %"
+    },
+    {
+     "t": 62.73,
+     "w": "desde"
+    },
+    {
+     "t": 62.97,
+     "w": "el"
+    },
+    {
+     "t": 63.05,
+     "w": "2019."
+    }
+   ]
+  },
+  {
+   "cap": 2,
+   "ini": 64.01,
+   "fin": 70.09,
+   "palabras": [
+    {
+     "t": 64.01,
+     "w": "Por"
+    },
+    {
+     "t": 64.25,
+     "w": "separado"
+    },
+    {
+     "t": 64.81,
+     "w": "los"
+    },
+    {
+     "t": 64.89,
+     "w": "resultados"
+    },
+    {
+     "t": 65.21,
+     "w": "se"
+    },
+    {
+     "t": 65.37,
+     "w": "aíslan"
+    },
+    {
+     "t": 65.85,
+     "w": "y"
+    },
+    {
+     "t": 65.93,
+     "w": "hasta"
+    },
+    {
+     "t": 66.17,
+     "w": "se"
+    },
+    {
+     "t": 66.25,
+     "w": "contradicen,"
+    },
+    {
+     "t": 67.13,
+     "w": "pero"
+    },
+    {
+     "t": 67.37,
+     "w": "por"
+    },
+    {
+     "t": 67.53,
+     "w": "eso"
+    },
+    {
+     "t": 67.69,
+     "w": "construimos"
+    },
+    {
+     "t": 68.17,
+     "w": "un"
+    },
+    {
+     "t": 68.25,
+     "w": "modelo"
+    },
+    {
+     "t": 68.49,
+     "w": "que"
+    },
+    {
+     "t": 68.65,
+     "w": "une"
+    },
+    {
+     "t": 69.05,
+     "w": "las"
+    },
+    {
+     "t": 69.21,
+     "w": "fuentes."
+    }
+   ]
+  },
+  {
+   "cap": 3,
+   "ini": 70.09,
+   "fin": 72.25,
+   "palabras": [
+    {
+     "t": 70.09,
+     "w": "Al"
+    },
+    {
+     "t": 70.49,
+     "w": "unirlas"
+    },
+    {
+     "t": 71.05,
+     "w": "encontramos"
+    },
+    {
+     "t": 71.53,
+     "w": "cuatro"
+    },
+    {
+     "t": 71.77,
+     "w": "cosas."
+    }
+   ]
+  },
+  {
+   "cap": 3,
+   "ini": 72.25,
+   "fin": 74.89,
+   "palabras": [
+    {
+     "t": 72.25,
+     "w": "Hallazgo"
+    },
+    {
+     "t": 72.57,
+     "w": "1:"
+    },
+    {
+     "t": 72.89,
+     "w": "la"
+    },
+    {
+     "t": 73.21,
+     "w": "caída"
+    },
+    {
+     "t": 73.53,
+     "w": "de"
+    },
+    {
+     "t": 73.85,
+     "w": "hurtos"
+    },
+    {
+     "t": 74.17,
+     "w": "no"
+    },
+    {
+     "t": 74.25,
+     "w": "era"
+    },
+    {
+     "t": 74.41,
+     "w": "tan"
+    },
+    {
+     "t": 74.57,
+     "w": "grande."
+    }
+   ]
+  },
+  {
+   "cap": 3,
+   "ini": 74.89,
+   "fin": 78.73,
+   "palabras": [
+    {
+     "t": 74.89,
+     "w": "Hasta"
+    },
+    {
+     "t": 75.13,
+     "w": "el"
+    },
+    {
+     "t": 75.21,
+     "w": "2022"
+    },
+    {
+     "t": 75.77,
+     "w": "la"
+    },
+    {
+     "t": 76.03,
+     "w": "capa"
+    },
+    {
+     "t": 76.29,
+     "w": "abierta"
+    },
+    {
+     "t": 76.55,
+     "w": "contaba"
+    },
+    {
+     "t": 76.81,
+     "w": "con"
+    },
+    {
+     "t": 76.89,
+     "w": "más"
+    },
+    {
+     "t": 77.05,
+     "w": "del"
+    },
+    {
+     "t": 77.21,
+     "w": "doble"
+    },
+    {
+     "t": 77.48,
+     "w": "de"
+    },
+    {
+     "t": 77.74,
+     "w": "hurtos"
+    },
+    {
+     "t": 78.01,
+     "w": "que"
+    },
+    {
+     "t": 78.09,
+     "w": "la"
+    },
+    {
+     "t": 78.17,
+     "w": "Policía."
+    }
+   ]
+  },
+  {
+   "cap": 3,
+   "ini": 78.73,
+   "fin": 81.05,
+   "palabras": [
+    {
+     "t": 78.73,
+     "w": "Desde"
+    },
+    {
+     "t": 78.97,
+     "w": "el"
+    },
+    {
+     "t": 79.05,
+     "w": "2023"
+    },
+    {
+     "t": 79.69,
+     "w": "coincide"
+    },
+    {
+     "t": 80.25,
+     "w": "caso"
+    },
+    {
+     "t": 80.49,
+     "w": "por"
+    },
+    {
+     "t": 80.65,
+     "w": "caso."
+    }
+   ]
+  },
+  {
+   "cap": 3,
+   "ini": 81.05,
+   "fin": 83.21,
+   "palabras": [
+    {
+     "t": 81.05,
+     "w": "La"
+    },
+    {
+     "t": 81.21,
+     "w": "caída"
+    },
+    {
+     "t": 81.61,
+     "w": "estaba"
+    },
+    {
+     "t": 81.85,
+     "w": "en"
+    },
+    {
+     "t": 81.93,
+     "w": "la"
+    },
+    {
+     "t": 82.01,
+     "w": "serie,"
+    },
+    {
+     "t": 82.41,
+     "w": "no"
+    },
+    {
+     "t": 82.57,
+     "w": "en"
+    },
+    {
+     "t": 82.65,
+     "w": "la"
+    },
+    {
+     "t": 82.81,
+     "w": "calle."
+    }
+   ]
+  },
+  {
+   "cap": 3,
+   "ini": 83.21,
+   "fin": 84.49,
+   "palabras": [
+    {
+     "t": 83.21,
+     "w": "Hallazgo"
+    },
+    {
+     "t": 83.69,
+     "w": "número"
+    },
+    {
+     "t": 84.17,
+     "w": "2."
+    }
+   ]
+  },
+  {
+   "cap": 3,
+   "ini": 84.49,
+   "fin": 86.25,
+   "palabras": [
+    {
+     "t": 84.49,
+     "w": "Lo"
+    },
+    {
+     "t": 84.73,
+     "w": "que"
+    },
+    {
+     "t": 84.97,
+     "w": "sí"
+    },
+    {
+     "t": 85.21,
+     "w": "crece"
+    },
+    {
+     "t": 85.61,
+     "w": "es"
+    },
+    {
+     "t": 85.69,
+     "w": "la"
+    },
+    {
+     "t": 85.77,
+     "w": "violencia."
+    }
+   ]
+  },
+  {
+   "cap": 3,
+   "ini": 86.25,
+   "fin": 94.57,
+   "palabras": [
+    {
+     "t": 86.25,
+     "w": "En"
+    },
+    {
+     "t": 86.41,
+     "w": "las"
+    },
+    {
+     "t": 86.57,
+     "w": "series"
+    },
+    {
+     "t": 86.89,
+     "w": "que"
+    },
+    {
+     "t": 86.97,
+     "w": "validamos,"
+    },
+    {
+     "t": 87.37,
+     "w": "los"
+    },
+    {
+     "t": 87.45,
+     "w": "homicidios"
+    },
+    {
+     "t": 87.93,
+     "w": "suben"
+    },
+    {
+     "t": 88.25,
+     "w": "un"
+    },
+    {
+     "t": 88.41,
+     "w": "3,3 %"
+    },
+    {
+     "t": 89.37,
+     "w": "al"
+    },
+    {
+     "t": 89.53,
+     "w": "año,"
+    },
+    {
+     "t": 89.93,
+     "w": "los"
+    },
+    {
+     "t": 90.09,
+     "w": "delitos"
+    },
+    {
+     "t": 90.41,
+     "w": "sexuales"
+    },
+    {
+     "t": 90.89,
+     "w": "7,5 %,"
+    },
+    {
+     "t": 92.01,
+     "w": "y"
+    },
+    {
+     "t": 92.17,
+     "w": "la"
+    },
+    {
+     "t": 92.25,
+     "w": "violencia"
+    },
+    {
+     "t": 92.73,
+     "w": "intrafamiliar"
+    },
+    {
+     "t": 93.45,
+     "w": "un"
+    },
+    {
+     "t": 93.61,
+     "w": "11,2 %."
+    }
+   ]
+  },
+  {
+   "cap": 3,
+   "ini": 94.57,
+   "fin": 95.85,
+   "palabras": [
+    {
+     "t": 94.57,
+     "w": "Hallazgo"
+    },
+    {
+     "t": 95.05,
+     "w": "número"
+    },
+    {
+     "t": 95.53,
+     "w": "3."
+    }
+   ]
+  },
+  {
+   "cap": 3,
+   "ini": 95.85,
+   "fin": 97.45,
+   "palabras": [
+    {
+     "t": 95.85,
+     "w": "El"
+    },
+    {
+     "t": 95.93,
+     "w": "registro"
+    },
+    {
+     "t": 96.18,
+     "w": "no"
+    },
+    {
+     "t": 96.44,
+     "w": "ve"
+    },
+    {
+     "t": 96.69,
+     "w": "a"
+    },
+    {
+     "t": 96.94,
+     "w": "la"
+    },
+    {
+     "t": 97.2,
+     "w": "mayoría."
+    }
+   ]
+  },
+  {
+   "cap": 3,
+   "ini": 97.45,
+   "fin": 100.65,
+   "palabras": [
+    {
+     "t": 97.45,
+     "w": "De"
+    },
+    {
+     "t": 97.61,
+     "w": "cada"
+    },
+    {
+     "t": 97.85,
+     "w": "10"
+    },
+    {
+     "t": 98.09,
+     "w": "víctimas,"
+    },
+    {
+     "t": 98.65,
+     "w": "menos"
+    },
+    {
+     "t": 98.89,
+     "w": "de"
+    },
+    {
+     "t": 98.97,
+     "w": "dos"
+    },
+    {
+     "t": 99.21,
+     "w": "llegan"
+    },
+    {
+     "t": 99.53,
+     "w": "al"
+    },
+    {
+     "t": 99.69,
+     "w": "registro"
+    },
+    {
+     "t": 100.01,
+     "w": "oficial."
+    }
+   ]
+  },
+  {
+   "cap": 3,
+   "ini": 100.65,
+   "fin": 104.81,
+   "palabras": [
+    {
+     "t": 100.65,
+     "w": "Hallazgo"
+    },
+    {
+     "t": 101.17,
+     "w": "4:"
+    },
+    {
+     "t": 101.77,
+     "w": "El"
+    },
+    {
+     "t": 102.01,
+     "w": "miedo"
+    },
+    {
+     "t": 102.33,
+     "w": "no"
+    },
+    {
+     "t": 102.49,
+     "w": "explica"
+    },
+    {
+     "t": 102.81,
+     "w": "el"
+    },
+    {
+     "t": 102.89,
+     "w": "delito"
+    },
+    {
+     "t": 103.29,
+     "w": "registrado,"
+    },
+    {
+     "t": 103.77,
+     "w": "lo"
+    },
+    {
+     "t": 103.93,
+     "w": "explica"
+    },
+    {
+     "t": 104.25,
+     "w": "el"
+    },
+    {
+     "t": 104.33,
+     "w": "barrio."
+    }
+   ]
+  },
+  {
+   "cap": 3,
+   "ini": 104.81,
+   "fin": 109.21,
+   "palabras": [
+    {
+     "t": 104.81,
+     "w": "Ver"
+    },
+    {
+     "t": 105.13,
+     "w": "atracos"
+    },
+    {
+     "t": 105.53,
+     "w": "en"
+    },
+    {
+     "t": 105.61,
+     "w": "los"
+    },
+    {
+     "t": 105.77,
+     "w": "parques"
+    },
+    {
+     "t": 106.09,
+     "w": "sube"
+    },
+    {
+     "t": 106.33,
+     "w": "13"
+    },
+    {
+     "t": 106.57,
+     "w": "puntos"
+    },
+    {
+     "t": 107.05,
+     "w": "la"
+    },
+    {
+     "t": 107.13,
+     "w": "probabilidad"
+    },
+    {
+     "t": 107.85,
+     "w": "de"
+    },
+    {
+     "t": 108.09,
+     "w": "sentirse"
+    },
+    {
+     "t": 108.57,
+     "w": "insegura."
+    }
+   ]
+  },
+  {
+   "cap": 3,
+   "ini": 109.21,
+   "fin": 113.85,
+   "palabras": [
+    {
+     "t": 109.21,
+     "w": "Y"
+    },
+    {
+     "t": 109.37,
+     "w": "las"
+    },
+    {
+     "t": 109.53,
+     "w": "mujeres,"
+    },
+    {
+     "t": 109.85,
+     "w": "al"
+    },
+    {
+     "t": 110.01,
+     "w": "igual"
+    },
+    {
+     "t": 110.25,
+     "w": "que"
+    },
+    {
+     "t": 110.41,
+     "w": "la"
+    },
+    {
+     "t": 110.49,
+     "w": "victimización,"
+    },
+    {
+     "t": 111.21,
+     "w": "sienten"
+    },
+    {
+     "t": 111.53,
+     "w": "18"
+    },
+    {
+     "t": 111.93,
+     "w": "puntos"
+    },
+    {
+     "t": 112.25,
+     "w": "más"
+    },
+    {
+     "t": 112.41,
+     "w": "de"
+    },
+    {
+     "t": 112.49,
+     "w": "temor"
+    },
+    {
+     "t": 112.81,
+     "w": "al"
+    },
+    {
+     "t": 113.05,
+     "w": "acoso."
+    }
+   ]
+  },
+  {
+   "cap": 4,
+   "ini": 113.85,
+   "fin": 115.21,
+   "palabras": [
+    {
+     "t": 113.85,
+     "w": "¿Y"
+    },
+    {
+     "t": 114.12,
+     "w": "cómo"
+    },
+    {
+     "t": 114.39,
+     "w": "hicimos"
+    },
+    {
+     "t": 114.67,
+     "w": "todo"
+    },
+    {
+     "t": 114.94,
+     "w": "esto?"
+    }
+   ]
+  },
+  {
+   "cap": 4,
+   "ini": 115.46,
+   "fin": 118.98,
+   "palabras": [
+    {
+     "t": 115.46,
+     "w": "Paso"
+    },
+    {
+     "t": 115.78,
+     "w": "número"
+    },
+    {
+     "t": 116.1,
+     "w": "1,"
+    },
+    {
+     "t": 116.34,
+     "w": "juntar"
+    },
+    {
+     "t": 116.66,
+     "w": "18"
+    },
+    {
+     "t": 117.14,
+     "w": "fuentes"
+    },
+    {
+     "t": 117.54,
+     "w": "públicas"
+    },
+    {
+     "t": 117.94,
+     "w": "en"
+    },
+    {
+     "t": 118.1,
+     "w": "cuatro"
+    },
+    {
+     "t": 118.34,
+     "w": "grupos."
+    }
+   ]
+  },
+  {
+   "cap": 4,
+   "ini": 118.98,
+   "fin": 122.9,
+   "palabras": [
+    {
+     "t": 118.98,
+     "w": "Lo"
+    },
+    {
+     "t": 119.14,
+     "w": "que"
+    },
+    {
+     "t": 119.22,
+     "w": "se"
+    },
+    {
+     "t": 119.38,
+     "w": "registra,"
+    },
+    {
+     "t": 120.02,
+     "w": "lo"
+    },
+    {
+     "t": 120.18,
+     "w": "que"
+    },
+    {
+     "t": 120.26,
+     "w": "se"
+    },
+    {
+     "t": 120.34,
+     "w": "vive,"
+    },
+    {
+     "t": 120.82,
+     "w": "lo"
+    },
+    {
+     "t": 120.98,
+     "w": "que"
+    },
+    {
+     "t": 121.06,
+     "w": "se"
+    },
+    {
+     "t": 121.22,
+     "w": "siente"
+    },
+    {
+     "t": 121.62,
+     "w": "y"
+    },
+    {
+     "t": 121.78,
+     "w": "las"
+    },
+    {
+     "t": 121.94,
+     "w": "condiciones"
+    },
+    {
+     "t": 122.34,
+     "w": "del"
+    },
+    {
+     "t": 122.5,
+     "w": "barrio."
+    }
+   ]
+  },
+  {
+   "cap": 4,
+   "ini": 123.06,
+   "fin": 126.02,
+   "palabras": [
+    {
+     "t": 123.06,
+     "w": "Cada"
+    },
+    {
+     "t": 123.38,
+     "w": "fuente"
+    },
+    {
+     "t": 123.62,
+     "w": "con"
+    },
+    {
+     "t": 123.78,
+     "w": "una"
+    },
+    {
+     "t": 124.02,
+     "w": "nota"
+    },
+    {
+     "t": 124.26,
+     "w": "de"
+    },
+    {
+     "t": 124.34,
+     "w": "confiabilidad"
+    },
+    {
+     "t": 124.68,
+     "w": "de"
+    },
+    {
+     "t": 125.01,
+     "w": "0"
+    },
+    {
+     "t": 125.35,
+     "w": "a"
+    },
+    {
+     "t": 125.68,
+     "w": "100."
+    }
+   ]
+  },
+  {
+   "cap": 4,
+   "ini": 126.02,
+   "fin": 126.82,
+   "palabras": [
+    {
+     "t": 126.02,
+     "w": "Paso"
+    },
+    {
+     "t": 126.34,
+     "w": "número"
+    },
+    {
+     "t": 126.58,
+     "w": "2."
+    }
+   ]
+  },
+  {
+   "cap": 4,
+   "ini": 126.98,
+   "fin": 127.62,
+   "palabras": [
+    {
+     "t": 126.98,
+     "w": "Unir."
+    }
+   ]
+  },
+  {
+   "cap": 4,
+   "ini": 127.62,
+   "fin": 135.14,
+   "palabras": [
+    {
+     "t": 127.62,
+     "w": "La"
+    },
+    {
+     "t": 127.78,
+     "w": "misma"
+    },
+    {
+     "t": 128.26,
+     "w": "localidad"
+    },
+    {
+     "t": 128.74,
+     "w": "venía"
+    },
+    {
+     "t": 129.06,
+     "w": "escrita"
+    },
+    {
+     "t": 129.46,
+     "w": "de"
+    },
+    {
+     "t": 129.54,
+     "w": "10"
+    },
+    {
+     "t": 129.78,
+     "w": "maneras,"
+    },
+    {
+     "t": 130.34,
+     "w": "y"
+    },
+    {
+     "t": 130.5,
+     "w": "todo"
+    },
+    {
+     "t": 130.74,
+     "w": "pasó"
+    },
+    {
+     "t": 131.14,
+     "w": "a"
+    },
+    {
+     "t": 131.3,
+     "w": "un"
+    },
+    {
+     "t": 131.38,
+     "w": "código"
+    },
+    {
+     "t": 131.7,
+     "w": "oficial,"
+    },
+    {
+     "t": 132.18,
+     "w": "además"
+    },
+    {
+     "t": 132.5,
+     "w": "de"
+    },
+    {
+     "t": 132.58,
+     "w": "que"
+    },
+    {
+     "t": 132.74,
+     "w": "todo"
+    },
+    {
+     "t": 132.98,
+     "w": "en"
+    },
+    {
+     "t": 133.14,
+     "w": "tasas"
+    },
+    {
+     "t": 133.54,
+     "w": "por"
+    },
+    {
+     "t": 133.7,
+     "w": "cada"
+    },
+    {
+     "t": 133.86,
+     "w": "100.000"
+    },
+    {
+     "t": 134.42,
+     "w": "habitantes."
+    }
+   ]
+  },
+  {
+   "cap": 4,
+   "ini": 135.14,
+   "fin": 136.02,
+   "palabras": [
+    {
+     "t": 135.14,
+     "w": "Paso"
+    },
+    {
+     "t": 135.54,
+     "w": "número"
+    },
+    {
+     "t": 135.78,
+     "w": "3."
+    }
+   ]
+  },
+  {
+   "cap": 4,
+   "ini": 136.18,
+   "fin": 137.54,
+   "palabras": [
+    {
+     "t": 136.18,
+     "w": "Validar"
+    },
+    {
+     "t": 136.66,
+     "w": "antes"
+    },
+    {
+     "t": 136.9,
+     "w": "de"
+    },
+    {
+     "t": 136.98,
+     "w": "modelar."
+    }
+   ]
+  },
+  {
+   "cap": 4,
+   "ini": 137.54,
+   "fin": 142.42,
+   "palabras": [
+    {
+     "t": 137.54,
+     "w": "Cada"
+    },
+    {
+     "t": 137.81,
+     "w": "serie"
+    },
+    {
+     "t": 138.07,
+     "w": "contra"
+    },
+    {
+     "t": 138.66,
+     "w": "una"
+    },
+    {
+     "t": 138.82,
+     "w": "fuente"
+    },
+    {
+     "t": 139.3,
+     "w": "independiente"
+    },
+    {
+     "t": 140.02,
+     "w": "así"
+    },
+    {
+     "t": 140.34,
+     "w": "apareció"
+    },
+    {
+     "t": 140.74,
+     "w": "el"
+    },
+    {
+     "t": 140.9,
+     "w": "quiebre"
+    },
+    {
+     "t": 141.46,
+     "w": "de"
+    },
+    {
+     "t": 141.62,
+     "w": "2023."
+    }
+   ]
+  },
+  {
+   "cap": 4,
+   "ini": 142.66,
+   "fin": 143.7,
+   "palabras": [
+    {
+     "t": 142.66,
+     "w": "Paso"
+    },
+    {
+     "t": 142.98,
+     "w": "número"
+    },
+    {
+     "t": 143.3,
+     "w": "4."
+    }
+   ]
+  },
+  {
+   "cap": 4,
+   "ini": 143.7,
+   "fin": 144.34,
+   "palabras": [
+    {
+     "t": 143.7,
+     "w": "Modelar."
+    }
+   ]
+  },
+  {
+   "cap": 4,
+   "ini": 144.34,
+   "fin": 152.02,
+   "palabras": [
+    {
+     "t": 144.34,
+     "w": "Tendencias"
+    },
+    {
+     "t": 144.82,
+     "w": "para"
+    },
+    {
+     "t": 145.06,
+     "w": "ver"
+    },
+    {
+     "t": 145.22,
+     "w": "series"
+    },
+    {
+     "t": 145.7,
+     "w": "validadas,"
+    },
+    {
+     "t": 146.26,
+     "w": "tres"
+    },
+    {
+     "t": 146.42,
+     "w": "modelos"
+    },
+    {
+     "t": 146.74,
+     "w": "de"
+    },
+    {
+     "t": 146.82,
+     "w": "machine"
+    },
+    {
+     "t": 147.18,
+     "w": "learning"
+    },
+    {
+     "t": 147.54,
+     "w": "con"
+    },
+    {
+     "t": 147.7,
+     "w": "5.538"
+    },
+    {
+     "t": 149.06,
+     "w": "personas"
+    },
+    {
+     "t": 149.62,
+     "w": "y"
+    },
+    {
+     "t": 149.78,
+     "w": "perfiles"
+    },
+    {
+     "t": 150.26,
+     "w": "para"
+    },
+    {
+     "t": 150.42,
+     "w": "las"
+    },
+    {
+     "t": 150.58,
+     "w": "19"
+    },
+    {
+     "t": 151.14,
+     "w": "localidades."
+    }
+   ]
+  },
+  {
+   "cap": 4,
+   "ini": 152.02,
+   "fin": 152.98,
+   "palabras": [
+    {
+     "t": 152.02,
+     "w": "Paso"
+    },
+    {
+     "t": 152.42,
+     "w": "número"
+    },
+    {
+     "t": 152.74,
+     "w": "5."
+    }
+   ]
+  },
+  {
+   "cap": 4,
+   "ini": 153.06,
+   "fin": 157.3,
+   "palabras": [
+    {
+     "t": 153.06,
+     "w": "Poner"
+    },
+    {
+     "t": 153.38,
+     "w": "a"
+    },
+    {
+     "t": 153.46,
+     "w": "prueba"
+    },
+    {
+     "t": 153.78,
+     "w": "las"
+    },
+    {
+     "t": 153.86,
+     "w": "ocho"
+    },
+    {
+     "t": 154.18,
+     "w": "hipótesis,"
+    },
+    {
+     "t": 154.9,
+     "w": "cada"
+    },
+    {
+     "t": 155.14,
+     "w": "una"
+    },
+    {
+     "t": 155.3,
+     "w": "con"
+    },
+    {
+     "t": 155.46,
+     "w": "su"
+    },
+    {
+     "t": 155.62,
+     "w": "prueba,"
+    },
+    {
+     "t": 155.94,
+     "w": "2"
+    },
+    {
+     "t": 156.17,
+     "w": "se"
+    },
+    {
+     "t": 156.39,
+     "w": "sostienen"
+    },
+    {
+     "t": 156.62,
+     "w": "y"
+    },
+    {
+     "t": 156.85,
+     "w": "6"
+    },
+    {
+     "t": 157.07,
+     "w": "no."
+    }
+   ]
+  },
+  {
+   "cap": 4,
+   "ini": 157.46,
+   "fin": 164.1,
+   "palabras": [
+    {
+     "t": 157.46,
+     "w": "Una"
+    },
+    {
+     "t": 157.8,
+     "w": "parecía"
+    },
+    {
+     "t": 158.14,
+     "w": "un"
+    },
+    {
+     "t": 158.48,
+     "w": "hallazgo"
+    },
+    {
+     "t": 158.82,
+     "w": "con"
+    },
+    {
+     "t": 158.98,
+     "w": "una"
+    },
+    {
+     "t": 159.14,
+     "w": "correlación"
+    },
+    {
+     "t": 159.54,
+     "w": "del"
+    },
+    {
+     "t": 159.78,
+     "w": "0,72,"
+    },
+    {
+     "t": 160.98,
+     "w": "pero"
+    },
+    {
+     "t": 161.14,
+     "w": "al"
+    },
+    {
+     "t": 161.3,
+     "w": "controlar"
+    },
+    {
+     "t": 161.78,
+     "w": "el"
+    },
+    {
+     "t": 161.86,
+     "w": "delito"
+    },
+    {
+     "t": 162.26,
+     "w": "registrado"
+    },
+    {
+     "t": 162.74,
+     "w": "cayó"
+    },
+    {
+     "t": 163.14,
+     "w": "a"
+    },
+    {
+     "t": 163.3,
+     "w": "casi"
+    },
+    {
+     "t": 163.62,
+     "w": "cero."
+    }
+   ]
+  },
+  {
+   "cap": 4,
+   "ini": 164.1,
+   "fin": 165.94,
+   "palabras": [
+    {
+     "t": 164.1,
+     "w": "La"
+    },
+    {
+     "t": 164.26,
+     "w": "descartamos"
+    },
+    {
+     "t": 164.9,
+     "w": "y"
+    },
+    {
+     "t": 164.98,
+     "w": "lo"
+    },
+    {
+     "t": 165.14,
+     "w": "contamos."
+    }
+   ]
+  },
+  {
+   "cap": 5,
+   "ini": 165.94,
+   "fin": 168.28,
+   "palabras": [
+    {
+     "t": 165.94,
+     "w": "Con"
+    },
+    {
+     "t": 166.1,
+     "w": "todo"
+    },
+    {
+     "t": 166.26,
+     "w": "esto,"
+    },
+    {
+     "t": 166.5,
+     "w": "creamos"
+    },
+    {
+     "t": 166.79,
+     "w": "el"
+    },
+    {
+     "t": 167.09,
+     "w": "Índice"
+    },
+    {
+     "t": 167.38,
+     "w": "de"
+    },
+    {
+     "t": 167.6,
+     "w": "Brecha"
+    },
+    {
+     "t": 167.83,
+     "w": "de"
+    },
+    {
+     "t": 168.06,
+     "w": "Seguridad."
+    }
+   ]
+  },
+  {
+   "cap": 5,
+   "ini": 168.28,
+   "fin": 171.22,
+   "palabras": [
+    {
+     "t": 168.28,
+     "w": "Pone"
+    },
+    {
+     "t": 168.51,
+     "w": "en"
+    },
+    {
+     "t": 168.73,
+     "w": "la"
+    },
+    {
+     "t": 168.96,
+     "w": "misma"
+    },
+    {
+     "t": 169.18,
+     "w": "escala"
+    },
+    {
+     "t": 169.41,
+     "w": "el"
+    },
+    {
+     "t": 169.63,
+     "w": "miedo"
+    },
+    {
+     "t": 169.94,
+     "w": "y"
+    },
+    {
+     "t": 170.1,
+     "w": "el"
+    },
+    {
+     "t": 170.18,
+     "w": "delito"
+    },
+    {
+     "t": 170.58,
+     "w": "registrado."
+    }
+   ]
+  },
+  {
+   "cap": 5,
+   "ini": 171.25,
+   "fin": 174.37,
+   "palabras": [
+    {
+     "t": 171.25,
+     "w": "Donde"
+    },
+    {
+     "t": 171.57,
+     "w": "el"
+    },
+    {
+     "t": 171.65,
+     "w": "miedo"
+    },
+    {
+     "t": 171.97,
+     "w": "le"
+    },
+    {
+     "t": 172.05,
+     "w": "gana"
+    },
+    {
+     "t": 172.37,
+     "w": "de"
+    },
+    {
+     "t": 172.45,
+     "w": "lejos"
+    },
+    {
+     "t": 172.77,
+     "w": "a"
+    },
+    {
+     "t": 172.85,
+     "w": "lo"
+    },
+    {
+     "t": 173.01,
+     "w": "registrado"
+    },
+    {
+     "t": 173.57,
+     "w": "hay"
+    },
+    {
+     "t": 173.81,
+     "w": "brecha."
+    }
+   ]
+  },
+  {
+   "cap": 5,
+   "ini": 174.37,
+   "fin": 179.01,
+   "palabras": [
+    {
+     "t": 174.37,
+     "w": "Hoy"
+    },
+    {
+     "t": 174.61,
+     "w": "la"
+    },
+    {
+     "t": 174.77,
+     "w": "brecha"
+    },
+    {
+     "t": 175.17,
+     "w": "más"
+    },
+    {
+     "t": 175.25,
+     "w": "grande"
+    },
+    {
+     "t": 175.49,
+     "w": "está"
+    },
+    {
+     "t": 175.65,
+     "w": "en"
+    },
+    {
+     "t": 175.97,
+     "w": "Usme,"
+    },
+    {
+     "t": 176.29,
+     "w": "Ciudad"
+    },
+    {
+     "t": 176.61,
+     "w": "Bolívar,"
+    },
+    {
+     "t": 177.09,
+     "w": "Bosa,"
+    },
+    {
+     "t": 177.57,
+     "w": "Kennedy"
+    },
+    {
+     "t": 177.97,
+     "w": "y"
+    },
+    {
+     "t": 178.05,
+     "w": "San"
+    },
+    {
+     "t": 178.21,
+     "w": "Cristóbal."
+    }
+   ]
+  },
+  {
+   "cap": 5,
+   "ini": 179.01,
+   "fin": 183.25,
+   "palabras": [
+    {
+     "t": 179.01,
+     "w": "Y"
+    },
+    {
+     "t": 179.17,
+     "w": "todo"
+    },
+    {
+     "t": 179.33,
+     "w": "esto"
+    },
+    {
+     "t": 179.57,
+     "w": "queda"
+    },
+    {
+     "t": 179.89,
+     "w": "en"
+    },
+    {
+     "t": 179.97,
+     "w": "un"
+    },
+    {
+     "t": 180.05,
+     "w": "visor"
+    },
+    {
+     "t": 180.37,
+     "w": "web"
+    },
+    {
+     "t": 180.69,
+     "w": "con"
+    },
+    {
+     "t": 180.85,
+     "w": "mapas,"
+    },
+    {
+     "t": 181.25,
+     "w": "simuladores"
+    },
+    {
+     "t": 181.81,
+     "w": "y"
+    },
+    {
+     "t": 181.89,
+     "w": "datos"
+    },
+    {
+     "t": 182.21,
+     "w": "para"
+    },
+    {
+     "t": 182.37,
+     "w": "descargar."
+    }
+   ]
+  },
+  {
+   "cap": 6,
+   "ini": 183.25,
+   "fin": 186.77,
+   "palabras": [
+    {
+     "t": 183.25,
+     "w": "Por"
+    },
+    {
+     "t": 183.41,
+     "w": "eso"
+    },
+    {
+     "t": 183.65,
+     "w": "proponemos"
+    },
+    {
+     "t": 184.13,
+     "w": "cuatro"
+    },
+    {
+     "t": 184.37,
+     "w": "frentes"
+    },
+    {
+     "t": 184.69,
+     "w": "de"
+    },
+    {
+     "t": 184.77,
+     "w": "trabajo"
+    },
+    {
+     "t": 185.01,
+     "w": "para"
+    },
+    {
+     "t": 185.09,
+     "w": "la"
+    },
+    {
+     "t": 185.43,
+     "w": "Alcaldía"
+    },
+    {
+     "t": 185.76,
+     "w": "Mayor"
+    },
+    {
+     "t": 186.1,
+     "w": "de"
+    },
+    {
+     "t": 186.43,
+     "w": "Bogotá."
+    }
+   ]
+  },
+  {
+   "cap": 6,
+   "ini": 186.77,
+   "fin": 189.01,
+   "palabras": [
+    {
+     "t": 186.77,
+     "w": "Frente"
+    },
+    {
+     "t": 187.17,
+     "w": "número"
+    },
+    {
+     "t": 187.41,
+     "w": "uno,"
+    },
+    {
+     "t": 187.81,
+     "w": "validar"
+    },
+    {
+     "t": 188.21,
+     "w": "antes"
+    },
+    {
+     "t": 188.45,
+     "w": "de"
+    },
+    {
+     "t": 188.53,
+     "w": "decidir."
+    }
+   ]
+  },
+  {
+   "cap": 6,
+   "ini": 189.17,
+   "fin": 195.25,
+   "palabras": [
+    {
+     "t": 189.17,
+     "w": "Documentar"
+    },
+    {
+     "t": 189.46,
+     "w": "el"
+    },
+    {
+     "t": 189.76,
+     "w": "cambio"
+    },
+    {
+     "t": 190.13,
+     "w": "del"
+    },
+    {
+     "t": 190.29,
+     "w": "2023,"
+    },
+    {
+     "t": 191.01,
+     "w": "publicar"
+    },
+    {
+     "t": 191.41,
+     "w": "la"
+    },
+    {
+     "t": 191.73,
+     "w": "serie"
+    },
+    {
+     "t": 192.05,
+     "w": "empalmada"
+    },
+    {
+     "t": 192.45,
+     "w": "y"
+    },
+    {
+     "t": 192.61,
+     "w": "contrastar"
+    },
+    {
+     "t": 193.09,
+     "w": "cada"
+    },
+    {
+     "t": 193.25,
+     "w": "cifra"
+    },
+    {
+     "t": 193.57,
+     "w": "con"
+    },
+    {
+     "t": 193.73,
+     "w": "la"
+    },
+    {
+     "t": 193.81,
+     "w": "Policía"
+    },
+    {
+     "t": 194.13,
+     "w": "y"
+    },
+    {
+     "t": 194.29,
+     "w": "Medicina"
+    },
+    {
+     "t": 194.77,
+     "w": "Legal."
+    }
+   ]
+  },
+  {
+   "cap": 6,
+   "ini": 195.25,
+   "fin": 197.49,
+   "palabras": [
+    {
+     "t": 195.25,
+     "w": "Frente"
+    },
+    {
+     "t": 195.65,
+     "w": "número"
+    },
+    {
+     "t": 195.89,
+     "w": "2,"
+    },
+    {
+     "t": 196.13,
+     "w": "medir"
+    },
+    {
+     "t": 196.45,
+     "w": "lo"
+    },
+    {
+     "t": 196.61,
+     "w": "que"
+    },
+    {
+     "t": 196.69,
+     "w": "no"
+    },
+    {
+     "t": 196.77,
+     "w": "se"
+    },
+    {
+     "t": 196.93,
+     "w": "denuncia."
+    }
+   ]
+  },
+  {
+   "cap": 6,
+   "ini": 197.49,
+   "fin": 202.61,
+   "palabras": [
+    {
+     "t": 197.49,
+     "w": "Una"
+    },
+    {
+     "t": 197.73,
+     "w": "encuesta"
+    },
+    {
+     "t": 198.05,
+     "w": "de"
+    },
+    {
+     "t": 198.21,
+     "w": "victimización"
+    },
+    {
+     "t": 198.77,
+     "w": "por"
+    },
+    {
+     "t": 198.93,
+     "w": "la"
+    },
+    {
+     "t": 199.09,
+     "w": "UPL"
+    },
+    {
+     "t": 199.73,
+     "w": "y"
+    },
+    {
+     "t": 199.89,
+     "w": "repartir"
+    },
+    {
+     "t": 200.37,
+     "w": "recursos"
+    },
+    {
+     "t": 200.69,
+     "w": "por"
+    },
+    {
+     "t": 200.85,
+     "w": "víctimas,"
+    },
+    {
+     "t": 201.33,
+     "w": "no"
+    },
+    {
+     "t": 201.49,
+     "w": "solo"
+    },
+    {
+     "t": 201.73,
+     "w": "por"
+    },
+    {
+     "t": 201.81,
+     "w": "denuncias."
+    }
+   ]
+  },
+  {
+   "cap": 6,
+   "ini": 202.61,
+   "fin": 208.13,
+   "palabras": [
+    {
+     "t": 202.61,
+     "w": "Frente"
+    },
+    {
+     "t": 203.01,
+     "w": "número"
+    },
+    {
+     "t": 203.17,
+     "w": "tres,"
+    },
+    {
+     "t": 203.49,
+     "w": "barrios"
+    },
+    {
+     "t": 203.89,
+     "w": "que"
+    },
+    {
+     "t": 203.97,
+     "w": "se"
+    },
+    {
+     "t": 204.29,
+     "w": "sientan"
+    },
+    {
+     "t": 204.61,
+     "w": "seguros,"
+    },
+    {
+     "t": 204.93,
+     "w": "parques"
+    },
+    {
+     "t": 205.25,
+     "w": "sin"
+    },
+    {
+     "t": 205.41,
+     "w": "atracos,"
+    },
+    {
+     "t": 205.97,
+     "w": "mediación"
+    },
+    {
+     "t": 206.26,
+     "w": "entre"
+    },
+    {
+     "t": 206.56,
+     "w": "vecinos"
+    },
+    {
+     "t": 206.93,
+     "w": "y"
+    },
+    {
+     "t": 207.01,
+     "w": "mejor"
+    },
+    {
+     "t": 207.33,
+     "w": "alumbrado."
+    }
+   ]
+  },
+  {
+   "cap": 6,
+   "ini": 208.13,
+   "fin": 209.81,
+   "palabras": [
+    {
+     "t": 208.13,
+     "w": "Empezando"
+    },
+    {
+     "t": 208.69,
+     "w": "por"
+    },
+    {
+     "t": 208.77,
+     "w": "estas"
+    },
+    {
+     "t": 209.01,
+     "w": "cinco"
+    },
+    {
+     "t": 209.33,
+     "w": "localidades."
+    }
+   ]
+  },
+  {
+   "cap": 6,
+   "ini": 209.81,
+   "fin": 216.53,
+   "palabras": [
+    {
+     "t": 209.81,
+     "w": "Si"
+    },
+    {
+     "t": 209.97,
+     "w": "se"
+    },
+    {
+     "t": 210.05,
+     "w": "mejora"
+    },
+    {
+     "t": 210.53,
+     "w": "la"
+    },
+    {
+     "t": 210.61,
+     "w": "mitad"
+    },
+    {
+     "t": 210.85,
+     "w": "de"
+    },
+    {
+     "t": 210.93,
+     "w": "las"
+    },
+    {
+     "t": 211.09,
+     "w": "zonas"
+    },
+    {
+     "t": 211.41,
+     "w": "y"
+    },
+    {
+     "t": 211.57,
+     "w": "de"
+    },
+    {
+     "t": 211.65,
+     "w": "los"
+    },
+    {
+     "t": 211.81,
+     "w": "parques,"
+    },
+    {
+     "t": 212.29,
+     "w": "el"
+    },
+    {
+     "t": 212.45,
+     "w": "modelo"
+    },
+    {
+     "t": 212.77,
+     "w": "estima"
+    },
+    {
+     "t": 213.13,
+     "w": "unas"
+    },
+    {
+     "t": 213.49,
+     "w": "467"
+    },
+    {
+     "t": 214.53,
+     "w": "mil"
+    },
+    {
+     "t": 214.77,
+     "w": "personas"
+    },
+    {
+     "t": 215.41,
+     "w": "menos"
+    },
+    {
+     "t": 215.73,
+     "w": "con"
+    },
+    {
+     "t": 215.97,
+     "w": "miedo."
+    }
+   ]
+  },
+  {
+   "cap": 6,
+   "ini": 216.53,
+   "fin": 218.93,
+   "palabras": [
+    {
+     "t": 216.53,
+     "w": "Frente"
+    },
+    {
+     "t": 216.93,
+     "w": "número"
+    },
+    {
+     "t": 217.25,
+     "w": "4,"
+    },
+    {
+     "t": 217.57,
+     "w": "dos"
+    },
+    {
+     "t": 217.73,
+     "w": "rutas"
+    },
+    {
+     "t": 218.13,
+     "w": "para"
+    },
+    {
+     "t": 218.29,
+     "w": "las"
+    },
+    {
+     "t": 218.37,
+     "w": "mujeres."
+    }
+   ]
+  },
+  {
+   "cap": 6,
+   "ini": 218.93,
+   "fin": 226.85,
+   "palabras": [
+    {
+     "t": 218.93,
+     "w": "En"
+    },
+    {
+     "t": 219.09,
+     "w": "la"
+    },
+    {
+     "t": 219.17,
+     "w": "calle"
+    },
+    {
+     "t": 219.57,
+     "w": "rutas"
+    },
+    {
+     "t": 219.89,
+     "w": "nocturnas"
+    },
+    {
+     "t": 220.37,
+     "w": "y"
+    },
+    {
+     "t": 220.45,
+     "w": "denuncia"
+    },
+    {
+     "t": 220.85,
+     "w": "fácil"
+    },
+    {
+     "t": 221.25,
+     "w": "del"
+    },
+    {
+     "t": 221.49,
+     "w": "acoso"
+    },
+    {
+     "t": 221.97,
+     "w": "en"
+    },
+    {
+     "t": 222.05,
+     "w": "la"
+    },
+    {
+     "t": 222.31,
+     "w": "casa,"
+    },
+    {
+     "t": 222.56,
+     "w": "detección"
+    },
+    {
+     "t": 222.82,
+     "w": "en"
+    },
+    {
+     "t": 223.07,
+     "w": "colegios"
+    },
+    {
+     "t": 223.33,
+     "w": "y"
+    },
+    {
+     "t": 223.49,
+     "w": "centros"
+    },
+    {
+     "t": 223.81,
+     "w": "de"
+    },
+    {
+     "t": 223.89,
+     "w": "salud,"
+    },
+    {
+     "t": 224.37,
+     "w": "porque"
+    },
+    {
+     "t": 224.69,
+     "w": "ocho"
+    },
+    {
+     "t": 225.01,
+     "w": "de"
+    },
+    {
+     "t": 225.09,
+     "w": "cada"
+    },
+    {
+     "t": 225.33,
+     "w": "10"
+    },
+    {
+     "t": 225.57,
+     "w": "casos"
+    },
+    {
+     "t": 225.89,
+     "w": "pasan"
+    },
+    {
+     "t": 226.29,
+     "w": "en"
+    },
+    {
+     "t": 226.37,
+     "w": "la"
+    },
+    {
+     "t": 226.45,
+     "w": "vivienda."
+    }
+   ]
+  },
+  {
+   "cap": 7,
+   "ini": 227.16,
+   "fin": 230.76,
+   "palabras": [
+    {
+     "t": 227.16,
+     "w": "El"
+    },
+    {
+     "t": 227.4,
+     "w": "miedo"
+    },
+    {
+     "t": 227.8,
+     "w": "no"
+    },
+    {
+     "t": 227.88,
+     "w": "se"
+    },
+    {
+     "t": 227.96,
+     "w": "contradice"
+    },
+    {
+     "t": 228.52,
+     "w": "con"
+    },
+    {
+     "t": 228.6,
+     "w": "datos,"
+    },
+    {
+     "t": 229.0,
+     "w": "se"
+    },
+    {
+     "t": 229.08,
+     "w": "contradice"
+    },
+    {
+     "t": 229.56,
+     "w": "con"
+    },
+    {
+     "t": 229.64,
+     "w": "una"
+    },
+    {
+     "t": 229.8,
+     "w": "serie"
+    },
+    {
+     "t": 230.12,
+     "w": "sin"
+    },
+    {
+     "t": 230.28,
+     "w": "validar."
+    }
+   ]
+  },
+  {
+   "cap": 7,
+   "ini": 230.76,
+   "fin": 235.32,
+   "palabras": [
+    {
+     "t": 230.76,
+     "w": "Bogotá"
+    },
+    {
+     "t": 231.4,
+     "w": "ya"
+    },
+    {
+     "t": 231.56,
+     "w": "produce"
+    },
+    {
+     "t": 231.88,
+     "w": "la"
+    },
+    {
+     "t": 232.04,
+     "w": "información"
+    },
+    {
+     "t": 232.28,
+     "w": "para"
+    },
+    {
+     "t": 232.44,
+     "w": "cerrar"
+    },
+    {
+     "t": 232.76,
+     "w": "esta"
+    },
+    {
+     "t": 232.92,
+     "w": "brecha,"
+    },
+    {
+     "t": 233.4,
+     "w": "solo"
+    },
+    {
+     "t": 233.56,
+     "w": "hay"
+    },
+    {
+     "t": 233.64,
+     "w": "que"
+    },
+    {
+     "t": 233.8,
+     "w": "validarla"
+    },
+    {
+     "t": 234.2,
+     "w": "y"
+    },
+    {
+     "t": 234.36,
+     "w": "leerla"
+    },
+    {
+     "t": 234.84,
+     "w": "junta."
+    }
+   ]
+  },
+  {
+   "cap": 7,
+   "ini": 235.32,
+   "fin": 236.36,
+   "palabras": [
+    {
+     "t": 235.32,
+     "w": "Somos"
+    },
+    {
+     "t": 235.58,
+     "w": "The"
+    },
+    {
+     "t": 235.84,
+     "w": "data"
+    },
+    {
+     "t": 236.1,
+     "w": "squad."
+    }
+   ]
+  }
+ ]
+}

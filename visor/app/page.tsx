@@ -34,7 +34,8 @@ export default function Historia() {
             </p>
             <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
               <a className="boton blanco" href="#historia">Empezar la historia ↓</a>
-              <Link className="boton sec" href="/presentar" style={{ color: "#fff", borderColor: "rgba(255,255,255,.7)" }}>▶ Ver la presentación</Link>
+              <Link className="boton sec" href="/video" style={{ color: "#fff", borderColor: "rgba(255,255,255,.7)" }}>▶ Ver el video (4 min)</Link>
+              <Link className="boton sec" href="/presentar" style={{ color: "#fff", borderColor: "rgba(255,255,255,.7)" }}>Ver la presentación</Link>
             </div>
           </div>
           <figure style={{ margin: 0, display: "grid", gap: 8, justifyItems: "center" }}>

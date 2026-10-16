@@ -13,6 +13,13 @@ const ITEMS: Item[] = [
     requisito: "TdR 11.2",
   },
   {
+    titulo: "Video explicativo (4 minutos)",
+    detalle: "Qué dice cada fuente, qué encontramos al cruzarlas, cómo lo hicimos y los 4 frentes de trabajo, con animaciones, personajes y la voz del equipo. En el visor va con capítulos, explicación de cada parte y transcripción sincronizada.",
+    ver: "/video",
+    descargar: [{ href: "/video/el-miedo-que-no-baja.mp4", formato: "Video (.mp4)" }],
+    requisito: "Adicional",
+  },
+  {
     titulo: "Informe técnico completo",
     detalle: "15 páginas: problema e hipótesis, las 18 fuentes con su score, validación del registro, métodos, resultados con intervalos, las ocho hipótesis con su veredicto (incluida la que corregimos nosotros), estrategias, limitaciones y la trazabilidad de cada cifra.",
     ver: "/entregables/Informe_tecnico_El_miedo_que_no_baja.pdf",
