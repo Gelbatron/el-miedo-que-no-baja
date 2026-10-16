@@ -1,3 +1,5 @@
+import { Equipo } from "@/components/Equipo";
+
 export const metadata = { title: "Entregables · El miedo que no baja" };
 
 const REPO = "https://github.com/rlondono1620-max/el-miedo-que-no-baja";
@@ -14,9 +16,15 @@ const ITEMS: Item[] = [
   },
   {
     titulo: "Video explicativo (4 minutos)",
-    detalle: "Qué dice cada fuente, qué encontramos al cruzarlas, cómo lo hicimos y los 4 frentes de trabajo, con animaciones, personajes y la voz del equipo. En el visor va con capítulos, explicación de cada parte y transcripción sincronizada.",
+    detalle: "Qué dice cada fuente, qué encontramos al cruzarlas, cómo lo hicimos y los 4 frentes de trabajo, con animaciones, personajes y la narración de Rafael Londoño. En el visor va con capítulos, explicación de cada parte y transcripción sincronizada.",
     ver: "/video",
     descargar: [{ href: "/video/el-miedo-que-no-baja.mp4", formato: "Video (.mp4)" }],
+    requisito: "Adicional",
+  },
+  {
+    titulo: "Modelos: especificación e incertidumbre",
+    detalle: "Para el jurado técnico: cada componente con la pregunta que responde, la especificación (con su ecuación), cómo se mide la incertidumbre, el resultado y sus límites.",
+    ver: "/modelos",
     requisito: "Adicional",
   },
   {
@@ -100,7 +108,7 @@ export default function Entregables() {
           </article>
         ))}
       </section>
-      <p className="nota">El repositorio es privado mientras se prepara la entrega; se habilita para el jurado el 16 de octubre.</p>
+      <Equipo />
     </div>
   );
 }

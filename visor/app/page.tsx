@@ -6,6 +6,7 @@ import { F } from "@/lib/frentes";
 import { MapaDoble } from "@/components/MapaDoble";
 import { Icono } from "@/components/Iconos";
 import { Lineas } from "@/components/Graficos";
+import { Equipo } from "@/components/Equipo";
 
 export default function Historia() {
   const a = R.ame_hechos, w = R.emv_mujer_ame;
@@ -165,6 +166,13 @@ export default function Historia() {
             </div>
           ))}
         </div>
+      </section>
+
+      <section className="contenedor" style={{ paddingBlock: "48px 72px", display: "grid", gap: 18 }}>
+        <Equipo titulo="Quiénes lo hicimos" />
+        <p className="nota" style={{ textAlign: "center" }}>
+          ¿Jurado técnico? La especificación de cada modelo, su incertidumbre y sus límites están en <Link href="/modelos">Modelos</Link>; el video de 4 minutos, en <Link href="/video">Video</Link>.
+        </p>
       </section>
     </>
   );

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { EnSimple } from "@/components/EnSimple";
 import { D, fmt, pval } from "@/lib/datos";
 import { COLOR_SEMAFORO, F } from "@/lib/frentes";
@@ -24,6 +25,7 @@ export default function Metodologia() {
         <p className="antetitulo">Trazabilidad: problema → datos → método → resultados → recomendaciones</p>
         <h1 style={{ fontSize: "clamp(2rem,4vw,3rem)" }}>Cómo se hizo</h1>
         <EnSimple>Cómo lo hicimos, paso a paso: qué fuentes usamos, cómo las limpiamos y unimos, qué modelos corrimos y qué pruebas hicimos para no engañarnos.</EnSimple>
+        <p className="bajada">Para el jurado técnico: la especificación de cada modelo, con su ecuación, su incertidumbre y sus límites, está en <Link href="/modelos">Modelos</Link>.</p>
         <p className="bajada">{F.confiabilidad.length} fuentes públicas integradas por el código oficial de localidad, con la población de la SDP como denominador. Todo el proceso está en el notebook del repositorio y se puede repetir desde cero.</p>
       </header>
 

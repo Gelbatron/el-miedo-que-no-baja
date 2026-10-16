@@ -1,6 +1,7 @@
 import { EnSimple } from "@/components/EnSimple";
 import { VideoGuiado, type DatosVideo } from "@/components/VideoGuiado";
 import datos from "@/data/video.json";
+import { Equipo } from "@/components/Equipo";
 
 export const metadata = { title: "Video · El miedo que no baja" };
 
@@ -18,6 +19,7 @@ export default function Video() {
         </EnSimple>
       </header>
       <VideoGuiado datos={d} />
+      <Equipo />
       <p className="vg-pie">
         Video del equipo The data squad para el Bogotá DataJam 2026; no es una pieza oficial de la Alcaldía. Las cifras salen del repositorio del proyecto y
         cada una está en la página del visor que enlaza su capítulo. <a href={d.video} download>Descargar el video (MP4)</a>
