@@ -125,6 +125,7 @@ python docs/pitch/capturar_presentacion.py   # con el visor corriendo en local (
 
 - **Descarga de datos:** `src/fuentes.py` baja cada fuente desde su servicio oficial y la deja en `data/crudos/`, con registro de URL, fecha y sha1. Si el archivo ya existe, usa la copia local, así que el análisis corre sin red con los datos incluidos en el repositorio.
 - **Resultados idénticos:** las semillas están fijas, así que dos corridas dan las mismas cifras.
+- **Sin instalar nada:** [`notebooks/el_miedo_que_no_baja_colab.ipynb`](notebooks/el_miedo_que_no_baja_colab.ipynb) abre en Google Colab, clona el repositorio, instala las dependencias y corre el mismo análisis ([abrir en Colab](https://colab.research.google.com/github/rlondono1620-max/el-miedo-que-no-baja/blob/main/notebooks/el_miedo_que_no_baja_colab.ipynb)).
 - **En Windows:** clona en una ruta corta (por ejemplo `C:\proyectos\el-miedo-que-no-baja`) o habilita las rutas largas del sistema. Algunas dependencias, como scikit-learn, tienen rutas internas muy profundas y su instalación falla en silencio si se supera el límite de 260 caracteres.
 
 ## 6. Despliegue del visor
