@@ -2,7 +2,7 @@ import { Equipo } from "@/components/Equipo";
 
 export const metadata = { title: "Entregables · El miedo que no baja" };
 
-const REPO = "https://github.com/rlondono1620-max/el-miedo-que-no-baja";
+const REPO = "https://github.com/Gelbatron/el-miedo-que-no-baja";
 
 type Item = { titulo: string; detalle: string; ver?: string; descargar?: { href: string; formato: string }[]; requisito: string };
 
@@ -12,7 +12,7 @@ const ITEMS: Item[] = [
     detalle: "Notebook de Python ejecutado de punta a punta: auditoría de datos, descarga desde los servicios oficiales, limpieza con bitácora, validación del registro contra la Policía y Medicina Legal, integración de 18 fuentes con su score de confiabilidad, modelos estadísticos y de machine learning, índice y exportes.",
     ver: "/entregables/notebook_el_miedo_que_no_baja.html",
     descargar: [{ href: `${REPO}/blob/main/notebooks/el_miedo_que_no_baja.ipynb`, formato: ".ipynb en GitHub" },
-      { href: "https://colab.research.google.com/github/rlondono1620-max/el-miedo-que-no-baja/blob/main/notebooks/el_miedo_que_no_baja_colab.ipynb", formato: "Abrir en Colab" }],
+      { href: "https://colab.research.google.com/github/Gelbatron/el-miedo-que-no-baja/blob/main/notebooks/el_miedo_que_no_baja_colab.ipynb", formato: "Abrir en Colab" }],
     requisito: "TdR 11.2",
   },
   {

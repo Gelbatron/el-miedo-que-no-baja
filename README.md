@@ -3,11 +3,11 @@
 **Inseguridad percibida y delito registrado en Bogotá.**
 Bogotá DataJam Edición 5 (2026) · Equipo #16 **The data squad**: Brandow Brusly León Rodríguez, Samuel Esteban Riveros Cubides y Rafael Estiven Londoño Camacho, estudiantes de Ciencia de Datos.
 
-> **Todo en un solo lugar:** [`entregables/`](entregables/) reúne en carpetas numeradas el Power BI, el análisis en Python y Colab, el informe técnico (PDF y Word), la nota técnica, el formulario, el Excel, el video y el pitch. [Video de 4 minutos](https://el-miedo-que-no-baja.vercel.app/video) · [Modelos](https://el-miedo-que-no-baja.vercel.app/modelos) · [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/rlondono1620-max/el-miedo-que-no-baja/blob/main/notebooks/el_miedo_que_no_baja_colab.ipynb)
+> **Todo en un solo lugar:** [`entregables/`](entregables/) reúne en carpetas numeradas el Power BI, el análisis en Python y Colab, el informe técnico (PDF y Word), la nota técnica, el formulario, el Excel, el video y el pitch. [Video de 4 minutos](https://el-miedo-que-no-baja.vercel.app/video) · [Modelos](https://el-miedo-que-no-baja.vercel.app/modelos) · [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Gelbatron/el-miedo-que-no-baja/blob/main/notebooks/el_miedo_que_no_baja_colab.ipynb)
 
 | Entregable | Dónde |
 |---|---|
-| Notebook reproducible | [`notebooks/el_miedo_que_no_baja.ipynb`](notebooks/el_miedo_que_no_baja.ipynb) (ejecutado, con salidas) · en Colab: [`notebooks/el_miedo_que_no_baja_colab.ipynb`](notebooks/el_miedo_que_no_baja_colab.ipynb) (análisis completo, código sin comentarios) y [`notebooks/colab_reproducir.ipynb`](notebooks/colab_reproducir.ipynb) (reproducción rápida) |
+| Notebook reproducible | [`notebooks/el_miedo_que_no_baja.ipynb`](notebooks/el_miedo_que_no_baja.ipynb) (ejecutado, con salidas) · en Colab: [`notebooks/el_miedo_que_no_baja_colab.ipynb`](notebooks/el_miedo_que_no_baja_colab.ipynb) (análisis completo, con el código comentado) y [`notebooks/colab_reproducir.ipynb`](notebooks/colab_reproducir.ipynb) (reproducción rápida) |
 | Visor interpretativo (web) | https://el-miedo-que-no-baja.vercel.app (clave en el correo de entrega) · código en [`visor/`](visor/) |
 | Tablero Power BI | [`entregables/1_Power_BI/ElMiedoQueNoBaja.pbix`](entregables/1_Power_BI/) · proyecto editable en [`powerbi/`](powerbi/) |
 | Libro de datos en Excel | [`docs/Libro_de_datos_El_miedo_que_no_baja.xlsx`](docs/) (tablas, fórmulas vivas y simulador) |
@@ -108,7 +108,7 @@ La localidad de cada registro de la EMV no viene en el archivo publicado. Se rec
 Requisitos: Python 3.11 o superior. El visor necesita además Node 20 o superior.
 
 ```bash
-git clone https://github.com/rlondono1620-max/el-miedo-que-no-baja.git && cd el-miedo-que-no-baja
+git clone https://github.com/Gelbatron/el-miedo-que-no-baja.git && cd el-miedo-que-no-baja
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
@@ -125,7 +125,7 @@ python docs/pitch/capturar_presentacion.py   # con el visor corriendo en local (
 
 - **Descarga de datos:** `src/fuentes.py` baja cada fuente desde su servicio oficial y la deja en `data/crudos/`, con registro de URL, fecha y sha1. Si el archivo ya existe, usa la copia local, así que el análisis corre sin red con los datos incluidos en el repositorio.
 - **Resultados idénticos:** las semillas están fijas, así que dos corridas dan las mismas cifras.
-- **Sin instalar nada:** [`notebooks/el_miedo_que_no_baja_colab.ipynb`](notebooks/el_miedo_que_no_baja_colab.ipynb) abre en Google Colab, clona el repositorio, instala las dependencias y corre el mismo análisis ([abrir en Colab](https://colab.research.google.com/github/rlondono1620-max/el-miedo-que-no-baja/blob/main/notebooks/el_miedo_que_no_baja_colab.ipynb)).
+- **Sin instalar nada:** [`notebooks/el_miedo_que_no_baja_colab.ipynb`](notebooks/el_miedo_que_no_baja_colab.ipynb) abre en Google Colab, clona el repositorio, instala las dependencias y corre el mismo análisis ([abrir en Colab](https://colab.research.google.com/github/Gelbatron/el-miedo-que-no-baja/blob/main/notebooks/el_miedo_que_no_baja_colab.ipynb)).
 - **En Windows:** clona en una ruta corta (por ejemplo `C:\proyectos\el-miedo-que-no-baja`) o habilita las rutas largas del sistema. Algunas dependencias, como scikit-learn, tienen rutas internas muy profundas y su instalación falla en silencio si se supera el límite de 260 caracteres.
 
 ## 6. Despliegue del visor

@@ -8,11 +8,21 @@ visor/.vercel/
 visor/.env*.local
 visor/next-env.d.ts
 visor/*.tsbuildinfo
-powerbi/**/.pbi/cache.abf
-powerbi/**/.pbi/localSettings.json
+# cachés locales de Power BI (en powerbi/ y en la copia de entregables/)
+**/.pbi/cache.abf
+**/.pbi/localSettings.json
 
 # respaldo local del tablero antes del cambio de colores
 powerbi/_build/*_respaldo.pbix
 
 # crudos de más de 100 MB (límite de GitHub): src/fuentes_genero.py los vuelve a bajar de la URL oficial
 data/crudos/sds_sivim_violencia_2013_2026.csv
+
+# secretos: variables de entorno y configuración de Vercel en cualquier carpeta
+.env
+.env.*
+**/.vercel/
+
+# el correo de entrega lleva la clave del visor: solo local
+Correo_listo_para_enviar.txt
+**/Correo_listo_para_enviar.txt
