@@ -30,7 +30,7 @@ const ITEMS: Item[] = [
   },
   {
     titulo: "Informe técnico completo",
-    detalle: "15 páginas: problema e hipótesis, las 18 fuentes con su score, validación del registro, métodos, resultados con intervalos, las ocho hipótesis con su veredicto (incluida la que corregimos nosotros), estrategias, limitaciones y la trazabilidad de cada cifra.",
+    detalle: "16 páginas: problema e hipótesis, las 18 fuentes con su score, validación del registro, métodos, resultados con intervalos, las ocho hipótesis con su veredicto (incluida la que corregimos nosotros), estrategias, limitaciones y la trazabilidad de cada cifra.",
     ver: "/entregables/Informe_tecnico_El_miedo_que_no_baja.pdf",
     descargar: [{ href: "/entregables/Informe_tecnico_El_miedo_que_no_baja.docx", formato: "Word (.docx)" }],
     requisito: "Adicional",

@@ -10,7 +10,7 @@ El código fuente está en el resto del repositorio.
 |---|---|---|
 | [`1_Power_BI/`](1_Power_BI/) | `ElMiedoQueNoBaja.pbix` (abre con los datos cargados) y el proyecto editable `.pbip` con su modelo, informe, datos y tema | 11.3 Visualización |
 | [`2_Python_y_Colab/`](2_Python_y_Colab/) | Análisis completo en Google Colab (código sin comentarios, explicación en texto, resultados guardados), cuaderno de reproducción rápida y notebook principal ejecutado | 11.2 Producto analítico reproducible |
-| [`3_Informe_tecnico/`](3_Informe_tecnico/) | Informe técnico completo de 15 páginas en PDF y Word: hipótesis, validación del registro, métodos, resultados con intervalos, estrategias y trazabilidad de cada cifra | Adicional |
+| [`3_Informe_tecnico/`](3_Informe_tecnico/) | Informe técnico completo de 16 páginas en PDF y Word: hipótesis, validación del registro, métodos, resultados con intervalos, por qué solo dos de ocho hipótesis se sostienen, estrategias, propuesta final de sistema unificado y trazabilidad de cada cifra; además, un documento aparte con la propuesta final y el recorrido de las hipótesis | Adicional |
 | [`4_Nota_tecnica/`](4_Nota_tecnica/) | Nota técnica de una página: disponibilidad, integración, limitaciones y recomendaciones | 11.5 Nota técnica |
 | [`5_Formulario_caracterizacion/`](5_Formulario_caracterizacion/) | Formulario oficial diligenciado, en DOCX y PDF | 11.4 Formulario |
 | [`6_Libro_de_datos_Excel/`](6_Libro_de_datos_Excel/) | Libro de Excel con tablas nombradas, fórmulas vivas y simulador | Adicional |

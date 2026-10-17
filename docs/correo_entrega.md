@@ -36,7 +36,7 @@ Muestra la brecha por localidad, con mapas, tendencias validadas, índice, simul
 
 **3. Adjuntos:** formulario de caracterización (DOCX y PDF), nota técnica sobre integración de datos públicos (PDF), archivo fuente del tablero (`.pbix`), libro de datos en Excel e informe técnico completo (PDF y Word).
 
-Un punto que quisimos documentar con cuidado: antes de modelar validamos cada serie contra una fuente independiente. La serie abierta de hurtos de 2018-2022 no es comparable con la de 2023 en adelante (vale entre 2,3 y 2,6 veces el registro de la Policía). Lo dejamos en la nota técnica como recomendación de documentación, no como evaluación de ninguna entidad. También reportamos las hipótesis que no se sostienen: de ocho, dos se sostienen y seis no, y cada veredicto trae su prueba.
+Un punto que quisimos documentar con cuidado: antes de modelar validamos cada serie contra una fuente independiente. La serie abierta de hurtos de 2018-2022 no es comparable con la de 2023 en adelante (vale entre 2,3 y 2,6 veces el registro de la Policía). Lo dejamos en la nota técnica como recomendación de documentación, no como evaluación de ninguna entidad. También reportamos las hipótesis que no se sostienen: de ocho, dos se sostienen y seis no, y cada veredicto trae su prueba; el informe explica cómo cada descarte cambió el paso siguiente (sección 6.9). Cerramos con una propuesta: un sistema unificado donde la ciudadanía registre hurtos, violencias y hechos del entorno, y que cruce de forma automática y mensual las fuentes que hoy están separadas, para que el Distrito tenga este análisis siempre al día (sección 7.2).
 
 Quedamos atentos a cualquier inquietud.
 
