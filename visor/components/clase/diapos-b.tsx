@@ -336,6 +336,7 @@ export function Cierre() {
             </figure>
           ))}
         </div>
+        <p style={{ marginTop: 12, color: "#ffd98a", fontSize: 14, letterSpacing: ".1em", textTransform: "uppercase", fontWeight: 700 }}>Estudiantes de Ciencia de Datos</p>
       </div>
       <div style={{ background: "#fff", borderRadius: 16, padding: 16, display: "grid", gap: 8, justifyItems: "center" }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}

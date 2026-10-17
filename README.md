@@ -1,16 +1,21 @@
 # El miedo que no baja
 
 **Inseguridad percibida y delito registrado en Bogotá.**
-Bogotá DataJam Edición 5 (2026) · Equipo #16 **The data squad**: Rafael Estiven Londoño Camacho, Brandow Brusly León Rodríguez y Samuel Esteban Riveros Cubides.
+Bogotá DataJam Edición 5 (2026) · Equipo #16 **The data squad**: Brandow Brusly León Rodríguez, Samuel Esteban Riveros Cubides y Rafael Estiven Londoño Camacho, estudiantes de Ciencia de Datos.
+
+> **Todo en un solo lugar:** [`entregables/`](entregables/) reúne los documentos (Power BI, informe técnico, nota, formulario, Excel y pitch). [Video de 4 minutos](https://el-miedo-que-no-baja.vercel.app/video) · [Modelos](https://el-miedo-que-no-baja.vercel.app/modelos) · [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/rlondono1620-max/el-miedo-que-no-baja/blob/main/notebooks/colab_reproducir.ipynb)
 
 | Entregable | Dónde |
 |---|---|
-| Notebook reproducible | [`notebooks/el_miedo_que_no_baja.ipynb`](notebooks/el_miedo_que_no_baja.ipynb) (ejecutado, con salidas) |
+| Notebook reproducible | [`notebooks/el_miedo_que_no_baja.ipynb`](notebooks/el_miedo_que_no_baja.ipynb) (ejecutado, con salidas) · en Colab: [`notebooks/colab_reproducir.ipynb`](notebooks/colab_reproducir.ipynb) |
 | Visor interpretativo (web) | https://el-miedo-que-no-baja.vercel.app (clave en el correo de entrega) · código en [`visor/`](visor/) |
-| Tablero Power BI | [`powerbi/`](powerbi/) |
+| Tablero Power BI | [`entregables/ElMiedoQueNoBaja.pbix`](entregables/) · proyecto editable en [`powerbi/`](powerbi/) |
 | Libro de datos en Excel | [`docs/Libro_de_datos_El_miedo_que_no_baja.xlsx`](docs/) (tablas, fórmulas vivas y simulador) |
 | Formulario de caracterización | [`docs/Formulario_caracterizacion_The_data_squad.docx`](docs/) |
 | Nota técnica (1 página) | [`docs/Nota_tecnica_integracion_datos_The_data_squad.pdf`](docs/) |
+| Informe técnico completo | [`docs/Informe_tecnico_El_miedo_que_no_baja.pdf`](docs/) |
+| Video explicativo (4 min) | https://el-miedo-que-no-baja.vercel.app/video (capítulos y transcripción) · MP4 en [`visor/public/video/`](visor/public/video/) |
+| Especificación de los modelos | https://el-miedo-que-no-baja.vercel.app/modelos |
 | Presentación (clase interactiva) | modo **Presentar** del visor (`/presentar`, guion en `/presentar/guion`); respaldo sin internet en [`docs/pitch/`](docs/pitch/) (PDF y PPTX con notas) |
 | Datos exportables (CSV, GeoJSON) | [`visor/public/descargas/`](visor/public/descargas/) y [`outputs/`](outputs/) |
 

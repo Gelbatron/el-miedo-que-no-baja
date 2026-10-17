@@ -27,12 +27,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <footer className="pie">
           <div className="contenedor">
             <span>
-              <b>El miedo que no baja</b> · Bogotá DataJam Edición 5 · Equipo #16 <b>The data squad</b>: Rafael Estiven Londoño Camacho,
-              Brandow Brusly León Rodríguez y Samuel Esteban Riveros Cubides.
+              <b>El miedo que no baja</b> · Bogotá DataJam Edición 5 · Equipo #16 <b>The data squad</b>: Brandow Brusly León Rodríguez,
+              Samuel Esteban Riveros Cubides y Rafael Estiven Londoño Camacho, estudiantes de Ciencia de Datos.
             </span>
             <span>
-              Fuentes: Secretaría de Seguridad (SCJ), Secretaría de Planeación (SDP), Secretaría de Cultura (Encuesta Bienal de Cultura
-              Ciudadana 2025), Encuesta Mundial de Valores 2024, UAESP, DADEP e IDECA. Todas las cifras salen del notebook reproducible.
+              Datos: Datos Abiertos Bogotá e IDECA; Secretaría de Seguridad (SCJ), Secretaría de Planeación (SDP), Secretaría de Cultura (Encuesta Bienal de Cultura
+              Ciudadana 2025), Secretaría de Salud (SIVIM), UAESP, DADEP, DANE, Policía Nacional y Encuesta Mundial de Valores 2024. Todas las cifras salen del notebook reproducible.
             </span>
             <span className="aviso">
               Proyecto académico presentado al Bogotá DataJam 5 (Alcaldía de Bogotá · UCompensar). No es un sitio oficial de la Alcaldía de Bogotá

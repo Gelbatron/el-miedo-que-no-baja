@@ -1,4 +1,5 @@
 import { Farol } from "@/components/Navegacion";
+import { EquipoMini } from "@/components/Equipo";
 
 export const metadata = { title: "Acceso · El miedo que no baja" };
 
@@ -12,6 +13,13 @@ export default async function Acceso({ searchParams }: { searchParams: Promise<{
         <h1 style={{ fontSize: "clamp(2.4rem, 6vw, 4.2rem)" }}>El miedo <em>que no baja</em></h1>
         <div className="heroe-raya" />
         <p className="bajada">Inseguridad percibida frente a delito registrado en Bogotá: dónde está la brecha, qué la explica y dónde intervenir primero.</p>
+        <EquipoMini />
+        <div className="creditos">
+          <span className="creditos-t">Reto</span>
+          <span>Bogotá DataJam 2026 · Secretaría General de la Alcaldía Mayor de Bogotá y Universidad Compensar</span>
+          <span className="creditos-t">Datos</span>
+          <span>Datos Abiertos Bogotá · IDECA · Secretaría de Seguridad · Secretaría de Planeación · Secretaría de Cultura · Secretaría de Salud · UAESP · DANE · Policía Nacional</span>
+        </div>
       </section>
       <section style={{ display: "grid", placeItems: "center", padding: "40px 20px", background: "var(--fondo)" }}>
         <form action="/api/acceso" method="post" className="tarjeta" style={{ width: "min(100%, 420px)", gap: 18 }}>

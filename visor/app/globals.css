@@ -398,3 +398,17 @@ body:has(.modo-presentacion) .pie, body:has(.modo-presentacion) .barra { display
 .equipo-p b { font-family: var(--f-display), sans-serif; font-size: 1rem; line-height: 1.2; }
 .equipo-p span { color: var(--tinta-2); font-size: .9rem; }
 @media (max-width: 860px) { .equipo-lista { grid-template-columns: 1fr; } }
+
+/* ---------- Créditos del reto y de los datos (texto, sin logos institucionales) ---------- */
+.creditos { display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; align-items: baseline; max-width: 620px; padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, .28); border-radius: 12px; background: rgba(255, 255, 255, .08); font-size: .86rem; line-height: 1.45; color: rgba(255, 255, 255, .92); }
+.creditos-t { font-family: var(--f-display), sans-serif; font-weight: 700; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: #ffd98a; }
+
+.equipo-prog { font-size: .8rem !important; color: var(--percepcion-texto) !important; font-weight: 600; }
+.equipo-mini { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px 18px; max-width: 620px; }
+.equipo-mini figure { margin: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; min-width: 0; }
+.equipo-mini img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 3px solid #ffd98a; background: #fff; flex: none; }
+.equipo-mini figcaption { display: grid; line-height: 1.2; }
+.equipo-mini b { color: #fff; font-size: .95rem; }
+.equipo-mini span { color: rgba(255, 255, 255, .82); font-size: .8rem; }
+.equipo-mini p { grid-column: 1 / -1; margin: 0; font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: #ffd98a; font-weight: 700; }

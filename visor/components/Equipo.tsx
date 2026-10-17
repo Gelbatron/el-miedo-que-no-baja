@@ -5,22 +5,39 @@ export const EQUIPO = [
   { nombre: "Rafael Estiven Londoño Camacho", corto: "Rafael Londoño", rol: "Analista de datos", foto: "/equipo/rafael.jpg" },
 ] as const;
 
-/** El equipo, con foto, nombre completo y rol del formulario de caracterización. */
+export const PROGRAMA = "Ciencia de Datos";
+
+/** El equipo, con foto, nombre completo, rol del formulario de caracterización y programa. */
 export function Equipo({ titulo = "El equipo" }: { titulo?: string }) {
   return (
     <section className="equipo tarjeta" aria-label={titulo}>
       <div className="equipo-cab">
-        <p className="antetitulo">The data squad · equipo #16</p>
+        <p className="antetitulo">The data squad · equipo #16 · estudiantes de {PROGRAMA}</p>
         <h2>{titulo}</h2>
       </div>
       <div className="equipo-lista">
         {EQUIPO.map((p) => (
           <figure key={p.foto} className="equipo-p">
             <img src={p.foto} alt={`Foto de ${p.nombre}`} width={120} height={120} loading="lazy" />
-            <figcaption><b>{p.nombre}</b><span>{p.rol}</span></figcaption>
+            <figcaption><b>{p.nombre}</b><span>{p.rol}</span><span className="equipo-prog">{PROGRAMA}</span></figcaption>
           </figure>
         ))}
       </div>
     </section>
+  );
+}
+
+/** Versión compacta para fondos rojos (pantalla de acceso). */
+export function EquipoMini() {
+  return (
+    <div className="equipo-mini" aria-label="Equipo">
+      {EQUIPO.map((p) => (
+        <figure key={p.foto}>
+          <img src={p.foto} alt={`Foto de ${p.nombre}`} width={64} height={64} />
+          <figcaption><b>{p.corto}</b><span>{p.rol}</span></figcaption>
+        </figure>
+      ))}
+      <p>Estudiantes de {PROGRAMA}</p>
+    </div>
   );
 }

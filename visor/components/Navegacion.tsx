@@ -38,15 +38,18 @@ export function Navegacion() {
 }
 
 export function Farol({ tam = 34, claro = false }: { tam?: number; claro?: boolean }) {
-  // farol de alumbrado: el haz oro (lo que se siente) sobre la base azul (lo que se registra)
-  const cuerpo = claro ? "#ffffff" : "var(--rojo)";
+  // sello del proyecto: el registro (azul o blanco) baja; el miedo (oro) no baja; entre los dos, la brecha
+  const fondo = claro ? "#ffffff" : "var(--rojo)";
+  const registro = claro ? "var(--registro)" : "#ffffff";
+  const miedo = claro ? "#d99a16" : "#f2c14e";
   return (
     <svg width={tam} height={tam} viewBox="0 0 40 40" aria-hidden="true">
-      <circle cx="20" cy="20" r="19" fill={claro ? "rgba(255,255,255,.12)" : "var(--superficie-2)"} />
-      <rect x="19" y="5" width="2" height="6" rx="1" fill={cuerpo} />
-      <path d="M12 11h16l-3.5 6.5h-9z" fill={cuerpo} />
-      <path d="M15.5 17.5h9L30 31H10z" fill="var(--oro)" opacity=".9" />
-      <rect x="9" y="31" width="22" height="3.2" rx="1.6" fill="var(--registro)" />
+      <rect width="40" height="40" rx="10" fill={fondo} />
+      <path d="M8 14.5 L20 13.2 L32 11.8 L32 29.5 L20 23.8 L8 16.6 Z" fill={miedo} opacity=".28" />
+      <path d="M8 16.6 L20 23.8 L32 29.5" fill="none" stroke={registro} strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M8 14.5 L20 13.2 L32 11.8" fill="none" stroke={miedo} strokeWidth="3.6" strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx="32" cy="11.8" r="3" fill={miedo} />
+      <circle cx="32" cy="29.5" r="2.6" fill={registro} />
     </svg>
   );
 }
