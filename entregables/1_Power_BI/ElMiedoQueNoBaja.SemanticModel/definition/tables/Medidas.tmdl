@@ -1,0 +1,364 @@
+table Medidas
+	lineageTag: 636c50c7-8ea5-5e57-93cd-d2343d267be7
+
+	/// Casos de la serie SCJ (enero-agosto de cada año).
+	measure 'Casos registrados' = SUM(Delitos[casos])
+		formatString: #,0
+		displayFolder: 1. Resumen
+		lineageTag: b2fdb047-84c8-558c-8201-fdfcc4183b7a
+
+	measure 'Hurto a personas 2019' = CALCULATE([Casos registrados], Delitos[codigo] = "HP", Delitos[anio] = 2019)
+		formatString: #,0
+		displayFolder: 1. Resumen
+		lineageTag: 5d68d3dc-4677-565f-b1e6-fe7d4fea0f3b
+
+	measure 'Hurto a personas 2026' = CALCULATE([Casos registrados], Delitos[codigo] = "HP", Delitos[anio] = 2026)
+		formatString: #,0
+		displayFolder: 1. Resumen
+		lineageTag: 762dfbb9-83a9-5b8b-b156-eba89d9d1abc
+
+	/// Variación de los casos de hurto a personas, enero-agosto 2019 frente a enero-agosto 2026.
+	measure 'Variación hurto a personas 2019-2026' = DIVIDE([Hurto a personas 2026] - [Hurto a personas 2019], [Hurto a personas 2019])
+		formatString: +0.0 %;-0.0 %;0.0 %
+		displayFolder: 1. Resumen
+		lineageTag: e4da0f97-5376-50f8-b586-80fb609e93f5
+
+	measure 'Violencia intrafamiliar 2018' = CALCULATE([Casos registrados], Delitos[codigo] = "VI", Delitos[anio] = 2018)
+		formatString: #,0
+		displayFolder: 1. Resumen
+		lineageTag: c51b9bc3-723a-5b60-847f-dd647db5a619
+
+	measure 'Violencia intrafamiliar 2026' = CALCULATE([Casos registrados], Delitos[codigo] = "VI", Delitos[anio] = 2026)
+		formatString: #,0
+		displayFolder: 1. Resumen
+		lineageTag: bb5408ae-e0c2-55ee-9b4d-c8d2993338ec
+
+	measure 'Variación violencia intrafamiliar 2018-2026' = DIVIDE([Violencia intrafamiliar 2026] - [Violencia intrafamiliar 2018], [Violencia intrafamiliar 2018])
+		formatString: +0.0 %;-0.0 %;0.0 %
+		displayFolder: 1. Resumen
+		lineageTag: 0a8d7e6d-9800-5cef-b338-a135edfe5eb1
+
+	measure 'Delitos sexuales 2018' = CALCULATE([Casos registrados], Delitos[codigo] = "DS", Delitos[anio] = 2018)
+		formatString: #,0
+		displayFolder: 1. Resumen
+		lineageTag: cbd24a9c-000b-5d2a-8144-89ba9625129c
+
+	measure 'Delitos sexuales 2026' = CALCULATE([Casos registrados], Delitos[codigo] = "DS", Delitos[anio] = 2026)
+		formatString: #,0
+		displayFolder: 1. Resumen
+		lineageTag: 9ba11cf8-0d85-5ca6-b482-9825e264519a
+
+	measure 'Variación delitos sexuales 2018-2026' = DIVIDE([Delitos sexuales 2026] - [Delitos sexuales 2018], [Delitos sexuales 2018])
+		formatString: +0.0 %;-0.0 %;0.0 %
+		displayFolder: 1. Resumen
+		lineageTag: 4d1a62c1-8965-5f33-8faf-242ce2bf6617
+
+	/// Dato de Bogotá calculado con los microdatos de la Bienal 2025 y su factor de expansión (tabla Bogotá).
+	measure 'Ciudad insegura, Bogotá' = DIVIDE(LOOKUPVALUE('Bogotá'[valor], 'Bogotá'[indicador], "ciudad_insegura_pct"), 100)
+		formatString: 0.0 %
+		displayFolder: 1. Resumen
+		lineageTag: 95b1ad5e-8cb4-5302-922f-09f2d1f30e83
+
+	/// Dato de Bogotá calculado con los microdatos de la Bienal 2025 y su factor de expansión (tabla Bogotá).
+	measure 'Zona insegura, Bogotá' = DIVIDE(LOOKUPVALUE('Bogotá'[valor], 'Bogotá'[indicador], "zona_insegura_pct"), 100)
+		formatString: 0.0 %
+		displayFolder: 1. Resumen
+		lineageTag: 24014822-c778-5ad1-9409-ffe79ce9f30e
+
+	/// Víctimas estimadas (EMV 2024) por cada delito de alto impacto registrado (SCJ 2024), Bogotá.
+	measure 'Víctimas por delito registrado, Bogotá' = LOOKUPVALUE('Bogotá'[valor], 'Bogotá'[indicador], "cifra_oculta_bogota")
+		formatString: 0.0
+		displayFolder: 1. Resumen
+		lineageTag: b257f0e3-7966-5b89-94c0-69f2aaf6aeaf
+
+	/// Localidades con Índice de Brecha de Seguridad mayor que 1 (más de una desviación estándar de miedo por encima de su delito).
+	measure 'Localidades con IBS > 1' = COUNTROWS(FILTER(Localidades, Localidades[ibs] > 1))
+		formatString: 0
+		displayFolder: 1. Resumen
+		lineageTag: 52d94003-138d-526b-a8d3-93e040cf38d6
+
+	measure 'Localidades en el top 5 en más del 90 % de réplicas' = COUNTROWS(FILTER(Localidades, Localidades[prob_top5] > 0.9))
+		formatString: 0
+		displayFolder: 1. Resumen
+		lineageTag: fa5a9957-72f5-5b0e-a5c5-6123cf500b9a
+
+	/// Casos del año sobre casos de 2018, por 100 (enero-agosto).
+	measure 'Índice base 2018' =
+			VAR base = CALCULATE([Casos registrados], Delitos[anio] = 2018)
+			RETURN
+			    DIVIDE([Casos registrados], base) * 100
+		formatString: 0
+		displayFolder: 2. Serie de delitos
+		lineageTag: add83a25-a44c-5758-94a8-636af47068b1
+
+	measure 'Índice hurto a personas' = CALCULATE([Índice base 2018], Delitos[codigo] = "HP")
+		formatString: 0
+		displayFolder: 2. Serie de delitos
+		lineageTag: 8d521c3b-cfd8-5b52-8299-81638f8e7fd0
+
+	measure 'Índice violencia intrafamiliar' = CALCULATE([Índice base 2018], Delitos[codigo] = "VI")
+		formatString: 0
+		displayFolder: 2. Serie de delitos
+		lineageTag: da4bc7f3-30df-57ab-8bd5-a71c0593dd19
+
+	measure 'Índice delitos sexuales' = CALCULATE([Índice base 2018], Delitos[codigo] = "DS")
+		formatString: 0
+		displayFolder: 2. Serie de delitos
+		lineageTag: c219b739-1950-5268-b49c-52f1ab6968d7
+
+	/// Índice de Brecha de Seguridad de la localidad (z). En blanco si hay más de una localidad en contexto.
+	measure 'Índice de Brecha' = IF(HASONEVALUE(Localidades[localidad]), MAX(Localidades[ibs]))
+		formatString: 0.00
+		displayFolder: 3. Localidad
+		lineageTag: 824f73d0-4df2-590a-a390-0dc46829a067
+
+	/// Percentil 5 del bootstrap.
+	measure 'Índice de Brecha, P5' = IF(HASONEVALUE(Localidades[localidad]), MAX(Localidades[ibs_p05]))
+		formatString: 0.00
+		displayFolder: 3. Localidad
+		lineageTag: 9d7a3a12-46f6-522d-b0e4-090e51dc5749
+
+	/// Percentil 95 del bootstrap.
+	measure 'Índice de Brecha, P95' = IF(HASONEVALUE(Localidades[localidad]), MAX(Localidades[ibs_p95]))
+		formatString: 0.00
+		displayFolder: 3. Localidad
+		lineageTag: 1e372f04-3239-565c-8d06-2caee595a423
+
+	measure 'Puesto en el Índice de Brecha' = IF(HASONEVALUE(Localidades[localidad]), MAX(Localidades[puesto]))
+		formatString: 0
+		displayFolder: 3. Localidad
+		lineageTag: e9455243-6ac8-5c1c-a632-70ad25bbe0df
+
+	/// Proporción de réplicas bootstrap en que la localidad queda entre las 5 de mayor Índice de Brecha.
+	measure 'Réplicas en el top 5' = IF(HASONEVALUE(Localidades[localidad]), MAX(Localidades[prob_top5]))
+		formatString: 0 %
+		displayFolder: 3. Localidad
+		lineageTag: 27fa70f7-2c1c-5d38-8457-da69fad86004
+
+	/// Cifra oculta: víctimas estimadas por cada delito registrado.
+	measure 'Víctimas por delito registrado' = IF(HASONEVALUE(Localidades[localidad]), MAX(Localidades[cifra_oculta]))
+		formatString: 0.0
+		displayFolder: 3. Localidad
+		lineageTag: f7964cd6-9eaf-50b2-92bb-06d66bdf83f5
+
+	measure 'Zona insegura (%)' = IF(HASONEVALUE(Localidades[localidad]), DIVIDE(MAX(Localidades[zona_insegura]), 100))
+		formatString: 0.0 %
+		displayFolder: 3. Localidad
+		lineageTag: 65df6521-c02a-55bb-b37b-77f6344ef172
+
+	measure 'Ciudad insegura (%)' = IF(HASONEVALUE(Localidades[localidad]), DIVIDE(MAX(Localidades[ciudad_insegura]), 100))
+		formatString: 0.0 %
+		displayFolder: 3. Localidad
+		lineageTag: bf4a5121-4d5b-5468-a8c2-c35a960a4af7
+
+	measure 'Delitos de alto impacto por 100 mil' = IF(HASONEVALUE(Localidades[localidad]), MAX(Localidades[delitos_alto_impacto_100k]))
+		formatString: #,0
+		displayFolder: 3. Localidad
+		lineageTag: 13fd6ec9-8e91-5fb7-abb7-fb6b4acddef4
+
+	measure 'Zona insegura, mujeres (%)' = IF(HASONEVALUE(Localidades[localidad]), DIVIDE(MAX(Localidades[zona_insegura_mujeres]), 100))
+		formatString: 0.0 %
+		displayFolder: 3. Localidad
+		lineageTag: cafd234f-a058-5093-be76-dababa1da26d
+
+	measure 'Zona insegura, hombres (%)' = IF(HASONEVALUE(Localidades[localidad]), DIVIDE(MAX(Localidades[zona_insegura_hombres]), 100))
+		formatString: 0.0 %
+		displayFolder: 3. Localidad
+		lineageTag: 4630808e-386f-5a51-b09b-66b5d8221ed1
+
+	/// Puntos porcentuales: % de mujeres menos % de hombres que califican insegura su zona.
+	measure 'Diferencia mujeres - hombres (pp)' = IF(HASONEVALUE(Localidades[localidad]), MAX(Localidades[zona_insegura_mujeres]) - MAX(Localidades[zona_insegura_hombres]))
+		formatString: +0.0;-0.0;0.0
+		displayFolder: 3. Localidad
+		lineageTag: dd735ab0-dffd-5d22-9a88-2f1571369e51
+
+	/// Índice de Brecha solo para las 5 localidades de mayor puesto.
+	measure 'Índice de Brecha, top 5' =
+			VAR p = [Puesto en el Índice de Brecha]
+			RETURN
+			    IF(NOT ISBLANK(p) && p <= 5, [Índice de Brecha])
+		formatString: 0.00
+		displayFolder: 3. Localidad
+		lineageTag: 4f366e24-42dd-5c98-81ce-8a9e2292f4c3
+
+	measure 'Réplicas en el top 5, top 5' =
+			VAR p = [Puesto en el Índice de Brecha]
+			RETURN
+			    IF(NOT ISBLANK(p) && p <= 5, [Réplicas en el top 5])
+		formatString: 0 %
+		displayFolder: 3. Localidad
+		lineageTag: dcac8167-3792-5d92-b83e-b483c061b301
+
+	/// Ámbar: más miedo que delito registrado; azul: al revés.
+	measure 'Color Índice de Brecha' =
+			VAR v = [Índice de Brecha]
+			RETURN
+			    IF(ISBLANK(v), BLANK(), IF(v > 0, "#D98A0B", "#2F63D6"))
+		displayFolder: 3. Localidad
+		lineageTag: 77fc449d-883e-5051-86f2-83fb1681d8f5
+
+	/// Promedio simple de las localidades en contexto. NO es el dato de Bogotá (ese está en Zona insegura, Bogotá).
+	measure 'Zona insegura, promedio simple de localidades' = DIVIDE(AVERAGE(Localidades[zona_insegura]), 100)
+		formatString: 0.0 %
+		displayFolder: 3. Localidad
+		lineageTag: 727b99ac-1b51-5512-8b35-42174872d6aa
+
+	/// Promedio simple de las localidades en contexto. NO es el dato de Bogotá (ese está en Ciudad insegura, Bogotá).
+	measure 'Ciudad insegura, promedio simple de localidades' = DIVIDE(AVERAGE(Localidades[ciudad_insegura]), 100)
+		formatString: 0.0 %
+		displayFolder: 3. Localidad
+		lineageTag: 81c54e0b-384a-559c-a543-7c6bcb70df37
+
+	/// Efecto marginal promedio en puntos porcentuales sobre la probabilidad de calificar insegura la zona.
+	measure 'Efecto marginal (pp)' = IF(COUNTROWS('Efectos marginales') = 1, SUM('Efectos marginales'[ame_pp]))
+		formatString: +0.0;-0.0;0.0
+		displayFolder: 4. Modelo
+		lineageTag: 4437183f-ef40-52b0-82a3-3b232d47e712
+
+	measure 'IC 95 % inferior (pp)' = IF(COUNTROWS('Efectos marginales') = 1, SUM('Efectos marginales'[ic_inf]))
+		formatString: +0.0;-0.0;0.0
+		displayFolder: 4. Modelo
+		lineageTag: 6a3305bf-7f89-5222-bf0a-418d9022b467
+
+	measure 'IC 95 % superior (pp)' = IF(COUNTROWS('Efectos marginales') = 1, SUM('Efectos marginales'[ic_sup]))
+		formatString: +0.0;-0.0;0.0
+		displayFolder: 4. Modelo
+		lineageTag: d1805425-033b-5a6b-b443-8d25a06cfb7a
+
+	measure p-valor =
+			VAR p = IF(COUNTROWS('Efectos marginales') = 1, SUM('Efectos marginales'[p]))
+			RETURN
+			    IF(ISBLANK(p), BLANK(), IF(p < 0.001, "< 0,001", FORMAT(p, "0.000")))
+		displayFolder: 4. Modelo
+		lineageTag: e38e972a-fafc-5935-b478-24ec70dc7f1d
+
+	/// Sí cuando el intervalo de confianza del 95 % no incluye el cero.
+	measure 'Significativo al 95 %' =
+			VAR i = IF(COUNTROWS('Efectos marginales') = 1, SUM('Efectos marginales'[ic_inf]))
+			VAR s = IF(COUNTROWS('Efectos marginales') = 1, SUM('Efectos marginales'[ic_sup]))
+			RETURN
+			    IF(ISBLANK(i), BLANK(), IF(i > 0 || s < 0, "Sí", "No"))
+		displayFolder: 4. Modelo
+		lineageTag: 776a572f-0cec-54de-a8c5-97593c9648bf
+
+	/// Ámbar: sube la inseguridad percibida; azul: la baja; gris: no significativo.
+	measure 'Color efecto marginal' =
+			VAR i = IF(COUNTROWS('Efectos marginales') = 1, SUM('Efectos marginales'[ic_inf]))
+			VAR s = IF(COUNTROWS('Efectos marginales') = 1, SUM('Efectos marginales'[ic_sup]))
+			VAR a = [Efecto marginal (pp)]
+			RETURN
+			    IF(ISBLANK(a), BLANK(), IF(i > 0 || s < 0, IF(a > 0, "#D98A0B", "#2F63D6"), "#B9C0CD"))
+		displayFolder: 4. Modelo
+		lineageTag: 93f16742-d11c-5dcb-ad69-b130dfefe75a
+
+	/// Área bajo la curva ROC fuera de muestra. 0,5 = azar; 1 = predicción perfecta.
+	measure 'AUC (validación cruzada)' = IF(COUNTROWS('AUC por bloque') = 1, SUM('AUC por bloque'[auc]))
+		formatString: 0.000
+		displayFolder: 4. Modelo
+		lineageTag: 4c079694-9835-5544-9eeb-f95ef6b826f5
+
+	measure 'AUC, desviación estándar' = IF(COUNTROWS('AUC por bloque') = 1, SUM('AUC por bloque'[auc_sd]))
+		formatString: 0.000
+		displayFolder: 4. Modelo
+		lineageTag: ee9c2aac-7d19-5942-97cf-dd688ee628e1
+
+	/// Ámbar: bloques con variables del entorno; azul: con delito registrado; gris: solo perfil.
+	measure 'Color AUC' =
+			VAR b = SELECTEDVALUE('AUC por bloque'[bloque])
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        ISBLANK(b), BLANK(),
+			        CONTAINSSTRING(b, "hechos") || CONTAINSSTRING(b, "calificación") || b = "Todo", "#D98A0B",
+			        CONTAINSSTRING(b, "delito"), "#2F63D6",
+			        "#B9C0CD"
+			    )
+		displayFolder: 4. Modelo
+		lineageTag: d17e8f5a-a08f-5d42-99ba-84768e2c5cbe
+
+	/// EMV 2024, Bogotá, ponderado.
+	measure 'Mujeres (%)' = IF(COUNTROWS('Género') = 1, DIVIDE(SUM('Género'[mujeres]), 100))
+		formatString: 0.0 %
+		displayFolder: 5. Género
+		lineageTag: 886c9da6-cdf0-521c-8841-798ad4a7033a
+
+	/// EMV 2024, Bogotá, ponderado.
+	measure 'Hombres (%)' = IF(COUNTROWS('Género') = 1, DIVIDE(SUM('Género'[hombres]), 100))
+		formatString: 0.0 %
+		displayFolder: 5. Género
+		lineageTag: c77904d0-893a-5621-915a-a9a4dc1c1878
+
+	measure 'Diferencia mujeres - hombres, EMV (pp)' = IF(COUNTROWS('Género') = 1, SUM('Género'[mujeres]) - SUM('Género'[hombres]))
+		formatString: +0.0;-0.0;0.0
+		displayFolder: 5. Género
+		lineageTag: 107dbff1-aa5f-5ca8-99e8-94e4a560d454
+
+	/// Efecto marginal de ser mujer a igual edad, estrato y victimización (EMV 2024).
+	measure 'Ser mujer: temor al acoso sexual (pp)' = LOOKUPVALUE('Bogotá'[valor], 'Bogotá'[indicador], "ame_mujer_teme_acoso_sexual")
+		formatString: +0.0;-0.0;0.0
+		displayFolder: 5. Género
+		lineageTag: fe9b8cf5-3f28-5690-b3e0-3856608f7393
+
+	/// Efecto marginal de ser mujer a igual edad, estrato y victimización (EMV 2024).
+	measure 'Ser mujer: evita salir de noche (pp)' = LOOKUPVALUE('Bogotá'[valor], 'Bogotá'[indicador], "ame_mujer_no_sale_noche")
+		formatString: +0.0;-0.0;0.0
+		displayFolder: 5. Género
+		lineageTag: d06c25f7-78df-5d7f-aebb-cf7739d994e5
+
+	/// Efecto marginal de ser mujer a igual edad, estrato y victimización (EMV 2024).
+	measure 'Ser mujer: inseguridad en el barrio (pp)' = LOOKUPVALUE('Bogotá'[valor], 'Bogotá'[indicador], "ame_mujer_barrio_inseguro")
+		formatString: +0.0;-0.0;0.0
+		displayFolder: 5. Género
+		lineageTag: 405a3d0c-3aff-5b9d-9cba-8ef911773111
+
+	measure 'Texto hurto a personas' = "De " & FORMAT([Hurto a personas 2019], "#,0") & " a " & FORMAT([Hurto a personas 2026], "#,0") & " casos (Policía, SIEDCO; la capa SCJ tiene un quiebre en 2023)"
+		displayFolder: 9. Textos
+		lineageTag: 1adfb436-b72f-5218-b5e9-ea490221fa3c
+
+	measure 'Texto violencia intrafamiliar' = "De " & FORMAT([Violencia intrafamiliar 2018], "#,0") & " a " & FORMAT([Violencia intrafamiliar 2026], "#,0") & " casos"
+		displayFolder: 9. Textos
+		lineageTag: 36c56876-0403-5231-9ca2-8409de51e3d9
+
+	measure 'Texto delitos sexuales' = "De " & FORMAT([Delitos sexuales 2018], "#,0") & " a " & FORMAT([Delitos sexuales 2026], "#,0") & " casos"
+		displayFolder: 9. Textos
+		lineageTag: 26f79df5-12e4-5053-8df0-5e0407a6fe11
+
+	measure 'Texto encuestas Bienal' = "Bogotá, Bienal 2025 (" & FORMAT(LOOKUPVALUE('Bogotá'[valor], 'Bogotá'[indicador], "n_bienal"), "#,0") & " encuestas)"
+		displayFolder: 9. Textos
+		lineageTag: cd7b8cf6-09a6-5d13-8281-52a66b9912c3
+
+	measure 'Texto AUC' = "Validación cruzada con " & FORMAT(MAX('AUC por bloque'[pliegues]), "0") & " pliegues. 0,5 = azar; 1 = perfecto."
+		displayFolder: 9. Textos
+		lineageTag: 76a858ab-0aa7-5b8c-9cfa-5e297654f019
+
+	measure 'Texto IC mujer acoso' = "IC 95 %: " & FORMAT(LOOKUPVALUE('Bogotá'[valor], 'Bogotá'[indicador], "ame_mujer_teme_acoso_sexual_ic_inf"), "0.0") & " a " & FORMAT(LOOKUPVALUE('Bogotá'[valor], 'Bogotá'[indicador], "ame_mujer_teme_acoso_sexual_ic_sup"), "0.0") & " pp"
+		displayFolder: 9. Textos
+		lineageTag: 8826783b-c820-5950-ae59-0188be437d73
+
+	measure 'Texto IC mujer noche' = "IC 95 %: " & FORMAT(LOOKUPVALUE('Bogotá'[valor], 'Bogotá'[indicador], "ame_mujer_no_sale_noche_ic_inf"), "0.0") & " a " & FORMAT(LOOKUPVALUE('Bogotá'[valor], 'Bogotá'[indicador], "ame_mujer_no_sale_noche_ic_sup"), "0.0") & " pp"
+		displayFolder: 9. Textos
+		lineageTag: 8a89265b-005c-556c-b57a-d64e258a459f
+
+	measure 'Texto IC mujer barrio' = "IC 95 %: " & FORMAT(LOOKUPVALUE('Bogotá'[valor], 'Bogotá'[indicador], "ame_mujer_barrio_inseguro_ic_inf"), "0.0") & " a " & FORMAT(LOOKUPVALUE('Bogotá'[valor], 'Bogotá'[indicador], "ame_mujer_barrio_inseguro_ic_sup"), "0.0") & " pp"
+		displayFolder: 9. Textos
+		lineageTag: 4b59a252-b823-5065-9c0e-a5c47c0cfb69
+
+	column Columna
+		dataType: string
+		isHidden
+		lineageTag: 355db13e-f490-55a8-9761-2eff272a121d
+		summarizeBy: none
+		sourceColumn: Columna
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Medidas = m
+		mode: import
+		source =
+				let
+				    Origen = #table(type table [Columna = text], {})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table
+

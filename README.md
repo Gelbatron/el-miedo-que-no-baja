@@ -3,18 +3,18 @@
 **Inseguridad percibida y delito registrado en Bogotá.**
 Bogotá DataJam Edición 5 (2026) · Equipo #16 **The data squad**: Brandow Brusly León Rodríguez, Samuel Esteban Riveros Cubides y Rafael Estiven Londoño Camacho, estudiantes de Ciencia de Datos.
 
-> **Todo en un solo lugar:** [`entregables/`](entregables/) reúne los documentos (Power BI, informe técnico, nota, formulario, Excel y pitch). [Video de 4 minutos](https://el-miedo-que-no-baja.vercel.app/video) · [Modelos](https://el-miedo-que-no-baja.vercel.app/modelos) · [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/rlondono1620-max/el-miedo-que-no-baja/blob/main/notebooks/colab_reproducir.ipynb)
+> **Todo en un solo lugar:** [`entregables/`](entregables/) reúne en carpetas numeradas el Power BI, el análisis en Python y Colab, el informe técnico (PDF y Word), la nota técnica, el formulario, el Excel, el video y el pitch. [Video de 4 minutos](https://el-miedo-que-no-baja.vercel.app/video) · [Modelos](https://el-miedo-que-no-baja.vercel.app/modelos) · [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/rlondono1620-max/el-miedo-que-no-baja/blob/main/notebooks/el_miedo_que_no_baja_colab.ipynb)
 
 | Entregable | Dónde |
 |---|---|
-| Notebook reproducible | [`notebooks/el_miedo_que_no_baja.ipynb`](notebooks/el_miedo_que_no_baja.ipynb) (ejecutado, con salidas) · en Colab: [`notebooks/colab_reproducir.ipynb`](notebooks/colab_reproducir.ipynb) |
+| Notebook reproducible | [`notebooks/el_miedo_que_no_baja.ipynb`](notebooks/el_miedo_que_no_baja.ipynb) (ejecutado, con salidas) · en Colab: [`notebooks/el_miedo_que_no_baja_colab.ipynb`](notebooks/el_miedo_que_no_baja_colab.ipynb) (análisis completo, código sin comentarios) y [`notebooks/colab_reproducir.ipynb`](notebooks/colab_reproducir.ipynb) (reproducción rápida) |
 | Visor interpretativo (web) | https://el-miedo-que-no-baja.vercel.app (clave en el correo de entrega) · código en [`visor/`](visor/) |
-| Tablero Power BI | [`entregables/ElMiedoQueNoBaja.pbix`](entregables/) · proyecto editable en [`powerbi/`](powerbi/) |
+| Tablero Power BI | [`entregables/1_Power_BI/ElMiedoQueNoBaja.pbix`](entregables/1_Power_BI/) · proyecto editable en [`powerbi/`](powerbi/) |
 | Libro de datos en Excel | [`docs/Libro_de_datos_El_miedo_que_no_baja.xlsx`](docs/) (tablas, fórmulas vivas y simulador) |
 | Formulario de caracterización | [`docs/Formulario_caracterizacion_The_data_squad.docx`](docs/) |
 | Nota técnica (1 página) | [`docs/Nota_tecnica_integracion_datos_The_data_squad.pdf`](docs/) |
-| Informe técnico completo | [`docs/Informe_tecnico_El_miedo_que_no_baja.pdf`](docs/) |
-| Video explicativo (4 min) | https://el-miedo-que-no-baja.vercel.app/video (capítulos y transcripción) · MP4 en [`visor/public/video/`](visor/public/video/) |
+| Informe técnico completo | [`docs/Informe_tecnico_El_miedo_que_no_baja.pdf`](docs/) y su versión en Word (`.docx`) |
+| Video explicativo (4 min) | https://el-miedo-que-no-baja.vercel.app/video (capítulos y transcripción) · MP4 y transcripción en [`entregables/7_Video/`](entregables/7_Video/) |
 | Especificación de los modelos | https://el-miedo-que-no-baja.vercel.app/modelos |
 | Presentación (clase interactiva) | modo **Presentar** del visor (`/presentar`, guion en `/presentar/guion`); respaldo sin internet en [`docs/pitch/`](docs/pitch/) (PDF y PPTX con notas) |
 | Datos exportables (CSV, GeoJSON) | [`visor/public/descargas/`](visor/public/descargas/) y [`outputs/`](outputs/) |
@@ -145,7 +145,9 @@ vercel deploy --prod                                                 # producci�
 data/
   crudos/          fuentes oficiales descargadas + registro_descargas.csv
   procesados/      tablas limpias e integradas (panel por localidad, microdatos analíticos)
-notebooks/         el_miedo_que_no_baja.ipynb (ejecutado)
+notebooks/         el_miedo_que_no_baja.ipynb (ejecutado, código comentado)
+                   el_miedo_que_no_baja_colab.ipynb (el mismo análisis listo para Google Colab)
+                   colab_reproducir.ipynb (reproducción rápida en Colab)
 src/
   fuentes.py       descarga con caché desde los servicios oficiales
   territorio.py    llave territorial (normalizador de localidades)
@@ -173,7 +175,8 @@ outputs/
   resultados.json  cifras que citan el visor, el formulario y el pitch
 visor/             visor web Next.js (desplegado en Vercel)
 powerbi/           proyecto de Power BI y tablas que consume
-docs/              formulario, nota técnica, libro de Excel, ficha del indicador y material del pitch
+docs/              formulario, nota técnica, informe técnico, libro de Excel, ficha del indicador y material del pitch
+entregables/       todo lo entregado en carpetas numeradas: Power BI, Python y Colab, informe, nota, formulario, Excel, video y pitch
 assets/fuentes/    Montserrat y Work Sans (licencia OFL) para que las figuras se vean igual en cualquier equipo
 auditoria_portal/  scripts de auditoría del catálogo completo del portal (cifras de la nota técnica)
 ```

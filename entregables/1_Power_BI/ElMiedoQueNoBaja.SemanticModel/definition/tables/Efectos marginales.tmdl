@@ -1,0 +1,85 @@
+table 'Efectos marginales'
+	lineageTag: d7d85f39-5185-54ba-9871-d0c2fd77b7a3
+
+	column variable
+		dataType: string
+		lineageTag: 109143bd-92e9-5df5-a257-53407223f866
+		summarizeBy: none
+		sourceColumn: variable
+
+		annotation SummarizationSetBy = Automatic
+
+	column ame_pp
+		dataType: double
+		formatString: 0.0
+		lineageTag: e6d863c9-1a80-55f9-a298-9568d8cc9565
+		summarizeBy: none
+		sourceColumn: ame_pp
+
+		annotation SummarizationSetBy = Automatic
+
+	column ic_inf
+		dataType: double
+		formatString: 0.0
+		lineageTag: eb7b1379-1d2b-50a8-b09f-878535bcd278
+		summarizeBy: none
+		sourceColumn: ic_inf
+
+		annotation SummarizationSetBy = Automatic
+
+	column ic_sup
+		dataType: double
+		formatString: 0.0
+		lineageTag: 1cb22d1e-fcff-5513-81e6-059ae9b61c85
+		summarizeBy: none
+		sourceColumn: ic_sup
+
+		annotation SummarizationSetBy = Automatic
+
+	column p
+		dataType: double
+		formatString: 0.0000
+		lineageTag: 254e7c1a-2025-5938-92c7-1d274fb72094
+		summarizeBy: none
+		sourceColumn: p
+
+		annotation SummarizationSetBy = Automatic
+
+	column coef
+		dataType: double
+		formatString: 0.000
+		lineageTag: 96ad7b01-e5df-5698-a4ee-3db62e9b647c
+		summarizeBy: none
+		sourceColumn: coef
+
+		annotation SummarizationSetBy = Automatic
+
+	column etiqueta
+		dataType: string
+		lineageTag: b84f1546-7bca-5762-a112-33f211bba442
+		summarizeBy: none
+		sourceColumn: etiqueta
+
+		annotation SummarizationSetBy = Automatic
+
+	column modelo
+		dataType: string
+		lineageTag: 87e30b83-ca55-5b96-898b-209c1d7b3c24
+		summarizeBy: none
+		sourceColumn: modelo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Efectos marginales' = m
+		mode: import
+		source =
+				let
+				    Carpeta = if Text.EndsWith(RutaDatos, "\") then RutaDatos else RutaDatos & "\",
+				    Origen = Csv.Document(File.Contents(Carpeta & "fact_efectos_marginales.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars = true]),
+				    Tipos = Table.TransformColumnTypes(Encabezados, {{"variable", type text}, {"ame_pp", type number}, {"ic_inf", type number}, {"ic_sup", type number}, {"p", type number}, {"coef", type number}, {"etiqueta", type text}, {"modelo", type text}}, "en-US")
+				in
+				    Tipos
+
+	annotation PBI_ResultType = Table
+

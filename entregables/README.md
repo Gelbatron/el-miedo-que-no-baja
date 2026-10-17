@@ -1,31 +1,32 @@
 # Entregables · El miedo que no baja
 
 **Bogotá DataJam Edición 5 (2026) · Equipo #16 The data squad**
-Brandow Brusly León Rodríguez (análisis de políticas públicas), Samuel Esteban Riveros Cubides (experto temático) y Rafael Estiven Londoño Camacho (análisis de datos), estudiantes de Ciencia de Datos.
+Brandow Brusly León Rodríguez, Samuel Esteban Riveros Cubides y Rafael Estiven Londoño Camacho, estudiantes de Ciencia de Datos.
 
-Todo lo que entregamos, en un solo lugar. Esta carpeta reúne los documentos; el código está en el resto del repositorio.
+Todo lo que entregamos, en una sola carpeta: el tablero de Power BI, el análisis en Python y Colab, los documentos, el video y la presentación.
+El código fuente está en el resto del repositorio.
+
+| Carpeta | Qué hay | Requisito |
+|---|---|---|
+| [`1_Power_BI/`](1_Power_BI/) | `ElMiedoQueNoBaja.pbix` (abre con los datos cargados) y el proyecto editable `.pbip` con su modelo, informe, datos y tema | 11.3 Visualización |
+| [`2_Python_y_Colab/`](2_Python_y_Colab/) | Análisis completo en Google Colab (código sin comentarios, explicación en texto, resultados guardados), cuaderno de reproducción rápida y notebook principal ejecutado | 11.2 Producto analítico reproducible |
+| [`3_Informe_tecnico/`](3_Informe_tecnico/) | Informe técnico completo de 15 páginas en PDF y Word: hipótesis, validación del registro, métodos, resultados con intervalos, estrategias y trazabilidad de cada cifra | Adicional |
+| [`4_Nota_tecnica/`](4_Nota_tecnica/) | Nota técnica de una página: disponibilidad, integración, limitaciones y recomendaciones | 11.5 Nota técnica |
+| [`5_Formulario_caracterizacion/`](5_Formulario_caracterizacion/) | Formulario oficial diligenciado, en DOCX y PDF | 11.4 Formulario |
+| [`6_Libro_de_datos_Excel/`](6_Libro_de_datos_Excel/) | Libro de Excel con tablas nombradas, fórmulas vivas y simulador | Adicional |
+| [`7_Video/`](7_Video/) | Video explicativo de 4 minutos (MP4) y su transcripción | Adicional |
+| [`8_Presentacion_pitch/`](8_Presentacion_pitch/) | Presentación del pitch en PDF y PPTX con notas del orador (respaldo sin internet de `/presentar`) | Jornada final |
+
+El repositorio completo responde al requisito 11.1: `data/`, `notebooks/`, `src/`, `outputs/`, `docs/`, `powerbi/`, README y `requirements.txt` ([README del proyecto](../README.md)).
 
 ## Enlaces
 
 | | Enlace |
 |---|---|
 | Visor interactivo desplegado | https://el-miedo-que-no-baja.vercel.app (la clave va en el correo de entrega) |
-| Video de 4 minutos, con capítulos, explicación de cada parte y transcripción sincronizada | https://el-miedo-que-no-baja.vercel.app/video |
+| Video con capítulos, explicación de cada parte y transcripción sincronizada | https://el-miedo-que-no-baja.vercel.app/video |
 | Especificación de cada modelo, con incertidumbre y límites | https://el-miedo-que-no-baja.vercel.app/modelos |
-| Reproducción completa en Google Colab | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/rlondono1620-max/el-miedo-que-no-baja/blob/main/notebooks/colab_reproducir.ipynb) |
-
-## Documentos frente a los términos de referencia
-
-| Requisito | Entregable | Archivo |
-|---|---|---|
-| 11.1 Repositorio técnico | Estructura `data/`, `notebooks/`, `src/`, `outputs/`, `docs/`, README y `requirements.txt` | [README del proyecto](../README.md) |
-| 11.2 Producto analítico reproducible | Notebook ejecutado de punta a punta y pipeline con semillas fijas | [`notebooks/el_miedo_que_no_baja.ipynb`](../notebooks/el_miedo_que_no_baja.ipynb) · [`notebooks/colab_reproducir.ipynb`](../notebooks/colab_reproducir.ipynb) · [`src/pipeline.py`](../src/pipeline.py) |
-| 11.3 Visualización | Tablero de Power BI (`.pbix`, y su proyecto `.pbip` editable en [`powerbi/`](../powerbi)) y visor desplegado con descargas CSV y GeoJSON | [ElMiedoQueNoBaja.pbix](ElMiedoQueNoBaja.pbix) |
-| 11.4 Formulario de caracterización | Formulario oficial diligenciado | [DOCX](Formulario_caracterizacion_The_data_squad.docx) · [PDF](Formulario_caracterizacion_The_data_squad.pdf) |
-| 11.5 Nota técnica (máximo 1 página) | Disponibilidad, integración, limitaciones y recomendaciones | [PDF](Nota_tecnica_integracion_datos_The_data_squad.pdf) |
-| Adicional | Informe técnico completo (15 páginas): hipótesis, validación del registro, métodos, resultados con intervalos, estrategias y trazabilidad de cada cifra | [PDF](Informe_tecnico_El_miedo_que_no_baja.pdf) · [Word](Informe_tecnico_El_miedo_que_no_baja.docx) |
-| Adicional | Libro de datos en Excel con tablas nombradas, fórmulas vivas y simulador | [XLSX](Libro_de_datos_El_miedo_que_no_baja.xlsx) |
-| Jornada final | Presentación del pitch (respaldo sin internet; la versión interactiva está en `/presentar` del visor) | [PDF](Pitch_El_miedo_que_no_baja_The_data_squad.pdf) · [PPTX](Pitch_El_miedo_que_no_baja_The_data_squad.pptx) |
+| Análisis completo en Google Colab | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/rlondono1620-max/el-miedo-que-no-baja/blob/main/notebooks/el_miedo_que_no_baja_colab.ipynb) |
 
 ## Cómo reproducirlo
 
@@ -35,6 +36,6 @@ pip install -r requirements.txt
 python src/pipeline.py
 ```
 
-O sin instalar nada, con el botón de Colab de arriba. Las semillas están fijas: dos corridas dan las mismas cifras.
+O sin instalar nada, con el botón de Colab. Las semillas están fijas: dos corridas dan las mismas cifras.
 
 *Proyecto académico presentado al Bogotá DataJam 2026 (Secretaría General de la Alcaldía Mayor de Bogotá y Universidad Compensar). No es un documento oficial de la Alcaldía de Bogotá ni de sus entidades.*

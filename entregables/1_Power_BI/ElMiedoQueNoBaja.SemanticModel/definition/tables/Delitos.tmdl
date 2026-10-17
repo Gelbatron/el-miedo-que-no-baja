@@ -1,0 +1,50 @@
+table Delitos
+	lineageTag: 37cd4a4d-2b18-5259-afcc-d5150899913d
+
+	column codigo
+		dataType: string
+		lineageTag: c3a43244-156e-5283-b940-43e70c7be4e1
+		summarizeBy: none
+		sourceColumn: codigo
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo
+		dataType: string
+		lineageTag: d513693f-6853-532b-b7d7-860eee7ea62e
+		summarizeBy: none
+		sourceColumn: tipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column anio
+		dataType: int64
+		formatString: 0
+		lineageTag: 614446af-d805-5ceb-94f0-f0ea1a74260d
+		summarizeBy: none
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column casos
+		dataType: double
+		formatString: #,0
+		lineageTag: b628498d-fcca-59cc-9922-9093a2946845
+		summarizeBy: none
+		sourceColumn: casos
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Delitos = m
+		mode: import
+		source =
+				let
+				    Carpeta = if Text.EndsWith(RutaDatos, "\") then RutaDatos else RutaDatos & "\",
+				    Origen = Csv.Document(File.Contents(Carpeta & "fact_delitos_serie.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars = true]),
+				    Tipos = Table.TransformColumnTypes(Encabezados, {{"codigo", type text}, {"tipo", type text}, {"anio", Int64.Type}, {"casos", type number}}, "en-US")
+				in
+				    Tipos
+
+	annotation PBI_ResultType = Table
+

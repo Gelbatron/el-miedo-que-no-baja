@@ -1,0 +1,72 @@
+﻿codigo,tipo,anio,casos
+HP,Hurto a personas,2018,67633
+HP,Hurto a personas,2019,82390
+HP,Hurto a personas,2020,53135
+HP,Hurto a personas,2021,68077
+HP,Hurto a personas,2022,78419
+HP,Hurto a personas,2023,106823
+HP,Hurto a personas,2024,86196
+HP,Hurto a personas,2025,88116
+HP,Hurto a personas,2026,75124
+HR,Hurto a residencias,2018,7009
+HR,Hurto a residencias,2019,6673
+HR,Hurto a residencias,2020,5303
+HR,Hurto a residencias,2021,5215
+HR,Hurto a residencias,2022,4311
+HR,Hurto a residencias,2023,5519
+HR,Hurto a residencias,2024,4184
+HR,Hurto a residencias,2025,4165
+HR,Hurto a residencias,2026,4406
+HA,Hurto de automotores,2018,2415
+HA,Hurto de automotores,2019,2435
+HA,Hurto de automotores,2020,2028
+HA,Hurto de automotores,2021,2334
+HA,Hurto de automotores,2022,2429
+HA,Hurto de automotores,2023,2800
+HA,Hurto de automotores,2024,2945
+HA,Hurto de automotores,2025,2176
+HA,Hurto de automotores,2026,2020
+HB,Hurto de bicicletas,2018,5349
+HB,Hurto de bicicletas,2019,5226
+HB,Hurto de bicicletas,2020,7148
+HB,Hurto de bicicletas,2021,6738
+HB,Hurto de bicicletas,2022,5560
+HB,Hurto de bicicletas,2023,5428
+HB,Hurto de bicicletas,2024,5193
+HB,Hurto de bicicletas,2025,4661
+HB,Hurto de bicicletas,2026,5133
+H,Homicidios,2018,684
+H,Homicidios,2019,656
+H,Homicidios,2020,654
+H,Homicidios,2021,763
+H,Homicidios,2022,658
+H,Homicidios,2023,712
+H,Homicidios,2024,747
+H,Homicidios,2025,799
+H,Homicidios,2026,740
+LP,Lesiones personales,2018,19167
+LP,Lesiones personales,2019,15830
+LP,Lesiones personales,2020,9998
+LP,Lesiones personales,2021,14811
+LP,Lesiones personales,2022,13855
+LP,Lesiones personales,2023,12438
+LP,Lesiones personales,2024,12140
+LP,Lesiones personales,2025,12431
+VI,Violencia intrafamiliar,2018,23854
+VI,Violencia intrafamiliar,2019,23165
+VI,Violencia intrafamiliar,2020,24501
+VI,Violencia intrafamiliar,2021,23157
+VI,Violencia intrafamiliar,2022,23085
+VI,Violencia intrafamiliar,2023,20251
+VI,Violencia intrafamiliar,2024,26870
+VI,Violencia intrafamiliar,2025,29440
+VI,Violencia intrafamiliar,2026,34859
+DS,Delitos sexuales,2018,3593
+DS,Delitos sexuales,2019,4167
+DS,Delitos sexuales,2020,3209
+DS,Delitos sexuales,2021,3955
+DS,Delitos sexuales,2022,4575
+DS,Delitos sexuales,2023,3906
+DS,Delitos sexuales,2024,6433
+DS,Delitos sexuales,2025,5981
+DS,Delitos sexuales,2026,5224

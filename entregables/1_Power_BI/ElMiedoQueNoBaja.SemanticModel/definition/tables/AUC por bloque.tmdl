@@ -1,0 +1,71 @@
+table 'AUC por bloque'
+	lineageTag: c3882750-f16f-5d56-b457-0cdb2c4d43a9
+
+	column bloque
+		dataType: string
+		lineageTag: a799c6d7-6d0e-5d99-af30-6b4da02108c6
+		summarizeBy: none
+		sourceColumn: bloque
+		sortByColumn: orden
+
+		annotation SummarizationSetBy = Automatic
+
+	column variables
+		dataType: string
+		lineageTag: 56ec7134-e757-58ea-96bd-7bec76efe1fb
+		summarizeBy: none
+		sourceColumn: variables
+
+		annotation SummarizationSetBy = Automatic
+
+	column auc
+		dataType: double
+		formatString: 0.000
+		lineageTag: 97535d45-390b-555e-8c68-6c494a7c58d2
+		summarizeBy: none
+		sourceColumn: auc
+
+		annotation SummarizationSetBy = Automatic
+
+	column auc_sd
+		dataType: double
+		formatString: 0.000
+		lineageTag: 6c950240-ab3a-5313-be6f-1796911bfc27
+		summarizeBy: none
+		sourceColumn: auc_sd
+
+		annotation SummarizationSetBy = Automatic
+
+	column pliegues
+		dataType: int64
+		formatString: 0
+		lineageTag: 957371e7-0efe-5080-bdbf-d3dec0697fcc
+		summarizeBy: none
+		sourceColumn: pliegues
+
+		annotation SummarizationSetBy = Automatic
+
+	column orden
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 521f1b20-3886-53c1-b820-bf2d03e483bf
+		summarizeBy: none
+		sourceColumn: orden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'AUC por bloque' = m
+		mode: import
+		source =
+				let
+				    Carpeta = if Text.EndsWith(RutaDatos, "\") then RutaDatos else RutaDatos & "\",
+				    Origen = Csv.Document(File.Contents(Carpeta & "fact_auc_bloques.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars = true]),
+				    Tipos = Table.TransformColumnTypes(Encabezados, {{"bloque", type text}, {"variables", type text}, {"auc", type number}, {"auc_sd", type number}, {"pliegues", Int64.Type}}, "en-US"),
+				    ConOrden = Table.AddIndexColumn(Tipos, "orden", 1, 1, Int64.Type)
+				in
+				    ConOrden
+
+	annotation PBI_ResultType = Table
+

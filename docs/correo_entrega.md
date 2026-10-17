@@ -23,9 +23,9 @@ Enviamos la entrega final del equipo **The data squad** (#16) para el Bogotá Da
 
 **1. Repositorio técnico:** https://github.com/rlondono1620-max/el-miedo-que-no-baja
 
-Contiene el notebook reproducible ya ejecutado (`notebooks/el_miedo_que_no_baja.ipynb`), los scripts (`src/`), los datos (`data/`), los resultados (`outputs/`), el tablero de Power BI (`powerbi/`), la documentación (`docs/`), el archivo de dependencias (`requirements.txt`) y el README con el problema, las fuentes, la metodología y las instrucciones de ejecución y despliegue. Todo se reproduce con `python src/pipeline.py`, o sin instalar nada en [Google Colab](https://colab.research.google.com/github/rlondono1620-max/el-miedo-que-no-baja/blob/main/notebooks/colab_reproducir.ipynb).
+Contiene el notebook reproducible ya ejecutado (`notebooks/el_miedo_que_no_baja.ipynb`), los scripts (`src/`), los datos (`data/`), los resultados (`outputs/`), el tablero de Power BI (`powerbi/`), la documentación (`docs/`), el archivo de dependencias (`requirements.txt`) y el README con el problema, las fuentes, la metodología y las instrucciones de ejecución y despliegue. Todo se reproduce con `python src/pipeline.py`, o sin instalar nada en [Google Colab](https://colab.research.google.com/github/rlondono1620-max/el-miedo-que-no-baja/blob/main/notebooks/el_miedo_que_no_baja_colab.ipynb).
 
-La carpeta [`entregables/`](https://github.com/rlondono1620-max/el-miedo-que-no-baja/tree/main/entregables) reúne en un solo lugar todos los documentos (Power BI, informe técnico en Word y PDF, nota técnica, formulario, Excel y presentación), con una tabla que los relaciona con cada requisito de los términos de referencia.
+La carpeta [`entregables/`](https://github.com/rlondono1620-max/el-miedo-que-no-baja/tree/main/entregables) reúne en carpetas numeradas todo lo entregado: Power BI (.pbix y proyecto editable), análisis en Python y Google Colab, informe técnico en Word y PDF, nota técnica, formulario, Excel, video y presentación, con una tabla que los relaciona con cada requisito de los términos de referencia.
 
 **2. Visualización desplegada:** https://el-miedo-que-no-baja.vercel.app (clave de acceso: **[CLAVE]**)
 

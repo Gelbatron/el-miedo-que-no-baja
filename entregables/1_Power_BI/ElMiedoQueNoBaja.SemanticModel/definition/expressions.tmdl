@@ -1,0 +1,6 @@
+/// Carpeta con los CSV del tablero. Cámbiela en Transformar datos > Administrar parámetros.
+expression RutaDatos = "C:\Users\rafal\OneDrive\Desktop\Projects\datajam-miedo-que-no-baja\powerbi\datos\" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 6987fc17-497f-5068-8491-d5a81598c107
+
+	annotation PBI_ResultType = Text
+

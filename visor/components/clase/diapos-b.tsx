@@ -328,11 +328,11 @@ export function Cierre() {
         <div className="cl-raya" />
         <p className="cl-pregunta" style={{ fontSize: 22 }}>Visor, notebook, repositorio, Power BI y Excel: todo reproducible con fuentes públicas.</p>
         <div style={{ display: "flex", gap: 26, marginTop: 18 }}>
-          {[["/equipo/brandow.jpg", "Brandow León", "Políticas públicas"], ["/equipo/samuel.jpg", "Samuel Riveros", "Experto temático"], ["/equipo/rafael.jpg", "Rafael Londoño", "Analista de datos"]].map(([f, n, r]) => (
+          {[["/equipo/brandow.jpg", "Brandow León"], ["/equipo/samuel.jpg", "Samuel Riveros"], ["/equipo/rafael.jpg", "Rafael Londoño"]].map(([f, n]) => (
             <figure key={f} style={{ margin: 0, display: "flex", alignItems: "center", gap: 12 }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={f} alt={n} width={76} height={76} style={{ borderRadius: "50%", border: "3px solid #ffd98a", objectFit: "cover" }} />
-              <figcaption style={{ display: "grid", lineHeight: 1.2 }}><b style={{ color: "#fff", fontSize: 17 }}>{n}</b><span style={{ color: "rgba(255,255,255,.82)", fontSize: 14 }}>{r}</span></figcaption>
+              <figcaption style={{ lineHeight: 1.2 }}><b style={{ color: "#fff", fontSize: 17 }}>{n}</b></figcaption>
             </figure>
           ))}
         </div>

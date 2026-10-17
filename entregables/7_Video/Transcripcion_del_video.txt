@@ -1,0 +1,35 @@
+﻿El miedo que no baja · Transcripción del video (4 minutos)
+The data squad · Bogotá DataJam 2026 · narración de Rafael Londoño
+Video con capítulos y transcripción sincronizada: https://el-miedo-que-no-baja.vercel.app/video
+
+[0:00] 1. ¿Sabías que…?
+
+¿Sabías que según los datos abiertos de Bogotá, el hurto de personas cayó en un 58 % desde el 2022? Sin embargo, el miedo no baja. Desde el 2019, entre 7 y 8 de cada 10 personas dicen que la ciudad es insegura. ¿Cómo pueden ser ciertas las dos cosas? Te contamos lo que está detrás de las cifras de seguridad y los cuatro frentes de trabajo que proponemos para cerrar esta brecha.
+
+[0:19] 2. ¿Por qué importa?
+
+¿Por qué importa? Porque el miedo cambia cómo vivimos en la ciudad. Casi la mitad de la gente califica insegura su propia zona, y 6 de cada 10 mujeres evitan salir de noche. ¿Y por qué con esa cifra se decide dónde invertir en seguridad? Si se leen mal, el presupuesto llega a un lugar equivocado.
+
+[0:35] 3. Cada fuente, una historia
+
+El problema. Si miras cada fuente por separado, cada una cuenta una historia distinta. La capa abierta del hurto dice que cayeron un 58 %. La Policía para el mismo delito y los mismos meses dice que bajaron apenas un 4 %. La Cámara de Comercio dice que menos gente fue víctima de hurto del 16 % al 11 % desde el 2021. El DANE dice que la gente denuncia del 36 % a 43 %. Y Salud dice que la violencia contra las mujeres subió un 43 % desde el 2019. Por separado los resultados se aíslan y hasta se contradicen, pero por eso construimos un modelo que une las fuentes.
+
+[1:09] 4. Lo que encontramos
+
+Al unirlas encontramos cuatro cosas. Hallazgo 1: la caída de hurtos no era tan grande. Hasta el 2022 la capa abierta contaba con más del doble de hurtos que la Policía. Desde el 2023 coincide caso por caso. La caída estaba en la serie, no en la calle. Hallazgo número 2. Lo que sí crece es la violencia. En las series que validamos, los homicidios suben un 3,3 % al año, los delitos sexuales 7,5 %, y la violencia intrafamiliar un 11,2 %. Hallazgo número 3. El registro no ve a la mayoría. De cada 10 víctimas, menos de dos llegan al registro oficial. Hallazgo 4: El miedo no explica el delito registrado, lo explica el barrio. Ver atracos en los parques sube 13 puntos la probabilidad de sentirse insegura. Y las mujeres, al igual que la victimización, sienten 18 puntos más de temor al acoso.
+
+[1:53] 5. Cómo lo hicimos
+
+¿Y cómo hicimos todo esto? Paso número 1, juntar 18 fuentes públicas en cuatro grupos. Lo que se registra, lo que se vive, lo que se siente y las condiciones del barrio. Cada fuente con una nota de confiabilidad de 0 a 100. Paso número 2. Unir. La misma localidad venía escrita de 10 maneras, y todo pasó a un código oficial, además de que todo en tasas por cada 100.000 habitantes. Paso número 3. Validar antes de modelar. Cada serie contra una fuente independiente así apareció el quiebre de 2023. Paso número 4. Modelar. Tendencias para ver series validadas, tres modelos de machine learning con 5.538 personas y perfiles para las 19 localidades. Paso número 5. Poner a prueba las ocho hipótesis, cada una con su prueba, 2 se sostienen y 6 no. Una parecía un hallazgo con una correlación del 0,72, pero al controlar el delito registrado cayó a casi cero. La descartamos y lo contamos.
+
+[2:45] 6. La herramienta
+
+Con todo esto, creamos el Índice de Brecha de Seguridad. Pone en la misma escala el miedo y el delito registrado. Donde el miedo le gana de lejos a lo registrado hay brecha. Hoy la brecha más grande está en Usme, Ciudad Bolívar, Bosa, Kennedy y San Cristóbal. Y todo esto queda en un visor web con mapas, simuladores y datos para descargar.
+
+[3:02] 7. 4 frentes de trabajo
+
+Por eso proponemos cuatro frentes de trabajo para la Alcaldía Mayor de Bogotá. Frente número uno, validar antes de decidir. Documentar el cambio del 2023, publicar la serie empalmada y contrastar cada cifra con la Policía y Medicina Legal. Frente número 2, medir lo que no se denuncia. Una encuesta de victimización por la UPL y repartir recursos por víctimas, no solo por denuncias. Frente número tres, barrios que se sientan seguros, parques sin atracos, mediación entre vecinos y mejor alumbrado. Empezando por estas cinco localidades. Si se mejora la mitad de las zonas y de los parques, el modelo estima unas 467 mil personas menos con miedo. Frente número 4, dos rutas para las mujeres. En la calle rutas nocturnas y denuncia fácil del acoso en la casa, detección en colegios y centros de salud, porque ocho de cada 10 casos pasan en la vivienda.
+
+[3:46] 8. Cierre
+
+El miedo no se contradice con datos, se contradice con una serie sin validar. Bogotá ya produce la información para cerrar esta brecha, solo hay que validarla y leerla junta. Somos The data squad.
