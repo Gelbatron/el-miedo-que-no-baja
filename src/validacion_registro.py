@@ -45,6 +45,7 @@ def contraste() -> pd.DataFrame:
 
 
 def razones(C: pd.DataFrame | None = None) -> pd.DataFrame:
+    """Razón año a año entre la capa SCJ y el SIEDCO de la Policía, por delito: muestra el quiebre de 2023."""
     C = contraste() if C is None else C
     C = C.copy()
     C["razon_scj_siedco"] = C["scj"] / C["siedco"]
@@ -143,6 +144,7 @@ def hurto_personas() -> pd.DataFrame:
 
 
 def correr(delitos_scj: pd.DataFrame | None = None) -> dict:
+    """Ejecuta la validación del registro y guarda las razones, las columnas cruzadas y el estado de cada serie."""
     if delitos_scj is None:
         delitos_scj = pd.read_csv(PROC / "scj_delitos_localidad_largo.csv")
     out = {"registro_razon_scj_siedco": razones(), "registro_etiquetas_cruzadas": etiquetas_cruzadas(),

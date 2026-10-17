@@ -57,6 +57,7 @@ def cargar():
 
 
 def integrar(t: dict):
+    """Une todas las fuentes en el panel por localidad (P), la Bienal analítica (eb) y los incidentes por UPZ (iu)."""
     P = I.panel_localidad(t["delitos"], t["incidentes"], t["poblacion"], t["ebcc"], t["emv"],
                           t["alumbrado"], t["espacio_publico"], t["geo"])
     ctx = P.set_index("localidad")[["hurtos_100k", "homicidios_100k", "incidentes_narcoticos_100k"]]
@@ -77,6 +78,7 @@ def integrar(t: dict):
 
 
 def modelar(P, eb, emv, n_boot: int = 300) -> dict:
+    """Ajusta los modelos de percepción (H1) y de género (H3) con efectos marginales e IC por bootstrap; incluye AUC por bloques y escenarios."""
     R = {}
     R["m_hechos"] = M.logit_ame(eb, "zona_insegura", PERFIL + DELITO + HECHOS, n_boot=n_boot)
     R["m_calif"] = M.logit_ame(eb, "zona_insegura", PERFIL + DELITO + HECHOS + CALIFICACIONES, n_boot=n_boot)
@@ -103,6 +105,7 @@ def modelar(P, eb, emv, n_boot: int = 300) -> dict:
 
 
 def territorio(P, eb, t) -> dict:
+    """Calcula el Índice de Brecha, la cifra oculta y las validaciones territoriales (Spearman con corrección BH y parcial) para H2."""
     out = {"ibs": I.indice_brecha(P, eb), "cifra_oculta": I.cifra_oculta(P, t["delitos"], t["poblacion"])}
     pruebas = [
         ("Drogas en el parque (Bienal) vs incidentes por narcóticos 123", "parque_spa", "incidentes_narcoticos_100k"),
@@ -133,6 +136,7 @@ def territorio(P, eb, t) -> dict:
 
 
 def guardar(t, P, eb, iu, R, T):
+    """Escribe en data/procesados/ y outputs/tablas/ todas las tablas intermedias y de resultados."""
     for d in (PROC, TAB):
         d.mkdir(parents=True, exist_ok=True)
     t["delitos"].to_csv(PROC / "scj_delitos_localidad_largo.csv", index=False)
@@ -236,6 +240,7 @@ def frentes(aprendizaje: bool = False) -> Path:
 
 
 def correr(n_boot: int = 300, exportes: bool = True) -> dict:
+    """Ejecuta el pipeline de punta a punta: carga, integración, validación, modelos, territorio y exportes."""
     t0 = time.time()
     t = cargar()
     P, eb, iu = integrar(t)

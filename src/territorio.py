@@ -30,6 +30,7 @@ _NO_LOCALIDAD = {"bogota", "distrito", "total", "total bogota", "bogota d c", "s
 
 
 def normalizar(x) -> str:
+    """Normaliza un nombre de lugar: sin tildes, en minúsculas y sin signos, para poder cruzar fuentes."""
     s = unidecode(str(x)).lower()
     s = re.sub(r"[^a-z0-9 ]+", " ", s)
     return re.sub(r"\s+", " ", s).strip()
@@ -58,4 +59,5 @@ def cod_localidad(valor) -> int | None:
 
 
 def nombre(cod) -> str:
+    """Devuelve el nombre oficial de una localidad a partir de su código."""
     return LOCALIDADES.get(int(cod), "") if cod is not None else ""

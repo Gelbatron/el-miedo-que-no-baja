@@ -20,24 +20,29 @@ SALIDA = RAIZ / "visor" / "data" / "frentes.json"
 
 
 def _limpio(x):
+    """Cambia NaN e infinito por None para que el JSON sea válido."""
     if isinstance(x, float) and (math.isnan(x) or math.isinf(x)):
         return None
     return x
 
 
 def _registros(df: pd.DataFrame) -> list[dict]:
+    """Convierte una tabla en lista de registros limpios para JSON."""
     return [{k: _limpio(v) for k, v in r.items()} for r in df.to_dict("records")]
 
 
 def _si_existe(ruta: Path):
+    """Lee un CSV solo si existe; si no, devuelve None."""
     return pd.read_csv(ruta) if ruta.exists() else None
 
 
 def _filas(df: pd.DataFrame, cols: list[str]) -> list[dict]:
+    """Registros de una tabla limitados a las columnas que existan."""
     return _registros(df[[c for c in cols if c in df.columns]])
 
 
 def construir() -> dict:
+    """Reúne los resultados de los frentes (tendencias, ML, tipología, confiabilidad) para el visor."""
     out = {}
     out["tendencias"] = _registros(pd.read_csv(TAB / "tendencias_resumen.csv"))
     out["ml"] = {
@@ -101,6 +106,7 @@ def construir() -> dict:
 
 
 def guardar(datos: dict) -> Path:
+    """Escribe el JSON de los frentes para el visor y devuelve su ruta."""
     SALIDA.write_text(json.dumps(datos, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     return SALIDA
 

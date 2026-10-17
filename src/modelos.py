@@ -22,12 +22,14 @@ warnings.filterwarnings("ignore")
 
 
 def _ajustar(df: pd.DataFrame, y: str, xs: list[str], peso: str = "peso"):
+    """Ajusta un logit ponderado (GLM binomial con pesos de frecuencia normalizados)."""
     w = df[peso] / df[peso].mean()
     X = sm.add_constant(df[xs], has_constant="add")
     return sm.GLM(df[y], X, family=sm.families.Binomial(), freq_weights=w).fit(), X, w
 
 
 def _ame(res, X: pd.DataFrame, w: pd.Series, xs: list[str]) -> dict:
+    """Efecto marginal promedio de cada variable, en puntos porcentuales, a partir del modelo ajustado."""
     p = res.predict(X)
     out = {}
     for c in xs:

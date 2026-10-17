@@ -47,6 +47,7 @@ INDICADORES = [
 
 
 def _proyeccion(gdf: gpd.GeoDataFrame, ancho: float = 600.0):
+    """Proyección simple (equirectangular) de las geometrías al ancho del mapa del visor."""
     minx, miny, maxx, maxy = gdf.total_bounds
     lat0 = np.radians((miny + maxy) / 2)
     k = ancho / ((maxx - minx) * np.cos(lat0))
@@ -56,6 +57,7 @@ def _proyeccion(gdf: gpd.GeoDataFrame, ancho: float = 600.0):
 
 
 def _path(geom, f) -> str:
+    """Convierte un polígono en el atributo d de un path SVG."""
     partes = []
     polis = geom.geoms if geom.geom_type == "MultiPolygon" else [geom]
     for p in polis:
@@ -91,10 +93,12 @@ def geometrias(geo_loc: gpd.GeoDataFrame, geo_upz: gpd.GeoDataFrame, pob_upz: pd
 
 
 def _registros(df: pd.DataFrame) -> list[dict]:
+    """Convierte una tabla en registros JSON válidos (sin infinitos)."""
     return json.loads(df.replace([np.inf, -np.inf], np.nan).to_json(orient="records", force_ascii=False))
 
 
 def visor(res: dict, etiquetas: dict) -> Path:
+    """Arma el JSON del visor web con indicadores, geometrías, modelos y textos."""
     t, P, R, T, S, iu = res["t"], res["P"], res["R"], res["T"], res["S"], res["iu"]
     geo, loc_urb, upz = geometrias(t["geo"], t["geo_upz"], t["poblacion_upz"])
 

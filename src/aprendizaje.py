@@ -55,6 +55,7 @@ ETIQUETAS = {
 
 
 def datos() -> pd.DataFrame:
+    """Carga la Bienal analítica y le agrega las variables necesarias para los modelos de aprendizaje supervisado."""
     eb = pd.read_csv(RAIZ / "data" / "procesados" / "ebcc_2025_analitica.csv")
     crudo = pd.read_excel(RAIZ / "data" / "crudos" / "ebcc_2025_cultura_ciudadana.xlsx", sheet_name="datos",
                           usecols=["encuestado_id", "P28.5"])
@@ -64,6 +65,7 @@ def datos() -> pd.DataFrame:
 
 
 def modelos() -> dict:
+    """Define los tres modelos a comparar: regresión logística, bosque aleatorio y gradient boosting."""
     return {
         "Regresión logística": lambda: make_pipeline(SimpleImputer(strategy="median"), StandardScaler(), LogisticRegression(max_iter=2000, C=1.0)),
         "Bosque aleatorio": lambda: make_pipeline(SimpleImputer(strategy="median"),
@@ -74,6 +76,7 @@ def modelos() -> dict:
 
 
 def _ajustar(modelo, X, y, w):
+    """Entrena un modelo pasando los pesos de la encuesta al último paso del pipeline."""
     paso = modelo.steps[-1][0] if hasattr(modelo, "steps") else None
     if paso:
         return modelo.fit(X, y, **{f"{paso}__sample_weight": w})
@@ -127,6 +130,7 @@ def importancia_variables(eb: pd.DataFrame, columnas: list, semilla: int = 16) -
 
 
 def correr() -> dict:
+    """Compara modelos y bloques de variables con validación cruzada 5 × 5 y guarda las AUC."""
     eb = datos()
     columnas = [c for cs in BLOQUES.values() for c in cs]
     A, B = comparar(eb, columnas)

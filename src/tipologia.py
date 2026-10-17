@@ -48,6 +48,7 @@ EXTERNOS: list[tuple] = []  # (archivo, columna, etiqueta, log, frente) — se u
 
 
 def tabla() -> tuple[pd.DataFrame, dict]:
+    """Arma la tabla de indicadores por localidad para la tipología, con sus etiquetas."""
     P = pd.read_csv(PROC / "panel_localidad_2025.csv").set_index("localidad")
     etiquetas, cols = {}, []
     for frente, inds in INDICADORES.items():
@@ -70,6 +71,7 @@ def tabla() -> tuple[pd.DataFrame, dict]:
 
 
 def estandarizar(T: pd.DataFrame, etiquetas: dict) -> pd.DataFrame:
+    """Estandariza los indicadores e invierte los que van en sentido contrario."""
     Z = T.copy()
     for c in Z.columns:
         if etiquetas[c][2]:
@@ -79,6 +81,7 @@ def estandarizar(T: pd.DataFrame, etiquetas: dict) -> pd.DataFrame:
 
 
 def agrupar(Z: pd.DataFrame, k_rango=range(3, 6)) -> tuple[int, pd.Series, dict]:
+    """Agrupa las localidades con Ward y elige el número de grupos por silueta."""
     L = linkage(Z.values, method="ward")
     sil = {k: silhouette_score(Z.values, fcluster(L, k, "maxclust")) for k in k_rango}
     k = max(sil, key=sil.get)
@@ -120,6 +123,7 @@ def estabilidad(Z: pd.DataFrame, k: int, n: int = 500, semilla: int = 7) -> pd.D
 
 
 def correr() -> dict:
+    """Ejecuta la tipología: componentes principales, agrupamiento y estabilidad por localidad."""
     T, etiquetas = tabla()
     Z = estandarizar(T, etiquetas)
     pca = PCA(n_components=min(3, Z.shape[1]))

@@ -28,6 +28,7 @@ def pct_ponderado(df: pd.DataFrame, col: str, por: str = "localidad", peso: str 
 
 
 def tasas(eventos: pd.DataFrame, pob: pd.DataFrame, grupo: str = "total", por: float = 1e5) -> pd.DataFrame:
+    """Convierte casos en tasas por cada `por` habitantes del grupo indicado, por localidad y año."""
     p = pob[pob["grupo"] == grupo][["localidad", "anio", "personas"]]
     m = eventos.merge(p, on=["localidad", "anio"])
     m["tasa"] = m["casos"] / m["personas"] * por
@@ -89,6 +90,7 @@ def panel_localidad(delitos, incidentes, pob, ebcc, emv, alumbrado, ep, geo) -> 
 
 
 def z(s: pd.Series) -> pd.Series:
+    """Estandariza una serie (media 0, desviación 1) entre localidades."""
     return (s - s.mean()) / s.std()
 
 
@@ -142,6 +144,7 @@ def cifra_oculta(P: pd.DataFrame, delitos: pd.DataFrame, pob: pd.DataFrame, anio
 
 
 def spearman(x: pd.Series, y: pd.Series, n_boot: int = 2000, semilla: int = 5) -> dict:
+    """Correlación de Spearman con IC por bootstrap y p por permutación, con semilla fija."""
     d = pd.concat([x, y], axis=1).dropna()
     rho, p = stats.spearmanr(d.iloc[:, 0], d.iloc[:, 1])
     rng = np.random.default_rng(semilla)

@@ -94,6 +94,7 @@ FUENTES = {
 
 
 def _registrar(clave: str, ruta: Path, url: str):
+    """Anota cada descarga en data/crudos/registro_descargas.csv con su URL, fecha, tamaño y huella sha1."""
     reg = CRUDOS / "registro_descargas.csv"
     nuevo = not reg.exists()
     sha = hashlib.sha1(ruta.read_bytes()).hexdigest()
@@ -105,6 +106,7 @@ def _registrar(clave: str, ruta: Path, url: str):
 
 
 def _get(url: str, **kw) -> requests.Response:
+    """Hace la petición HTTP con reintentos y espera creciente, para tolerar fallas de los servicios oficiales."""
     for intento in range(4):
         try:
             r = requests.get(url, timeout=(20, 300), headers=UA, **kw)
@@ -116,6 +118,7 @@ def _get(url: str, **kw) -> requests.Response:
 
 
 def _arcgis_atributos(url: str) -> pd.DataFrame:
+    """Descarga todos los atributos de una capa ArcGIS (paginando) y devuelve una tabla con nombres legibles."""
     meta = _get(url, params={"f": "json"}).json()
     nombres = {f["name"]: f.get("alias") or f["name"] for f in meta.get("fields", [])}
     d = _get(f"{url}/query", params={"where": "1=1", "outFields": "*", "returnGeometry": "false", "f": "json"}).json()
@@ -168,6 +171,7 @@ def obtener(clave: str, forzar: bool = False) -> Path:
 
 
 def obtener_todas(forzar: bool = False) -> pd.DataFrame:
+    """Baja cada fuente que falte (o todas si forzar=True) y devuelve el inventario con entidad, archivo y tamaño."""
     filas = []
     for clave, f in FUENTES.items():
         t0 = time.time()

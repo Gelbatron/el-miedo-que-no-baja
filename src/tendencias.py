@@ -44,17 +44,20 @@ TIPOS = {"HP": "Hurto a personas", "HCE": "Hurto de celulares", "HR": "Hurto a r
 
 
 def panel(delitos: pd.DataFrame, poblacion: pd.DataFrame) -> pd.DataFrame:
+    """Arma el panel localidad-año de las 19 localidades urbanas con casos y población."""
     pob = poblacion[poblacion["grupo"] == "total"][["localidad", "anio", "personas"]]
     d = delitos[delitos["localidad"].isin(URBANAS)].merge(pob, on=["localidad", "anio"], how="left")
     return d.dropna(subset=["casos", "personas"])
 
 
 def _nb(d: pd.DataFrame, X: pd.DataFrame):
+    """Ajusta una binomial negativa con exposición poblacional y errores agrupados por localidad."""
     m = sm.NegativeBinomial(d["casos"].astype(float), X.astype(float), exposure=d["personas"].astype(float))
     return m.fit(disp=0, maxiter=300, cov_type="cluster", cov_kwds={"groups": d["localidad"].values})
 
 
 def _efectos_fijos(d: pd.DataFrame) -> pd.DataFrame:
+    """Variables indicadoras de localidad (efectos fijos), omitiendo una como base."""
     return pd.get_dummies(d["localidad"], prefix="loc", drop_first=True, dtype=float)
 
 
@@ -82,6 +85,7 @@ def perfil_anual(d: pd.DataFrame, base: int = 2022) -> pd.DataFrame:
 
 
 def correr() -> dict:
+    """Estima la tendencia anual de cada delito en su ventana comparable y guarda el resumen."""
     delitos = pd.read_csv(RAIZ / "data" / "procesados" / "scj_delitos_localidad_largo.csv")
     poblacion = pd.read_csv(RAIZ / "data" / "procesados" / "sdp_poblacion_localidad_grupos.csv")
     P = panel(delitos, poblacion)

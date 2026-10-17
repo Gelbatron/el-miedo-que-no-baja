@@ -18,10 +18,12 @@ BITACORA: list[dict] = []
 
 
 def anotar(fuente: str, paso: str, detalle: str):
+    """Registra un paso de limpieza en la bitácora (fuente, paso y detalle) como evidencia del proceso."""
     BITACORA.append({"fuente": fuente, "paso": paso, "detalle": detalle})
 
 
 def bitacora() -> pd.DataFrame:
+    """Devuelve la bitácora de limpieza como tabla."""
     return pd.DataFrame(BITACORA)
 
 
@@ -34,6 +36,7 @@ def _num(s: pd.Series) -> pd.Series:
 
 # ------------------------------------------------------------------ SCJ: formato ancho cm{código}{aa}cont
 def _ancho_a_largo(df: pd.DataFrame, col_loc: str, nombres: dict, fuente: str) -> pd.DataFrame:
+    """Pasa las columnas anchas de la SCJ (una por delito y año) a formato largo: localidad, delito, año y casos."""
     cols = [c for c in df.columns if re.match(r"CM([A-Z]+?)(\d\d)CONT$", c)]
     largo = df.melt(id_vars=[col_loc], value_vars=cols, var_name="col", value_name="casos")
     largo["codigo"] = largo["col"].str.extract(r"CM([A-Z]+?)\d\dCONT")[0]
@@ -57,6 +60,7 @@ HURTOS = ["HP", "HR", "HA", "HB", "HC", "HCE", "HM"]
 
 
 def delitos() -> pd.DataFrame:
+    """Lee y limpia los delitos de alto impacto de la SCJ por localidad, año y tipo."""
     df = pd.read_csv(CRUDOS / "scj_delitos_alto_impacto_localidad.csv")
     corte = df["CMMES"].iloc[0]
     anotar("SCJ delitos", "lectura", f"{len(df)} filas (localidades + totales); corte '{corte}' para todos los años")
@@ -74,6 +78,7 @@ def delitos() -> pd.DataFrame:
 
 
 def incidentes() -> pd.DataFrame:
+    """Lee y limpia los incidentes de la Línea 123 por localidad, año y tipo."""
     df = pd.read_csv(CRUDOS / "scj_incidentes_123_localidad.csv")
     anotar("SCJ incidentes 123", "lectura", f"{len(df)} filas; corte '{df['CMMES'].iloc[0]}'")
     d = _ancho_a_largo(df, "CMIULOCAL", INCIDENTES, "SCJ incidentes 123")
@@ -84,6 +89,7 @@ def incidentes() -> pd.DataFrame:
 
 
 def incidentes_upz():
+    """Lee los incidentes de la Línea 123 por UPZ con su geometría."""
     import geopandas as gpd
 
     g = gpd.read_file(CRUDOS / "scj_incidentes_123_upz.geojson")
@@ -97,6 +103,7 @@ def incidentes_upz():
 
 # ------------------------------------------------------------------ SDP población
 def _poblacion(archivo: str, llaves: list[str], fuente: str) -> pd.DataFrame:
+    """Lee una hoja de proyecciones de población de la SDP (formato .ods) y la deja en formato largo."""
     x = pd.read_excel(CRUDOS / archivo, header=None, engine="odf")
     fila = x.index[x.iloc[:, 0].astype(str).str.strip() == "Departamento"][0]
     x.columns = x.iloc[fila].astype(str).str.strip()
@@ -112,6 +119,7 @@ def _poblacion(archivo: str, llaves: list[str], fuente: str) -> pd.DataFrame:
 
 
 def poblacion_localidad() -> pd.DataFrame:
+    """Proyecciones de población por localidad, año y grupo (total, mujeres, hombres, adultos)."""
     largo = _poblacion("sdp_poblacion_localidad_2005_2035.ods", ["Código Localidad"], "SDP población")
     largo["localidad"] = pd.to_numeric(largo["Código Localidad"]).astype(int)
     grupos = {"total": (None, 0, 200), "mujeres": ("Mujeres", 0, 200), "hombres": ("Hombres", 0, 200),
@@ -131,6 +139,7 @@ def poblacion_localidad() -> pd.DataFrame:
 
 
 def poblacion_upz() -> pd.DataFrame:
+    """Proyecciones de población por UPZ y año."""
     largo = _poblacion("sdp_poblacion_upz_2005_2035.ods", ["Código UPZ", "Código Localidad"], "SDP población UPZ")
     largo["upz"] = pd.to_numeric(largo["Código UPZ"], errors="coerce")
     largo = largo.dropna(subset=["upz"])
@@ -141,6 +150,7 @@ def poblacion_upz() -> pd.DataFrame:
 
 # ------------------------------------------------------------------ EBCC 2025 (microdatos)
 def ebcc() -> pd.DataFrame:
+    """Lee los microdatos de la Bienal de Cultura Ciudadana 2025 y construye las variables del análisis con su factor de expansión."""
     hojas = pd.ExcelFile(CRUDOS / "ebcc_2025_cultura_ciudadana.xlsx").sheet_names
     hoja = next(h for h in hojas if "dato" in h.lower()) if any("dato" in h.lower() for h in hojas) else hojas[0]
     d = pd.read_excel(CRUDOS / "ebcc_2025_cultura_ciudadana.xlsx", sheet_name=hoja)
@@ -182,6 +192,7 @@ def ebcc() -> pd.DataFrame:
 
 # ------------------------------------------------------------------ EMV ola 8 (microdatos)
 def emv() -> pd.DataFrame:
+    """Lee la Encuesta Mundial de Valores 2024, le pega la localidad recuperada y construye victimización y miedo."""
     d = pd.read_excel(CRUDOS / "emv_ola8_2024.xlsx")
     cruce = pd.read_csv(CRUDOS / "emv_localidad_por_registro.csv")
     d["id_procesamiento"] = np.arange(1, len(d) + 1)
@@ -211,6 +222,7 @@ def emv() -> pd.DataFrame:
 
 # ------------------------------------------------------------------ contexto físico
 def alumbrado() -> pd.DataFrame:
+    """Lee el inventario de luminarias de la UAESP y lo agrega por localidad."""
     d = pd.read_csv(CRUDOS / "uaesp_alumbrado_2019_08.csv", sep=None, engine="python", encoding="utf-8")
     d.columns = [re.sub(r"\s+", " ", c).strip().lower() for c in d.columns]
     d["localidad"] = d["localidad"].map(cod_localidad)
@@ -223,11 +235,13 @@ def alumbrado() -> pd.DataFrame:
 
 
 def espacio_publico() -> pd.DataFrame:
+    """Lee el espacio público efectivo por localidad (DADEP)."""
     d = pd.read_csv(CRUDOS / "dadep_ep_efectivo_localidad.csv")
     return pd.DataFrame({"localidad": pd.to_numeric(d["LOCCODIGO"]).astype(int), "ep_efectivo_m2_hab": d["EPE"].astype(float)})
 
 
 def localidades_geo():
+    """Lee los límites de las localidades de IDECA en coordenadas geográficas (EPSG:4326)."""
     import geopandas as gpd
 
     g = gpd.read_file(CRUDOS / "ideca_localidades.geojson").to_crs(4326)

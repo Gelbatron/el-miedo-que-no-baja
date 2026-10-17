@@ -34,10 +34,12 @@ PESOS = {"cobertura": 0.20, "actualidad": 0.15, "precision": 0.20, "territorio":
 
 
 def _cobertura(anios: int) -> float:
+    """Puntaje de cobertura temporal según los años que tiene la serie."""
     return 1.0 if anios >= 8 else 0.75 if anios >= 5 else 0.5 if anios >= 3 else 0.35 if anios == 2 else 0.2
 
 
 def _actualidad(ultimo: int) -> float:
+    """Puntaje de actualidad según los años desde el último dato."""
     d = REFERENCIA - ultimo
     return 1.0 if d <= 0 else 0.85 if d == 1 else 0.7 if d == 2 else 0.5 if d <= 4 else 0.2
 
@@ -114,16 +116,19 @@ FICHAS = [
 
 
 def puntaje(f: dict) -> float:
+    """Score de confiabilidad de una fuente (0 a 100): suma ponderada de sus criterios."""
     x = {"cobertura": _cobertura(int(f["anios"])), "actualidad": _actualidad(int(f["ultimo"])), "precision": PRECISION[f["precision"]],
          "territorio": TERRITORIO[f["territorio"]], "validez": VALIDEZ[f["validez"]], "verificacion": VERIFICACION[f["verificacion"]]}
     return round(100 * sum(PESOS[k] * v for k, v in x.items()), 1)
 
 
 def semaforo(s: float) -> str:
+    """Clasifica el score en alta, media o baja."""
     return "alta" if s >= 75 else "media" if s >= 55 else "baja"
 
 
 def tabla(fichas: list[dict] | None = None) -> pd.DataFrame:
+    """Tabla con el score y el semáforo de cada fuente."""
     T = pd.DataFrame(fichas or FICHAS)
     T["score"] = T.apply(lambda f: puntaje(f.to_dict()), axis=1)
     T["semaforo"] = T["score"].map(semaforo)
@@ -131,6 +136,7 @@ def tabla(fichas: list[dict] | None = None) -> pd.DataFrame:
 
 
 def nivel_evidencia(score_min: float, significativo_corregido: bool, robusto: bool) -> str:
+    """Nivel de evidencia de una estrategia: combina la fuente más débil con la prueba estadística."""
     if score_min >= 70 and significativo_corregido and robusto:
         return "alta"
     if (score_min >= 55 and significativo_corregido) or (score_min >= 70 and robusto):
